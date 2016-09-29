@@ -1,0 +1,6 @@
+cache/**
+renderman/**
+renderData/**
+autosave/**
+*.swatch
+*.swp
