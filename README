@@ -21,7 +21,7 @@ Use “ls” and “cd” to navigate to the folder where you want the project t
  type in the following commands into the command prompt. 
 
 
-1. “git clone git@github.com:CNM190-OnlyLove/Only-Love.git”
+1. “git clone https://github.com/CNM190-OnlyLove/Only-Love.git”
 2. If you do “ls” now you should see a folder named Only Love
 
 
