@@ -1,1 +1,76 @@
-Mr. Maya was here
+﻿Our project https://github.com/CNM190-OnlyLove/Only-Love
+
+
+If you’re on windows download Git Bash from the internet
+If you’re on mac/linux open up Terminal 
+
+
+How to navigate around the terminal 
+
+
+In your terminal, use “ls” to see the files in your current folder. 
+In your terminal, use “cd” to go into a folder
+
+
+How to get the project from github
+
+
+Use “ls” and “cd” to navigate to the folder where you want the project to download to. 
+
+
+ type in the following commands into the command prompt. 
+
+
+1. “git clone git@github.com:CNM190-OnlyLove/Only-Love.git”
+2. If you do “ls” now you should see a folder named Only Love
+
+
+How to download the latest version (if you just cloned, you already have latest version, so you don’t need to do this) 
+
+
+1. “git checkout master” This command switches you to the master branch.
+        We’ll talk about what branches are later. 
+1. “git pull origin master” This command actually pulls the latest project from github.com (origin) and merges it with your local branch (master). 
+
+
+
+
+
+
+
+
+How to start working on something
+
+
+1. “git checkout -b “ReggieModelHairUpdate” ” This command creates a new branch named ReggieModelHairUpdate and switches you to that branch. Anytime you start working on something new you need to create a branch for yourself. This allows you to do anything you want and not break the “real” master branch project. A branch is basically a version of the project just for you . You can blow everything up and corrupt all the files in this branch and we’re still not dead as a team because we still have the master branch which is the “perfect, everything works” branch. 
+
+
+
+
+How to upload your work/branch
+
+
+1. “git status” to see all the changes that you’ve made
+2. “git add filename” adds your file to the list of files that are ready to be saved
+3. “git commit -m “In this save, I fixed Reggie’s hair”” saves all the files that you used “git add” on. Remember to leave a good commit message so you actually know what you did in this save/commit. 
+4. “git push origin ReggieModelHairUpdate” this uploads your branch to github.com (origin). If you go to our website you should see your branch when you click on the branches tab. 
+5. Click on your branch
+6. On the right you should see a button that says “Compare & pull request”. Click on it 
+7. Create a good title and description of your pull request and click “Create Pull Request”. If your pull request is something visual, put some screenshots in the description!
+8. You’re done! Now me or veronica will check out what you did, and approve it and merge it in. Or we’ll say “fix blah blah blah” in which case you can fix whatever, and repeat steps 1 through 4. The pull request will automatically update with your fixes and alert us that you made some changes. 
+
+
+
+
+How to switch branches 
+
+
+1. “git branch” to see all the branches available to you 
+2. “git checkout branchName” . This command switches you to the branch named branchName
+
+
+How to revert to a previous save/commit. 
+
+
+1. “git log” to see all the saves
+2. “git checkout 99e1cf36ad9a1ddb956a376f30839f85297f9bf2” the number is the number right next to the commit in the log. You’re now on a previous commit/save.
