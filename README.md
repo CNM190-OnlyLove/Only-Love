@@ -53,7 +53,7 @@ More terminology: A branch is a version of all our files.
 3. `git commit -m "<comment>"`
   * Save all the files you added in step 2 into a commit with a comment. Please write a *descriptive* commit comment! "Reggie's Hair" doesn't mean much. "Reggie's hair is no longer backwards" means a lot more!
 4. `git push origin <branchname>`
-..* This uploads your branch to github.com (origin). If you go to [our GitHub page](https://github.com/CNM190-OnlyLove/Only-Love), you should see your branch when you click on the [branches tab](https://github.com/CNM190-OnlyLove/Only-Love/branches).
+  * This uploads your branch to github.com (origin). If you go to [our GitHub page](https://github.com/CNM190-OnlyLove/Only-Love), you should see your branch when you click on the [branches tab](https://github.com/CNM190-OnlyLove/Only-Love/branches).
 5. Click into your branch.
 6. On the top right, there is a button that says 'Pull request'. Click it.
 ![Screenshot of GitHub - pull request](readme-images/branchpage.png)
