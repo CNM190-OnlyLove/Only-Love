@@ -4,3 +4,4 @@ renderData/**
 autosave/**
 *.swatch
 *.swp
+.DS_Store
