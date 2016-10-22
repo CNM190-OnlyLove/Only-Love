@@ -3,5 +3,6 @@ renderman/**
 renderData/**
 autosave/**
 *.swatch
+*.mayaSwatches
 *.swp
 .DS_Store
