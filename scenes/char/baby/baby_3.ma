@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: baby_3.ma
-//Last modified: Mon, Oct 24, 2016 03:03:33 PM
+//Last modified: Mon, Oct 24, 2016 03:04:19 PM
 //Codeset: 1252
 requires maya "2016";
 requires "stereoCamera" "10.0";
@@ -16,8 +16,8 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CAD6BA2F-4C9E-BBA6-837F-5C9CB83CE59F";
-	setAttr ".t" -type "double3" 13.626727893018494 1.2345935843994986 2.494397879051109 ;
-	setAttr ".r" -type "double3" -9.9383528436931261 436.19999999898062 -3.33344713307708e-015 ;
+	setAttr ".t" -type "double3" 11.111675622333559 1.0278183602261903 1.8766417905532893 ;
+	setAttr ".r" -type "double3" -11.738352843694161 436.19999999897817 -1.000034139922954e-014 ;
 	setAttr ".rp" -type "double3" -1.3322676295501878e-015 1.8873791418627661e-015 0 ;
 	setAttr ".rpt" -type "double3" 7.2040275175877646e-014 -2.9875250909317161e-014 
 		-3.4760509848578214e-013 ;
@@ -25,7 +25,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7AFD353B-46B6-8902-3274-8A8E3690FA3E";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 10.328527620362525;
+	setAttr ".coi" 7.7457162953699923;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
