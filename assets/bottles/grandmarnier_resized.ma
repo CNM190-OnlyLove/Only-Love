@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: grandmarnier_resized.ma
-//Last modified: Mon, Oct 24, 2016 12:56:31 AM
+//Last modified: Mon, Oct 24, 2016 01:06:26 AM
 //Codeset: UTF-8
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -17,7 +17,7 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F1839D1E-4461-C576-2287-55B09A845A3D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.4821108937312015 1.6921424841405872 -8.5365101321437198 ;
+	setAttr ".t" -type "double3" -0.56279856162013631 0.48385495564748732 -0.84439582094468257 ;
 	setAttr ".r" -type "double3" -7.5383527251775986 -507.39999999995888 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "881861FB-468E-11E7-F46E-A2B1E7E9A0D2";
@@ -26,7 +26,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 10.23496438162144;
+	setAttr ".coi" 1.0247409777660814;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
