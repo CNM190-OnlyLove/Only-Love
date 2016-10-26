@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: grandmarnier_resized.ma
-//Last modified: Wed, Oct 26, 2016 01:18:14 AM
+//Last modified: Wed, Oct 26, 2016 01:26:35 AM
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.3.0.0";
@@ -2131,8 +2131,8 @@ createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
 	setAttr ".nt" -type "string" "settings:display";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "FADF4AC4-634F-A623-7BA0-3C80BFCDB3D2";
-	setAttr -s 17 ".lnk";
-	setAttr -s 17 ".slnk";
+	setAttr -s 18 ".lnk";
+	setAttr -s 18 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "FD6B8F2A-8941-A9B2-014C-9A8F478CCFAA";
 	setAttr ".cdl" 1;
@@ -2510,12 +2510,6 @@ createNode poseInterpolatorManager -n "poseInterpolatorManager";
 	rename -uid "D188080D-D741-58D3-B496-90B098C1B0DA";
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
 	rename -uid "91AD13D1-7346-7B83-2AB0-B2920185CB30";
-createNode file -n "file2";
-	rename -uid "A3809E2A-164C-4C47-C231-7E973D8B4DDA";
-	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/bottles_grandmarnier.jpg";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture2";
-	rename -uid "B900F1B8-E345-BBE0-B0BE-53866303EBAF";
 createNode groupId -n "groupId6";
 	rename -uid "D2F61888-5042-6552-7593-D4BC589D3B7E";
 	setAttr ".ihi" 0;
@@ -2731,64 +2725,58 @@ createNode place2dTexture -n "place2dTexture10";
 createNode materialInfo -n "pasted__materialInfo14";
 	rename -uid "8076AA9E-6242-0685-64BD-55A4135BE12E";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "CC1CAB6A-0340-B6DA-82C9-D297B1F6115A";
+	rename -uid "FC6CD01E-6E4F-3D7B-E629-6F9ECCF247B8";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" 524.19066776202146 -1232.5418363509198 ;
-	setAttr ".tgi[0].vh" -type "double2" 1924.0705029969106 293.0057085188339 ;
-	setAttr -s 18 ".tgi[0].ni";
+	setAttr ".tgi[0].vl" -type "double2" 483.00116096747325 -1678.0728207038687 ;
+	setAttr ".tgi[0].vh" -type "double2" 2174.1392547156443 164.87933991522434 ;
+	setAttr -s 16 ".tgi[0].ni";
 	setAttr ".tgi[0].ni[0].x" 944.28570556640625;
 	setAttr ".tgi[0].ni[0].y" 187.14285278320312;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 675.71429443359375;
-	setAttr ".tgi[0].ni[1].y" -585.71429443359375;
+	setAttr ".tgi[0].ni[1].x" 1290;
+	setAttr ".tgi[0].ni[1].y" -564.28570556640625;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 1290;
-	setAttr ".tgi[0].ni[2].y" -564.28570556640625;
+	setAttr ".tgi[0].ni[2].x" 1612.857177734375;
+	setAttr ".tgi[0].ni[2].y" 191.42857360839844;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
 	setAttr ".tgi[0].ni[3].x" 1612.857177734375;
-	setAttr ".tgi[0].ni[3].y" 191.42857360839844;
+	setAttr ".tgi[0].ni[3].y" -324.28570556640625;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
 	setAttr ".tgi[0].ni[4].x" 1612.857177734375;
-	setAttr ".tgi[0].ni[4].y" -324.28570556640625;
+	setAttr ".tgi[0].ni[4].y" -910;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 1612.857177734375;
-	setAttr ".tgi[0].ni[5].y" -910;
+	setAttr ".tgi[0].ni[5].x" 1305.7142333984375;
+	setAttr ".tgi[0].ni[5].y" -888.5714111328125;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 1305.7142333984375;
-	setAttr ".tgi[0].ni[6].y" -888.5714111328125;
+	setAttr ".tgi[0].ni[6].x" 1251.4285888671875;
+	setAttr ".tgi[0].ni[6].y" 17.142856597900391;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" 1251.4285888671875;
+	setAttr ".tgi[0].ni[7].x" 1612.857177734375;
 	setAttr ".tgi[0].ni[7].y" 17.142856597900391;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" 1612.857177734375;
-	setAttr ".tgi[0].ni[8].y" 17.142856597900391;
+	setAttr ".tgi[0].ni[8].x" 637.14288330078125;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" 637.14288330078125;
+	setAttr ".tgi[0].ni[9].x" 944.28570556640625;
+	setAttr ".tgi[0].ni[9].y" 21.428571701049805;
 	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 944.28570556640625;
-	setAttr ".tgi[0].ni[10].y" 21.428571701049805;
+	setAttr ".tgi[0].ni[10].x" 998.5714111328125;
+	setAttr ".tgi[0].ni[10].y" -888.5714111328125;
 	setAttr ".tgi[0].ni[10].nvs" 1923;
-	setAttr ".tgi[0].ni[11].x" 998.5714111328125;
-	setAttr ".tgi[0].ni[11].y" -888.5714111328125;
+	setAttr ".tgi[0].ni[11].x" 1612.857177734375;
+	setAttr ".tgi[0].ni[11].y" -591.43798828125;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" 1612.857177734375;
-	setAttr ".tgi[0].ni[12].y" -527.14288330078125;
+	setAttr ".tgi[0].ni[12].x" 691.4285888671875;
+	setAttr ".tgi[0].ni[12].y" -910;
 	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" 691.4285888671875;
-	setAttr ".tgi[0].ni[13].y" -910;
+	setAttr ".tgi[0].ni[13].x" 1251.4285888671875;
+	setAttr ".tgi[0].ni[13].y" 191.42857360839844;
 	setAttr ".tgi[0].ni[13].nvs" 1923;
-	setAttr ".tgi[0].ni[14].x" 982.85711669921875;
-	setAttr ".tgi[0].ni[14].y" -564.28570556640625;
-	setAttr ".tgi[0].ni[14].nvs" 1923;
-	setAttr ".tgi[0].ni[15].x" 1251.4285888671875;
-	setAttr ".tgi[0].ni[15].y" 191.42857360839844;
+	setAttr ".tgi[0].ni[14].x" 1290;
+	setAttr ".tgi[0].ni[14].y" -185.71427917480469;
+	setAttr ".tgi[0].ni[14].nvs" 2098;
+	setAttr ".tgi[0].ni[15].x" 637.14288330078125;
+	setAttr ".tgi[0].ni[15].y" 165.71427917480469;
 	setAttr ".tgi[0].ni[15].nvs" 1923;
-	setAttr ".tgi[0].ni[16].x" 1290;
-	setAttr ".tgi[0].ni[16].y" -185.71427917480469;
-	setAttr ".tgi[0].ni[16].nvs" 2098;
-	setAttr ".tgi[0].ni[17].x" 637.14288330078125;
-	setAttr ".tgi[0].ni[17].y" 165.71427917480469;
-	setAttr ".tgi[0].ni[17].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2807,22 +2795,18 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 11 ".u";
+	setAttr -s 10 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
-	setAttr -s 11 ".tx";
+	setAttr -s 10 ".tx";
 select -ne :lambert1;
-	setAttr ".dc" 0.84558820724487305;
-	setAttr ".it" -type "float3" 0.65584415 0.65584415 0.65584415 ;
-	setAttr ".ambc" -type "float3" 0.077922076 0.077922076 0.077922076 ;
 	setAttr ".tc" 0.17647059261798859;
 select -ne :initialShadingGroup;
-	setAttr -s 4 ".dsm";
+	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 4 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :hardwareRenderGlobals;
@@ -2920,28 +2904,6 @@ connectAttr "place2dTexture1.ofs" "file1.fs";
 connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
 connectAttr "PxrLMPlastic1SG.msg" "materialInfo7.sg";
 connectAttr "PxrLMGlass3SG.msg" "materialInfo8.sg";
-connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2.ws";
-connectAttr "place2dTexture2.c" "file2.c";
-connectAttr "place2dTexture2.tf" "file2.tf";
-connectAttr "place2dTexture2.rf" "file2.rf";
-connectAttr "place2dTexture2.mu" "file2.mu";
-connectAttr "place2dTexture2.mv" "file2.mv";
-connectAttr "place2dTexture2.s" "file2.s";
-connectAttr "place2dTexture2.wu" "file2.wu";
-connectAttr "place2dTexture2.wv" "file2.wv";
-connectAttr "place2dTexture2.re" "file2.re";
-connectAttr "place2dTexture2.of" "file2.of";
-connectAttr "place2dTexture2.r" "file2.ro";
-connectAttr "place2dTexture2.n" "file2.n";
-connectAttr "place2dTexture2.vt1" "file2.vt1";
-connectAttr "place2dTexture2.vt2" "file2.vt2";
-connectAttr "place2dTexture2.vt3" "file2.vt3";
-connectAttr "place2dTexture2.vc1" "file2.vc1";
-connectAttr "place2dTexture2.o" "file2.uv";
-connectAttr "place2dTexture2.ofs" "file2.fs";
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
@@ -3182,39 +3144,35 @@ connectAttr "ramp_grandmarnier_transparent.msg" "pasted__materialInfo14.m";
 connectAttr "pasted__file10.msg" "pasted__materialInfo14.t" -na;
 connectAttr "pasted__file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr ":lambert1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr ":lambert1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "pasted__rampShader5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "pasted__rampShader5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr ":initialParticleSE.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr ":initialParticleSE.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "grandmarnier_full.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "grandmarnier_full.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "ramp_grandmarnier.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "ramp_grandmarnier.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "rampShader5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "rampShader5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "pasted__file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "pasted__file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr ":initialShadingGroup.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr ":initialShadingGroup.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "ramp_grandmarnier_transparent.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
 		;
-connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr ":particleCloud1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "ramp_grandmarnier_transparent.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
-connectAttr ":particleCloud1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
-		;
-connectAttr "place2dTexture11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+connectAttr "place2dTexture11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
 		;
 connectAttr "RMSGlass1SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrLMGlass1SG.pa" ":renderPartition.st" -na;
@@ -3235,7 +3193,6 @@ connectAttr "grandmarnier_full.msg" ":defaultShaderList1.s" -na;
 connectAttr "ramp_grandmarnier.msg" ":defaultShaderList1.s" -na;
 connectAttr "ramp_grandmarnier_transparent.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
@@ -3247,7 +3204,6 @@ connectAttr "place2dTexture11.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture10.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
@@ -3257,7 +3213,6 @@ connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file9.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file10.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file11.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2.oc" ":lambert1.c";
 connectAttr "grand_marnierShape.iog.og[2]" ":initialShadingGroup.dsm" -na;
 connectAttr "grand_marnierShape.iog.og[3]" ":initialShadingGroup.dsm" -na;
 connectAttr "grand_marnierShape.iog.og[4]" ":initialShadingGroup.dsm" -na;
@@ -3266,5 +3221,4 @@ connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId10.msg" ":initialShadingGroup.gn" -na;
-connectAttr "file2.msg" ":initialMaterialInfo.t" -na;
 // End of grandmarnier_resized.ma
