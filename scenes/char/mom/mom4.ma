@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: mom4.ma
-//Last modified: Fri, Oct 28, 2016 10:04:59 PM
+//Last modified: Fri, Oct 28, 2016 10:06:13 PM
 //Codeset: 1252
 requires maya "2016";
 requires -nodeType "RenderMan" "RenderMan_for_Maya" "20.7";
