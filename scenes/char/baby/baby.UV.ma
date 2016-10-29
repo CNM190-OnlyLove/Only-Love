@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: baby.UV.ma
-//Last modified: Sat, Oct 29, 2016 02:08:50 PM
+//Last modified: Sat, Oct 29, 2016 03:36:51 PM
 //Codeset: UTF-8
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -16,8 +16,8 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CAD6BA2F-4C9E-BBA6-837F-5C9CB83CE59F";
-	setAttr ".t" -type "double3" 41.692191744575105 0.64648900245925833 7.5280796750575609 ;
-	setAttr ".r" -type "double3" 1787.0616471614317 1157.799999999289 -3.7626378146688491e-15 ;
+	setAttr ".t" -type "double3" 24.253842795951279 0.21784371788137058 -2.0924269475832351 ;
+	setAttr ".r" -type "double3" 1790.0616471618791 1175.399999999139 0 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-16 0 8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 1.0339220159833839e-13 -3.1076019883598205e-14 -3.6102738927373709e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -25,7 +25,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 42.816574660835002;
+	setAttr ".coi" 25.236489035804823;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
