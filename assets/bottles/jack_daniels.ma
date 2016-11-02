@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: jack_daniels.ma
-//Last modified: Tue, Nov 01, 2016 11:35:56 PM
+//Last modified: Tue, Nov 01, 2016 11:37:53 PM
 //Codeset: 1252
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -4475,9 +4475,9 @@ createNode mesh -n "jack_danielsShape" -p "jack_daniels";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "pfxToon1" -p "JackDanielsBottle";
+createNode transform -n "JackDanielsPFXToon" -p "JackDanielsBottle";
 	rename -uid "F0ACFE03-4328-49DE-0573-ADBEA47DC166";
-createNode pfxToon -n "pfxToonShape1" -p "pfxToon1";
+createNode pfxToon -n "JackDanielsPFXToonShape" -p "JackDanielsPFXToon";
 	rename -uid "ED8667C1-4D47-4D50-39E7-BE991394418C";
 	setAttr -k off ".v" no;
 	setAttr ".dpc" 100;
@@ -4486,9 +4486,9 @@ createNode pfxToon -n "pfxToonShape1" -p "pfxToon1";
 	setAttr ".mqo" yes;
 	setAttr -s 3 ".ins";
 	setAttr -s 2 ".cwd[0:1]"  0 1 3 0.30000001 0.30000001 3;
-createNode transform -n "MeshGroup" -p "JackDanielsBottle";
+createNode transform -n "JackDanielsToonOutlineMesh" -p "JackDanielsBottle";
 	rename -uid "2C4FAF68-4124-6CD2-0AF5-48B87E865E14";
-createNode transform -n "Main" -p "MeshGroup";
+createNode transform -n "Main" -p "JackDanielsToonOutlineMesh";
 	rename -uid "0C3C3826-49DD-2B24-5EFA-64A5E84BD2C9";
 createNode mesh -n "MainShape" -p "Main";
 	rename -uid "F44931A8-4A13-B2F5-F539-7D919F27BDF4";
@@ -6112,7 +6112,7 @@ createNode shadingEngine -n "surfaceShader1SG";
 createNode materialInfo -n "materialInfo5";
 	rename -uid "61D6D188-4C3A-732D-6902-01A66454688F";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "AE032816-4E4D-BB1B-3891-779E691648EE";
+	rename -uid "91A0FCD4-47E7-88F9-7CF5-1D8194281003";
 	setAttr ".pee" yes;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -735.62057806301505 -458.19998208860954 ;
@@ -6179,14 +6179,14 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "labelShape.o" "pfxToonShape1.ins[0].srf";
-connectAttr "labelShape.wm" "pfxToonShape1.ins[0].iwm";
-connectAttr "capShape.o" "pfxToonShape1.ins[1].srf";
-connectAttr "capShape.wm" "pfxToonShape1.ins[1].iwm";
-connectAttr "jack_danielsShape.o" "pfxToonShape1.ins[2].srf";
-connectAttr "jack_danielsShape.wm" "pfxToonShape1.ins[2].iwm";
-connectAttr "unitConversion1.o" "pfxToonShape1.cpt";
-connectAttr "pfxToonShape1.wmm" "MainShape.i";
+connectAttr "labelShape.o" "JackDanielsPFXToonShape.ins[0].srf";
+connectAttr "labelShape.wm" "JackDanielsPFXToonShape.ins[0].iwm";
+connectAttr "capShape.o" "JackDanielsPFXToonShape.ins[1].srf";
+connectAttr "capShape.wm" "JackDanielsPFXToonShape.ins[1].iwm";
+connectAttr "jack_danielsShape.o" "JackDanielsPFXToonShape.ins[2].srf";
+connectAttr "jack_danielsShape.wm" "JackDanielsPFXToonShape.ins[2].iwm";
+connectAttr "unitConversion1.o" "JackDanielsPFXToonShape.cpt";
+connectAttr "JackDanielsPFXToonShape.wmm" "MainShape.i";
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
