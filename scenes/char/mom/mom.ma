@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: mom.ma
-//Last modified: Tue, Nov 01, 2016 10:43:03 PM
+//Last modified: Tue, Nov 01, 2016 10:46:00 PM
 //Codeset: 1252
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -77508,7 +77508,7 @@ createNode contour_shader_simple -n "contour_shader_simple3";
 	rename -uid "5EBDC16C-4EE9-50BE-E7FA-F6807F338ECE";
 	setAttr ".S01" 0.10000000149011612;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "CF9B21FE-4357-FCA9-5D8F-458C0CC530CA";
+	rename -uid "AEA59602-4979-3644-D9B1-DFBF73C62EE0";
 	setAttr ".pee" yes;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -359.20419298104366 -392.67287343867963 ;
