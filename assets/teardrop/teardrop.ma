@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: teardrop.ma
-//Last modified: Sun, Nov 13, 2016 03:48:01 PM
+//Last modified: Sun, Nov 13, 2016 06:32:30 PM
 //Codeset: UTF-8
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -18,13 +18,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "7DDF6D86-824A-A7E4-096D-EFB1A94AFD26";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.3895324505714828 3.3019091766848323 -13.716138629135429 ;
-	setAttr ".r" -type "double3" 344.06164726736455 1594.999999998093 0 ;
+	setAttr ".t" -type "double3" 5.2795776940915413 10.335340889519092 -24.115509468385746 ;
+	setAttr ".r" -type "double3" 333.26164726778524 1960.9999999977329 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "ADE0300C-044E-6261-F1A5-5F8D6BFAC889";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 14.639473574945058;
+	setAttr ".coi" 25.548180414369408;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -81,6 +81,7 @@ createNode transform -n "tear_master";
 	rename -uid "DC50ECB1-9B43-4479-7885-EAB276BC742B";
 	addAttr -ci true -sn "vert_stretch" -ln "vert_stretch" -min 0 -max 10 -at "double";
 	addAttr -ci true -sn "horiz_squash" -ln "horiz_squash" -min 0 -max 10 -at "double";
+	setAttr -av ".v";
 	setAttr ".t" -type "double3" 0 -1 0 ;
 	setAttr -k on ".vert_stretch";
 	setAttr -k on ".horiz_squash";
@@ -101,7 +102,6 @@ createNode deformSquash -n "tear_stretchShape" -p "tear_stretch";
 createNode transform -n "tear_squash" -p "tear_master";
 	rename -uid "1B560D46-7842-0CAB-024F-D98E5E021077";
 	setAttr ".t" -type "double3" -0.00025754082086903995 1.7034230647937854 -0.032371056471920401 ;
-	setAttr ".r" -type "double3" -90 0 0 ;
 	setAttr ".s" -type "double3" 1.8534321334643415 1.8534321334643415 1.8534321334643415 ;
 	setAttr ".rp" -type "double3" 0 2.3314683517128287e-15 0 ;
 	setAttr ".spt" -type "double3" 0 2.3314683517128287e-15 0 ;
@@ -977,6 +977,46 @@ createNode shadingEngine -n "unwrapChekcerShaderSG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "3E8D9F67-1D43-6928-9631-11B8D1889412";
+createNode groupId -n "groupId3";
+	rename -uid "C1B3B922-8C46-DD03-92F4-30BD92CD7587";
+	setAttr ".ihi" 0;
+createNode mi_metallic_paint_x -n "mi_metallic_paint_x2";
+	rename -uid "6E33B78D-6747-E356-B6BA-769509ED6667";
+	setAttr ".S01" -type "float3" 0.29595998 0.4904924 0.60399997 ;
+	setAttr ".S04" -type "float3" 0.89901578 1 0.99249256 ;
+	setAttr ".S10" 0.40000000596046448;
+createNode shadingEngine -n "mi_metallic_paint_x2SG";
+	rename -uid "96CE04A1-8249-D954-0E5E-04A49D1E0411";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+	rename -uid "6EF739F0-A940-CCD7-2EA3-5C990FE16C70";
+createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
+	rename -uid "A681998E-754C-46F6-47A5-968A80E9BEAE";
+	setAttr ".minsp" 0;
+	setAttr ".fil" 1;
+	setAttr ".scan" 1;
+	setAttr ".ray" no;
+createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
+	rename -uid "FCF13E34-4140-7FE7-1093-A881C5E189A5";
+	setAttr ".minsp" 0;
+	setAttr ".fil" 1;
+	setAttr ".scan" 1;
+	setAttr ".rflr" 1;
+	setAttr ".rfrr" 2;
+	setAttr ".maxr" 3;
+	setAttr ".shrd" 1;
+createNode shadingEngine -n "lambert3SG";
+	rename -uid "25B15D0C-CC4D-F710-CBF6-A0B4636CAC8F";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+	rename -uid "A3A51487-B94F-1BBE-9FB8-C2ABA78ACDE3";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "AF559BB5-3F46-F68C-8E81-6C86201ACC8A";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -303.57141650858432 -323.80951094248991 ;
+	setAttr ".tgi[0].vh" -type "double2" 291.66665507687514 339.2857008037119 ;
 createNode makeNurbCircle -n "makeNurbCircle1";
 	rename -uid "3FA283C5-CD47-4E5C-3508-46AE109F2BFE";
 	setAttr ".nr" -type "double3" 0 1 0 ;
@@ -1000,6 +1040,11 @@ createNode nonLinear -n "vert_stretch";
 	setAttr -k on ".es";
 	setAttr -k on ".lb";
 	setAttr -k on ".hb";
+createNode animCurveUU -n "squash2_factor";
+	rename -uid "2619F6B2-F74E-39EB-08AA-C59C3263E9A7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 0 10 1.2;
 createNode groupParts -n "squash2GroupParts";
 	rename -uid "B1396394-FB4B-586E-7C07-00A4B5A73233";
 	setAttr ".ihi" 0;
@@ -1040,14 +1085,6 @@ createNode animCurveUU -n "squash1_factor";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 10 -2;
-createNode animCurveUU -n "squash2_factor";
-	rename -uid "2619F6B2-F74E-39EB-08AA-C59C3263E9A7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 1.2;
-createNode groupId -n "groupId3";
-	rename -uid "C1B3B922-8C46-DD03-92F4-30BD92CD7587";
-	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts4";
 	rename -uid "C8239A43-D044-4F04-C43A-AC9315729FC6";
 	setAttr ".ihi" 0;
@@ -1069,39 +1106,43 @@ createNode tweak -n "tweak1";
 		0 0 -0.039236736 0 0 -0.020106684 0 -4.7683716e-07 -0.010024785 0 -5.5511151e-17 
 		0.015944807 0 -5.5511151e-17 0.036477126 0 -1.110223e-16 0.042077076 -3.6379788e-12 
 		-0.00033229406 0.038705081 0 -1.110223e-16 0.042312752 0 -1.1920929e-07 0.036743727 
-		0 2.3841858e-07 0.016233532 0 -4.7683716e-07 -0.0098043438 0 -4.7683716e-07 -0.033428103 
-		0 4.7683716e-07 -0.04871368 0 -2.3841858e-07 -0.054685168 0 0 -0.054679446 0 -0.00014383707 
-		-0.048752327 0 -0.00037173613 -0.033991639 0 -0.00014552007 -0.048753638 0 -1.1920929e-07 
-		-0.054681353 0 0 -0.054681353 0 0 -0.048715744 0 -4.7683716e-07 -0.033489957 0.001801312 
-		-0.00099137379 -0.020375628 0.0030381978 -0.0079557728 -0.018607015 0.0038993955 
-		-0.012577837 -0.022945322 0.0012425482 -0.044276882 -0.030434802 0.00011410238 0.022817712 
-		-0.017376825 0.0011446476 -0.049177222 -0.027166592 -0.0034698546 -0.014019981 -0.022471022 
-		-0.0035434961 -0.0081114648 -0.019221786 -0.0016197562 -0.00076401746 -0.020791017 
-		0.00080943108 -0.0028659329 -0.025046874 4.9710274e-05 0.0039480319 -0.029807186 
-		0.00030323863 0.0031601777 -0.026079239 5.1707029e-05 -0.0020301973 -0.015870163 
-		0.0085984468 -0.063235439 -0.0052616973 2.5931804e-05 0.030761614 -0.071137674 -0.009675175 
-		-0.063458212 -0.0049303956 6.4492226e-05 -0.0010594649 -0.015412972 -3.4928322e-05 
-		0.0031662975 -0.025462024 -0.00032031536 0.0034977933 -0.02920188 -0.00069469213 
-		-0.0033042347 -0.024342034 0 0 0.00019337537 0 0 0.0081059197 0 0 0.009879454 0 0 
-		0.0077689402 0 0 0.009250951 0 0 0.007280488 0 0 -0.00065683934 0.0026677847 -0.016782232 
-		-0.021204174 0.01058808 -0.033717234 -0.016352776 0.02805087 -0.09122926 -0.0080277063 
-		6.8435096e-05 -0.24607277 0.013964072 -0.026742011 -0.093349576 -0.0081518656 -0.0099648535 
-		-0.033367854 -0.015703246 -0.0028924346 -0.016887838 -0.020379106 -0.0018738955 -0.031534646 
-		-0.024815049 -0.00015681982 -0.0048140325 -0.033083837 -5.2720308e-05 0.0022408476 
-		-0.040231384 -3.0815601e-05 0.0014517209 -0.039306499 3.939867e-05 0.00085259741 
-		-0.03021859 -0.00066059828 0.00036013784 -0.018689953 -0.0022684336 -0.0037075598 
-		-0.010115592 -0.0026379228 -0.0076847812 -0.0088248365 -0.0010731518 -0.013061732 
-		-0.011153616 -9.499141e-06 -0.022335345 -0.014643412 0.00099670887 -0.013150085 -0.011275262 
-		0.0025159717 -0.0078102909 -0.0090185404 0.0022184551 -0.0038215111 -0.010199852 
-		0.00067079067 0.00024352979 -0.018505868 -3.2126904e-05 0.00061670947 -0.029751869 
-		3.7372112e-05 0.0013487577 -0.038745925 4.7683716e-05 0.0023269099 -0.039806474 9.7513199e-05 
-		-0.0046484275 -0.032861248 0.0017127246 -0.029655365 -0.024626732 0.00011103909 -0.061577011 
-		-0.0076890723 0 0 -0.047175918 0 0 -0.054681353 0 0 -0.054681353 0 0 -0.047256108 
-		0 -1.4901161e-08 -0.027837049 0 -1.110223e-16 0.0015972611 0 -1.110223e-16 0.03344284 
-		0 -2.220446e-16 0.057316184 0 -2.220446e-16 0.066270828 -2.910383e-11 -2.220446e-16 
-		0.066270828 0 -2.220446e-16 0.066270828 0 -2.220446e-16 0.057296235 0 -1.110223e-16 
-		0.033404876 0 -1.110223e-16 0.0015212105 0 -7.4505806e-09 -0.027986366 0 0 -0.047233719 
-		0 0 -0.054681353 0 0 -0.054681353 0 0 -0.047233719 0 0 -0.029635645;
+		0 2.3841858e-07 0.016233532 0 -4.7683716e-07 -0.0098043438 0.0009342432 -0.0013764203 
+		-0.033319563 0.022873163 -0.036841422 -0.05830304 0.010665536 -0.017128199 -0.067958556 
+		0.0054483116 -0.002968967 -0.067735605 0.00039668381 0.00036539522 -0.050629038 0 
+		-0.00037173613 -0.033991639 -0.00044286251 0.0004663216 -0.050920028 -0.0057969987 
+		-0.0028560162 -0.069060616 -0.0097211003 -0.01544559 -0.067480855 -0.022712529 -0.036345214 
+		-0.058726911 -0.00094610453 -0.0013768375 -0.033398561 -0.004380554 -0.05707062 -0.016949255 
+		-0.0055809617 -0.060648069 -0.012372101 -0.0050754845 -0.059090063 -0.012390338 -0.0018907934 
+		-0.058427829 -0.024223134 0.00011410238 0.022817712 -0.017376825 0.0048917383 -0.06438195 
+		-0.020216586 0.0062942505 -0.061109632 -0.011927526 0.0048549473 -0.061123699 -0.013840366 
+		0.0050062537 -0.057223029 -0.018311493 0.0095103383 -0.076665878 -0.026706506 0.0079324841 
+		-0.077038869 -0.03541062 0.0080747306 -0.075996682 -0.033835605 0.0086317658 -0.061778758 
+		-0.025034526 0.019219711 -0.10541517 -0.018469922 -4.1314619e-05 0.10980232 -0.21348175 
+		-0.023958936 -0.112285 -0.022828002 -0.0096170306 -0.062998712 -0.024074733 -0.0074858367 
+		-0.077202402 -0.031391516 -0.0081933439 -0.07911811 -0.032923304 -0.0090362132 -0.077442117 
+		-0.024454525 0 0 0.00019337537 0 0 0.0081059197 0 0 0.009879454 0 0 0.0077689402 
+		0 0 0.009250951 0 0 0.007280488 0 0 -0.00065683934 0.013858765 -0.088984944 -0.022528846 
+		0.022572517 -0.087467432 -0.016566243 0.028143287 -0.09161827 -0.0080115562 6.8435096e-05 
+		-0.24607277 0.013964072 -0.026819527 -0.093707502 -0.0081362631 -0.022460431 -0.088238165 
+		-0.015513297 -0.014049768 -0.089285314 -0.020440277 -0.0086410344 -0.1000023 -0.028261449 
+		-0.0050712526 -0.04360221 -0.038105827 -0.0019429028 -0.052667465 -0.045509823 0.0066481233 
+		-0.070374988 -0.04434216 0.0040736198 -0.058925852 -0.03056372 0.00026613474 -0.028650068 
+		-0.016427927 -0.0025900006 -0.011028113 -0.0088564735 -0.0035103261 -0.022998504 
+		-0.0039365999 -0.0013093799 -0.027525514 -0.0047139302 -9.97592e-06 -0.023036156 
+		-0.014338981 0.0013547391 -0.027878068 -0.0047474504 0.0034034848 -0.023607586 -0.0038994253 
+		0.0025421381 -0.010956753 -0.0089099482 0.00018668175 -0.028974563 -0.015889894 -0.0036720037 
+		-0.061197687 -0.028621981 -0.0063328147 -0.073810153 -0.041838311 0.0024799109 -0.054802965 
+		-0.043334056 0.00445351 -0.037621837 -0.03687419 0.0085222125 -0.09558852 -0.027387321 
+		0.00011668317 -0.099625289 -0.0079721641 0 0 -0.047175918 0 0 -0.054681353 0 0 -0.054681353 
+		0 0 -0.047256108 0 -1.4901161e-08 -0.027837049 0 -1.110223e-16 0.0015972611 0 -1.110223e-16 
+		0.03344284 0 -2.220446e-16 0.057316184 0 -2.220446e-16 0.066270828 -2.910383e-11 
+		-2.220446e-16 0.066270828 0 -2.220446e-16 0.066270828 0 -2.220446e-16 0.057296235 
+		0 -1.110223e-16 0.033404876 0 -1.110223e-16 0.0015212105 0 -7.4505806e-09 -0.027986366 
+		0 0 -0.047233719 0 0 -0.054681353 0 0 -0.054681353 0 0 -0.047233719 0 0 -0.029635645;
+createNode objectSet -n "tweakSet1";
+	rename -uid "0E9D615A-2145-4277-74E3-7F92630793DD";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
 createNode groupParts -n "squash1GroupParts";
 	rename -uid "E71A0D63-BE41-DFEB-1779-1E9035F89FDA";
 	setAttr ".ihi" 0;
@@ -1109,47 +1150,6 @@ createNode groupParts -n "squash1GroupParts";
 createNode groupId -n "squash1GroupId";
 	rename -uid "E36EB5CF-6941-CC6F-0626-C1AF9B77FBD9";
 	setAttr ".ihi" 0;
-createNode objectSet -n "tweakSet1";
-	rename -uid "0E9D615A-2145-4277-74E3-7F92630793DD";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode mi_metallic_paint_x -n "mi_metallic_paint_x2";
-	rename -uid "6E33B78D-6747-E356-B6BA-769509ED6667";
-	setAttr ".S01" -type "float3" 0.29595998 0.4904924 0.60399997 ;
-	setAttr ".S04" -type "float3" 0.89901578 1 0.99249256 ;
-	setAttr ".S10" 0.40000000596046448;
-createNode shadingEngine -n "mi_metallic_paint_x2SG";
-	rename -uid "96CE04A1-8249-D954-0E5E-04A49D1E0411";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo5";
-	rename -uid "6EF739F0-A940-CCD7-2EA3-5C990FE16C70";
-createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
-	rename -uid "A681998E-754C-46F6-47A5-968A80E9BEAE";
-	setAttr ".minsp" 0;
-	setAttr ".fil" 1;
-	setAttr ".scan" 1;
-	setAttr ".ray" no;
-createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
-	rename -uid "FCF13E34-4140-7FE7-1093-A881C5E189A5";
-	setAttr ".minsp" 0;
-	setAttr ".fil" 1;
-	setAttr ".scan" 1;
-	setAttr ".rflr" 1;
-	setAttr ".rfrr" 2;
-	setAttr ".maxr" 3;
-	setAttr ".shrd" 1;
-createNode shadingEngine -n "lambert3SG";
-	rename -uid "25B15D0C-CC4D-F710-CBF6-A0B4636CAC8F";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo6";
-	rename -uid "A3A51487-B94F-1BBE-9FB8-C2ABA78ACDE3";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "AF559BB5-3F46-F68C-8E81-6C86201ACC8A";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -303.57141650858432 -323.80951094248991 ;
-	setAttr ".tgi[0].vh" -type "double2" 291.66665507687514 339.2857008037119 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1246,11 +1246,16 @@ connectAttr "unwrapChekcerShader.oc" "unwrapChekcerShaderSG.ss";
 connectAttr "unwrapChekcerShaderSG.msg" "materialInfo4.sg";
 connectAttr "unwrapChekcerShader.msg" "materialInfo4.m";
 connectAttr "unwrapTestPattern.msg" "materialInfo4.t" -na;
+connectAttr "mi_metallic_paint_x2.msg" "mi_metallic_paint_x2SG.mims";
+connectAttr "mi_metallic_paint_x2SG.msg" "materialInfo5.sg";
+connectAttr "mi_metallic_paint_x2.msg" "materialInfo5.m";
+connectAttr "lambert3SG.msg" "materialInfo6.sg";
 connectAttr "squash2_factor.o" "vert_stretch.fac";
 connectAttr "squash2GroupParts.og" "vert_stretch.ip[0].ig";
 connectAttr "squash2GroupId.id" "vert_stretch.ip[0].gi";
 connectAttr "tear_stretchShape.dd" "vert_stretch.dd";
 connectAttr "tear_stretch.wm" "vert_stretch.ma";
+connectAttr "tear_master.vert_stretch" "squash2_factor.i";
 connectAttr "horiz_squash.og[0]" "squash2GroupParts.ig";
 connectAttr "squash2GroupId.id" "squash2GroupParts.gi";
 connectAttr "squash2GroupId.msg" "squash2Set.gn" -na;
@@ -1265,20 +1270,15 @@ connectAttr "squash1GroupId.msg" "squash1Set.gn" -na;
 connectAttr "teardropShape.iog.og[12]" "squash1Set.dsm" -na;
 connectAttr "horiz_squash.msg" "squash1Set.ub[0]";
 connectAttr "tear_master.horiz_squash" "squash1_factor.i";
-connectAttr "tear_master.vert_stretch" "squash2_factor.i";
 connectAttr "teardropShapeOrig.w" "groupParts4.ig";
 connectAttr "groupId5.id" "groupParts4.gi";
 connectAttr "groupParts4.og" "tweak1.ip[0].ig";
 connectAttr "groupId5.id" "tweak1.ip[0].gi";
-connectAttr "tweak1.og[0]" "squash1GroupParts.ig";
-connectAttr "squash1GroupId.id" "squash1GroupParts.gi";
 connectAttr "groupId5.msg" "tweakSet1.gn" -na;
 connectAttr "teardropShape.iog.og[5]" "tweakSet1.dsm" -na;
 connectAttr "tweak1.msg" "tweakSet1.ub[0]";
-connectAttr "mi_metallic_paint_x2.msg" "mi_metallic_paint_x2SG.mims";
-connectAttr "mi_metallic_paint_x2SG.msg" "materialInfo5.sg";
-connectAttr "mi_metallic_paint_x2.msg" "materialInfo5.m";
-connectAttr "lambert3SG.msg" "materialInfo6.sg";
+connectAttr "tweak1.og[0]" "squash1GroupParts.ig";
+connectAttr "squash1GroupId.id" "squash1GroupParts.gi";
 connectAttr "mi_metallic_paint_x1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "unwrapBaseShaderSG.pa" ":renderPartition.st" -na;
