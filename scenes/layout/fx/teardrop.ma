@@ -1,16 +1,14 @@
 //Maya ASCII 2016 scene
 //Name: teardrop.ma
-//Last modified: Sun, Nov 13, 2016 04:36:48 PM
+//Last modified: Mon, Nov 14, 2016 06:04:52 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "shotglass" -rfn "shotglassRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
-		 "/Users/emileechen/Documents/project/Only-Love//assets/shotglass/shotglass.ma";
-file -r -ns "shotglass" -dr 1 -rfn "shotglassRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
-		 "/Users/emileechen/Documents/project/Only-Love//assets/shotglass/shotglass.ma";
+file -rdi 1 -ns "shotglass" -rfn "shotglassRN" -op "v=0;" -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//assets/shotglass/shotglass.ma";
+file -r -ns "shotglass" -dr 1 -rfn "shotglassRN" -op "v=0;" -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//assets/shotglass/shotglass.ma";
 requires maya "2016";
 requires -nodeType "bifrostLiquidMaterial" -nodeType "bifrostShape" "bifrostvisplugin" "3.0";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
-		 -nodeType "mentalrayItemsList" -nodeType "mib_data_string" -dataType "byteArray"
-		 "Mayatomr" "2016.0 - 3.13.1.10 ";
+		 -nodeType "mentalrayItemsList" -nodeType "mia_material_x" -nodeType "mib_data_string"
+		 -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.10 ";
 requires -nodeType "bifrostContainer" -nodeType "bifrostAttrNotifier" "bifrostshellnode" "2015";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -21,29 +19,27 @@ fileInfo "cutIdentifier" "201603180400-990260";
 fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	rename -uid "4CBA0B99-5A49-E917-39CB-C8BCA57F429B";
+	rename -uid "BAE69A4A-7F48-80FF-0D88-ED8A61ECEC7F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.2182620723563833 10.856833380366544 5.3482677749950032 ;
-	setAttr ".r" -type "double3" -66.93835272963905 -260.99999999998295 2.5444437451708134e-14 ;
-	setAttr ".rp" -type "double3" -2.4632379982171654e-15 -1.434606823691251e-15 0 ;
-	setAttr ".rpt" -type "double3" 1.8945103588823738e-15 6.3186722230868521e-16 4.4735464414198441e-16 ;
+	setAttr ".t" -type "double3" 21.392149634185962 32.077889173535894 -35.045966066245136 ;
+	setAttr ".r" -type "double3" -23.73835272955904 -211.39999999999881 0 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "85E2F436-6049-53C4-151D-1F80EF716EE5";
+	rename -uid "FA0B53E5-7C45-6FE2-CE77-F9ADBA8DB122";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 7.3096642696198151;
+	setAttr ".coi" 44.853973490514335;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 9.177031701224081e-08 0.77003603068500848 3.3240561304453813 ;
+	setAttr ".tp" -type "double3" 4.4703483581542969e-07 14.021446061470755 2.2351741790771484e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "1E21E338-0247-88F5-9DB9-C5B0989969FE";
+	rename -uid "0038B74D-0747-D06C-2E51-73A3B4D6D278";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 100.1 0 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "5048ED7B-2B48-B52F-50A6-699D5F439D28";
+	rename -uid "F3814A0C-5244-9D39-EDCE-ACB32D6F08F0";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
@@ -54,11 +50,11 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
-	rename -uid "63ECB955-5D4C-E205-FA13-E0952E389717";
+	rename -uid "F6CCAAFF-D146-10DC-2D94-0C90DF210A6A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 100.1 ;
+	setAttr ".t" -type "double3" 0.38961038961038952 4.4480519480519476 100.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "0A00F6B6-7448-7E5B-76E7-238086836B4B";
+	rename -uid "5BE8123A-434A-BA50-A641-409897766AFF";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
@@ -69,64 +65,27 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
-	rename -uid "A633E6A6-734D-5A61-9A13-1DA9036A5253";
+	rename -uid "77B4E318-6745-1764-579D-029A756022BF";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 100.1 0 0 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "0017E542-0E4B-181E-A871-CAB5EAB6055A";
+	rename -uid "3E0E761E-FA4A-753C-59B1-36BD311FFB2A";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 33.698111287737575;
+	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "pCylinder1";
-	rename -uid "8CCD8264-8042-0D71-AE91-8FA74878054B";
-	setAttr ".t" -type "double3" 0 1.0004214472017083 6.1 ;
-	setAttr ".s" -type "double3" 1.5396504306276744 1.5396504306276744 1.5396504306276744 ;
-createNode mesh -n "pCylinderShape1" -p "pCylinder1";
-	rename -uid "D49EB14E-5947-BD49-FBB4-36A5901E0D5D";
-	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
-		-min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
-		1 -at "double";
-	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
-		1 -en "Solid:Shell" -at "enum";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5000000074505806 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 10 ".pt";
-	setAttr ".pt[25]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[26]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[27]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[28]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[29]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[30]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[31]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[32]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".pt[33]" -type "float3" 0 -1.5198972 0 ;
-	setAttr ".dr" 3;
-	setAttr ".dsm" 2;
-	setAttr ".qsp" 0;
-	setAttr -k on ".bifrostColliderEnable";
-	setAttr -k on ".bifrostColliderThickness" 0.2;
-	setAttr -k on ".bifrostColliderMode";
-createNode transform -n "pSphere2";
-	rename -uid "FE642058-E74D-9355-16AE-8DB6036AA96B";
+createNode transform -n "water";
+	rename -uid "AC4120AD-5E49-15D7-E9E7-29A35AF23644";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 8.098750084894613 6.1095144437775186 ;
-createNode mesh -n "pSphereShape2" -p "pSphere2";
-	rename -uid "8496E06D-F54A-ACBE-6D6D-1D9873CFB0E5";
+	setAttr ".t" -type "double3" 0 7.2924794236642612 0 ;
+createNode mesh -n "waterShape" -p "water";
+	rename -uid "7C7ACC78-5444-F035-6834-6AAB4F321DD2";
 	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
 		0 -max 1 -at "bool";
 	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
@@ -169,322 +128,10 @@ createNode mesh -n "pSphereShape2" -p "pSphere2";
 	setAttr -k on ".bifrostLiquidStictionStrength";
 	setAttr -k on ".bifrostLiquidStictionBandwidth";
 	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
-createNode transform -n "bifrostLiquid2";
-	rename -uid "BCF56FD4-5F40-89A0-65AB-0BAC0F8FCC8D";
-createNode bifrostContainer -n "bifrostLiquidContainer2" -p "bifrostLiquid2";
-	rename -uid "D0ED546D-B749-2D3A-71A5-938CE83F22D3";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Emitters" -ln "Emitters" -dt "mesh";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Colliders" -ln "Colliders" -dt "mesh";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Accelerators" -ln "Accelerators" 
-		-dt "mesh";
-	addAttr -r false -ci true -k true -sn "masterVoxelSize" -ln "masterVoxelSize" -at "float";
-	addAttr -r false -ci true -k true -sn "gravityMagnitude" -ln "gravityMagnitude" 
-		-at "float";
-	addAttr -r false -ci true -k true -sn "gravityDirection" -ln "gravityDirection" 
-		-at "float3" -nc 3;
-	addAttr -r false -ci true -k true -sn "gravityDirectionX" -ln "gravityDirectionX" 
-		-at "float" -p "gravityDirection";
-	addAttr -r false -ci true -k true -sn "gravityDirectionY" -ln "gravityDirectionY" 
-		-at "float" -p "gravityDirection";
-	addAttr -r false -ci true -k true -sn "gravityDirectionZ" -ln "gravityDirectionZ" 
-		-at "float" -p "gravityDirection";
-	addAttr -r false -ci true -k true -sn "solidVoxelScale" -ln "solidVoxelScale" -at "float";
-	addAttr -r false -ci true -k true -sn "forceVoxelScale" -ln "forceVoxelScale" -at "float";
-	addAttr -r false -ci true -k true -sn "transportStepAdaptivity" -ln "transportStepAdaptivity" 
-		-min 0 -max 1 -at "float";
-	addAttr -r false -ci true -k true -sn "transportTimeScale" -ln "transportTimeScale" 
-		-at "float";
-	addAttr -r false -ci true -k true -sn "minSteps" -ln "minSteps" -at "long";
-	addAttr -r false -ci true -k true -sn "maxSteps" -ln "maxSteps" -at "long";
-	addAttr -r false -ci true -k true -sn "dropletThreshold" -ln "dropletThreshold" 
-		-at "float";
-	addAttr -r false -ci true -k true -sn "dropletMergeBackDepth" -ln "dropletMergeBackDepth" 
-		-at "float";
-	addAttr -r false -ci true -k true -sn "surfaceBandWidth" -ln "surfaceBandWidth" 
-		-at "float";
-	addAttr -r false -ci true -k true -sn "interiorParticleDensity" -ln "interiorParticleDensity" 
-		-at "float";
-	addAttr -r false -ci true -k true -sn "surfaceParticleDensity" -ln "surfaceParticleDensity" 
-		-at "float";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "killplanes" -ln "killplanes" -at "matrix";
-	addAttr -r false -ci true -k true -sn "viscosityScale" -ln "viscosityScale" -at "float";
-	addAttr -r false -ci true -sn "surfaceTension" -ln "surfaceTension" -at "float";
-	addAttr -r false -ci true -k true -sn "vorticityDecay" -ln "vorticityDecay" -at "float";
-	addAttr -r false -ci true -k true -sn "vorticityMult" -ln "vorticityMult" -at "float";
-	addAttr -r false -ci true -k true -sn "vorticityMax" -ln "vorticityMax" -at "float";
-	addAttr -r false -ci true -k true -sn "surfaceTensionEnable" -ln "surfaceTensionEnable" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -k true -sn "vorticityEnable" -ln "vorticityEnable" -min 
-		0 -max 1 -at "bool";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "cameraMatrixList" -ln "cameraMatrixList" 
-		-at "matrix";
-	addAttr -r false -ci true -k true -sn "enableFoam" -ln "enableFoam" -min 0 -max 
-		1 -at "bool";
-	addAttr -r false -ci true -k true -sn "enableGuiding" -ln "enableGuiding" -min 0 
-		-max 1 -at "bool";
-	addAttr -r false -ci true -sn "computeGuideFromHighResLiquid" -ln "computeGuideFromHighResLiquid" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "minSimulationDepth" -ln "minSimulationDepth" -at "float";
-	addAttr -r false -ci true -sn "guideVoxelScale" -ln "guideVoxelScale" -at "float";
-	addAttr -r false -ci true -sn "reseedParticleDensity" -ln "reseedParticleDensity" 
-		-at "float";
-	addAttr -r false -ci true -sn "reseedGuideOverlap" -ln "reseedGuideOverlap" -at "float";
-	addAttr -r false -ci true -sn "reseedLiquidOverlap" -ln "reseedLiquidOverlap" -at "float";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Guides" -ln "Guides" -dt "mesh";
-	addAttr -r false -ci true -sn "minReseedAirDistance" -ln "minReseedAirDistance" 
-		-at "float";
-	addAttr -r false -ci true -sn "simulationCacheFilename" -ln "simulationCacheFilename" 
-		-dt "string";
-	addAttr -r false -ci true -uaf -sn "simulationCachePath" -ln "simulationCachePath" 
-		-dt "string";
-	addAttr -r false -ci true -sn "computeGuideFromSimulationCache" -ln "computeGuideFromSimulationCache" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "computeGuideFromMesh" -ln "computeGuideFromMesh" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "clipBBoxMin" -ln "clipBBoxMin" -at "float3" -nc 3;
-	addAttr -r false -ci true -sn "clipBBoxMinX" -ln "clipBBoxMinX" -at "float" -p "clipBBoxMin";
-	addAttr -r false -ci true -sn "clipBBoxMinY" -ln "clipBBoxMinY" -at "float" -p "clipBBoxMin";
-	addAttr -r false -ci true -sn "clipBBoxMinZ" -ln "clipBBoxMinZ" -at "float" -p "clipBBoxMin";
-	addAttr -r false -ci true -sn "clipBBoxMax" -ln "clipBBoxMax" -at "float3" -nc 3;
-	addAttr -r false -ci true -sn "clipBBoxMaxX" -ln "clipBBoxMaxX" -at "float" -p "clipBBoxMax";
-	addAttr -r false -ci true -sn "clipBBoxMaxY" -ln "clipBBoxMaxY" -at "float" -p "clipBBoxMax";
-	addAttr -r false -ci true -sn "clipBBoxMaxZ" -ln "clipBBoxMaxZ" -at "float" -p "clipBBoxMax";
-	addAttr -r false -ci true -k true -sn "clipBBoxTransform" -ln "clipBBoxTransform" 
-		-at "matrix";
-	addAttr -r false -ci true -sn "liquidCacheControl" -ln "liquidCacheControl" -at "long";
-	addAttr -r false -ci true -sn "liquidCompressionQuality" -ln "liquidCompressionQuality" 
-		-at "long";
-	addAttr -r false -ci true -uaf -sn "liquidCachePath" -ln "liquidCachePath" -dt "string";
-	addAttr -r false -ci true -sn "liquidCacheFileName" -ln "liquidCacheFileName" -dt "string";
-	addAttr -r false -ci true -k true -sn "enableLiquidCache" -ln "enableLiquidCache" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "solidCacheControl" -ln "solidCacheControl" -at "long";
-	addAttr -r false -ci true -sn "solidCompressionQuality" -ln "solidCompressionQuality" 
-		-at "long";
-	addAttr -r false -ci true -uaf -sn "solidCachePath" -ln "solidCachePath" -dt "string";
-	addAttr -r false -ci true -sn "solidCacheFileName" -ln "solidCacheFileName" -dt "string";
-	addAttr -r false -ci true -k true -sn "enableSolidCache" -ln "enableSolidCache" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "foamCacheControl" -ln "foamCacheControl" -at "long";
-	addAttr -r false -ci true -sn "foamCompressionQuality" -ln "foamCompressionQuality" 
-		-at "long";
-	addAttr -r false -ci true -uaf -sn "foamCachePath" -ln "foamCachePath" -dt "string";
-	addAttr -r false -ci true -sn "foamCacheFileName" -ln "foamCacheFileName" -dt "string";
-	addAttr -r false -ci true -k true -sn "enableFoamCache" -ln "enableFoamCache" -min 
-		0 -max 1 -at "bool";
-	addAttr -r false -ci true -k true -sn "deleteExceedingParticles" -ln "deleteExceedingParticles" 
-		-min 0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "emissionRate" -ln "emissionRate" -at "float";
-	addAttr -r false -ci true -sn "minLiquidSpeed" -ln "minLiquidSpeed" -at "float";
-	addAttr -r false -ci true -sn "minLiquidChurn" -ln "minLiquidChurn" -at "float";
-	addAttr -r false -ci true -sn "minLiquidCurvature" -ln "minLiquidCurvature" -at "float";
-	addAttr -r false -ci true -sn "minLiquidDepth" -ln "minLiquidDepth" -at "float";
-	addAttr -r false -ci true -sn "maxLiquidDepth" -ln "maxLiquidDepth" -at "float";
-	addAttr -r false -ci true -sn "inheritLiquidVelocity" -ln "inheritLiquidVelocity" 
-		-at "float";
-	addAttr -r false -ci true -sn "emitFlatnessToSurface" -ln "emitFlatnessToSurface" 
-		-at "float";
-	addAttr -r false -ci true -sn "dissipationRate" -ln "dissipationRate" -at "float";
-	addAttr -r false -ci true -sn "killDensityThreshold" -ln "killDensityThreshold" 
-		-at "float";
-	addAttr -r false -ci true -sn "buoyancy" -ln "buoyancy" -at "float";
-	addAttr -r false -ci true -sn "collideKillDepth" -ln "collideKillDepth" -at "float";
-	addAttr -r false -ci true -sn "windX" -ln "windX" -at "float";
-	addAttr -r false -ci true -sn "windZ" -ln "windZ" -at "float";
-	addAttr -r false -ci true -sn "surfaceOffset" -ln "surfaceOffset" -at "float";
-	addAttr -r false -ci true -sn "snapToSurface" -ln "snapToSurface" -min 0 -max 1 
-		-at "bool";
-	addAttr -r false -ci true -sn "pointRadius" -ln "pointRadius" -at "float";
-	addAttr -r false -ci true -sn "preserveVolume" -ln "preserveVolume" -at "float";
-	addAttr -r false -ci true -sn "maxSolidDepth" -ln "maxSolidDepth" -at "float";
-	addAttr -r false -ci true -sn "cameraAdaptivity" -ln "cameraAdaptivity" -at "float";
-	addAttr -r false -ci true -sn "clipToCameraFrustum" -ln "clipToCameraFrustum" -min 
-		0 -max 1 -at "bool";
-	addAttr -r false -ci true -sn "cameraFov" -ln "cameraFov" -at "float";
-	addAttr -r false -ci true -sn "cameraAspect" -ln "cameraAspect" -at "float";
-	addAttr -r false -ci true -sn "cameraBuffer" -ln "cameraBuffer" -at "float";
-	addAttr -w false -s false -sn "Liquid" -ln "Liquid" -dt "string";
-	addAttr -w false -s false -sn "Solid" -ln "Solid" -dt "string";
-	addAttr -w false -s false -sn "Foam" -ln "Foam" -dt "string";
-	setAttr -k off ".v";
-	setAttr ".sc" -type "string" (
-		"{\"version\":3,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostLiquid2_bifrostLiquidContainer2::liquid\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///keepMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createObjectWhenCaching.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObjectToDisk.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///solveLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeVoxelLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopePointLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeSolids.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///foam.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createEmptyItems.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///updateSubStepIterator.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///keepMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createObjectWhenCaching.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObjectToDisk.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///solveLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeVoxelLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopePointLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeSolids.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///foam.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createEmptyItems.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///updateSubStepIterator.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"operators\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostLiquid2_bifrostLiquidContainer2::liquid\\\",\\n            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Emitters\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Colliders\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Accelerators\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"masterVoxelSize\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"gravityMagnitude\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"gravityDirection\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transportStepAdaptivity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transportTimeScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minSteps\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"maxSteps\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"dropletThreshold\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"dropletMergeBackDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceBandWidth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"interiorParticleDensity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceParticleDensity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"killplanes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"viscosityScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Liquid\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Solid\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceTension\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityDecay\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityMult\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityMax\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceTensionEnable\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityEnable\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Foam\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraMatrixList\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableFoam\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableGuiding\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"computeGuideFromHighResLiquid\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minSimulationDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"guideVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"reseedParticleDensity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"reseedGuideOverlap\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"reseedLiquidOverlap\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Guides\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minReseedAirDistance\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"simulationCacheFilename\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"simulationCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"computeGuideFromSimulationCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"computeGuideFromMesh\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipBBoxMin\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipBBoxMax\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipBBoxTransform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCacheControl\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCompressionQuality\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCacheFileName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableLiquidCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCacheControl\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCompressionQuality\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCacheFileName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableSolidCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCacheControl\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCompressionQuality\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCacheFileName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableFoamCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"deleteExceedingParticles\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"emissionRate\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidSpeed\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidChurn\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidCurvature\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"maxLiquidDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"inheritLiquidVelocity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"emitFlatnessToSurface\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"dissipationRate\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"killDensityThreshold\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"buoyancy\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"collideKillDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"windX\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"windZ\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceOffset\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"snapToSurface\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"pointRadius\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"preserveVolume\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"maxSolidDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraAdaptivity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipToCameraFrustum\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraFov\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraAspect\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraBuffer\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                }\\n            ],\\n            \\\"compounds\\\": [\\n                {\\n                    \\\"name\\\": \\\"subStepLiquid\\\",\\n                    \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                    \\\"ports\\\": [\\n                        {\\n                            \\\"portName\\\": \\\"Emitters\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Colliders\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Accelerators\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"masterVoxelSize\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"gravityMagnitude\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"gravityDirection\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"transportStepAdaptivity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"transportTimeScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"minSteps\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"int\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"maxSteps\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"int\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"dropletThreshold\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"dropletMergeBackDepth\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"surfaceBandWidth\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"interiorPointDensity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"surfacePointDensity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"killPlanes\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"PIC\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"viscosityMult\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"dynamicSurfaceTension\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityDecay\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityMul\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityMax\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"surfaceTensionEnable\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityEnable\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"simulationCacheFilename\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"string\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"simulationCachePath\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"string\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"enableGuiding\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"computeGuideFromHighResLiquid\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"minSimulationDepth\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"reseedPointDensity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"reseedGuideOverlap\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"reseedLiquidOverlap\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Guides\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"minReseedAirDistance\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Liquid\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Solid\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"ittr_input\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"ittr_output\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"computeGuideFromSimulationCache\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"computeGuideFromMesh\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxMin\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxMax\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxTransform\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"deleteExceedingPoints\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        }\\n                    ],\\n                    \\\"compoundNodes\\\": [\\n                        {\\n                            \\\"nodeName\\\": \\\"solveLiquid\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::solveLiquid\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"updateSubStepIterator\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::_private::updateSubStepIterator\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getLiquidObjectName\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_privNames::getLiquidObjectName\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"voxel_liquid-volume\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"valueBool\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Math::valueBool\\\"\\n                        }\\n                    ],\\n                    \\\"connections\\\": [\\n                        {\\n                            \\\"source\\\": \\\".ittr_input\\\",\\n                            \\\"target\\\": \\\"valueBool.val\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"valueBool.value\\\",\\n                            \\\"target\\\": \\\".ittr_output\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Emitters\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Emitters\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Colliders\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Colliders\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".deleteExceedingPoints\\\",\\n                            \\\"target\\\": \\\"solveLiquid.deleteExceedingPoints\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Accelerators\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Accelerators\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".masterVoxelSize\\\",\\n                            \\\"target\\\": \\\"solveLiquid.masterVoxelSize\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".gravityMagnitude\\\",\\n                            \\\"target\\\": \\\"solveLiquid.gravityMagnitude\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".gravityDirection\\\",\\n                            \\\"target\\\": \\\"solveLiquid.gravityDirection\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidVoxelScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.solidVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".forceVoxelScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.forceVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".transportStepAdaptivity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.transportStepAdaptivity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".transportTimeScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.transportTimeScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".minSteps\\\",\\n                            \\\"target\\\": \\\"solveLiquid.minSteps\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".maxSteps\\\",\\n                            \\\"target\\\": \\\"solveLiquid.maxSteps\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".dropletThreshold\\\",\\n                            \\\"target\\\": \\\"solveLiquid.dropletThreshold\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".dropletMergeBackDepth\\\",\\n                            \\\"target\\\": \\\"solveLiquid.dropletMergeBackDepth\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".surfaceBandWidth\\\",\\n                            \\\"target\\\": \\\"solveLiquid.surfaceBandWidth\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".interiorPointDensity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.interiorPointDensity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".surfacePointDensity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.surfacePointDensity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".killPlanes\\\",\\n                            \\\"target\\\": \\\"solveLiquid.killPlanes\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".PIC\\\",\\n                            \\\"target\\\": \\\"solveLiquid.PIC\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".viscosityMult\\\",\\n                            \\\"target\\\": \\\"solveLiquid.viscosityMult\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".dynamicSurfaceTension\\\",\\n                            \\\"target\\\": \\\"solveLiquid.dynamicSurfaceTension\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityDecay\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityDecay\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityMul\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityMul\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityMax\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityMax\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".surfaceTensionEnable\\\",\\n                            \\\"target\\\": \\\"solveLiquid.surfaceTensionEnable\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityEnable\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityEnable\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".simulationCacheFilename\\\",\\n                            \\\"target\\\": \\\"solveLiquid.simulationCacheFilename\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".simulationCachePath\\\",\\n                            \\\"target\\\": \\\"solveLiquid.simulationCachePath\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".enableGuiding\\\",\\n                            \\\"target\\\": \\\"solveLiquid.enableGuiding\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".computeGuideFromHighResLiquid\\\",\\n                            \\\"target\\\": \\\"solveLiquid.computeGuideFromHighResLiquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".minSimulationDepth\\\",\\n                            \\\"target\\\": \\\"solveLiquid.minSimulationDepth\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guideVoxelScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.guideVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".reseedPointDensity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.reseedPointDensity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".reseedGuideOverlap\\\",\\n                            \\\"target\\\": \\\"solveLiquid.reseedGuideOverlap\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".reseedLiquidOverlap\\\",\\n                            \\\"target\\\": \\\"solveLiquid.reseedLiquidOverlap\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Guides\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Guides\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".minReseedAirDistance\\\",\\n                            \\\"target\\\": \\\"solveLiquid.minReseedAirDistance\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveLiquid.Liquid\\\",\\n                            \\\"target\\\": \\\".Liquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveLiquid.Solid\\\",\\n                            \\\"target\\\": \\\".Solid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".masterVoxelSize\\\",\\n                            \\\"target\\\": \\\"updateSubStepIterator.mvs\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveLiquid.outLoopingCondition\\\",\\n                            \\\"target\\\": \\\".looping_condition\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".computeGuideFromSimulationCache\\\",\\n                            \\\"target\\\": \\\"solveLiquid.computeGuideFromSimulationCache\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".computeGuideFromMesh\\\",\\n                            \\\"target\\\": \\\"solveLiquid.computeGuideFromMesh\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxMin\\\",\\n                            \\\"target\\\": \\\"solveLiquid.bboxMin\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxMax\\\",\\n                            \\\"target\\\": \\\"solveLiquid.bboxMax\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxTransform\\\",\\n                            \\\"target\\\": \\\"solveLiquid.bboxTransform\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"updateSubStepIterator.condition\\\",\\n                            \\\"target\\\": \\\"solveLiquid.loopingCondition\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getLiquidObjectName.value\\\",\\n                            \\\"target\\\": \\\"updateSubStepIterator.objectName\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"voxel_liquid-volume.value\\\",\\n                            \\\"target\\\": \\\"updateSubStepIterator.compName\\\"\\n                        }\\n                    ],\\n                    \\\"values\\\": [\\n                        {\\n                            \\\"valueName\\\": \\\"voxel_liquid-volume.str\\\",\\n                            \\\"valueType\\\": \\\"string\\\",\\n                            \\\"value\\\": \\\"voxel_liquid-volume\\\"\\n                        }\\n                    ],\\n                    \\\"whileCompound\\\": {\\n                        \\\"ports\\\": [\\n                            {\\n                                \\\"portKind\\\": \\\"state\\\",\\n                                \\\"inputPortName\\\": \\\"ittr_input\\\",\\n                                \\\"outputPortName\\\": \\\"ittr_output\\\"\\n                            }\\n                        ]\\n                    }\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::createMeshes\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"keepMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::_private::keepMeshes\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"createObjectWhenCaching\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::createObjectWhenCaching\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"cacheObjectToDisk\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::cacheObjectToDisk\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"voxel_liquid\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"scopeLiquid\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::scopeLiquid\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"createObjectWhenCaching1\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::createObjectWhenCaching\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"Solids\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"scopeSolids\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::scopeSolids\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromObject1\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"foamComp\\\",\\n                    \\\"nodeType\\\": \\\"foam\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"if\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::if\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromObject2\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"createEmptyItems\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::createEmptyItems\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"subStepLiquid\\\",\\n                    \\\"nodeType\\\": \\\"subStepLiquid\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"initTimestepCFL\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::initTimestepCFL\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"cacheObjectToDisk1\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::cacheObjectToDisk\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getLiquidCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getFoamCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getSolidsCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getSimCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject.value\\\",\\n                    \\\"target\\\": \\\".Liquid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Emitters\\\",\\n                    \\\"target\\\": \\\"createMeshes.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Colliders\\\",\\n                    \\\"target\\\": \\\"createMeshes.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Accelerators\\\",\\n                    \\\"target\\\": \\\"createMeshes.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject1.value\\\",\\n                    \\\"target\\\": \\\".Solid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraMatrixList\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraMatrixList\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"if.output\\\",\\n                    \\\"target\\\": \\\".Foam\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableFoam\\\",\\n                    \\\"target\\\": \\\"if.condition\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Guides\\\",\\n                    \\\"target\\\": \\\"createMeshes.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".masterVoxelSize\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.masterVoxelSize\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".deleteExceedingParticles\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.deleteExceedingPoints\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".gravityMagnitude\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.gravityMagnitude\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".gravityDirection\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.gravityDirection\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidVoxelScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.solidVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".forceVoxelScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.forceVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transportStepAdaptivity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.transportStepAdaptivity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transportTimeScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.transportTimeScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minSteps\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.minSteps\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".maxSteps\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.maxSteps\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".dropletThreshold\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.dropletThreshold\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".dropletMergeBackDepth\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.dropletMergeBackDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceBandWidth\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.surfaceBandWidth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".interiorParticleDensity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.interiorPointDensity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceParticleDensity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.surfacePointDensity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".killplanes\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.killPlanes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".viscosityScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.viscosityMult\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceTension\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.dynamicSurfaceTension\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityDecay\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityDecay\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityMult\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityMul\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityMax\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityMax\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceTensionEnable\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.surfaceTensionEnable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityEnable\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityEnable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableGuiding\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.enableGuiding\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".computeGuideFromHighResLiquid\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.computeGuideFromHighResLiquid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minSimulationDepth\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.minSimulationDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".guideVoxelScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.guideVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".reseedParticleDensity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.reseedPointDensity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".reseedGuideOverlap\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.reseedGuideOverlap\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".reseedLiquidOverlap\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.reseedLiquidOverlap\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minReseedAirDistance\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.minReseedAirDistance\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".simulationCacheFilename\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.simulationCacheFilename\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".computeGuideFromSimulationCache\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.computeGuideFromSimulationCache\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".computeGuideFromMesh\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.computeGuideFromMesh\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipBBoxMin\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.bboxMin\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipBBoxMax\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.bboxMax\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipBBoxTransform\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.bboxTransform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCompressionQuality\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.compressionQuality\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCacheFileName\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.cacheFileName\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableLiquidCache\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableLiquidCache\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCacheControl\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableSolidCache\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCacheControl\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCacheControl\\\",\\n                    \\\"target\\\": \\\"foamComp.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCompressionQuality\\\",\\n                    \\\"target\\\": \\\"foamComp.compressionQuality\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCacheFileName\\\",\\n                    \\\"target\\\": \\\"foamComp.cacheFileName\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableFoamCache\\\",\\n                    \\\"target\\\": \\\"foamComp.enableFoamCache\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableSolidCache\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCacheFileName\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.cacheFileName\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCompressionQuality\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.compressionQuality\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".emissionRate\\\",\\n                    \\\"target\\\": \\\"foamComp.emissionRate\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidSpeed\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidSpeed\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidChurn\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidChurn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidCurvature\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidCurvature\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".maxLiquidDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.maxLiquidDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".inheritLiquidVelocity\\\",\\n                    \\\"target\\\": \\\"foamComp.inheritLiquidVelocity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".emitFlatnessToSurface\\\",\\n                    \\\"target\\\": \\\"foamComp.emitFlatnessToSurface\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".dissipationRate\\\",\\n                    \\\"target\\\": \\\"foamComp.dissipationRate\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".killDensityThreshold\\\",\\n                    \\\"target\\\": \\\"foamComp.killDensityThreshold\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".buoyancy\\\",\\n                    \\\"target\\\": \\\"foamComp.buoyancy\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".collideKillDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.collideKillDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".windX\\\",\\n                    \\\"target\\\": \\\"foamComp.windX\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".windZ\\\",\\n                    \\\"target\\\": \\\"foamComp.windZ\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceOffset\\\",\\n                    \\\"target\\\": \\\"foamComp.surfaceOffset\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".snapToSurface\\\",\\n                    \\\"target\\\": \\\"foamComp.snapToSurface\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".pointRadius\\\",\\n                    \\\"target\\\": \\\"foamComp.pointRadius\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".preserveVolume\\\",\\n                    \\\"target\\\": \\\"foamComp.preserveVolume\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".gravityMagnitude\\\",\\n                    \\\"target\\\": \\\"foamComp.gravity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".maxSolidDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.maxSolidDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraAdaptivity\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraAdaptivity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipToCameraFrustum\\\",\\n                    \\\"target\\\": \\\"foamComp.clipToCameraFrustum\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraFov\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraFov\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraAspect\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraAspect\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraBuffer\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraBuffer\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCachePath\\\",\\n                    \\\"target\\\": \\\"getLiquidCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCachePath\\\",\\n                    \\\"target\\\": \\\"getSolidsCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCachePath\\\",\\n                    \\\"target\\\": \\\"getFoamCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".simulationCachePath\\\",\\n                    \\\"target\\\": \\\"getSimCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.accelerators1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.colliders1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.emitters1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.guides1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.emitters1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.colliders1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.accelerators1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.guides1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching.outObject\\\",\\n                    \\\"target\\\": \\\"keepMeshes.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"keepMeshes.outObject\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"voxel_liquid.value\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Liquid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Liquid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.newObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching.outCacheControl\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"cacheObjectToDisk.outObject\\\",\\n                    \\\"target\\\": \\\"scopeLiquid.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getLiquidCachePath.value\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.cachePath\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"scopeLiquid.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromObject.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject.value\\\",\\n                    \\\"target\\\": \\\"foamComp.liquidObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"Solids.value\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Solid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Solid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.newObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching1.outObject\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching1.outCacheControl\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"scopeSolids.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromObject1.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"cacheObjectToDisk1.outObject\\\",\\n                    \\\"target\\\": \\\"scopeSolids.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject1.value\\\",\\n                    \\\"target\\\": \\\"foamComp.solidObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"foamComp.Foam\\\",\\n                    \\\"target\\\": \\\"if.trueCase\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getFoamCachePath.value\\\",\\n                    \\\"target\\\": \\\"foamComp.cachePath\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject2.value\\\",\\n                    \\\"target\\\": \\\"if.falseCase\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createEmptyItems.emptyObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromObject2.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"initTimestepCFL.value\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.ittr_input\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getSimCachePath.value\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.simulationCachePath\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getSolidsCachePath.value\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.cachePath\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching.compNameToTest\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"_voxel\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching.filePath\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFilePathHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching.fileName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFileNameHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.cacheControl\\\",\\n                    \\\"value\\\": \\\"0L\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.compressionQuality\\\",\\n                    \\\"value\\\": \\\"0L\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.cachePath\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putCachePathHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.cacheFileName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"liquid\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.pointComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxel_liquid-particle\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.voxelComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxel_liquid-volume\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"voxel_liquid.str\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxel_liquid\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching1.compNameToTest\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"_voxel\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching1.filePath\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFileNameHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching1.fileName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFilePathHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"Solids.str\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"Solids\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.emissionRate\\\",\\n                    \\\"value\\\": \\\"1000f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.minLiquidSpeed\\\",\\n                    \\\"value\\\": \\\"0.2f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.minLiquidChurn\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.minLiquidCurvature\\\",\\n                    \\\"value\\\": \\\"0.5f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.inheritLiquidVelocity\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.emitFlatnessToSurface\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.dissipationRate\\\",\\n                    \\\"value\\\": \\\"5f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.killDensityThreshold\\\",\\n                    \\\"value\\\": \\\"0.05f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.buoyancy\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.collideKillDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.windX\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.windZ\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.surfaceOffset\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.snapToSurface\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.pointRadius\\\",\\n                    \\\"value\\\": \\\"0.3f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.preserveVolume\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.gravity\\\",\\n                    \\\"value\\\": \\\"9.8f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.maxSolidDepth\\\",\\n                    \\\"value\\\": \\\"0.3f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraAdaptivity\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.clipToCameraFrustum\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraFov\\\",\\n                    \\\"value\\\": \\\"110f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraAspect\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraBuffer\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"subStepLiquid.PIC\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk1.pointComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"none\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk1.voxelComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"Solids-volume\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
-	setAttr ".srv" -type "string" "2.0";
-	setAttr -k on ".pfc";
-	setAttr -k on ".euc";
-	setAttr -k on ".spa" yes;
-	setAttr -k on ".tsa";
-	setAttr -k on ".mis";
-	setAttr -k on ".mas";
-	setAttr -k on -cb off ".sfr";
-	setAttr -k on ".Emitters[0]";
-	setAttr -k on ".Emitters";
-	setAttr -k on ".Colliders[0]";
-	setAttr -k on ".Colliders";
-	setAttr -k on ".masterVoxelSize" 0.5;
-	setAttr -k on ".gravityMagnitude" 9.8000001907348633;
-	setAttr -k on ".gravityDirection" -type "float3" 0 -1 0 ;
-	setAttr -k on ".solidVoxelScale" 1;
-	setAttr -k on ".forceVoxelScale" 1;
-	setAttr -k on ".transportStepAdaptivity" 0.31999999284744263;
-	setAttr -k on ".transportTimeScale" 1;
-	setAttr -k on ".minSteps" 1;
-	setAttr -k on ".maxSteps" 1000;
-	setAttr -k on ".dropletThreshold" 0.97000002861022949;
-	setAttr -k on ".dropletMergeBackDepth" 2;
-	setAttr -k on ".surfaceBandWidth" 1;
-	setAttr -k on ".interiorParticleDensity" 1;
-	setAttr -k on ".surfaceParticleDensity" 2;
-	setAttr ".surfaceTension" 0.071999996900558472;
-	setAttr -k on ".vorticityDecay" 20;
-	setAttr -k on ".vorticityMult" 1;
-	setAttr -k on ".vorticityMax" 100;
-	setAttr -k on ".vorticityEnable" yes;
-	setAttr ".computeGuideFromHighResLiquid" yes;
-	setAttr ".minSimulationDepth" 3;
-	setAttr ".guideVoxelScale" 2;
-	setAttr ".reseedParticleDensity" 1;
-	setAttr ".reseedGuideOverlap" 1;
-	setAttr ".reseedLiquidOverlap" 2.5;
-	setAttr ".minReseedAirDistance" 1;
-	setAttr ".computeGuideFromSimulationCache" yes;
-	setAttr ".computeGuideFromMesh" yes;
-	setAttr -k on ".deleteExceedingParticles" yes;
-	setAttr ".emissionRate" 1000;
-	setAttr ".minLiquidSpeed" 0.20000000298023224;
-	setAttr ".minLiquidChurn" 1;
-	setAttr ".minLiquidCurvature" 0.30000001192092896;
-	setAttr ".maxLiquidDepth" 3;
-	setAttr ".inheritLiquidVelocity" 1;
-	setAttr ".dissipationRate" 5;
-	setAttr ".killDensityThreshold" 0.05000000074505806;
-	setAttr ".buoyancy" 1;
-	setAttr ".pointRadius" 0.20000000298023224;
-	setAttr ".preserveVolume" 0.5;
-	setAttr ".maxSolidDepth" 0.30000001192092896;
-	setAttr ".cameraFov" 110;
-	setAttr ".cameraAspect" 1;
-	setAttr ".cameraBuffer" 1;
-createNode transform -n "liquid2" -p "bifrostLiquid2";
-	rename -uid "C490088B-1E49-7D3E-BC5A-10A1A818E206";
-createNode bifrostShape -n "liquidShape2" -p "liquid2";
-	rename -uid "7A41CEA3-D041-3B9D-A417-429610F756FF";
-	setAttr -k off ".v";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".pch" -type "string" "position";
-	setAttr ".vch" -type "string" "distance";
-	setAttr ".p" yes;
-	setAttr ".ps" 3;
-	setAttr ".pcc" -type "string" "velocity";
-	setAttr -s 2 ".pcr";
-	setAttr ".pcr[0].pcrp" 0;
-	setAttr ".pcr[0].pcrcv" -type "float3" 0 0 1 ;
-	setAttr ".pcr[0].pcri" 2;
-	setAttr ".pcr[1].pcrp" 1;
-	setAttr ".pcr[1].pcrcv" -type "float3" 1 1 1 ;
-	setAttr ".pcr[1].pcri" 2;
-	setAttr ".pcrx" 20;
-	setAttr -s 2 ".pcvr[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".por";
-	setAttr ".por[0].porp" 0;
-	setAttr ".por[0].porcv" -type "float3" 0 0 0 ;
-	setAttr ".por[0].pori" 2;
-	setAttr ".por[1].porp" 1;
-	setAttr ".por[1].porcv" -type "float3" 1 1 1 ;
-	setAttr ".por[1].pori" 2;
-	setAttr -s 2 ".povr[0:1]"  0 0 1 1 1 1;
-	setAttr ".pnc" -type "string" "velocity";
-	setAttr ".pvc" -type "string" "velocity";
-	setAttr ".vt" 1;
-	setAttr ".vcc" -type "string" "velocity";
-	setAttr -s 2 ".vcr";
-	setAttr ".vcr[0].vcrp" 0;
-	setAttr ".vcr[0].vcrcv" -type "float3" 0 0 1 ;
-	setAttr ".vcr[0].vcri" 2;
-	setAttr ".vcr[1].vcrp" 1;
-	setAttr ".vcr[1].vcrcv" -type "float3" 1 1 1 ;
-	setAttr ".vcr[1].vcri" 2;
-	setAttr -s 2 ".vcvr[0:1]"  0 0 1 1 1 1;
-	setAttr ".brt" 1;
-	setAttr -s 3 ".tfc";
-	setAttr ".tfc[0].tfcp" 0;
-	setAttr ".tfc[0].tfccv" -type "float3" 1 0 0 ;
-	setAttr ".tfc[0].tfci" 1;
-	setAttr ".tfc[1].tfcp" 0.5;
-	setAttr ".tfc[1].tfccv" -type "float3" 0 1 0 ;
-	setAttr ".tfc[1].tfci" 1;
-	setAttr ".tfc[2].tfcp" 1;
-	setAttr ".tfc[2].tfccv" -type "float3" 0 0 1 ;
-	setAttr ".tfc[2].tfci" 1;
-createNode transform -n "bifrostLiquid2Mesh";
-	rename -uid "4052129F-6B4E-A72E-891F-BA9B0A093A8D";
-	addAttr -s false -ci true -sn "miData" -ln "miData" -at "message";
-createNode mesh -n "bifrostLiquid2MeshShape" -p "bifrostLiquid2Mesh";
-	rename -uid "6DA1E2E2-8546-C2B6-AE72-8EB695436687";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".mvcs" -type "string" "bifrostVelocity";
-createNode transform -n "shotglasssim";
-	rename -uid "5EFA4EE9-F249-831E-AB43-EEB80A2F027C";
-	setAttr ".v" no;
-createNode transform -n "pSphere1" -p "shotglasssim";
-	rename -uid "B8DF6C0B-1C44-B4F3-0F86-0CBC04362CE5";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 11.882605379581557 0 ;
-	setAttr ".s" -type "double3" 0.5 0.5 0.5 ;
-createNode mesh -n "pSphereShape1" -p "pSphere1";
-	rename -uid "D70B0856-1A4B-472E-6311-84860D2D459C";
-	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
-	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
-		"Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
-		-at "double";
-	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".ccls" -type "string" "bifrostLiquidExpansionRate";
-	setAttr -s 2 ".clst";
-	setAttr ".clst[0].clsn" -type "string" "bifrostLiquidDensity";
-	setAttr ".clst[0].rprt" 3;
-	setAttr ".clst[1].clsn" -type "string" "bifrostLiquidExpansionRate";
-	setAttr ".clst[1].rprt" 3;
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".qsp" 0;
-	setAttr -k on ".bifrostLiquidEnable";
-	setAttr -k on ".bifrostLiquidContinuousEmission" no;
-	setAttr -k on ".bifrostLiquidThickness" 0.1;
-	setAttr -k on ".bifrostLiquidMode" 1;
-	setAttr -k on ".bifrostLiquidDensity" 0.001;
-	setAttr -k on ".bifrostLiquidExpansionRate";
-	setAttr -k on ".bifrostLiquidStictionStrength";
-	setAttr -k on ".bifrostLiquidStictionBandwidth";
-	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
-createNode transform -n "bifrostLiquid1" -p "shotglasssim";
-	rename -uid "DF55D2F9-1640-7748-DB3A-F28C0039F3A6";
+createNode transform -n "bifrostLiquid1";
+	rename -uid "D0F2605F-0744-B9E2-CD8D-1E97DF9947AB";
 createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
-	rename -uid "3D072B04-0E4D-3B43-D12F-D59C134A4483";
+	rename -uid "F84EE23C-5148-3FBB-8C79-19BBC0B1795A";
 	addAttr -r false -dcb 0 -ci true -k true -m -sn "Emitters" -ln "Emitters" -dt "mesh";
 	addAttr -r false -dcb 0 -ci true -k true -m -sn "Colliders" -ln "Colliders" -dt "mesh";
 	addAttr -r false -dcb 0 -ci true -k true -m -sn "Accelerators" -ln "Accelerators" 
@@ -629,12 +276,14 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr -k on ".mis";
 	setAttr -k on ".mas";
 	setAttr -k on -cb off ".sfr";
+	setAttr -s 2 ".Emitters";
 	setAttr -k on ".Emitters[0]";
+	setAttr -k on ".Emitters[1]";
 	setAttr -k on ".Emitters";
 	setAttr -k on ".Colliders[0]";
 	setAttr -k on ".Colliders";
 	setAttr -k on ".masterVoxelSize" 0.5;
-	setAttr -k on ".gravityMagnitude" 980;
+	setAttr -k on ".gravityMagnitude" 100;
 	setAttr -k on ".gravityDirection" -type "float3" 0 -1 0 ;
 	setAttr -k on ".solidVoxelScale" 1;
 	setAttr -k on ".forceVoxelScale" 1;
@@ -647,6 +296,8 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr -k on ".surfaceBandWidth" 1;
 	setAttr -k on ".interiorParticleDensity" 1;
 	setAttr -k on ".surfaceParticleDensity" 2;
+	setAttr -k on ".killplanes[0]";
+	setAttr -k on ".killplanes";
 	setAttr -k on ".surfaceTension" 0.071999996900558472;
 	setAttr -k on ".vorticityDecay" 20;
 	setAttr -k on ".vorticityMult" 1;
@@ -677,17 +328,17 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr ".cameraFov" 110;
 	setAttr ".cameraAspect" 1;
 	setAttr ".cameraBuffer" 1;
-createNode transform -n "liquid1" -p "shotglasssim";
-	rename -uid "742CC0A9-8F46-2DCE-151A-5CA3B4245804";
+createNode transform -n "liquid1" -p "bifrostLiquid1";
+	rename -uid "614508A2-F54A-CF26-45CB-F6A227FE9359";
 createNode bifrostShape -n "liquidShape1" -p "liquid1";
-	rename -uid "EF064F0F-074D-46E9-B4F9-0DAA4E73070B";
+	rename -uid "CD678F87-9041-40E3-4C78-63AF782899EA";
 	setAttr -k off ".v";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".pch" -type "string" "position";
 	setAttr ".vch" -type "string" "distance";
 	setAttr ".p" yes;
-	setAttr ".ps" 4;
+	setAttr ".ps" 2;
 	setAttr ".pcc" -type "string" "velocity";
 	setAttr -s 2 ".pcr";
 	setAttr ".pcr[0].pcrp" 0;
@@ -696,7 +347,7 @@ createNode bifrostShape -n "liquidShape1" -p "liquid1";
 	setAttr ".pcr[1].pcrp" 1;
 	setAttr ".pcr[1].pcrcv" -type "float3" 1 1 1 ;
 	setAttr ".pcr[1].pcri" 2;
-	setAttr ".pcrx" 200;
+	setAttr ".pcrx" 20;
 	setAttr -s 2 ".pcvr[0:1]"  0 0 1 1 1 1;
 	setAttr -s 2 ".por";
 	setAttr ".por[0].porp" 0;
@@ -729,11 +380,11 @@ createNode bifrostShape -n "liquidShape1" -p "liquid1";
 	setAttr ".tfc[2].tfcp" 1;
 	setAttr ".tfc[2].tfccv" -type "float3" 0 0 1 ;
 	setAttr ".tfc[2].tfci" 1;
-createNode transform -n "bifrostLiquid1Mesh" -p "shotglasssim";
-	rename -uid "BBFE8D79-B94A-6C18-C092-449BD6DACBC0";
+createNode transform -n "bifrostLiquid1Mesh";
+	rename -uid "20EBF2BA-9041-F1C3-8DEC-45B00B855D05";
 	addAttr -s false -ci true -sn "miData" -ln "miData" -at "message";
 createNode mesh -n "bifrostLiquid1MeshShape" -p "bifrostLiquid1Mesh";
-	rename -uid "1D9B4774-944C-3860-3098-04A1237977DB";
+	rename -uid "F5D262CA-024F-01E3-5220-36AB39FB6B7D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -743,69 +394,132 @@ createNode mesh -n "bifrostLiquid1MeshShape" -p "bifrostLiquid1Mesh";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".mvcs" -type "string" "bifrostVelocity";
+createNode transform -n "drop";
+	rename -uid "EFC67BF0-B645-5181-B493-0492D23CBC7B";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" 0 133.09586566693832 0 ;
+createNode mesh -n "dropShape" -p "drop";
+	rename -uid "A0B18BA8-A343-A8ED-B77B-A6AE26B9D5AC";
+	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
+	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
+		"Solid:Shell" -at "enum";
+	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
+		-at "double";
+	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".ccls" -type "string" "bifrostLiquidExpansionRate";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "bifrostLiquidDensity";
+	setAttr ".clst[0].rprt" 3;
+	setAttr ".clst[1].clsn" -type "string" "bifrostLiquidExpansionRate";
+	setAttr ".clst[1].rprt" 3;
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
+	setAttr ".qsp" 0;
+	setAttr -k on ".bifrostLiquidEnable";
+	setAttr -k on ".bifrostLiquidContinuousEmission" no;
+	setAttr -k on ".bifrostLiquidThickness";
+	setAttr -k on ".bifrostLiquidMode";
+	setAttr -k on ".bifrostLiquidDensity";
+	setAttr -k on ".bifrostLiquidExpansionRate";
+	setAttr -k on ".bifrostLiquidStictionStrength";
+	setAttr -k on ".bifrostLiquidStictionBandwidth";
+	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
+createNode transform -n "ambientLight1";
+	rename -uid "DF42ACA4-E846-3D4A-7F58-259A64812B8E";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" 0 27.29289212294151 0 ;
+createNode ambientLight -n "ambientLightShape1" -p "ambientLight1";
+	rename -uid "19708471-284F-6F56-45DB-CBA6AFC8B849";
+	setAttr -k off ".v";
+	setAttr ".urs" no;
+createNode transform -n "bifrostKillplane1";
+	rename -uid "F32CD5B5-8B41-6169-9D07-11B7C24D8BC4";
+	setAttr ".t" -type "double3" 0 2.4333750999934338 0 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+createNode sketchPlane -n "bifrostKillplaneShape1" -p "bifrostKillplane1";
+	rename -uid "1BF976C6-754C-5774-25F5-68B461068354";
+	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "771534D8-8143-C624-A101-9685B1C1604C";
-	setAttr -s 17 ".lnk";
-	setAttr -s 17 ".slnk";
+	rename -uid "B9A390FF-304A-57A6-1C8F-14AAF57AD4ED";
+	setAttr -s 13 ".lnk";
+	setAttr -s 13 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "4FE9C639-6C46-673A-C116-CA9D45558D2E";
+	rename -uid "39DE3803-8C42-47BC-C06B-E18EED998061";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "469F9909-3A4E-F95A-E071-CB964B51CA21";
+	rename -uid "9F0267F0-A046-6DA6-873A-7AA1B8457774";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4BD5880C-4547-89B4-BADC-C2862E8987EB";
+	rename -uid "518A80F0-1F47-71FE-B094-B1B3443996C6";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "6971C5BF-1D4B-248C-52B3-D1988BE9CF93";
+	rename -uid "8D6CFE08-534C-95AE-EE83-5FBD5A222C3D";
 	setAttr ".g" yes;
 createNode reference -n "shotglassRN";
-	rename -uid "019AF5AB-5645-C16B-C56B-7986A58A9F29";
-	setAttr -s 4 ".phl";
+	rename -uid "0D3908C3-C248-E7FA-215E-8D9814140CCE";
+	setAttr -s 5 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
 	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"shotglassRN"
 		"shotglassRN" 0
-		"shotglassRN" 14
-		0 "|shotglass:Cup" "|shotglasssim" "-s -r "
-		1 |shotglasssim|shotglass:Cup|shotglass:CupShape "bifrostColliderEnable" 
-		"bifrostColliderEnable" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		1 |shotglasssim|shotglass:Cup|shotglass:CupShape "bifrostColliderThickness" 
-		"bifrostColliderThickness" " -ci 1 -dv 1 -at \"double\""
-		1 |shotglasssim|shotglass:Cup|shotglass:CupShape "bifrostColliderMode" "bifrostColliderMode" 
+		"shotglassRN" 13
+		1 |shotglass:Cup|shotglass:CupShape "bifrostColliderEnable" "bifrostColliderEnable" 
+		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		1 |shotglass:Cup|shotglass:CupShape "bifrostColliderThickness" "bifrostColliderThickness" 
+		" -ci 1 -dv 1 -at \"double\""
+		1 |shotglass:Cup|shotglass:CupShape "bifrostColliderMode" "bifrostColliderMode" 
 		" -ci 1 -min 0 -max 1 -en \"Solid:Shell\" -at \"enum\""
-		2 "|shotglasssim|shotglass:Cup" "translate" " -type \"double3\" 0 0.71609629526358787 -0.00013322227681200616"
+		2 "|shotglass:Cup" "translate" " -type \"double3\" 0 5.34034260434804597 0"
 		
-		2 "|shotglasssim|shotglass:Cup" "scale" " -type \"double3\" 1 1 1"
-		2 "|shotglasssim|shotglass:Cup|shotglass:CupShape" "quadSplit" " 0"
-		2 "|shotglasssim|shotglass:Cup|shotglass:CupShape" "bifrostColliderEnable" 
-		" -k 1 1"
-		2 "|shotglasssim|shotglass:Cup|shotglass:CupShape" "bifrostColliderThickness" 
-		" -k 1 1"
-		2 "|shotglasssim|shotglass:Cup|shotglass:CupShape" "bifrostColliderMode" 
-		" -k 1 0"
-		5 3 "shotglassRN" "|shotglasssim|shotglass:Cup|shotglass:CupShape.bifrostColliderEnable" 
-		"shotglassRN.placeHolderList[1]" ""
-		5 3 "shotglassRN" "|shotglasssim|shotglass:Cup|shotglass:CupShape.bifrostColliderThickness" 
+		2 "|shotglass:Cup" "scale" " -type \"double3\" 7.5 7.5 7.5"
+		2 "|shotglass:Cup|shotglass:CupShape" "bifrostColliderThickness" " -k 1 1"
+		
+		2 "|shotglass:Cup|shotglass:CupShape" "bifrostColliderMode" " -k 1 0"
+		3 "|shotglass:Cup|shotglass:CupShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.instObjGroups" 
+		"shotglassRN.placeHolderList[1]" ":initialShadingGroup.dsm"
+		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.bifrostColliderEnable" 
 		"shotglassRN.placeHolderList[2]" ""
-		5 3 "shotglassRN" "|shotglasssim|shotglass:Cup|shotglass:CupShape.bifrostColliderMode" 
+		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.bifrostColliderThickness" 
 		"shotglassRN.placeHolderList[3]" ""
-		5 3 "shotglassRN" "|shotglasssim|shotglass:Cup|shotglass:CupShape.worldMesh" 
-		"shotglassRN.placeHolderList[4]" "";
+		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.bifrostColliderMode" 
+		"shotglassRN.placeHolderList[4]" ""
+		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.worldMesh" "shotglassRN.placeHolderList[5]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
-	rename -uid "79EE5D65-8149-A8D1-29C2-61B61A37B587";
+	rename -uid "BFEC9435-644C-83FC-50FC-5CB9B8520DB8";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
-	rename -uid "5357204C-2241-6053-4413-E5B23065E892";
+	rename -uid "06BE5132-D548-A424-7B84-799C3F04AD0A";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
 	setAttr ".ivb" no;
-	setAttr ".imformat" 32;
-	setAttr ".imfkey" -type "string" "png";
+	setAttr ".imformat" 8;
+	setAttr ".imfkey" -type "string" "jpg";
 	setAttr ".xvc" yes;
 createNode mentalrayOptions -s -n "miDefaultOptions";
-	rename -uid "C2612622-544E-C18F-B768-7A8B3F61B0EF";
+	rename -uid "72C5393E-914C-66AE-5A58-FF8427D970BE";
 	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
 		3;
 	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
@@ -1060,9 +774,188 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[81].value" -type "string" "0";
 	setAttr ".stringOptions[81].type" -type "string" "integer";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
-	rename -uid "68E4A4BD-2146-105A-6E5F-61A755A475B2";
+	rename -uid "7D576636-B24E-29EE-EA55-E2BA252B9E87";
+createNode polySphere -n "polySphere1";
+	rename -uid "5CA7BCAF-6F4C-1C5A-0B42-CDBC956A8F60";
+	setAttr ".r" 3.5;
+	setAttr ".sa" 8;
+	setAttr ".sh" 8;
+createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial1";
+	rename -uid "B1A3D6D7-6446-EDC2-3CEC-9E9429316358";
+	setAttr -s 2 ".dcrm";
+	setAttr ".dcrm[0].dcrmp" 0;
+	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
+	setAttr ".dcrm[0].dcrmi" 1;
+	setAttr ".dcrm[1].dcrmp" 1;
+	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
+	setAttr ".dcrm[1].dcrmi" 1;
+	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".fcrm[0].fcrmp" 1;
+	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".fcrm[0].fcrmi" 1;
+	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
+	setAttr -s 2 ".rlcrm";
+	setAttr ".rlcrm[0].rlcrmp" 0;
+	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rlcrm[0].rlcrmi" 1;
+	setAttr ".rlcrm[1].rlcrmp" 1;
+	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rlcrm[1].rlcrmi" 1;
+	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".rlwrm[0]"  0 1 1;
+	setAttr -s 2 ".rrcrm";
+	setAttr ".rrcrm[0].rrcrmp" 0;
+	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rrcrm[0].rrcrmi" 1;
+	setAttr ".rrcrm[1].rrcrmp" 1;
+	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rrcrm[1].rrcrmi" 1;
+	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
+createNode shadingEngine -n "bifrostLiquidMaterial1SG";
+	rename -uid "7C3A3F84-2C45-0AEE-AA2D-F8BF24464CD0";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode mib_data_string -n "bifrostMeshMRUserData1";
+	rename -uid "ABBB110B-6848-AEB2-4D11-DFB722AB3F13";
+	setAttr ".nam" -type "string" "bifrostMeshObject";
+createNode bifrostAttrNotifier -n "pSphereShape1AttrNotif";
+	rename -uid "0844681C-8D43-F44D-A2A7-6CA903973469";
+	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
+	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
+		"Solid:Shell" -at "enum";
+	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
+		-at "double";
+	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
+	setAttr -k on ".bifrostLiquidEnable";
+	setAttr -k on ".bifrostLiquidContinuousEmission";
+	setAttr -k on ".bifrostLiquidThickness";
+	setAttr -k on ".bifrostLiquidMode";
+	setAttr -k on ".bifrostLiquidDensity";
+	setAttr -k on ".bifrostLiquidExpansionRate";
+	setAttr -k on ".bifrostLiquidStictionStrength";
+	setAttr -k on ".bifrostLiquidStictionBandwidth";
+	setAttr -k on ".bifrostUVProjCon";
+createNode createColorSet -n "createColorSet1";
+	rename -uid "A73587C7-AC4A-5660-99B3-17984B22C1F9";
+	setAttr ".colos" -type "string" "bifrostLiquidDensity";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode createColorSet -n "createColorSet2";
+	rename -uid "F815E913-394E-AA09-6FDE-42A882FF2126";
+	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode bifrostAttrNotifier -n "CupShapeAttrNotif";
+	rename -uid "712F82DA-1F45-553E-AECB-2FBA9CAFA82D";
+	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
+		-min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
+		1 -at "double";
+	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
+		1 -en "Solid:Shell" -at "enum";
+	setAttr -k on ".bifrostColliderEnable";
+	setAttr -k on ".bifrostColliderThickness";
+	setAttr -k on ".bifrostColliderMode";
+createNode mia_material_x -n "mia_material_x1";
+	rename -uid "4EF0CB76-7648-240B-89AF-E4862B89D930";
+	setAttr ".S01" -type "float3" 0 0 0 ;
+	setAttr ".S03" 1;
+	setAttr ".S10" 1;
+	setAttr ".S11" -type "float3" 0.81 0.88999999 0.93000001 ;
+	setAttr ".S13" 1.5;
+	setAttr ".S17" -type "float3" 0.69999999 0.5 0.2 ;
+	setAttr ".S22" yes;
+	setAttr ".S23" 0.69999998807907104;
+	setAttr ".S36" -type "float3" 0.2 0.2 0.2 ;
+	setAttr ".S37" 8;
+	setAttr ".S42" -type "float3" 0.2 0.2 0.2 ;
+	setAttr ".S43" 8;
+	setAttr ".S50" 4;
+	setAttr ".S59" yes;
+createNode shadingEngine -n "mia_material_x1SG";
+	rename -uid "D81460CC-284C-978C-9554-E78CE864CDDA";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "3A423FC2-FF49-89ED-8331-4389FABB79B3";
+createNode materialInfo -n "pasted__materialInfo4";
+	rename -uid "53CD8A5C-CB4F-919D-8D87-AFA934B511BB";
+createNode shadingEngine -n "pasted__lambert4SG";
+	rename -uid "21B58E89-354D-6555-3571-83B4518E0019";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "pasted__bottle1";
+	rename -uid "78683A56-FC4C-FC7D-86EA-638C6E34BD8E";
+createNode lambert -n "lambert2";
+	rename -uid "331A4723-4B43-2489-93AE-17A15CF0A6F5";
+	setAttr ".rfi" 1.5199999809265137;
+	setAttr ".dc" 0;
+	setAttr ".it" -type "float3" 0.88617885 0.88617885 0.88617885 ;
+createNode shadingEngine -n "lambert2SG";
+	rename -uid "F37E0A59-2448-8A8F-EED8-2A92CC0D7C8D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "942978D8-2D49-3DA6-3E0C-0CA355675D54";
+createNode polySphere -n "polySphere2";
+	rename -uid "5A11B0B6-C94E-AF4E-A318-1D86B649795D";
+	setAttr ".r" 0.75;
+	setAttr ".sa" 8;
+	setAttr ".sh" 8;
+createNode bifrostAttrNotifier -n "pSphereShape2AttrNotif";
+	rename -uid "FA18D8AE-B64B-4244-54F7-AF82B0FF06A0";
+	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
+	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
+		"Solid:Shell" -at "enum";
+	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
+		-at "double";
+	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
+	setAttr -k on ".bifrostLiquidEnable";
+	setAttr -k on ".bifrostLiquidContinuousEmission";
+	setAttr -k on ".bifrostLiquidThickness";
+	setAttr -k on ".bifrostLiquidMode";
+	setAttr -k on ".bifrostLiquidDensity";
+	setAttr -k on ".bifrostLiquidExpansionRate";
+	setAttr -k on ".bifrostLiquidStictionStrength";
+	setAttr -k on ".bifrostLiquidStictionBandwidth";
+	setAttr -k on ".bifrostUVProjCon";
+createNode createColorSet -n "createColorSet3";
+	rename -uid "A473E097-8241-97C0-B942-3FA87BC282DF";
+	setAttr ".colos" -type "string" "bifrostLiquidDensity";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode createColorSet -n "createColorSet4";
+	rename -uid "83153505-214E-012C-7409-97A7B0209ABC";
+	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode bifrostAttrNotifier -n "bifrostKillplane1AttrNotif";
+	rename -uid "B0510168-A147-D890-01D8-E99FE73E76D6";
 createNode script -n "uiConfigurationScriptNode";
-	rename -uid "A621FD4E-174F-BA19-D5A8-9993CF025066";
+	rename -uid "93435343-9C43-9991-58BB-E8ADDFBEFC63";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
@@ -1134,483 +1027,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "938EF06A-CF49-6617-D252-FB9274795E70";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 160 -ast 1 -aet 200 ";
+	rename -uid "4FF436B0-8442-8C04-F722-12A0671929FC";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 200 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial1";
-	rename -uid "6CA9AE05-A849-3A3A-844B-50967FE0AF77";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial1SG";
-	rename -uid "C6A7BE77-D042-F43A-50A9-C484ED98B1D2";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData1";
-	rename -uid "7E810266-4240-BFA8-A1FF-C7B94BAA37E3";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-	setAttr ".val" -type "string" "{ \"StateServerID\":0, \"Object\":\"voxel_liquid|mainOut|1\"}";
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial2";
-	rename -uid "0700D4BB-C340-2E65-0855-2FACC3485641";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial2SG";
-	rename -uid "EFFDE1A2-2D4D-A71E-3417-A28B11917496";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData2";
-	rename -uid "4798B2BB-C143-CEEE-7226-D7956A2A31DD";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-	setAttr ".val" -type "string" "{ \"StateServerID\":1, \"Object\":\"voxel_liquid|mainOut|1\"}";
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial3";
-	rename -uid "59AD651C-4447-7E38-C011-E3B2430200D9";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial3SG";
-	rename -uid "0BFA5D6C-0848-E6D5-A64B-AB9CD1CDC7D1";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData3";
-	rename -uid "F4AEF065-2B4E-D298-7338-DAA42AB4F8E5";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-	setAttr ".val" -type "string" "{ \"StateServerID\":2, \"Object\":\"voxel_liquid|mainOut|30\"}";
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial4";
-	rename -uid "972A4B16-E64C-0C84-B3C5-9CB3AE2640BE";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial4SG";
-	rename -uid "944D75E2-F64A-FBE1-383F-CBA84C5D6975";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData4";
-	rename -uid "5D2DCD59-F143-85EF-90E0-BB8590645930";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-	setAttr ".val" -type "string" "{ \"StateServerID\":3, \"Object\":\"voxel_liquid|mainOut|1\"}";
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial5";
-	rename -uid "ED81F784-1745-D954-0327-28B3C16FB5F0";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial5SG";
-	rename -uid "2F36098C-D045-476E-5780-86B4DA1532EA";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData5";
-	rename -uid "1FB53B0F-C646-9C61-E53E-809209D0FCDB";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-	setAttr ".val" -type "string" "{ \"StateServerID\":4, \"Object\":\"voxel_liquid|mainOut|1\"}";
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial6";
-	rename -uid "3897AFC6-BE42-2766-1F13-2AA851D7936B";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial6SG";
-	rename -uid "6E3B3F93-BC43-6802-0FBF-BE89BE7C51A3";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData6";
-	rename -uid "9D4BE3C0-D345-EB01-939B-F28718E4E3FF";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-	setAttr ".val" -type "string" "{ \"StateServerID\":7, \"Object\":\"voxel_liquid|mainOut|47\"}";
-createNode polySphere -n "polySphere1";
-	rename -uid "32B7552D-F449-DF12-12B4-BE889C0F93FE";
-	setAttr ".sa" 8;
-	setAttr ".sh" 8;
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial7";
-	rename -uid "F35F90EC-784F-C3BC-5676-3B8E1A1A58E5";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial7SG";
-	rename -uid "5BCEEDEA-9041-399C-1DC4-C5AE28D7F77A";
-	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData7";
-	rename -uid "A16425E5-AB49-3B14-EC54-A9B7D084CF20";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-createNode bifrostAttrNotifier -n "pSphereShape1AttrNotif";
-	rename -uid "A845E56E-FE4A-E147-B8EC-ACAF57B42ED6";
-	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
-	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
-		"Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
-		-at "double";
-	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
-	setAttr -k on ".bifrostLiquidEnable";
-	setAttr -k on ".bifrostLiquidContinuousEmission";
-	setAttr -k on ".bifrostLiquidThickness";
-	setAttr -k on ".bifrostLiquidMode";
-	setAttr -k on ".bifrostLiquidDensity";
-	setAttr -k on ".bifrostLiquidExpansionRate";
-	setAttr -k on ".bifrostLiquidStictionStrength";
-	setAttr -k on ".bifrostLiquidStictionBandwidth";
-	setAttr -k on ".bifrostUVProjCon";
-createNode createColorSet -n "createColorSet1";
-	rename -uid "651C6376-9F4B-1314-DE3A-CE86F1DF6D63";
-	setAttr ".colos" -type "string" "bifrostLiquidDensity";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode createColorSet -n "createColorSet2";
-	rename -uid "6C7B52C3-4B4B-E9DE-6B97-C4AC4D65AE55";
-	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode bifrostAttrNotifier -n "CupShapeAttrNotif";
-	rename -uid "997603D8-8946-EF39-90E9-5E9B298CF4C3";
-	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
-		-min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
-		1 -at "double";
-	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
-		1 -en "Solid:Shell" -at "enum";
-	setAttr -k on ".bifrostColliderEnable";
-	setAttr -k on ".bifrostColliderThickness";
-	setAttr -k on ".bifrostColliderMode";
-createNode polyCylinder -n "polyCylinder1";
-	rename -uid "C1CA2D55-3546-52A0-2942-73806F1950C8";
-	setAttr ".sa" 8;
-	setAttr ".sc" 1;
-	setAttr ".cuv" 3;
-createNode polyExtrudeFace -n "polyExtrudeFace1";
-	rename -uid "A0092642-E747-52C1-7FA8-DF827644175F";
-	setAttr ".ics" -type "componentList" 1 "f[16:23]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.0004214472017083 2.926103883344144 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 5.9604645e-08 2.0004215 2.9261038 ;
-	setAttr ".rs" 218734660;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -0.99999988079071045 2.0004214472017083 1.9261040025534335 ;
-	setAttr ".cbx" -type "double3" 1 2.0004214472017083 3.9261038237394992 ;
-createNode polyExtrudeFace -n "polyExtrudeFace2";
-	rename -uid "05F15B78-5249-1DD5-AFEC-34B30127CFD2";
-	setAttr ".ics" -type "componentList" 1 "f[16:23]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.0004214472017083 2.926103883344144 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 5.9604645e-08 2.0004215 2.9261038 ;
-	setAttr ".rs" 1405556972;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -0.75866985321044922 2.0004215664109979 2.1674340301336947 ;
-	setAttr ".cbx" -type "double3" 0.75866997241973877 2.0004215664109979 3.6847738557638827 ;
-createNode polyTweak -n "polyTweak1";
-	rename -uid "39C27949-8144-A529-2187-ABAF7B383606";
-	setAttr ".uopa" yes;
-	setAttr -s 15 ".tk";
-	setAttr ".tk[17]" -type "float3" -0.17064607 0 0.1706461 ;
-	setAttr ".tk[18]" -type "float3" 1.4384392e-08 0 0.24133 ;
-	setAttr ".tk[19]" -type "float3" 1.4384392e-08 0 1.4384392e-08 ;
-	setAttr ".tk[20]" -type "float3" 0.17064609 0 0.1706461 ;
-	setAttr ".tk[21]" -type "float3" 0.24133 0 1.4384392e-08 ;
-	setAttr ".tk[22]" -type "float3" 0.17064609 0 -0.17064609 ;
-	setAttr ".tk[23]" -type "float3" 1.4384392e-08 0 -0.24133 ;
-	setAttr ".tk[24]" -type "float3" -0.17064607 0 -0.17064609 ;
-	setAttr ".tk[25]" -type "float3" -0.24133 0 1.4384392e-08 ;
-createNode polySphere -n "polySphere2";
-	rename -uid "2952759F-914C-D0C9-9A51-D286CBF4C9DC";
-	setAttr ".r" 0.5;
-	setAttr ".sa" 6;
-	setAttr ".sh" 6;
-createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial8";
-	rename -uid "5C6ED0EE-0640-FA19-D129-C9B0AFBC171F";
-	setAttr -s 2 ".dcrm";
-	setAttr ".dcrm[0].dcrmp" 0;
-	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
-	setAttr ".dcrm[0].dcrmi" 1;
-	setAttr ".dcrm[1].dcrmp" 1;
-	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
-	setAttr ".dcrm[1].dcrmi" 1;
-	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".fcrm[0].fcrmp" 1;
-	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".fcrm[0].fcrmi" 1;
-	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
-	setAttr -s 2 ".rlcrm";
-	setAttr ".rlcrm[0].rlcrmp" 0;
-	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rlcrm[0].rlcrmi" 1;
-	setAttr ".rlcrm[1].rlcrmp" 1;
-	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rlcrm[1].rlcrmi" 1;
-	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr ".rlwrm[0]"  0 1 1;
-	setAttr -s 2 ".rrcrm";
-	setAttr ".rrcrm[0].rrcrmp" 0;
-	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
-	setAttr ".rrcrm[0].rrcrmi" 1;
-	setAttr ".rrcrm[1].rrcrmp" 1;
-	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
-	setAttr ".rrcrm[1].rrcrmi" 1;
-	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
-createNode shadingEngine -n "bifrostLiquidMaterial8SG";
-	rename -uid "C9914461-D24A-C584-A479-5D81A4DE3F0B";
-	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
-	setAttr ".ro" yes;
-createNode mib_data_string -n "bifrostMeshMRUserData8";
-	rename -uid "58567109-7F40-1906-49A1-E482FC1AE5C2";
-	setAttr ".nam" -type "string" "bifrostMeshObject";
-createNode bifrostAttrNotifier -n "pSphereShape2AttrNotif";
-	rename -uid "8030D4CC-C244-BCD0-10ED-1D95D1C3D3E5";
-	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
-	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
-		"Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
-		-at "double";
-	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
-	setAttr -k on ".bifrostLiquidEnable";
-	setAttr -k on ".bifrostLiquidContinuousEmission";
-	setAttr -k on ".bifrostLiquidThickness";
-	setAttr -k on ".bifrostLiquidMode";
-	setAttr -k on ".bifrostLiquidDensity";
-	setAttr -k on ".bifrostLiquidExpansionRate";
-	setAttr -k on ".bifrostLiquidStictionStrength";
-	setAttr -k on ".bifrostLiquidStictionBandwidth";
-	setAttr -k on ".bifrostUVProjCon";
-createNode createColorSet -n "createColorSet3";
-	rename -uid "7427AF57-7342-2BC9-D077-75B712327BEF";
-	setAttr ".colos" -type "string" "bifrostLiquidDensity";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode createColorSet -n "createColorSet4";
-	rename -uid "8BA4FCEC-2145-270E-9BC9-F0BE56822BD2";
-	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode bifrostAttrNotifier -n "pCylinderShape1AttrNotif";
-	rename -uid "9A53A1D1-EC48-DF0B-BBCD-D18C9BE0E724";
-	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
-		-min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
-		1 -at "double";
-	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
-		1 -en "Solid:Shell" -at "enum";
-	setAttr -k on ".bifrostColliderEnable";
-	setAttr -k on ".bifrostColliderThickness";
-	setAttr -k on ".bifrostColliderMode";
 select -ne :time1;
-	setAttr ".o" 20;
-	setAttr ".unw" 20;
+	setAttr ".o" 126;
+	setAttr ".unw" 126;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1618,174 +1040,142 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 17 ".st";
+	setAttr -s 13 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 12 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 10 ".u";
+	setAttr -s 3 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
+select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 4 ".dsm";
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
-	setAttr ".outf" 32;
-	setAttr ".imfkey" -type "string" "png";
+	setAttr ".outf" 8;
+	setAttr ".imfkey" -type "string" "jpg";
 	setAttr ".an" yes;
-	setAttr ".fs" 18;
-	setAttr ".ef" 40;
+	setAttr ".fs" 34;
+	setAttr ".ef" 64;
 	setAttr ".pff" yes;
+	setAttr ".ifp" -type "string" "teardrop";
 select -ne :defaultResolution;
+	setAttr ".w" 320;
+	setAttr ".h" 240;
 	setAttr ".pa" 1;
+	setAttr ".dar" 1.3333333730697632;
+select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "shotglassRN.phl[1]" "CupShapeAttrNotif.bifrostColliderEnable";
-connectAttr "shotglassRN.phl[2]" "CupShapeAttrNotif.bifrostColliderThickness";
-connectAttr "shotglassRN.phl[3]" "CupShapeAttrNotif.bifrostColliderMode";
-connectAttr "shotglassRN.phl[4]" "CupShapeAttrNotif.im";
-connectAttr "polyExtrudeFace2.out" "pCylinderShape1.i";
-connectAttr "createColorSet4.og" "pSphereShape2.i";
-connectAttr ":time1.o" "bifrostLiquidContainer2.ctm";
-connectAttr "pSphereShape2AttrNotif.om" "bifrostLiquidContainer2.Emitters[0]";
-connectAttr "pCylinderShape1AttrNotif.om" "bifrostLiquidContainer2.Colliders[0]"
-		;
-connectAttr "bifrostLiquidContainer2.Liquid" "liquidShape2.obj";
-connectAttr "bifrostMeshMRUserData8.msg" "bifrostLiquid2Mesh.miData";
-connectAttr "liquidShape2.mout" "bifrostLiquid2MeshShape.i";
-connectAttr "createColorSet2.og" "pSphereShape1.i";
+connectAttr "shotglassRN.phl[1]" "lambert2SG.dsm" -na;
+connectAttr "shotglassRN.phl[2]" "CupShapeAttrNotif.bifrostColliderEnable";
+connectAttr "shotglassRN.phl[3]" "CupShapeAttrNotif.bifrostColliderThickness";
+connectAttr "shotglassRN.phl[4]" "CupShapeAttrNotif.bifrostColliderMode";
+connectAttr "shotglassRN.phl[5]" "CupShapeAttrNotif.im";
+connectAttr "createColorSet2.og" "waterShape.i";
 connectAttr ":time1.o" "bifrostLiquidContainer1.ctm";
 connectAttr "pSphereShape1AttrNotif.om" "bifrostLiquidContainer1.Emitters[0]";
+connectAttr "pSphereShape2AttrNotif.om" "bifrostLiquidContainer1.Emitters[1]";
 connectAttr "CupShapeAttrNotif.om" "bifrostLiquidContainer1.Colliders[0]";
+connectAttr "bifrostKillplane1.wm" "bifrostLiquidContainer1.killplanes[0]";
 connectAttr "bifrostLiquidContainer1.Liquid" "liquidShape1.obj";
-connectAttr "bifrostMeshMRUserData7.msg" "bifrostLiquid1Mesh.miData";
+connectAttr "bifrostMeshMRUserData1.msg" "bifrostLiquid1Mesh.miData";
 connectAttr "liquidShape1.mout" "bifrostLiquid1MeshShape.i";
+connectAttr "createColorSet4.og" "dropShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial5SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial6SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial7SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bifrostLiquidMaterial8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "mia_material_x1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "pasted__lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial5SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial6SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial7SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "mia_material_x1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "pasted__lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "bifrostLiquidMaterial1.oc" "bifrostLiquidMaterial1SG.ss";
-connectAttr "bifrostLiquidMaterial2.oc" "bifrostLiquidMaterial2SG.ss";
-connectAttr "bifrostLiquidMaterial3.oc" "bifrostLiquidMaterial3SG.ss";
-connectAttr "bifrostLiquidMaterial4.oc" "bifrostLiquidMaterial4SG.ss";
-connectAttr "bifrostLiquidMaterial5.oc" "bifrostLiquidMaterial5SG.ss";
-connectAttr "bifrostLiquidMaterial6.oc" "bifrostLiquidMaterial6SG.ss";
-connectAttr "bifrostLiquidMaterial7.oc" "bifrostLiquidMaterial7SG.ss";
-connectAttr "liquidShape1.iog" "bifrostLiquidMaterial7SG.dsm" -na;
-connectAttr "bifrostLiquid1MeshShape.iog" "bifrostLiquidMaterial7SG.dsm" -na;
-connectAttr "bifrostLiquidContainer1.Liquid" "bifrostMeshMRUserData7.val";
-connectAttr "pSphereShape1.bifrostLiquidEnable" "pSphereShape1AttrNotif.bifrostLiquidEnable"
+connectAttr "liquidShape1.iog" "bifrostLiquidMaterial1SG.dsm" -na;
+connectAttr "bifrostLiquid1MeshShape.iog" "bifrostLiquidMaterial1SG.dsm" -na;
+connectAttr "bifrostLiquidContainer1.Liquid" "bifrostMeshMRUserData1.val";
+connectAttr "waterShape.bifrostLiquidEnable" "pSphereShape1AttrNotif.bifrostLiquidEnable"
 		;
-connectAttr "pSphereShape1.bifrostLiquidContinuousEmission" "pSphereShape1AttrNotif.bifrostLiquidContinuousEmission"
+connectAttr "waterShape.bifrostLiquidContinuousEmission" "pSphereShape1AttrNotif.bifrostLiquidContinuousEmission"
 		;
-connectAttr "pSphereShape1.bifrostLiquidThickness" "pSphereShape1AttrNotif.bifrostLiquidThickness"
+connectAttr "waterShape.bifrostLiquidThickness" "pSphereShape1AttrNotif.bifrostLiquidThickness"
 		;
-connectAttr "pSphereShape1.bifrostLiquidMode" "pSphereShape1AttrNotif.bifrostLiquidMode"
+connectAttr "waterShape.bifrostLiquidMode" "pSphereShape1AttrNotif.bifrostLiquidMode"
 		;
-connectAttr "pSphereShape1.bifrostLiquidDensity" "pSphereShape1AttrNotif.bifrostLiquidDensity"
+connectAttr "waterShape.bifrostLiquidDensity" "pSphereShape1AttrNotif.bifrostLiquidDensity"
 		;
-connectAttr "pSphereShape1.bifrostLiquidExpansionRate" "pSphereShape1AttrNotif.bifrostLiquidExpansionRate"
+connectAttr "waterShape.bifrostLiquidExpansionRate" "pSphereShape1AttrNotif.bifrostLiquidExpansionRate"
 		;
-connectAttr "pSphereShape1.bifrostLiquidStictionStrength" "pSphereShape1AttrNotif.bifrostLiquidStictionStrength"
+connectAttr "waterShape.bifrostLiquidStictionStrength" "pSphereShape1AttrNotif.bifrostLiquidStictionStrength"
 		;
-connectAttr "pSphereShape1.bifrostLiquidStictionBandwidth" "pSphereShape1AttrNotif.bifrostLiquidStictionBandwidth"
+connectAttr "waterShape.bifrostLiquidStictionBandwidth" "pSphereShape1AttrNotif.bifrostLiquidStictionBandwidth"
 		;
-connectAttr "pSphereShape1.bifrostUVProjCon" "pSphereShape1AttrNotif.bifrostUVProjCon"
+connectAttr "waterShape.bifrostUVProjCon" "pSphereShape1AttrNotif.bifrostUVProjCon"
 		;
-connectAttr "pSphereShape1.w" "pSphereShape1AttrNotif.im";
+connectAttr "waterShape.w" "pSphereShape1AttrNotif.im";
 connectAttr "polySphere1.out" "createColorSet1.ig";
 connectAttr "createColorSet1.og" "createColorSet2.ig";
-connectAttr "polyCylinder1.out" "polyExtrudeFace1.ip";
-connectAttr "pCylinderShape1.wm" "polyExtrudeFace1.mp";
-connectAttr "polyTweak1.out" "polyExtrudeFace2.ip";
-connectAttr "pCylinderShape1.wm" "polyExtrudeFace2.mp";
-connectAttr "polyExtrudeFace1.out" "polyTweak1.ip";
-connectAttr "bifrostLiquidMaterial8.oc" "bifrostLiquidMaterial8SG.ss";
-connectAttr "liquidShape2.iog" "bifrostLiquidMaterial8SG.dsm" -na;
-connectAttr "bifrostLiquid2MeshShape.iog" "bifrostLiquidMaterial8SG.dsm" -na;
-connectAttr "bifrostLiquidContainer2.Liquid" "bifrostMeshMRUserData8.val";
-connectAttr "pSphereShape2.bifrostLiquidEnable" "pSphereShape2AttrNotif.bifrostLiquidEnable"
+connectAttr "mia_material_x1.msg" "mia_material_x1SG.mips";
+connectAttr "mia_material_x1.msg" "mia_material_x1SG.miss";
+connectAttr "mia_material_x1.msg" "mia_material_x1SG.mims";
+connectAttr "mia_material_x1SG.msg" "materialInfo1.sg";
+connectAttr "mia_material_x1.msg" "materialInfo1.m";
+connectAttr "pasted__lambert4SG.msg" "pasted__materialInfo4.sg";
+connectAttr "pasted__bottle1.msg" "pasted__materialInfo4.m";
+connectAttr "pasted__bottle1.oc" "pasted__lambert4SG.ss";
+connectAttr "lambert2.oc" "lambert2SG.ss";
+connectAttr "lambert2SG.msg" "materialInfo2.sg";
+connectAttr "lambert2.msg" "materialInfo2.m";
+connectAttr "dropShape.bifrostLiquidEnable" "pSphereShape2AttrNotif.bifrostLiquidEnable"
 		;
-connectAttr "pSphereShape2.bifrostLiquidContinuousEmission" "pSphereShape2AttrNotif.bifrostLiquidContinuousEmission"
+connectAttr "dropShape.bifrostLiquidContinuousEmission" "pSphereShape2AttrNotif.bifrostLiquidContinuousEmission"
 		;
-connectAttr "pSphereShape2.bifrostLiquidThickness" "pSphereShape2AttrNotif.bifrostLiquidThickness"
+connectAttr "dropShape.bifrostLiquidThickness" "pSphereShape2AttrNotif.bifrostLiquidThickness"
 		;
-connectAttr "pSphereShape2.bifrostLiquidMode" "pSphereShape2AttrNotif.bifrostLiquidMode"
+connectAttr "dropShape.bifrostLiquidMode" "pSphereShape2AttrNotif.bifrostLiquidMode"
 		;
-connectAttr "pSphereShape2.bifrostLiquidDensity" "pSphereShape2AttrNotif.bifrostLiquidDensity"
+connectAttr "dropShape.bifrostLiquidDensity" "pSphereShape2AttrNotif.bifrostLiquidDensity"
 		;
-connectAttr "pSphereShape2.bifrostLiquidExpansionRate" "pSphereShape2AttrNotif.bifrostLiquidExpansionRate"
+connectAttr "dropShape.bifrostLiquidExpansionRate" "pSphereShape2AttrNotif.bifrostLiquidExpansionRate"
 		;
-connectAttr "pSphereShape2.bifrostLiquidStictionStrength" "pSphereShape2AttrNotif.bifrostLiquidStictionStrength"
+connectAttr "dropShape.bifrostLiquidStictionStrength" "pSphereShape2AttrNotif.bifrostLiquidStictionStrength"
 		;
-connectAttr "pSphereShape2.bifrostLiquidStictionBandwidth" "pSphereShape2AttrNotif.bifrostLiquidStictionBandwidth"
+connectAttr "dropShape.bifrostLiquidStictionBandwidth" "pSphereShape2AttrNotif.bifrostLiquidStictionBandwidth"
 		;
-connectAttr "pSphereShape2.bifrostUVProjCon" "pSphereShape2AttrNotif.bifrostUVProjCon"
+connectAttr "dropShape.bifrostUVProjCon" "pSphereShape2AttrNotif.bifrostUVProjCon"
 		;
-connectAttr "pSphereShape2.w" "pSphereShape2AttrNotif.im";
+connectAttr "dropShape.w" "pSphereShape2AttrNotif.im";
 connectAttr "polySphere2.out" "createColorSet3.ig";
 connectAttr "createColorSet3.og" "createColorSet4.ig";
-connectAttr "pCylinderShape1.bifrostColliderEnable" "pCylinderShape1AttrNotif.bifrostColliderEnable"
-		;
-connectAttr "pCylinderShape1.bifrostColliderThickness" "pCylinderShape1AttrNotif.bifrostColliderThickness"
-		;
-connectAttr "pCylinderShape1.bifrostColliderMode" "pCylinderShape1AttrNotif.bifrostColliderMode"
-		;
-connectAttr "pCylinderShape1.w" "pCylinderShape1AttrNotif.im";
 connectAttr "bifrostLiquidMaterial1SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial2SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial3SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial4SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial5SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial6SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial7SG.pa" ":renderPartition.st" -na;
-connectAttr "bifrostLiquidMaterial8SG.pa" ":renderPartition.st" -na;
+connectAttr "mia_material_x1SG.pa" ":renderPartition.st" -na;
+connectAttr "pasted__lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "bifrostLiquidMaterial1.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial2.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial3.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial4.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial5.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial6.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial7.msg" ":defaultShaderList1.s" -na;
-connectAttr "bifrostLiquidMaterial8.msg" ":defaultShaderList1.s" -na;
+connectAttr "mia_material_x1.msg" ":defaultShaderList1.s" -na;
+connectAttr "pasted__bottle1.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "bifrostMeshMRUserData1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData2.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData3.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData4.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData5.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData6.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData7.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "bifrostMeshMRUserData8.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "ambientLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "waterShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "dropShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "ambientLight1.iog" ":defaultLightSet.dsm" -na;
 // End of teardrop.ma
