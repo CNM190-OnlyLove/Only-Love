@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: bottle_tilt.ma
-//Last modified: Fri, Dec 02, 2016 02:16:45 PM
+//Last modified: Fri, Dec 02, 2016 02:45:32 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "main_bottle" -rfn "main_bottleRN" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Wed, Nov 02, 2016 11:11:48 AM|ICON|undef|INFO|undef|OBJN|98|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//assets/bottles/main_bottle.ma";
@@ -24,17 +24,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "7BB5F134-494C-FB4A-29D1-3FBA5CD98796";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -38.63049347774475 5.1852055597784066 -10.318350588918207 ;
-	setAttr ".r" -type "double3" 361.46164727063297 254.99999999998602 0 ;
+	setAttr ".t" -type "double3" -0.022251888578562105 7.4705756368006719 7.295738438742184 ;
+	setAttr ".r" -type "double3" 353.06164727051231 359.79999999996085 6.2120587082209211e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0B0F1ABA-9A44-7D89-13F0-2ABF44198B36";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 38.818195550496689;
+	setAttr ".coi" 6.423421555005528;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 5.9604644775390625e-08 8.2887716229868573 2.9802322387695312e-08 ;
+	setAttr ".tp" -type "double3" 0 6.6808824613531925 0.92106782252543207 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "1038C3F8-D246-0375-8C34-AAA2F8124284";
@@ -237,7 +237,7 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr -k on ".Colliders";
 	setAttr -k on ".masterVoxelSize" 0.15000000596046448;
 	setAttr -k on ".gravityMagnitude" 9.8000001907348633;
-	setAttr -k on ".gravityDirection" -type "float3" 0 -10 0 ;
+	setAttr -k on ".gravityDirection" -type "float3" 0 -5 0 ;
 	setAttr -k on ".gravityDirection";
 	setAttr -k on ".gravityDirectionX";
 	setAttr -k on ".gravityDirectionY";
@@ -366,8 +366,10 @@ createNode mesh -n "bifrostLiquid1MeshShape" -p "bifrostLiquid1Mesh";
 	setAttr ".mvcs" -type "string" "bifrostVelocity";
 createNode transform -n "main_liq";
 	rename -uid "02B9C20D-C54E-57D9-CCA7-FEA4E204029C";
+	addAttr -ci true -k true -sn "blendParent1" -ln "blendParent1" -dv 1 -smn 0 -smx 
+		1 -at "double";
 	setAttr ".v" no;
-	setAttr ".s" -type "double3" 0.82536632184556913 0.92040305544119672 0.82536632184556913 ;
+	setAttr -k on ".blendParent1";
 createNode mesh -n "main_liqShape" -p "main_liq";
 	rename -uid "8298B4B6-9846-07B3-EE22-4BA4B94C2AE5";
 	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
@@ -911,6 +913,41 @@ createNode mesh -n "polySurfaceShape1" -p "main_liq";
 	setAttr ".qsp" 0;
 	setAttr -k on ".bifrostColliderThickness" 2;
 	setAttr -k on ".bifrostColliderMode" 1;
+createNode parentConstraint -n "main_liq_parentConstraint1" -p "main_liq";
+	rename -uid "C0BF7D3E-4541-20EA-BCA1-19A90545D514";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "theBottleW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -100 0 0 ;
+	setAttr ".rst" -type "double3" 0 4.8264544321237519 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "main_liq_scaleConstraint1" -p "main_liq";
+	rename -uid "FCA01900-6441-BFE8-FBE0-839878464431";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "theBottleW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".o" -type "double3" 0.7 0.7 0.7 ;
+	setAttr -k on ".w0";
 createNode transform -n "bifrostKillplane1";
 	rename -uid "055ED6E7-B344-24BA-9592-0BBDAA184778";
 	setAttr ".t" -type "double3" 0 1.2000667771741751 0 ;
@@ -960,8 +997,24 @@ createNode parentConstraint -n "stopper_parentConstraint1" -p "stopper";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.008384527958312904 3.7914708884120092 0 ;
-	setAttr ".lr" -type "double3" -75.034930995539312 0 0 ;
+	setAttr ".lr" -type "double3" -100 0 0 ;
 	setAttr ".rst" -type "double3" 0 8.6179253205357611 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "stopper_scaleConstraint1" -p "stopper";
+	rename -uid "A612DCAF-7244-CC8E-C4AF-B0926A559B96";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "theBottleW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "1373C1BC-6B4F-6B7E-5F77-ABA4F19C1A4C";
@@ -1319,7 +1372,7 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode reference -n "main_bottleRN";
 	rename -uid "0B0329D2-4846-D2FE-7205-AA9091E91E5C";
 	setAttr ".fn[0]" -type "string" "/Users/emileechen/Documents/project/Only-Love//assets/bottles/main_bottle.mb";
-	setAttr -s 16 ".phl";
+	setAttr -s 27 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1336,12 +1389,23 @@ createNode reference -n "main_bottleRN";
 	setAttr ".phl[14]" 0;
 	setAttr ".phl[15]" 0;
 	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"main_bottleRN"
 		"main_bottleRN" 1
 		3 "|main_bottle:theBottle|main_bottle:theBottleShape.instObjGroups" "main_bottle:mia_material_x1SG.dagSetMembers" 
 		"-na"
-		"main_bottleRN" 49
+		"main_bottleRN" 61
 		1 |main_bottle:theBottle|main_bottle:theBottleShape "bifrostColliderEnable" 
 		"bifrostColliderEnable" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		1 |main_bottle:theBottle|main_bottle:theBottleShape "bifrostColliderThickness" 
@@ -1349,16 +1413,16 @@ createNode reference -n "main_bottleRN";
 		1 |main_bottle:theBottle|main_bottle:theBottleShape "bifrostColliderMode" 
 		"bifrostColliderMode" " -ci 1 -min 0 -max 1 -en \"Solid:Shell\" -at \"enum\""
 		2 "|main_bottle:theBottle" "visibility" " 1"
-		2 "|main_bottle:theBottle" "translate" " -type \"double3\" 0 6.22084437587536776 0.70768927934083714"
+		2 "|main_bottle:theBottle" "translate" " -type \"double3\" 0 6.68477551705219675 0.94314643853395141"
 		
 		2 "|main_bottle:theBottle" "translateX" " -av"
 		2 "|main_bottle:theBottle" "translateY" " -av"
 		2 "|main_bottle:theBottle" "translateZ" " -av"
-		2 "|main_bottle:theBottle" "rotate" " -type \"double3\" -75.03493099553931245 0 0"
-		
+		2 "|main_bottle:theBottle" "rotate" " -type \"double3\" -100 0 0"
 		2 "|main_bottle:theBottle" "rotateX" " -av"
 		2 "|main_bottle:theBottle" "rotateY" " -av"
 		2 "|main_bottle:theBottle" "rotateZ" " -av"
+		2 "|main_bottle:theBottle" "scale" " -type \"double3\" 0.5 0.5 0.5"
 		2 "|main_bottle:theBottle|main_bottle:theBottleShape" "instObjGroups.objectGroups" 
 		" -s 2"
 		2 "|main_bottle:theBottle|main_bottle:theBottleShape" "uvPivot" " -type \"double2\" 4.56208086013793945 3.5"
@@ -1401,36 +1465,58 @@ createNode reference -n "main_bottleRN";
 		"-na"
 		5 3 "main_bottleRN" "|main_bottle:theBottle.translate" "main_bottleRN.placeHolderList[1]" 
 		""
-		5 4 "main_bottleRN" "|main_bottle:theBottle.translateX" "main_bottleRN.placeHolderList[2]" 
+		5 3 "main_bottleRN" "|main_bottle:theBottle.translate" "main_bottleRN.placeHolderList[2]" 
 		""
-		5 4 "main_bottleRN" "|main_bottle:theBottle.translateY" "main_bottleRN.placeHolderList[3]" 
+		5 4 "main_bottleRN" "|main_bottle:theBottle.translateX" "main_bottleRN.placeHolderList[3]" 
 		""
-		5 4 "main_bottleRN" "|main_bottle:theBottle.translateZ" "main_bottleRN.placeHolderList[4]" 
+		5 4 "main_bottleRN" "|main_bottle:theBottle.translateY" "main_bottleRN.placeHolderList[4]" 
 		""
-		5 3 "main_bottleRN" "|main_bottle:theBottle.rotate" "main_bottleRN.placeHolderList[5]" 
+		5 4 "main_bottleRN" "|main_bottle:theBottle.translateZ" "main_bottleRN.placeHolderList[5]" 
 		""
-		5 4 "main_bottleRN" "|main_bottle:theBottle.rotateX" "main_bottleRN.placeHolderList[6]" 
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotate" "main_bottleRN.placeHolderList[6]" 
 		""
-		5 3 "main_bottleRN" "|main_bottle:theBottle.rotatePivot" "main_bottleRN.placeHolderList[7]" 
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotate" "main_bottleRN.placeHolderList[7]" 
 		""
-		5 3 "main_bottleRN" "|main_bottle:theBottle.rotatePivotTranslate" "main_bottleRN.placeHolderList[8]" 
+		5 4 "main_bottleRN" "|main_bottle:theBottle.rotateX" "main_bottleRN.placeHolderList[8]" 
 		""
-		5 3 "main_bottleRN" "|main_bottle:theBottle.rotateOrder" "main_bottleRN.placeHolderList[9]" 
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotatePivot" "main_bottleRN.placeHolderList[9]" 
 		""
-		5 3 "main_bottleRN" "|main_bottle:theBottle.scale" "main_bottleRN.placeHolderList[10]" 
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotatePivot" "main_bottleRN.placeHolderList[10]" 
 		""
-		5 3 "main_bottleRN" "|main_bottle:theBottle.parentMatrix" "main_bottleRN.placeHolderList[11]" 
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotatePivotTranslate" "main_bottleRN.placeHolderList[11]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotatePivotTranslate" "main_bottleRN.placeHolderList[12]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotateOrder" "main_bottleRN.placeHolderList[13]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.rotateOrder" "main_bottleRN.placeHolderList[14]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.scale" "main_bottleRN.placeHolderList[15]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.scale" "main_bottleRN.placeHolderList[16]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.scale" "main_bottleRN.placeHolderList[17]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.scale" "main_bottleRN.placeHolderList[18]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.parentMatrix" "main_bottleRN.placeHolderList[19]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.parentMatrix" "main_bottleRN.placeHolderList[20]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.parentMatrix" "main_bottleRN.placeHolderList[21]" 
+		""
+		5 3 "main_bottleRN" "|main_bottle:theBottle.parentMatrix" "main_bottleRN.placeHolderList[22]" 
 		""
 		5 3 "main_bottleRN" "|main_bottle:theBottle|main_bottle:theBottleShape.instObjGroups" 
-		"main_bottleRN.placeHolderList[12]" ""
+		"main_bottleRN.placeHolderList[23]" ""
 		5 3 "main_bottleRN" "|main_bottle:theBottle|main_bottle:theBottleShape.bifrostColliderEnable" 
-		"main_bottleRN.placeHolderList[13]" ""
+		"main_bottleRN.placeHolderList[24]" ""
 		5 3 "main_bottleRN" "|main_bottle:theBottle|main_bottle:theBottleShape.bifrostColliderThickness" 
-		"main_bottleRN.placeHolderList[14]" ""
+		"main_bottleRN.placeHolderList[25]" ""
 		5 3 "main_bottleRN" "|main_bottle:theBottle|main_bottle:theBottleShape.bifrostColliderMode" 
-		"main_bottleRN.placeHolderList[15]" ""
+		"main_bottleRN.placeHolderList[26]" ""
 		5 3 "main_bottleRN" "|main_bottle:theBottle|main_bottle:theBottleShape.worldMesh" 
-		"main_bottleRN.placeHolderList[16]" "";
+		"main_bottleRN.placeHolderList[27]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode lambert -n "lambert2";
@@ -1692,9 +1778,11 @@ createNode bifrostAttrNotifier -n "stopperShapeAttrNotif";
 	setAttr -k on ".bifrostColliderEnable";
 	setAttr -k on ".bifrostColliderThickness";
 	setAttr -k on ".bifrostColliderMode";
+createNode pairBlend -n "pairBlend1";
+	rename -uid "E6EF4D61-DF49-BA03-F2FB-D7A85A4BE6F5";
 select -ne :time1;
-	setAttr ".o" 45;
-	setAttr ".unw" 45;
+	setAttr ".o" 160;
+	setAttr ".unw" 160;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1723,25 +1811,36 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "main_bottleRN.phl[1]" "stopper_parentConstraint1.tg[0].tt";
-connectAttr "theBottle_translateX.o" "main_bottleRN.phl[2]";
-connectAttr "theBottle_translateY.o" "main_bottleRN.phl[3]";
-connectAttr "theBottle_translateZ.o" "main_bottleRN.phl[4]";
-connectAttr "main_bottleRN.phl[5]" "stopper_parentConstraint1.tg[0].tr";
-connectAttr "theBottle_rotateX.o" "main_bottleRN.phl[6]";
-connectAttr "main_bottleRN.phl[7]" "stopper_parentConstraint1.tg[0].trp";
-connectAttr "main_bottleRN.phl[8]" "stopper_parentConstraint1.tg[0].trt";
-connectAttr "main_bottleRN.phl[9]" "stopper_parentConstraint1.tg[0].tro";
-connectAttr "main_bottleRN.phl[10]" "stopper_parentConstraint1.tg[0].ts";
-connectAttr "main_bottleRN.phl[11]" "stopper_parentConstraint1.tg[0].tpm";
-connectAttr "main_bottleRN.phl[12]" "lambert2SG.dsm" -na;
-connectAttr "main_bottleRN.phl[13]" "theBottleShapeAttrNotif.bifrostColliderEnable"
+connectAttr "main_bottleRN.phl[1]" "main_liq_parentConstraint1.tg[0].tt";
+connectAttr "main_bottleRN.phl[2]" "stopper_parentConstraint1.tg[0].tt";
+connectAttr "theBottle_translateX.o" "main_bottleRN.phl[3]";
+connectAttr "theBottle_translateY.o" "main_bottleRN.phl[4]";
+connectAttr "theBottle_translateZ.o" "main_bottleRN.phl[5]";
+connectAttr "main_bottleRN.phl[6]" "main_liq_parentConstraint1.tg[0].tr";
+connectAttr "main_bottleRN.phl[7]" "stopper_parentConstraint1.tg[0].tr";
+connectAttr "theBottle_rotateX.o" "main_bottleRN.phl[8]";
+connectAttr "main_bottleRN.phl[9]" "main_liq_parentConstraint1.tg[0].trp";
+connectAttr "main_bottleRN.phl[10]" "stopper_parentConstraint1.tg[0].trp";
+connectAttr "main_bottleRN.phl[11]" "main_liq_parentConstraint1.tg[0].trt";
+connectAttr "main_bottleRN.phl[12]" "stopper_parentConstraint1.tg[0].trt";
+connectAttr "main_bottleRN.phl[13]" "main_liq_parentConstraint1.tg[0].tro";
+connectAttr "main_bottleRN.phl[14]" "stopper_parentConstraint1.tg[0].tro";
+connectAttr "main_bottleRN.phl[15]" "main_liq_parentConstraint1.tg[0].ts";
+connectAttr "main_bottleRN.phl[16]" "stopper_parentConstraint1.tg[0].ts";
+connectAttr "main_bottleRN.phl[17]" "main_liq_scaleConstraint1.tg[0].ts";
+connectAttr "main_bottleRN.phl[18]" "stopper_scaleConstraint1.tg[0].ts";
+connectAttr "main_bottleRN.phl[19]" "main_liq_parentConstraint1.tg[0].tpm";
+connectAttr "main_bottleRN.phl[20]" "stopper_parentConstraint1.tg[0].tpm";
+connectAttr "main_bottleRN.phl[21]" "main_liq_scaleConstraint1.tg[0].tpm";
+connectAttr "main_bottleRN.phl[22]" "stopper_scaleConstraint1.tg[0].tpm";
+connectAttr "main_bottleRN.phl[23]" "lambert2SG.dsm" -na;
+connectAttr "main_bottleRN.phl[24]" "theBottleShapeAttrNotif.bifrostColliderEnable"
 		;
-connectAttr "main_bottleRN.phl[14]" "theBottleShapeAttrNotif.bifrostColliderThickness"
+connectAttr "main_bottleRN.phl[25]" "theBottleShapeAttrNotif.bifrostColliderThickness"
 		;
-connectAttr "main_bottleRN.phl[15]" "theBottleShapeAttrNotif.bifrostColliderMode"
+connectAttr "main_bottleRN.phl[26]" "theBottleShapeAttrNotif.bifrostColliderMode"
 		;
-connectAttr "main_bottleRN.phl[16]" "theBottleShapeAttrNotif.im";
+connectAttr "main_bottleRN.phl[27]" "theBottleShapeAttrNotif.im";
 connectAttr ":time1.o" "bifrostLiquidContainer1.ctm";
 connectAttr "main_liqShapeAttrNotif.om" "bifrostLiquidContainer1.Emitters[0]";
 connectAttr "theBottleShapeAttrNotif.om" "bifrostLiquidContainer1.Colliders[0]";
@@ -1750,25 +1849,41 @@ connectAttr "bifrostKillplane1.wm" "bifrostLiquidContainer1.killplanes[0]";
 connectAttr "bifrostLiquidContainer1.Liquid" "liquidShape1.obj";
 connectAttr "bifrostMeshMRUserData1.msg" "bifrostLiquid1Mesh.miData";
 connectAttr "liquidShape1.mout" "bifrostLiquid1MeshShape.i";
-connectAttr "pasted__theBottle_translateY.o" "main_liq.ty";
-connectAttr "pasted__theBottle_translateZ.o" "main_liq.tz";
-connectAttr "pasted__theBottle_translateX.o" "main_liq.tx";
-connectAttr "pasted__theBottle_rotateX.o" "main_liq.rx";
-connectAttr "pasted__theBottle_rotateY.o" "main_liq.ry";
-connectAttr "pasted__theBottle_rotateZ.o" "main_liq.rz";
+connectAttr "pairBlend1.oty" "main_liq.ty";
+connectAttr "pairBlend1.otz" "main_liq.tz";
+connectAttr "pairBlend1.otx" "main_liq.tx";
+connectAttr "pairBlend1.orx" "main_liq.rx";
+connectAttr "pairBlend1.ory" "main_liq.ry";
+connectAttr "pairBlend1.orz" "main_liq.rz";
+connectAttr "main_liq_scaleConstraint1.csx" "main_liq.sx";
+connectAttr "main_liq_scaleConstraint1.csy" "main_liq.sy";
+connectAttr "main_liq_scaleConstraint1.csz" "main_liq.sz";
 connectAttr "createColorSet2.og" "main_liqShape.i";
+connectAttr "main_liq.ro" "main_liq_parentConstraint1.cro";
+connectAttr "main_liq.pim" "main_liq_parentConstraint1.cpim";
+connectAttr "main_liq.rp" "main_liq_parentConstraint1.crp";
+connectAttr "main_liq.rpt" "main_liq_parentConstraint1.crt";
+connectAttr "main_liq_parentConstraint1.w0" "main_liq_parentConstraint1.tg[0].tw"
+		;
+connectAttr "main_liq.pim" "main_liq_scaleConstraint1.cpim";
+connectAttr "main_liq_scaleConstraint1.w0" "main_liq_scaleConstraint1.tg[0].tw";
 connectAttr "stopper_parentConstraint1.ctx" "stopper.tx";
 connectAttr "stopper_parentConstraint1.cty" "stopper.ty";
 connectAttr "stopper_parentConstraint1.ctz" "stopper.tz";
 connectAttr "stopper_parentConstraint1.crx" "stopper.rx";
 connectAttr "stopper_parentConstraint1.cry" "stopper.ry";
 connectAttr "stopper_parentConstraint1.crz" "stopper.rz";
+connectAttr "stopper_scaleConstraint1.csx" "stopper.sx";
+connectAttr "stopper_scaleConstraint1.csy" "stopper.sy";
+connectAttr "stopper_scaleConstraint1.csz" "stopper.sz";
 connectAttr "polySplit7.out" "stopperShape.i";
 connectAttr "stopper.ro" "stopper_parentConstraint1.cro";
 connectAttr "stopper.pim" "stopper_parentConstraint1.cpim";
 connectAttr "stopper.rp" "stopper_parentConstraint1.crp";
 connectAttr "stopper.rpt" "stopper_parentConstraint1.crt";
 connectAttr "stopper_parentConstraint1.w0" "stopper_parentConstraint1.tg[0].tw";
+connectAttr "stopper.pim" "stopper_scaleConstraint1.cpim";
+connectAttr "stopper_scaleConstraint1.w0" "stopper_scaleConstraint1.tg[0].tw";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -1861,6 +1976,20 @@ connectAttr "stopperShape.bifrostColliderThickness" "stopperShapeAttrNotif.bifro
 connectAttr "stopperShape.bifrostColliderMode" "stopperShapeAttrNotif.bifrostColliderMode"
 		;
 connectAttr "stopperShape.w" "stopperShapeAttrNotif.im";
+connectAttr "pasted__theBottle_translateX.o" "pairBlend1.itx1";
+connectAttr "pasted__theBottle_translateY.o" "pairBlend1.ity1";
+connectAttr "pasted__theBottle_translateZ.o" "pairBlend1.itz1";
+connectAttr "pasted__theBottle_rotateX.o" "pairBlend1.irx1";
+connectAttr "pasted__theBottle_rotateY.o" "pairBlend1.iry1";
+connectAttr "pasted__theBottle_rotateZ.o" "pairBlend1.irz1";
+connectAttr "main_liq.blendParent1" "pairBlend1.w";
+connectAttr "main_liq.ro" "pairBlend1.ro";
+connectAttr "main_liq_parentConstraint1.ctx" "pairBlend1.itx2";
+connectAttr "main_liq_parentConstraint1.cty" "pairBlend1.ity2";
+connectAttr "main_liq_parentConstraint1.ctz" "pairBlend1.itz2";
+connectAttr "main_liq_parentConstraint1.crx" "pairBlend1.irx2";
+connectAttr "main_liq_parentConstraint1.cry" "pairBlend1.iry2";
+connectAttr "main_liq_parentConstraint1.crz" "pairBlend1.irz2";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "pasted__lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "bifrostLiquidMaterial1SG.pa" ":renderPartition.st" -na;
