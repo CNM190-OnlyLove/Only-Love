@@ -1,16 +1,13 @@
 //Maya ASCII 2016 scene
-//Name: teardrop_2.ma
-//Last modified: Tue, Dec 06, 2016 07:22:16 PM
+//Name: teardrop_in_air.ma
+//Last modified: Tue, Dec 06, 2016 08:32:55 PM
 //Codeset: 1252
-file -rdi 1 -ns "shotglass" -rfn "shotglassRN" -op "v=0;" -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//assets/shotglass/shotglass.ma";
-file -r -ns "shotglass" -dr 1 -rfn "shotglassRN" -op "v=0;" -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//assets/shotglass/shotglass.ma";
 requires maya "2016";
 requires -nodeType "bifrostContainer" -nodeType "bifrostAttrNotifier" "bifrostshellnode" "2015";
 requires -nodeType "bifrostShape" "bifrostvisplugin" "3.0";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -nodeType "mia_material_x" -nodeType "mib_data_string"
 		 -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.10 ";
-requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -22,14 +19,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "BAE69A4A-7F48-80FF-0D88-ED8A61ECEC7F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 33.155126456369018 7.8475793761276407 18.807228619212246 ;
+	setAttr ".t" -type "double3" 58.768239926565727 15.909604419140539 48.360353048549989 ;
 	setAttr ".r" -type "double3" -3.9383527293681113 -1015.3999999998731 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FA0B53E5-7C45-6FE2-CE77-F9ADBA8DB122";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 37.119052040859003;
+	setAttr ".coi" 73.401806843785465;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,209 +79,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "shotglass_water";
-	rename -uid "8C9D02CD-F94D-A069-AEA2-D59DAAE6C496";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 5.340342604348046 0 ;
-	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
-createNode mesh -n "shotglass_waterShape" -p "shotglass_water";
-	rename -uid "CAA1029E-1B4D-90F4-5689-24B8B49534BC";
-	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
-		-min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
-		1 -at "double";
-	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
-		1 -en "Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
-	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
-	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
-		"Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
-		-at "double";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.19644522480666637 0.67519435286521912 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".ccls" -type "string" "bifrostLiquidExpansionRate";
-	setAttr -s 4 ".clst";
-	setAttr ".clst[0].rprt" 3;
-	setAttr ".clst[1].rprt" 3;
-	setAttr ".clst[2].clsn" -type "string" "bifrostLiquidDensity";
-	setAttr ".clst[2].rprt" 3;
-	setAttr ".clst[3].clsn" -type "string" "bifrostLiquidExpansionRate";
-	setAttr ".clst[3].rprt" 3;
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".bw" 4;
-	setAttr ".dr" 1;
-	setAttr ".qsp" 0;
-	setAttr -k on ".bifrostColliderThickness";
-	setAttr -k on ".bifrostColliderMode";
-	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
-	setAttr -k on ".bifrostLiquidEnable";
-	setAttr -k on ".bifrostLiquidContinuousEmission" no;
-	setAttr -k on ".bifrostLiquidThickness";
-	setAttr -k on ".bifrostLiquidMode";
-	setAttr -k on ".bifrostLiquidDensity";
-	setAttr -k on ".bifrostLiquidExpansionRate";
-	setAttr -k on ".bifrostLiquidStictionStrength";
-	setAttr -k on ".bifrostLiquidStictionBandwidth";
-createNode mesh -n "polySurfaceShape1" -p "shotglass_water";
-	rename -uid "3FAE7537-234F-192F-BE22-5199C8B65715";
-	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
-		-min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
-		1 -at "double";
-	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
-		1 -en "Solid:Shell" -at "enum";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.18542039394378662 0.67519435286521912 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 46 ".uvst[0].uvsp[0:45]" -type "float2" 0.16958009 0.64463335
-		 0.17322783 0.69283313 0.1452255 0.68696612 0.14199542 0.65208662 0.15315881 0.73660898
-		 0.13078736 0.71841961 0.11367159 0.76594603 0.10199092 0.73886859 0.062445883 0.77355498
-		 0.065170199 0.74248117 0.0084548621 0.75582206 0.044567425 0.60292619 0.097074613
-		 0.57314771 0.08682745 0.60299462 0.14288175 0.60175729 0.12141778 0.62159538 0.11628214
-		 0.68083566 0.1139538 0.66133624 0.10842967 0.69840807 0.092471004 0.70939314 0.072860733
-		 0.71006161 0.060897183 0.64118648 0.082123436 0.63657433 0.1016948 0.6448974 0.085805684
-		 0.67522293 0.23684046 0.69940495 0.23185435 0.62904358 0.20886575 0.76936328 0.15253587
-		 0.82042748 0.074409179 0.84507334 0.0009765625 0.84412259 0.13090159 0.51148558 0.19232902
-		 0.55885994 0.023026224 0.99902344 0.13118833 0.35136527 0.058637008 0.48173207 0.036157895
-		 0.5635438 0.056815468 0.69832754 0.030280242 0.72507769 0.30570805 0.48170924 0.36090708
-		 0.58949149 0.22253349 0.40320987 0.13312106 0.98081923 0.24246144 0.9270733 0.32790536
-		 0.83418119 0.36986423 0.71446794;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 41 ".vt[0:40]"  0.53033006 0.99999982 -0.53033006 8.8817842e-016 0.99999982 -0.74999988
-		 -0.53033006 0.99999982 -0.53033006 -0.74999988 0.99999982 4.4408921e-016 -0.53033006 0.99999982 0.53033006
-		 8.8817842e-016 0.99999982 0.74999994 0.53033006 0.99999982 0.53033006 0.75 0.99999982 4.4408921e-016
-		 0.33859706 -0.20341504 -0.33859709 2.1549175e-008 -0.20341504 -0.47884852 2.1549175e-008 -0.28558221 -0.31923234
-		 0.22573137 -0.28558221 -0.22573134 -0.33859709 -0.20341504 -0.33859709 -0.22573131 -0.28558221 -0.22573134
-		 -0.47884852 -0.20341504 6.9645099e-009 -0.31923234 -0.28558221 6.9645099e-009 -0.33859709 -0.20341504 0.33859706
-		 -0.22573131 -0.28558221 0.22573134 2.1549175e-008 -0.20341504 0.47884858 2.1549175e-008 -0.28558221 0.31923237
-		 0.33859706 -0.20341504 0.33859706 0.22573139 -0.28558221 0.22573137 0.47884864 -0.20341504 6.9645099e-009
-		 0.3192324 -0.2855821 6.9645099e-009 2.1549175e-008 -0.36254218 -0.15961617 0.11286569 -0.36254212 -0.11286566
-		 -0.11286565 -0.36254212 -0.11286566 -0.15961616 -0.36254212 6.9645099e-009 -0.11286565 -0.36254212 0.11286567
-		 2.1549175e-008 -0.36254212 0.15961619 0.11286572 -0.36254212 0.11286569 0.15961623 -0.36254212 6.9645099e-009
-		 1.5970807e-008 -0.39343798 7.9854034e-009 0.3988063 0.19450994 0.42006615 -0.015032972 0.19450995 0.57903028
-		 -0.39880633 0.19450994 0.42006612 -0.57903022 0.19450997 -0.015032955 -0.3988063 0.19450995 -0.42006615
-		 0.015032996 0.19450997 -0.57903022 0.39880633 0.19451007 -0.42006618 0.57903033 0.19450998 0.015032967;
-	setAttr -s 80 ".ed[0:79]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
-		 7 0 0 0 39 0 1 38 0 8 9 0 9 10 1 11 10 1 8 11 1 2 37 0 9 12 0 12 13 1 10 13 1 3 36 0
-		 12 14 0 14 15 1 13 15 1 4 35 0 14 16 0 16 17 1 15 17 1 5 34 0 16 18 0 18 19 1 17 19 1
-		 6 33 0 18 20 0 20 21 1 19 21 1 7 40 0 20 22 0 22 23 1 21 23 1 22 8 0 23 11 1 10 24 1
-		 25 24 1 11 25 1 13 26 1 24 26 1 15 27 1 26 27 1 17 28 1 27 28 1 19 29 1 28 29 1 21 30 1
-		 29 30 1 23 31 1 30 31 1 31 25 1 24 32 1 25 32 1 26 32 1 27 32 1 28 32 1 29 32 1 30 32 1
-		 31 32 1 33 20 0 34 18 0 33 34 1 35 16 0 34 35 1 36 14 0 35 36 1 37 12 0 36 37 1 38 9 0
-		 37 38 1 39 8 0 38 39 1 40 22 0 39 40 1 40 33 1;
-	setAttr -s 40 -ch 152 ".fc[0:39]" -type "polyFaces" 
-		f 4 10 11 -13 -14
-		mu 0 4 0 1 2 3
-		f 4 15 16 -18 -12
-		mu 0 4 1 4 5 2
-		f 4 19 20 -22 -17
-		mu 0 4 4 6 7 5
-		f 4 23 24 -26 -21
-		mu 0 4 6 8 9 7
-		f 4 27 28 -30 -25
-		mu 0 4 8 10 38 9
-		f 4 31 32 -34 -29
-		mu 0 4 36 12 13 11
-		f 4 35 36 -38 -33
-		mu 0 4 12 14 15 13
-		f 4 38 13 -40 -37
-		mu 0 4 14 0 3 15
-		f 4 12 40 -42 -43
-		mu 0 4 3 2 16 17
-		f 4 17 43 -45 -41
-		mu 0 4 2 5 18 16
-		f 4 21 45 -47 -44
-		mu 0 4 5 7 19 18
-		f 4 25 47 -49 -46
-		mu 0 4 7 9 20 19
-		f 4 29 49 -51 -48
-		mu 0 4 9 38 37 20
-		f 4 33 51 -53 -50
-		mu 0 4 11 13 22 21
-		f 4 37 53 -55 -52
-		mu 0 4 13 15 23 22
-		f 4 39 42 -56 -54
-		mu 0 4 15 3 17 23
-		f 3 41 56 -58
-		mu 0 3 17 16 24
-		f 3 44 58 -57
-		mu 0 3 16 18 24
-		f 3 46 59 -59
-		mu 0 3 18 19 24
-		f 3 48 60 -60
-		mu 0 3 19 20 24
-		f 3 50 61 -61
-		mu 0 3 20 37 24
-		f 3 52 62 -62
-		mu 0 3 21 22 24
-		f 3 54 63 -63
-		mu 0 3 22 23 24
-		f 3 55 57 -64
-		mu 0 3 23 17 24
-		f 4 0 9 76 -9
-		mu 0 4 40 45 25 26
-		f 4 1 14 74 -10
-		mu 0 4 45 44 27 25
-		f 4 2 18 72 -15
-		mu 0 4 44 43 28 27
-		f 4 3 22 70 -19
-		mu 0 4 43 42 29 28
-		f 4 4 26 68 -23
-		mu 0 4 42 33 30 29
-		f 4 5 30 66 -27
-		mu 0 4 34 41 31 35
-		f 4 6 34 79 -31
-		mu 0 4 41 39 32 31
-		f 4 7 8 78 -35
-		mu 0 4 39 40 26 32
-		f 4 -67 64 -32 -66
-		mu 0 4 35 31 12 36
-		f 4 -69 65 -28 -68
-		mu 0 4 29 30 10 8
-		f 4 -71 67 -24 -70
-		mu 0 4 28 29 8 6
-		f 4 -73 69 -20 -72
-		mu 0 4 27 28 6 4
-		f 4 -75 71 -16 -74
-		mu 0 4 25 27 4 1
-		f 4 -77 73 -11 -76
-		mu 0 4 26 25 1 0
-		f 4 -79 75 -39 -78
-		mu 0 4 32 26 0 14
-		f 4 -80 77 -36 -65
-		mu 0 4 31 32 14 12;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".bw" 4;
-	setAttr ".dr" 3;
-	setAttr ".dsm" 2;
-	setAttr -k on ".bifrostColliderThickness";
-	setAttr -k on ".bifrostColliderMode";
 createNode transform -n "drop";
 	rename -uid "EFC67BF0-B645-5181-B493-0492D23CBC7B";
 	setAttr ".v" no;
@@ -315,15 +109,17 @@ createNode mesh -n "dropShape" -p "drop";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".ccls" -type "string" "bifrostLiquidExpansionRate";
-	setAttr -s 6 ".clst";
+	setAttr -s 8 ".clst";
 	setAttr ".clst[0].rprt" 3;
 	setAttr ".clst[1].rprt" 3;
 	setAttr ".clst[2].rprt" 3;
 	setAttr ".clst[3].rprt" 3;
-	setAttr ".clst[4].clsn" -type "string" "bifrostLiquidDensity";
 	setAttr ".clst[4].rprt" 3;
-	setAttr ".clst[5].clsn" -type "string" "bifrostLiquidExpansionRate";
 	setAttr ".clst[5].rprt" 3;
+	setAttr ".clst[6].clsn" -type "string" "bifrostLiquidDensity";
+	setAttr ".clst[6].rprt" 3;
+	setAttr ".clst[7].clsn" -type "string" "bifrostLiquidExpansionRate";
+	setAttr ".clst[7].rprt" 3;
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 58 ".pt[0:57]" -type "float3"  -0.036035109 0.10431756 0.036035128 
@@ -366,7 +162,6 @@ createNode mesh -n "dropShape" -p "drop";
 	setAttr -k on ".bifrostLiquidStictionBandwidth";
 createNode transform -n "bifrostLiquid1";
 	rename -uid "D0F2605F-0744-B9E2-CD8D-1E97DF9947AB";
-	setAttr ".v" no;
 createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	rename -uid "F84EE23C-5148-3FBB-8C79-19BBC0B1795A";
 	addAttr -r false -dcb 0 -ci true -k true -m -sn "Emitters" -ln "Emitters" -dt "mesh";
@@ -515,12 +310,8 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr -k on ".mis";
 	setAttr -k on ".mas" 100;
 	setAttr -k on -cb off ".sfr";
-	setAttr -s 2 ".Emitters";
 	setAttr -k on ".Emitters[0]";
-	setAttr -k on ".Emitters[1]";
 	setAttr -k on ".Emitters";
-	setAttr -k on ".Colliders[0]";
-	setAttr -k on ".Colliders";
 	setAttr -k on ".masterVoxelSize" 0.5;
 	setAttr -k on ".gravityMagnitude" 100;
 	setAttr -k on ".gravityDirection" -type "float3" 0 -1 0 ;
@@ -535,8 +326,6 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr -k on ".surfaceBandWidth" 1;
 	setAttr -k on ".interiorParticleDensity" 1;
 	setAttr -k on ".surfaceParticleDensity" 2;
-	setAttr -k on ".killplanes[0]";
-	setAttr -k on ".killplanes";
 	setAttr ".surfaceTension" 0.071999996900558472;
 	setAttr -k on ".vorticityDecay" 20;
 	setAttr -k on ".vorticityMult" 1;
@@ -653,26 +442,6 @@ createNode ambientLight -n "ambientLightShape1" -p "ambientLight1";
 	rename -uid "19708471-284F-6F56-45DB-CBA6AFC8B849";
 	setAttr -k off ".v";
 	setAttr ".urs" no;
-createNode transform -n "bifrostKillplane1";
-	rename -uid "F32CD5B5-8B41-6169-9D07-11B7C24D8BC4";
-	setAttr ".t" -type "double3" 0 2.4333750999934338 0 ;
-	setAttr ".r" -type "double3" 90 0 0 ;
-createNode sketchPlane -n "bifrostKillplaneShape1" -p "bifrostKillplane1";
-	rename -uid "1BF976C6-754C-5774-25F5-68B461068354";
-	setAttr -k off ".v";
-createNode transform -n "pPlane1";
-	rename -uid "B110E8E2-4AB7-9074-2D78-9EB4F787E64A";
-	setAttr ".s" -type "double3" 200.13453060362059 200.13453060362059 200.13453060362059 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
-	rename -uid "1078ADFC-45D2-3B49-ECCF-3F8DA3D79D63";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "spotLight1";
 	rename -uid "6BCDA316-455A-F3B6-1432-8182680C160E";
 	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
@@ -686,7 +455,7 @@ createNode spotLight -n "spotLightShape1" -p "spotLight1";
 createNode transform -n "shotCam";
 	rename -uid "E57871F5-4821-7664-764A-D7A35B2D9549";
 	setAttr ".t" -type "double3" 59.102410631822444 32.140152541735063 57.793668870672349 ;
-	setAttr ".r" -type "double3" -12.599999999999953 57.200000000001317 0 ;
+	setAttr ".r" -type "double3" -12.599999999999953 57.200000000001324 0 ;
 createNode camera -n "shotCamShape" -p "shotCam";
 	rename -uid "E01446D9-4F5B-D378-7D24-26994F8BB567";
 	setAttr -k off ".v";
@@ -697,33 +466,6 @@ createNode camera -n "shotCamShape" -p "shotCam";
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
-createNode transform -n "pfxToon1";
-	rename -uid "FA4D9A64-405F-593A-6D7C-93B85AF64D8E";
-createNode pfxToon -n "pfxToonShape1" -p "pfxToon1";
-	rename -uid "585972AA-4AC6-D814-4E21-6796F0576BC0";
-	setAttr -k off ".v" no;
-	setAttr ".dpc" 100;
-	setAttr ".mvbs" 800;
-	setAttr ".mpl" 100000;
-	setAttr ".mqo" yes;
-	setAttr ".lwd" 0.2;
-	setAttr -s 2 ".cwd[0:1]"  0 1 3 0.30000001 0.30000001 3;
-createNode transform -n "MeshGroup";
-	rename -uid "657510D9-42CE-68BD-36D7-75AE62D63657";
-createNode transform -n "Main" -p "MeshGroup";
-	rename -uid "AF6444BA-4C85-9425-B950-3DAD6EBC21D0";
-createNode mesh -n "MainShape" -p "Main";
-	rename -uid "20DCD478-4D00-9667-4660-ECBE3586BA72";
-	setAttr -k off ".v";
-	setAttr ".csh" no;
-	setAttr ".rcsh" no;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".fgc" no;
-	setAttr ".fge" no;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "BFEC9435-644C-83FC-50FC-5CB9B8520DB8";
 	setAttr -s 3 ".opt";
@@ -996,68 +738,18 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "7D576636-B24E-29EE-EA55-E2BA252B9E87";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C781C6EC-43E7-2BD1-5B3A-08A2C91F05BB";
+	rename -uid "86581E49-4209-A463-17EA-B9AC122E651A";
 	setAttr -s 17 ".lnk";
 	setAttr -s 17 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "887FEB07-4EE0-76A2-90E5-D69919D05A30";
+	rename -uid "E2C451AB-4F61-D303-8AFD-5DB65C8FE98D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9F0267F0-A046-6DA6-873A-7AA1B8457774";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A261D4DB-45C1-89E5-177D-52ACFA1C35CD";
+	rename -uid "5A1BA1E2-445E-88D5-2DB4-F6B565D61A08";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8D6CFE08-534C-95AE-EE83-5FBD5A222C3D";
 	setAttr ".g" yes;
-createNode reference -n "shotglassRN";
-	rename -uid "0D3908C3-C248-E7FA-215E-8D9814140CCE";
-	setAttr -s 7 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"shotglassRN"
-		"shotglassRN" 0
-		"shotglassRN" 20
-		1 |shotglass:Cup|shotglass:CupShape "bifrostColliderEnable" "bifrostColliderEnable" 
-		" -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
-		1 |shotglass:Cup|shotglass:CupShape "bifrostColliderThickness" "bifrostColliderThickness" 
-		" -ci 1 -dv 1 -at \"double\""
-		1 |shotglass:Cup|shotglass:CupShape "bifrostColliderMode" "bifrostColliderMode" 
-		" -ci 1 -min 0 -max 1 -en \"Solid:Shell\" -at \"enum\""
-		2 "|shotglass:Cup" "visibility" " 1"
-		2 "|shotglass:Cup" "translate" " -type \"double3\" 0 5.340342604348046 0"
-		
-		2 "|shotglass:Cup" "scale" " -type \"double3\" 7.5 7.5 7.5"
-		2 "|shotglass:Cup|shotglass:CupShape" "uvPivot" " -type \"double2\" 0.18542039394378662 0.67519435286521912"
-		
-		2 "|shotglass:Cup|shotglass:CupShape" "dispResolution" " 1"
-		2 "|shotglass:Cup|shotglass:CupShape" "displaySmoothMesh" " 0"
-		2 "|shotglass:Cup|shotglass:CupShape" "bifrostColliderEnable" " 1"
-		2 "|shotglass:Cup|shotglass:CupShape" "bifrostColliderThickness" " -k 1 1.5"
-		
-		2 "|shotglass:Cup|shotglass:CupShape" "bifrostColliderMode" " -k 1 0"
-		3 "|shotglass:Cup|shotglass:CupShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.instObjGroups" 
-		"shotglassRN.placeHolderList[1]" ":initialShadingGroup.dsm"
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.bifrostColliderEnable" 
-		"shotglassRN.placeHolderList[2]" ""
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.bifrostColliderThickness" 
-		"shotglassRN.placeHolderList[3]" ""
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.bifrostColliderMode" 
-		"shotglassRN.placeHolderList[4]" ""
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.outMesh" "shotglassRN.placeHolderList[5]" 
-		""
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.worldMesh" "shotglassRN.placeHolderList[6]" 
-		""
-		5 3 "shotglassRN" "|shotglass:Cup|shotglass:CupShape.worldMatrix" "shotglassRN.placeHolderList[7]" 
-		"";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode shadingEngine -n "bifrostLiquidMaterial1SG";
 	rename -uid "7C3A3F84-2C45-0AEE-AA2D-F8BF24464CD0";
 	setAttr ".ihi" 0;
@@ -1066,17 +758,6 @@ createNode shadingEngine -n "bifrostLiquidMaterial1SG";
 createNode mib_data_string -n "bifrostMeshMRUserData1";
 	rename -uid "ABBB110B-6848-AEB2-4D11-DFB722AB3F13";
 	setAttr ".nam" -type "string" "bifrostMeshObject";
-createNode bifrostAttrNotifier -n "CupShapeAttrNotif";
-	rename -uid "712F82DA-1F45-553E-AECB-2FBA9CAFA82D";
-	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
-		-min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
-		1 -at "double";
-	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
-		1 -en "Solid:Shell" -at "enum";
-	setAttr -k on ".bifrostColliderEnable";
-	setAttr -k on ".bifrostColliderThickness";
-	setAttr -k on ".bifrostColliderMode";
 createNode mia_material_x -n "mia_material_x1";
 	rename -uid "4EF0CB76-7648-240B-89AF-E4862B89D930";
 	setAttr ".S01" -type "float3" 0 0 0 ;
@@ -1158,12 +839,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n"
 		+ "            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n"
 		+ "            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 1\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
+		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"shotCam\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 1\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
 		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n"
 		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
-		+ "                -width 1924\n                -height 1195\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "                -width 1946\n                -height 1195\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"shotCam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
-		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1924\n            -height 1195\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1946\n            -height 1195\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n"
 		+ "                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
 		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n"
@@ -1201,17 +882,17 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 20 100 -ps 2 80 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 19 100 -ps 2 81 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1924\\n    -height 1195\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1924\\n    -height 1195\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"shotCam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1946\\n    -height 1195\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"shotCam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1946\\n    -height 1195\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "4FF436B0-8442-8C04-F722-12A0671929FC";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 100 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 26 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode animCurveTU -n "dropShape_bifrostLiquidEnable";
 	rename -uid "7593C8B2-6B4C-00B3-A3FB-B2B09E3BC7FD";
@@ -1242,88 +923,6 @@ createNode lambert -n "pasted__lambert2";
 	setAttr ".rfi" 1.5199999809265137;
 	setAttr ".dc" 0;
 	setAttr ".it" -type "float3" 0.88617885 0.88617885 0.88617885 ;
-createNode polyNormal -n "polyNormal1";
-	rename -uid "7A17F44C-104F-D977-7EB5-CD8A990F48F5";
-	setAttr ".ics" -type "componentList" 1 "f[0:39]";
-	setAttr ".unm" no;
-createNode polyCloseBorder -n "polyCloseBorder1";
-	rename -uid "137079E8-D04A-6F05-C9F8-119EA578DBEF";
-	setAttr ".ics" -type "componentList" 1 "e[0:7]";
-createNode polySplit -n "polySplit1";
-	rename -uid "5A8227B0-2E40-D327-A6E2-EFBD38C3947D";
-	setAttr -s 9 ".e[0:8]"  0.73125601 0.73125601 0.73125601 0.73125601
-		 0.73125601 0.73125601 0.73125601 0.73125601 0.73125601;
-	setAttr -s 9 ".d[0:8]"  -2147483640 -2147483614 -2147483618 -2147483622 -2147483626 -2147483630 
-		-2147483634 -2147483639 -2147483640;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
-createNode polySplit -n "polySplit2";
-	rename -uid "50ECFBE4-6442-22CE-5FB1-0BA707EDAA2C";
-	setAttr -s 9 ".e[0:8]"  0.95986801 0.95986801 0.95986801 0.95986801
-		 0.95986801 0.95986801 0.95986801 0.95986801 0.95986801;
-	setAttr -s 9 ".d[0:8]"  -2147483640 -2147483614 -2147483618 -2147483622 -2147483626 -2147483630 
-		-2147483634 -2147483639 -2147483640;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
-createNode deleteComponent -n "deleteComponent1";
-	rename -uid "C96222CB-0A43-BEA9-1AA8-D59F2997E109";
-	setAttr ".dc" -type "componentList" 2 "f[40]" "f[49:56]";
-createNode polyCloseBorder -n "polyCloseBorder2";
-	rename -uid "97D2FECD-0347-214C-62AD-F78255A933E2";
-	setAttr ".ics" -type "componentList" 1 "e[88:95]";
-createNode createColorSet -n "createColorSet5";
-	rename -uid "DD887FC3-424E-0642-9FAC-0298DC2A6C8C";
-	setAttr ".colos" -type "string" "bifrostLiquidDensity";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode createColorSet -n "createColorSet6";
-	rename -uid "347AF26E-524D-E33C-57D7-4585B84ED50F";
-	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode deleteColorSet -n "deleteColorSet1";
-	rename -uid "F6C6A19E-1748-CED3-7EFE-6A8DF9CDB094";
-	setAttr ".cols" -type "string" "bifrostLiquidDensity";
-createNode deleteColorSet -n "deleteColorSet2";
-	rename -uid "1D9319D6-E640-9CF5-98F6-448F13515F26";
-	setAttr ".cols" -type "string" "bifrostLiquidExpansionRate";
-createNode bifrostAttrNotifier -n "shotglass_waterShapeAttrNotif";
-	rename -uid "4988EF3C-584C-19BC-BFCC-5EAD39F3D968";
-	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
-	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
-		"Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
-		-at "double";
-	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
-	setAttr -k on ".bifrostLiquidEnable";
-	setAttr -k on ".bifrostLiquidContinuousEmission";
-	setAttr -k on ".bifrostLiquidThickness";
-	setAttr -k on ".bifrostLiquidMode";
-	setAttr -k on ".bifrostLiquidDensity";
-	setAttr -k on ".bifrostLiquidExpansionRate";
-	setAttr -k on ".bifrostLiquidStictionStrength";
-	setAttr -k on ".bifrostLiquidStictionBandwidth";
-	setAttr -k on ".bifrostUVProjCon";
-createNode createColorSet -n "createColorSet7";
-	rename -uid "0039B698-8C42-873A-A12E-EBB2FCAEE9B0";
-	setAttr ".colos" -type "string" "bifrostLiquidDensity";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
-createNode createColorSet -n "createColorSet8";
-	rename -uid "2BF06A79-D24F-8FA9-E35A-F0855EDD06C6";
-	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
-	setAttr ".clam" no;
-	setAttr ".rprt" 3;
 createNode deleteColorSet -n "deleteColorSet3";
 	rename -uid "0FF0528E-104D-C465-A486-91B946F6EFB6";
 	setAttr ".cols" -type "string" "bifrostLiquidDensity";
@@ -1352,33 +951,6 @@ createNode deleteColorSet -n "deleteColorSet5";
 createNode deleteColorSet -n "deleteColorSet6";
 	rename -uid "2C5FFFA3-8F44-16B3-0B9B-1C831C40A67D";
 	setAttr ".cols" -type "string" "bifrostLiquidExpansionRate";
-createNode bifrostAttrNotifier -n "dropShapeAttrNotif";
-	rename -uid "04D5EC5D-A945-EF35-3D53-C2AE5A57D41D";
-	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
-	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
-		"Solid:Shell" -at "enum";
-	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
-		-at "double";
-	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
-		-at "double";
-	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
-	setAttr -k on ".bifrostLiquidEnable";
-	setAttr -k on ".bifrostLiquidContinuousEmission";
-	setAttr -k on ".bifrostLiquidThickness";
-	setAttr -k on ".bifrostLiquidMode";
-	setAttr -k on ".bifrostLiquidDensity";
-	setAttr -k on ".bifrostLiquidExpansionRate";
-	setAttr -k on ".bifrostLiquidStictionStrength";
-	setAttr -k on ".bifrostLiquidStictionBandwidth";
-	setAttr -k on ".bifrostUVProjCon";
 createNode createColorSet -n "createColorSet11";
 	rename -uid "258D2B26-D54A-52F3-85D7-7E90EE594DD5";
 	setAttr ".colos" -type "string" "bifrostLiquidDensity";
@@ -1404,9 +976,6 @@ createNode shadingEngine -n "mia_material_x2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "C91BD227-4192-B4AE-A6AC-94B90A1E52F3";
-createNode polyPlane -n "polyPlane1";
-	rename -uid "12C32A74-4943-2252-BB0B-E1B8A2A73F61";
-	setAttr ".cuv" 2;
 createNode lambert -n "lambert3";
 	rename -uid "D6A7A2FF-4478-147C-230E-EBA730624A83";
 	setAttr ".c" -type "float3" 0 0 0 ;
@@ -1461,9 +1030,57 @@ createNode oceanShader -n "oceanShader1";
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
 	setAttr ".fc" -type "float3" 0 0 0 ;
 	setAttr ".d" -0.016506798565387726;
+createNode deleteColorSet -n "deleteColorSet7";
+	rename -uid "283AE8E7-486C-CFB7-6E3D-6B9F4F08EFC7";
+	setAttr ".cols" -type "string" "bifrostLiquidDensity";
+createNode deleteColorSet -n "deleteColorSet8";
+	rename -uid "BDFA05D6-4FC4-58A8-5BFD-249F32C48FCD";
+	setAttr ".cols" -type "string" "bifrostLiquidExpansionRate";
+createNode bifrostAttrNotifier -n "dropShapeAttrNotif";
+	rename -uid "BD78D6AE-4D96-0BF0-47A2-389F37B76945";
+	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
+	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
+		"Solid:Shell" -at "enum";
+	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
+		-at "double";
+	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
+	setAttr -k on ".bifrostLiquidEnable";
+	setAttr -k on ".bifrostLiquidContinuousEmission";
+	setAttr -k on ".bifrostLiquidThickness";
+	setAttr -k on ".bifrostLiquidMode";
+	setAttr -k on ".bifrostLiquidDensity";
+	setAttr -k on ".bifrostLiquidExpansionRate";
+	setAttr -k on ".bifrostLiquidStictionStrength";
+	setAttr -k on ".bifrostLiquidStictionBandwidth";
+	setAttr -k on ".bifrostUVProjCon";
+createNode createColorSet -n "createColorSet13";
+	rename -uid "4A0859CF-4FC2-0B39-5445-BFB0460CEEE3";
+	setAttr ".colos" -type "string" "bifrostLiquidDensity";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode createColorSet -n "createColorSet14";
+	rename -uid "5F029833-405F-AAD4-803A-6EA610B596D7";
+	setAttr ".colos" -type "string" "bifrostLiquidExpansionRate";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "EE90EE77-4D34-B21B-F1F9-EDBF571E9FDD";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -355.35712873651926 -95.833329525258975 ;
+	setAttr ".tgi[0].vh" -type "double2" 348.21427187749373 97.023805668429887 ;
 select -ne :time1;
-	setAttr ".o" 39;
-	setAttr ".unw" 39;
+	setAttr ".o" 26;
+	setAttr ".unw" 26;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1471,22 +1088,17 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 17 ".st";
+	setAttr -s 10 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
 	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 3 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
 select -ne :lightList1;
 	setAttr -s 2 ".l";
-select -ne :defaultTextureList1;
-	setAttr -s 2 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -1495,8 +1107,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".outf" 8;
 	setAttr ".imfkey" -type "string" "jpg";
 	setAttr ".an" yes;
-	setAttr ".fs" 17;
-	setAttr ".ef" 31;
+	setAttr ".ef" 26;
 	setAttr ".pff" yes;
 	setAttr ".ifp" -type "string" "teardrop";
 select -ne :defaultResolution;
@@ -1509,27 +1120,12 @@ select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "shotglassRN.phl[1]" "mia_material_x2SG.dsm" -na;
-connectAttr "shotglassRN.phl[2]" "CupShapeAttrNotif.bifrostColliderEnable";
-connectAttr "shotglassRN.phl[3]" "CupShapeAttrNotif.bifrostColliderThickness";
-connectAttr "shotglassRN.phl[4]" "CupShapeAttrNotif.bifrostColliderMode";
-connectAttr "shotglassRN.phl[5]" "pfxToonShape1.ins[0].srf";
-connectAttr "shotglassRN.phl[6]" "CupShapeAttrNotif.im";
-connectAttr "shotglassRN.phl[7]" "pfxToonShape1.ins[0].iwm";
-connectAttr "createColorSet8.og" "shotglass_waterShape.i";
-connectAttr "createColorSet12.og" "dropShape.i";
+connectAttr "createColorSet14.og" "dropShape.i";
 connectAttr ":time1.o" "bifrostLiquidContainer1.ctm";
-connectAttr "shotglass_waterShapeAttrNotif.om" "bifrostLiquidContainer1.Emitters[0]"
-		;
-connectAttr "dropShapeAttrNotif.om" "bifrostLiquidContainer1.Emitters[1]";
-connectAttr "CupShapeAttrNotif.om" "bifrostLiquidContainer1.Colliders[0]";
-connectAttr "bifrostKillplane1.wm" "bifrostLiquidContainer1.killplanes[0]";
+connectAttr "dropShapeAttrNotif.om" "bifrostLiquidContainer1.Emitters[0]";
 connectAttr "bifrostLiquidContainer1.Liquid" "liquidShape1.obj";
 connectAttr "bifrostMeshMRUserData1.msg" "bifrostLiquid1Mesh.miData";
 connectAttr "liquidShape1.mout" "bifrostLiquid1MeshShape.i";
-connectAttr "polyPlane1.out" "pPlaneShape1.i";
-connectAttr ":persp.t" "pfxToonShape1.cpt";
-connectAttr "pfxToonShape1.wmm" "MainShape.i";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":PreviewImrRayTracyOff.msg" ":mentalrayItemsList.opt" -na;
@@ -1581,43 +1177,28 @@ connectAttr "drop.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
 connectAttr "pasted__lambert2SG.msg" "pasted__materialInfo2.sg";
 connectAttr "pasted__lambert2.msg" "pasted__materialInfo2.m";
 connectAttr "pasted__lambert2.oc" "pasted__lambert2SG.ss";
-connectAttr "polySurfaceShape1.o" "polyNormal1.ip";
-connectAttr "polyNormal1.out" "polyCloseBorder1.ip";
-connectAttr "polyCloseBorder1.out" "polySplit1.ip";
-connectAttr "polySplit1.out" "polySplit2.ip";
-connectAttr "polySplit2.out" "deleteComponent1.ig";
-connectAttr "deleteComponent1.og" "polyCloseBorder2.ip";
-connectAttr "polyCloseBorder2.out" "createColorSet5.ig";
-connectAttr "createColorSet5.og" "createColorSet6.ig";
-connectAttr "createColorSet6.og" "deleteColorSet1.ig";
-connectAttr "deleteColorSet1.og" "deleteColorSet2.ig";
-connectAttr "shotglass_waterShape.bifrostLiquidEnable" "shotglass_waterShapeAttrNotif.bifrostLiquidEnable"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidContinuousEmission" "shotglass_waterShapeAttrNotif.bifrostLiquidContinuousEmission"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidThickness" "shotglass_waterShapeAttrNotif.bifrostLiquidThickness"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidMode" "shotglass_waterShapeAttrNotif.bifrostLiquidMode"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidDensity" "shotglass_waterShapeAttrNotif.bifrostLiquidDensity"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidExpansionRate" "shotglass_waterShapeAttrNotif.bifrostLiquidExpansionRate"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidStictionStrength" "shotglass_waterShapeAttrNotif.bifrostLiquidStictionStrength"
-		;
-connectAttr "shotglass_waterShape.bifrostLiquidStictionBandwidth" "shotglass_waterShapeAttrNotif.bifrostLiquidStictionBandwidth"
-		;
-connectAttr "shotglass_waterShape.bifrostUVProjCon" "shotglass_waterShapeAttrNotif.bifrostUVProjCon"
-		;
-connectAttr "shotglass_waterShape.w" "shotglass_waterShapeAttrNotif.im";
-connectAttr "deleteColorSet2.og" "createColorSet7.ig";
-connectAttr "createColorSet7.og" "createColorSet8.ig";
 connectAttr "createColorSet4.og" "deleteColorSet3.ig";
 connectAttr "deleteColorSet3.og" "deleteColorSet4.ig";
 connectAttr "deleteColorSet4.og" "createColorSet9.ig";
 connectAttr "createColorSet9.og" "createColorSet10.ig";
 connectAttr "createColorSet10.og" "deleteColorSet5.ig";
 connectAttr "deleteColorSet5.og" "deleteColorSet6.ig";
+connectAttr "deleteColorSet6.og" "createColorSet11.ig";
+connectAttr "createColorSet11.og" "createColorSet12.ig";
+connectAttr "mia_material_x2.msg" "mia_material_x2SG.mips";
+connectAttr "mia_material_x2.msg" "mia_material_x2SG.miss";
+connectAttr "mia_material_x2.msg" "mia_material_x2SG.mims";
+connectAttr "mia_material_x2SG.msg" "materialInfo3.sg";
+connectAttr "mia_material_x2.msg" "materialInfo3.m";
+connectAttr "lambert3.oc" "lambert3SG.ss";
+connectAttr "lambert3SG.msg" "materialInfo4.sg";
+connectAttr "lambert3.msg" "materialInfo4.m";
+connectAttr "surfaceShader1.oc" "surfaceShader1SG.ss";
+connectAttr "surfaceShader1SG.msg" "materialInfo5.sg";
+connectAttr "surfaceShader1.msg" "materialInfo5.m";
+connectAttr "surfaceShader1.msg" "materialInfo5.t" -na;
+connectAttr "createColorSet12.og" "deleteColorSet7.ig";
+connectAttr "deleteColorSet7.og" "deleteColorSet8.ig";
 connectAttr "dropShape.bifrostLiquidEnable" "dropShapeAttrNotif.bifrostLiquidEnable"
 		;
 connectAttr "dropShape.bifrostLiquidContinuousEmission" "dropShapeAttrNotif.bifrostLiquidContinuousEmission"
@@ -1636,22 +1217,8 @@ connectAttr "dropShape.bifrostLiquidStictionBandwidth" "dropShapeAttrNotif.bifro
 		;
 connectAttr "dropShape.bifrostUVProjCon" "dropShapeAttrNotif.bifrostUVProjCon";
 connectAttr "dropShape.w" "dropShapeAttrNotif.im";
-connectAttr "deleteColorSet6.og" "createColorSet11.ig";
-connectAttr "createColorSet11.og" "createColorSet12.ig";
-connectAttr "mia_material_x2.msg" "mia_material_x2SG.mips";
-connectAttr "mia_material_x2.msg" "mia_material_x2SG.miss";
-connectAttr "mia_material_x2.msg" "mia_material_x2SG.mims";
-connectAttr "mia_material_x2SG.msg" "materialInfo3.sg";
-connectAttr "mia_material_x2.msg" "materialInfo3.m";
-connectAttr "lambert3.oc" "lambert3SG.ss";
-connectAttr "pPlaneShape1.iog" "lambert3SG.dsm" -na;
-connectAttr "lambert3SG.msg" "materialInfo4.sg";
-connectAttr "lambert3.msg" "materialInfo4.m";
-connectAttr "surfaceShader1.oc" "surfaceShader1SG.ss";
-connectAttr "MainShape.iog" "surfaceShader1SG.dsm" -na;
-connectAttr "surfaceShader1SG.msg" "materialInfo5.sg";
-connectAttr "surfaceShader1.msg" "materialInfo5.m";
-connectAttr "surfaceShader1.msg" "materialInfo5.t" -na;
+connectAttr "deleteColorSet8.og" "createColorSet13.ig";
+connectAttr "createColorSet13.og" "createColorSet14.ig";
 connectAttr "bifrostLiquidMaterial1SG.pa" ":renderPartition.st" -na;
 connectAttr "mia_material_x1SG.pa" ":renderPartition.st" -na;
 connectAttr "pasted__lambert4SG.pa" ":renderPartition.st" -na;
@@ -1673,7 +1240,6 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ambientLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "dropShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "shotglass_waterShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "ambientLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
-// End of teardrop_2.ma
+// End of teardrop_in_air.ma
