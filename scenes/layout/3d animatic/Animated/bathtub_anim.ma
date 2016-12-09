@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: bathtub_anim.ma
-//Last modified: Thu, Dec 08, 2016 09:22:19 PM
+//Last modified: Thu, Dec 08, 2016 10:23:17 PM
 //Codeset: 1252
 file -rdi 1 -ns "bathtub" -rfn "bathtubRN" -op "v=0;" -typ "mayaAscii" "/Users/Casey/Documents/Only-Love//assets/bathtub/bathtub.ma";
 file -rdi 1 -ns "reggie_rig" -rfn "reggie_rigRN" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Thu, Dec 08, 2016 05:53:52 PM|ICON|undef|INFO|undef|OBJN|2793|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
@@ -97,7 +97,7 @@ createNode camera -n "CAMERAShape" -p "CAMERA";
 	rename -uid "897E2568-459A-6E5C-7DB6-81BEC492B33F";
 	setAttr -k off ".v";
 	setAttr ".cap" -type "double2" 1.795272 0.94488 ;
-	setAttr ".coi" 256.62881650738706;
+	setAttr ".coi" 458.94045948790881;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -152,7 +152,7 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "bathtubRNfosterParent1";
-	rename -uid "F265FF72-49DA-E86F-39A3-D7917DDEC940";
+	rename -uid "70AD773C-410E-69A2-A32D-188A2CDEAB01";
 createNode transform -n "Liquor_Water" -p "bathtubRNfosterParent1";
 	rename -uid "F235349C-49FE-F7CF-D66D-F0AF34823976";
 	setAttr ".t" -type "double3" -19.113022986725554 36.992337417254397 -0.0011376476815340955 ;
@@ -4143,15 +4143,15 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AD3CAF35-4369-1BA3-DD46-6CAC1F72330E";
+	rename -uid "682925C2-4BF2-E6C5-70A8-C2B9DD9FF9AF";
 	setAttr -s 57 ".lnk";
 	setAttr -s 57 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3DE5F514-48DE-7778-84C6-0E927FF172DE";
+	rename -uid "0A30CDBE-47CF-487F-2449-5DACF7B8969B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "082141E6-423A-89EB-F7CD-FA9B6D1F0705";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9B63C57C-4584-1872-0362-949811C7ADF3";
+	rename -uid "58AEE727-47B2-B824-20FD-F8BACDDB68F6";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BDE42CE5-4652-F2D1-5E8B-E38D66448A4B";
 	setAttr ".g" yes;
@@ -6656,16 +6656,7 @@ createNode animCurveTU -n "EyeCntrl_L_Scrunch";
 	rename -uid "599F4A14-41AD-E0FD-609C-74B1B6AB4D01";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 0 32 8.5 46 3.5 49 3.5 53 3.5 54 3.5 65 3.5
-		 66 3.5 73 3.5 85 3.5 86 3.5 91 3.5 97 3.5 98 3.5 103 3.5;
-	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 1 
-		18 18 1;
-	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 1 18 18 
-		1 18 18;
-	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 32 8.5 46 3.5;
 createNode animCurveTU -n "EyeCntrl_R_visibility";
 	rename -uid "23FC135F-45EE-C2AD-4402-A6B705718C5A";
 	setAttr ".tan" 5;
@@ -6742,16 +6733,7 @@ createNode animCurveTU -n "EyeCntrl_R_Scrunch";
 	rename -uid "09C2FC6C-48C3-3A92-E09E-AD94201807A9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 0 32 8.5 46 3.5 49 3.5 53 3.5 54 3.5 65 3.5
-		 66 3.5 73 3.5 85 3.5 86 3.5 91 3.5 97 3.5 98 3.5 103 3.5;
-	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 1 
-		18 18 1;
-	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 1 18 18 
-		1 18 18;
-	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 32 8.5 46 3.5;
 createNode animCurveTL -n "BottomLipCntrl_R_translateY";
 	rename -uid "05D76C5D-41CE-657A-E4C7-66970E241181";
 	setAttr ".tan" 18;
