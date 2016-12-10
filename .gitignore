@@ -6,4 +6,4 @@ autosave/**
 *.mayaSwatches
 *.swp
 .DS_Store
-images/tmp/* 
+images/*
