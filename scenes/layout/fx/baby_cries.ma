@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: baby_cries.ma
-//Last modified: Wed, Jan 25, 2017 04:27:43 PM
+//Last modified: Thu, Jan 26, 2017 10:35:39 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "mom1" -dr 1 -rfn "momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -rdi 1 -ns "baby" -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
@@ -17,10 +17,12 @@ file -r -ns "chair" -dr 1 -rfn "chairRN" -op "v=0;" -typ "mayaAscii" "/Users/ver
 file -r -ns "table1" -dr 1 -rfn "tableRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/table/table.ma";
 file -r -ns "mom2" -dr 1 -rfn "momRN1" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 requires maya "2016";
+requires -nodeType "bifrostLiquidMaterial" -nodeType "bifrostShape" "bifrostvisplugin" "3.0";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -nodeType "mia_material_x" -nodeType "contour_store_function"
-		 -nodeType "contour_contrast_function_levels" -nodeType "contour_shader_simple" -dataType "byteArray"
-		 "Mayatomr" "2016.0 - 3.13.1.10 ";
+		 -nodeType "contour_contrast_function_levels" -nodeType "contour_shader_simple" -nodeType "mib_data_string"
+		 -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.10 ";
+requires -nodeType "bifrostContainer" -nodeType "bifrostAttrNotifier" "bifrostshellnode" "2015";
 requires "stereoCamera" "10.0";
 requires -nodeType "renderSetup" "renderSetup.py" "1.0";
 requires -nodeType "RenderMan" "RenderMan_for_Maya" "20.9";
@@ -35,8 +37,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "17733B9D-464D-8275-C5F8-31998A43294B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.6532034654586365 3.369487360500123 4.124591780318795 ;
-	setAttr ".r" -type "double3" -21.938352728791802 -3322.1999999948057 -1.1717721932382411e-14 ;
+	setAttr ".t" -type "double3" 3.226851829076379 3.3426493670141895 5.2478779565108091 ;
+	setAttr ".r" -type "double3" -23.138352728298969 -3276.1999999942282 -9.853504048976769e-16 ;
 	setAttr ".rp" -type "double3" -6.6613381477509392e-16 -8.8817841970012523e-16 -3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" 3.0423021090415793e-16 -2.6571173952804654e-15 3.3957699011225747e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -44,11 +46,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 1.7187076711909097;
+	setAttr ".coi" 1.82621678722601;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 4.2327030301395778 2.7273630923809309 3.9082272534754479 ;
+	setAttr ".tp" -type "double3" 4.2186638858911625 2.6250324765507016 3.8927386291999877 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr -s 5 ".b";
 createNode transform -s -n "top";
@@ -116,19 +118,11 @@ createNode camera -n "mom:mom2:mom:bottomShape" -p "mom:mom2:mom:bottom";
 	setAttr ".o" yes;
 createNode transform -n "momBaby";
 	rename -uid "EC13ED5D-D44B-E9CC-225D-9DB9963B5EED";
-	setAttr ".t" -type "double3" -0.82742744884677166 8.4383893029905188 4.2144332177059995 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 655.46295761458111 304.0126015457376 723.44639540395121 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 createNode camera -n "momBabyShape" -p "momBaby";
 	rename -uid "725D6543-794F-8931-C31D-EB9A123B261F";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
-	setAttr -av ".coi" 6.9395854797280752;
+	setAttr ".coi" 34.439735900199146;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
@@ -168,6 +162,7 @@ createNode positionMarker -n "positionMarkerShape2" -p "positionMarker2";
 	setAttr ".t" 248;
 createNode transform -n "TearGrp";
 	rename -uid "ADB0B214-4456-DFA7-C605-9EB76455EA34";
+	setAttr ".v" no;
 	setAttr ".r" -type "double3" -18.106318256805285 11.017076931409612 -59.695520776853201 ;
 	setAttr ".smd" 7;
 createNode transform -n "Tear" -p "TearGrp";
@@ -520,7 +515,7 @@ createNode mesh -n "TearShape" -p "Tear";
 	setAttr ".pt[379]" -type "float3" -1.4901161e-08 0 -8.4703295e-22 ;
 	setAttr ".pt[380]" -type "float3" 1.4901161e-08 0 2.0510384e-29 ;
 	setAttr ".pt[381]" -type "float3" 1.4901161e-08 0 2.0510384e-29 ;
-createNode transform -n "lEyeball";
+createNode transform -n "tear_emitter";
 	rename -uid "62FA10D1-1E46-BC25-0FB5-53A46890671A";
 	setAttr ".t" -type "double3" 4.218741734721509 2.6251495694865241 3.8927374272816899 ;
 	setAttr ".r" -type "double3" -67.007671802744269 -89.40210851043949 98.391266413614488 ;
@@ -529,8 +524,24 @@ createNode transform -n "lEyeball";
 	setAttr ".rpt" -type "double3" 8.4869044979664574e-08 2.8654875131493409e-08 1.8332904381307666e-08 ;
 	setAttr ".sp" -type "double3" -1.1920928955078125e-07 0 -1.7881393432617188e-07 ;
 	setAttr ".spt" -type "double3" 8.2003104710381112e-08 0 1.2304957600067265e-07 ;
-createNode mesh -n "lEyeballShape" -p "lEyeball";
+createNode mesh -n "tear_emitterShape" -p "tear_emitter";
 	rename -uid "9BEA50FF-A44F-9A25-D3D4-26AAD15AD9EA";
+	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
+	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
+		"Solid:Shell" -at "enum";
+	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
+		-at "double";
+	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -568,6 +579,12 @@ createNode mesh -n "lEyeballShape" -p "lEyeball";
 		 0.8683731 0.40713969 0.83628482 0.42198268;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".ccls" -type "string" "bifrostLiquidExpansionRate";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "bifrostLiquidDensity";
+	setAttr ".clst[0].rprt" 3;
+	setAttr ".clst[1].clsn" -type "string" "bifrostLiquidExpansionRate";
+	setAttr ".clst[1].rprt" 3;
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 102 ".pt[0:101]" -type "float3"  0.0019857592 -0.00019066523 
@@ -902,7 +919,17 @@ createNode mesh -n "lEyeballShape" -p "lEyeball";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode mesh -n "polySurfaceShape2" -p "lEyeball";
+	setAttr ".qsp" 0;
+	setAttr -k on ".bifrostLiquidEnable";
+	setAttr -k on ".bifrostLiquidContinuousEmission";
+	setAttr -k on ".bifrostLiquidThickness";
+	setAttr -k on ".bifrostLiquidMode";
+	setAttr -k on ".bifrostLiquidDensity";
+	setAttr -k on ".bifrostLiquidExpansionRate";
+	setAttr -k on ".bifrostLiquidStictionStrength";
+	setAttr -k on ".bifrostLiquidStictionBandwidth";
+	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
+createNode mesh -n "polySurfaceShape2" -p "tear_emitter";
 	rename -uid "B6D07037-6A48-79F5-61CA-FF9705AD36C7";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1251,36 +1278,277 @@ createNode mesh -n "polySurfaceShape2" -p "lEyeball";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode aimConstraint -n "lEyeball_aimConstraint1" -p "lEyeball";
-	rename -uid "03FCB14B-9441-F583-8C8F-53B544E785BD";
-	addAttr -dcb 0 -ci true -sn "w0" -ln "baby_LEyeW0" -dv 1 -at "double";
-	setAttr -k on ".nds";
+createNode transform -n "bifrostLiquid1";
+	rename -uid "25804B5E-3440-9B21-9E5C-E0B2DAEA0363";
+createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
+	rename -uid "65AD0F29-DD4B-52B0-F876-FDA1725CEE94";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Emitters" -ln "Emitters" -dt "mesh";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Colliders" -ln "Colliders" -dt "mesh";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Accelerators" -ln "Accelerators" 
+		-dt "mesh";
+	addAttr -r false -ci true -k true -sn "masterVoxelSize" -ln "masterVoxelSize" -at "float";
+	addAttr -r false -ci true -k true -sn "gravityMagnitude" -ln "gravityMagnitude" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "gravityDirection" -ln "gravityDirection" 
+		-at "float3" -nc 3;
+	addAttr -r false -ci true -k true -sn "gravityDirectionX" -ln "gravityDirectionX" 
+		-at "float" -p "gravityDirection";
+	addAttr -r false -ci true -k true -sn "gravityDirectionY" -ln "gravityDirectionY" 
+		-at "float" -p "gravityDirection";
+	addAttr -r false -ci true -k true -sn "gravityDirectionZ" -ln "gravityDirectionZ" 
+		-at "float" -p "gravityDirection";
+	addAttr -r false -ci true -k true -sn "solidVoxelScale" -ln "solidVoxelScale" -at "float";
+	addAttr -r false -ci true -k true -sn "forceVoxelScale" -ln "forceVoxelScale" -at "float";
+	addAttr -r false -ci true -k true -sn "transportStepAdaptivity" -ln "transportStepAdaptivity" 
+		-min 0 -max 1 -at "float";
+	addAttr -r false -ci true -k true -sn "transportTimeScale" -ln "transportTimeScale" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "minSteps" -ln "minSteps" -at "long";
+	addAttr -r false -ci true -k true -sn "maxSteps" -ln "maxSteps" -at "long";
+	addAttr -r false -ci true -k true -sn "dropletThreshold" -ln "dropletThreshold" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "dropletMergeBackDepth" -ln "dropletMergeBackDepth" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "surfaceBandWidth" -ln "surfaceBandWidth" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "interiorParticleDensity" -ln "interiorParticleDensity" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "surfaceParticleDensity" -ln "surfaceParticleDensity" 
+		-at "float";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "killplanes" -ln "killplanes" -at "matrix";
+	addAttr -r false -ci true -k true -sn "viscosityScale" -ln "viscosityScale" -at "float";
+	addAttr -r false -ci true -k true -sn "surfaceTension" -ln "surfaceTension" -at "float";
+	addAttr -r false -ci true -k true -sn "vorticityDecay" -ln "vorticityDecay" -at "float";
+	addAttr -r false -ci true -k true -sn "vorticityMult" -ln "vorticityMult" -at "float";
+	addAttr -r false -ci true -k true -sn "vorticityMax" -ln "vorticityMax" -at "float";
+	addAttr -r false -ci true -k true -sn "surfaceTensionEnable" -ln "surfaceTensionEnable" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "vorticityEnable" -ln "vorticityEnable" -min 
+		0 -max 1 -at "bool";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "cameraMatrixList" -ln "cameraMatrixList" 
+		-at "matrix";
+	addAttr -r false -ci true -k true -sn "enableFoam" -ln "enableFoam" -min 0 -max 
+		1 -at "bool";
+	addAttr -r false -ci true -k true -sn "enableGuiding" -ln "enableGuiding" -min 0 
+		-max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "computeGuideFromHighResLiquid" -ln "computeGuideFromHighResLiquid" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "minSimulationDepth" -ln "minSimulationDepth" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "guideVoxelScale" -ln "guideVoxelScale" -at "float";
+	addAttr -r false -ci true -k true -sn "reseedParticleDensity" -ln "reseedParticleDensity" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "reseedGuideOverlap" -ln "reseedGuideOverlap" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "reseedLiquidOverlap" -ln "reseedLiquidOverlap" 
+		-at "float";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Guides" -ln "Guides" -dt "mesh";
+	addAttr -r false -ci true -k true -sn "minReseedAirDistance" -ln "minReseedAirDistance" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "simulationCacheFilename" -ln "simulationCacheFilename" 
+		-dt "string";
+	addAttr -r false -ci true -uaf -k true -sn "simulationCachePath" -ln "simulationCachePath" 
+		-dt "string";
+	addAttr -r false -ci true -k true -sn "computeGuideFromSimulationCache" -ln "computeGuideFromSimulationCache" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "computeGuideFromMesh" -ln "computeGuideFromMesh" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -sn "clipBBoxMin" -ln "clipBBoxMin" -at "float3" -nc 3;
+	addAttr -r false -ci true -sn "clipBBoxMinX" -ln "clipBBoxMinX" -at "float" -p "clipBBoxMin";
+	addAttr -r false -ci true -sn "clipBBoxMinY" -ln "clipBBoxMinY" -at "float" -p "clipBBoxMin";
+	addAttr -r false -ci true -sn "clipBBoxMinZ" -ln "clipBBoxMinZ" -at "float" -p "clipBBoxMin";
+	addAttr -r false -ci true -sn "clipBBoxMax" -ln "clipBBoxMax" -at "float3" -nc 3;
+	addAttr -r false -ci true -sn "clipBBoxMaxX" -ln "clipBBoxMaxX" -at "float" -p "clipBBoxMax";
+	addAttr -r false -ci true -sn "clipBBoxMaxY" -ln "clipBBoxMaxY" -at "float" -p "clipBBoxMax";
+	addAttr -r false -ci true -sn "clipBBoxMaxZ" -ln "clipBBoxMaxZ" -at "float" -p "clipBBoxMax";
+	addAttr -r false -ci true -k true -sn "clipBBoxTransform" -ln "clipBBoxTransform" 
+		-at "matrix";
+	addAttr -r false -ci true -k true -sn "liquidCacheControl" -ln "liquidCacheControl" 
+		-at "long";
+	addAttr -r false -ci true -k true -sn "liquidCompressionQuality" -ln "liquidCompressionQuality" 
+		-at "long";
+	addAttr -r false -ci true -uaf -k true -sn "liquidCachePath" -ln "liquidCachePath" 
+		-dt "string";
+	addAttr -r false -ci true -k true -sn "liquidCacheFileName" -ln "liquidCacheFileName" 
+		-dt "string";
+	addAttr -r false -ci true -k true -sn "enableLiquidCache" -ln "enableLiquidCache" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "solidCacheControl" -ln "solidCacheControl" 
+		-at "long";
+	addAttr -r false -ci true -k true -sn "solidCompressionQuality" -ln "solidCompressionQuality" 
+		-at "long";
+	addAttr -r false -ci true -uaf -k true -sn "solidCachePath" -ln "solidCachePath" 
+		-dt "string";
+	addAttr -r false -ci true -k true -sn "solidCacheFileName" -ln "solidCacheFileName" 
+		-dt "string";
+	addAttr -r false -ci true -k true -sn "enableSolidCache" -ln "enableSolidCache" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "foamCacheControl" -ln "foamCacheControl" 
+		-at "long";
+	addAttr -r false -ci true -k true -sn "foamCompressionQuality" -ln "foamCompressionQuality" 
+		-at "long";
+	addAttr -r false -ci true -uaf -k true -sn "foamCachePath" -ln "foamCachePath" -dt "string";
+	addAttr -r false -ci true -k true -sn "foamCacheFileName" -ln "foamCacheFileName" 
+		-dt "string";
+	addAttr -r false -ci true -k true -sn "enableFoamCache" -ln "enableFoamCache" -min 
+		0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "deleteExceedingParticles" -ln "deleteExceedingParticles" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "emissionRate" -ln "emissionRate" -at "float";
+	addAttr -r false -ci true -k true -sn "minLiquidSpeed" -ln "minLiquidSpeed" -at "float";
+	addAttr -r false -ci true -k true -sn "minLiquidChurn" -ln "minLiquidChurn" -at "float";
+	addAttr -r false -ci true -k true -sn "minLiquidCurvature" -ln "minLiquidCurvature" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "minLiquidDepth" -ln "minLiquidDepth" -at "float";
+	addAttr -r false -ci true -k true -sn "maxLiquidDepth" -ln "maxLiquidDepth" -at "float";
+	addAttr -r false -ci true -k true -sn "inheritLiquidVelocity" -ln "inheritLiquidVelocity" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "emitFlatnessToSurface" -ln "emitFlatnessToSurface" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "dissipationRate" -ln "dissipationRate" -at "float";
+	addAttr -r false -ci true -k true -sn "killDensityThreshold" -ln "killDensityThreshold" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "buoyancy" -ln "buoyancy" -at "float";
+	addAttr -r false -ci true -k true -sn "collideKillDepth" -ln "collideKillDepth" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "windX" -ln "windX" -at "float";
+	addAttr -r false -ci true -k true -sn "windZ" -ln "windZ" -at "float";
+	addAttr -r false -ci true -k true -sn "surfaceOffset" -ln "surfaceOffset" -at "float";
+	addAttr -r false -ci true -k true -sn "snapToSurface" -ln "snapToSurface" -min 0 
+		-max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "pointRadius" -ln "pointRadius" -at "float";
+	addAttr -r false -ci true -k true -sn "preserveVolume" -ln "preserveVolume" -at "float";
+	addAttr -r false -ci true -k true -sn "maxSolidDepth" -ln "maxSolidDepth" -at "float";
+	addAttr -r false -ci true -k true -sn "cameraAdaptivity" -ln "cameraAdaptivity" 
+		-at "float";
+	addAttr -r false -ci true -k true -sn "clipToCameraFrustum" -ln "clipToCameraFrustum" 
+		-min 0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "cameraFov" -ln "cameraFov" -at "float";
+	addAttr -r false -ci true -k true -sn "cameraAspect" -ln "cameraAspect" -at "float";
+	addAttr -r false -ci true -k true -sn "cameraBuffer" -ln "cameraBuffer" -at "float";
+	addAttr -w false -s false -sn "Liquid" -ln "Liquid" -dt "string";
+	addAttr -w false -s false -sn "Solid" -ln "Solid" -dt "string";
+	addAttr -w false -s false -sn "Foam" -ln "Foam" -dt "string";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].trp" -type "double3" 1.4112743382993096 -0.86074298868206689 4.5590130255023098 ;
-	setAttr ".tg[0].tpm" -type "matrix" 0.081751659021739767 -0.029082404875250035 0.4565555876529257 0
-		 0.31024988726593405 0.34436457585820768 -0.03361801583548607 0 -0.33620499452255531 0.31070786482468032 0.079993431214192681 0
-		 5.2068963132638002 2.3888790526919057 2.9898129102517137 1;
-	setAttr ".cpim" -type "matrix" 0.37852875298968541 1.4365274582468401 -1.5567055011285664 -0
-		 -0.13465814129156858 1.5944862163441569 1.4386479983836873 0 2.1139560876529511 -0.15565905040299455 0.37038775881994856 -0
-		 -9.3979852634918952 -9.6050141769245094 1.5268598344779309 0.99999999999999989;
-	setAttr ".ct" -type "double3" 0.074507998528814623 0.035149149390888312 0.17800981855104436 ;
-	setAttr ".crp" -type "double3" -8.0060129629051356e-08 0 -1.1999353804673298e-07 ;
-	setAttr ".crt" -type "double3" 2.152099490578966e-08 1.278385078487755e-07 8.7766854288702704e-08 ;
-	setAttr ".o" -type "double3" 214.4065755413595 101.07789547420322 133.16190702795009 ;
-	setAttr ".rsrr" -type "double3" 80.79053939148271 -9.5544836247410831 351.9996098680233 ;
-	setAttr -k on ".w0";
+	setAttr ".sc" -type "string" (
+		"{\"version\":3,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostLiquid1_bifrostLiquidContainer1::liquid1\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///keepMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createObjectWhenCaching.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObjectToDisk.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///solveLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeVoxelLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopePointLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeSolids.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///foam.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createEmptyItems.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///updateSubStepIterator.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///keepMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createObjectWhenCaching.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObjectToDisk.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///solveLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeVoxelLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopePointLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///scopeSolids.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///foam.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createEmptyItems.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///updateSubStepIterator.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"operators\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostLiquid1_bifrostLiquidContainer1::liquid1\\\",\\n            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Emitters\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Colliders\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Accelerators\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"masterVoxelSize\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"gravityMagnitude\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"gravityDirection\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transportStepAdaptivity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transportTimeScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minSteps\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"maxSteps\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"dropletThreshold\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"dropletMergeBackDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceBandWidth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"interiorParticleDensity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceParticleDensity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"killplanes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"viscosityScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Liquid\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Solid\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceTension\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityDecay\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityMult\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityMax\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceTensionEnable\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"vorticityEnable\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Foam\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraMatrixList\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableFoam\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableGuiding\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"computeGuideFromHighResLiquid\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minSimulationDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"guideVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"reseedParticleDensity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"reseedGuideOverlap\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"reseedLiquidOverlap\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Guides\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minReseedAirDistance\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"simulationCacheFilename\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"simulationCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"computeGuideFromSimulationCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"computeGuideFromMesh\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipBBoxMin\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipBBoxMax\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipBBoxTransform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCacheControl\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCompressionQuality\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCacheFileName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableLiquidCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCacheControl\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCompressionQuality\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCacheFileName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableSolidCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCacheControl\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCompressionQuality\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCachePath\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Filepath\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCacheFileName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableFoamCache\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"deleteExceedingParticles\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"emissionRate\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidSpeed\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidChurn\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidCurvature\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"minLiquidDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"maxLiquidDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"inheritLiquidVelocity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"emitFlatnessToSurface\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"dissipationRate\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"killDensityThreshold\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"buoyancy\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"collideKillDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"windX\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"windZ\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"surfaceOffset\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"snapToSurface\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"pointRadius\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"preserveVolume\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"maxSolidDepth\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraAdaptivity\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"clipToCameraFrustum\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraFov\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraAspect\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraBuffer\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                }\\n            ],\\n            \\\"compounds\\\": [\\n                {\\n                    \\\"name\\\": \\\"subStepLiquid\\\",\\n                    \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                    \\\"ports\\\": [\\n                        {\\n                            \\\"portName\\\": \\\"Emitters\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Colliders\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Accelerators\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"masterVoxelSize\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"gravityMagnitude\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"gravityDirection\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"transportStepAdaptivity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"transportTimeScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"minSteps\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"int\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"maxSteps\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"int\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"dropletThreshold\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"dropletMergeBackDepth\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"surfaceBandWidth\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"interiorPointDensity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"surfacePointDensity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"killPlanes\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"PIC\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"viscosityMult\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"dynamicSurfaceTension\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityDecay\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityMul\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityMax\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"surfaceTensionEnable\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"vorticityEnable\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"simulationCacheFilename\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"string\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"simulationCachePath\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"string\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"enableGuiding\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"computeGuideFromHighResLiquid\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"minSimulationDepth\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"reseedPointDensity\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"reseedGuideOverlap\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"reseedLiquidOverlap\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Guides\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"minReseedAirDistance\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Liquid\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"Solid\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"ittr_input\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"ittr_output\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"computeGuideFromSimulationCache\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"computeGuideFromMesh\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxMin\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxMax\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Vec3Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxTransform\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"deleteExceedingPoints\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        }\\n                    ],\\n                    \\\"compoundNodes\\\": [\\n                        {\\n                            \\\"nodeName\\\": \\\"solveLiquid\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::solveLiquid\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"updateSubStepIterator\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::_private::updateSubStepIterator\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getLiquidObjectName\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_privNames::getLiquidObjectName\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"voxel_liquid-volume\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\"\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"valueBool\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Math::valueBool\\\"\\n                        }\\n                    ],\\n                    \\\"connections\\\": [\\n                        {\\n                            \\\"source\\\": \\\".ittr_input\\\",\\n                            \\\"target\\\": \\\"valueBool.val\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"valueBool.value\\\",\\n                            \\\"target\\\": \\\".ittr_output\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Emitters\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Emitters\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Colliders\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Colliders\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".deleteExceedingPoints\\\",\\n                            \\\"target\\\": \\\"solveLiquid.deleteExceedingPoints\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Accelerators\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Accelerators\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".masterVoxelSize\\\",\\n                            \\\"target\\\": \\\"solveLiquid.masterVoxelSize\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".gravityMagnitude\\\",\\n                            \\\"target\\\": \\\"solveLiquid.gravityMagnitude\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".gravityDirection\\\",\\n                            \\\"target\\\": \\\"solveLiquid.gravityDirection\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidVoxelScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.solidVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".forceVoxelScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.forceVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".transportStepAdaptivity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.transportStepAdaptivity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".transportTimeScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.transportTimeScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".minSteps\\\",\\n                            \\\"target\\\": \\\"solveLiquid.minSteps\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".maxSteps\\\",\\n                            \\\"target\\\": \\\"solveLiquid.maxSteps\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".dropletThreshold\\\",\\n                            \\\"target\\\": \\\"solveLiquid.dropletThreshold\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".dropletMergeBackDepth\\\",\\n                            \\\"target\\\": \\\"solveLiquid.dropletMergeBackDepth\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".surfaceBandWidth\\\",\\n                            \\\"target\\\": \\\"solveLiquid.surfaceBandWidth\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".interiorPointDensity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.interiorPointDensity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".surfacePointDensity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.surfacePointDensity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".killPlanes\\\",\\n                            \\\"target\\\": \\\"solveLiquid.killPlanes\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".PIC\\\",\\n                            \\\"target\\\": \\\"solveLiquid.PIC\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".viscosityMult\\\",\\n                            \\\"target\\\": \\\"solveLiquid.viscosityMult\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".dynamicSurfaceTension\\\",\\n                            \\\"target\\\": \\\"solveLiquid.dynamicSurfaceTension\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityDecay\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityDecay\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityMul\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityMul\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityMax\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityMax\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".surfaceTensionEnable\\\",\\n                            \\\"target\\\": \\\"solveLiquid.surfaceTensionEnable\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".vorticityEnable\\\",\\n                            \\\"target\\\": \\\"solveLiquid.vorticityEnable\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".simulationCacheFilename\\\",\\n                            \\\"target\\\": \\\"solveLiquid.simulationCacheFilename\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".simulationCachePath\\\",\\n                            \\\"target\\\": \\\"solveLiquid.simulationCachePath\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".enableGuiding\\\",\\n                            \\\"target\\\": \\\"solveLiquid.enableGuiding\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".computeGuideFromHighResLiquid\\\",\\n                            \\\"target\\\": \\\"solveLiquid.computeGuideFromHighResLiquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".minSimulationDepth\\\",\\n                            \\\"target\\\": \\\"solveLiquid.minSimulationDepth\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guideVoxelScale\\\",\\n                            \\\"target\\\": \\\"solveLiquid.guideVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".reseedPointDensity\\\",\\n                            \\\"target\\\": \\\"solveLiquid.reseedPointDensity\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".reseedGuideOverlap\\\",\\n                            \\\"target\\\": \\\"solveLiquid.reseedGuideOverlap\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".reseedLiquidOverlap\\\",\\n                            \\\"target\\\": \\\"solveLiquid.reseedLiquidOverlap\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".Guides\\\",\\n                            \\\"target\\\": \\\"solveLiquid.Guides\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".minReseedAirDistance\\\",\\n                            \\\"target\\\": \\\"solveLiquid.minReseedAirDistance\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveLiquid.Liquid\\\",\\n                            \\\"target\\\": \\\".Liquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveLiquid.Solid\\\",\\n                            \\\"target\\\": \\\".Solid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".masterVoxelSize\\\",\\n                            \\\"target\\\": \\\"updateSubStepIterator.mvs\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveLiquid.outLoopingCondition\\\",\\n                            \\\"target\\\": \\\".looping_condition\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".computeGuideFromSimulationCache\\\",\\n                            \\\"target\\\": \\\"solveLiquid.computeGuideFromSimulationCache\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".computeGuideFromMesh\\\",\\n                            \\\"target\\\": \\\"solveLiquid.computeGuideFromMesh\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxMin\\\",\\n                            \\\"target\\\": \\\"solveLiquid.bboxMin\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxMax\\\",\\n                            \\\"target\\\": \\\"solveLiquid.bboxMax\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxTransform\\\",\\n                            \\\"target\\\": \\\"solveLiquid.bboxTransform\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"updateSubStepIterator.condition\\\",\\n                            \\\"target\\\": \\\"solveLiquid.loopingCondition\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getLiquidObjectName.value\\\",\\n                            \\\"target\\\": \\\"updateSubStepIterator.objectName\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"voxel_liquid-volume.value\\\",\\n                            \\\"target\\\": \\\"updateSubStepIterator.compName\\\"\\n                        }\\n                    ],\\n                    \\\"values\\\": [\\n                        {\\n                            \\\"valueName\\\": \\\"voxel_liquid-volume.str\\\",\\n                            \\\"valueType\\\": \\\"string\\\",\\n                            \\\"value\\\": \\\"voxel_liquid-volume\\\"\\n                        }\\n                    ],\\n                    \\\"whileCompound\\\": {\\n                        \\\"ports\\\": [\\n                            {\\n                                \\\"portKind\\\": \\\"state\\\",\\n                                \\\"inputPortName\\\": \\\"ittr_input\\\",\\n                                \\\"outputPortName\\\": \\\"ittr_output\\\"\\n                            }\\n                        ]\\n                    }\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::createMeshes\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"keepMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::_private::keepMeshes\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"createObjectWhenCaching\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::createObjectWhenCaching\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"cacheObjectToDisk\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::cacheObjectToDisk\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"voxel_liquid\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"scopeLiquid\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::scopeLiquid\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"createObjectWhenCaching1\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::createObjectWhenCaching\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"Solids\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"scopeSolids\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::scopeSolids\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromObject1\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"foamComp\\\",\\n                    \\\"nodeType\\\": \\\"foam\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"if\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::if\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromObject2\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"createEmptyItems\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::createEmptyItems\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"subStepLiquid\\\",\\n                    \\\"nodeType\\\": \\\"subStepLiquid\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"initTimestepCFL\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::initTimestepCFL\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"cacheObjectToDisk1\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::cacheObjectToDisk\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getLiquidCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getFoamCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getSolidsCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getSimCachePath\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::getStringFromFilepath\\\"\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject.value\\\",\\n                    \\\"target\\\": \\\".Liquid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Emitters\\\",\\n                    \\\"target\\\": \\\"createMeshes.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Colliders\\\",\\n                    \\\"target\\\": \\\"createMeshes.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Accelerators\\\",\\n                    \\\"target\\\": \\\"createMeshes.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject1.value\\\",\\n                    \\\"target\\\": \\\".Solid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraMatrixList\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraMatrixList\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"if.output\\\",\\n                    \\\"target\\\": \\\".Foam\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableFoam\\\",\\n                    \\\"target\\\": \\\"if.condition\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Guides\\\",\\n                    \\\"target\\\": \\\"createMeshes.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".masterVoxelSize\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.masterVoxelSize\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".deleteExceedingParticles\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.deleteExceedingPoints\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".gravityMagnitude\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.gravityMagnitude\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".gravityDirection\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.gravityDirection\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidVoxelScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.solidVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".forceVoxelScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.forceVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transportStepAdaptivity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.transportStepAdaptivity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transportTimeScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.transportTimeScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minSteps\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.minSteps\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".maxSteps\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.maxSteps\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".dropletThreshold\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.dropletThreshold\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".dropletMergeBackDepth\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.dropletMergeBackDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceBandWidth\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.surfaceBandWidth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".interiorParticleDensity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.interiorPointDensity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceParticleDensity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.surfacePointDensity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".killplanes\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.killPlanes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".viscosityScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.viscosityMult\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceTension\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.dynamicSurfaceTension\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityDecay\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityDecay\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityMult\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityMul\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityMax\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityMax\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceTensionEnable\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.surfaceTensionEnable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".vorticityEnable\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.vorticityEnable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableGuiding\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.enableGuiding\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".computeGuideFromHighResLiquid\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.computeGuideFromHighResLiquid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minSimulationDepth\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.minSimulationDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".guideVoxelScale\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.guideVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".reseedParticleDensity\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.reseedPointDensity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".reseedGuideOverlap\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.reseedGuideOverlap\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".reseedLiquidOverlap\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.reseedLiquidOverlap\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minReseedAirDistance\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.minReseedAirDistance\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".simulationCacheFilename\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.simulationCacheFilename\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".computeGuideFromSimulationCache\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.computeGuideFromSimulationCache\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".computeGuideFromMesh\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.computeGuideFromMesh\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipBBoxMin\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.bboxMin\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipBBoxMax\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.bboxMax\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipBBoxTransform\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.bboxTransform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCompressionQuality\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.compressionQuality\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCacheFileName\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.cacheFileName\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableLiquidCache\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableLiquidCache\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCacheControl\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableSolidCache\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCacheControl\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCacheControl\\\",\\n                    \\\"target\\\": \\\"foamComp.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCompressionQuality\\\",\\n                    \\\"target\\\": \\\"foamComp.compressionQuality\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCacheFileName\\\",\\n                    \\\"target\\\": \\\"foamComp.cacheFileName\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableFoamCache\\\",\\n                    \\\"target\\\": \\\"foamComp.enableFoamCache\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableSolidCache\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.enable\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCacheFileName\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.cacheFileName\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCompressionQuality\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.compressionQuality\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".emissionRate\\\",\\n                    \\\"target\\\": \\\"foamComp.emissionRate\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidSpeed\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidSpeed\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidChurn\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidChurn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidCurvature\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidCurvature\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".minLiquidDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.minLiquidDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".maxLiquidDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.maxLiquidDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".inheritLiquidVelocity\\\",\\n                    \\\"target\\\": \\\"foamComp.inheritLiquidVelocity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".emitFlatnessToSurface\\\",\\n                    \\\"target\\\": \\\"foamComp.emitFlatnessToSurface\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".dissipationRate\\\",\\n                    \\\"target\\\": \\\"foamComp.dissipationRate\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".killDensityThreshold\\\",\\n                    \\\"target\\\": \\\"foamComp.killDensityThreshold\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".buoyancy\\\",\\n                    \\\"target\\\": \\\"foamComp.buoyancy\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".collideKillDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.collideKillDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".windX\\\",\\n                    \\\"target\\\": \\\"foamComp.windX\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".windZ\\\",\\n                    \\\"target\\\": \\\"foamComp.windZ\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".surfaceOffset\\\",\\n                    \\\"target\\\": \\\"foamComp.surfaceOffset\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".snapToSurface\\\",\\n                    \\\"target\\\": \\\"foamComp.snapToSurface\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".pointRadius\\\",\\n                    \\\"target\\\": \\\"foamComp.pointRadius\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".preserveVolume\\\",\\n                    \\\"target\\\": \\\"foamComp.preserveVolume\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".gravityMagnitude\\\",\\n                    \\\"target\\\": \\\"foamComp.gravity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".maxSolidDepth\\\",\\n                    \\\"target\\\": \\\"foamComp.maxSolidDepth\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraAdaptivity\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraAdaptivity\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".clipToCameraFrustum\\\",\\n                    \\\"target\\\": \\\"foamComp.clipToCameraFrustum\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraFov\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraFov\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraAspect\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraAspect\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".cameraBuffer\\\",\\n                    \\\"target\\\": \\\"foamComp.cameraBuffer\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCachePath\\\",\\n                    \\\"target\\\": \\\"getLiquidCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCachePath\\\",\\n                    \\\"target\\\": \\\"getSolidsCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCachePath\\\",\\n                    \\\"target\\\": \\\"getFoamCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".simulationCachePath\\\",\\n                    \\\"target\\\": \\\"getSimCachePath.str\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.accelerators1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.colliders1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.emitters1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.guides1\\\",\\n                    \\\"target\\\": \\\"keepMeshes.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.emitters1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.colliders1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.accelerators1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.guides1\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.Guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching.outObject\\\",\\n                    \\\"target\\\": \\\"keepMeshes.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"keepMeshes.outObject\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"voxel_liquid.value\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Liquid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Liquid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching.newObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching.outCacheControl\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"cacheObjectToDisk.outObject\\\",\\n                    \\\"target\\\": \\\"scopeLiquid.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getLiquidCachePath.value\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk.cachePath\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"scopeLiquid.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromObject.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject.value\\\",\\n                    \\\"target\\\": \\\"foamComp.liquidObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"Solids.value\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Solid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"subStepLiquid.Solid\\\",\\n                    \\\"target\\\": \\\"createObjectWhenCaching1.newObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching1.outObject\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createObjectWhenCaching1.outCacheControl\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.cacheControl\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"scopeSolids.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromObject1.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"cacheObjectToDisk1.outObject\\\",\\n                    \\\"target\\\": \\\"scopeSolids.inObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject1.value\\\",\\n                    \\\"target\\\": \\\"foamComp.solidObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"foamComp.Foam\\\",\\n                    \\\"target\\\": \\\"if.trueCase\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getFoamCachePath.value\\\",\\n                    \\\"target\\\": \\\"foamComp.cachePath\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromObject2.value\\\",\\n                    \\\"target\\\": \\\"if.falseCase\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createEmptyItems.emptyObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromObject2.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"initTimestepCFL.value\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.ittr_input\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getSimCachePath.value\\\",\\n                    \\\"target\\\": \\\"subStepLiquid.simulationCachePath\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getSolidsCachePath.value\\\",\\n                    \\\"target\\\": \\\"cacheObjectToDisk1.cachePath\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching.compNameToTest\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"_voxel\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching.filePath\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFilePathHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching.fileName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFileNameHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.cacheControl\\\",\\n                    \\\"value\\\": \\\"0L\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.compressionQuality\\\",\\n                    \\\"value\\\": \\\"0L\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.cachePath\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putCachePathHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.cacheFileName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"liquid\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.pointComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxel_liquid-particle\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk.voxelComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxel_liquid-volume\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"voxel_liquid.str\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxel_liquid\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching1.compNameToTest\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"_voxel\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching1.filePath\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFileNameHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"createObjectWhenCaching1.fileName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"putFilePathHere\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"Solids.str\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"Solids\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.emissionRate\\\",\\n                    \\\"value\\\": \\\"1000f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.minLiquidSpeed\\\",\\n                    \\\"value\\\": \\\"0.2f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.minLiquidChurn\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.minLiquidCurvature\\\",\\n                    \\\"value\\\": \\\"0.5f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.inheritLiquidVelocity\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.emitFlatnessToSurface\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.dissipationRate\\\",\\n                    \\\"value\\\": \\\"5f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.killDensityThreshold\\\",\\n                    \\\"value\\\": \\\"0.05f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.buoyancy\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.collideKillDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.windX\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.windZ\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.surfaceOffset\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.snapToSurface\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.pointRadius\\\",\\n                    \\\"value\\\": \\\"0.3f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.preserveVolume\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.gravity\\\",\\n                    \\\"value\\\": \\\"9.8f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.maxSolidDepth\\\",\\n                    \\\"value\\\": \\\"0.3f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraAdaptivity\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.clipToCameraFrustum\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraFov\\\",\\n                    \\\"value\\\": \\\"110f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraAspect\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"foamComp.cameraBuffer\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"subStepLiquid.PIC\\\",\\n                    \\\"value\\\": \\\"1f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk1.pointComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"none\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"cacheObjectToDisk1.voxelComponentName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"Solids-volume\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
+	setAttr ".srv" -type "string" "2.0";
+	setAttr ".spa" yes;
+	setAttr -k on ".Emitters[0]";
+	setAttr -k on ".Emitters";
+	setAttr -k on ".masterVoxelSize" 0.5;
+	setAttr -k on ".gravityMagnitude" 9.8000001907348633;
+	setAttr -k on ".gravityDirection" -type "float3" 0 -1 0 ;
+	setAttr -k on ".solidVoxelScale" 1;
+	setAttr -k on ".forceVoxelScale" 1;
+	setAttr -k on ".transportStepAdaptivity" 0.31999999284744263;
+	setAttr -k on ".transportTimeScale" 1;
+	setAttr -k on ".minSteps" 1;
+	setAttr -k on ".maxSteps" 1000;
+	setAttr -k on ".dropletThreshold" 0.97000002861022949;
+	setAttr -k on ".dropletMergeBackDepth" 2;
+	setAttr -k on ".surfaceBandWidth" 1;
+	setAttr -k on ".interiorParticleDensity" 1;
+	setAttr -k on ".surfaceParticleDensity" 2;
+	setAttr -k on ".surfaceTension" 0.071999996900558472;
+	setAttr -k on ".vorticityDecay" 20;
+	setAttr -k on ".vorticityMult" 1;
+	setAttr -k on ".vorticityMax" 100;
+	setAttr -k on ".vorticityEnable" yes;
+	setAttr -k on ".computeGuideFromHighResLiquid" yes;
+	setAttr -k on ".minSimulationDepth" 3;
+	setAttr -k on ".guideVoxelScale" 2;
+	setAttr -k on ".reseedParticleDensity" 1;
+	setAttr -k on ".reseedGuideOverlap" 1;
+	setAttr -k on ".reseedLiquidOverlap" 2.5;
+	setAttr -k on ".minReseedAirDistance" 1;
+	setAttr -k on ".computeGuideFromSimulationCache" yes;
+	setAttr -k on ".computeGuideFromMesh" yes;
+	setAttr -k on ".deleteExceedingParticles" yes;
+	setAttr -k on ".emissionRate" 1000;
+	setAttr -k on ".minLiquidSpeed" 0.20000000298023224;
+	setAttr -k on ".minLiquidChurn" 1;
+	setAttr -k on ".minLiquidCurvature" 0.30000001192092896;
+	setAttr -k on ".maxLiquidDepth" 3;
+	setAttr -k on ".inheritLiquidVelocity" 1;
+	setAttr -k on ".dissipationRate" 5;
+	setAttr -k on ".killDensityThreshold" 0.05000000074505806;
+	setAttr -k on ".buoyancy" 1;
+	setAttr -k on ".pointRadius" 0.20000000298023224;
+	setAttr -k on ".preserveVolume" 0.5;
+	setAttr -k on ".maxSolidDepth" 0.30000001192092896;
+	setAttr -k on ".cameraFov" 110;
+	setAttr -k on ".cameraAspect" 1;
+	setAttr -k on ".cameraBuffer" 1;
+createNode transform -n "liquid1" -p "bifrostLiquid1";
+	rename -uid "04DE217E-9940-D5F4-2BBD-7CB1DE46AF54";
+createNode bifrostShape -n "liquidShape1" -p "liquid1";
+	rename -uid "33530936-2248-5640-10BD-4DA38C467F14";
+	setAttr -k off ".v";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".pch" -type "string" "position";
+	setAttr ".vch" -type "string" "distance";
+	setAttr ".p" yes;
+	setAttr ".mp" 704000;
+	setAttr ".ps" 10;
+	setAttr ".pcc" -type "string" "velocity";
+	setAttr -s 2 ".pcr";
+	setAttr ".pcr[0].pcrp" 0;
+	setAttr ".pcr[0].pcrcv" -type "float3" 0 0 1 ;
+	setAttr ".pcr[0].pcri" 2;
+	setAttr ".pcr[1].pcrp" 1;
+	setAttr ".pcr[1].pcrcv" -type "float3" 1 1 1 ;
+	setAttr ".pcr[1].pcri" 2;
+	setAttr ".pcrx" 20;
+	setAttr -s 2 ".pcvr[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".por";
+	setAttr ".por[0].porp" 0;
+	setAttr ".por[0].porcv" -type "float3" 0 0 0 ;
+	setAttr ".por[0].pori" 2;
+	setAttr ".por[1].porp" 1;
+	setAttr ".por[1].porcv" -type "float3" 1 1 1 ;
+	setAttr ".por[1].pori" 2;
+	setAttr -s 2 ".povr[0:1]"  0 0 1 1 1 1;
+	setAttr ".pnc" -type "string" "velocity";
+	setAttr ".pvc" -type "string" "velocity";
+	setAttr ".vt" 1;
+	setAttr ".vcc" -type "string" "velocity";
+	setAttr -s 2 ".vcr";
+	setAttr ".vcr[0].vcrp" 0;
+	setAttr ".vcr[0].vcrcv" -type "float3" 0 0 1 ;
+	setAttr ".vcr[0].vcri" 2;
+	setAttr ".vcr[1].vcrp" 1;
+	setAttr ".vcr[1].vcrcv" -type "float3" 1 1 1 ;
+	setAttr ".vcr[1].vcri" 2;
+	setAttr -s 2 ".vcvr[0:1]"  0 0 1 1 1 1;
+	setAttr ".brt" 1;
+	setAttr -s 3 ".tfc";
+	setAttr ".tfc[0].tfcp" 0;
+	setAttr ".tfc[0].tfccv" -type "float3" 1 0 0 ;
+	setAttr ".tfc[0].tfci" 1;
+	setAttr ".tfc[1].tfcp" 0.5;
+	setAttr ".tfc[1].tfccv" -type "float3" 0 1 0 ;
+	setAttr ".tfc[1].tfci" 1;
+	setAttr ".tfc[2].tfcp" 1;
+	setAttr ".tfc[2].tfccv" -type "float3" 0 0 1 ;
+	setAttr ".tfc[2].tfci" 1;
+createNode transform -n "bifrostLiquid1Mesh";
+	rename -uid "82819BF0-0E4E-7D2B-3C11-BDA83545C2E3";
+	addAttr -s false -ci true -sn "miData" -ln "miData" -at "message";
+createNode mesh -n "bifrostLiquid1MeshShape" -p "bifrostLiquid1Mesh";
+	rename -uid "BD311AD6-3B47-22F1-6E71-28A9970B9310";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".mvcs" -type "string" "bifrostVelocity";
 createNode fosterParent -n "wineRNfosterParent1";
-	rename -uid "17667E82-9643-7868-B13A-CAAA792644C5";
+	rename -uid "D6F105E5-D649-51A4-8C33-3A863409FDFC";
 createNode orientConstraint -n "wine_bottle_orientConstraint1" -p "wineRNfosterParent1";
 	rename -uid "7FDAA275-D944-0524-37B5-938D3517A80D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "mom_r_wrist_ctrlW0" -dv 1 -min 0 
@@ -1325,6 +1593,7 @@ createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
 	setAttr ".ivb" no;
+	setAttr ".xvc" yes;
 createNode mentalrayOptions -s -n "miDefaultOptions";
 	rename -uid "190C88BF-FE4E-80F6-F0FB-7792BE400EB4";
 	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
@@ -1334,6 +1603,7 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
 	setAttr ".minsp" 0;
 	setAttr ".maxsp" 2;
+	setAttr ".avo" yes;
 	setAttr ".mru" 2;
 	setAttr ".miSamplesMax" 50;
 	setAttr -s 82 ".stringOptions";
@@ -5272,18 +5542,18 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 	setAttr ".nt" -type "string" "pass:command";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DAFA7F9C-FE47-1AAC-344D-74A6085B4336";
-	setAttr -s 157 ".lnk";
-	setAttr -s 157 ".slnk";
+	rename -uid "5E2420ED-714A-D7E8-6961-BCAFC0B8D39C";
+	setAttr -s 159 ".lnk";
+	setAttr -s 159 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C532E395-174F-FC99-FFC4-E0B5E2D8ADEB";
+	rename -uid "428ADD8C-384A-2CC5-7702-82AC472D25B6";
 	setAttr ".cdl" 3;
 	setAttr -s 5 ".dli[1:4]"  1 2 3 4;
 	setAttr -s 5 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8FE7AEEF-A64E-0BCA-8F16-3E847524724C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B62F466D-3E4A-03EC-1254-C1AA04E5A22F";
+	rename -uid "D183F7B8-CD49-1BC3-0037-39AA15587CEC";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3364DFD3-5743-413F-CAFD-25A163300DC5";
 	setAttr ".g" yes;
@@ -5300,10 +5570,10 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"momBaby\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
 		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 252\n                -height 692\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
+		+ "                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 255\n                -height 692\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"momBaby\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 252\n            -height 692\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 255\n            -height 692\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
 		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
 		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
@@ -5320,10 +5590,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
 		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n"
-		+ "                -hulls 0\n                -grid 0\n                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 0\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 697\n                -height 692\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
+		+ "                -hulls 0\n                -grid 0\n                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 0\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 694\n                -height 692\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 697\n            -height 692\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 694\n            -height 692\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n"
 		+ "                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
 		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n"
@@ -5363,12 +5633,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
 		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 27 100 -ps 2 73 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"momBaby\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 252\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"momBaby\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 252\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"momBaby\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 255\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"momBaby\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 255\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 697\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 697\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ttimeControl -e -displaySound 1 -sound mom_scene_audio $gPlayBackSlider;\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 694\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 694\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "01062556-A348-669A-7B1D-C28162489BFC";
@@ -7599,20 +7869,33 @@ createNode reference -n "babyRN";
 		
 		2 "|baby:baby_master|baby:bb_expr_master" "translate" " -type \"double3\" 0.93340426054694292 -4.62774662398271186 0"
 		
-		"babyRN" 530
-		2 "|baby:baby:body" "visibility" " 0"
+		"babyRN" 227
+		1 |baby:baby:body|baby:baby_body|baby:baby_bodyShape "bifrostColliderEnable" 
+		"bifrostColliderEnable" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
+		1 |baby:baby:body|baby:baby_body|baby:baby_bodyShape "bifrostColliderThickness" 
+		"bifrostColliderThickness" " -ci 1 -dv 1 -at \"double\""
+		1 |baby:baby:body|baby:baby_body|baby:baby_bodyShape "bifrostColliderMode" 
+		"bifrostColliderMode" " -ci 1 -min 0 -max 1 -en \"Solid:Shell\" -at \"enum\""
+		2 "|baby:baby:body" "visibility" " 1"
 		2 "|baby:baby:body" "translate" " -type \"double3\" 0 0 0"
 		2 "|baby:baby:body|baby:baby_body|baby:baby_bodyShape" "uvPivot" " -type \"double2\" 0.33749696612358093 0.18443910777568817"
 		
-		2 "|baby:baby:diaper" "visibility" " 1"
+		2 "|baby:baby:body|baby:baby_body|baby:baby_bodyShape" "quadSplit" " 0"
+		2 "|baby:baby:body|baby:baby_body|baby:baby_bodyShape" "bifrostColliderEnable" 
+		" -k 1 1"
+		2 "|baby:baby:body|baby:baby_body|baby:baby_bodyShape" "bifrostColliderThickness" 
+		" -k 1 1"
+		2 "|baby:baby:body|baby:baby_body|baby:baby_bodyShape" "bifrostColliderMode" 
+		" -k 1 0"
+		2 "|baby:baby:diaper" "visibility" " 0"
 		2 "|baby:baby:diaper" "translate" " -type \"double3\" 0 0 0"
-		2 "|baby:baby_master" "visibility" " -av 1"
-		2 "|baby:baby_master" "translate" " -type \"double3\" -3.16238523020664974 18.87109712093216274 4.08141847589554629"
+		2 "|baby:baby_master" "visibility" " -av 0"
+		2 "|baby:baby_master" "translate" " -type \"double3\" 1.05945168823984859 16.24753017740161098 3.66440071147501234"
 		
 		2 "|baby:baby_master" "translateX" " -av"
 		2 "|baby:baby_master" "translateY" " -av"
 		2 "|baby:baby_master" "translateZ" " -av"
-		2 "|baby:baby_master" "rotate" " -type \"double3\" 140.5936020273410918 -100.46199929936859974 -201.22531909863889155"
+		2 "|baby:baby_master" "rotate" " -type \"double3\" 94.19850428515444207 0.32620684909507891 -173.99121991170414958"
 		
 		2 "|baby:baby_master" "rotateX" " -av"
 		2 "|baby:baby_master" "rotateY" " -av"
@@ -7628,7 +7911,7 @@ createNode reference -n "babyRN";
 		2 "|baby:baby_master|baby:baby_COG" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|baby:baby_master|baby:baby_COG" "rotate" " -type \"double3\" 0 0 0"
-		2 "|baby:baby_master|baby:baby_COG|baby:Head_Controller" "rotate" " -type \"double3\" 18.22615064072817148 0.032987763361257798 0.42402402951559814"
+		2 "|baby:baby_master|baby:baby_COG|baby:Head_Controller" "rotate" " -type \"double3\" -0.044470617149585029 0.032987763361257763 0.42402402951559781"
 		
 		2 "|baby:baby_master|baby:baby_COG|baby:Head_Controller" "rotateX" " -av"
 		
@@ -7641,9 +7924,9 @@ createNode reference -n "babyRN";
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_spine|baby:baby_spine_low|baby:baby_spine_mid" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_spine|baby:Spine_IK_Handle" 
-		"translate" " -type \"double3\" 0 -7.16089489296311044 -1.97926972318500516"
+		"translate" " -type \"double3\" 0 -7.16089489296311754 -1.97926972318502337"
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_spine|baby:Spine_IK_Handle" 
-		"rotate" " -type \"double3\" 90 3.44599548997518212 90"
+		"rotate" " -type \"double3\" 90 3.44599548997544014 90"
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby_lf_eye_def|baby:baby:lEyeball|baby:baby:lEyeballShape" 
 		"dispResolution" " 3"
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby_lf_eye_def|baby:baby:lEyeball|baby:baby:lEyeballShape" 
@@ -7656,7 +7939,7 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" -0.38329520451244115 -0.51699498951345824 1.8530563527518471"
 		
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
-		"rotate" " -type \"double3\" 2.87633916947392088 -0.4217354267635034 -2.1115162189944896"
+		"rotate" " -type \"double3\" 2.87633916947405854 -0.42173542676352282 -2.11151621899499364"
 		
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
 		"segmentScaleCompensate" " 1"
@@ -7664,23 +7947,11 @@ createNode reference -n "babyRN";
 		2 "baby:tweak1" "vlist[0].vertex" " -s 474"
 		2 "baby:tweak1" "vlist[0].vertex[0]" " -type \"float3\" -4.6566128999999998e-10 0 -7.9162419000000006e-09"
 		
-		2 "baby:tweak1" "vlist[0].vertex[4]" " -type \"float3\" 1.4901161000000001e-08 -2.6077031999999999e-08 -1.1920929000000001e-07"
+		2 "baby:tweak1" "vl[0].vt[4:8]" " -type \"float3\" 1.4901161000000001e-08 -2.6077031999999999e-08 -1.1920929000000001e-07 1.1920929000000001e-07 -3.7252903000000002e-09 -8.9406967000000001e-08 -5.9604644999999993e-08 1.4901161000000001e-08 5.9604644999999993e-08 5.9604644999999993e-08 -2.9802322000000001e-08 8.4936618999999993e-07 -7.4505806000000003e-09 1.5832484000000001e-08 -2.5145710000000002e-08"
 		
-		2 "baby:tweak1" "vlist[0].vertex[5]" " -type \"float3\" 1.1920929000000001e-07 -3.7252903000000002e-09 -8.9406967000000001e-08"
+		2 "baby:tweak1" "vl[0].vt[10:11]" " -type \"float3\" -2.3283064000000002e-10 0 1.1641532000000001e-10 4.4703483999999995e-08 -9.6624716999999989e-09 0"
 		
-		2 "baby:tweak1" "vlist[0].vertex[6]" " -type \"float3\" -5.9604644999999993e-08 1.4901161000000001e-08 5.9604644999999993e-08"
-		
-		2 "baby:tweak1" "vlist[0].vertex[7]" " -type \"float3\" 5.9604644999999993e-08 -2.9802322000000001e-08 8.4936618999999993e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[8]" " -type \"float3\" -7.4505806000000003e-09 1.5832484000000001e-08 -2.5145710000000002e-08"
-		
-		2 "baby:tweak1" "vlist[0].vertex[10]" " -type \"float3\" -2.3283064000000002e-10 0 1.1641532000000001e-10"
-		
-		2 "baby:tweak1" "vlist[0].vertex[11]" " -type \"float3\" 4.4703483999999995e-08 -9.6624716999999989e-09 0"
-		
-		2 "baby:tweak1" "vlist[0].vertex[38]" " -type \"float3\" -2.0861626000000001e-07 -1.4901161000000001e-08 -1.7881393000000001e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[39]" " -type \"float3\" -7.4505806000000003e-09 -1.8626450999999999e-09 -9.6857547999999994e-08"
+		2 "baby:tweak1" "vl[0].vt[38:39]" " -type \"float3\" -2.0861626000000001e-07 -1.4901161000000001e-08 -1.7881393000000001e-07 -7.4505806000000003e-09 -1.8626450999999999e-09 -9.6857547999999994e-08"
 		
 		2 "baby:tweak1" "vlist[0].vertex[73]" " -type \"float3\" 0.0052657127000000003 0.00017428398 0.0043973848000000001"
 		
@@ -7688,37 +7959,15 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[77]" " -type \"float3\" 0.00024890900000000001 0.00013720989 0.0002264902"
 		
-		2 "baby:tweak1" "vlist[0].vertex[150]" " -type \"float3\" -0.0017137527 0.017027974000000001 0.0089915246000000001"
+		2 "baby:tweak1" "vl[0].vt[150:153]" " -type \"float3\" -0.0017137527 0.017027974000000001 0.0089915246000000001 0.0095762386999999997 0.0019806622999999999 -0.014528572999999999 0.069818570999999996 -0.086403965999999999 0.060954630000000003 0.026023148999999999 0.15984451999999999 0.072064086999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[151]" " -type \"float3\" 0.0095762386999999997 0.0019806622999999999 -0.014528572999999999"
+		2 "baby:tweak1" "vl[0].vt[155:156]" " -type \"float3\" 4.5597552999999997e-05 0.00045490264999999998 -0.00046634673999999999 -0.00013208389000000001 0.0001142025 -0.0003811121"
 		
-		2 "baby:tweak1" "vlist[0].vertex[152]" " -type \"float3\" 0.069818570999999996 -0.086403965999999999 0.060954630000000003"
+		2 "baby:tweak1" "vl[0].vt[160:163]" " -type \"float3\" -0.0021967888000000001 0.0061197281000000001 -0.0063803196 -0.0037281513 0.0060901642000000004 -0.013877034 -0.0056301802000000003 0.0034539699999999998 -0.0027880668999999999 -0.0084566920999999996 0.0061292648 -0.0078924893999999992"
 		
-		2 "baby:tweak1" "vlist[0].vertex[153]" " -type \"float3\" 0.026023148999999999 0.15984451999999999 0.072064086999999999"
+		2 "baby:tweak1" "vl[0].vt[168:171]" " -type \"float3\" 0.026296376999999999 0.21100885 0.035878568999999999 0.062182568000000001 -0.15828896000000001 0.050239921 0.097689994000000002 -0.033928215999999997 -0.052161813000000001 0.062117338000000001 0.15320733 -0.0024586021999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[155]" " -type \"float3\" 4.5597552999999997e-05 0.00045490264999999998 -0.00046634673999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[156]" " -type \"float3\" -0.00013208389000000001 0.0001142025 -0.0003811121"
-		
-		2 "baby:tweak1" "vlist[0].vertex[160]" " -type \"float3\" -0.0021967888000000001 0.0061197281000000001 -0.0063803196"
-		
-		2 "baby:tweak1" "vlist[0].vertex[161]" " -type \"float3\" -0.0037281513 0.0060901642000000004 -0.013877034"
-		
-		2 "baby:tweak1" "vlist[0].vertex[162]" " -type \"float3\" -0.0056301802000000003 0.0034539699999999998 -0.0027880668999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[163]" " -type \"float3\" -0.0084566920999999996 0.0061292648 -0.0078924893999999992"
-		
-		2 "baby:tweak1" "vlist[0].vertex[168]" " -type \"float3\" 0.026296376999999999 0.21100885 0.035878568999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[169]" " -type \"float3\" 0.062182568000000001 -0.15828896000000001 0.050239921"
-		
-		2 "baby:tweak1" "vlist[0].vertex[170]" " -type \"float3\" 0.097689994000000002 -0.033928215999999997 -0.052161813000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[171]" " -type \"float3\" 0.062117338000000001 0.15320733 -0.0024586021999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[174]" " -type \"float3\" 0.0054948330000000002 0.019840837 0.014361501"
-		
-		2 "baby:tweak1" "vlist[0].vertex[175]" " -type \"float3\" 0.0063211917999999997 0.0035730172 -0.0018403530000000001"
+		2 "baby:tweak1" "vl[0].vt[174:175]" " -type \"float3\" 0.0054948330000000002 0.019840837 0.014361501 0.0063211917999999997 0.0035730172 -0.0018403530000000001"
 		
 		2 "baby:tweak1" "vlist[0].vertex[194]" " -type \"float3\" -3.7252903000000002e-09 9.3132257000000002e-10 -1.6763806000000001e-08"
 		
@@ -7730,257 +7979,73 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[304]" " -type \"float3\" -0.00010325015 9.4413757000000003e-05 2.4676322999999999e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[323]" " -type \"float3\" -0.0025524199000000001 -0.00034332275 0.0012282133"
+		2 "baby:tweak1" "vl[0].vt[323:327]" " -type \"float3\" -0.0025524199000000001 -0.00034332275 0.0012282133 0.00022763014 -2.1934509000000003e-05 0.00045084953000000002 6.5326690999999994e-05 -3.8146973e-06 0.0020959377000000002 -0.00016093254000000001 -0.00047922133999999999 0.0042086244000000004 -3.7431717000000003e-05 5.3882599000000002e-05 -4.2736530000000002e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[324]" " -type \"float3\" 0.00022763014 -2.1934509000000003e-05 0.00045084953000000002"
+		2 "baby:tweak1" "vl[0].vt[341:344]" " -type \"float3\" -0.031612251000000001 0.010501981000000001 -0.050565600000000002 0.022580512 -0.046278119 -0.044774651999999998 -0.011725532 -0.050382852999999998 -0.12474103 -0.074075311000000005 0.021314979000000001 -0.15541404"
 		
-		2 "baby:tweak1" "vlist[0].vertex[325]" " -type \"float3\" 6.5326690999999994e-05 -3.8146973e-06 0.0020959377000000002"
+		2 "baby:tweak1" "vl[0].vt[346:349]" " -type \"float3\" 0.0011091231999999999 0.00024890900000000001 -0.00070512294999999997 -0.018379927000000001 0.039316772999999999 0.024015188 -0.052288531999999999 0.061423182 0.031993388999999997 0.00095725059999999997 0.00092828273999999997 -0.0011906624"
 		
-		2 "baby:tweak1" "vlist[0].vertex[326]" " -type \"float3\" -0.00016093254000000001 -0.00047922133999999999 0.0042086244000000004"
+		2 "baby:tweak1" "vl[0].vt[397:404]" " -type \"float3\" 0.094088107000000004 0.027681112000000001 -0.017302871000000001 0.12262600999999999 -0.037352026000000003 -0.0054979323999999998 0.11622074 0.0018692017 -0.00067377089999999995 0.11650803999999999 -3.5166740000000003e-06 -4.9233437000000003e-05 0.059800527999999999 -0.0037997960999999999 -0.053827225999999999 0.070556566000000001 0.013783514 -0.056589900999999998 0.086521461999999993 0.023384452 -0.019318819000000001 0.13589503 -0.067175268999999996 -0.0047855972999999996"
 		
-		2 "baby:tweak1" "vlist[0].vertex[327]" " -type \"float3\" -3.7431717000000003e-05 5.3882599000000002e-05 -4.2736530000000002e-05"
+		2 "baby:tweak1" "vl[0].vt[407:414]" " -type \"float3\" -0.00024127959999999999 0.00014007091999999999 -0.00026214123000000003 -2.1696091000000003e-05 3.5166739999999999e-05 -5.3644179999999999e-06 0.047450780999999997 -0.15961932000000001 -0.022449017000000002 0.0059759616999999999 -7.2717666999999993e-05 -0.0085778235999999994 0.10837236 -0.048034132 -0.060882032000000003 0.055444016999999998 -0.084395230000000002 -0.065230607999999995 0.24891927999999999 0.038032889 -0.033917546 0.29652288999999998 -0.055009006999999999 -0.11421244999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[341]" " -type \"float3\" -0.031612251000000001 0.010501981000000001 -0.050565600000000002"
+		2 "baby:tweak1" "vl[0].vt[420:428]" " -type \"float3\" 4.4822692999999994e-05 -6.4313411999999999e-05 -2.5749207e-05 0.27659038000000002 0.022182166999999999 -0.19556564000000001 0.17488745 -0.19058636000000001 -0.15337788999999999 0.23016337000000001 0.041999578000000003 -0.12785136999999999 0.28584817000000001 -0.039821029000000001 -0.10949194 0.14284453 -0.0078160763000000005 -0.035121441000000003 0.013031721 -0.0028426647000000002 0.020934343000000001 0.062898405000000004 -0.011746049 -0.047232389 0.00026798247999999998 0.00070619583 0.00059688090999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[342]" " -type \"float3\" 0.022580512 -0.046278119 -0.044774651999999998"
+		2 "baby:tweak1" "vl[0].vt[431:432]" " -type \"float3\" 0.28421667 0.049133538999999997 -0.12846911 0.17395427999999999 -0.12288027999999999 -0.15093409999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[343]" " -type \"float3\" -0.011725532 -0.050382852999999998 -0.12474103"
+		2 "baby:tweak1" "vl[0].vt[593:596]" " -type \"float3\" -3.7193298000000003e-05 0.00020217896 -0.00094699859999999999 -0.0035126209 0.019538878999999999 -0.0013420582 0.0065729617999999998 0.065004349000000003 0.023170590000000001 0.0018553733999999999 0.0069408417000000003 0.0026319622999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[344]" " -type \"float3\" -0.074075311000000005 0.021314979000000001 -0.15541404"
-		
-		2 "baby:tweak1" "vlist[0].vertex[346]" " -type \"float3\" 0.0011091231999999999 0.00024890900000000001 -0.00070512294999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[347]" " -type \"float3\" -0.018379927000000001 0.039316772999999999 0.024015188"
-		
-		2 "baby:tweak1" "vlist[0].vertex[348]" " -type \"float3\" -0.052288531999999999 0.061423182 0.031993388999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[349]" " -type \"float3\" 0.00095725059999999997 0.00092828273999999997 -0.0011906624"
-		
-		2 "baby:tweak1" "vlist[0].vertex[397]" " -type \"float3\" 0.094088107000000004 0.027681112000000001 -0.017302871000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[398]" " -type \"float3\" 0.12262600999999999 -0.037352026000000003 -0.0054979323999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[399]" " -type \"float3\" 0.11622074 0.0018692017 -0.00067377089999999995"
-		
-		2 "baby:tweak1" "vlist[0].vertex[400]" " -type \"float3\" 0.11650803999999999 -3.5166740000000003e-06 -4.9233437000000003e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[401]" " -type \"float3\" 0.059800527999999999 -0.0037997960999999999 -0.053827225999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[402]" " -type \"float3\" 0.070556566000000001 0.013783514 -0.056589900999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[403]" " -type \"float3\" 0.086521461999999993 0.023384452 -0.019318819000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[404]" " -type \"float3\" 0.13589503 -0.067175268999999996 -0.0047855972999999996"
-		
-		2 "baby:tweak1" "vlist[0].vertex[407]" " -type \"float3\" -0.00024127959999999999 0.00014007091999999999 -0.00026214123000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[408]" " -type \"float3\" -2.1696091000000003e-05 3.5166739999999999e-05 -5.3644179999999999e-06"
-		
-		2 "baby:tweak1" "vlist[0].vertex[409]" " -type \"float3\" 0.047450780999999997 -0.15961932000000001 -0.022449017000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[410]" " -type \"float3\" 0.0059759616999999999 -7.2717666999999993e-05 -0.0085778235999999994"
-		
-		2 "baby:tweak1" "vlist[0].vertex[411]" " -type \"float3\" 0.10837236 -0.048034132 -0.060882032000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[412]" " -type \"float3\" 0.055444016999999998 -0.084395230000000002 -0.065230607999999995"
-		
-		2 "baby:tweak1" "vlist[0].vertex[413]" " -type \"float3\" 0.24891927999999999 0.038032889 -0.033917546"
-		
-		2 "baby:tweak1" "vlist[0].vertex[414]" " -type \"float3\" 0.29652288999999998 -0.055009006999999999 -0.11421244999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[420]" " -type \"float3\" 4.4822692999999994e-05 -6.4313411999999999e-05 -2.5749207e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[421]" " -type \"float3\" 0.27659038000000002 0.022182166999999999 -0.19556564000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[422]" " -type \"float3\" 0.17488745 -0.19058636000000001 -0.15337788999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[423]" " -type \"float3\" 0.23016337000000001 0.041999578000000003 -0.12785136999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[424]" " -type \"float3\" 0.28584817000000001 -0.039821029000000001 -0.10949194"
-		
-		2 "baby:tweak1" "vlist[0].vertex[425]" " -type \"float3\" 0.14284453 -0.0078160763000000005 -0.035121441000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[426]" " -type \"float3\" 0.013031721 -0.0028426647000000002 0.020934343000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[427]" " -type \"float3\" 0.062898405000000004 -0.011746049 -0.047232389"
-		
-		2 "baby:tweak1" "vlist[0].vertex[428]" " -type \"float3\" 0.00026798247999999998 0.00070619583 0.00059688090999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[431]" " -type \"float3\" 0.28421667 0.049133538999999997 -0.12846911"
-		
-		2 "baby:tweak1" "vlist[0].vertex[432]" " -type \"float3\" 0.17395427999999999 -0.12288027999999999 -0.15093409999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[593]" " -type \"float3\" -3.7193298000000003e-05 0.00020217896 -0.00094699859999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[594]" " -type \"float3\" -0.0035126209 0.019538878999999999 -0.0013420582"
-		
-		2 "baby:tweak1" "vlist[0].vertex[595]" " -type \"float3\" 0.0065729617999999998 0.065004349000000003 0.023170590000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[596]" " -type \"float3\" 0.0018553733999999999 0.0069408417000000003 0.0026319622999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[605]" " -type \"float3\" -0.00031852722000000002 0.00053405762000000002 -0.00089871883"
-		
-		2 "baby:tweak1" "vlist[0].vertex[606]" " -type \"float3\" 0.012392044 0.017625808999999999 0.012757719000000001"
+		2 "baby:tweak1" "vl[0].vt[605:606]" " -type \"float3\" -0.00031852722000000002 0.00053405762000000002 -0.00089871883 0.012392044 0.017625808999999999 0.012757719000000001"
 		
 		2 "baby:tweak1" "vlist[0].vertex[614]" " -type \"float3\" 0.11556697 -0.045600890999999998 0.068613051999999994"
 		
-		2 "baby:tweak1" "vlist[0].vertex[621]" " -type \"float3\" 5.7220459000000007e-05 -7.6293945000000001e-06 -3.4570694000000001e-05"
+		2 "baby:tweak1" "vl[0].vt[621:622]" " -type \"float3\" 5.7220459000000007e-05 -7.6293945000000001e-06 -3.4570694000000001e-05 0.19334936 -0.011573791999999999 0.14081353999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[622]" " -type \"float3\" 0.19334936 -0.011573791999999999 0.14081353999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[633]" " -type \"float3\" 0.00088381766999999999 -0.00082874298000000003 -0.018089800999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[634]" " -type \"float3\" 1.9073486e-06 1.9073485999999998e-05 4.7683716000000005e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[635]" " -type \"float3\" 0.12591767000000001 -0.017601012999999999 0.098181336999999994"
-		
-		2 "baby:tweak1" "vlist[0].vertex[636]" " -type \"float3\" 0.017769098000000001 0.025360107 0.014029537999999999"
+		2 "baby:tweak1" "vl[0].vt[633:636]" " -type \"float3\" 0.00088381766999999999 -0.00082874298000000003 -0.018089800999999999 1.9073486e-06 1.9073485999999998e-05 4.7683716000000005e-07 0.12591767000000001 -0.017601012999999999 0.098181336999999994 0.017769098000000001 0.025360107 0.014029537999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[646]" " -type \"float3\" 0.29762792999999999 -0.23194790000000001 0.16387690999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[649]" " -type \"float3\" 0.0083322524999999998 0.013226032 0.012482405"
 		
-		2 "baby:tweak1" "vlist[0].vertex[659]" " -type \"float3\" 0.015845775999999999 -0.079792023000000004 -0.037170738000000002"
+		2 "baby:tweak1" "vl[0].vt[659:662]" " -type \"float3\" 0.015845775999999999 -0.079792023000000004 -0.037170738000000002 0.0024890899999999998 -9.3460082999999997e-05 -0.0021802783 -0.29269147000000001 0.010810986 -0.13913191999999999 -0.20581841000000001 0.092885941 -0.084426947000000002"
 		
-		2 "baby:tweak1" "vlist[0].vertex[660]" " -type \"float3\" 0.0024890899999999998 -9.3460082999999997e-05 -0.0021802783"
-		
-		2 "baby:tweak1" "vlist[0].vertex[661]" " -type \"float3\" -0.29269147000000001 0.010810986 -0.13913191999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[662]" " -type \"float3\" -0.20581841000000001 0.092885941 -0.084426947000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[668]" " -type \"float3\" 0.036813736 -0.0033097267000000001 -0.0066582263000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[669]" " -type \"float3\" -0.16147327 0.021102414 -0.070165097999999995"
+		2 "baby:tweak1" "vl[0].vt[668:669]" " -type \"float3\" 0.036813736 -0.0033097267000000001 -0.0066582263000000003 -0.16147327 0.021102414 -0.070165097999999995"
 		
 		2 "baby:tweak1" "vlist[0].vertex[671]" " -type \"float3\" 0.001396656 -0.0055298804999999998 0.00192523"
 		
 		2 "baby:tweak1" "vlist[0].vertex[674]" " -type \"float3\" -0.0015544891000000001 0.0019617081 -0.00047230721000000002"
 		
-		2 "baby:tweak1" "vlist[0].vertex[680]" " -type \"float3\" 0.022336959999999999 -0.0029039383000000001 -0.0050034820999999997"
+		2 "baby:tweak1" "vl[0].vt[680:686]" " -type \"float3\" 0.022336959999999999 -0.0029039383000000001 -0.0050034820999999997 0.014813422999999999 0.0053043365000000004 -0.013630003 -0.18834829 -0.070093155000000004 -0.080559611000000003 -0.13406372 0.0016660690000000001 -0.067038952999999998 0.033083915999999998 0.036969185000000002 0.058982610999999997 0.039192200000000003 0.013500214 0.037835835999999998 -0.0082201957999999999 0.0010681152 0.0025739669999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[681]" " -type \"float3\" 0.014813422999999999 0.0053043365000000004 -0.013630003"
+		2 "baby:tweak1" "vl[0].vt[689:690]" " -type \"float3\" 0.0039744376999999997 0.0024728774999999998 -0.0023655295000000001 -0.15873623000000001 -0.046662331000000001 -0.074517071000000004"
 		
-		2 "baby:tweak1" "vlist[0].vertex[682]" " -type \"float3\" -0.18834829 -0.070093155000000004 -0.080559611000000003"
+		2 "baby:tweak1" "vl[0].vt[696:697]" " -type \"float3\" 0.057881832000000001 -0.012331963 0.0070636272000000003 0.0019273758000000001 0.0091896057000000007 -0.0024805068999999998"
 		
-		2 "baby:tweak1" "vlist[0].vertex[683]" " -type \"float3\" -0.13406372 0.0016660690000000001 -0.067038952999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[684]" " -type \"float3\" 0.033083915999999998 0.036969185000000002 0.058982610999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[685]" " -type \"float3\" 0.039192200000000003 0.013500214 0.037835835999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[686]" " -type \"float3\" -0.0082201957999999999 0.0010681152 0.0025739669999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[689]" " -type \"float3\" 0.0039744376999999997 0.0024728774999999998 -0.0023655295000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[690]" " -type \"float3\" -0.15873623000000001 -0.046662331000000001 -0.074517071000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[696]" " -type \"float3\" 0.057881832000000001 -0.012331963 0.0070636272000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[697]" " -type \"float3\" 0.0019273758000000001 0.0091896057000000007 -0.0024805068999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[703]" " -type \"float3\" 0.0003285408 -0.0014567375 0.0021371840999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[704]" " -type \"float3\" 0.020703077 -0.0085239410000000002 0.070948839"
+		2 "baby:tweak1" "vl[0].vt[703:704]" " -type \"float3\" 0.0003285408 -0.0014567375 0.0021371840999999999 0.020703077 -0.0085239410000000002 0.070948839"
 		
 		2 "baby:tweak1" "vlist[0].vertex[708]" " -type \"float3\" 0.0081946850000000002 -0.040504932 -0.027175039000000002"
 		
-		2 "baby:tweak1" "vlist[0].vertex[719]" " -type \"float3\" -0.0014343261999999999 -0.015024185000000001 -0.025219618999999999"
+		2 "baby:tweak1" "vl[0].vt[719:722]" " -type \"float3\" -0.0014343261999999999 -0.015024185000000001 -0.025219618999999999 -0.0048398972000000002 -0.024878025000000002 -0.021174416000000001 0.069683551999999996 0.049339293999999999 0.044945239999999997 0.068579912000000007 0.067923546000000001 0.042897284000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[720]" " -type \"float3\" -0.0048398972000000002 -0.024878025000000002 -0.021174416000000001"
+		2 "baby:tweak1" "vl[0].vt[727:728]" " -type \"float3\" -0.013077259000000001 -0.121562 -0.048020347999999997 0.050065994000000003 0.18994617 -0.014523327000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[721]" " -type \"float3\" 0.069683551999999996 0.049339293999999999 0.044945239999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[722]" " -type \"float3\" 0.068579912000000007 0.067923546000000001 0.042897284000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[727]" " -type \"float3\" -0.013077259000000001 -0.121562 -0.048020347999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[728]" " -type \"float3\" 0.050065994000000003 0.18994617 -0.014523327000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[733]" " -type \"float3\" -0.0026428698999999998 -0.0016131400999999999 0.0028972626"
-		
-		2 "baby:tweak1" "vlist[0].vertex[734]" " -type \"float3\" 0.023300171000000001 0.017237663 -0.022738904000000001"
+		2 "baby:tweak1" "vl[0].vt[733:734]" " -type \"float3\" -0.0026428698999999998 -0.0016131400999999999 0.0028972626 0.023300171000000001 0.017237663 -0.022738904000000001"
 		
 		2 "baby:tweak1" "vlist[0].vertex[765]" " -type \"float3\" 0.19039512 -0.39202690000000001 -0.0094953178999999995"
 		
-		2 "baby:tweak1" "vlist[0].vertex[768]" " -type \"float3\" -0.058909766000000002 0.082296370999999993 0.12230352"
-		
-		2 "baby:tweak1" "vlist[0].vertex[769]" " -type \"float3\" 0.00031935051000000001 0.0039682090000000003 0.099131040000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[770]" " -type \"float3\" 0.014117964 0.013670921000000001 0.016288377"
-		
-		2 "baby:tweak1" "vlist[0].vertex[771]" " -type \"float3\" -0.0049910657000000001 0.035445213000000003 0.0016125236"
-		
-		2 "baby:tweak1" "vlist[0].vertex[772]" " -type \"float3\" -0.06706202 -0.059935570000000001 -0.20582723999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[773]" " -type \"float3\" 0.058797746999999997 0.047669402999999999 -0.19422834999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[774]" " -type \"float3\" 0.068821548999999996 0.18986464 -0.24515604999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[775]" " -type \"float3\" -0.070705413999999994 -0.29640818000000002 -0.25555623"
-		
-		2 "baby:tweak1" "vlist[0].vertex[776]" " -type \"float3\" -0.025583982000000002 0.19612360000000001 -0.11619369"
-		
-		2 "baby:tweak1" "vlist[0].vertex[777]" " -type \"float3\" -0.15403509000000001 -0.19446849999999999 -0.085387602000000007"
-		
-		2 "baby:tweak1" "vlist[0].vertex[778]" " -type \"float3\" -0.097989321000000004 -0.12578869000000001 -0.036282502000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[779]" " -type \"float3\" -0.17424381 -0.31250143000000002 0.017742969000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[780]" " -type \"float3\" 0.027393221999999998 -0.080688 0.061471484999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[781]" " -type \"float3\" -0.0019364357 -0.02222681 0.013527766"
-		
-		2 "baby:tweak1" "vlist[0].vertex[782]" " -type \"float3\" -0.0063246489000000003 -0.0086073875000000008 0.0090522169999999996"
-		
-		2 "baby:tweak1" "vlist[0].vertex[783]" " -type \"float3\" -0.010555029 -0.028741836999999999 0.025132775"
+		2 "baby:tweak1" "vl[0].vt[768:783]" " -type \"float3\" -0.058909766000000002 0.082296370999999993 0.12230352 0.00031935051000000001 0.0039682090000000003 0.099131040000000004 0.014117964 0.013670921000000001 0.016288377 -0.0049910657000000001 0.035445213000000003 0.0016125236 -0.06706202 -0.059935570000000001 -0.20582723999999999 0.058797746999999997 0.047669402999999999 -0.19422834999999999 0.068821548999999996 0.18986464 -0.24515604999999999 -0.070705413999999994 -0.29640818000000002 -0.25555623 -0.025583982000000002 0.19612360000000001 -0.11619369 -0.15403509000000001 -0.19446849999999999 -0.085387602000000007 -0.097989321000000004 -0.12578869000000001 -0.036282502000000001 -0.17424381 -0.31250143000000002 0.017742969000000001 0.027393221999999998 -0.080688 0.061471484999999999 -0.0019364357 -0.02222681 0.013527766 -0.0063246489000000003 -0.0086073875000000008 0.0090522169999999996 -0.010555029 -0.028741836999999999 0.025132775"
 		
 		2 "baby:tweak1" "vlist[0].vertex[810]" " -type \"float3\" 0 0 0.0001819453"
 		
-		2 "baby:tweak1" "vlist[0].vertex[812]" " -type \"float3\" -8.6147337999999992e-09 -9.3132257000000002e-10 0.0041726315000000002"
+		2 "baby:tweak1" "vl[0].vt[812:820]" " -type \"float3\" -8.6147337999999992e-09 -9.3132257000000002e-10 0.0041726315000000002 -0.0073345303999999998 -0.066914557999999999 0.058506012000000003 -0.058922469999999998 -0.31774521 0.18266801999999999 -0.16297632000000001 -0.46939802000000003 0.040317870999999998 -0.16636925999999999 -0.13984251 -0.22146774999999999 -0.10836606999999999 -0.053585052000000001 -0.25219028999999998 -0.087030306000000002 0.069506653000000002 -0.14724238000000001 -0.12226271 0.17608070000000001 0.12838105999999999 -1.3038516e-08 -1.4901161000000001e-08 0.20323989000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[813]" " -type \"float3\" -0.0073345303999999998 -0.066914557999999999 0.058506012000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[814]" " -type \"float3\" -0.058922469999999998 -0.31774521 0.18266801999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[815]" " -type \"float3\" -0.16297632000000001 -0.46939802000000003 0.040317870999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[816]" " -type \"float3\" -0.16636925999999999 -0.13984251 -0.22146774999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[817]" " -type \"float3\" -0.10836606999999999 -0.053585052000000001 -0.25219028999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[818]" " -type \"float3\" -0.087030306000000002 0.069506653000000002 -0.14724238000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[819]" " -type \"float3\" -0.12226271 0.17608070000000001 0.12838105999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[820]" " -type \"float3\" -1.3038516e-08 -1.4901161000000001e-08 0.20323989000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[829]" " -type \"float3\" -0.010421276 -0.0030617714000000002 -0.0062059461999999996"
-		
-		2 "baby:tweak1" "vlist[0].vertex[830]" " -type \"float3\" -0.0042469500999999998 0.0026187897000000001 -0.002805531"
-		
-		2 "baby:tweak1" "vlist[0].vertex[831]" " -type \"float3\" -0.00078892708000000004 -0.0015783310000000001 -0.00016295909999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[832]" " -type \"float3\" -0.011025190000000001 0.038353443000000001 -0.032842441999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[833]" " -type \"float3\" 0.0031988620999999998 -0.19862126999999999 -0.023206114999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[834]" " -type \"float3\" 0.0091326237000000001 -0.18972301 -0.061420202"
-		
-		2 "baby:tweak1" "vlist[0].vertex[835]" " -type \"float3\" 0.0049771777999999996 -0.020853996 0.001087684"
-		
-		2 "baby:tweak1" "vlist[0].vertex[836]" " -type \"float3\" -0.017942743000000001 -0.02702713 -0.044334155"
+		2 "baby:tweak1" "vl[0].vt[829:836]" " -type \"float3\" -0.010421276 -0.0030617714000000002 -0.0062059461999999996 -0.0042469500999999998 0.0026187897000000001 -0.002805531 -0.00078892708000000004 -0.0015783310000000001 -0.00016295909999999999 -0.011025190000000001 0.038353443000000001 -0.032842441999999999 0.0031988620999999998 -0.19862126999999999 -0.023206114999999999 0.0091326237000000001 -0.18972301 -0.061420202 0.0049771777999999996 -0.020853996 0.001087684 -0.017942743000000001 -0.02702713 -0.044334155"
 		
 		2 "baby:tweak1" "vlist[0].vertex[838]" " -type \"float3\" -1.3038516e-08 9.3132257000000002e-10 0.0021785902999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[844]" " -type \"float3\" -0.00024580955999999998 0.0014381409 0.00018361211000000001"
+		2 "baby:tweak1" "vl[0].vt[844:846]" " -type \"float3\" -0.00024580955999999998 0.0014381409 0.00018361211000000001 0.00053715706 0.0023670197 0.00062632561000000001 -3.3378601000000002e-05 -0.00027465820000000001 -0.00025737285999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[845]" " -type \"float3\" 0.00053715706 0.0023670197 0.00062632561000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[846]" " -type \"float3\" -3.3378601000000002e-05 -0.00027465820000000001 -0.00025737285999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[858]" " -type \"float3\" -4.0054321000000005e-05 1.9073486e-06 -2.9802322000000001e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[859]" " -type \"float3\" 0.00013875960999999999 -0.00011730194000000001 -5.9843063000000002e-05"
+		2 "baby:tweak1" "vl[0].vt[858:859]" " -type \"float3\" -4.0054321000000005e-05 1.9073486e-06 -2.9802322000000001e-05 0.00013875960999999999 -0.00011730194000000001 -5.9843063000000002e-05"
 		
 		2 "baby:tweak1" "vlist[0].vertex[861]" " -type \"float3\" -0.0024814606000000002 -0.00089740752999999996 -0.0030593871999999999"
 		
@@ -7988,11 +8053,7 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[876]" " -type \"float3\" 0.0027818679999999998 -0.0031147002999999999 -3.7312508000000001e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[902]" " -type \"float3\" 0.0002322197 -6.1035155999999994e-05 -0.00042453408000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[903]" " -type \"float3\" 4.2915343999999998e-06 -0.00011491776 -1.4662743e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[904]" " -type \"float3\" -0.0025124549999999998 -0.0056304932000000004 -0.00039634109"
+		2 "baby:tweak1" "vl[0].vt[902:904]" " -type \"float3\" 0.0002322197 -6.1035155999999994e-05 -0.00042453408000000002 4.2915343999999998e-06 -0.00011491776 -1.4662743e-05 -0.0025124549999999998 -0.0056304932000000004 -0.00039634109"
 		
 		2 "baby:tweak1" "vlist[0].vertex[907]" " -type \"float3\" -0.097782373000000006 -0.034429550000000003 0.019361733999999999"
 		
@@ -8002,25 +8063,17 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[974]" " -type \"float3\" 0.028330922000000001 -0.0085048676000000004 -0.062804759000000002"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1009]" " -type \"float3\" -0.076987103000000001 0.061151862000000001 -0.18491821999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1010]" " -type \"float3\" -0.071400179999999994 0.026666968999999999 -0.020341537999999999"
+		2 "baby:tweak1" "vl[0].vt[1009:1010]" " -type \"float3\" -0.076987103000000001 0.061151862000000001 -0.18491821999999999 -0.071400179999999994 0.026666968999999999 -0.020341537999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1012]" " -type \"float3\" -0.1108107 -0.027026296000000002 -0.21034922"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1014]" " -type \"float3\" -0.12219778000000001 -0.44093573000000003 0.013800491"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1017]" " -type \"float3\" -0.10839923999999999 0.32509831 0.051148000999999998"
+		2 "baby:tweak1" "vl[0].vt[1017:1018]" " -type \"float3\" -0.10839923999999999 0.32509831 0.051148000999999998 3.7834979999999998e-10 2.3283064000000002e-10 0.26158654999999997"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1018]" " -type \"float3\" 3.7834979999999998e-10 2.3283064000000002e-10 0.26158654999999997"
+		2 "baby:tweak1" "vl[0].vt[1021:1022]" " -type \"float3\" -0.097672507000000006 -0.63488305 0.3018747 -0.060328900999999997 -0.10972928999999999 0.10463458"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1021]" " -type \"float3\" -0.097672507000000006 -0.63488305 0.3018747"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1022]" " -type \"float3\" -0.060328900999999997 -0.10972928999999999 0.10463458"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1027]" " -type \"float3\" 0.0018123388 -0.0024633407999999999 0.0088460445000000006"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1028]" " -type \"float3\" 0.0040173531 0.00081396102999999997 0.0095031261000000002"
+		2 "baby:tweak1" "vl[0].vt[1027:1028]" " -type \"float3\" 0.0018123388 -0.0024633407999999999 0.0088460445000000006 0.0040173531 0.00081396102999999997 0.0095031261000000002"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1031]" " -type \"float3\" -0.00054848194000000001 -0.00017881392999999999 -5.8710575e-06"
 		
@@ -8032,63 +8085,23 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[1124]" " -type \"float3\" 0.00078058242999999995 0.00073909759999999996 -8.4936618999999994e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1140]" " -type \"float3\" 0.0056002735999999996 -0.0074591637000000002 0.012922823"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1141]" " -type \"float3\" -0.019206404999999999 -0.0075588226 0.016382456"
+		2 "baby:tweak1" "vl[0].vt[1140:1141]" " -type \"float3\" 0.0056002735999999996 -0.0074591637000000002 0.012922823 -0.019206404999999999 -0.0075588226 0.016382456"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1178]" " -type \"float3\" 0.0010180473000000001 0.0064783096 -0.0017870665000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1226]" " -type \"float3\" 4.4703483999999995e-08 3.7252903000000002e-09 -5.2154063999999999e-08"
+		2 "baby:tweak1" "vl[0].vt[1226:1229]" " -type \"float3\" 4.4703483999999995e-08 3.7252903000000002e-09 -5.2154063999999999e-08 1.1920929000000001e-07 -3.7252903000000002e-08 -7.4505806000000009e-07 -5.9604644999999993e-08 -1.4901161000000001e-08 -3.1292439000000002e-07 0 1.8626450999999999e-09 -5.0291419000000001e-08"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1227]" " -type \"float3\" 1.1920929000000001e-07 -3.7252903000000002e-08 -7.4505806000000009e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1228]" " -type \"float3\" -5.9604644999999993e-08 -1.4901161000000001e-08 -3.1292439000000002e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1229]" " -type \"float3\" 0 1.8626450999999999e-09 -5.0291419000000001e-08"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1257]" " -type \"float3\" -1.7238036999999998e-05 0.00090312957999999998 -0.00096011162000000005"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1258]" " -type \"float3\" -0.00012268901999999999 0.0034279823000000001 -0.0060768126999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1259]" " -type \"float3\" -3.3030219000000002e-09 1.9073486e-06 9.536743200000001e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1260]" " -type \"float3\" 4.6117765999999994e-06 -0.00064420700000000005 0.0032298564999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1261]" " -type \"float3\" 0.00014034002 -0.0089945792999999996 0.025948882"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1262]" " -type \"float3\" 0.00015983579 -0.076046467000000006 0.10899997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1263]" " -type \"float3\" 0.0011042927 -0.42092975999999999 0.26644337000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1264]" " -type \"float3\" 0.0021047349999999999 -0.56857568000000003 0.14279142"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1265]" " -type \"float3\" 0.00063025997999999997 -0.070916981000000004 -0.20122540999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1266]" " -type \"float3\" -0.00030434116999999999 -0.029382064999999999 -0.17550281000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1267]" " -type \"float3\" -0.0010822830000000001 0.042129219000000002 -0.031436969000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1268]" " -type \"float3\" -0.0011030616 0.20468968000000001 0.016346652"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1269]" " -type \"float3\" 0 0 0.19281298999999999"
+		2 "baby:tweak1" "vl[0].vt[1257:1269]" " -type \"float3\" -1.7238036999999998e-05 0.00090312957999999998 -0.00096011162000000005 -0.00012268901999999999 0.0034279823000000001 -0.0060768126999999998 -3.3030219000000002e-09 1.9073486e-06 9.536743200000001e-07 4.6117765999999994e-06 -0.00064420700000000005 0.0032298564999999999 0.00014034002 -0.0089945792999999996 0.025948882 0.00015983579 -0.076046467000000006 0.10899997 0.0011042927 -0.42092975999999999 0.26644337000000001 0.0021047349999999999 -0.56857568000000003 0.14279142 0.00063025997999999997 -0.070916981000000004 -0.20122540999999999 -0.00030434116999999999 -0.029382064999999999 -0.17550281000000001 -0.0010822830000000001 0.042129219000000002 -0.031436969000000002 -0.0011030616 0.20468968000000001 0.016346652 0 0 0.19281298999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1332]" " -type \"float3\" -0.075501442000000002 0.084076703000000003 -0.072320423999999994"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1335]" " -type \"float3\" -2.0027161000000004e-05 9.9182129e-05 8.7022780999999994e-06"
+		2 "baby:tweak1" "vl[0].vt[1335:1336]" " -type \"float3\" -2.0027161000000004e-05 9.9182129e-05 8.7022780999999994e-06 0.0012538433 -0.0052418708999999999 -0.0032315701"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1336]" " -type \"float3\" 0.0012538433 -0.0052418708999999999 -0.0032315701"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1345]" " -type \"float3\" 0.0038547516000000002 -0.013250351 0.0013437271000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1346]" " -type \"float3\" 0.0025758742999999998 0.0044040679999999997 0.0074650048999999998"
+		2 "baby:tweak1" "vl[0].vt[1345:1346]" " -type \"float3\" 0.0038547516000000002 -0.013250351 0.0013437271000000001 0.0025758742999999998 0.0044040679999999997 0.0074650048999999998"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1351]" " -type \"float3\" 0.027616261999999999 -0.12947369 -0.066118001999999995"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1362]" " -type \"float3\" 3.7252903000000002e-09 2.3283064000000003e-09 3.2596289999999996e-08"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1363]" " -type \"float3\" -1.7881393000000001e-07 2.9802322000000001e-08 -3.8743018999999997e-07"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1364]" " -type \"float3\" -3.7252903000000002e-09 0 1.8626450999999999e-09"
+		2 "baby:tweak1" "vl[0].vt[1362:1364]" " -type \"float3\" 3.7252903000000002e-09 2.3283064000000003e-09 3.2596289999999996e-08 -1.7881393000000001e-07 2.9802322000000001e-08 -3.8743018999999997e-07 -3.7252903000000002e-09 0 1.8626450999999999e-09"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1395]" " -type \"float3\" -4.4703483999999995e-08 1.8626450999999999e-09 1.4901161000000001e-08"
 		
@@ -8098,37 +8111,15 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[1434]" " -type \"float3\" -0.00025057793000000001 0.00013925135 0.00022679102000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1507]" " -type \"float3\" 0.0017321109999999999 0.017303228 0.0092893391999999998"
+		2 "baby:tweak1" "vl[0].vt[1507:1510]" " -type \"float3\" 0.0017321109999999999 0.017303228 0.0092893391999999998 -0.0095616803 0.0019892453999999999 -0.014522851 -0.069498211000000004 -0.084936737999999998 0.060246824999999997 -0.026750326000000001 0.15796589999999999 0.071343347000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1508]" " -type \"float3\" -0.0095616803 0.0019892453999999999 -0.014522851"
+		2 "baby:tweak1" "vl[0].vt[1512:1513]" " -type \"float3\" -4.5597552999999997e-05 0.00045490264999999998 -0.00046634673999999999 0.00013220309999999999 0.00011444092000000001 -0.00038123131"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1509]" " -type \"float3\" -0.069498211000000004 -0.084936737999999998 0.060246824999999997"
+		2 "baby:tweak1" "vl[0].vt[1517:1520]" " -type \"float3\" 0.0021936297000000001 0.0061178207000000002 -0.0063781738000000003 0.0038129687000000002 0.0061569214000000002 -0.01396358 0.0055616498000000004 0.0034132004000000001 -0.0027341842999999998 0.0084872692999999992 0.0061783790999999999 -0.0079060793000000004"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1510]" " -type \"float3\" -0.026750326000000001 0.15796589999999999 0.071343347000000001"
+		2 "baby:tweak1" "vl[0].vt[1525:1528]" " -type \"float3\" -0.026014328 0.21077424 0.034917801999999998 -0.063575073999999995 -0.15867501000000001 0.050635934 -0.095006152999999996 -0.033235728999999999 -0.053937077999999999 -0.062120199000000001 0.1538457 -0.0030674636000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1512]" " -type \"float3\" -4.5597552999999997e-05 0.00045490264999999998 -0.00046634673999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1513]" " -type \"float3\" 0.00013220309999999999 0.00011444092000000001 -0.00038123131"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1517]" " -type \"float3\" 0.0021936297000000001 0.0061178207000000002 -0.0063781738000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1518]" " -type \"float3\" 0.0038129687000000002 0.0061569214000000002 -0.01396358"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1519]" " -type \"float3\" 0.0055616498000000004 0.0034132004000000001 -0.0027341842999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1520]" " -type \"float3\" 0.0084872692999999992 0.0061783790999999999 -0.0079060793000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1525]" " -type \"float3\" -0.026014328 0.21077424 0.034917801999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1526]" " -type \"float3\" -0.063575073999999995 -0.15867501000000001 0.050635934"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1527]" " -type \"float3\" -0.095006152999999996 -0.033235728999999999 -0.053937077999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1528]" " -type \"float3\" -0.062120199000000001 0.1538457 -0.0030674636000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1531]" " -type \"float3\" -3.3140182000000002e-05 0.00018224119999999999 7.8201293999999996e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1532]" " -type \"float3\" -0.0061306952999999999 0.0036439095 -0.0018693208999999999"
+		2 "baby:tweak1" "vl[0].vt[1531:1532]" " -type \"float3\" -3.3140182000000002e-05 0.00018224119999999999 7.8201293999999996e-05 -0.0061306952999999999 0.0036439095 -0.0018693208999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[1589]" " -type \"float3\" -0.0048506260000000002 -0.0036719739000000001 -0.0066646337999999999"
 		
@@ -8136,255 +8127,69 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[1661]" " -type \"float3\" 0.00010351837000000001 9.4890594000000006e-05 2.4318694999999998e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1680]" " -type \"float3\" 0.0025510191999999999 -0.00034189224000000002 0.0012252331000000001"
+		2 "baby:tweak1" "vl[0].vt[1680:1684]" " -type \"float3\" 0.0025510191999999999 -0.00034189224000000002 0.0012252331000000001 -0.00022882223 -2.2411345999999999e-05 0.00045204163000000001 -6.3657760999999999e-05 -8.1062316999999998e-06 0.0021004677000000002 0.00015938281999999999 -0.00048542022999999997 0.0042148232000000004 3.7908553999999999e-05 5.4597854999999998e-05 -4.2796134999999997e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1681]" " -type \"float3\" -0.00022882223 -2.2411345999999999e-05 0.00045204163000000001"
+		2 "baby:tweak1" "vl[0].vt[1698:1701]" " -type \"float3\" 0.030434276999999999 0.010398507 -0.050541758999999999 -0.023659165999999999 -0.046391010000000003 -0.044469118000000002 0.011248881000000001 -0.050363301999999999 -0.124677 0.073997982000000004 0.021396041000000001 -0.15589494000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1682]" " -type \"float3\" -6.3657760999999999e-05 -8.1062316999999998e-06 0.0021004677000000002"
+		2 "baby:tweak1" "vl[0].vt[1704:1706]" " -type \"float3\" 0.018033028 0.039314746999999997 0.023970246000000001 0.052007197999999998 0.061622977000000002 0.032205939000000003 -0.012475966999999999 0.013718246999999999 -0.016504765000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1683]" " -type \"float3\" 0.00015938281999999999 -0.00048542022999999997 0.0042148232000000004"
+		2 "baby:tweak1" "vl[0].vt[1754:1761]" " -type \"float3\" -0.094090252999999999 0.027652501999999999 -0.017343402000000001 -0.12263447 -0.037353157999999997 -0.0054825543999999999 -0.11622146 0.0018547773 -0.00067591666999999996 -0.11650803999999999 -3.5166740000000003e-06 -4.9233437000000003e-05 -0.060170284999999997 -0.003800571 -0.053472757000000003 -0.070525609000000003 0.013785481 -0.056666969999999997 -0.086507722999999995 0.023376821999999998 -0.019296825 -0.13576494 -0.066833973000000005 -0.0047929883000000003"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1684]" " -type \"float3\" 3.7908553999999999e-05 5.4597854999999998e-05 -4.2796134999999997e-05"
+		2 "baby:tweak1" "vl[0].vt[1765:1771]" " -type \"float3\" 0.022161961000000001 0.03623879 -0.0056909322999999998 -0.092693090000000006 -0.20281999000000001 -0.024060129999999999 -0.00017690659 6.5326690999999994e-05 -0.00016391277000000001 -0.10810633 -0.047323465000000002 -0.060860574000000001 -0.014373273000000001 -0.10339472 -0.10297167 -0.24890520999999999 0.038041710999999999 -0.033951700000000001 -0.29616882999999999 -0.054885626 -0.11430961000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1698]" " -type \"float3\" 0.030434276999999999 0.010398507 -0.050541758999999999"
+		2 "baby:tweak1" "vl[0].vt[1777:1785]" " -type \"float3\" -4.1007996e-05 -6.294250500000001e-05 -2.6226044000000003e-05 -0.27644613000000001 0.022681415 -0.19566578000000001 -0.14131643999999999 -0.21903565999999999 -0.19341201 -0.23011306000000001 0.042165279 -0.12846762 -0.28581527000000001 -0.039721369999999999 -0.10968173000000001 -0.14344663999999999 -0.0078451632999999993 -0.035159944999999998 -0.013101816000000001 -0.0028614997999999998 0.020956755000000001 -0.062915571000000003 -0.01174736 -0.047219395999999997 -0.00026798247999999998 0.00070619583 0.00059688090999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1699]" " -type \"float3\" -0.023659165999999999 -0.046391010000000003 -0.044469118000000002"
+		2 "baby:tweak1" "vl[0].vt[1788:1789]" " -type \"float3\" -0.28372362000000001 0.049374639999999997 -0.13058764 -0.16172101999999999 -0.13207072 -0.16987872000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1700]" " -type \"float3\" 0.011248881000000001 -0.050363301999999999 -0.124677"
+		2 "baby:tweak1" "vl[0].vt[1950:1953]" " -type \"float3\" 0.00065231323000000002 0.0016155243 -0.0031083225999999999 0.010549068 0.055192946999999999 -0.0025111437000000002 -0.024183273000000002 -0.0065536498999999998 0.015377283 -0.0040764809000000003 -0.0068225860999999999 0.00081431866000000004"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1701]" " -type \"float3\" 0.073997982000000004 0.021396041000000001 -0.15589494000000001"
+		2 "baby:tweak1" "vl[0].vt[1962:1963]" " -type \"float3\" 0.0043916702000000004 0.0083541870000000008 -0.012675047 -0.064049244000000005 -0.21250152999999999 -0.014693499"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1704]" " -type \"float3\" 0.018033028 0.039314746999999997 0.023970246000000001"
+		2 "baby:tweak1" "vl[0].vt[1970:1971]" " -type \"float3\" -0.0010504723000000001 -0.0021514893 0.00025868415999999998 -0.15609503 -0.24634743000000001 0.027903765000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1705]" " -type \"float3\" 0.052007197999999998 0.061622977000000002 0.032205939000000003"
+		2 "baby:tweak1" "vl[0].vt[1978:1979]" " -type \"float3\" 0.00018572807000000001 -0.0029048920000000001 -0.0042909384000000004 -0.13467193 -0.094310759999999993 0.044756009999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1706]" " -type \"float3\" -0.012475966999999999 0.013718246999999999 -0.016504765000000001"
+		2 "baby:tweak1" "vl[0].vt[1990:1993]" " -type \"float3\" 0.0026297568999999999 0.0033988953 -0.083192915000000006 0.0024645329000000001 0.015323639 -0.00094729662000000005 -0.055520773000000002 -0.085020065000000006 0.028237729999999999 -0.0016784668 -0.0046653748000000002 -0.00064451993000000005"
 		
-		2 "baby:tweak1" "vlist[0].vertex[1754]" " -type \"float3\" -0.094090252999999999 0.027652501999999999 -0.017343402000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1755]" " -type \"float3\" -0.12263447 -0.037353157999999997 -0.0054825543999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1756]" " -type \"float3\" -0.11622146 0.0018547773 -0.00067591666999999996"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1757]" " -type \"float3\" -0.11650803999999999 -3.5166740000000003e-06 -4.9233437000000003e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1758]" " -type \"float3\" -0.060170284999999997 -0.003800571 -0.053472757000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1759]" " -type \"float3\" -0.070525609000000003 0.013785481 -0.056666969999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1760]" " -type \"float3\" -0.086507722999999995 0.023376821999999998 -0.019296825"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1761]" " -type \"float3\" -0.13576494 -0.066833973000000005 -0.0047929883000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1765]" " -type \"float3\" 0.022161961000000001 0.03623879 -0.0056909322999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1766]" " -type \"float3\" -0.092693090000000006 -0.20281999000000001 -0.024060129999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1767]" " -type \"float3\" -0.00017690659 6.5326690999999994e-05 -0.00016391277000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1768]" " -type \"float3\" -0.10810633 -0.047323465000000002 -0.060860574000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1769]" " -type \"float3\" -0.014373273000000001 -0.10339472 -0.10297167"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1770]" " -type \"float3\" -0.24890520999999999 0.038041710999999999 -0.033951700000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1771]" " -type \"float3\" -0.29616882999999999 -0.054885626 -0.11430961000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1777]" " -type \"float3\" -4.1007996e-05 -6.294250500000001e-05 -2.6226044000000003e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1778]" " -type \"float3\" -0.27644613000000001 0.022681415 -0.19566578000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1779]" " -type \"float3\" -0.14131643999999999 -0.21903565999999999 -0.19341201"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1780]" " -type \"float3\" -0.23011306000000001 0.042165279 -0.12846762"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1781]" " -type \"float3\" -0.28581527000000001 -0.039721369999999999 -0.10968173000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1782]" " -type \"float3\" -0.14344663999999999 -0.0078451632999999993 -0.035159944999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1783]" " -type \"float3\" -0.013101816000000001 -0.0028614997999999998 0.020956755000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1784]" " -type \"float3\" -0.062915571000000003 -0.01174736 -0.047219395999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1785]" " -type \"float3\" -0.00026798247999999998 0.00070619583 0.00059688090999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1788]" " -type \"float3\" -0.28372362000000001 0.049374639999999997 -0.13058764"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1789]" " -type \"float3\" -0.16172101999999999 -0.13207072 -0.16987872000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1950]" " -type \"float3\" 0.00065231323000000002 0.0016155243 -0.0031083225999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1951]" " -type \"float3\" 0.010549068 0.055192946999999999 -0.0025111437000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1952]" " -type \"float3\" -0.024183273000000002 -0.0065536498999999998 0.015377283"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1953]" " -type \"float3\" -0.0040764809000000003 -0.0068225860999999999 0.00081431866000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1962]" " -type \"float3\" 0.0043916702000000004 0.0083541870000000008 -0.012675047"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1963]" " -type \"float3\" -0.064049244000000005 -0.21250152999999999 -0.014693499"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1970]" " -type \"float3\" -0.0010504723000000001 -0.0021514893 0.00025868415999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1971]" " -type \"float3\" -0.15609503 -0.24634743000000001 0.027903765000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1978]" " -type \"float3\" 0.00018572807000000001 -0.0029048920000000001 -0.0042909384000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1979]" " -type \"float3\" -0.13467193 -0.094310759999999993 0.044756009999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1990]" " -type \"float3\" 0.0026297568999999999 0.0033988953 -0.083192915000000006"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1991]" " -type \"float3\" 0.0024645329000000001 0.015323639 -0.00094729662000000005"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1992]" " -type \"float3\" -0.055520773000000002 -0.085020065000000006 0.028237729999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[1993]" " -type \"float3\" -0.0016784668 -0.0046653748000000002 -0.00064451993000000005"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2002]" " -type \"float3\" 0.0018129349000000001 0.0051898956000000001 -0.0053316057000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2003]" " -type \"float3\" -0.13345551 -0.18400478000000001 0.037582843999999997"
+		2 "baby:tweak1" "vl[0].vt[2002:2003]" " -type \"float3\" 0.0018129349000000001 0.0051898956000000001 -0.0053316057000000004 -0.13345551 -0.18400478000000001 0.037582843999999997"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2006]" " -type \"float3\" -0.0088963509000000007 0.013307571000000001 0.014263629999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2014]" " -type \"float3\" 4.3869018999999995e-05 0.00018501282 -6.2286853999999996e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2016]" " -type \"float3\" 0.032916306999999999 -0.11380529 -0.039324075"
+		2 "baby:tweak1" "vl[0].vt[2016:2020]" " -type \"float3\" 0.032916306999999999 -0.11380529 -0.039324075 -0.00036811828999999999 -0.0058608054999999999 -0.0043771564999999998 0.24313330999999999 0.18577669999999999 -0.11223029 0.20339751 0.15892503999999999 -0.082486696999999998 -7.1525574000000004e-06 2.3841858000000001e-06 3.2186507999999996e-06"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2017]" " -type \"float3\" -0.00036811828999999999 -0.0058608054999999999 -0.0043771564999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2018]" " -type \"float3\" 0.24313330999999999 0.18577669999999999 -0.11223029"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2019]" " -type \"float3\" 0.20339751 0.15892503999999999 -0.082486696999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2020]" " -type \"float3\" -7.1525574000000004e-06 2.3841858000000001e-06 3.2186507999999996e-06"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2025]" " -type \"float3\" -0.058772563999999999 -0.061584473000000001 -0.02356714"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2026]" " -type \"float3\" 0.094836712000000004 0.10301238 -0.066619656999999999"
+		2 "baby:tweak1" "vl[0].vt[2025:2026]" " -type \"float3\" -0.058772563999999999 -0.061584473000000001 -0.02356714 0.094836712000000004 0.10301238 -0.066619656999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2035]" " -type \"float3\" 1.3828278000000001e-05 1.9073486e-06 -1.0490417e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2037]" " -type \"float3\" -0.046036720000000003 -0.065400124000000004 -0.022085667"
+		2 "baby:tweak1" "vl[0].vt[2037:2043]" " -type \"float3\" -0.046036720000000003 -0.065400124000000004 -0.022085667 -0.037743091999999999 -0.020107269000000001 -0.034794152000000002 0.011746883 0.017014979999999999 -0.011839986 0.021141052 0.017097950000000001 -0.021269976999999999 -0.050158024000000002 0.049432755000000002 0.081980823999999994 -0.056442261000000001 0.022925377 0.060968636999999999 0.077543259000000003 0.0082044600999999998 0.024059891999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2038]" " -type \"float3\" -0.037743091999999999 -0.020107269000000001 -0.034794152000000002"
+		2 "baby:tweak1" "vl[0].vt[2045:2047]" " -type \"float3\" 5.3882599000000002e-05 9.3460082999999997e-05 -7.7009201000000004e-05 -0.030985832000000001 0.0023908614999999999 -0.012203932000000001 0.017313004 0.042571067999999997 -0.026426135999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2039]" " -type \"float3\" 0.011746883 0.017014979999999999 -0.011839986"
+		2 "baby:tweak1" "vl[0].vt[2049:2050]" " -type \"float3\" -0.0035033225999999999 -0.00072860717999999997 0.0040361881 0.0016226768 0.00052165985000000002 0.00076365470999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2040]" " -type \"float3\" 0.021141052 0.017097950000000001 -0.021269976999999999"
+		2 "baby:tweak1" "vl[0].vt[2052:2054]" " -type \"float3\" 0.00072956085000000005 -8.5830687999999995e-06 9.5367432000000005e-05 -0.059994221 -0.0065164565999999997 0.0027440189999999999 -0.00067996978999999998 0.00088405609 -5.5670737999999999e-05"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2041]" " -type \"float3\" -0.050158024000000002 0.049432755000000002 0.081980823999999994"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2042]" " -type \"float3\" -0.056442261000000001 0.022925377 0.060968636999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2043]" " -type \"float3\" 0.077543259000000003 0.0082044600999999998 0.024059891999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2045]" " -type \"float3\" 5.3882599000000002e-05 9.3460082999999997e-05 -7.7009201000000004e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2046]" " -type \"float3\" -0.030985832000000001 0.0023908614999999999 -0.012203932000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2047]" " -type \"float3\" 0.017313004 0.042571067999999997 -0.026426135999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2049]" " -type \"float3\" -0.0035033225999999999 -0.00072860717999999997 0.0040361881"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2050]" " -type \"float3\" 0.0016226768 0.00052165985000000002 0.00076365470999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2052]" " -type \"float3\" 0.00072956085000000005 -8.5830687999999995e-06 9.5367432000000005e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2053]" " -type \"float3\" -0.059994221 -0.0065164565999999997 0.0027440189999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2054]" " -type \"float3\" -0.00067996978999999998 0.00088405609 -5.5670737999999999e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2060]" " -type \"float3\" -0.00036120415 -0.0015082359 0.0022454262000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2061]" " -type \"float3\" -0.020808697000000001 -0.0060172081000000001 0.068397045000000004"
+		2 "baby:tweak1" "vl[0].vt[2060:2061]" " -type \"float3\" -0.00036120415 -0.0015082359 0.0022454262000000001 -0.020808697000000001 -0.0060172081000000001 0.068397045000000004"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2065]" " -type \"float3\" 0.0012404918999999999 -0.043788433000000002 -0.025496616999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2076]" " -type \"float3\" -0.00067687035 -0.0056905745999999997 -0.024192095"
+		2 "baby:tweak1" "vl[0].vt[2076:2079]" " -type \"float3\" -0.00067687035 -0.0056905745999999997 -0.024192095 0.0029447078999999998 -0.012222767000000001 -0.022712335 -0.070605993000000006 0.012564659000000001 0.054275215000000002 -0.091215134000000003 0.0015735625999999999 0.079998970000000003"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2077]" " -type \"float3\" 0.0029447078999999998 -0.012222767000000001 -0.022712335"
+		2 "baby:tweak1" "vl[0].vt[2084:2085]" " -type \"float3\" 0.01086998 -0.096854686999999995 -0.054922144999999999 -0.038134574999999997 0.051408291000000002 0.015654087000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2078]" " -type \"float3\" -0.070605993000000006 0.012564659000000001 0.054275215000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2079]" " -type \"float3\" -0.091215134000000003 0.0015735625999999999 0.079998970000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2084]" " -type \"float3\" 0.01086998 -0.096854686999999995 -0.054922144999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2085]" " -type \"float3\" -0.038134574999999997 0.051408291000000002 0.015654087000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2090]" " -type \"float3\" 0.0044486522999999997 0.0036501884000000001 0.00093816221000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2091]" " -type \"float3\" -0.022937297999999998 0.0045533179999999998 -0.019650042"
+		2 "baby:tweak1" "vl[0].vt[2090:2091]" " -type \"float3\" 0.0044486522999999997 0.0036501884000000001 0.00093816221000000001 -0.022937297999999998 0.0045533179999999998 -0.019650042"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2122]" " -type \"float3\" -0.045533894999999998 -0.10429478 -0.010520636999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2125]" " -type \"float3\" 0.052831761999999997 0.082402228999999994 0.12110189"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2126]" " -type \"float3\" -0.00039433315000000002 0.0041265190000000004 0.098971419000000005"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2127]" " -type \"float3\" -0.019772537 0.016056061 0.0094203724999999995"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2128]" " -type \"float3\" 0.0016281716999999999 0.035695075999999999 0.00070128775999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2129]" " -type \"float3\" 0.063969715999999996 -0.061774254000000001 -0.20583826"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2130]" " -type \"float3\" -0.060775599999999999 0.043243407999999997 -0.19296956000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2131]" " -type \"float3\" -0.069016575999999996 0.18571997000000001 -0.24466419"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2132]" " -type \"float3\" 0.069847584000000004 -0.29859208999999998 -0.25546044000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2133]" " -type \"float3\" 0.026236414999999999 0.19426631999999999 -0.11605621000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2134]" " -type \"float3\" 0.15496563999999999 -0.19512367 -0.085707202999999996"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2135]" " -type \"float3\" 0.098474026000000006 -0.12697696999999999 -0.036589742000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2136]" " -type \"float3\" 0.17434853 -0.31178379000000001 0.019202091000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2137]" " -type \"float3\" -0.027310728999999999 -0.081105708999999998 0.061801925000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2138]" " -type \"float3\" 0.0022103786 -0.021837234000000001 0.013372675000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2139]" " -type \"float3\" 0.0063755512000000002 -0.0085716248000000002 0.0089542270000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2140]" " -type \"float3\" 0.010849357 -0.027900695999999999 0.024538576999999999"
+		2 "baby:tweak1" "vl[0].vt[2125:2140]" " -type \"float3\" 0.052831761999999997 0.082402228999999994 0.12110189 -0.00039433315000000002 0.0041265190000000004 0.098971419000000005 -0.019772537 0.016056061 0.0094203724999999995 0.0016281716999999999 0.035695075999999999 0.00070128775999999998 0.063969715999999996 -0.061774254000000001 -0.20583826 -0.060775599999999999 0.043243407999999997 -0.19296956000000001 -0.069016575999999996 0.18571997000000001 -0.24466419 0.069847584000000004 -0.29859208999999998 -0.25546044000000001 0.026236414999999999 0.19426631999999999 -0.11605621000000001 0.15496563999999999 -0.19512367 -0.085707202999999996 0.098474026000000006 -0.12697696999999999 -0.036589742000000001 0.17434853 -0.31178379000000001 0.019202091000000001 -0.027310728999999999 -0.081105708999999998 0.061801925000000001 0.0022103786 -0.021837234000000001 0.013372675000000001 0.0063755512000000002 -0.0085716248000000002 0.0089542270000000004 0.010849357 -0.027900695999999999 0.024538576999999999"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2167]" " -type \"float3\" 0 0 0.00018195209999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2169]" " -type \"float3\" 1.0477379000000001e-09 -2.7939677000000001e-09 0.0041679046000000003"
+		2 "baby:tweak1" "vl[0].vt[2169:2177]" " -type \"float3\" 1.0477379000000001e-09 -2.7939677000000001e-09 0.0041679046000000003 0.0072164535999999996 -0.066557406999999999 0.058231591999999999 0.058753788000000001 -0.31827450000000002 0.18312282999999999 0.16360056000000001 -0.47149563 0.041165925999999999 0.16656779999999999 -0.14046812 -0.22143365000000001 0.10716307 -0.054816245999999999 -0.25235981000000002 0.083756521 0.069424622000000005 -0.14805149000000001 0.11564703 0.17654802 0.12627147 3.0919908999999997e-07 -1.4901161000000001e-08 0.20323774"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2170]" " -type \"float3\" 0.0072164535999999996 -0.066557406999999999 0.058231591999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2171]" " -type \"float3\" 0.058753788000000001 -0.31827450000000002 0.18312282999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2172]" " -type \"float3\" 0.16360056000000001 -0.47149563 0.041165925999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2173]" " -type \"float3\" 0.16656779999999999 -0.14046812 -0.22143365000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2174]" " -type \"float3\" 0.10716307 -0.054816245999999999 -0.25235981000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2175]" " -type \"float3\" 0.083756521 0.069424622000000005 -0.14805149000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2176]" " -type \"float3\" 0.11564703 0.17654802 0.12627147"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2177]" " -type \"float3\" 3.0919908999999997e-07 -1.4901161000000001e-08 0.20323774"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2186]" " -type \"float3\" 0.010114312 -0.0037894248999999999 -0.0060947537000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2187]" " -type \"float3\" 0.0043954848999999997 0.0028800964000000001 -0.0028858781000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2188]" " -type \"float3\" 0.00079107285000000005 -0.0015993118 -0.00015836954000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2189]" " -type \"float3\" 0.012640475999999999 0.030377388000000002 -0.030787288999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2190]" " -type \"float3\" -0.0020930766999999999 -0.21170138999999999 -0.020583868000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2191]" " -type \"float3\" -0.013624191000000001 -0.20539569999999999 -0.054417252999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2192]" " -type \"float3\" -0.0056444192000000004 -0.021198284000000001 0.0014315576"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2193]" " -type \"float3\" 0.011720944000000001 -0.025192253000000001 -0.038252956999999997"
+		2 "baby:tweak1" "vl[0].vt[2186:2193]" " -type \"float3\" 0.010114312 -0.0037894248999999999 -0.0060947537000000003 0.0043954848999999997 0.0028800964000000001 -0.0028858781000000002 0.00079107285000000005 -0.0015993118 -0.00015836954000000001 0.012640475999999999 0.030377388000000002 -0.030787288999999999 -0.0020930766999999999 -0.21170138999999999 -0.020583868000000002 -0.013624191000000001 -0.20539569999999999 -0.054417252999999999 -0.0056444192000000004 -0.021198284000000001 0.0014315576 0.011720944000000001 -0.025192253000000001 -0.038252956999999997"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2195]" " -type \"float3\" -1.4086254000000001e-08 -9.3132257000000002e-10 0.0021268795000000001"
 		
@@ -8392,23 +8197,11 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[2233]" " -type \"float3\" -0.027038097000000001 -0.026967049 0.0010732412"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2259]" " -type \"float3\" -0.00021195411999999999 -5.1498413000000004e-05 -0.00038567184999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2260]" " -type \"float3\" -4.2915343999999998e-06 -0.00010156631 -1.3917685e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2261]" " -type \"float3\" 0.0027544497999999998 -0.0046639441999999998 -0.00076943636000000005"
+		2 "baby:tweak1" "vl[0].vt[2259:2261]" " -type \"float3\" -0.00021195411999999999 -5.1498413000000004e-05 -0.00038567184999999999 -4.2915343999999998e-06 -0.00010156631 -1.3917685e-05 0.0027544497999999998 -0.0046639441999999998 -0.00076943636000000005"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2264]" " -type \"float3\" 0.1032517 -0.035855770000000002 0.016048252999999998"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2267]" " -type \"float3\" 4.4822692999999994e-05 -0.00010299683000000001 -0.00016093254000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2268]" " -type \"float3\" 0.0018486977000000001 0.0060024261000000004 -0.01205641"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2269]" " -type \"float3\" 0.00083112717000000005 0.0057191849000000003 -0.0096897483000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2270]" " -type \"float3\" -0.00069284439000000004 0.0019321442000000001 -0.00080758333000000005"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2271]" " -type \"float3\" -0.00025320053000000003 0.00036430358999999999 -0.00018823147000000001"
+		2 "baby:tweak1" "vl[0].vt[2267:2271]" " -type \"float3\" 4.4822692999999994e-05 -0.00010299683000000001 -0.00016093254000000001 0.0018486977000000001 0.0060024261000000004 -0.01205641 0.00083112717000000005 0.0057191849000000003 -0.0096897483000000003 -0.00069284439000000004 0.0019321442000000001 -0.00080758333000000005 -0.00025320053000000003 0.00036430358999999999 -0.00018823147000000001"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2327]" " -type \"float3\" 1.7881393000000001e-06 3.8146973e-06 -7.1823597e-06"
 		
@@ -8416,25 +8209,17 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[2331]" " -type \"float3\" -0.028302193 -0.0086269378999999993 -0.063767105000000004"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2366]" " -type \"float3\" 0.076235427999999994 0.061066031 -0.18514949"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2367]" " -type \"float3\" 0.069813504999999998 0.027048439000000001 -0.020931020000000002"
+		2 "baby:tweak1" "vl[0].vt[2366:2367]" " -type \"float3\" 0.076235427999999994 0.061066031 -0.18514949 0.069813504999999998 0.027048439000000001 -0.020931020000000002"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2369]" " -type \"float3\" 0.11125757 -0.027032495 -0.21038538000000001"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2371]" " -type \"float3\" 0.12356426 -0.44425690000000001 0.013481602000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2374]" " -type \"float3\" 0.10494044 0.32578604999999999 0.048945054000000002"
+		2 "baby:tweak1" "vl[0].vt[2374:2375]" " -type \"float3\" 0.10494044 0.32578604999999999 0.048945054000000002 -2.7648638999999999e-09 -4.6566128999999998e-10 0.26158637000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2375]" " -type \"float3\" -2.7648638999999999e-09 -4.6566128999999998e-10 0.26158637000000001"
+		2 "baby:tweak1" "vl[0].vt[2378:2379]" " -type \"float3\" 0.098250016999999995 -0.63449776000000002 0.30233216000000002 0.060384065000000001 -0.10988331 0.10462952"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2378]" " -type \"float3\" 0.098250016999999995 -0.63449776000000002 0.30233216000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2379]" " -type \"float3\" 0.060384065000000001 -0.10988331 0.10462952"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2384]" " -type \"float3\" -0.0017329454 -0.0025625229000000001 0.0089129806000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2385]" " -type \"float3\" -0.0039452313999999997 0.00064325332999999997 0.0096859931999999996"
+		2 "baby:tweak1" "vl[0].vt[2384:2385]" " -type \"float3\" -0.0017329454 -0.0025625229000000001 0.0089129806000000002 -0.0039452313999999997 0.00064325332999999997 0.0096859931999999996"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2388]" " -type \"float3\" 0.00056457519999999995 -0.0001707077 -1.6778708000000001e-05"
 		
@@ -8448,9 +8233,7 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[2486]" " -type \"float3\" -0.00016832351999999999 4.4822692999999994e-05 -0.00015503167999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2497]" " -type \"float3\" -0.0056092143000000001 -0.0074577332000000003 0.012910366"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2498]" " -type \"float3\" 0.019179404000000001 -0.0075335502999999996 0.016177297"
+		2 "baby:tweak1" "vl[0].vt[2497:2498]" " -type \"float3\" -0.0056092143000000001 -0.0074577332000000003 0.012910366 0.019179404000000001 -0.0075335502999999996 0.016177297"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2535]" " -type \"float3\" -4.0054321000000005e-05 0.00020599365 -2.5868416000000002e-05"
 		
@@ -8458,157 +8241,37 @@ createNode reference -n "babyRN";
 		
 		2 "baby:tweak1" "vlist[0].vertex[2605]" " -type \"float3\" 0.0045273303999999997 -0.0024223328 -0.0065880566999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2614]" " -type \"float3\" -0.0039327145000000001 -0.013515472000000001 0.001380682"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2615]" " -type \"float3\" -0.0025734900999999999 0.0044212341 0.0074164866999999997"
+		2 "baby:tweak1" "vl[0].vt[2614:2615]" " -type \"float3\" -0.0039327145000000001 -0.013515472000000001 0.001380682 -0.0025734900999999999 0.0044212341 0.0074164866999999997"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2620]" " -type \"float3\" -0.0013520718000000001 -0.18633126999999999 -0.068254023999999996"
 		
 		2 "baby:tweak1" "vlist[0].vertex[2678]" " -type \"float3\" -0.051370620999999998 0.044485091999999997 0.033700942999999997"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2681]" " -type \"float3\" -0.0065908431999999999 0.0082464218000000006 -0.00059413909999999996"
+		2 "baby:tweak1" "vl[0].vt[2681:2685]" " -type \"float3\" -0.0065908431999999999 0.0082464218000000006 -0.00059413909999999996 -0.0072402954 -0.0016016959999999999 0.0063352584999999996 0.0066516398999999999 -0.0034670830000000001 0.0010352135000000001 0.0069453715999999999 -0.019320011000000002 0.011634588 0.0023119450000000001 -0.0025539398000000001 -0.013281107"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2682]" " -type \"float3\" -0.0072402954 -0.0016016959999999999 0.0063352584999999996"
+		2 "baby:tweak1" "vl[0].vt[2706:2710]" " -type \"float3\" -0.0023283957999999999 -0.0027089118999999999 -0.013124703999999999 -0.0069997311 -0.022170544 0.014798403 -0.0068411827000000001 -0.0035986899999999999 0.0011131762999999999 0.0064468384 -0.0026044846 0.0066938400000000004 0.0040063857999999997 0.0056052207999999996 -0.0010657310000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2683]" " -type \"float3\" 0.0066516398999999999 -0.0034670830000000001 0.0010352135000000001"
+		2 "baby:tweak1" "vl[0].vt[2712:2713]" " -type \"float3\" -0.00022554397999999999 0.00019216537000000001 -0.00026607513000000003 0.038801670000000003 0.026929854999999999 0.026117801999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2684]" " -type \"float3\" 0.0069453715999999999 -0.019320011000000002 0.011634588"
+		2 "baby:tweak1" "vl[0].vt[2758:2766]" " -type \"float3\" 0.0045793055999999999 -0.016376495000000001 -0.00078368187000000004 0.0014367104 -0.0071372985999999996 0.00062781572000000004 0.016598463000000001 -0.15528106999999999 -0.030142307 0.037841557999999997 -0.12634086999999999 0.0044310688999999997 0.047778368000000002 -0.19656944000000001 -0.018729447999999999 0.0022013187000000001 -0.20302010000000001 -0.071719274 0.017211437 -0.21300506999999999 0.022058621 0.12151337 -0.23697662 0.11376118 0.0020604133999999998 -0.033153533999999998 -0.010730475"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2685]" " -type \"float3\" 0.0023119450000000001 -0.0025539398000000001 -0.013281107"
+		2 "baby:tweak1" "vl[0].vt[2770:2784]" " -type \"float3\" -0.032673835999999998 -0.13536358000000001 -0.039510965000000002 -0.028429507999999999 -0.19911671 -0.00060197710999999995 -0.048015594000000002 -0.12178564 -0.036845863 -0.030251740999999999 -0.071756840000000002 -0.0069512352000000001 0.050634145999999998 -0.099196910999999999 0.047817870999999998 -0.0080795287999999993 -0.018028736 0.00031214951999999999 -0.053080558999999999 -0.020246028999999999 -0.0066428781000000001 0.041858672999999999 0.0086832047000000006 -0.0016626716000000001 0.062701701999999998 0.22949265999999999 -0.016221642000000001 0.13453483999999999 0.21381664 0.052927255999999999 0.085274219999999998 0.11992073 0.0089028775999999994 0.051538944000000003 0.082232474999999999 -0.023612260999999999 0.050349235999999999 0.073987961000000005 0.0010617375000000001 0.022522925999999999 0.046037674000000001 0.018064737000000001 0.00085544585999999996 1.9073485999999998e-05 0.00026297568999999999"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2706]" " -type \"float3\" -0.0023283957999999999 -0.0027089118999999999 -0.013124703999999999"
+		2 "baby:tweak1" "vl[0].vt[2789:2797]" " -type \"float3\" -0.0018208027000000001 -0.0012664795 0.0022553205000000001 0.0073394775000000002 0.079469681 0.015805840000000002 0.017500400999999999 0.013605117999999999 -0.019063592000000001 -0.044575691000000001 -0.053384780999999999 0.042351781999999998 -0.031404733999999997 -0.045902251999999998 0.035363019000000002 0.022802113999999998 -0.0041885376000000002 -0.046643861000000002 -0.0095853806000000003 0.052089691 0.044003650999999998 -0.036477326999999997 0.0065050124999999999 0.066409409000000003 0.0077550411000000003 -0.030174255000000001 -0.027678578999999998"
 		
-		2 "baby:tweak1" "vlist[0].vertex[2707]" " -type \"float3\" -0.0069997311 -0.022170544 0.014798403"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2708]" " -type \"float3\" -0.0068411827000000001 -0.0035986899999999999 0.0011131762999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2709]" " -type \"float3\" 0.0064468384 -0.0026044846 0.0066938400000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2710]" " -type \"float3\" 0.0040063857999999997 0.0056052207999999996 -0.0010657310000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2712]" " -type \"float3\" -0.00022554397999999999 0.00019216537000000001 -0.00026607513000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2713]" " -type \"float3\" 0.038801670000000003 0.026929854999999999 0.026117801999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2758]" " -type \"float3\" 0.0045793055999999999 -0.016376495000000001 -0.00078368187000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2759]" " -type \"float3\" 0.0014367104 -0.0071372985999999996 0.00062781572000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2760]" " -type \"float3\" 0.016598463000000001 -0.15528106999999999 -0.030142307"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2761]" " -type \"float3\" 0.037841557999999997 -0.12634086999999999 0.0044310688999999997"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2762]" " -type \"float3\" 0.047778368000000002 -0.19656944000000001 -0.018729447999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2763]" " -type \"float3\" 0.0022013187000000001 -0.20302010000000001 -0.071719274"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2764]" " -type \"float3\" 0.017211437 -0.21300506999999999 0.022058621"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2765]" " -type \"float3\" 0.12151337 -0.23697662 0.11376118"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2766]" " -type \"float3\" 0.0020604133999999998 -0.033153533999999998 -0.010730475"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2770]" " -type \"float3\" -0.032673835999999998 -0.13536358000000001 -0.039510965000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2771]" " -type \"float3\" -0.028429507999999999 -0.19911671 -0.00060197710999999995"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2772]" " -type \"float3\" -0.048015594000000002 -0.12178564 -0.036845863"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2773]" " -type \"float3\" -0.030251740999999999 -0.071756840000000002 -0.0069512352000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2774]" " -type \"float3\" 0.050634145999999998 -0.099196910999999999 0.047817870999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2775]" " -type \"float3\" -0.0080795287999999993 -0.018028736 0.00031214951999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2776]" " -type \"float3\" -0.053080558999999999 -0.020246028999999999 -0.0066428781000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2777]" " -type \"float3\" 0.041858672999999999 0.0086832047000000006 -0.0016626716000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2778]" " -type \"float3\" 0.062701701999999998 0.22949265999999999 -0.016221642000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2779]" " -type \"float3\" 0.13453483999999999 0.21381664 0.052927255999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2780]" " -type \"float3\" 0.085274219999999998 0.11992073 0.0089028775999999994"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2781]" " -type \"float3\" 0.051538944000000003 0.082232474999999999 -0.023612260999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2782]" " -type \"float3\" 0.050349235999999999 0.073987961000000005 0.0010617375000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2783]" " -type \"float3\" 0.022522925999999999 0.046037674000000001 0.018064737000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2784]" " -type \"float3\" 0.00085544585999999996 1.9073485999999998e-05 0.00026297568999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2789]" " -type \"float3\" -0.0018208027000000001 -0.0012664795 0.0022553205000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2790]" " -type \"float3\" 0.0073394775000000002 0.079469681 0.015805840000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2791]" " -type \"float3\" 0.017500400999999999 0.013605117999999999 -0.019063592000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2792]" " -type \"float3\" -0.044575691000000001 -0.053384780999999999 0.042351781999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2793]" " -type \"float3\" -0.031404733999999997 -0.045902251999999998 0.035363019000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2794]" " -type \"float3\" 0.022802113999999998 -0.0041885376000000002 -0.046643861000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2795]" " -type \"float3\" -0.0095853806000000003 0.052089691 0.044003650999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2796]" " -type \"float3\" -0.036477326999999997 0.0065050124999999999 0.066409409000000003"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2797]" " -type \"float3\" 0.0077550411000000003 -0.030174255000000001 -0.027678578999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2801]" " -type \"float3\" -0.0041334628999999999 0.0060939788999999998 -0.013269842"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2802]" " -type \"float3\" 0.0038723946000000001 -0.039195061000000003 -0.00030019878999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2803]" " -type \"float3\" 0.039053917 -0.064253806999999996 -0.035192638999999998"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2804]" " -type \"float3\" 0.022344350999999998 -0.062721252000000005 -0.0044938251000000004"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2805]" " -type \"float3\" -0.097327232 -0.17964648999999999 0.098120183"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2806]" " -type \"float3\" -0.033593178000000001 -0.061701775 -0.0057568252000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2807]" " -type \"float3\" 0.078214169 -0.016914367999999999 -0.010270298000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2808]" " -type \"float3\" 0.12082672 -0.037115573999999998 -0.013098031"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2809]" " -type \"float3\" 0.085326194999999994 0.039616107999999997 -0.029045939"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2810]" " -type \"float3\" -0.0075612068000000003 -0.023967266000000001 0.0039469003999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2811]" " -type \"float3\" -0.00056695938000000002 -0.033849716000000002 0.0012492537000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2812]" " -type \"float3\" 0.0054554939000000004 0.00074958800999999999 -0.011007368999999999"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2813]" " -type \"float3\" 0.0030374527000000002 0.01962471 -0.0039606093999999996"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2814]" " -type \"float3\" -0.017146587000000001 0.015501022 0.011250615"
-		
-		2 "baby:tweak1" "vlist[0].vertex[2815]" " -type \"float3\" -0.0019164085 0.0010490416999999999 0.00069987773999999998"
+		2 "baby:tweak1" "vl[0].vt[2801:2815]" " -type \"float3\" -0.0041334628999999999 0.0060939788999999998 -0.013269842 0.0038723946000000001 -0.039195061000000003 -0.00030019878999999999 0.039053917 -0.064253806999999996 -0.035192638999999998 0.022344350999999998 -0.062721252000000005 -0.0044938251000000004 -0.097327232 -0.17964648999999999 0.098120183 -0.033593178000000001 -0.061701775 -0.0057568252000000002 0.078214169 -0.016914367999999999 -0.010270298000000001 0.12082672 -0.037115573999999998 -0.013098031 0.085326194999999994 0.039616107999999997 -0.029045939 -0.0075612068000000003 -0.023967266000000001 0.0039469003999999999 -0.00056695938000000002 -0.033849716000000002 0.0012492537000000001 0.0054554939000000004 0.00074958800999999999 -0.011007368999999999 0.0030374527000000002 0.01962471 -0.0039606093999999996 -0.017146587000000001 0.015501022 0.011250615 -0.0019164085 0.0010490416999999999 0.00069987773999999998"
 		
 		2 "baby:tweak1" "vlist[0].vertex[3106]" " -type \"float3\" -1.3828278000000001e-05 9.5367432000000005e-06 8.4638595999999995e-06"
 		
-		2 "baby:tweak1" "vlist[0].vertex[3110]" " -type \"float3\" -0.10515666 -0.049621581999999997 0.020009756"
-		
-		2 "baby:tweak1" "vlist[0].vertex[3111]" " -type \"float3\" 0.0010631084 -0.043954848999999997 0.042700291000000001"
+		2 "baby:tweak1" "vl[0].vt[3110:3111]" " -type \"float3\" -0.10515666 -0.049621581999999997 0.020009756 0.0010631084 -0.043954848999999997 0.042700291000000001"
 		
 		2 "baby:tweak1" "vlist[0].vertex[3148]" " -type \"float3\" -0.00036501884 0.00033378600999999999 -0.00010710955000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[3152]" " -type \"float3\" -0.090670228000000005 -0.027622223000000001 -0.039089024"
+		2 "baby:tweak1" "vl[0].vt[3152:3153]" " -type \"float3\" -0.090670228000000005 -0.027622223000000001 -0.039089024 0.016460180000000001 -0.030906677 -0.026638746000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[3153]" " -type \"float3\" 0.016460180000000001 -0.030906677 -0.026638746000000001"
+		2 "baby:tweak1" "vl[0].vt[3166:3168]" " -type \"float3\" 6.3061714000000005e-05 4.196167e-05 4.0650367999999999e-05 0.0016287565 -0.045581818000000003 0.046136200000000002 0.10946763 -0.050859451 0.022221923000000001"
 		
-		2 "baby:tweak1" "vlist[0].vertex[3166]" " -type \"float3\" 6.3061714000000005e-05 4.196167e-05 4.0650367999999999e-05"
-		
-		2 "baby:tweak1" "vlist[0].vertex[3167]" " -type \"float3\" 0.0016287565 -0.045581818000000003 0.046136200000000002"
-		
-		2 "baby:tweak1" "vlist[0].vertex[3168]" " -type \"float3\" 0.10946763 -0.050859451 0.022221923000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[3175]" " -type \"float3\" 0.095472931999999996 -0.027538300000000002 -0.039908946000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[3176]" " -type \"float3\" -0.014299035 -0.030874252000000001 -0.029568493000000001"
-		
-		2 "baby:tweak1" "vlist[0].vertex[3177]" " -type \"float3\" 0.00038814545 0.00035095215000000002 -0.0001001358"
+		2 "baby:tweak1" "vl[0].vt[3175:3177]" " -type \"float3\" 0.095472931999999996 -0.027538300000000002 -0.039908946000000001 -0.014299035 -0.030874252000000001 -0.029568493000000001 0.00038814545 0.00035095215000000002 -0.0001001358"
 		
 		5 4 "babyRN" "|baby:baby_master.translateX" "babyRN.placeHolderList[1]" 
 		""
@@ -8651,11 +8314,12 @@ createNode reference -n "bibleRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bibleRN"
 		"bibleRN" 0
-		"bibleRN" 15
-		2 "|bible2:Bible" "visibility" " 1"
+		"bibleRN" 16
+		2 "|bible2:Bible" "visibility" " 0"
 		2 "|bible2:Bible" "translate" " -type \"double3\" 0 -0.17297340820487817 0"
 		
 		2 "|bible2:Bible" "scale" " -type \"double3\" 1 1 1"
+		2 "|bible2:Bible|bible2:BibleMesh" "visibility" " 0"
 		2 "|bible2:Bible|bible2:BibleMesh" "translate" " -type \"double3\" -6.15765195581688118 -6.13746724866894233 8.31368507613926688"
 		
 		2 "|bible2:Bible|bible2:BibleMesh" "rotate" " -type \"double3\" 0 93.34029211918300462 0"
@@ -8791,7 +8455,7 @@ createNode reference -n "chairRN";
 		"chairRN"
 		"chairRN" 0
 		"chairRN" 13
-		2 "|chair:Chair" "visibility" " 1"
+		2 "|chair:Chair" "visibility" " 0"
 		2 "|chair:Chair" "translate" " -type \"double3\" 0 0 0"
 		2 "|chair:Chair" "rotate" " -type \"double3\" 0 0 0"
 		2 "|chair:Chair|chair:ChairPfxToonMesh" "translate" " -type \"double3\" 0 0 0"
@@ -8819,11 +8483,12 @@ createNode reference -n "tableRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"tableRN"
 		"tableRN" 0
-		"tableRN" 12
-		2 "|table1:Table" "visibility" " 1"
+		"tableRN" 13
+		2 "|table1:Table" "visibility" " 0"
 		2 "|table1:Table" "translate" " -type \"double3\" 0 0 0"
 		2 "|table1:Table" "rotate" " -type \"double3\" 0 0 0"
 		2 "|table1:Table" "scale" " -type \"double3\" 1 1 1"
+		2 "|table1:Table|table1:Table" "visibility" " 0"
 		2 "|table1:Table|table1:Table" "translate" " -type \"double3\" -0.30769049323336123 -17.64983317269928165 9.77311325585064417"
 		
 		2 "|table1:Table|table1:Table" "rotate" " -type \"double3\" 0 -87.47281739063808459 0"
@@ -9806,7 +9471,7 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" -0.050088714808225632;
+	setAttr ".d" 0.072649449110031128;
 createNode shadingEngine -n "oceanShader1SG";
 	rename -uid "C24C89DE-4C1E-A7AD-E016-F0AFD29A9F35";
 	setAttr ".ihi" 0;
@@ -9937,7 +9602,8 @@ createNode reference -n "momRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"momRN1"
 		"momRN1" 0
-		"momRN1" 164
+		"momRN1" 165
+		2 "|mom2:MomRig" "visibility" " 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl|mom2:mom_skeleton:mom_l_toe_ptr" 
 		"translate" " -type \"double3\" 0 1.273790469972089 -1.18546281329964631"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl|mom2:mom_skeleton:mom_l_toe_ptr" 
@@ -9945,14 +9611,13 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl|mom2:mom_skeleton:mom_r_toe_ptr" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "translate" 
-		" -type \"double3\" 0 -0.74121877990499208 0.12291717735193909"
+		" -type \"double3\" 0 -0.58528206389903359 -1.15614316656528215"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "translateY" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotate" 
-		" -type \"double3\" 1.30980961495139314 1.83089251203668879 0.063811586478242963"
-		
+		" -type \"double3\" 16.47723604256425034 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateY" 
@@ -9962,8 +9627,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
-		"translate" " -type \"double3\" 0.018583542753407654 0.4551888672752441 1.34229075880974147"
-		
+		"translate" " -type \"double3\" 0 0 -0.00015245647188298199"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"translateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
@@ -9971,8 +9635,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
-		"rotate" " -type \"double3\" 19.08720910320563036 5.26589738037431765 1.08491992638264856"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl" 
@@ -10009,7 +9672,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
-		"rotate" " -type \"double3\" 2.54275842764913396 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
@@ -10039,7 +9702,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl" 
-		"translate" " -type \"double3\" 0.017520473239071414 0.40973317856949848 -0.5181394038167163"
+		"translate" " -type \"double3\" 0.0017456943645590573 0.41283162465719375 -0.14000502862948766"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl" 
 		"translateX" " -av"
@@ -10054,7 +9717,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translate" 
-		" -type \"double3\" 10.74466143139321517 3.96881439962484706 9.68719720269752038"
+		" -type \"double3\" 6.51829768526664477 -0.87445075718938781 7.17262306708193975"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateX" 
 		" -av"
@@ -10063,7 +9726,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotate" 
-		" -type \"double3\" 53.00071612819076705 48.13316597449659895 167.02853559457415145"
+		" -type \"double3\" -112.13420435533998898 34.47497394662699577 -65.97360111456872289"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotateX" 
 		" -av"
@@ -10084,7 +9747,7 @@ createNode reference -n "momRN1";
 		" -type \"double3\" -20.04269075331152905 12.13651728719198353 -8.07319560925702717"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translate" 
-		" -type \"double3\" -5.72746455322210579 2.34391573901831229 8.83926584500479962"
+		" -type \"double3\" -6.14872814733060125 -0.76460452259081835 6.27161677297548881"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateX" 
 		" -av"
@@ -10093,7 +9756,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotate" 
-		" -type \"double3\" -10.5810597170647771 -45.53829491322237999 -109.90874686161183149"
+		" -type \"double3\" -74.24957496459907702 -67.00433584519518604 26.74656326870669432"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotateX" 
 		" -av"
@@ -10102,9 +9765,9 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:DoNotTouch|mom2:mom_spline_ik_DONOTTOUCH" "translate" 
-		" -type \"double3\" -0.0013356933703462907 -2.38315736579704307 -4.09610633746734898"
+		" -type \"double3\" -0.010465695731998887 -2.46035851130300154 -3.43026076560539606"
 		
-		2 "|mom2:MomRig|mom2:DoNotTouch|mom2:mom_spline_ik_DONOTTOUCH" "rotate" " -type \"double3\" 91.89265226586744006 8.45638855496883579 90.35125717278518209"
+		2 "|mom2:MomRig|mom2:DoNotTouch|mom2:mom_spline_ik_DONOTTOUCH" "rotate" " -type \"double3\" 89.98473305777744713 -6.70254255846996649 90.237025464838581"
 		
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateY" "momRN1.placeHolderList[1]" 
 		""
@@ -11155,13 +10818,122 @@ createNode file -n "baby1:reggie_naked2:file4";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "baby1:reggie_naked2:place2dTexture4";
 	rename -uid "E5E9E89E-EC47-9605-6F8C-E2835B2B3E09";
+createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial1";
+	rename -uid "1A5C287E-CD4A-3BDB-AED5-76BDFA4AE385";
+	setAttr -s 2 ".dcrm";
+	setAttr ".dcrm[0].dcrmp" 0;
+	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
+	setAttr ".dcrm[0].dcrmi" 1;
+	setAttr ".dcrm[1].dcrmp" 1;
+	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
+	setAttr ".dcrm[1].dcrmi" 1;
+	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".fcrm[0].fcrmp" 1;
+	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".fcrm[0].fcrmi" 1;
+	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
+	setAttr -s 2 ".rlcrm";
+	setAttr ".rlcrm[0].rlcrmp" 0;
+	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rlcrm[0].rlcrmi" 1;
+	setAttr ".rlcrm[1].rlcrmp" 1;
+	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rlcrm[1].rlcrmi" 1;
+	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".rlwrm[0]"  0 1 1;
+	setAttr -s 2 ".rrcrm";
+	setAttr ".rrcrm[0].rrcrmp" 0;
+	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rrcrm[0].rrcrmi" 1;
+	setAttr ".rrcrm[1].rrcrmp" 1;
+	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rrcrm[1].rrcrmi" 1;
+	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
+createNode shadingEngine -n "bifrostLiquidMaterial1SG";
+	rename -uid "6E3F0514-8944-B5A7-AE1D-65A0E1F5FB7C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode mib_data_string -n "bifrostMeshMRUserData1";
+	rename -uid "8CDA19D4-9341-3728-3950-018262471C14";
+	setAttr ".nam" -type "string" "bifrostMeshObject";
+	setAttr ".val" -type "string" "{}";
+createNode bifrostLiquidMaterial -n "bifrostLiquidMaterial2";
+	rename -uid "B71DF2B9-FA46-8421-5846-C1A7FBBE26D9";
+	setAttr -s 2 ".dcrm";
+	setAttr ".dcrm[0].dcrmp" 0;
+	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
+	setAttr ".dcrm[0].dcrmi" 1;
+	setAttr ".dcrm[1].dcrmp" 1;
+	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
+	setAttr ".dcrm[1].dcrmi" 1;
+	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".fcrm[0].fcrmp" 1;
+	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".fcrm[0].fcrmi" 1;
+	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
+	setAttr -s 2 ".rlcrm";
+	setAttr ".rlcrm[0].rlcrmp" 0;
+	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rlcrm[0].rlcrmi" 1;
+	setAttr ".rlcrm[1].rlcrmp" 1;
+	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rlcrm[1].rlcrmi" 1;
+	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".rlwrm[0]"  0 1 1;
+	setAttr -s 2 ".rrcrm";
+	setAttr ".rrcrm[0].rrcrmp" 0;
+	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rrcrm[0].rrcrmi" 1;
+	setAttr ".rrcrm[1].rrcrmp" 1;
+	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rrcrm[1].rrcrmi" 1;
+	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
+createNode shadingEngine -n "bifrostLiquidMaterial2SG";
+	rename -uid "7C0767DF-474A-C4FA-340D-8A838B79B15E";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode mib_data_string -n "bifrostMeshMRUserData2";
+	rename -uid "A0031418-EF41-CBBA-6539-72B71BF6C4A0";
+	setAttr ".nam" -type "string" "bifrostMeshObject";
+createNode bifrostAttrNotifier -n "tear_emitterShapeAttrNotif";
+	rename -uid "006425BB-4341-A0AD-B434-84B3012C2EE2";
+	addAttr -ci true -sn "bifrostLiquidEnable" -ln "bifrostLiquidEnable" -dv 1 -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidContinuousEmission" -ln "bifrostLiquidContinuousEmission" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostLiquidThickness" -ln "bifrostLiquidThickness" -at "double";
+	addAttr -ci true -sn "bifrostLiquidMode" -ln "bifrostLiquidMode" -min 0 -max 1 -en 
+		"Solid:Shell" -at "enum";
+	addAttr -ci true -sn "bifrostLiquidDensity" -ln "bifrostLiquidDensity" -dv 1000 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidExpansionRate" -ln "bifrostLiquidExpansionRate" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionStrength" -ln "bifrostLiquidStictionStrength" 
+		-at "double";
+	addAttr -ci true -sn "bifrostLiquidStictionBandwidth" -ln "bifrostLiquidStictionBandwidth" 
+		-at "double";
+	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
+	setAttr -k on ".bifrostLiquidEnable";
+	setAttr -k on ".bifrostLiquidContinuousEmission";
+	setAttr -k on ".bifrostLiquidThickness";
+	setAttr -k on ".bifrostLiquidMode";
+	setAttr -k on ".bifrostLiquidDensity";
+	setAttr -k on ".bifrostLiquidExpansionRate";
+	setAttr -k on ".bifrostLiquidStictionStrength";
+	setAttr -k on ".bifrostLiquidStictionBandwidth";
+	setAttr -k on ".bifrostUVProjCon";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 109;
-	setAttr ".unw" 109;
+	setAttr ".o" -20;
+	setAttr ".unw" -20;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -11173,7 +10945,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 157 ".st";
+	setAttr -s 159 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -11186,7 +10958,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 130 ".s";
+	setAttr -s 132 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -11198,7 +10970,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 200 ".u";
+	setAttr -s 202 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 10 ".r";
 select -ne :defaultTextureList1;
@@ -11308,7 +11080,7 @@ connectAttr "Head_Controller_visibility.o" "babyRN.phl[13]";
 connectAttr "Head_Controller_scaleX.o" "babyRN.phl[14]";
 connectAttr "Head_Controller_scaleY.o" "babyRN.phl[15]";
 connectAttr "Head_Controller_scaleZ.o" "babyRN.phl[16]";
-connectAttr "lEyeballShape.iog" "babyRN.phl[17]";
+connectAttr "tear_emitterShape.iog" "babyRN.phl[17]";
 connectAttr "wineRN.phl[1]" "pairBlend2.w";
 connectAttr "wine_bottle_blendPoint1.o" "wineRN.phl[2]";
 connectAttr "wineRN.phl[3]" "pairBlend3.w";
@@ -11324,10 +11096,10 @@ connectAttr "wine_bottle_scaleX.o" "wineRN.phl[12]";
 connectAttr "wine_bottle_scaleY.o" "wineRN.phl[13]";
 connectAttr "wine_bottle_scaleZ.o" "wineRN.phl[14]";
 connectAttr "wineRN.phl[15]" "wine_bottle_pointConstraint1.crp";
-connectAttr "wineRN.phl[16]" "pairBlend3.ro";
-connectAttr "wineRN.phl[17]" "wine_bottle_orientConstraint1.cro";
-connectAttr "wineRN.phl[18]" "wine_bottle_pointConstraint1.cpim";
-connectAttr "wineRN.phl[19]" "wine_bottle_orientConstraint1.cpim";
+connectAttr "wineRN.phl[16]" "wine_bottle_orientConstraint1.cro";
+connectAttr "wineRN.phl[17]" "pairBlend3.ro";
+connectAttr "wineRN.phl[18]" "wine_bottle_orientConstraint1.cpim";
+connectAttr "wineRN.phl[19]" "wine_bottle_pointConstraint1.cpim";
 connectAttr "wineRN.phl[20]" "wine_bottle_pointConstraint1.crt";
 connectAttr "MasterCntrl_translateY.o" "momRN1.phl[1]";
 connectAttr "MasterCntrl_translateZ.o" "momRN1.phl[2]";
@@ -11425,6 +11197,7 @@ connectAttr "persp1_visibility.o" "momBaby.v";
 connectAttr "persp1_scaleX.o" "momBaby.sx";
 connectAttr "persp1_scaleY.o" "momBaby.sy";
 connectAttr "persp1_scaleZ.o" "momBaby.sz";
+connectAttr "perspShape2_centerOfInterest.o" "momBabyShape.coi";
 connectAttr "perspShape2_horizontalFilmAperture.o" "momBabyShape.hfa";
 connectAttr "perspShape2_verticalFilmAperture.o" "momBabyShape.vfa";
 connectAttr "perspShape2_focalLength.o" "momBabyShape.fl";
@@ -11432,7 +11205,6 @@ connectAttr "perspShape2_lensSqueezeRatio.o" "momBabyShape.lsr";
 connectAttr "perspShape2_fStop.o" "momBabyShape.fs";
 connectAttr "perspShape2_focusDistance.o" "momBabyShape.fd";
 connectAttr "perspShape2_shutterAngle.o" "momBabyShape.sa";
-connectAttr "perspShape2_centerOfInterest.o" "momBabyShape.coi";
 connectAttr "addDoubleLinear1.o" "TearGrp.tx";
 connectAttr "addDoubleLinear2.o" "TearGrp.ty";
 connectAttr "addDoubleLinear3.o" "TearGrp.tz";
@@ -11446,6 +11218,12 @@ connectAttr "Tear_rotateX.o" "Tear.rx";
 connectAttr "Tear_rotateY.o" "Tear.ry";
 connectAttr "Tear_rotateZ.o" "Tear.rz";
 connectAttr "polySphere1.out" "TearShape.i";
+connectAttr ":time1.o" "bifrostLiquidContainer1.ctm";
+connectAttr "tear_emitterShapeAttrNotif.om" "bifrostLiquidContainer1.Emitters[0]"
+		;
+connectAttr "bifrostLiquidContainer1.Liquid" "liquidShape1.obj";
+connectAttr "bifrostMeshMRUserData2.msg" "bifrostLiquid1Mesh.miData";
+connectAttr "liquidShape1.mout" "bifrostLiquid1MeshShape.i";
 connectAttr "momRN.phl[63]" "wine_bottle_orientConstraint1.tg[0].tr";
 connectAttr "momRN.phl[67]" "wine_bottle_orientConstraint1.tg[0].tro";
 connectAttr "momRN.phl[68]" "wine_bottle_orientConstraint1.tg[0].tpm";
@@ -11638,6 +11416,8 @@ relationship "link" ":lightLinker1" "bible1:celshadingreggie:surfaceShader1SG.me
 relationship "link" ":lightLinker1" "bible1:surfaceShader1SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "oceanShader1SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "baby1:reggie_naked2:lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bifrostLiquidMaterial2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "mom:mom2:mom:unwrapBaseShaderSG.message" ":defaultLightSet.message";
@@ -11703,6 +11483,8 @@ relationship "shadowLink" ":lightLinker1" "bible1:celshadingreggie:surfaceShader
 relationship "shadowLink" ":lightLinker1" "bible1:surfaceShader1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "oceanShader1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "baby1:reggie_naked2:lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
@@ -13407,6 +13189,30 @@ connectAttr "baby1:reggie_naked2:place2dTexture4.o" "baby1:reggie_naked2:file4.u
 		;
 connectAttr "baby1:reggie_naked2:place2dTexture4.ofs" "baby1:reggie_naked2:file4.fs"
 		;
+connectAttr "bifrostLiquidMaterial1.oc" "bifrostLiquidMaterial1SG.ss";
+connectAttr "bifrostLiquidMaterial2.oc" "bifrostLiquidMaterial2SG.ss";
+connectAttr "liquidShape1.iog" "bifrostLiquidMaterial2SG.dsm" -na;
+connectAttr "bifrostLiquid1MeshShape.iog" "bifrostLiquidMaterial2SG.dsm" -na;
+connectAttr "bifrostLiquidContainer1.Liquid" "bifrostMeshMRUserData2.val";
+connectAttr "tear_emitterShape.bifrostLiquidEnable" "tear_emitterShapeAttrNotif.bifrostLiquidEnable"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidContinuousEmission" "tear_emitterShapeAttrNotif.bifrostLiquidContinuousEmission"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidThickness" "tear_emitterShapeAttrNotif.bifrostLiquidThickness"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidMode" "tear_emitterShapeAttrNotif.bifrostLiquidMode"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidDensity" "tear_emitterShapeAttrNotif.bifrostLiquidDensity"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidExpansionRate" "tear_emitterShapeAttrNotif.bifrostLiquidExpansionRate"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidStictionStrength" "tear_emitterShapeAttrNotif.bifrostLiquidStictionStrength"
+		;
+connectAttr "tear_emitterShape.bifrostLiquidStictionBandwidth" "tear_emitterShapeAttrNotif.bifrostLiquidStictionBandwidth"
+		;
+connectAttr "tear_emitterShape.bifrostUVProjCon" "tear_emitterShapeAttrNotif.bifrostUVProjCon"
+		;
+connectAttr "tear_emitterShape.w" "tear_emitterShapeAttrNotif.im";
 connectAttr "mom:mom2:mom:unwrapBaseShaderSG.pa" ":renderPartition.st" -na;
 connectAttr "mom:mom2:mom:unwrapChekcerShaderSG.pa" ":renderPartition.st" -na;
 connectAttr "mom:mom2:mom:lambert3SG.pa" ":renderPartition.st" -na;
@@ -13479,6 +13285,8 @@ connectAttr "bible1:celshadingreggie:surfaceShader1SG.pa" ":renderPartition.st"
 connectAttr "bible1:surfaceShader1SG.pa" ":renderPartition.st" -na;
 connectAttr "oceanShader1SG.pa" ":renderPartition.st" -na;
 connectAttr "baby1:reggie_naked2:lambert5SG.pa" ":renderPartition.st" -na;
+connectAttr "bifrostLiquidMaterial1SG.pa" ":renderPartition.st" -na;
+connectAttr "bifrostLiquidMaterial2SG.pa" ":renderPartition.st" -na;
 connectAttr "mom:mom2:mom:unwrapBaseShader.msg" ":defaultShaderList1.s" -na;
 connectAttr "mom:mom2:mom:unwrapChekcerShader.msg" ":defaultShaderList1.s" -na;
 connectAttr "mom:mom2:mom:momEyes.msg" ":defaultShaderList1.s" -na;
@@ -13530,6 +13338,8 @@ connectAttr "bible1:BibleBrightnessRamp.msg" ":defaultShaderList1.s" -na;
 connectAttr "bible1:surfaceShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "oceanShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "baby1:baby:rEyeShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bifrostLiquidMaterial1.msg" ":defaultShaderList1.s" -na;
+connectAttr "bifrostLiquidMaterial2.msg" ":defaultShaderList1.s" -na;
 connectAttr "mom:mom2:mom:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
 		;
 connectAttr "mom:mom2:mom:place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na
@@ -13651,6 +13461,8 @@ connectAttr "bible1:ContourContrastStore.msg" ":defaultRenderUtilityList1.u" -na
 		;
 connectAttr "baby1:reggie_naked2:place2dTexture4.msg" ":defaultRenderUtilityList1.u"
 		 -na;
+connectAttr "bifrostMeshMRUserData1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bifrostMeshMRUserData2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "mom:mom2:mom:unwrapTestPattern.msg" ":defaultTextureList1.tx" -na;
 connectAttr "mom:mom2:mom:file1.msg" ":defaultTextureList1.tx" -na;
