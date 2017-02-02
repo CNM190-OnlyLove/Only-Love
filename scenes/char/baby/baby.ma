@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: baby.ma
-//Last modified: Wed, Feb 01, 2017 09:40:43 PM
+//Last modified: Wed, Feb 01, 2017 09:43:45 PM
 //Codeset: 1252
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "811BFB21-4E64-6C42-D65D-E195D8E9DE37";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 38.365128618151246 -26.889607833369723 57.407374449831146 ;
-	setAttr ".r" -type "double3" 1.4616455871922731 -7.0000000000003091 0 ;
+	setAttr ".t" -type "double3" 9.5682693188495183 -21.918613212949005 49.461213714476393 ;
+	setAttr ".r" -type "double3" -0.93835441280772913 -59.000000000000313 -9.6490277746061398e-017 ;
 	setAttr ".rp" -type "double3" -4.7839510131097995e-013 -1.9539925233402755e-013 
 		-3.637978807091713e-012 ;
 	setAttr ".rpt" -type "double3" -43.354745819707844 19.400117369901078 -27.731622266617197 ;
@@ -29,7 +29,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 27.976694434514716;
+	setAttr ".coi" 37.874370401970538;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -17343,6 +17343,548 @@ createNode orientConstraint -n "baby_c_head_def_orientConstraint1" -p "baby_c_he
 	setAttr ".lr" -type "double3" 0 0 -6.3611093629270335e-015 ;
 	setAttr ".rsrr" -type "double3" 0 0 -6.3611093629270335e-015 ;
 	setAttr -k on ".w0";
+createNode transform -n "Facial_Cntrls" -p "baby_c_head_def";
+	rename -uid "4F8BB1D1-476E-0752-1C8E-299338C54A24";
+	setAttr ".t" -type "double3" 2.2386051920209646 0.015360818999531997 0.17483095539490487 ;
+	setAttr ".r" -type "double3" 59.971645048987988 -87.765319681563383 -148.7659200681388 ;
+	setAttr ".s" -type "double3" 0.99999999999999967 0.99999999999999967 0.99999999999999944 ;
+createNode transform -n "LidCntrls" -p "Facial_Cntrls";
+	rename -uid "15A94830-496E-1946-8E26-06BE921015E6";
+createNode transform -n "UpperEyelid_Cntrl_Offset_R" -p "LidCntrls";
+	rename -uid "34FD4FC1-47BE-4BCF-4076-A9A4FDFEDC2A";
+	setAttr ".t" -type "double3" -1.3037407448726495 -0.60999485070143866 2.8430351534386458 ;
+	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
+createNode transform -n "UpperEyelid_Cntrl_R" -p "UpperEyelid_Cntrl_Offset_R";
+	rename -uid "151F962F-4AE0-9851-18CD-CFA32F903020";
+	setAttr ".t" -type "double3" -3.552713678800497e-015 0 1.5777218104420236e-030 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -4.15 -1 ;
+	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "UpperEyelid_Cntrl_RShape" -p "UpperEyelid_Cntrl_R";
+	rename -uid "5EDE3855-4220-FF2D-96BE-9B837B6DAD44";
+	setAttr -k off ".v";
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0 -0.78316809152522959 0.80997294279064391 
+		0 -1.1075669366528342 1.1454747208497764 0 -0.78316809152522993 0.80997294279064425 
+		0 -3.2094518910503089e-016 3.3192991658742452e-016 0 0.7831680915252297 -0.80997294279064402 
+		0 1.1075669366528342 -1.1454747208497764 0 0.78316809152523004 -0.80997294279064469 
+		0 5.9487636224523341e-016 -6.1523670708543261e-016 0 0 0 0 0 0 0 0 0;
+createNode transform -n "UpperEyelid_Cntrl_Offset_L" -p "LidCntrls";
+	rename -uid "BF28923C-42A5-404E-F8CD-4A8E80628349";
+	setAttr ".t" -type "double3" 1.304 -0.60999485070143866 2.8430351534386458 ;
+	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
+createNode transform -n "UpperEyelid_Cntrl_L" -p "UpperEyelid_Cntrl_Offset_L";
+	rename -uid "393C3C68-4636-1919-8743-019E6CE2C547";
+	setAttr ".t" -type "double3" 9.8607613152626476e-031 0 -3.5527136788004954e-015 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -4.15 -1 ;
+	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "UpperEyelid_Cntrl_LShape" -p "UpperEyelid_Cntrl_L";
+	rename -uid "FAE48CEA-4C81-3282-FC6A-1D9379C8AB9D";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "LowerEyelid_Cntrl_Offset_R" -p "LidCntrls";
+	rename -uid "652C3CDC-438C-686F-9E48-C3ADC3804BBB";
+	setAttr ".t" -type "double3" -1.3037407448726495 -1.3899670959796402 2.9130673052682647 ;
+	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
+createNode transform -n "LowerEyelid_Cntrl_R" -p "LowerEyelid_Cntrl_Offset_R";
+	rename -uid "84D737CC-4AC3-0E66-BB25-B0B160E1BE82";
+	setAttr ".t" -type "double3" -3.5527136788004986e-015 0 8.8817841970012507e-015 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 0 -1 ;
+	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "LowerEyelid_Cntrl_RShape" -p "LowerEyelid_Cntrl_R";
+	rename -uid "6D932245-4219-3AA0-F9F0-BBBCA2FAD1E3";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899420089
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388496
+		-0.78361162489122427 -0.78316809152522993 0.026361317899419978
+		-1.1081941875543879 -3.2094518910503089e-016 1.0802965863701526e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419978
+		-3.3392053635905195e-016 1.1075669366528342 -0.037280533295388274
+		0.78361162489122382 0.78316809152523004 -0.026361317899420311
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374091e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899420089
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388496
+		-0.78361162489122427 -0.78316809152522993 0.026361317899419978
+		;
+createNode transform -n "LowerEyelid_Cntrl_Offset_L" -p "LidCntrls";
+	rename -uid "4F6B1EDD-4FB2-46A2-0EAF-B198A90323DF";
+	setAttr ".t" -type "double3" 1.304 -1.3899670959796402 2.9130673052682647 ;
+	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
+createNode transform -n "LowerEyelid_Cntrl_L" -p "LowerEyelid_Cntrl_Offset_L";
+	rename -uid "B04A6B75-4D95-CFC8-3694-C4ADFC03BBF8";
+	setAttr ".t" -type "double3" 1.7763568394002528e-015 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 0 -1 ;
+	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "LowerEyelid_Cntrl_LShape" -p "LowerEyelid_Cntrl_L";
+	rename -uid "309D93E1-45CA-1C3F-DF40-7082198598E6";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "MouthCntrls" -p "Facial_Cntrls";
+	rename -uid "9AF30752-44AE-B983-BF0C-4C84B9D67512";
+createNode transform -n "MouthTip_Cntrl_Offset_L" -p "MouthCntrls";
+	rename -uid "24CF393C-4F2D-29FD-F8AE-CAA59F76D271";
+	setAttr ".t" -type "double3" 0.47406552978951277 -2.8728899885498742 3.3446676559845163 ;
+	setAttr ".s" -type "double3" 0.11920554364652913 0.11920554364652913 0.11920554364652913 ;
+createNode transform -n "MouthTip_Cntrl_L" -p "MouthTip_Cntrl_Offset_L";
+	rename -uid "C46DC65A-4614-5A7D-1CA5-D49D752CC733";
+	setAttr ".t" -type "double3" 8.8817841970012523e-016 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
+	setAttr ".mtxe" yes;
+	setAttr ".mtye" yes;
+	setAttr ".xtxe" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "MouthTip_Cntrl_LShape" -p "MouthTip_Cntrl_L";
+	rename -uid "C8CE85EC-40F0-0062-0499-729B718EE593";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "MouthTip_Cntrl_Offset_R" -p "MouthCntrls";
+	rename -uid "436973DE-4AF8-20AF-6143-90BEDE5D689E";
+	setAttr ".t" -type "double3" -0.474 -2.8728899885498747 3.3446676559845159 ;
+	setAttr ".s" -type "double3" -0.119 0.11920554364652913 0.11920554364652913 ;
+createNode transform -n "MouthTip_Cntrl_R" -p "MouthTip_Cntrl_Offset_R";
+	rename -uid "D3F0D8EB-4C3D-E082-A1F6-ADA65BFBDB60";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
+	setAttr ".mtxe" yes;
+	setAttr ".mtye" yes;
+	setAttr ".xtxe" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "MouthTip_Cntrl_RShape" -p "MouthTip_Cntrl_R";
+	rename -uid "D361EED9-40C1-EE7E-7C67-7A871A4DA84B";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "BottomLip_Cntrl_Offset_R" -p "MouthCntrls";
+	rename -uid "92DE8743-4919-F0DD-F873-56828E219A79";
+	setAttr ".t" -type "double3" -0.22 -2.9976373160702514 3.3446676559845163 ;
+	setAttr ".s" -type "double3" -0.070470024374597123 0.070591744255109307 0.070591744255109307 ;
+createNode transform -n "BottomLip_Cntrl_R" -p "BottomLip_Cntrl_Offset_R";
+	rename -uid "E10C68E8-4FC3-970A-FB59-5297922D96BE";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 2.64 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "BottomLip_Cntrl_RShape" -p "BottomLip_Cntrl_R";
+	rename -uid "91723446-4910-9834-D14C-40B0468DFB44";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "BottomLip_Cntrl_Offset_L" -p "MouthCntrls";
+	rename -uid "307243E6-429C-734E-12EB-BB8497A8FA21";
+	setAttr ".t" -type "double3" 0.21957734017220798 -2.997637316070251 3.3446676559845168 ;
+	setAttr ".s" -type "double3" 0.070591744255109307 0.070591744255109307 0.070591744255109307 ;
+createNode transform -n "BottomLip_Cntrl_L" -p "BottomLip_Cntrl_Offset_L";
+	rename -uid "6F9935F2-4A89-ADB4-8472-5393D25F0B1D";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 2.64 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "BottomLip_Cntrl_LShape" -p "BottomLip_Cntrl_L";
+	rename -uid "8ECB366C-4648-39E1-867B-E1BD12C0ED17";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "TopLip_Cntrl_Offset_L" -p "MouthCntrls";
+	rename -uid "20B220DB-4BFA-A6F8-EF72-E78030F5149E";
+	setAttr ".t" -type "double3" 0.21957734017220801 -2.784507489590446 3.3935995939430321 ;
+	setAttr ".s" -type "double3" 0.070591744255109307 0.070591744255109307 0.070591744255109307 ;
+createNode transform -n "TopLip_Cntrl_L" -p "TopLip_Cntrl_Offset_L";
+	rename -uid "FFB46DA6-4A3D-FD8B-1438-D6863E872793";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -3.29 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.47 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "TopLip_Cntrl_LShape" -p "TopLip_Cntrl_L";
+	rename -uid "A12C0BB1-4A0F-1D60-5313-35B08FB4460A";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "TopLip_Cntrl_Offset_R" -p "MouthCntrls";
+	rename -uid "AE05DC57-40C6-62E6-3168-139659376F88";
+	setAttr ".t" -type "double3" -0.22 -2.7845074895904465 3.3935995939430317 ;
+	setAttr ".s" -type "double3" -0.070470024374597123 0.070591744255109307 0.070591744255109307 ;
+createNode transform -n "TopLip_Cntrl_R" -p "TopLip_Cntrl_Offset_R";
+	rename -uid "C5FF31E7-4832-87D8-A412-31884DBE2ECF";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 -3.29 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.47 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "TopLip_Cntrl_RShape" -p "TopLip_Cntrl_R";
+	rename -uid "AF78482E-4C75-B03F-D8F5-02AD3F64F621";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "CheekCntrls" -p "Facial_Cntrls";
+	rename -uid "314C8EC4-4838-D7DB-300F-6DA14FC89B20";
+createNode transform -n "Cheek_Cntrl_Offset_L" -p "CheekCntrls";
+	rename -uid "9557FD46-4BD2-B55C-A8FB-BDA4F8EDCB9D";
+	setAttr ".t" -type "double3" 2.0526316327782435 -2.1430490533806461 2.8899702393456956 ;
+	setAttr ".r" -type "double3" 0 32.513396681341668 0 ;
+	setAttr ".s" -type "double3" 0.26341320795333806 0.26341320795333806 0.26341320795333806 ;
+createNode transform -n "Cheek_Cntrl_L" -p "Cheek_Cntrl_Offset_L";
+	rename -uid "80879C8E-44F8-8CD0-AB01-FC968C47E0B3";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 0 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "Cheek_Cntrl_LShape" -p "Cheek_Cntrl_L";
+	rename -uid "50B242E0-445B-4A5F-4179-14A55E383E8E";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "Cheek_Cntrl_Offset_R" -p "CheekCntrls";
+	rename -uid "193D30C9-45E7-5167-52E3-2BBF40424A0D";
+	setAttr ".t" -type "double3" -2.053 -2.1430490533806461 2.8899702393456956 ;
+	setAttr ".r" -type "double3" 0 -32.513 0 ;
+	setAttr ".s" -type "double3" 0.26341320795333806 0.26341320795333806 0.26341320795333806 ;
+createNode transform -n "Cheek_Cntrl_R" -p "Cheek_Cntrl_Offset_R";
+	rename -uid "AC21E1D0-43C6-4706-206A-D1B41456E458";
+	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 0 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
+	setAttr ".mtye" yes;
+	setAttr ".xtye" yes;
+createNode nurbsCurve -n "Cheek_Cntrl_RShape" -p "Cheek_Cntrl_R";
+	rename -uid "56973B6C-4AFC-43D8-121B-DEBC213C9F54";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "Nose_Cntrl_Offset_L" -p "Facial_Cntrls";
+	rename -uid "92E4E014-4FE2-9DE6-D2D1-3E9CF4F42486";
+	setAttr ".t" -type "double3" 0.69315669084381282 -1.7581417171275666 3.4033477416472255 ;
+	setAttr ".r" -type "double3" 0 45 0 ;
+	setAttr ".s" -type "double3" 0.15900101929010438 0.15900101929010438 0.15900101929010438 ;
+createNode transform -n "Nose_Cntrl_L" -p "Nose_Cntrl_Offset_L";
+	rename -uid "0E35F9F8-4646-930C-7FEF-05BE842BBD42";
+	setAttr ".t" -type "double3" 0 5.3290705182007538e-015 0 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 0 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.23 0 ;
+	setAttr ".mtye" yes;
+	setAttr ".mtze" yes;
+	setAttr ".xtye" yes;
+	setAttr ".xtze" yes;
+createNode nurbsCurve -n "Nose_Cntrl_LShape" -p "Nose_Cntrl_L";
+	rename -uid "80477B21-405F-7E07-E696-C28DAAD181B3";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
+createNode transform -n "Nose_Cntrl_Offset_R" -p "Facial_Cntrls";
+	rename -uid "273505D8-4343-611C-71FF-16B307FA4BA4";
+	setAttr ".t" -type "double3" -0.693 -1.7581417171275666 3.4033477416472255 ;
+	setAttr ".r" -type "double3" 0 -45 0 ;
+	setAttr ".s" -type "double3" -0.159 0.15900101929010438 0.15900101929010438 ;
+createNode transform -n "Nose_Cntrl_R" -p "Nose_Cntrl_Offset_R";
+	rename -uid "ABA475E0-4334-4801-A8CE-5EBF1A4164B4";
+	setAttr ".t" -type "double3" 0 0.00018223608122123114 0 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr ".s" -type "double3" -1 1 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".mntl" -type "double3" -1 0 -1 ;
+	setAttr ".mxtl" -type "double3" 2.46 1.23 0 ;
+	setAttr ".mtye" yes;
+	setAttr ".mtze" yes;
+	setAttr ".xtye" yes;
+	setAttr ".xtze" yes;
+createNode nurbsCurve -n "Nose_Cntrl_RShape" -p "Nose_Cntrl_R";
+	rename -uid "46F1B047-4D6B-F946-7301-D7BBD551C82A";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
+		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
+		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
+		0.78361162489122382 0.78316809152522993 -0.026361317899420037
+		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
+		0.78361162489122504 -0.78316809152522959 0.026361317899419996
+		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
+		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
+		;
 createNode orientConstraint -n "baby_c_neck1_def_orientConstraint1" -p "baby_c_neck1_def";
 	rename -uid "372F5A6F-4A80-B86A-D102-5BAA97D98575";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
@@ -20609,543 +21151,6 @@ createNode nurbsCurve -n "EyeCntrl_RShape" -p "EyeCntrl_R";
 		-0.58700347136192532 -1.1777949221555608 6.7976913380290389
 		-0.47577808791940868 -1.1275426584703827 6.7989188424929203
 		-0.45786011586120012 -1.1004599160964081 6.8017913193399719
-		;
-createNode transform -n "LidCntrls";
-	rename -uid "15A94830-496E-1946-8E26-06BE921015E6";
-createNode transform -n "UpperEyelid_Cntrl_Offset_R" -p "LidCntrls";
-	rename -uid "34FD4FC1-47BE-4BCF-4076-A9A4FDFEDC2A";
-	setAttr ".t" -type "double3" -1.3037407448726495 -0.60999485070143866 2.8430351534386458 ;
-	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
-createNode transform -n "UpperEyelid_Cntrl_R" -p "UpperEyelid_Cntrl_Offset_R";
-	rename -uid "151F962F-4AE0-9851-18CD-CFA32F903020";
-	setAttr ".t" -type "double3" -3.552713678800497e-015 0 1.5777218104420236e-030 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -4.15 -1 ;
-	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "UpperEyelid_Cntrl_RShape" -p "UpperEyelid_Cntrl_R";
-	rename -uid "5EDE3855-4220-FF2D-96BE-9B837B6DAD44";
-	setAttr -k off ".v";
-	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" 0 -0.78316809152522959 0.80997294279064391 
-		0 -1.1075669366528342 1.1454747208497764 0 -0.78316809152522993 0.80997294279064425 
-		0 -3.2094518910503089e-016 3.3192991658742452e-016 0 0.7831680915252297 -0.80997294279064402 
-		0 1.1075669366528342 -1.1454747208497764 0 0.78316809152523004 -0.80997294279064469 
-		0 5.9487636224523341e-016 -6.1523670708543261e-016 0 0 0 0 0 0 0 0 0;
-createNode transform -n "UpperEyelid_Cntrl_Offset_L" -p "LidCntrls";
-	rename -uid "BF28923C-42A5-404E-F8CD-4A8E80628349";
-	setAttr ".t" -type "double3" 1.304 -0.60999485070143866 2.8430351534386458 ;
-	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
-createNode transform -n "UpperEyelid_Cntrl_L" -p "UpperEyelid_Cntrl_Offset_L";
-	rename -uid "393C3C68-4636-1919-8743-019E6CE2C547";
-	setAttr ".t" -type "double3" 9.8607613152626476e-031 0 -3.5527136788004954e-015 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -4.15 -1 ;
-	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "UpperEyelid_Cntrl_LShape" -p "UpperEyelid_Cntrl_L";
-	rename -uid "FAE48CEA-4C81-3282-FC6A-1D9379C8AB9D";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "LowerEyelid_Cntrl_Offset_R" -p "LidCntrls";
-	rename -uid "652C3CDC-438C-686F-9E48-C3ADC3804BBB";
-	setAttr ".t" -type "double3" -1.3037407448726495 -1.3899670959796402 2.9130673052682647 ;
-	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
-createNode transform -n "LowerEyelid_Cntrl_R" -p "LowerEyelid_Cntrl_Offset_R";
-	rename -uid "84D737CC-4AC3-0E66-BB25-B0B160E1BE82";
-	setAttr ".t" -type "double3" -3.5527136788004986e-015 0 8.8817841970012507e-015 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 0 -1 ;
-	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "LowerEyelid_Cntrl_RShape" -p "LowerEyelid_Cntrl_R";
-	rename -uid "6D932245-4219-3AA0-F9F0-BBBCA2FAD1E3";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899420089
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388496
-		-0.78361162489122427 -0.78316809152522993 0.026361317899419978
-		-1.1081941875543879 -3.2094518910503089e-016 1.0802965863701526e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419978
-		-3.3392053635905195e-016 1.1075669366528342 -0.037280533295388274
-		0.78361162489122382 0.78316809152523004 -0.026361317899420311
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374091e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899420089
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388496
-		-0.78361162489122427 -0.78316809152522993 0.026361317899419978
-		;
-createNode transform -n "LowerEyelid_Cntrl_Offset_L" -p "LidCntrls";
-	rename -uid "4F6B1EDD-4FB2-46A2-0EAF-B198A90323DF";
-	setAttr ".t" -type "double3" 1.304 -1.3899670959796402 2.9130673052682647 ;
-	setAttr ".s" -type "double3" 0.18861317301999703 0.18861317301999703 0.18861317301999703 ;
-createNode transform -n "LowerEyelid_Cntrl_L" -p "LowerEyelid_Cntrl_Offset_L";
-	rename -uid "B04A6B75-4D95-CFC8-3694-C4ADFC03BBF8";
-	setAttr ".t" -type "double3" 1.7763568394002528e-015 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 0 -1 ;
-	setAttr ".mxtl" -type "double3" 1 0.68 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "LowerEyelid_Cntrl_LShape" -p "LowerEyelid_Cntrl_L";
-	rename -uid "309D93E1-45CA-1C3F-DF40-7082198598E6";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "MouthCntrls";
-	rename -uid "9AF30752-44AE-B983-BF0C-4C84B9D67512";
-createNode transform -n "MouthTip_Cntrl_Offset_L" -p "MouthCntrls";
-	rename -uid "24CF393C-4F2D-29FD-F8AE-CAA59F76D271";
-	setAttr ".t" -type "double3" 0.47406552978951277 -2.8728899885498742 3.3446676559845163 ;
-	setAttr ".s" -type "double3" 0.11920554364652913 0.11920554364652913 0.11920554364652913 ;
-createNode transform -n "MouthTip_Cntrl_L" -p "MouthTip_Cntrl_Offset_L";
-	rename -uid "C46DC65A-4614-5A7D-1CA5-D49D752CC733";
-	setAttr ".t" -type "double3" 8.8817841970012523e-016 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
-	setAttr ".mtxe" yes;
-	setAttr ".mtye" yes;
-	setAttr ".xtxe" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "MouthTip_Cntrl_LShape" -p "MouthTip_Cntrl_L";
-	rename -uid "C8CE85EC-40F0-0062-0499-729B718EE593";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "MouthTip_Cntrl_Offset_R" -p "MouthCntrls";
-	rename -uid "436973DE-4AF8-20AF-6143-90BEDE5D689E";
-	setAttr ".t" -type "double3" -0.474 -2.8728899885498747 3.3446676559845159 ;
-	setAttr ".s" -type "double3" -0.119 0.11920554364652913 0.11920554364652913 ;
-createNode transform -n "MouthTip_Cntrl_R" -p "MouthTip_Cntrl_Offset_R";
-	rename -uid "D3F0D8EB-4C3D-E082-A1F6-ADA65BFBDB60";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
-	setAttr ".mtxe" yes;
-	setAttr ".mtye" yes;
-	setAttr ".xtxe" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "MouthTip_Cntrl_RShape" -p "MouthTip_Cntrl_R";
-	rename -uid "D361EED9-40C1-EE7E-7C67-7A871A4DA84B";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "BottomLip_Cntrl_Offset_R" -p "MouthCntrls";
-	rename -uid "92DE8743-4919-F0DD-F873-56828E219A79";
-	setAttr ".t" -type "double3" -0.22 -2.9976373160702514 3.3446676559845163 ;
-	setAttr ".s" -type "double3" -0.070470024374597123 0.070591744255109307 0.070591744255109307 ;
-createNode transform -n "BottomLip_Cntrl_R" -p "BottomLip_Cntrl_Offset_R";
-	rename -uid "E10C68E8-4FC3-970A-FB59-5297922D96BE";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 2.64 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "BottomLip_Cntrl_RShape" -p "BottomLip_Cntrl_R";
-	rename -uid "91723446-4910-9834-D14C-40B0468DFB44";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "BottomLip_Cntrl_Offset_L" -p "MouthCntrls";
-	rename -uid "307243E6-429C-734E-12EB-BB8497A8FA21";
-	setAttr ".t" -type "double3" 0.21957734017220798 -2.997637316070251 3.3446676559845168 ;
-	setAttr ".s" -type "double3" 0.070591744255109307 0.070591744255109307 0.070591744255109307 ;
-createNode transform -n "BottomLip_Cntrl_L" -p "BottomLip_Cntrl_Offset_L";
-	rename -uid "6F9935F2-4A89-ADB4-8472-5393D25F0B1D";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -1.11 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 2.64 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "BottomLip_Cntrl_LShape" -p "BottomLip_Cntrl_L";
-	rename -uid "8ECB366C-4648-39E1-867B-E1BD12C0ED17";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "TopLip_Cntrl_Offset_L" -p "MouthCntrls";
-	rename -uid "20B220DB-4BFA-A6F8-EF72-E78030F5149E";
-	setAttr ".t" -type "double3" 0.21957734017220801 -2.784507489590446 3.3935995939430321 ;
-	setAttr ".s" -type "double3" 0.070591744255109307 0.070591744255109307 0.070591744255109307 ;
-createNode transform -n "TopLip_Cntrl_L" -p "TopLip_Cntrl_Offset_L";
-	rename -uid "FFB46DA6-4A3D-FD8B-1438-D6863E872793";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -3.29 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.47 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "TopLip_Cntrl_LShape" -p "TopLip_Cntrl_L";
-	rename -uid "A12C0BB1-4A0F-1D60-5313-35B08FB4460A";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "TopLip_Cntrl_Offset_R" -p "MouthCntrls";
-	rename -uid "AE05DC57-40C6-62E6-3168-139659376F88";
-	setAttr ".t" -type "double3" -0.22 -2.7845074895904465 3.3935995939430317 ;
-	setAttr ".s" -type "double3" -0.070470024374597123 0.070591744255109307 0.070591744255109307 ;
-createNode transform -n "TopLip_Cntrl_R" -p "TopLip_Cntrl_Offset_R";
-	rename -uid "C5FF31E7-4832-87D8-A412-31884DBE2ECF";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 -3.29 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.47 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "TopLip_Cntrl_RShape" -p "TopLip_Cntrl_R";
-	rename -uid "AF78482E-4C75-B03F-D8F5-02AD3F64F621";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "CheekCntrls";
-	rename -uid "314C8EC4-4838-D7DB-300F-6DA14FC89B20";
-createNode transform -n "Cheek_Cntrl_Offset_L" -p "CheekCntrls";
-	rename -uid "9557FD46-4BD2-B55C-A8FB-BDA4F8EDCB9D";
-	setAttr ".t" -type "double3" 2.0526316327782435 -2.1430490533806461 2.8899702393456956 ;
-	setAttr ".r" -type "double3" 0 32.513396681341668 0 ;
-	setAttr ".s" -type "double3" 0.26341320795333806 0.26341320795333806 0.26341320795333806 ;
-createNode transform -n "Cheek_Cntrl_L" -p "Cheek_Cntrl_Offset_L";
-	rename -uid "80879C8E-44F8-8CD0-AB01-FC968C47E0B3";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 0 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "Cheek_Cntrl_LShape" -p "Cheek_Cntrl_L";
-	rename -uid "50B242E0-445B-4A5F-4179-14A55E383E8E";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "Cheek_Cntrl_Offset_R" -p "CheekCntrls";
-	rename -uid "193D30C9-45E7-5167-52E3-2BBF40424A0D";
-	setAttr ".t" -type "double3" -2.053 -2.1430490533806461 2.8899702393456956 ;
-	setAttr ".r" -type "double3" 0 -32.513 0 ;
-	setAttr ".s" -type "double3" 0.26341320795333806 0.26341320795333806 0.26341320795333806 ;
-createNode transform -n "Cheek_Cntrl_R" -p "Cheek_Cntrl_Offset_R";
-	rename -uid "AC21E1D0-43C6-4706-206A-D1B41456E458";
-	setAttr ".t" -type "double3" 0 0 -1.0658141036401501e-014 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 0 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.23 1 ;
-	setAttr ".mtye" yes;
-	setAttr ".xtye" yes;
-createNode nurbsCurve -n "Cheek_Cntrl_RShape" -p "Cheek_Cntrl_R";
-	rename -uid "56973B6C-4AFC-43D8-121B-DEBC213C9F54";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "Nose_Cntrl_Offset_L";
-	rename -uid "92E4E014-4FE2-9DE6-D2D1-3E9CF4F42486";
-	setAttr ".t" -type "double3" 0.69315669084381282 -1.7581417171275666 3.4033477416472255 ;
-	setAttr ".r" -type "double3" 0 45 0 ;
-	setAttr ".s" -type "double3" 0.15900101929010438 0.15900101929010438 0.15900101929010438 ;
-createNode transform -n "Nose_Cntrl_L" -p "Nose_Cntrl_Offset_L";
-	rename -uid "0E35F9F8-4646-930C-7FEF-05BE842BBD42";
-	setAttr ".t" -type "double3" 0 5.3290705182007538e-015 0 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 0 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.23 0 ;
-	setAttr ".mtye" yes;
-	setAttr ".mtze" yes;
-	setAttr ".xtye" yes;
-	setAttr ".xtze" yes;
-createNode nurbsCurve -n "Nose_Cntrl_LShape" -p "Nose_Cntrl_L";
-	rename -uid "80477B21-405F-7E07-E696-C28DAAD181B3";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		;
-createNode transform -n "Nose_Cntrl_Offset_R";
-	rename -uid "273505D8-4343-611C-71FF-16B307FA4BA4";
-	setAttr ".t" -type "double3" -0.693 -1.7581417171275666 3.4033477416472255 ;
-	setAttr ".r" -type "double3" 0 -45 0 ;
-	setAttr ".s" -type "double3" -0.159 0.15900101929010438 0.15900101929010438 ;
-createNode transform -n "Nose_Cntrl_R" -p "Nose_Cntrl_Offset_R";
-	rename -uid "ABA475E0-4334-4801-A8CE-5EBF1A4164B4";
-	setAttr ".t" -type "double3" 0 0.00018223608122123114 0 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr ".s" -type "double3" -1 1 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".mntl" -type "double3" -1 0 -1 ;
-	setAttr ".mxtl" -type "double3" 2.46 1.23 0 ;
-	setAttr ".mtye" yes;
-	setAttr ".mtze" yes;
-	setAttr ".xtye" yes;
-	setAttr ".xtze" yes;
-createNode nurbsCurve -n "Nose_Cntrl_RShape" -p "Nose_Cntrl_R";
-	rename -uid "46F1B047-4D6B-F946-7301-D7BBD551C82A";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
-		-1.1081941875543879 -3.2094518910503094e-016 1.0802965863701308e-017
-		-0.78361162489122449 0.7831680915252297 -0.026361317899419819
-		-3.3392053635905195e-016 1.1075669366528342 -0.03728053329538792
-		0.78361162489122382 0.78316809152522993 -0.026361317899420037
-		1.1081941875543879 5.9487636224523341e-016 -2.0023447157374276e-017
-		0.78361162489122504 -0.78316809152522959 0.026361317899419996
-		-1.2643170607829326e-016 -1.1075669366528342 0.037280533295388031
-		-0.78361162489122427 -0.78316809152522993 0.026361317899420037
 		;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "C6408F1D-AB49-B837-16C0-32B6F8730796";
@@ -37990,6 +37995,7 @@ connectAttr "Head_Cntrl.ro" "baby_c_head_def_orientConstraint1.tg[0].tro";
 connectAttr "Head_Cntrl.pm" "baby_c_head_def_orientConstraint1.tg[0].tpm";
 connectAttr "baby_c_head_def_orientConstraint1.w0" "baby_c_head_def_orientConstraint1.tg[0].tw"
 		;
+connectAttr "makeNurbCircle71.oc" "UpperEyelid_Cntrl_RShape.cr";
 connectAttr "baby_c_neck1_def.ro" "baby_c_neck1_def_orientConstraint1.cro";
 connectAttr "baby_c_neck1_def.pim" "baby_c_neck1_def_orientConstraint1.cpim";
 connectAttr "baby_c_neck1_def.jo" "baby_c_neck1_def_orientConstraint1.cjo";
@@ -38430,7 +38436,6 @@ connectAttr "baby_c_spine1_def.pm" "Spine_Cntrl_01_pointConstraint1.tg[0].tpm";
 connectAttr "Spine_Cntrl_01_pointConstraint1.w0" "Spine_Cntrl_01_pointConstraint1.tg[0].tw"
 		;
 connectAttr "transformGeometry1.og" "Eye_TrackerShape.cr";
-connectAttr "makeNurbCircle71.oc" "UpperEyelid_Cntrl_RShape.cr";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":PreviewImrRayTracyOff.msg" ":mentalrayItemsList.opt" -na;
