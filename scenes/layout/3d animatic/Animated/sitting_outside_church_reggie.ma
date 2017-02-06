@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: sitting_outside_church_reggie.ma
-//Last modified: Mon, Feb 06, 2017 02:39:24 PM
+//Last modified: Mon, Feb 06, 2017 02:45:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "liquor_store" -dr 1 -rfn "liquor_storeRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/veronicachen/Desktop/Only-Love//assets/liquor_store/liquor_store.ma";
@@ -57,8 +57,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "13DF4CCC-A24C-56FF-B347-8BAA32859CE4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2198.8425300453373 21.269656841298897 -503.02608095431964 ;
-	setAttr ".r" -type "double3" -21.938352725616564 -31.400000000001565 -9.3156572860584755e-016 ;
+	setAttr ".t" -type "double3" -2338.5183507034271 102.48040591732385 -568.43960803031553 ;
+	setAttr ".r" -type "double3" -44.738352725616622 -72.200000000001566 -2.0808659013246196e-014 ;
 	setAttr ".rp" -type "double3" -2.2737367544323206e-013 3.5527136788005009e-015 -2.2737367544323206e-013 ;
 	setAttr ".rpt" -type "double3" 2.4535367069326406e-013 -3.7240870309921297e-015 
 		-7.9292409312733225e-014 ;
@@ -67,7 +67,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 77.278392047458539;
+	setAttr ".coi" 161.90565135240433;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1507,7 +1507,7 @@ createNode mesh -n "baby2:legShape" -p "baby2:leg";
 		-2.3841858e-007 0 0 0;
 	setAttr ".dr" 1;
 createNode fosterParent -n "redSoloCupRNfosterParent1";
-	rename -uid "8D9A6591-4906-7088-9DAB-679D7BCCEEE6";
+	rename -uid "59DC826A-44A2-1A8B-3453-108EF137963D";
 createNode parentConstraint -n "CoinCup_parentConstraint1" -p "redSoloCupRNfosterParent1";
 	rename -uid "DDA0F30C-44AB-7A63-6528-5BA44F44CE1F";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Wrist_FK_LW0" -dv 1 -min 0 -at "double";
@@ -5480,17 +5480,17 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6F8F63E7-40AA-67CE-D40A-51A47B78E564";
+	rename -uid "B4389B6B-4C34-3767-A915-A391CE4D2E2A";
 	setAttr -s 85 ".lnk";
 	setAttr -s 85 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F350C40F-4158-3337-222D-AE9AF927B68A";
+	rename -uid "79A7F09A-4C59-A469-868D-AF96DDAE8554";
 	setAttr ".cdl" 2;
 	setAttr -s 7 ".dli[1:6]"  1 0 0 0 2 3;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2E0E5D4F-6948-FB65-C22F-2BAC379F4B02";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7AF06016-40A3-3561-C9C2-F2A15D31D280";
+	rename -uid "3DA6C511-4E22-4F19-80A9-949C60D9A59E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5FFAE80F-E642-18B4-EBDE-64B5602E8DF8";
 	setAttr ".g" yes;
@@ -10515,39 +10515,39 @@ createNode audio -n "animatic_audio2";
 createNode animCurveTL -n "ChestCntrl_translateX";
 	rename -uid "E914B398-4AF3-67E6-5F7F-8FAFA15B2D29";
 	setAttr ".tan" 3;
-	setAttr -s 8 ".ktv[0:7]"  1 0 18 -1.033385396378425 35 0.14538223307847337
-		 46 -0.021129485872490583 114 -0.021129485872490583 126 0.74267599330594036 143 0.23211616297548343
-		 149 0;
+	setAttr -s 8 ".ktv[0:7]"  -4 -0.0053814714128703756 13 -1.0387668677912953
+		 30 0.14000076166560299 46 -0.021129485872490583 114 -0.021129485872490583 126 0.74267599330594036
+		 143 0.23211616297548343 149 0;
 	setAttr -s 8 ".kit[1:7]"  1 3 3 3 3 3 3;
 	setAttr -s 8 ".kot[1:7]"  1 3 3 3 3 3 3;
 	setAttr -s 8 ".kwl[1:7]" no yes yes yes yes yes yes;
-	setAttr -s 8 ".kix[1:7]"  1.5687538385391235 0.70833337306976318 
-		0.45833325386047363 2.8333334922790527 0.5 0.70833349227905273 0.25;
+	setAttr -s 8 ".kix[1:7]"  1.5687538385391235 0.70833331346511841 
+		0.66666662693023682 2.8333334922790527 0.5 0.70833349227905273 0.25;
 	setAttr -s 8 ".kiy[1:7]"  0.015137428417801857 0 0 0 0 0 0;
-	setAttr -s 8 ".kox[1:7]"  1.5687540769577026 0.45833325386047363 
+	setAttr -s 8 ".kox[1:7]"  1.5687540769577026 0.66666662693023682 
 		2.8333334922790527 0.5 0.70833349227905273 0.25 0.25;
 	setAttr -s 8 ".koy[1:7]"  0.015137443318963051 0 0 0 0 0 0;
 createNode animCurveTL -n "ChestCntrl_translateY";
 	rename -uid "747EA822-45DF-CAD0-2A44-3FA9E6E4DD7D";
 	setAttr ".tan" 3;
-	setAttr -s 8 ".ktv[0:7]"  1 0 18 -0.31367821617245961 35 0.029641327802930106
-		 46 0.039732947133291618 114 0.039732947133291618 126 -1.8222563358139574 143 -1.0469789090597819
-		 149 0;
+	setAttr -s 8 ".ktv[0:7]"  -4 -0.0053814714128703756 13 -0.31905968758532999
+		 30 0.024259856390059731 46 0.039732947133291618 114 0.039732947133291618 126 -1.8222563358139574
+		 143 -1.0469789090597819 149 0;
 	setAttr -s 8 ".kit[1:7]"  1 3 3 3 3 1 3;
 	setAttr -s 8 ".kot[1:7]"  1 3 3 3 3 1 3;
 	setAttr -s 8 ".kwl[1:7]" no yes yes yes yes yes yes;
-	setAttr -s 8 ".kix[1:7]"  1.4655036926269531 0.70833337306976318 
-		0.45833325386047363 2.8333334922790527 0.5 0.63244885206222534 0.25;
+	setAttr -s 8 ".kix[1:7]"  1.4655036926269531 0.70833331346511841 
+		0.66666662693023682 2.8333334922790527 0.5 0.63244885206222534 0.25;
 	setAttr -s 8 ".kiy[1:7]"  -0.015137430280447006 0 0 0 0 1.7755676507949829 
 		0;
-	setAttr -s 8 ".kox[1:7]"  1.4655036926269531 0.45833325386047363 
+	setAttr -s 8 ".kox[1:7]"  1.4655036926269531 0.66666662693023682 
 		2.8333334922790527 0.5 0.70833349227905273 0.22321723401546478 0.25;
 	setAttr -s 8 ".koy[1:7]"  -0.015137430280447006 0 0 0 0 0.62667083740234375 
 		0;
 createNode animCurveTL -n "ChestCntrl_translateZ";
 	rename -uid "6077C855-4377-4328-1593-B9BD10F1A9ED";
 	setAttr ".tan" 3;
-	setAttr -s 8 ".ktv[0:7]"  1 0 18 0 31 0 37 0 114 3.3378614031816398e-019
+	setAttr -s 8 ".ktv[0:7]"  -4 0 13 0 26 0 32 0 114 3.3378614031816398e-019
 		 126 -1.7760807165583244e-016 143 -1.6921913178916079e-016 149 -4.708511288035579e-017;
 createNode animCurveTU -n "ChestCntrl_visibility";
 	rename -uid "2CA896C2-4598-7961-4D0D-AEA435CE40AA";
@@ -10557,11 +10557,11 @@ createNode animCurveTU -n "ChestCntrl_visibility";
 createNode animCurveTA -n "ChestCntrl_rotateX";
 	rename -uid "A11CA06E-4417-4602-5612-FEB8F58C3514";
 	setAttr ".tan" 3;
-	setAttr -s 8 ".ktv[0:7]"  1 0 18 0 31 0 37 0 114 0 126 0 143 0 149 0;
+	setAttr -s 8 ".ktv[0:7]"  -4 0 13 0 26 0 32 0 114 0 126 0 143 0 149 0;
 createNode animCurveTA -n "ChestCntrl_rotateY";
 	rename -uid "CB670779-4ADD-46C1-25BD-B0802C6B5D97";
 	setAttr ".tan" 3;
-	setAttr -s 8 ".ktv[0:7]"  1 0 18 0 31 0 37 0 114 0 126 0 143 0 149 0;
+	setAttr -s 8 ".ktv[0:7]"  -4 0 13 0 26 0 32 0 114 0 126 0 143 0 149 0;
 createNode animCurveTA -n "ChestCntrl_rotateZ";
 	rename -uid "34F83CD1-401D-BEC7-3510-3087BFFD10CE";
 	setAttr ".tan" 3;
@@ -11327,8 +11327,8 @@ connectAttr "CoinCup_scaleX.o" "redSoloCupRN.phl[8]";
 connectAttr "CoinCup_scaleY.o" "redSoloCupRN.phl[9]";
 connectAttr "CoinCup_scaleZ.o" "redSoloCupRN.phl[10]";
 connectAttr "CoinCup_visibility.o" "redSoloCupRN.phl[11]";
-connectAttr "redSoloCupRN.phl[12]" "pairBlend3.ro";
-connectAttr "redSoloCupRN.phl[13]" "CoinCup_parentConstraint1.cro";
+connectAttr "redSoloCupRN.phl[12]" "CoinCup_parentConstraint1.cro";
+connectAttr "redSoloCupRN.phl[13]" "pairBlend3.ro";
 connectAttr "redSoloCupRN.phl[14]" "CoinCup_parentConstraint1.cpim";
 connectAttr "redSoloCupRN.phl[15]" "CoinCup_parentConstraint1.crp";
 connectAttr "redSoloCupRN.phl[16]" "CoinCup_parentConstraint1.crt";
