@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: baby_cries3.ma
-//Last modified: Thu, Feb 02, 2017 10:56:24 PM
+//Last modified: Fri, Feb 03, 2017 09:32:45 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "baby" -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//scenes/char/baby/baby.ma";
 file -r -ns "baby" -dr 1 -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/emileechen/Documents/project/Only-Love//scenes/char/baby/baby.ma";
@@ -23,17 +23,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D510BDC2-B44F-B2C0-AB90-A6A7466BDA9D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.377293700302259 -12.475060282166684 -20.311861087659814 ;
-	setAttr ".r" -type "double3" -21.938352729576248 91.399999999980309 -7.6333312355124402e-14 ;
+	setAttr ".t" -type "double3" 7.1827920488451689 -13.451484274927367 -16.625327982956847 ;
+	setAttr ".r" -type "double3" -24.33835267742429 -295.80000000002792 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7F444F1C-AE49-7C60-C2B0-2C96A3A4FC63";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 9.6316805284920566;
+	setAttr ".coi" 6.4556273892510685;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.4457450287484253 -16.073540648546285 -20.09357873982902 ;
+	setAttr ".tp" -type "double3" 0.035863479394918407 -18.828045926189898 -16.580641412186381 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr -s 10 ".b";
 createNode transform -s -n "top";
@@ -86,7 +86,7 @@ createNode camera -s -n "sideShape" -p "side";
 createNode transform -n "tear_source";
 	rename -uid "13132071-0147-77FE-61BB-7DBCCCABCB7F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.2883117275974556 -15.90044030612215 -20.075539055242778 ;
+	setAttr ".t" -type "double3" 1.2883117275974556 -15.960407260916357 -20.001271649333958 ;
 	setAttr ".s" -type "double3" 0.4 0.4 0.4 ;
 createNode mesh -n "tear_sourceShape" -p "tear_source";
 	rename -uid "8C5D4B65-F943-B3E8-370F-07A79779CB24";
@@ -282,16 +282,18 @@ createNode bifrostContainer -n "bifrostLiquidContainer1" -p "bifrostLiquid1";
 	setAttr -k on -cb off ".sfr";
 	setAttr -k on ".Emitters[0]";
 	setAttr -k on ".Emitters";
-	setAttr -s 2 ".Colliders";
+	setAttr -s 4 ".Colliders";
 	setAttr -k on ".Colliders[0]";
 	setAttr -k on ".Colliders[1]";
+	setAttr -k on ".Colliders[2]";
+	setAttr -k on ".Colliders[3]";
 	setAttr -k on ".Colliders";
-	setAttr -k on ".masterVoxelSize" 0.05000000074505806;
+	setAttr -k on ".masterVoxelSize" 0.029999999329447746;
 	setAttr -k on ".gravityMagnitude" 9.8000001907348633;
 	setAttr -k on ".gravityDirection" -type "float3" 0 -1.5 0 ;
 	setAttr -k on ".solidVoxelScale" 1;
 	setAttr -k on ".forceVoxelScale" 1;
-	setAttr -k on ".transportStepAdaptivity" 0.31999999284744263;
+	setAttr -k on ".transportStepAdaptivity" 0.60305345058441162;
 	setAttr -k on ".transportTimeScale" 1;
 	setAttr -k on ".minSteps" 1;
 	setAttr -k on ".maxSteps" 1000;
@@ -677,15 +679,15 @@ createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "081D4A52-1A4C-FC34-47BF-9193887072B2";
 	setAttr ".ce" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F85FBCDA-134C-9A87-B2DA-B4B9D76CCD5B";
+	rename -uid "1BB34DE2-DA4B-F666-5D63-11B3D8A09A30";
 	setAttr -s 22 ".lnk";
 	setAttr -s 22 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "14041FF4-B04E-4017-434E-1C801161C34A";
+	rename -uid "313BBD75-1447-1F72-E7B7-50B62D9F8A06";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4ECAEF98-4D4B-9F46-9E76-C6837D703512";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1DA93C15-624B-B0E8-1CA6-28B384758E10";
+	rename -uid "C10CF3D6-DD4C-5F7E-BCB6-649AC26B3965";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "332FD3FB-CF44-8D2C-BB11-AF8FE28BBA8E";
 	setAttr ".g" yes;
@@ -715,10 +717,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
 		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 1\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1243\n                -height 692\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1115\n                -height 692\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1243\n            -height 692\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1115\n            -height 692\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -764,8 +766,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1243\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1243\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1115\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1115\\n    -height 692\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -774,7 +776,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "babyRN";
 	rename -uid "C0242CEF-F446-3DD0-5384-5783D4A242EA";
-	setAttr -s 36 ".phl";
+	setAttr -s 38 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -811,6 +813,8 @@ createNode reference -n "babyRN";
 	setAttr ".phl[34]" 0;
 	setAttr ".phl[35]" 0;
 	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"babyRN"
 		"babyRN" 6
@@ -825,7 +829,7 @@ createNode reference -n "babyRN";
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby_lf_eye_def" 
 		"translate" " -type \"double3\" 1.42580639060224046 1.78697592065856825 1.43411417712872424"
 		
-		"babyRN" 77
+		"babyRN" 106
 		1 |baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape "bifrostColliderEnable" 
 		"bifrostColliderEnable" " -ci 1 -dv 1 -min 0 -max 1 -at \"bool\""
 		1 |baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape "bifrostColliderThickness" 
@@ -842,6 +846,7 @@ createNode reference -n "babyRN";
 		"bifrostColliderMode" "bifrostColliderMode" " -ci 1 -min 0 -max 1 -en \"Solid:Shell\" -at \"enum\""
 		
 		2 "|baby:bottom|baby:bottomShape" "renderable" " 0"
+		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body" "visibility" " 1"
 		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape" "quadSplit" 
 		" 0"
 		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape" "bifrostColliderEnable" 
@@ -851,6 +856,9 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape" "bifrostColliderMode" 
 		" -k 1 0"
 		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -80 1.77004248994640601 -10"
+		
+		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
+		"translate" " -type \"double3\" 1.15684097941365072 1.89189900088690766 1.3621812674578444"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape" 
 		"quadSplit" " 0"
@@ -880,8 +888,33 @@ createNode reference -n "babyRN";
 		
 		2 "baby:blendShape1" "weight" " -s 41"
 		2 "baby:blendShape1" "weight[0]" " -av"
+		2 "baby:blendShape1" "weight[1]" " -av"
 		2 "baby:blendShape1" "weight[2]" " -av"
+		2 "baby:blendShape1" "weight[3]" " -av"
 		2 "baby:blendShape1" "weight[4]" " -av"
+		2 "baby:blendShape1" "weight[5]" " -av"
+		2 "baby:blendShape1" "weight[6]" " -av"
+		2 "baby:blendShape1" "weight[7]" " -av"
+		2 "baby:blendShape1" "weight[8]" " -av"
+		2 "baby:blendShape1" "weight[9]" " -av"
+		2 "baby:blendShape1" "weight[10]" " -av"
+		2 "baby:blendShape1" "weight[11]" " -av"
+		2 "baby:blendShape1" "weight[12]" " -av"
+		2 "baby:blendShape1" "weight[13]" " -av"
+		2 "baby:blendShape1" "weight[14]" " -av"
+		2 "baby:blendShape1" "weight[15]" " -av"
+		2 "baby:blendShape1" "weight[16]" " -av"
+		2 "baby:blendShape1" "weight[17]" " -av"
+		2 "baby:blendShape1" "weight[18]" " -av"
+		2 "baby:blendShape1" "weight[19]" " -av"
+		2 "baby:blendShape1" "weight[20]" " -av"
+		2 "baby:blendShape1" "weight[21]" " -av"
+		2 "baby:blendShape1" "weight[22]" " -av"
+		2 "baby:blendShape1" "weight[23]" " -av"
+		2 "baby:blendShape1" "weight[24]" " -av"
+		2 "baby:blendShape1" "weight[25]" " -av"
+		2 "baby:blendShape1" "weight[26]" " -av"
+		2 "baby:blendShape1" "weight[27]" " -av"
 		2 "baby:blendShape1" "inputTarget[0].inputTargetGroup" " -s 41"
 		2 "baby:blendShape1" "inputTarget[0].inputTargetGroup[40].inputTargetItem[6000].inputPointsTarget" 
 		(" -type \"pointArray\" 4508 0.098167531192302704 -17.66466236114501953 -25.42288541793823242 1 0.18030786141753197 -16.82747673988342285 -25.23469257354736328 1 0.24564226716756821 -16.00406092405319214 -24.78798604011535645 1 0.28898563235998154 -15.34190922975540161 -24.27311038970947266 1 0.31710259988903999 -14.85260468721389771 -23.8264153003692627 1 0.34090125188231468 -14.46355515718460083 -23.49566388130187988 1 0.36161820217967033 -14.12847119569778442 -23.21450924873352051 1 0.38796287775039673 -13.79744637012481689 -23.03626656532287598 1 0.43842358514666557 -13.31066763401031494 -22.97255897521972656 1 0.45854898169636726 -13.1201484203338623 -22.95398092269897461 1 0.47635809332132339 -12.92371451854705811 -22.88504481315612793 1 0.48302114382386208 -12.79193294048309326 -22.74934267997741699 1 0.47539182007312775 -12.75795578956604004 -22.55612850189208984 1 0.46141448616981506 -12.77092361450195312 -22.34398126602172852 1 0.44946723431348801 -12.78491067886352539 -22.16811752319335938 1 0.44934833"
@@ -1184,6 +1217,8 @@ createNode reference -n "babyRN";
 		2 "baby:file5" "fileTextureName" " -type \"string\" \"/Users/emileechen/Documents/project/Only-Love//sourceimages/Baby/baby-tex.png\""
 		
 		2 "baby:file5" "colorSpace" " -type \"string\" \"sRGB\""
+		3 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_diaper:diaper|baby:baby_diaper:diaperShape.instObjGroups" 
+		"baby:lambert3SG.dagSetMembers" "-na"
 		3 "baby:tweak1.vlist[0].vertex[0]" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.tweakLocation" 
 		""
 		3 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.instObjGroups" 
@@ -1192,75 +1227,77 @@ createNode reference -n "babyRN";
 		"baby:reggie_naked2:lambert5SG.dagSetMembers" "-na"
 		3 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball|baby:baby:rEyeballShape.instObjGroups" 
 		"baby:reggie_naked2:lambert4SG.dagSetMembers" "-na"
-		3 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_diaper:diaper|baby:baby_diaper:diaperShape.instObjGroups" 
-		"baby:lambert3SG.dagSetMembers" "-na"
 		5 0 "babyRN" "baby:tweak1.vlist[0].vertex[0]" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.tweakLocation" 
 		"babyRN.placeHolderList[1]" "babyRN.placeHolderList[2]" "baby:baby_bodyShape.twl"
 		
-		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.bifrostColliderEnable" 
-		"babyRN.placeHolderList[3]" ""
-		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.bifrostColliderThickness" 
-		"babyRN.placeHolderList[4]" ""
-		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.bifrostColliderMode" 
-		"babyRN.placeHolderList[5]" ""
 		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.worldMesh" 
+		"babyRN.placeHolderList[3]" ""
+		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.worldMesh" 
+		"babyRN.placeHolderList[4]" ""
+		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.bifrostColliderEnable" 
+		"babyRN.placeHolderList[5]" ""
+		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.bifrostColliderThickness" 
 		"babyRN.placeHolderList[6]" ""
-		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.bifrostColliderEnable" 
+		5 3 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.bifrostColliderMode" 
 		"babyRN.placeHolderList[7]" ""
-		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.bifrostColliderThickness" 
-		"babyRN.placeHolderList[8]" ""
-		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.bifrostColliderMode" 
-		"babyRN.placeHolderList[9]" ""
 		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.worldMesh" 
+		"babyRN.placeHolderList[8]" ""
+		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.worldMesh" 
+		"babyRN.placeHolderList[9]" ""
+		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.bifrostColliderEnable" 
 		"babyRN.placeHolderList[10]" ""
-		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:UpperEyelid_Cntrl_Offset_L|baby:UpperEyelid_Cntrl_L.translateY" 
+		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.bifrostColliderThickness" 
 		"babyRN.placeHolderList[11]" ""
-		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:UpperEyelid_Cntrl_Offset_L|baby:UpperEyelid_Cntrl_L.visibility" 
+		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.bifrostColliderMode" 
 		"babyRN.placeHolderList[12]" ""
-		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:LowerEyelid_Cntrl_Offset_L|baby:LowerEyelid_Cntrl_L.translateY" 
+		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:UpperEyelid_Cntrl_Offset_L|baby:UpperEyelid_Cntrl_L.translateY" 
 		"babyRN.placeHolderList[13]" ""
-		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:LowerEyelid_Cntrl_Offset_L|baby:LowerEyelid_Cntrl_L.visibility" 
+		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:UpperEyelid_Cntrl_Offset_L|baby:UpperEyelid_Cntrl_L.visibility" 
 		"babyRN.placeHolderList[14]" ""
+		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:LowerEyelid_Cntrl_Offset_L|baby:LowerEyelid_Cntrl_L.translateY" 
+		"babyRN.placeHolderList[15]" ""
+		5 4 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:LidCntrls|baby:LowerEyelid_Cntrl_Offset_L|baby:LowerEyelid_Cntrl_L.visibility" 
+		"babyRN.placeHolderList[16]" ""
 		5 3 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_diaper:diaper|baby:baby_diaper:diaperShape.instObjGroups" 
-		"babyRN.placeHolderList[15]" "baby:lambert3SG.dsm"
-		5 4 "babyRN" "baby:babyDiaperShader.color" "babyRN.placeHolderList[16]" 
+		"babyRN.placeHolderList[17]" "baby:lambert3SG.dsm"
+		5 4 "babyRN" "baby:babyDiaperShader.color" "babyRN.placeHolderList[18]" 
 		""
-		5 4 "babyRN" "baby:materialInfo2.texture" "babyRN.placeHolderList[17]" 
+		5 4 "babyRN" "baby:materialInfo2.texture" "babyRN.placeHolderList[19]" 
 		""
 		5 0 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball|baby:baby:rEyeballShape.instObjGroups" 
-		"baby:reggie_naked2:lambert4SG.dagSetMembers" "babyRN.placeHolderList[18]" "babyRN.placeHolderList[19]" 
+		"baby:reggie_naked2:lambert4SG.dagSetMembers" "babyRN.placeHolderList[20]" "babyRN.placeHolderList[21]" 
 		"baby:reggie_naked2:lambert4SG.dsm"
 		5 0 "babyRN" "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball|baby:baby:lEyeballShape.instObjGroups" 
-		"baby:reggie_naked2:lambert5SG.dagSetMembers" "babyRN.placeHolderList[20]" "babyRN.placeHolderList[21]" 
+		"baby:reggie_naked2:lambert5SG.dagSetMembers" "babyRN.placeHolderList[22]" "babyRN.placeHolderList[23]" 
 		"baby:reggie_naked2:lambert5SG.dsm"
-		5 4 "babyRN" "baby:blendShape1.weight[28]" "babyRN.placeHolderList[22]" 
+		5 4 "babyRN" "baby:blendShape1.weight[28]" "babyRN.placeHolderList[24]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[29]" "babyRN.placeHolderList[23]" 
+		5 4 "babyRN" "baby:blendShape1.weight[29]" "babyRN.placeHolderList[25]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[30]" "babyRN.placeHolderList[24]" 
+		5 4 "babyRN" "baby:blendShape1.weight[30]" "babyRN.placeHolderList[26]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[31]" "babyRN.placeHolderList[25]" 
+		5 4 "babyRN" "baby:blendShape1.weight[31]" "babyRN.placeHolderList[27]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[32]" "babyRN.placeHolderList[26]" 
+		5 4 "babyRN" "baby:blendShape1.weight[32]" "babyRN.placeHolderList[28]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[33]" "babyRN.placeHolderList[27]" 
+		5 4 "babyRN" "baby:blendShape1.weight[33]" "babyRN.placeHolderList[29]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[34]" "babyRN.placeHolderList[28]" 
+		5 4 "babyRN" "baby:blendShape1.weight[34]" "babyRN.placeHolderList[30]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[35]" "babyRN.placeHolderList[29]" 
+		5 4 "babyRN" "baby:blendShape1.weight[35]" "babyRN.placeHolderList[31]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[36]" "babyRN.placeHolderList[30]" 
+		5 4 "babyRN" "baby:blendShape1.weight[36]" "babyRN.placeHolderList[32]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[37]" "babyRN.placeHolderList[31]" 
+		5 4 "babyRN" "baby:blendShape1.weight[37]" "babyRN.placeHolderList[33]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[38]" "babyRN.placeHolderList[32]" 
+		5 4 "babyRN" "baby:blendShape1.weight[38]" "babyRN.placeHolderList[34]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[39]" "babyRN.placeHolderList[33]" 
+		5 4 "babyRN" "baby:blendShape1.weight[39]" "babyRN.placeHolderList[35]" 
 		""
-		5 4 "babyRN" "baby:blendShape1.weight[40]" "babyRN.placeHolderList[34]" 
+		5 4 "babyRN" "baby:blendShape1.weight[40]" "babyRN.placeHolderList[36]" 
 		""
 		5 0 "babyRN" "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShape.instObjGroups" 
-		"baby:lambert4SG.dagSetMembers" "babyRN.placeHolderList[35]" "babyRN.placeHolderList[36]" 
+		"baby:lambert4SG.dagSetMembers" "babyRN.placeHolderList[37]" "babyRN.placeHolderList[38]" 
 		"baby:lambert4SG.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -5140,9 +5177,16 @@ createNode animCurveTU -n "blendShape1_babyMesh";
 	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
 createNode animCurveTL -n "UpperEyelid_Cntrl_L_translateY";
 	rename -uid "E65532DF-2B4D-7459-5911-A181F75CAE9C";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -2.4951755325175879 14 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 7 -1.8703306346080653 10 -2.217286049067051
+		 14 0;
+	setAttr -s 4 ".kit[3]"  18;
+	setAttr -s 4 ".kot[3]"  18;
+	setAttr -s 4 ".kix[0:3]"  1 0.29166668653488159 1 1;
+	setAttr -s 4 ".kiy[0:3]"  0 -1.9283525943756104 0 0;
+	setAttr -s 4 ".kox[0:3]"  1 0.083333283662796021 1 1;
+	setAttr -s 4 ".koy[0:3]"  0 -0.55095803737640381 0 0;
 createNode animCurveTU -n "UpperEyelid_Cntrl_L_visibility";
 	rename -uid "0F73937F-794B-4456-7340-B3ABC1B8A014";
 	setAttr ".tan" 9;
@@ -5160,9 +5204,31 @@ createNode animCurveTU -n "LowerEyelid_Cntrl_L_visibility";
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 14 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode bifrostAttrNotifier -n "lEyeballShapeAttrNotif1";
+	rename -uid "43085C08-FC40-00DC-D5F1-E5B3A09F028E";
+	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
+		-min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
+		1 -at "double";
+	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
+		1 -en "Solid:Shell" -at "enum";
+	setAttr -k on ".bifrostColliderEnable";
+	setAttr -k on ".bifrostColliderThickness";
+	setAttr -k on ".bifrostColliderMode";
+createNode bifrostAttrNotifier -n "baby_bodyShapeAttrNotif1";
+	rename -uid "A2B05ECF-2543-3106-57C8-729A19A39FB0";
+	addAttr -ci true -sn "bifrostColliderEnable" -ln "bifrostColliderEnable" -dv 1 
+		-min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostColliderThickness" -ln "bifrostColliderThickness" -dv 
+		1 -at "double";
+	addAttr -ci true -sn "bifrostColliderMode" -ln "bifrostColliderMode" -min 0 -max 
+		1 -en "Solid:Shell" -at "enum";
+	setAttr -k on ".bifrostColliderEnable";
+	setAttr -k on ".bifrostColliderThickness";
+	setAttr -k on ".bifrostColliderMode";
 select -ne :time1;
-	setAttr ".o" 26;
-	setAttr ".unw" 26;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -5193,48 +5259,52 @@ select -ne :defaultRenderGlobals;
 	setAttr ".outf" 8;
 	setAttr ".imfkey" -type "string" "jpg";
 	setAttr ".an" yes;
-	setAttr ".ef" 60;
+	setAttr ".ef" 40;
 	setAttr ".sef" yes;
 	setAttr ".pff" yes;
 select -ne :defaultResolution;
+	setAttr ".w" 800;
+	setAttr ".h" 450;
 	setAttr ".pa" 1;
+	setAttr ".dar" 1.7777777910232544;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "babyRN.phl[1]" "babyRN.phl[2]";
-connectAttr "babyRN.phl[3]" "baby_bodyShapeAttrNotif.bifrostColliderEnable";
-connectAttr "babyRN.phl[4]" "baby_bodyShapeAttrNotif.bifrostColliderThickness";
-connectAttr "babyRN.phl[5]" "baby_bodyShapeAttrNotif.bifrostColliderMode";
-connectAttr "babyRN.phl[6]" "baby_bodyShapeAttrNotif.im";
-connectAttr "babyRN.phl[7]" "lEyeballShapeAttrNotif.bifrostColliderEnable";
-connectAttr "babyRN.phl[8]" "lEyeballShapeAttrNotif.bifrostColliderThickness";
-connectAttr "babyRN.phl[9]" "lEyeballShapeAttrNotif.bifrostColliderMode";
-connectAttr "babyRN.phl[10]" "lEyeballShapeAttrNotif.im";
-connectAttr "UpperEyelid_Cntrl_L_translateY.o" "babyRN.phl[11]";
-connectAttr "UpperEyelid_Cntrl_L_visibility.o" "babyRN.phl[12]";
-connectAttr "LowerEyelid_Cntrl_L_translateY.o" "babyRN.phl[13]";
-connectAttr "LowerEyelid_Cntrl_L_visibility.o" "babyRN.phl[14]";
-connectAttr "babyRN.phl[15]" ":initialShadingGroup.dsm" -na;
-connectAttr "file1.oc" "babyRN.phl[16]";
-connectAttr "file1.msg" "babyRN.phl[17]";
-connectAttr "babyRN.phl[18]" "babyRN.phl[19]";
+connectAttr "babyRN.phl[3]" "baby_bodyShapeAttrNotif1.im";
+connectAttr "babyRN.phl[4]" "baby_bodyShapeAttrNotif.im";
+connectAttr "babyRN.phl[5]" "baby_bodyShapeAttrNotif1.bifrostColliderEnable";
+connectAttr "babyRN.phl[6]" "baby_bodyShapeAttrNotif1.bifrostColliderThickness";
+connectAttr "babyRN.phl[7]" "baby_bodyShapeAttrNotif1.bifrostColliderMode";
+connectAttr "babyRN.phl[8]" "lEyeballShapeAttrNotif1.im";
+connectAttr "babyRN.phl[9]" "lEyeballShapeAttrNotif.im";
+connectAttr "babyRN.phl[10]" "lEyeballShapeAttrNotif1.bifrostColliderEnable";
+connectAttr "babyRN.phl[11]" "lEyeballShapeAttrNotif1.bifrostColliderThickness";
+connectAttr "babyRN.phl[12]" "lEyeballShapeAttrNotif1.bifrostColliderMode";
+connectAttr "UpperEyelid_Cntrl_L_translateY.o" "babyRN.phl[13]";
+connectAttr "UpperEyelid_Cntrl_L_visibility.o" "babyRN.phl[14]";
+connectAttr "LowerEyelid_Cntrl_L_translateY.o" "babyRN.phl[15]";
+connectAttr "LowerEyelid_Cntrl_L_visibility.o" "babyRN.phl[16]";
+connectAttr "babyRN.phl[17]" ":initialShadingGroup.dsm" -na;
+connectAttr "file1.oc" "babyRN.phl[18]";
+connectAttr "file1.msg" "babyRN.phl[19]";
 connectAttr "babyRN.phl[20]" "babyRN.phl[21]";
-connectAttr "blendShape1_baby_brow_out_up_Lft.o" "babyRN.phl[22]";
-connectAttr "blendShape1_baby_brow_out_up_Rgt.o" "babyRN.phl[23]";
-connectAttr "blendShape1_baby_brow_mid_up_Lft.o" "babyRN.phl[24]";
-connectAttr "blendShape1_baby_brow_mid_up_Rgt.o" "babyRN.phl[25]";
-connectAttr "blendShape1_baby_brow_in_up_Lft.o" "babyRN.phl[26]";
-connectAttr "blendShape1_baby_brow_in_up_Rgt.o" "babyRN.phl[27]";
-connectAttr "blendShape1_baby_brow_in_scrunch_Lft.o" "babyRN.phl[28]";
-connectAttr "blendShape1_baby_brow_in_scrunch_Rgt.o" "babyRN.phl[29]";
-connectAttr "blendShape1_baby_brow_in_down_Lft.o" "babyRN.phl[30]";
-connectAttr "blendShape1_baby_brow_in_down_Rgt.o" "babyRN.phl[31]";
-connectAttr "blendShape1_baby_brow_mid_down_Lft.o" "babyRN.phl[32]";
-connectAttr "blendShape1_baby_brow_mid_down_Rgt.o" "babyRN.phl[33]";
-connectAttr "blendShape1_babyMesh.o" "babyRN.phl[34]";
-connectAttr "babyRN.phl[35]" "babyRN.phl[36]";
+connectAttr "babyRN.phl[22]" "babyRN.phl[23]";
+connectAttr "blendShape1_baby_brow_out_up_Lft.o" "babyRN.phl[24]";
+connectAttr "blendShape1_baby_brow_out_up_Rgt.o" "babyRN.phl[25]";
+connectAttr "blendShape1_baby_brow_mid_up_Lft.o" "babyRN.phl[26]";
+connectAttr "blendShape1_baby_brow_mid_up_Rgt.o" "babyRN.phl[27]";
+connectAttr "blendShape1_baby_brow_in_up_Lft.o" "babyRN.phl[28]";
+connectAttr "blendShape1_baby_brow_in_up_Rgt.o" "babyRN.phl[29]";
+connectAttr "blendShape1_baby_brow_in_scrunch_Lft.o" "babyRN.phl[30]";
+connectAttr "blendShape1_baby_brow_in_scrunch_Rgt.o" "babyRN.phl[31]";
+connectAttr "blendShape1_baby_brow_in_down_Lft.o" "babyRN.phl[32]";
+connectAttr "blendShape1_baby_brow_in_down_Rgt.o" "babyRN.phl[33]";
+connectAttr "blendShape1_baby_brow_mid_down_Lft.o" "babyRN.phl[34]";
+connectAttr "blendShape1_baby_brow_mid_down_Rgt.o" "babyRN.phl[35]";
+connectAttr "blendShape1_babyMesh.o" "babyRN.phl[36]";
+connectAttr "babyRN.phl[37]" "babyRN.phl[38]";
 connectAttr "tear_sourceShape_bifrostLiquidContinuousEmission.o" "tear_sourceShape.bifrostLiquidContinuousEmission"
 		;
 connectAttr "createColorSet2.og" "tear_sourceShape.i";
@@ -5243,6 +5313,9 @@ connectAttr "tear_sourceShapeAttrNotif.om" "bifrostLiquidContainer1.Emitters[0]"
 		;
 connectAttr "baby_bodyShapeAttrNotif.om" "bifrostLiquidContainer1.Colliders[0]";
 connectAttr "lEyeballShapeAttrNotif.om" "bifrostLiquidContainer1.Colliders[1]";
+connectAttr "lEyeballShapeAttrNotif1.om" "bifrostLiquidContainer1.Colliders[2]";
+connectAttr "baby_bodyShapeAttrNotif1.om" "bifrostLiquidContainer1.Colliders[3]"
+		;
 connectAttr "bifrostKillplane1.wm" "bifrostLiquidContainer1.killplanes[0]";
 connectAttr "bifrostLiquidContainer1.Liquid" "liquidShape1.obj";
 connectAttr "bifrostMeshMRUserData1.msg" "bifrostLiquid1Mesh.miData";
