@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: sitting_outside_church.ma
-//Last modified: Mon, Feb 06, 2017 01:32:56 PM
+//Last modified: Thu, Feb 09, 2017 10:51:16 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "liquor_store" -dr 1 -rfn "liquor_storeRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/veronicachen/Desktop/Only-Love//assets/liquor_store/liquor_store.ma";
@@ -16,10 +16,16 @@ file -rdi 1 -ns "fogTest" -dr 1 -rfn "fogTestRN" -op "v=0;" -typ "mayaAscii"
 file -rdi 1 -ns "Extra_Buildings" -rfn "Extra_BuildingsRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/veronicachen/Desktop/Only-Love//assets/extraBuildings/Extra_Buildings.ma";
 file -rdi 1 -ns "church" -rfn "churchRN1" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/church/church.ma";
-file -rdi 1 -ns "reggie_rig" -rfn "reggie_rigRN" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Fri, Feb 03, 2017 04:23:18 PM|ICON|undef|INFO|undef|OBJN|2387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
+file -rdi 1 -ns "reggie_rig" -dr 1 -rfn "reggie_rigRN" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Fri, Feb 03, 2017 04:23:18 PM|ICON|undef|INFO|undef|OBJN|2387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 -typ "mayaBinary" "/Users/veronicachen/Desktop/Only-Love//scenes/char/reggie/reggie_rig.mb";
-file -rdi 1 -ns "reggie_rig1" -rfn "reggie_rigRN1" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Sat, Dec 10, 2016 01:22:29 PM|ICON|undef|INFO|undef|OBJN|4744|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
+file -rdi 1 -ns "reggie_rig1" -rfn "reggie_rigRN1" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Fri, Feb 03, 2017 04:23:18 PM|ICON|undef|INFO|undef|OBJN|2387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 -typ "mayaBinary" "/Users/veronicachen/Desktop/Only-Love//scenes/char/reggie/reggie_rig.mb";
+file -rdi 1 -ns "sitting_reggie_anim" -rfn "sitting_reggie_animRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/kellycho/Desktop/CNM 190/Only-Love//scenes/layout/3d animatic/Animated/sitting_reggie_anim.ma";
+file -rdi 2 -ns "reggie_rig" -rfn "sitting_reggie_anim:reggie_rigRN" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Tue, Jan 24, 2017 03:42:53 PM|ICON|undef|INFO|undef|OBJN|2365|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
+		 -typ "mayaBinary" "C:/Users/Gogo/Documents/maya/projects/Only-Love//scenes/char/reggie/reggie_rig.mb";
+file -rdi 2 -ns "redSoloCup1" -rfn "sitting_reggie_anim:redSoloCupRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Gogo/Documents/maya/projects/Only-Love//assets/redSoloCup/redSoloCup.ma";
 file -r -ns "liquor_store" -dr 1 -rfn "liquor_storeRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/veronicachen/Desktop/Only-Love//assets/liquor_store/liquor_store.ma";
 file -r -ns "bench" -dr 1 -rfn "benchRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/bench/bench.ma";
@@ -35,15 +41,16 @@ file -r -ns "Extra_Buildings" -dr 1 -rfn "Extra_BuildingsRN" -op "v=0;" -typ "ma
 file -r -ns "church" -dr 1 -rfn "churchRN1" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/church/church.ma";
 file -r -ns "reggie_rig" -dr 1 -rfn "reggie_rigRN" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Fri, Feb 03, 2017 04:23:18 PM|ICON|undef|INFO|undef|OBJN|2387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 -typ "mayaBinary" "/Users/veronicachen/Desktop/Only-Love//scenes/char/reggie/reggie_rig.mb";
-file -r -ns "reggie_rig1" -dr 1 -rfn "reggie_rigRN1" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Sat, Dec 10, 2016 01:22:29 PM|ICON|undef|INFO|undef|OBJN|4744|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
+file -r -ns "reggie_rig1" -dr 1 -rfn "reggie_rigRN1" -op "VERS|2016|UVER|undef|MADE|undef|CHNG|Fri, Feb 03, 2017 04:23:18 PM|ICON|undef|INFO|undef|OBJN|2387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 -typ "mayaBinary" "/Users/veronicachen/Desktop/Only-Love//scenes/char/reggie/reggie_rig.mb";
+file -r -ns "sitting_reggie_anim" -dr 1 -rfn "sitting_reggie_animRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/kellycho/Desktop/CNM 190/Only-Love//scenes/layout/3d animatic/Animated/sitting_reggie_anim.ma";
 requires maya "2016";
 requires "stereoCamera" "10.0";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -nodeType "contour_store_function" -nodeType "contour_contrast_function_levels"
 		 -nodeType "contour_shader_simple" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
 requires -nodeType "RenderMan" "RenderMan_for_Maya" "20.11";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
@@ -54,19 +61,20 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "13DF4CCC-A24C-56FF-B347-8BAA32859CE4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2488.1631180051736 0.033754907738256179 -168.25122545044022 ;
-	setAttr ".r" -type "double3" 2.6616472700767981 312.20000000049379 -359.99999999995038 ;
-	setAttr ".rpt" -type "double3" 2.2800185358020414e-13 2.8499597032037858e-14 -5.484903863147205e-13 ;
+	setAttr ".t" -type "double3" -2373.511070160032 9.2935503514285696 -180.58463419526169 ;
+	setAttr ".r" -type "double3" -1.5383527307029219 -761.7999999999372 -1.3332734231272459e-16 ;
+	setAttr ".rp" -type "double3" -1.1368683772161603e-13 -7.1054273576010019e-15 0 ;
+	setAttr ".rpt" -type "double3" 3.2607062894502639e-13 2.8502157979555459e-14 -6.6109948712835376e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E9B4C522-1241-DDD5-4B07-858375D4857B";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 643.58680515675883;
+	setAttr ".coi" 391.38744145886164;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -2147.2352891311989 -34.027811446556342 -434.90233844847069 ;
+	setAttr ".tp" -type "double3" -2118.9071823976601 -7.489306407191358 -470.41064136990474 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr -s 58 ".b";
 createNode transform -s -n "top";
@@ -103,14 +111,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "ABD5DC12-1F42-7C46-2E80-0F9A7E11BFEC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 0 0 ;
+	setAttr ".t" -type "double3" 301.09371218709589 721.939036272473 -509.28343615679938 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "BA018931-A141-85D0-B46E-FF8083D04299";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 10042.334455888535;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -421,20 +429,6 @@ createNode mesh -n "churchSideMattePaintingShape" -p "churchSideMattePainting";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "churchCamera";
-	rename -uid "D42ED15B-E64D-4E9C-CDEF-18BE6F5E34A9";
-createNode camera -n "churchCameraShape" -p "churchCamera";
-	rename -uid "685A4703-4445-032B-812C-AF95C5E466A4";
-	setAttr -k off ".v";
-	setAttr ".ff" 0;
-	setAttr ".ovr" 1.3;
-	setAttr ".coi" 9.8896930896907591;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera1";
-	setAttr ".den" -type "string" "camera1_depth";
-	setAttr ".man" -type "string" "camera1_mask";
-	setAttr ".tp" -type "double3" -1953.167299839125 1.838666233470363 -526.79342439886773 ;
-	setAttr ".dr" yes;
 createNode transform -n "stairLOCK";
 	rename -uid "A00E5E6F-DB4E-C4AC-2660-D29376324204";
 	setAttr ".t" -type "double3" -2134.5366802441968 4.4879841737307373 -598.5191087354732 ;
@@ -463,6 +457,147 @@ createNode parentConstraint -n "stairs_parentConstraint1" -p "churchRN1fosterPar
 	setAttr ".tg[0].tot" -type "double3" 42.078236182571288 -13.452591373226666 -66.237692923709702 ;
 	setAttr ".rst" -type "double3" -0.48977072513207531 -67.478724775928626 -155.79542425599959 ;
 	setAttr -k on ".w0";
+createNode transform -n "step" -p "churchRN1fosterParent1";
+	rename -uid "72387223-504E-6F89-54D8-60A295353892";
+	setAttr ".t" -type "double3" 0 0.29986635780298632 4.3090462689757079 ;
+	setAttr ".s" -type "double3" 1.8793761334175714 1.8793761334175714 1.8793761334175714 ;
+	setAttr ".rp" -type "double3" 3.9052145225041251e-16 -0.9708549291651265 -0.8913437908826356 ;
+	setAttr ".sp" -type "double3" 0 -0.51658362150192239 -0.47427642345428678 ;
+	setAttr ".spt" -type "double3" -4.4408920985006262e-16 -0.45427130766321666 -0.41706736742837691 ;
+createNode mesh -n "stepShape" -p "step";
+	rename -uid "353B4A42-5642-0F82-3E6C-E6AF2FF34496";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.19534554705023766 0.32542999979341403 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 96 ".uvst[0].uvsp[0:95]" -type "float2" 0.6877647 0.69655293
+		 0.6877647 0.57163513 0.69954437 0.57163513 0.69954437 0.69655293 0.66984981 0.69655293
+		 0.66984981 0.57163513 0.68162942 0.57163513 0.68162942 0.69655293 0.74426401 0.57163513
+		 0.74426401 0.72806358 0.72803944 0.72806358 0.72803944 0.57163513 0.7219041 0.57163513
+		 0.7219041 0.72806352 0.70567948 0.72806352 0.70567948 0.57163513 0.79617172 0.57163537
+		 0.79617172 0.75660485 0.77635312 0.75660485 0.77635312 0.57163537 0.77021784 0.57163537
+		 0.77021784 0.75660485 0.75039917 0.75660485 0.75039917 0.57163537 0.86695498 0.50725627
+		 0.86695498 0.72596353 0.83769858 0.72596353 0.83769858 0.50725627 0.83156317 0.50725627
+		 0.83156317 0.72596353 0.80230683 0.72596353 0.80230683 0.50725627 0.87309021 0.92423761
+		 0.87309021 0.50725645 0.99800801 0.50725645 0.99800801 0.92423761 0.085991882 0.64901513
+		 0.085991882 0.001844871 0.30469921 0.001844871 0.30469921 0.64901513 0.95183903 0.044064201
+		 0.82692122 0.044064201 0.79541051 0.001844726 0.95183903 0.001844726 0.82692122 0.46104535
+		 0.79541051 0.50326484 0.95183903 0.46104535 0.95183903 0.50326484 0.76014841 0.034034129
+		 0.60371989 0.034034129 0.57517892 0.001844726 0.76014841 0.001844726 0.60371989 0.53545421
+		 0.57517892 0.56764364 0.76014841 0.53545421 0.76014841 0.56764364 0.53077757 0.042530481
+		 0.34580812 0.042530481 0.31207034 0.001844726 0.53077757 0.001844726 0.34580812 0.60832942
+		 0.31207034 0.64901513 0.53077757 0.60832942 0.53077757 0.64901513 0.98250991 0.41882601
+		 0.98250991 0.001844871 0.99428964 0.001844871 0.99428964 0.41882601 0.0019920373
+		 0.53392082 0.0019920373 0.11693936 0.013771721 0.11693936 0.013771721 0.53392082
+		 0.013771721 0.074720174 0.013771721 0.57614028 0.029996263 0.074720174 0.029996263
+		 0.57614028 0.029996263 0.042530626 0.029996263 0.60832953 0.04981485 0.042530626
+		 0.04981485 0.60832953 0.04981485 0.001844871 0.04981485 0.64901531 0.079071224 0.001844871
+		 0.079071224 0.64901531 0.97534704 0.001844871 0.97534704 0.50326502 0.95912254 0.50326502
+		 0.95912254 0.001844871 0.78794378 0.0018448528 0.78794378 0.56764394 0.76812518 0.56764394
+		 0.76812518 0.0018448528 0.56740516 0.0018448528 0.56740516 0.64901513 0.53814882
+		 0.64901513 0.53814882 0.0018448528;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 32 ".pt[0:31]" -type "float3"  9.547918e-15 0.0051629469 
+		4.773959e-15 -9.547918e-15 0.0051629469 4.773959e-15 9.547918e-15 0.047900721 4.773959e-15 
+		-9.547918e-15 0.047900721 4.773959e-15 9.547918e-15 0.047900721 -4.773959e-15 -9.547918e-15 
+		0.047900721 -4.773959e-15 9.547918e-15 0.0051629469 -4.773959e-15 -9.547918e-15 0.0051629469 
+		-4.773959e-15 1.9539925e-14 0.0078759631 -9.7699626e-15 -1.9539925e-14 0.0078759631 
+		-9.7699626e-15 -1.9539925e-14 0.0078759631 9.7699626e-15 1.9539925e-14 0.0078759631 
+		9.7699626e-15 1.5321078e-14 -0.010740959 -7.6605389e-15 -1.5321078e-14 -0.010740959 
+		-7.6605389e-15 -1.5321078e-14 -0.010740959 7.6605389e-15 1.5321078e-14 -0.010740959 
+		7.6605389e-15 4.9737992e-14 -0.0026282631 -1.2434498e-14 -4.9737992e-14 -0.0026282631 
+		-1.2434498e-14 -4.9737992e-14 -0.0026282631 2.4868996e-14 4.9737992e-14 -0.0026282631 
+		2.4868996e-14 1.9095836e-14 -0.0082974248 -4.773959e-15 -1.9095836e-14 -0.0082974248 
+		-4.773959e-15 -1.9095836e-14 -0.0082974248 9.547918e-15 1.9095836e-14 -0.0082974248 
+		9.547918e-15 1.9095836e-14 -0.0082974266 -4.773959e-15 -1.9095836e-14 -0.0082974266 
+		-4.773959e-15 -1.9095836e-14 -0.0082974266 9.547918e-15 1.9095836e-14 -0.0082974266 
+		9.547918e-15 0 0.031923249 0 0 0.031923249 0 0 0.031923249 0 0 0.031923249 0;
+	setAttr -s 32 ".vt[0:31]"  -1.50467801 -0.045315858 0.42725658 1.50467801 -0.045315858 0.42725658
+		 -1.50467801 0.039697915 0.42725658 1.50467801 0.039697915 0.42725658 -1.50467801 0.039697915 -0.47427642
+		 1.50467801 0.039697915 -0.47427642 -1.50467801 -0.045315858 -0.47427642 1.50467801 -0.045315858 -0.47427642
+		 -1.8093766 -0.04531597 -0.47427642 1.8093766 -0.04531597 -0.47427642 1.8093766 -0.04531597 0.65466881
+		 -1.8093766 -0.04531597 0.65466881 -1.8093766 -0.16240875 -0.47427642 1.8093766 -0.16240875 -0.47427642
+		 1.8093766 -0.16240875 0.65466881 -1.8093766 -0.16240875 0.65466881 -2.041688204 -0.16240902 -0.47427642
+		 2.041688204 -0.16240902 -0.47427642 2.041688204 -0.16240902 0.8606497 -2.041688204 -0.16240902 0.8606497
+		 -2.041688204 -0.30544007 -0.47427642 2.041688204 -0.30544007 -0.47427642 2.041688204 -0.30544007 0.8606497
+		 -2.041688204 -0.30544007 0.8606497 -2.33531642 -0.30544007 -0.47427642 2.33531642 -0.30544007 -0.47427642
+		 2.33531642 -0.30544007 1.10413575 -2.33531642 -0.30544007 1.10413575 -2.33531642 -0.51658362 -0.47427642
+		 2.33531642 -0.51658362 -0.47427642 2.33531642 -0.51658362 1.10413575 -2.33531642 -0.51658362 1.10413575;
+	setAttr -s 60 ".ed[0:59]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 6 8 0 7 9 0 8 9 0 1 10 0 9 10 0 0 11 0 11 10 0 8 11 0
+		 8 12 0 9 13 0 12 13 0 10 14 0 13 14 0 11 15 0 15 14 0 12 15 0 12 16 0 13 17 0 16 17 0
+		 14 18 0 17 18 0 15 19 0 19 18 0 16 19 0 16 20 0 17 21 0 20 21 0 18 22 0 21 22 0 19 23 0
+		 23 22 0 20 23 0 20 24 0 21 25 0 24 25 0 22 26 0 25 26 0 23 27 0 27 26 0 24 27 0 24 28 0
+		 25 29 0 28 29 0 26 30 0 29 30 0 27 31 0 31 30 0 28 31 0;
+	setAttr -s 30 -ch 120 ".fc[0:29]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 64 65 66 67
+		f 4 1 7 -3 -7
+		mu 0 4 32 33 34 35
+		f 4 2 9 -4 -9
+		mu 0 4 68 69 70 71
+		f 4 54 56 -59 -60
+		mu 0 4 36 37 38 39
+		f 4 -12 -10 -8 -6
+		mu 0 4 0 1 2 3
+		f 4 10 4 6 8
+		mu 0 4 4 5 6 7
+		f 4 3 13 -15 -13
+		mu 0 4 71 70 72 73
+		f 4 11 15 -17 -14
+		mu 0 4 40 41 42 43
+		f 4 -1 17 18 -16
+		mu 0 4 41 44 45 42
+		f 4 -11 12 19 -18
+		mu 0 4 44 46 47 45
+		f 4 14 21 -23 -21
+		mu 0 4 73 72 74 75
+		f 4 16 23 -25 -22
+		mu 0 4 8 9 10 11
+		f 4 -19 25 26 -24
+		mu 0 4 84 85 86 87
+		f 4 -20 20 27 -26
+		mu 0 4 12 13 14 15
+		f 4 22 29 -31 -29
+		mu 0 4 75 74 76 77
+		f 4 24 31 -33 -30
+		mu 0 4 48 49 50 51
+		f 4 -27 33 34 -32
+		mu 0 4 49 52 53 50
+		f 4 -28 28 35 -34
+		mu 0 4 52 54 55 53
+		f 4 30 37 -39 -37
+		mu 0 4 77 76 78 79
+		f 4 32 39 -41 -38
+		mu 0 4 16 17 18 19
+		f 4 -35 41 42 -40
+		mu 0 4 88 89 90 91
+		f 4 -36 36 43 -42
+		mu 0 4 20 21 22 23
+		f 4 38 45 -47 -45
+		mu 0 4 79 78 80 81
+		f 4 40 47 -49 -46
+		mu 0 4 56 57 58 59
+		f 4 -43 49 50 -48
+		mu 0 4 57 60 61 58
+		f 4 -44 44 51 -50
+		mu 0 4 60 62 63 61
+		f 4 46 53 -55 -53
+		mu 0 4 81 80 82 83
+		f 4 48 55 -57 -54
+		mu 0 4 24 25 26 27
+		f 4 -51 57 58 -56
+		mu 0 4 92 93 94 95
+		f 4 -52 52 59 -58
+		mu 0 4 28 29 30 31;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "reggie_rigRNfosterParent1";
 	rename -uid "46944A1A-7747-7D50-CB0B-64B41F39CA4F";
 createNode parentConstraint -n "WristCntrl_IK_R_parentConstraint1" -p "reggie_rigRNfosterParent1";
@@ -5353,17 +5488,17 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "82FC1F81-484D-DA9F-E2A4-AEA2AD3210BB";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D1566465-3C4E-B7B5-D483-2980CC58DD23";
-	setAttr -s 71 ".lnk";
-	setAttr -s 71 ".slnk";
+	rename -uid "97EF1C42-A243-3D6B-8EBE-098248224FA7";
+	setAttr -s 96 ".lnk";
+	setAttr -s 96 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D562DC39-5A4A-8B21-694D-57A591FA0649";
+	rename -uid "09298C1A-3645-DE1C-B341-D99A273A7E9A";
 	setAttr ".cdl" 2;
 	setAttr -s 7 ".dli[1:6]"  1 0 0 0 2 3;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2E0E5D4F-6948-FB65-C22F-2BAC379F4B02";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EAF0FD8B-6A4E-1C00-2204-E3AAD46C5B5F";
+	rename -uid "7683AA6E-E44C-C445-AE8A-C583D0331FB2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5FFAE80F-E642-18B4-EBDE-64B5602E8DF8";
 	setAttr ".g" yes;
@@ -5565,49 +5700,49 @@ createNode partition -n "mtorPartition";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "241189C2-264C-0A0B-81BA-7B83EBD76D2B";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"new_church_camera\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
-		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n"
-		+ "                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 0\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 779\n                -height 512\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"new_church_camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
+		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n"
+		+ "                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 0\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 486\n                -height 234\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 779\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 486\n            -height 234\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
 		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
 		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 0\n                -ikHandles 0\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
-		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n"
+		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 486\n                -height 233\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n"
 		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n"
 		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n"
-		+ "            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n"
+		+ "            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 486\n            -height 233\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n"
 		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n"
 		+ "                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n"
 		+ "                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n"
-		+ "                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 486\n                -height 233\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
 		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
 		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
-		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"new_church_camera\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
+		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 486\n            -height 233\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"new_church_camera\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
-		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
+		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
 		+ "                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 0\n                -ikHandles 0\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 978\n                -height 512\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"new_church_camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 978\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 978\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 1\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n"
 		+ "                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
 		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n"
 		+ "            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
-		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
+		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n"
+		+ "                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
 		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
 		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n"
-		+ "                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
-		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n"
-		+ "                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
-		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
-		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
-		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n"
-		+ "                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
-		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
+		+ "                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n"
+		+ "                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
+		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n"
+		+ "                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
 		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n"
@@ -5630,14 +5765,14 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
 		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
 		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"new_church_camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 779\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"new_church_camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 779\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"new_church_camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 978\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"new_church_camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 978\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "D7F37C5A-F944-5BDD-FFE1-F68B54A463BF";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 200 -ast 1 -aet 409 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 205 -ast 1 -aet 409 ";
 	setAttr ".st" 6;
 createNode reference -n "streetLightRN";
 	rename -uid "C95F46EE-3449-27F0-8B54-61AC2C0CD727";
@@ -5962,12 +6097,13 @@ createNode place2dTexture -n "place2dTexture4";
 createNode reference -n "churchRN1";
 	rename -uid "A344FB9F-6145-FB58-707E-89AF12F1EB13";
 	setAttr ".fn[0]" -type "string" "/Users/kellycho/Desktop/CNM 190/Only-Love//assets/church/church.ma";
-	setAttr -s 12 ".phl";
+	setAttr -s 13 ".phl";
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
 	setAttr ".phl[11]" 0;
+	setAttr ".phl[13]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"churchRN1"
 		"churchRN1" 34
@@ -6025,107 +6161,22 @@ createNode reference -n "churchRN1";
 		"churchRN1.placeHolderList[10]" ""
 		5 0 "churchRN1" "church:file18.message" "church:materialInfo15.texture" 
 		"churchRN1.placeHolderList[11]" "churchRN1.placeHolderList[12]" ""
-		"churchRN1" 4
+		"churchRN1" 7
+		0 "|churchRN1fosterParent1|step" "|church:church" "-s -r "
 		2 "|church:church" "translate" " -type \"double3\" -2073.78463131879743742 -65.61405409547228373 -926.08098586936466745"
 		
 		2 "|church:church" "scale" " -type \"double3\" 61.00027358877864714 61.00027358877864714 61.00027358877864714"
 		
 		2 "|church:church|church:mainhouse|church:body" "translate" " -type \"double3\" 0 0 0"
 		
-		2 "|church:church|church:windows|church:RWindow_frame" "translate" " -type \"double3\" 0 0 0";
+		2 "|church:church|church:smallhouse|church:house" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|church:church|church:windows|church:RWindow_frame" "translate" " -type \"double3\" 0 0 0"
+		
+		5 4 "churchRN1" "church:lambert9SG.dagSetMembers" "churchRN1.placeHolderList[13]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode animCurveTU -n "camera1_visibility";
-	rename -uid "BF9DE51C-6849-CAD6-4F31-E4AE0BF0BE46";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  1 1 164 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTL -n "camera1_translateX";
-	rename -uid "0AB943B2-D343-AC95-291C-329C8A09F992";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 -2168.4229326986188 164 -2539.4401941381075;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTL -n "camera1_translateY";
-	rename -uid "CC569689-F044-A135-B387-F9A11D9F6096";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 31.634315818464543 164 116.47964438285015;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTL -n "camera1_translateZ";
-	rename -uid "16253128-E04C-7455-36D4-0D85BED13DA2";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 -341.63770782381732 164 -62.360855410591682;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTA -n "camera1_rotateX";
-	rename -uid "816E0A57-214A-3AF2-D2A1-7DB508E1F76A";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 -4.2324363054572975 164 -0.87826535086415114;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTA -n "camera1_rotateY";
-	rename -uid "5D5BD826-774F-901D-5382-62A5155730A5";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 -33.106309820772907 164 -50.647774506794285;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTA -n "camera1_rotateZ";
-	rename -uid "93B6703B-1D4B-8CFC-4E1D-34A0E31F98C0";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 -1.0409582594968327 164 1.3036635228377946;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "camera1_scaleX";
-	rename -uid "49A75903-0D46-0DB9-5E89-C982BD05A263";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 64.255678656369128 164 64.255678656369128;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "camera1_scaleY";
-	rename -uid "C564E551-6645-C431-44F4-8195A3351C2C";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 64.255678656369128 164 64.255678656369128;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "camera1_scaleZ";
-	rename -uid "FED3037C-C64B-4EEC-C925-30B7E5AFCC11";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 64.255678656369128 164 64.255678656369128;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-createNode animCurveTU -n "cameraShape1_horizontalFilmAperture";
-	rename -uid "47363D62-6243-B9DA-01DB-33B4515D3D77";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 1.41732 432 1.41732;
-createNode animCurveTU -n "cameraShape1_verticalFilmAperture";
-	rename -uid "A5ACED98-054D-B9D6-4E54-B09060F5BE00";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 0.94488 432 0.94488;
-createNode animCurveTU -n "cameraShape1_focalLength";
-	rename -uid "7C30BAEC-2B41-5AB9-0BE3-A19BFB0D0E6F";
-	setAttr ".tan" 3;
-	setAttr ".ktv[0]"  1 50;
-createNode animCurveTU -n "cameraShape1_lensSqueezeRatio";
-	rename -uid "EAC2D397-E34D-D5C7-016C-DFAF85F8B1FD";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 1 432 1;
-createNode animCurveTU -n "cameraShape1_fStop";
-	rename -uid "5DE27490-BC4C-A080-95F0-469EDB3EE607";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 5.6 432 5.6;
-createNode animCurveTL -n "cameraShape1_focusDistance";
-	rename -uid "0A6852BF-5142-CC92-753E-3F9C91929286";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 5 432 5;
-createNode animCurveTA -n "cameraShape1_shutterAngle";
-	rename -uid "4A7607A3-6746-EB51-7A3C-A48AED2E6362";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 144 432 144;
-createNode animCurveTL -n "cameraShape1_centerOfInterest";
-	rename -uid "6E16BF0F-264D-8561-F1D1-F3904B8DCDF0";
-	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  1 9.8896930896907591 432 9.8896930896907591;
 createNode sequencer -n "sequencer1";
 	rename -uid "5BCC68FB-B24E-7993-4938-ADBFAC5F33E2";
 	setAttr ".mnf" 1;
@@ -6158,282 +6209,36 @@ createNode reference -n "reggie_rigRN";
 	setAttr ".phl[196]" 0;
 	setAttr ".phl[198]" 0;
 	setAttr ".phl[264]" 0;
-	setAttr ".phl[1978]" 0;
-	setAttr ".phl[1979]" 0;
-	setAttr ".phl[1980]" 0;
-	setAttr ".phl[1981]" 0;
-	setAttr ".phl[1982]" 0;
-	setAttr ".phl[1983]" 0;
-	setAttr ".phl[1984]" 0;
-	setAttr ".phl[1985]" 0;
-	setAttr ".phl[1986]" 0;
-	setAttr ".phl[1987]" 0;
-	setAttr ".phl[1988]" 0;
-	setAttr ".phl[1989]" 0;
-	setAttr ".phl[1990]" 0;
-	setAttr ".phl[1991]" 0;
-	setAttr ".phl[1992]" 0;
-	setAttr ".phl[1993]" 0;
-	setAttr ".phl[1994]" 0;
-	setAttr ".phl[1995]" 0;
-	setAttr ".phl[1996]" 0;
-	setAttr ".phl[1997]" 0;
-	setAttr ".phl[1998]" 0;
-	setAttr ".phl[1999]" 0;
-	setAttr ".phl[2000]" 0;
-	setAttr ".phl[2001]" 0;
-	setAttr ".phl[2002]" 0;
-	setAttr ".phl[2003]" 0;
-	setAttr ".phl[2004]" 0;
-	setAttr ".phl[2005]" 0;
-	setAttr ".phl[2006]" 0;
-	setAttr ".phl[2007]" 0;
-	setAttr ".phl[2008]" 0;
-	setAttr ".phl[2009]" 0;
-	setAttr ".phl[2010]" 0;
-	setAttr ".phl[2011]" 0;
-	setAttr ".phl[2012]" 0;
-	setAttr ".phl[2013]" 0;
-	setAttr ".phl[2014]" 0;
-	setAttr ".phl[2015]" 0;
-	setAttr ".phl[2016]" 0;
-	setAttr ".phl[2017]" 0;
-	setAttr ".phl[2018]" 0;
-	setAttr ".phl[2019]" 0;
-	setAttr ".phl[2020]" 0;
-	setAttr ".phl[2021]" 0;
-	setAttr ".phl[2022]" 0;
-	setAttr ".phl[2023]" 0;
-	setAttr ".phl[2024]" 0;
-	setAttr ".phl[2025]" 0;
-	setAttr ".phl[2026]" 0;
-	setAttr ".phl[2027]" 0;
-	setAttr ".phl[2028]" 0;
-	setAttr ".phl[2029]" 0;
-	setAttr ".phl[2030]" 0;
-	setAttr ".phl[2031]" 0;
-	setAttr ".phl[2032]" 0;
-	setAttr ".phl[2033]" 0;
-	setAttr ".phl[2034]" 0;
-	setAttr ".phl[2035]" 0;
-	setAttr ".phl[2036]" 0;
-	setAttr ".phl[2037]" 0;
-	setAttr ".phl[2038]" 0;
-	setAttr ".phl[2039]" 0;
-	setAttr ".phl[2040]" 0;
-	setAttr ".phl[2041]" 0;
-	setAttr ".phl[2042]" 0;
-	setAttr ".phl[2043]" 0;
-	setAttr ".phl[2044]" 0;
-	setAttr ".phl[2045]" 0;
-	setAttr ".phl[2046]" 0;
-	setAttr ".phl[2047]" 0;
-	setAttr ".phl[2048]" 0;
-	setAttr ".phl[2049]" 0;
-	setAttr ".phl[2050]" 0;
-	setAttr ".phl[2051]" 0;
-	setAttr ".phl[2052]" 0;
-	setAttr ".phl[2053]" 0;
-	setAttr ".phl[2054]" 0;
-	setAttr ".phl[2055]" 0;
-	setAttr ".phl[2056]" 0;
-	setAttr ".phl[2057]" 0;
-	setAttr ".phl[2058]" 0;
-	setAttr ".phl[2059]" 0;
-	setAttr ".phl[2060]" 0;
-	setAttr ".phl[2061]" 0;
-	setAttr ".phl[2062]" 0;
-	setAttr ".phl[2063]" 0;
-	setAttr ".phl[2064]" 0;
-	setAttr ".phl[2065]" 0;
-	setAttr ".phl[2066]" 0;
-	setAttr ".phl[2067]" 0;
-	setAttr ".phl[2068]" 0;
-	setAttr ".phl[2069]" 0;
-	setAttr ".phl[2070]" 0;
-	setAttr ".phl[2071]" 0;
-	setAttr ".phl[2072]" 0;
-	setAttr ".phl[2073]" 0;
-	setAttr ".phl[2074]" 0;
-	setAttr ".phl[2075]" 0;
-	setAttr ".phl[2076]" 0;
-	setAttr ".phl[2077]" 0;
-	setAttr ".phl[2078]" 0;
-	setAttr ".phl[2079]" 0;
-	setAttr ".phl[2080]" 0;
-	setAttr ".phl[2081]" 0;
-	setAttr ".phl[2082]" 0;
-	setAttr ".phl[2083]" 0;
-	setAttr ".phl[2084]" 0;
-	setAttr ".phl[2085]" 0;
-	setAttr ".phl[2086]" 0;
-	setAttr ".phl[2087]" 0;
-	setAttr ".phl[2088]" 0;
-	setAttr ".phl[2089]" 0;
-	setAttr ".phl[2090]" 0;
-	setAttr ".phl[2091]" 0;
-	setAttr ".phl[2092]" 0;
-	setAttr ".phl[2093]" 0;
-	setAttr ".phl[2094]" 0;
-	setAttr ".phl[2095]" 0;
-	setAttr ".phl[2096]" 0;
-	setAttr ".phl[2097]" 0;
-	setAttr ".phl[2098]" 0;
-	setAttr ".phl[2099]" 0;
-	setAttr ".phl[2100]" 0;
-	setAttr ".phl[2101]" 0;
-	setAttr ".phl[2102]" 0;
-	setAttr ".phl[2103]" 0;
-	setAttr ".phl[2104]" 0;
-	setAttr ".phl[2105]" 0;
-	setAttr ".phl[2106]" 0;
-	setAttr ".phl[2107]" 0;
-	setAttr ".phl[2108]" 0;
-	setAttr ".phl[2109]" 0;
-	setAttr ".phl[2110]" 0;
-	setAttr ".phl[2111]" 0;
-	setAttr ".phl[2112]" 0;
-	setAttr ".phl[2113]" 0;
-	setAttr ".phl[2114]" 0;
-	setAttr ".phl[2115]" 0;
-	setAttr ".phl[2116]" 0;
-	setAttr ".phl[2117]" 0;
-	setAttr ".phl[2118]" 0;
-	setAttr ".phl[2119]" 0;
-	setAttr ".phl[2120]" 0;
-	setAttr ".phl[2121]" 0;
-	setAttr ".phl[2122]" 0;
-	setAttr ".phl[2123]" 0;
-	setAttr ".phl[2124]" 0;
-	setAttr ".phl[2125]" 0;
-	setAttr ".phl[2126]" 0;
-	setAttr ".phl[2127]" 0;
-	setAttr ".phl[2128]" 0;
-	setAttr ".phl[2129]" 0;
-	setAttr ".phl[2130]" 0;
-	setAttr ".phl[2131]" 0;
-	setAttr ".phl[2132]" 0;
-	setAttr ".phl[2133]" 0;
-	setAttr ".phl[2134]" 0;
-	setAttr ".phl[2135]" 0;
-	setAttr ".phl[2136]" 0;
-	setAttr ".phl[2137]" 0;
-	setAttr ".phl[2138]" 0;
-	setAttr ".phl[2139]" 0;
-	setAttr ".phl[2140]" 0;
-	setAttr ".phl[2141]" 0;
-	setAttr ".phl[2142]" 0;
-	setAttr ".phl[2143]" 0;
-	setAttr ".phl[2144]" 0;
-	setAttr ".phl[2145]" 0;
-	setAttr ".phl[2146]" 0;
-	setAttr ".phl[2147]" 0;
-	setAttr ".phl[2148]" 0;
-	setAttr ".phl[2149]" 0;
-	setAttr ".phl[2150]" 0;
-	setAttr ".phl[2151]" 0;
-	setAttr ".phl[2152]" 0;
-	setAttr ".phl[2153]" 0;
-	setAttr ".phl[2154]" 0;
-	setAttr ".phl[2155]" 0;
-	setAttr ".phl[2156]" 0;
-	setAttr ".phl[2157]" 0;
-	setAttr ".phl[2158]" 0;
-	setAttr ".phl[2159]" 0;
-	setAttr ".phl[2160]" 0;
-	setAttr ".phl[2161]" 0;
-	setAttr ".phl[2162]" 0;
-	setAttr ".phl[2163]" 0;
-	setAttr ".phl[2164]" 0;
-	setAttr ".phl[2165]" 0;
-	setAttr ".phl[2166]" 0;
-	setAttr ".phl[2167]" 0;
-	setAttr ".phl[2168]" 0;
-	setAttr ".phl[2169]" 0;
-	setAttr ".phl[2170]" 0;
-	setAttr ".phl[2171]" 0;
-	setAttr ".phl[2172]" 0;
-	setAttr ".phl[2173]" 0;
-	setAttr ".phl[2174]" 0;
-	setAttr ".phl[2175]" 0;
-	setAttr ".phl[2176]" 0;
-	setAttr ".phl[2177]" 0;
-	setAttr ".phl[2178]" 0;
-	setAttr ".phl[2179]" 0;
-	setAttr ".phl[2180]" 0;
-	setAttr ".phl[2181]" 0;
-	setAttr ".phl[2182]" 0;
-	setAttr ".phl[2183]" 0;
-	setAttr ".phl[2184]" 0;
-	setAttr ".phl[2185]" 0;
-	setAttr ".phl[2186]" 0;
-	setAttr ".phl[2187]" 0;
-	setAttr ".phl[2188]" 0;
-	setAttr ".phl[2189]" 0;
-	setAttr ".phl[2190]" 0;
-	setAttr ".phl[2191]" 0;
-	setAttr ".phl[2192]" 0;
-	setAttr ".phl[2193]" 0;
-	setAttr ".phl[2194]" 0;
-	setAttr ".phl[2195]" 0;
-	setAttr ".phl[2196]" 0;
-	setAttr ".phl[2197]" 0;
-	setAttr ".phl[2198]" 0;
-	setAttr ".phl[2199]" 0;
-	setAttr ".phl[2200]" 0;
-	setAttr ".phl[2201]" 0;
-	setAttr ".phl[2202]" 0;
-	setAttr ".phl[2203]" 0;
-	setAttr ".phl[2204]" 0;
-	setAttr ".phl[2205]" 0;
-	setAttr ".phl[2206]" 0;
-	setAttr ".phl[2207]" 0;
-	setAttr ".phl[2208]" 0;
-	setAttr ".phl[2209]" 0;
-	setAttr ".phl[2210]" 0;
-	setAttr ".phl[2211]" 0;
-	setAttr ".phl[2212]" 0;
-	setAttr ".phl[2213]" 0;
-	setAttr ".phl[2214]" 0;
-	setAttr ".phl[2215]" 0;
-	setAttr ".phl[2216]" 0;
-	setAttr ".phl[2217]" 0;
-	setAttr ".phl[2218]" 0;
-	setAttr ".phl[2219]" 0;
-	setAttr ".phl[2220]" 0;
-	setAttr ".phl[2221]" 0;
-	setAttr ".phl[2222]" 0;
-	setAttr ".phl[2223]" 0;
-	setAttr ".phl[2224]" 0;
-	setAttr ".phl[2225]" 0;
-	setAttr ".phl[2226]" 0;
-	setAttr ".phl[2227]" 0;
-	setAttr ".phl[2228]" 0;
-	setAttr ".phl[2229]" 0;
-	setAttr ".phl[2230]" 0;
-	setAttr ".phl[2231]" 0;
-	setAttr ".phl[2232]" 0;
-	setAttr ".phl[2233]" 0;
-	setAttr ".phl[2234]" 0;
-	setAttr ".phl[2235]" 0;
-	setAttr ".phl[2236]" 0;
-	setAttr ".phl[2237]" 0;
-	setAttr ".phl[2238]" 0;
-	setAttr ".phl[2239]" 0;
-	setAttr ".phl[2240]" 0;
-	setAttr ".phl[2241]" 0;
-	setAttr ".phl[2242]" 0;
-	setAttr ".phl[2243]" 0;
-	setAttr ".phl[2244]" 0;
-	setAttr ".phl[2245]" 0;
-	setAttr ".phl[2246]" 0;
+	setAttr ".phl[2282]" 0;
+	setAttr ".phl[2288]" -0.21564216207087838;
+	setAttr ".phl[2289]" 4.7021870418553959;
+	setAttr ".phl[2290]" 3.2882801621585998;
+	setAttr ".phl[2291]" 1.6050710461003899;
+	setAttr ".phl[2292]" 0.066185888928282727;
+	setAttr ".phl[2293]" -1.5677205233407594;
+	setAttr ".phl[2300]" 0;
+	setAttr ".phl[2302]" 0;
+	setAttr ".phl[2350]" 1.5085040820858382;
+	setAttr ".phl[2351]" 0.38487922706437439;
+	setAttr ".phl[2352]" -1.5053708272215671;
+	setAttr ".phl[2353]" -0.10154790421944426;
+	setAttr ".phl[2354]" 6.5534477815325616;
+	setAttr ".phl[2355]" -6.9795372971484824;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"reggie_rigRN"
-		"reggie_rigRN" 143
+		"reggie_rigRN" 806
 		0 "|reggie_rigRNfosterParent1|WristCntrl_IK_R_parentConstraint1" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R" 
+		"-s -r "
+		0 "|reggie_rigRNfosterParent1|redSoloCup:CoinCup" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_L|reggie_rig:BindUpperArm_L|reggie_rig:BindLowerArm_L|reggie_rig:BindHandJnt_L|reggie_rig:FingerControls_L|reggie_rig:HandCntrl" 
 		"-s -r "
 		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP 
+		"blendOrient1" "blendOrient1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP 
+		"blendPoint1" "blendPoint1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|reggie_rig:ReggieMasterControl|reggie_rig:PelvisJnt|reggie_rig:StomachJnt" 
 		"translate" " -type \"double3\" 0.20618357365962114 3.44574335272195809 0"
 		2 "|reggie_rig:ReggieMasterControl|reggie_rig:PelvisJnt|reggie_rig:StomachJnt" 
@@ -6627,115 +6432,6 @@ createNode reference -n "reggie_rigRN";
 		"scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R" 
 		"blendParent1" " -k 1"
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R|reggie_rig:UpperArm_FK_R_pointConstraint1.constraintTranslateX" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.translateX" 
-		""
-		5 4 "reggie_rigRN" "|reggie_rig:ReggieMasterControl.Clothing" "reggie_rigRN.placeHolderList[2]" 
-		""
-		5 0 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R|reggie_rig:UpperArm_FK_R_pointConstraint1.constraintTranslateX" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.translateX" 
-		"reggie_rigRN.placeHolderList[124]" "reggie_rigRN.placeHolderList[125]" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.tx"
-		
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateX" 
-		"reggie_rigRN.placeHolderList[187]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateY" 
-		"reggie_rigRN.placeHolderList[188]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateZ" 
-		"reggie_rigRN.placeHolderList[189]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateOrder" 
-		"reggie_rigRN.placeHolderList[190]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.translateX" 
-		"reggie_rigRN.placeHolderList[191]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.translateY" 
-		"reggie_rigRN.placeHolderList[192]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.translateZ" 
-		"reggie_rigRN.placeHolderList[193]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotatePivot" 
-		"reggie_rigRN.placeHolderList[194]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotatePivotTranslate" 
-		"reggie_rigRN.placeHolderList[195]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.blendParent1" 
-		"reggie_rigRN.placeHolderList[196]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.blendParent1" 
-		"reggie_rigRN.placeHolderList[197]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.parentInverseMatrix" 
-		"reggie_rigRN.placeHolderList[198]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.scaleX" 
-		"reggie_rigRN.placeHolderList[199]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.scaleY" 
-		"reggie_rigRN.placeHolderList[200]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.scaleZ" 
-		"reggie_rigRN.placeHolderList[201]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.visibility" 
-		"reggie_rigRN.placeHolderList[202]" ""
-		5 0 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R|reggie_rig:UpperArm_FK_R_pointConstraint1.constraintTranslateX" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.translateX" 
-		"reggie_rigRN.placeHolderList[264]" "reggie_rigRN.placeHolderList[265]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.visibility" 
-		"reggie_rigRN.placeHolderList[1950]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateX" 
-		"reggie_rigRN.placeHolderList[1951]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateY" 
-		"reggie_rigRN.placeHolderList[1952]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateZ" 
-		"reggie_rigRN.placeHolderList[1953]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.rotateX" 
-		"reggie_rigRN.placeHolderList[1954]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.rotateY" 
-		"reggie_rigRN.placeHolderList[1955]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[1956]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.scaleX" 
-		"reggie_rigRN.placeHolderList[1957]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.scaleY" 
-		"reggie_rigRN.placeHolderList[1958]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.scaleZ" 
-		"reggie_rigRN.placeHolderList[1959]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.rotateX" 
-		"reggie_rigRN.placeHolderList[1960]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.rotateY" 
-		"reggie_rigRN.placeHolderList[1961]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[1962]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.visibility" 
-		"reggie_rigRN.placeHolderList[1963]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.visibility" 
-		"reggie_rigRN.placeHolderList[1964]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.translateX" 
-		"reggie_rigRN.placeHolderList[1965]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.translateY" 
-		"reggie_rigRN.placeHolderList[1966]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.translateZ" 
-		"reggie_rigRN.placeHolderList[1967]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.rotateX" 
-		"reggie_rigRN.placeHolderList[1968]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.rotateY" 
-		"reggie_rigRN.placeHolderList[1969]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[1970]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.scaleX" 
-		"reggie_rigRN.placeHolderList[1971]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.scaleY" 
-		"reggie_rigRN.placeHolderList[1972]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.scaleZ" 
-		"reggie_rigRN.placeHolderList[1973]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.rotateX" 
-		"reggie_rigRN.placeHolderList[1974]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.rotateY" 
-		"reggie_rigRN.placeHolderList[1975]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[1976]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.visibility" 
-		"reggie_rigRN.placeHolderList[1977]" ""
-		"reggie_rigRN" 663
-		0 "|reggie_rigRNfosterParent1|redSoloCup:CoinCup" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_L|reggie_rig:BindUpperArm_L|reggie_rig:BindLowerArm_L|reggie_rig:BindHandJnt_L|reggie_rig:FingerControls_L|reggie_rig:HandCntrl" 
-		"-s -r "
-		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset 
-		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP 
-		"blendOrient1" "blendOrient1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		1 |reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP 
-		"blendPoint1" "blendPoint1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|reggie_rig:Reggie_Rig" "overrideDisplayType" " 0"
 		2 "|reggie_rig:Reggie_Rig" "overrideLevelOfDetail" " 0"
 		2 "|reggie_rig:Reggie_Rig" "overrideShading" " 1"
@@ -7114,8 +6810,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
 		"visibility" " -av 1"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
-		"translate" " -type \"double3\" -6.39597049030312892 -2.3723248919083062e-05 2.95956360996108e-06"
-		
+		"translate" " -type \"double3\" 6.39598258144103937 0 0"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
 		"translateX" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
@@ -7123,7 +6818,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
 		"translateZ" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
-		"rotate" " -type \"double3\" -8.72331581394315592 -26.55159705772085132 9.43889179881344376"
+		"rotate" " -type \"double3\" -98.12311203776015134 -146.50350142219096483 33.4329169066128955"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
 		"rotateX" " -av"
@@ -7132,7 +6827,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
 		"rotateZ" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
-		"scale" " -type \"double3\" 0.99999999999999956 0.99999999999999978 0.99999999999999956"
+		"scale" " -type \"double3\" 1.00000000000000022 1.00000000000000022 1.00000000000000022"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L" 
 		"scaleX" " -av"
@@ -7143,7 +6838,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L" 
 		"visibility" " -av 1"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L" 
-		"rotate" " -type \"double3\" -18.62501934481996102 -22.35160759576893952 62.46753315574029841"
+		"rotate" " -type \"double3\" -4.75217094489366332 50.85756258585796985 42.88640034396599532"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L" 
 		"rotateX" " -av"
@@ -7154,8 +6849,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"visibility" " -av 1"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
-		"translate" " -type \"double3\" -5.67115041158754263 6.7667680276883857e-06 -2.1583257021617896e-06"
-		
+		"translate" " -type \"double3\" 5.67116821356666989 0 0"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"translateX" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
@@ -7163,7 +6857,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"translateZ" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
-		"rotate" " -type \"double3\" -34.59731325382365696 12.72773033913031071 -31.50468238986242042"
+		"rotate" " -type \"double3\" 8.3773129422949264 10.29186996350438754 -7.94062767856785001"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"rotateX" " -av"
@@ -7172,7 +6866,8 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"rotateZ" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
-		"scale" " -type \"double3\" 1 1.00000000000000044 1.00000000000000067"
+		"scale" " -type \"double3\" 0.99999999999999967 1.00000000000000022 0.99999999999999967"
+		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"scaleX" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
@@ -7180,7 +6875,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L" 
 		"scaleZ" " -av"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L" 
-		"rotate" " -type \"double3\" 11.75393277158565475 -26.36278518328366971 -16.31111195733294394"
+		"rotate" " -type \"double3\" -2.23593534335221422 -6.51326679666116348 -14.00610658182574042"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L" 
 		"rotateX" " -av"
@@ -7370,7 +7065,7 @@ createNode reference -n "reggie_rigRN";
 		"translate" " -type \"double3\" -1.14906488857332079 9.18957988927265745 5.00306297254802246"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckIk" 
-		"rotate" " -type \"double3\" 86.37012625123225007 10.53641768678188839 -77.75430835167918531"
+		"rotate" " -type \"double3\" 86.37012625123225007 10.53641768678189017 -77.75430835167918531"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset" 
 		"visibility" " -av 1"
@@ -7552,23 +7247,8 @@ createNode reference -n "reggie_rigRN";
 		2 "reggie_rig:FK" "displayOrder" " 5"
 		2 "reggie_rig:Skeleton" "visibility" " 1"
 		2 "reggie_rig:Skeleton" "displayOrder" " 3"
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateX" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateX" 
-		""
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateY" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateY" 
-		""
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateZ" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateZ" 
-		""
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateX" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateX" 
-		""
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateY" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateY" 
-		""
-		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateZ" 
-		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateZ" 
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R|reggie_rig:UpperArm_FK_R_pointConstraint1.constraintTranslateX" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.translateX" 
 		""
 		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateX" 
 		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateX" 
@@ -7588,174 +7268,65 @@ createNode reference -n "reggie_rigRN";
 		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateZ" 
 		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateZ" 
 		""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.Scale" 
-		"reggie_rigRN.placeHolderList[1978]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.ReggieClothing" 
-		"reggie_rigRN.placeHolderList[1979]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.WetHair" 
-		"reggie_rigRN.placeHolderList[1980]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.Stranger" 
-		"reggie_rigRN.placeHolderList[1981]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.translateX" 
-		"reggie_rigRN.placeHolderList[1982]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.translateY" 
-		"reggie_rigRN.placeHolderList[1983]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.translateZ" 
-		"reggie_rigRN.placeHolderList[1984]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.rotateX" 
-		"reggie_rigRN.placeHolderList[1985]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.rotateY" 
-		"reggie_rigRN.placeHolderList[1986]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.rotateZ" 
-		"reggie_rigRN.placeHolderList[1987]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.visibility" 
-		"reggie_rigRN.placeHolderList[1988]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:PinkyCntrl_R.Curl" 
-		"reggie_rigRN.placeHolderList[1989]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:RingCntrl_R.Curl" 
-		"reggie_rigRN.placeHolderList[1990]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:MiddleCntrl_R.Curl" 
-		"reggie_rigRN.placeHolderList[1991]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:IndexCntrl_R.Curl" 
-		"reggie_rigRN.placeHolderList[1992]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.KneeThighLength" 
-		"reggie_rigRN.placeHolderList[1993]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.KneeShinLength" 
-		"reggie_rigRN.placeHolderList[1994]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.HeelRoll" 
-		"reggie_rigRN.placeHolderList[1995]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.BallRoll" 
-		"reggie_rigRN.placeHolderList[1996]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.ToeRoll" 
-		"reggie_rigRN.placeHolderList[1997]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.Stretchy" 
-		"reggie_rigRN.placeHolderList[1998]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.visibility" 
-		"reggie_rigRN.placeHolderList[1999]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.translateX" 
-		"reggie_rigRN.placeHolderList[2000]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.translateY" 
-		"reggie_rigRN.placeHolderList[2001]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.translateZ" 
-		"reggie_rigRN.placeHolderList[2002]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.rotateX" 
-		"reggie_rigRN.placeHolderList[2003]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.rotateY" 
-		"reggie_rigRN.placeHolderList[2004]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[2005]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.KneeThighLength" 
-		"reggie_rigRN.placeHolderList[2006]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.KneeShinLength" 
-		"reggie_rigRN.placeHolderList[2007]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.HeelRoll" 
-		"reggie_rigRN.placeHolderList[2008]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.BallRoll" 
-		"reggie_rigRN.placeHolderList[2009]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.ToeRoll" 
-		"reggie_rigRN.placeHolderList[2010]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.Stretchy" 
-		"reggie_rigRN.placeHolderList[2011]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.visibility" 
-		"reggie_rigRN.placeHolderList[2012]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.translateX" 
-		"reggie_rigRN.placeHolderList[2013]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.translateY" 
-		"reggie_rigRN.placeHolderList[2014]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.translateZ" 
-		"reggie_rigRN.placeHolderList[2015]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.rotateX" 
-		"reggie_rigRN.placeHolderList[2016]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.rotateY" 
-		"reggie_rigRN.placeHolderList[2017]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.rotateZ" 
-		"reggie_rigRN.placeHolderList[2018]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.translateX" 
-		"reggie_rigRN.placeHolderList[2019]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.translateY" 
-		"reggie_rigRN.placeHolderList[2020]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.translateZ" 
-		"reggie_rigRN.placeHolderList[2021]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.rotateX" 
-		"reggie_rigRN.placeHolderList[2022]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.rotateY" 
-		"reggie_rigRN.placeHolderList[2023]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[2024]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.visibility" 
-		"reggie_rigRN.placeHolderList[2025]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.scaleX" 
-		"reggie_rigRN.placeHolderList[2026]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.scaleY" 
-		"reggie_rigRN.placeHolderList[2027]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.scaleZ" 
-		"reggie_rigRN.placeHolderList[2028]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.translateX" 
-		"reggie_rigRN.placeHolderList[2029]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.translateY" 
-		"reggie_rigRN.placeHolderList[2030]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.translateZ" 
-		"reggie_rigRN.placeHolderList[2031]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.rotateX" 
-		"reggie_rigRN.placeHolderList[2032]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.rotateY" 
-		"reggie_rigRN.placeHolderList[2033]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.rotateZ" 
-		"reggie_rigRN.placeHolderList[2034]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.visibility" 
-		"reggie_rigRN.placeHolderList[2035]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.scaleX" 
-		"reggie_rigRN.placeHolderList[2036]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.scaleY" 
-		"reggie_rigRN.placeHolderList[2037]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.scaleZ" 
-		"reggie_rigRN.placeHolderList[2038]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.translateX" 
-		"reggie_rigRN.placeHolderList[2039]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.translateY" 
-		"reggie_rigRN.placeHolderList[2040]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.translateZ" 
-		"reggie_rigRN.placeHolderList[2041]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.rotateX" 
-		"reggie_rigRN.placeHolderList[2042]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.rotateY" 
-		"reggie_rigRN.placeHolderList[2043]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[2044]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.scaleX" 
-		"reggie_rigRN.placeHolderList[2045]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.scaleY" 
-		"reggie_rigRN.placeHolderList[2046]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.scaleZ" 
-		"reggie_rigRN.placeHolderList[2047]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.translateX" 
-		"reggie_rigRN.placeHolderList[2048]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.translateY" 
-		"reggie_rigRN.placeHolderList[2049]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.translateZ" 
-		"reggie_rigRN.placeHolderList[2050]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.visibility" 
-		"reggie_rigRN.placeHolderList[2051]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.rotateX" 
-		"reggie_rigRN.placeHolderList[2052]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.rotateY" 
-		"reggie_rigRN.placeHolderList[2053]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[2054]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.scaleX" 
-		"reggie_rigRN.placeHolderList[2055]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.scaleY" 
-		"reggie_rigRN.placeHolderList[2056]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.scaleZ" 
-		"reggie_rigRN.placeHolderList[2057]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.rotateX" 
-		"reggie_rigRN.placeHolderList[2058]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.rotateY" 
-		"reggie_rigRN.placeHolderList[2059]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.rotateZ" 
-		"reggie_rigRN.placeHolderList[2060]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.visibility" 
-		"reggie_rigRN.placeHolderList[2061]" ""
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateX" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateX" 
+		""
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateY" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateY" 
+		""
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateZ" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateZ" 
+		""
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateX" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateX" 
+		""
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateY" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateY" 
+		""
+		3 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateZ" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateZ" 
+		""
+		5 4 "reggie_rigRN" "|reggie_rig:ReggieMasterControl.Clothing" "reggie_rigRN.placeHolderList[2]" 
+		""
+		5 0 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R|reggie_rig:UpperArm_FK_R_pointConstraint1.constraintTranslateX" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.translateX" 
+		"reggie_rigRN.placeHolderList[124]" "reggie_rigRN.placeHolderList[125]" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.tx"
+		
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateX" 
+		"reggie_rigRN.placeHolderList[187]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateY" 
+		"reggie_rigRN.placeHolderList[188]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateZ" 
+		"reggie_rigRN.placeHolderList[189]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotateOrder" 
+		"reggie_rigRN.placeHolderList[190]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.translateX" 
+		"reggie_rigRN.placeHolderList[191]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.translateY" 
+		"reggie_rigRN.placeHolderList[192]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.translateZ" 
+		"reggie_rigRN.placeHolderList[193]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotatePivot" 
+		"reggie_rigRN.placeHolderList[194]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.rotatePivotTranslate" 
+		"reggie_rigRN.placeHolderList[195]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.blendParent1" 
+		"reggie_rigRN.placeHolderList[196]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.blendParent1" 
+		"reggie_rigRN.placeHolderList[197]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.parentInverseMatrix" 
+		"reggie_rigRN.placeHolderList[198]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.scaleX" 
+		"reggie_rigRN.placeHolderList[199]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.scaleY" 
+		"reggie_rigRN.placeHolderList[200]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.scaleZ" 
+		"reggie_rigRN.placeHolderList[201]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:WristCntrl_IK_R.visibility" 
+		"reggie_rigRN.placeHolderList[202]" ""
+		5 0 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R|reggie_rig:UpperArm_FK_R_pointConstraint1.constraintTranslateX" 
+		"|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.translateX" 
+		"reggie_rigRN.placeHolderList[264]" "reggie_rigRN.placeHolderList[265]" ""
 		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.visibility" 
 		"reggie_rigRN.placeHolderList[2062]" ""
 		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateX" 
@@ -7812,320 +7383,544 @@ createNode reference -n "reggie_rigRN";
 		"reggie_rigRN.placeHolderList[2088]" ""
 		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.visibility" 
 		"reggie_rigRN.placeHolderList[2089]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.Scale" 
 		"reggie_rigRN.placeHolderList[2090]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.ReggieClothing" 
 		"reggie_rigRN.placeHolderList[2091]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.WetHair" 
 		"reggie_rigRN.placeHolderList[2092]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.Stranger" 
 		"reggie_rigRN.placeHolderList[2093]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.translateX" 
 		"reggie_rigRN.placeHolderList[2094]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.translateY" 
 		"reggie_rigRN.placeHolderList[2095]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.translateZ" 
 		"reggie_rigRN.placeHolderList[2096]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.rotateX" 
 		"reggie_rigRN.placeHolderList[2097]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.rotateY" 
 		"reggie_rigRN.placeHolderList[2098]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.rotateZ" 
 		"reggie_rigRN.placeHolderList[2099]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl.visibility" 
 		"reggie_rigRN.placeHolderList[2100]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:PinkyCntrl_R.Curl" 
 		"reggie_rigRN.placeHolderList[2101]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:RingCntrl_R.Curl" 
 		"reggie_rigRN.placeHolderList[2102]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:MiddleCntrl_R.Curl" 
 		"reggie_rigRN.placeHolderList[2103]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:BindPelvisJnt|reggie_rig:BindSpineJnt_01|reggie_rig:BindSpineJnt_02|reggie_rig:BindSpineJnt_03|reggie_rig:BindSpineJnt_04|reggie_rig:BindClavicleJnt_R|reggie_rig:BindUpperArm_R|reggie_rig:BindLowerArm_R|reggie_rig:BindHandJnt_R|reggie_rig:FingerControls_R|reggie_rig:IndexCntrl_R.Curl" 
 		"reggie_rigRN.placeHolderList[2104]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.KneeThighLength" 
 		"reggie_rigRN.placeHolderList[2105]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.KneeShinLength" 
 		"reggie_rigRN.placeHolderList[2106]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.HeelRoll" 
 		"reggie_rigRN.placeHolderList[2107]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.BallRoll" 
 		"reggie_rigRN.placeHolderList[2108]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.ToeRoll" 
 		"reggie_rigRN.placeHolderList[2109]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.Stretchy" 
 		"reggie_rigRN.placeHolderList[2110]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.visibility" 
 		"reggie_rigRN.placeHolderList[2111]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.translateX" 
 		"reggie_rigRN.placeHolderList[2112]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.translateY" 
 		"reggie_rigRN.placeHolderList[2113]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.translateZ" 
 		"reggie_rigRN.placeHolderList[2114]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2115]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2116]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2117]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.KneeThighLength" 
 		"reggie_rigRN.placeHolderList[2118]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.KneeShinLength" 
 		"reggie_rigRN.placeHolderList[2119]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.HeelRoll" 
 		"reggie_rigRN.placeHolderList[2120]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.BallRoll" 
 		"reggie_rigRN.placeHolderList[2121]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.ToeRoll" 
 		"reggie_rigRN.placeHolderList[2122]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.Stretchy" 
 		"reggie_rigRN.placeHolderList[2123]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.visibility" 
 		"reggie_rigRN.placeHolderList[2124]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.translateX" 
 		"reggie_rigRN.placeHolderList[2125]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.translateY" 
 		"reggie_rigRN.placeHolderList[2126]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.translateZ" 
 		"reggie_rigRN.placeHolderList[2127]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.rotateX" 
 		"reggie_rigRN.placeHolderList[2128]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.rotateY" 
 		"reggie_rigRN.placeHolderList[2129]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:FootCntrl_R.rotateZ" 
 		"reggie_rigRN.placeHolderList[2130]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.translateX" 
 		"reggie_rigRN.placeHolderList[2131]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.translateY" 
 		"reggie_rigRN.placeHolderList[2132]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.translateZ" 
 		"reggie_rigRN.placeHolderList[2133]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2134]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.Stretchy" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2135]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2136]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.visibility" 
 		"reggie_rigRN.placeHolderList[2137]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.scaleX" 
 		"reggie_rigRN.placeHolderList[2138]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.scaleY" 
 		"reggie_rigRN.placeHolderList[2139]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_L.scaleZ" 
 		"reggie_rigRN.placeHolderList[2140]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.translateX" 
 		"reggie_rigRN.placeHolderList[2141]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.translateY" 
 		"reggie_rigRN.placeHolderList[2142]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.translateZ" 
 		"reggie_rigRN.placeHolderList[2143]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.rotateX" 
 		"reggie_rigRN.placeHolderList[2144]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.rotateY" 
 		"reggie_rigRN.placeHolderList[2145]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.rotateZ" 
 		"reggie_rigRN.placeHolderList[2146]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.visibility" 
 		"reggie_rigRN.placeHolderList[2147]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.scaleX" 
 		"reggie_rigRN.placeHolderList[2148]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.scaleY" 
 		"reggie_rigRN.placeHolderList[2149]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Knee_PV_R.scaleZ" 
 		"reggie_rigRN.placeHolderList[2150]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.translateX" 
 		"reggie_rigRN.placeHolderList[2151]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.translateY" 
 		"reggie_rigRN.placeHolderList[2152]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.translateZ" 
 		"reggie_rigRN.placeHolderList[2153]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2154]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2155]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2156]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.scaleX" 
 		"reggie_rigRN.placeHolderList[2157]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.scaleY" 
 		"reggie_rigRN.placeHolderList[2158]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L.scaleZ" 
 		"reggie_rigRN.placeHolderList[2159]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.translateX" 
 		"reggie_rigRN.placeHolderList[2160]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.translateY" 
 		"reggie_rigRN.placeHolderList[2161]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.translateZ" 
 		"reggie_rigRN.placeHolderList[2162]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.visibility" 
 		"reggie_rigRN.placeHolderList[2163]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2164]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2165]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2166]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.scaleX" 
 		"reggie_rigRN.placeHolderList[2167]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.scaleY" 
 		"reggie_rigRN.placeHolderList[2168]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L.scaleZ" 
 		"reggie_rigRN.placeHolderList[2169]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.blendParent1" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2170]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.blendParent1" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2171]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2172]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L.visibility" 
 		"reggie_rigRN.placeHolderList[2173]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.visibility" 
 		"reggie_rigRN.placeHolderList[2174]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateX" 
 		"reggie_rigRN.placeHolderList[2175]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateX" 
-		"reggie_rigRN.placeHolderList[2176]" "reggie_rig:NeckCntrlFk_Offset.tx"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateY" 
-		"reggie_rigRN.placeHolderList[2177]" "reggie_rig:NeckCntrlFk_Offset.ty"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateZ" 
-		"reggie_rigRN.placeHolderList[2178]" "reggie_rig:NeckCntrlFk_Offset.tz"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateX" 
-		"reggie_rigRN.placeHolderList[2179]" "reggie_rig:NeckCntrlFk_Offset.rx"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateY" 
-		"reggie_rigRN.placeHolderList[2180]" "reggie_rig:NeckCntrlFk_Offset.ry"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateZ" 
-		"reggie_rigRN.placeHolderList[2181]" "reggie_rig:NeckCntrlFk_Offset.rz"
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateY" 
+		"reggie_rigRN.placeHolderList[2176]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.translateZ" 
+		"reggie_rigRN.placeHolderList[2177]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.rotateX" 
+		"reggie_rigRN.placeHolderList[2178]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.rotateY" 
+		"reggie_rigRN.placeHolderList[2179]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.rotateZ" 
+		"reggie_rigRN.placeHolderList[2180]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.scaleX" 
+		"reggie_rigRN.placeHolderList[2181]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.scaleY" 
 		"reggie_rigRN.placeHolderList[2182]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L.scaleZ" 
 		"reggie_rigRN.placeHolderList[2183]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2184]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2185]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2186]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L.visibility" 
 		"reggie_rigRN.placeHolderList[2187]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendOrient1" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.visibility" 
 		"reggie_rigRN.placeHolderList[2188]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendOrient1" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.translateX" 
 		"reggie_rigRN.placeHolderList[2189]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendPoint1" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.translateY" 
 		"reggie_rigRN.placeHolderList[2190]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendPoint1" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.translateZ" 
 		"reggie_rigRN.placeHolderList[2191]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2192]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.scaleX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2193]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.scaleY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2194]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.scaleZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.scaleX" 
 		"reggie_rigRN.placeHolderList[2195]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.RotationSpace" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.scaleY" 
 		"reggie_rigRN.placeHolderList[2196]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.TranslationSpace" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L.scaleZ" 
 		"reggie_rigRN.placeHolderList[2197]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.Stretchy" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.rotateX" 
 		"reggie_rigRN.placeHolderList[2198]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.Gulp" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.rotateY" 
 		"reggie_rigRN.placeHolderList[2199]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.EyeTracker" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.rotateZ" 
 		"reggie_rigRN.placeHolderList[2200]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.rotateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_L|reggie_rig:UpperArm_FK_Offset_L|reggie_rig:UpperArm_FK_L|reggie_rig:LowerArm_FK_Offset_L|reggie_rig:LowerArm_FK_L|reggie_rig:Wrist_FK_Offset_L|reggie_rig:Wrist_FK_L.visibility" 
 		"reggie_rigRN.placeHolderList[2201]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.rotateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.translateX" 
 		"reggie_rigRN.placeHolderList[2202]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.rotateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.translateY" 
 		"reggie_rigRN.placeHolderList[2203]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.translateZ" 
 		"reggie_rigRN.placeHolderList[2204]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.rotateX" 
 		"reggie_rigRN.placeHolderList[2205]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.rotateY" 
 		"reggie_rigRN.placeHolderList[2206]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.rotateZ" 
 		"reggie_rigRN.placeHolderList[2207]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.scaleX" 
 		"reggie_rigRN.placeHolderList[2208]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.scaleZ" 
 		"reggie_rigRN.placeHolderList[2209]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.scaleY" 
 		"reggie_rigRN.placeHolderList[2210]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R.visibility" 
 		"reggie_rigRN.placeHolderList[2211]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:InnerBrowCntrl_Offset_L|reggie_rig:InnerBrowCntrl_L.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.rotateX" 
 		"reggie_rigRN.placeHolderList[2212]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:InnerBrowCntrl_Offset_L|reggie_rig:InnerBrowCntrl_L.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.rotateY" 
 		"reggie_rigRN.placeHolderList[2213]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:OuterBrowCntrl_Offset_L|reggie_rig:OuterBrowCntrl_L.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.rotateZ" 
 		"reggie_rigRN.placeHolderList[2214]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:OuterBrowCntrl_Offset_L|reggie_rig:OuterBrowCntrl_L.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_FK_GRP_R|reggie_rig:UpperArm_FK_Offset_R|reggie_rig:UpperArm_FK_R.visibility" 
 		"reggie_rigRN.placeHolderList[2215]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.translateX" 
 		"reggie_rigRN.placeHolderList[2216]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.translateY" 
 		"reggie_rigRN.placeHolderList[2217]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.translateZ" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.translateZ" 
 		"reggie_rigRN.placeHolderList[2218]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.rotateX" 
 		"reggie_rigRN.placeHolderList[2219]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:InnerBrowCntrl_Offset_R|reggie_rig:InnerBrowCntrl_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.rotateY" 
 		"reggie_rigRN.placeHolderList[2220]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:InnerBrowCntrl_Offset_R|reggie_rig:InnerBrowCntrl_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.rotateZ" 
 		"reggie_rigRN.placeHolderList[2221]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:OuterBrowCntrl_Offset_R|reggie_rig:OuterBrowCntrl_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.visibility" 
 		"reggie_rigRN.placeHolderList[2222]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:OuterBrowCntrl_Offset_R|reggie_rig:OuterBrowCntrl_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.scaleX" 
 		"reggie_rigRN.placeHolderList[2223]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_L|reggie_rig:TopLipCntrl_L.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.scaleY" 
 		"reggie_rigRN.placeHolderList[2224]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_L|reggie_rig:TopLipCntrl_L.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset.scaleZ" 
 		"reggie_rigRN.placeHolderList[2225]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_L|reggie_rig:TopLipCntrl_L.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.translateX" 
 		"reggie_rigRN.placeHolderList[2226]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_R|reggie_rig:TopLipCntrl_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.translateY" 
 		"reggie_rigRN.placeHolderList[2227]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_R|reggie_rig:TopLipCntrl_R.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.translateZ" 
 		"reggie_rigRN.placeHolderList[2228]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_R|reggie_rig:TopLipCntrl_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.visibility" 
 		"reggie_rigRN.placeHolderList[2229]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_L|reggie_rig:LipCornerCntrl_L.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.rotateX" 
 		"reggie_rigRN.placeHolderList[2230]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_L|reggie_rig:LipCornerCntrl_L.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.rotateY" 
 		"reggie_rigRN.placeHolderList[2231]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_R|reggie_rig:LipCornerCntrl_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl.rotateZ" 
 		"reggie_rigRN.placeHolderList[2232]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_R|reggie_rig:LipCornerCntrl_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.rotateX" 
 		"reggie_rigRN.placeHolderList[2233]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_R|reggie_rig:LowerLid_R.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.rotateY" 
 		"reggie_rigRN.placeHolderList[2234]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_R|reggie_rig:LowerLid_R.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.rotateZ" 
 		"reggie_rigRN.placeHolderList[2235]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_L|reggie_rig:LowerLid_L.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.translateX" 
 		"reggie_rigRN.placeHolderList[2236]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_L|reggie_rig:LowerLid_L.visibility" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.translateY" 
 		"reggie_rigRN.placeHolderList[2237]" ""
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateX" 
-		"reggie_rigRN.placeHolderList[2238]" "reggie_rig:Head_GRP.rx"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateY" 
-		"reggie_rigRN.placeHolderList[2239]" "reggie_rig:Head_GRP.ry"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateZ" 
-		"reggie_rigRN.placeHolderList[2240]" "reggie_rig:Head_GRP.rz"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateX" 
-		"reggie_rigRN.placeHolderList[2241]" "reggie_rig:Head_GRP.tx"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateY" 
-		"reggie_rigRN.placeHolderList[2242]" "reggie_rig:Head_GRP.ty"
-		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateZ" 
-		"reggie_rigRN.placeHolderList[2243]" "reggie_rig:Head_GRP.tz"
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:EyeSuite.translateX" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.translateZ" 
+		"reggie_rigRN.placeHolderList[2238]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.visibility" 
+		"reggie_rigRN.placeHolderList[2239]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.scaleX" 
+		"reggie_rigRN.placeHolderList[2240]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.scaleY" 
+		"reggie_rigRN.placeHolderList[2241]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP.scaleZ" 
+		"reggie_rigRN.placeHolderList[2242]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.rotateX" 
+		"reggie_rigRN.placeHolderList[2243]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.rotateY" 
 		"reggie_rigRN.placeHolderList[2244]" ""
-		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:EyeSuite.translateY" 
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.rotateZ" 
 		"reggie_rigRN.placeHolderList[2245]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:HipCntrlOffset_L|reggie_rig:HipCntrl.visibility" 
+		"reggie_rigRN.placeHolderList[2246]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.Stretchy" 
+		"reggie_rigRN.placeHolderList[2247]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.translateX" 
+		"reggie_rigRN.placeHolderList[2248]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.translateY" 
+		"reggie_rigRN.placeHolderList[2249]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.translateZ" 
+		"reggie_rigRN.placeHolderList[2250]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.rotateX" 
+		"reggie_rigRN.placeHolderList[2251]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.rotateY" 
+		"reggie_rigRN.placeHolderList[2252]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.rotateZ" 
+		"reggie_rigRN.placeHolderList[2253]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.scaleX" 
+		"reggie_rigRN.placeHolderList[2254]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.scaleY" 
+		"reggie_rigRN.placeHolderList[2255]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.scaleZ" 
+		"reggie_rigRN.placeHolderList[2256]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl.visibility" 
+		"reggie_rigRN.placeHolderList[2257]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.translateX" 
+		"reggie_rigRN.placeHolderList[2258]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.translateY" 
+		"reggie_rigRN.placeHolderList[2259]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.translateZ" 
+		"reggie_rigRN.placeHolderList[2260]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:ChestCntrlOffset_L|reggie_rig:ChestCntrl|reggie_rig:ShoulderCntrl_Offset_L|reggie_rig:ShoulderCntrl_R.visibility" 
+		"reggie_rigRN.placeHolderList[2261]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.visibility" 
+		"reggie_rigRN.placeHolderList[2262]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.rotateX" 
+		"reggie_rigRN.placeHolderList[2263]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.rotateY" 
+		"reggie_rigRN.placeHolderList[2264]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:RootCntrlOffset|reggie_rig:RootCntrl|reggie_rig:Torso_GRP|reggie_rig:PelvisJnt_FK|reggie_rig:Spine_01_FK_Offset|reggie_rig:Spine_01_FK|reggie_rig:SpineJnt_FK_01|reggie_rig:Spine_02_FK_Offset|reggie_rig:Spine_02_FK.rotateZ" 
+		"reggie_rigRN.placeHolderList[2265]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.translateX" 
+		"reggie_rigRN.placeHolderList[2266]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.translateY" 
+		"reggie_rigRN.placeHolderList[2267]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.translateZ" 
+		"reggie_rigRN.placeHolderList[2268]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.rotateX" 
+		"reggie_rigRN.placeHolderList[2269]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.rotateY" 
+		"reggie_rigRN.placeHolderList[2270]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.rotateZ" 
+		"reggie_rigRN.placeHolderList[2271]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.visibility" 
+		"reggie_rigRN.placeHolderList[2272]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.scaleX" 
+		"reggie_rigRN.placeHolderList[2273]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.scaleY" 
+		"reggie_rigRN.placeHolderList[2274]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP.scaleZ" 
+		"reggie_rigRN.placeHolderList[2275]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateX" 
+		"reggie_rigRN.placeHolderList[2276]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateY" 
+		"reggie_rigRN.placeHolderList[2277]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.translateZ" 
+		"reggie_rigRN.placeHolderList[2278]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateX" 
+		"reggie_rigRN.placeHolderList[2279]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateY" 
+		"reggie_rigRN.placeHolderList[2280]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.rotateZ" 
+		"reggie_rigRN.placeHolderList[2281]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.blendParent1" 
+		"reggie_rigRN.placeHolderList[2282]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.blendParent1" 
+		"reggie_rigRN.placeHolderList[2283]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.visibility" 
+		"reggie_rigRN.placeHolderList[2284]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.scaleX" 
+		"reggie_rigRN.placeHolderList[2285]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.scaleY" 
+		"reggie_rigRN.placeHolderList[2286]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset.scaleZ" 
+		"reggie_rigRN.placeHolderList[2287]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateX" 
+		"reggie_rigRN.placeHolderList[2288]" "reggie_rig:NeckCntrlFk_Offset.tx"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateY" 
+		"reggie_rigRN.placeHolderList[2289]" "reggie_rig:NeckCntrlFk_Offset.ty"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintTranslateZ" 
+		"reggie_rigRN.placeHolderList[2290]" "reggie_rig:NeckCntrlFk_Offset.tz"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateX" 
+		"reggie_rigRN.placeHolderList[2291]" "reggie_rig:NeckCntrlFk_Offset.rx"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateY" 
+		"reggie_rigRN.placeHolderList[2292]" "reggie_rig:NeckCntrlFk_Offset.ry"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk_Offset_parentConstraint1.constraintRotateZ" 
+		"reggie_rigRN.placeHolderList[2293]" "reggie_rig:NeckCntrlFk_Offset.rz"
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateX" 
+		"reggie_rigRN.placeHolderList[2294]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateY" 
+		"reggie_rigRN.placeHolderList[2295]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.translateZ" 
+		"reggie_rigRN.placeHolderList[2296]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateX" 
+		"reggie_rigRN.placeHolderList[2297]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateY" 
+		"reggie_rigRN.placeHolderList[2298]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.rotateZ" 
+		"reggie_rigRN.placeHolderList[2299]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendOrient1" 
+		"reggie_rigRN.placeHolderList[2300]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendOrient1" 
+		"reggie_rigRN.placeHolderList[2301]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendPoint1" 
+		"reggie_rigRN.placeHolderList[2302]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.blendPoint1" 
+		"reggie_rigRN.placeHolderList[2303]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.visibility" 
+		"reggie_rigRN.placeHolderList[2304]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.scaleX" 
+		"reggie_rigRN.placeHolderList[2305]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.scaleY" 
+		"reggie_rigRN.placeHolderList[2306]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP.scaleZ" 
+		"reggie_rigRN.placeHolderList[2307]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.RotationSpace" 
+		"reggie_rigRN.placeHolderList[2308]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.TranslationSpace" 
+		"reggie_rigRN.placeHolderList[2309]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.Stretchy" 
+		"reggie_rigRN.placeHolderList[2310]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.Gulp" 
+		"reggie_rigRN.placeHolderList[2311]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.EyeTracker" 
+		"reggie_rigRN.placeHolderList[2312]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.rotateX" 
+		"reggie_rigRN.placeHolderList[2313]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.rotateY" 
+		"reggie_rigRN.placeHolderList[2314]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.rotateZ" 
+		"reggie_rigRN.placeHolderList[2315]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.translateX" 
+		"reggie_rigRN.placeHolderList[2316]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.translateY" 
+		"reggie_rigRN.placeHolderList[2317]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.translateZ" 
+		"reggie_rigRN.placeHolderList[2318]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl.visibility" 
+		"reggie_rigRN.placeHolderList[2319]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.translateY" 
+		"reggie_rigRN.placeHolderList[2320]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.translateX" 
+		"reggie_rigRN.placeHolderList[2321]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.translateZ" 
+		"reggie_rigRN.placeHolderList[2322]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L.visibility" 
+		"reggie_rigRN.placeHolderList[2323]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:InnerBrowCntrl_Offset_L|reggie_rig:InnerBrowCntrl_L.translateY" 
+		"reggie_rigRN.placeHolderList[2324]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:InnerBrowCntrl_Offset_L|reggie_rig:InnerBrowCntrl_L.visibility" 
+		"reggie_rigRN.placeHolderList[2325]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:OuterBrowCntrl_Offset_L|reggie_rig:OuterBrowCntrl_L.translateY" 
+		"reggie_rigRN.placeHolderList[2326]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_L|reggie_rig:EyebrowCntrl_L|reggie_rig:OuterBrowCntrl_Offset_L|reggie_rig:OuterBrowCntrl_L.visibility" 
+		"reggie_rigRN.placeHolderList[2327]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.translateY" 
+		"reggie_rigRN.placeHolderList[2328]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.translateX" 
+		"reggie_rigRN.placeHolderList[2329]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.translateZ" 
+		"reggie_rigRN.placeHolderList[2330]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R.visibility" 
+		"reggie_rigRN.placeHolderList[2331]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:InnerBrowCntrl_Offset_R|reggie_rig:InnerBrowCntrl_R.translateY" 
+		"reggie_rigRN.placeHolderList[2332]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:InnerBrowCntrl_Offset_R|reggie_rig:InnerBrowCntrl_R.visibility" 
+		"reggie_rigRN.placeHolderList[2333]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:OuterBrowCntrl_Offset_R|reggie_rig:OuterBrowCntrl_R.translateY" 
+		"reggie_rigRN.placeHolderList[2334]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Eyebrows|reggie_rig:EyebrowCntrl_Offset_R|reggie_rig:EyebrowCntrl_R|reggie_rig:OuterBrowCntrl_Offset_R|reggie_rig:OuterBrowCntrl_R.visibility" 
+		"reggie_rigRN.placeHolderList[2335]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_L|reggie_rig:TopLipCntrl_L.translateY" 
+		"reggie_rigRN.placeHolderList[2336]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_L|reggie_rig:TopLipCntrl_L.translateX" 
+		"reggie_rigRN.placeHolderList[2337]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_L|reggie_rig:TopLipCntrl_L.visibility" 
+		"reggie_rigRN.placeHolderList[2338]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_R|reggie_rig:TopLipCntrl_R.translateY" 
+		"reggie_rigRN.placeHolderList[2339]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_R|reggie_rig:TopLipCntrl_R.translateX" 
+		"reggie_rigRN.placeHolderList[2340]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:TopLipCntrl_Offset_R|reggie_rig:TopLipCntrl_R.visibility" 
+		"reggie_rigRN.placeHolderList[2341]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_L|reggie_rig:LipCornerCntrl_L.translateY" 
+		"reggie_rigRN.placeHolderList[2342]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_L|reggie_rig:LipCornerCntrl_L.visibility" 
+		"reggie_rigRN.placeHolderList[2343]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_R|reggie_rig:LipCornerCntrl_R.translateY" 
+		"reggie_rigRN.placeHolderList[2344]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:Lips|reggie_rig:LipCornerCntrl_Offset_R|reggie_rig:LipCornerCntrl_R.visibility" 
+		"reggie_rigRN.placeHolderList[2345]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_R|reggie_rig:LowerLid_R.translateY" 
+		"reggie_rigRN.placeHolderList[2346]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_R|reggie_rig:LowerLid_R.visibility" 
+		"reggie_rigRN.placeHolderList[2347]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_L|reggie_rig:LowerLid_L.translateY" 
+		"reggie_rigRN.placeHolderList[2348]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:HeadCntrlOffset|reggie_rig:HeadCntrl|reggie_rig:FaceCntrls|reggie_rig:LowerLid|reggie_rig:LowerLid_Offset_L|reggie_rig:LowerLid_L.visibility" 
+		"reggie_rigRN.placeHolderList[2349]" ""
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateX" 
+		"reggie_rigRN.placeHolderList[2350]" "reggie_rig:Head_GRP.rx"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateY" 
+		"reggie_rigRN.placeHolderList[2351]" "reggie_rig:Head_GRP.ry"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_orientConstraint1.constraintRotateZ" 
+		"reggie_rigRN.placeHolderList[2352]" "reggie_rig:Head_GRP.rz"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateX" 
+		"reggie_rigRN.placeHolderList[2353]" "reggie_rig:Head_GRP.tx"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateY" 
+		"reggie_rigRN.placeHolderList[2354]" "reggie_rig:Head_GRP.ty"
+		5 3 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:Head_GRP|reggie_rig:Head_GRP_pointConstraint1.constraintTranslateZ" 
+		"reggie_rigRN.placeHolderList[2355]" "reggie_rig:Head_GRP.tz"
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:EyeSuite.translateX" 
+		"reggie_rigRN.placeHolderList[2356]" ""
+		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:EyeSuite.translateY" 
+		"reggie_rigRN.placeHolderList[2357]" ""
 		5 4 "reggie_rigRN" "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:EyeSuite.translateZ" 
-		"reggie_rigRN.placeHolderList[2246]" "";
+		"reggie_rigRN.placeHolderList[2358]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
@@ -10674,7 +10469,8 @@ createNode animCurveTA -n "UpperArm_FK_R_rotateY";
 		0 0 0 1.6285490989685059 0 -0.29567068815231323 0;
 createNode reference -n "reggie_rigRN1";
 	rename -uid "E9DEDC42-F646-D56A-3492-458BDCB0E761";
-	setAttr -s 197 ".phl";
+	setAttr ".fn[0]" -type "string" "/Users/kellycho/Desktop/CNM 190/Only-Love//scenes/char/reggie/reggie_rig.mb{1}";
+	setAttr -s 193 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -10868,14 +10664,10 @@ createNode reference -n "reggie_rigRN1";
 	setAttr ".phl[191]" 0;
 	setAttr ".phl[192]" 0;
 	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"reggie_rigRN1"
 		"reggie_rigRN1" 0
-		"reggie_rigRN1" 382
+		"reggie_rigRN1" 460
 		2 "|reggie_rig1:Reggie_Rig" "overrideDisplayType" " 0"
 		2 "|reggie_rig1:Reggie_Rig" "overrideLevelOfDetail" " 0"
 		2 "|reggie_rig1:Reggie_Rig" "overrideShading" " 1"
@@ -10887,11 +10679,13 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig" "overrideRGBColors" " 0"
 		2 "|reggie_rig1:Reggie_Rig" "overrideColor" " 0"
 		2 "|reggie_rig1:Reggie_Rig" "overrideColorRGB" " -type \"float3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:StrangerClothes|reggie_rig1:Shirt" 
+		"visibility" " 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:StrangerClothes|reggie_rig1:Pants" 
 		"visibility" " 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "visibility" 
 		" -av 1"
-		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "translate" " -type \"double3\" -2057.38482029776560012 -80.17352727415735103 -498.05991452289634935"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "translate" " -type \"double3\" -2099.87376389470409777 -80.17352727415740787 -489.35013434262970122"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "translateX" 
 		" -av"
@@ -10899,7 +10693,7 @@ createNode reference -n "reggie_rigRN1";
 		" -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "translateZ" 
 		" -av"
-		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "rotate" " -type \"double3\" 0 194.93661453088068924 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "rotate" " -type \"double3\" 0 185.73798180565347593 0"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "rotateX" " -av"
 		
@@ -10919,9 +10713,35 @@ createNode reference -n "reggie_rigRN1";
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl" "Stranger" " -av -k 1 1"
 		
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt" 
+		"visibility" " 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt" 
+		"translate" " -type \"double3\" 3.45931329520533382 -0.49345641057385126 -21.74150957842351772"
+		
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt" 
+		"rotate" " -type \"double3\" -7.98892257047764609 0.49938933290328275 -2.34708243157696872"
+		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L" 
 		"translate" " -type \"double3\" 5.854 -5.863496844504823e-06 1.8179028543841014e-05"
 		
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L" 
+		"Curl" " -av -k 1 8.6"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L" 
+		"Scrunch" " -av -k 1 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L" 
+		"Curl" " -av -k 1 8.6"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L" 
+		"Scrunch" " -av -k 1 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L" 
+		"Curl" " -av -k 1 8.6"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L" 
+		"Scrunch" " -av -k 1 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L" 
+		"Curl" " -av -k 1 8.6"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L" 
+		"Scrunch" " -av -k 1 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:HandCntrl" 
+		"Spread" " -av -k 1 0.1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_R|reggie_rig1:BindUpperArm_R|reggie_rig1:BindLowerArm_R|reggie_rig1:BindHandJnt_R|reggie_rig1:CompoundCntrl_PinkyKnuckle_R" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_R|reggie_rig1:BindUpperArm_R|reggie_rig1:BindLowerArm_R|reggie_rig1:BindHandJnt_R|reggie_rig1:CompoundCntrl_PinkyKnuckle_R" 
@@ -10931,7 +10751,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L" 
 		"visibility" " -av 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L" 
-		"translate" " -type \"double3\" -6.10354386009076766 13.96092980329571098 22.87995283655310885"
+		"translate" " -type \"double3\" 3.77254440151938208 2.31773163648075631 -34.28145561198655145"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L" 
 		"translateX" " -av"
@@ -10940,7 +10760,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L" 
-		"rotate" " -type \"double3\" 31.65228025878025875 5.58548473899796871 7.95509449306785399"
+		"rotate" " -type \"double3\" 61.51476742013320376 -1.65367711624069935 0.54168661553657105"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L" 
 		"rotateX" " -av"
@@ -10963,7 +10783,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
 		"visibility" " -av 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
-		"translate" " -type \"double3\" -6.60320663027203647 12.05339044567941897 24.75300575105708134"
+		"translate" " -type \"double3\" 2.12916601681941353 -1.75972695928089529 -12.20980947487547397"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
 		"translateX" " -av"
@@ -10972,7 +10792,8 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
-		"rotate" " -type \"double3\" 0.17600570211552929 0 0"
+		"rotate" " -type \"double3\" -54.95657777475971528 8.00081392116380563 1.6221411436693336"
+		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
 		"rotateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R" 
@@ -10997,17 +10818,57 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R|reggie_rig1:Heel_Loc_R" 
 		"rotateY" " 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
-		"translate" " -type \"double3\" -6.31411244813166839 0 23.66929743268735464"
+		"visibility" " -av 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"translate" " -type \"double3\" 1.73308093747626657 0 12.06892388953573381"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
 		"translateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"translateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
 		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"rotateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"rotateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"scaleX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"scaleY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L" 
+		"scaleZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
-		"translate" " -type \"double3\" -8.42181350463518896 0 31.57029755192600007"
+		"visibility" " -av 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"translate" " -type \"double3\" 11.57579270456992404 0 16.48463891745670651"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
 		"translateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"translateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
 		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"rotateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"rotateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"scaleX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"scaleY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R" 
+		"scaleZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L" 
@@ -11016,10 +10877,40 @@ createNode reference -n "reggie_rigRN1";
 		"translateY" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L" 
 		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors" 
+		"translate" " -type \"double3\" 3.66373527109170816 0 -20.44624705180298463"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors" 
+		"translateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors" 
+		"translateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors" 
+		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"translate" " -type \"double3\" -1.01986239032640746 0 -0.40521677698409997"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"translateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"translateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"rotateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"rotatePivot" " -type \"double3\" 8.81605757671124302 7.59079265594892227 -9.16740653926208182"
+		
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L" 
+		"scalePivot" " -type \"double3\" 8.81605757671124302 7.59079265594892227 -9.16740653926208182"
+		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L" 
 		"visibility" " -av 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L" 
-		"translate" " -type \"double3\" -15.70069703201395939 6.12382244560494815 30.23781663638208173"
+		"translate" " -type \"double3\" -3.93357213788538829 -4.37920104626097384 -15.71951473660492304"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L" 
 		"translateX" " -av"
@@ -11028,7 +10919,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L" 
-		"rotate" " -type \"double3\" -6.77035114524857295 -32.67855370647266255 -35.61539221880628503"
+		"rotate" " -type \"double3\" -40.91766308648683292 -3.7623237653543482 -10.06255737829182806"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L" 
 		"rotateX" " -av"
@@ -11060,8 +10951,12 @@ createNode reference -n "reggie_rigRN1";
 		"rotateY" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R" 
 		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
-		"translate" " -type \"double3\" -13.43101942441681906 -5.20997043380032032 38.52550363142511713"
+		"visibility" " -av 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
+		"translate" " -type \"double3\" 8.74897129064199675 -5.08304599989259565 -21.58633527649301342"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
 		"translateX" " -av"
@@ -11075,10 +10970,20 @@ createNode reference -n "reggie_rigRN1";
 		"rotateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
 		"rotateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
+		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
+		"scaleX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
+		"scaleY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R" 
+		"scaleZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R" 
 		"visibility" " -av 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R" 
-		"translate" " -type \"double3\" 5.1879647272775804 12.41085177706600717 34.83583717213630848"
+		"translate" " -type \"double3\" 12.07315139118465197 -6.58442874091424635 -18.33616595747319522"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R" 
 		"translateX" " -av"
@@ -11087,7 +10992,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R" 
-		"rotate" " -type \"double3\" -49.56954556081363705 50.18367838995211372 22.61044206595922645"
+		"rotate" " -type \"double3\" -24.27878997683593454 12.64582949514018928 21.1088804143773352"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R" 
 		"rotateX" " -av"
@@ -11109,8 +11014,12 @@ createNode reference -n "reggie_rigRN1";
 		"translateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L" 
 		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L" 
-		"rotate" " -type \"double3\" -1.83286714488617664 -1.45696981151721427 -27.39480361645533435"
+		"rotate" " -type \"double3\" -2.52525956187815304 -2.6695949795090228 -43.61738716986143771"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L" 
 		"rotateX" " -av"
@@ -11127,10 +11036,16 @@ createNode reference -n "reggie_rigRN1";
 		"rotateY" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L|reggie_rig1:LowerArm_FK_Offset_L|reggie_rig1:LowerArm_FK_L" 
 		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
 		"visibility" " -av 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
-		"translate" " -type \"double3\" -3.86042950280810526 8.02969248068881747 13.45636293702504638"
+		"translate" " -type \"double3\" -3.69598464562889228 7.20242447773233874 12.83991930655958313"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
 		"translateX" " -av"
@@ -11139,7 +11054,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
-		"rotate" " -type \"double3\" 4.15066288136391481 0 0"
+		"rotate" " -type \"double3\" 8.97564560264050648 -0.53224773596497754 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
 		"rotateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset" 
@@ -11157,7 +11072,7 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
 		"visibility" " -av 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
-		"translate" " -type \"double3\" -3.32146386890734169 6.37807201931348988 12.45095282526356861"
+		"translate" " -type \"double3\" 6.85455775810496881 -12.98629813138803435 -32.89197770100847151"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
 		"translateX" " -av"
@@ -11166,7 +11081,8 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
-		"rotate" " -type \"double3\" 4.7651809864677297 0 0"
+		"rotate" " -type \"double3\" -5.63175659090688274 9.06573335794210955 -0.3964062421545092"
+		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
 		"rotateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
@@ -11174,9 +11090,9 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl" 
 		"rotateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:SpineIK" 
-		"translate" " -type \"double3\" 0 10.14964684129277117 -1.02183266406143503"
+		"translate" " -type \"double3\" 0 10.17051341628960337 -0.69280567438244134"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:SpineIK" 
-		"rotate" " -type \"double3\" 89.99999999999997158 -9.72468771182960268 -89.99999999999997158"
+		"rotate" " -type \"double3\" 90.00000000061677952 -5.53179411130250998 -89.99999999999967315"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:HeadShoulders_GRP|reggie_rig1:neckShoulder_Loc" 
 		"translate" " -type \"double3\" -2.07482363815589821 -0.5651171621477703 0.072476853240941552"
@@ -11193,6 +11109,22 @@ createNode reference -n "reggie_rigRN1";
 		"translateZ" " -k 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"translateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"translateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"rotate" " -type \"double3\" 0 0 -1.73536568012418191"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"rotateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"rotateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl" 
+		"Stretchy" " -av -k 1 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L" 
@@ -11201,14 +11133,42 @@ createNode reference -n "reggie_rigRN1";
 		"translateY" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L" 
 		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK" 
+		"visibility" " -av 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK" 
+		"rotate" " -type \"double3\" 0 0 -3.07707009110426499"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK" 
+		"rotateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK" 
+		"rotateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK" 
+		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK" 
+		"visibility" " -av 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK" 
+		"rotateX" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK" 
+		"rotateY" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK" 
+		"rotateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP" 
+		"visibility" " 1"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:NeckIk" 
-		"translate" " -type \"double3\" -7.20224352230127352 27.01249734576953898 28.90610232497732568"
+		"translate" " -type \"double3\" 3.51707273218192995 13.13487368300024016 -19.57095429987545288"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:NeckIk" 
-		"rotate" " -type \"double3\" 88.27802198435435344 30.39300107686272412 -91.34355855280352898"
+		"rotate" " -type \"double3\" 57.0745094247514686 29.03953267726885912 -99.76094501040965667"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:NeckCntrlFk_Offset" 
-		"translate" " -type \"double3\" -7.25437022495623296 23.71052194607795727 27.00735274495156091"
+		"translate" " -type \"double3\" 3.25048769479360544 9.80464533914341807 -21.40509018102027028"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:NeckCntrlFk_Offset" 
 		"translateX" " -av"
@@ -11216,8 +11176,10 @@ createNode reference -n "reggie_rigRN1";
 		"translateY" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:NeckCntrlFk_Offset" 
 		"translateZ" " -av"
+		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:NeckCntrlFk_Offset|reggie_rig1:NeckCntrlFk" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP" 
-		"translate" " -type \"double3\" -7.2022447442678299 27.01236619142731143 28.90596241990971293"
+		"translate" " -type \"double3\" 3.51655731470788169 13.13335706118900248 -19.57247008590960036"
 		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP" 
 		"translateX" " -av"
@@ -11226,7 +11188,8 @@ createNode reference -n "reggie_rigRN1";
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP" 
 		"translateZ" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl" 
-		"rotate" " -type \"double3\" -0.60514971027833564 0 0"
+		"rotate" " -type \"double3\" -20.62940162633622165 -1.16217544722341426 -1.407164742321519"
+		
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl" 
 		"rotateX" " -av"
 		2 "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl" 
@@ -11269,378 +11232,370 @@ createNode reference -n "reggie_rigRN1";
 		"reggie_rigRN1.placeHolderList[10]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl.rotateZ" 
 		"reggie_rigRN1.placeHolderList[11]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L.Curl" 
 		"reggie_rigRN1.placeHolderList[12]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L.Scrunch" 
 		"reggie_rigRN1.placeHolderList[13]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L.Lean" 
 		"reggie_rigRN1.placeHolderList[14]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L.Relax" 
 		"reggie_rigRN1.placeHolderList[15]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:IndexCntrl_L.visibility" 
 		"reggie_rigRN1.placeHolderList[16]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L.Curl" 
 		"reggie_rigRN1.placeHolderList[17]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L.Scrunch" 
 		"reggie_rigRN1.placeHolderList[18]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:HandCntrl.Spread" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L.Lean" 
 		"reggie_rigRN1.placeHolderList[19]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:HandCntrl.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L.Relax" 
 		"reggie_rigRN1.placeHolderList[20]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.KneeThighLength" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:MiddleCntrl_L.visibility" 
 		"reggie_rigRN1.placeHolderList[21]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.KneeShinLength" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L.Curl" 
 		"reggie_rigRN1.placeHolderList[22]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.HeelRoll" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L.Scrunch" 
 		"reggie_rigRN1.placeHolderList[23]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.BallRoll" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L.Lean" 
 		"reggie_rigRN1.placeHolderList[24]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.ToeRoll" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L.Relax" 
 		"reggie_rigRN1.placeHolderList[25]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.Stretchy" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:RingCntrl_L.visibility" 
 		"reggie_rigRN1.placeHolderList[26]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L.Curl" 
 		"reggie_rigRN1.placeHolderList[27]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L.Scrunch" 
 		"reggie_rigRN1.placeHolderList[28]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L.Lean" 
 		"reggie_rigRN1.placeHolderList[29]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L.Relax" 
 		"reggie_rigRN1.placeHolderList[30]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:PinkyCntrl_L.visibility" 
 		"reggie_rigRN1.placeHolderList[31]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:HandCntrl.Spread" 
 		"reggie_rigRN1.placeHolderList[32]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:BindPelvisJnt|reggie_rig1:BindSpineJnt_01|reggie_rig1:BindSpineJnt_02|reggie_rig1:BindSpineJnt_03|reggie_rig1:BindSpineJnt_04|reggie_rig1:BindClavicleJnt_L|reggie_rig1:BindUpperArm_L|reggie_rig1:BindLowerArm_L|reggie_rig1:BindHandJnt_L|reggie_rig1:FingerControls_L|reggie_rig1:HandCntrl.visibility" 
 		"reggie_rigRN1.placeHolderList[33]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.KneeThighLength" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.KneeThighLength" 
 		"reggie_rigRN1.placeHolderList[34]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.KneeShinLength" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.KneeShinLength" 
 		"reggie_rigRN1.placeHolderList[35]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.HeelRoll" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.HeelRoll" 
 		"reggie_rigRN1.placeHolderList[36]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.BallRoll" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.BallRoll" 
 		"reggie_rigRN1.placeHolderList[37]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.ToeRoll" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.ToeRoll" 
 		"reggie_rigRN1.placeHolderList[38]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.Stretchy" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.Stretchy" 
 		"reggie_rigRN1.placeHolderList[39]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.visibility" 
 		"reggie_rigRN1.placeHolderList[40]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.translateX" 
 		"reggie_rigRN1.placeHolderList[41]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.translateY" 
 		"reggie_rigRN1.placeHolderList[42]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.translateZ" 
 		"reggie_rigRN1.placeHolderList[43]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.rotateX" 
 		"reggie_rigRN1.placeHolderList[44]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.rotateY" 
 		"reggie_rigRN1.placeHolderList[45]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_L.rotateZ" 
 		"reggie_rigRN1.placeHolderList[46]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.KneeThighLength" 
 		"reggie_rigRN1.placeHolderList[47]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.KneeShinLength" 
 		"reggie_rigRN1.placeHolderList[48]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.HeelRoll" 
 		"reggie_rigRN1.placeHolderList[49]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.BallRoll" 
 		"reggie_rigRN1.placeHolderList[50]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.ToeRoll" 
 		"reggie_rigRN1.placeHolderList[51]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.Stretchy" 
 		"reggie_rigRN1.placeHolderList[52]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.visibility" 
 		"reggie_rigRN1.placeHolderList[53]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.translateX" 
 		"reggie_rigRN1.placeHolderList[54]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.translateY" 
 		"reggie_rigRN1.placeHolderList[55]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.translateZ" 
 		"reggie_rigRN1.placeHolderList[56]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.rotateX" 
 		"reggie_rigRN1.placeHolderList[57]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.rotateY" 
 		"reggie_rigRN1.placeHolderList[58]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:FootCntrl_R.rotateZ" 
 		"reggie_rigRN1.placeHolderList[59]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.translateX" 
 		"reggie_rigRN1.placeHolderList[60]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.translateY" 
 		"reggie_rigRN1.placeHolderList[61]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.translateZ" 
 		"reggie_rigRN1.placeHolderList[62]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.visibility" 
 		"reggie_rigRN1.placeHolderList[63]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.rotateX" 
 		"reggie_rigRN1.placeHolderList[64]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.rotateY" 
 		"reggie_rigRN1.placeHolderList[65]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.rotateZ" 
 		"reggie_rigRN1.placeHolderList[66]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.scaleX" 
 		"reggie_rigRN1.placeHolderList[67]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.scaleY" 
 		"reggie_rigRN1.placeHolderList[68]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_L.scaleZ" 
 		"reggie_rigRN1.placeHolderList[69]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.translateX" 
 		"reggie_rigRN1.placeHolderList[70]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.translateY" 
 		"reggie_rigRN1.placeHolderList[71]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.translateZ" 
 		"reggie_rigRN1.placeHolderList[72]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.visibility" 
 		"reggie_rigRN1.placeHolderList[73]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.rotateX" 
 		"reggie_rigRN1.placeHolderList[74]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.rotateY" 
 		"reggie_rigRN1.placeHolderList[75]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.rotateZ" 
 		"reggie_rigRN1.placeHolderList[76]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.scaleX" 
 		"reggie_rigRN1.placeHolderList[77]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.scaleY" 
 		"reggie_rigRN1.placeHolderList[78]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Knee_PV_R.scaleZ" 
 		"reggie_rigRN1.placeHolderList[79]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.translateX" 
 		"reggie_rigRN1.placeHolderList[80]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.translateY" 
 		"reggie_rigRN1.placeHolderList[81]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.translateZ" 
 		"reggie_rigRN1.placeHolderList[82]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.visibility" 
 		"reggie_rigRN1.placeHolderList[83]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.rotateX" 
 		"reggie_rigRN1.placeHolderList[84]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.rotateY" 
 		"reggie_rigRN1.placeHolderList[85]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.rotateZ" 
 		"reggie_rigRN1.placeHolderList[86]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.scaleX" 
 		"reggie_rigRN1.placeHolderList[87]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.scaleY" 
 		"reggie_rigRN1.placeHolderList[88]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors.scaleZ" 
 		"reggie_rigRN1.placeHolderList[89]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.translateX" 
 		"reggie_rigRN1.placeHolderList[90]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.translateY" 
 		"reggie_rigRN1.placeHolderList[91]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.translateZ" 
 		"reggie_rigRN1.placeHolderList[92]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.rotateX" 
 		"reggie_rigRN1.placeHolderList[93]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.rotateY" 
 		"reggie_rigRN1.placeHolderList[94]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.rotateZ" 
 		"reggie_rigRN1.placeHolderList[95]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.visibility" 
 		"reggie_rigRN1.placeHolderList[96]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.scaleX" 
 		"reggie_rigRN1.placeHolderList[97]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.scaleY" 
 		"reggie_rigRN1.placeHolderList[98]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:PoleVectors|reggie_rig1:ElbowPV_IK_L.scaleZ" 
 		"reggie_rigRN1.placeHolderList[99]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.rotateX" 
 		"reggie_rigRN1.placeHolderList[100]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.rotateY" 
 		"reggie_rigRN1.placeHolderList[101]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.rotateZ" 
 		"reggie_rigRN1.placeHolderList[102]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.translateX" 
 		"reggie_rigRN1.placeHolderList[103]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.translateY" 
 		"reggie_rigRN1.placeHolderList[104]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.translateZ" 
 		"reggie_rigRN1.placeHolderList[105]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.visibility" 
 		"reggie_rigRN1.placeHolderList[106]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.scaleX" 
 		"reggie_rigRN1.placeHolderList[107]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.scaleY" 
 		"reggie_rigRN1.placeHolderList[108]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_L|reggie_rig1:ArmCntrl_L.scaleZ" 
 		"reggie_rigRN1.placeHolderList[109]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.translateX" 
 		"reggie_rigRN1.placeHolderList[110]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.translateY" 
 		"reggie_rigRN1.placeHolderList[111]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.translateZ" 
 		"reggie_rigRN1.placeHolderList[112]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.visibility" 
 		"reggie_rigRN1.placeHolderList[113]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.rotateX" 
 		"reggie_rigRN1.placeHolderList[114]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.rotateY" 
 		"reggie_rigRN1.placeHolderList[115]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.rotateZ" 
 		"reggie_rigRN1.placeHolderList[116]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.rotateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.scaleX" 
 		"reggie_rigRN1.placeHolderList[117]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.scaleY" 
 		"reggie_rigRN1.placeHolderList[118]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ElbowPV_IK_R.scaleZ" 
 		"reggie_rigRN1.placeHolderList[119]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.rotateX" 
 		"reggie_rigRN1.placeHolderList[120]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.rotateY" 
 		"reggie_rigRN1.placeHolderList[121]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.scaleX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.rotateZ" 
 		"reggie_rigRN1.placeHolderList[122]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.scaleY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.translateX" 
 		"reggie_rigRN1.placeHolderList[123]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.scaleZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.translateY" 
 		"reggie_rigRN1.placeHolderList[124]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.translateZ" 
 		"reggie_rigRN1.placeHolderList[125]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.visibility" 
 		"reggie_rigRN1.placeHolderList[126]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.scaleX" 
 		"reggie_rigRN1.placeHolderList[127]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.scaleY" 
 		"reggie_rigRN1.placeHolderList[128]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_IK_GRP_R|reggie_rig1:ArmCntrl_R.scaleZ" 
 		"reggie_rigRN1.placeHolderList[129]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.rotateZ" 
-		"reggie_rigRN1.placeHolderList[130]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.scaleX" 
-		"reggie_rigRN1.placeHolderList[131]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.scaleY" 
-		"reggie_rigRN1.placeHolderList[132]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L.scaleZ" 
-		"reggie_rigRN1.placeHolderList[133]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L.rotateX" 
-		"reggie_rigRN1.placeHolderList[134]" ""
+		"reggie_rigRN1.placeHolderList[130]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L.rotateY" 
-		"reggie_rigRN1.placeHolderList[135]" ""
+		"reggie_rigRN1.placeHolderList[131]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L.rotateZ" 
-		"reggie_rigRN1.placeHolderList[136]" ""
+		"reggie_rigRN1.placeHolderList[132]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L.visibility" 
-		"reggie_rigRN1.placeHolderList[137]" ""
+		"reggie_rigRN1.placeHolderList[133]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L|reggie_rig1:LowerArm_FK_Offset_L|reggie_rig1:LowerArm_FK_L.rotateX" 
-		"reggie_rigRN1.placeHolderList[138]" ""
+		"reggie_rigRN1.placeHolderList[134]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L|reggie_rig1:LowerArm_FK_Offset_L|reggie_rig1:LowerArm_FK_L.rotateY" 
-		"reggie_rigRN1.placeHolderList[139]" ""
+		"reggie_rigRN1.placeHolderList[135]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L|reggie_rig1:LowerArm_FK_Offset_L|reggie_rig1:LowerArm_FK_L.rotateZ" 
-		"reggie_rigRN1.placeHolderList[140]" ""
+		"reggie_rigRN1.placeHolderList[136]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_L|reggie_rig1:UpperArm_FK_Offset_L|reggie_rig1:UpperArm_FK_L|reggie_rig1:LowerArm_FK_Offset_L|reggie_rig1:LowerArm_FK_L.visibility" 
-		"reggie_rigRN1.placeHolderList[141]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.translateX" 
-		"reggie_rigRN1.placeHolderList[142]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.translateY" 
-		"reggie_rigRN1.placeHolderList[143]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.translateZ" 
-		"reggie_rigRN1.placeHolderList[144]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.rotateX" 
-		"reggie_rigRN1.placeHolderList[145]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.rotateY" 
-		"reggie_rigRN1.placeHolderList[146]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.rotateZ" 
-		"reggie_rigRN1.placeHolderList[147]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.scaleX" 
-		"reggie_rigRN1.placeHolderList[148]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.scaleY" 
-		"reggie_rigRN1.placeHolderList[149]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R.scaleZ" 
-		"reggie_rigRN1.placeHolderList[150]" ""
+		"reggie_rigRN1.placeHolderList[137]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R|reggie_rig1:UpperArm_FK_Offset_R|reggie_rig1:UpperArm_FK_R.rotateX" 
-		"reggie_rigRN1.placeHolderList[151]" ""
+		"reggie_rigRN1.placeHolderList[138]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R|reggie_rig1:UpperArm_FK_Offset_R|reggie_rig1:UpperArm_FK_R.rotateY" 
-		"reggie_rigRN1.placeHolderList[152]" ""
+		"reggie_rigRN1.placeHolderList[139]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R|reggie_rig1:UpperArm_FK_Offset_R|reggie_rig1:UpperArm_FK_R.rotateZ" 
-		"reggie_rigRN1.placeHolderList[153]" ""
+		"reggie_rigRN1.placeHolderList[140]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:ARM_FK_GRP_R|reggie_rig1:UpperArm_FK_Offset_R|reggie_rig1:UpperArm_FK_R.visibility" 
-		"reggie_rigRN1.placeHolderList[154]" ""
+		"reggie_rigRN1.placeHolderList[141]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.visibility" 
-		"reggie_rigRN1.placeHolderList[155]" ""
+		"reggie_rigRN1.placeHolderList[142]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.translateX" 
-		"reggie_rigRN1.placeHolderList[156]" ""
+		"reggie_rigRN1.placeHolderList[143]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.translateY" 
-		"reggie_rigRN1.placeHolderList[157]" ""
+		"reggie_rigRN1.placeHolderList[144]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.translateZ" 
-		"reggie_rigRN1.placeHolderList[158]" ""
+		"reggie_rigRN1.placeHolderList[145]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.rotateX" 
-		"reggie_rigRN1.placeHolderList[159]" ""
+		"reggie_rigRN1.placeHolderList[146]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.rotateY" 
-		"reggie_rigRN1.placeHolderList[160]" ""
+		"reggie_rigRN1.placeHolderList[147]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.rotateZ" 
-		"reggie_rigRN1.placeHolderList[161]" ""
+		"reggie_rigRN1.placeHolderList[148]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.scaleX" 
-		"reggie_rigRN1.placeHolderList[162]" ""
+		"reggie_rigRN1.placeHolderList[149]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.scaleY" 
-		"reggie_rigRN1.placeHolderList[163]" ""
+		"reggie_rigRN1.placeHolderList[150]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset.scaleZ" 
-		"reggie_rigRN1.placeHolderList[164]" ""
+		"reggie_rigRN1.placeHolderList[151]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.translateX" 
-		"reggie_rigRN1.placeHolderList[165]" ""
+		"reggie_rigRN1.placeHolderList[152]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.translateY" 
-		"reggie_rigRN1.placeHolderList[166]" ""
+		"reggie_rigRN1.placeHolderList[153]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.translateZ" 
-		"reggie_rigRN1.placeHolderList[167]" ""
+		"reggie_rigRN1.placeHolderList[154]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.visibility" 
-		"reggie_rigRN1.placeHolderList[168]" ""
+		"reggie_rigRN1.placeHolderList[155]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.rotateX" 
-		"reggie_rigRN1.placeHolderList[169]" ""
+		"reggie_rigRN1.placeHolderList[156]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.rotateY" 
-		"reggie_rigRN1.placeHolderList[170]" ""
+		"reggie_rigRN1.placeHolderList[157]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl.rotateZ" 
-		"reggie_rigRN1.placeHolderList[171]" ""
+		"reggie_rigRN1.placeHolderList[158]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.Stretchy" 
+		"reggie_rigRN1.placeHolderList[159]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.translateX" 
+		"reggie_rigRN1.placeHolderList[160]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.translateY" 
+		"reggie_rigRN1.placeHolderList[161]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.translateZ" 
+		"reggie_rigRN1.placeHolderList[162]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.rotateX" 
+		"reggie_rigRN1.placeHolderList[163]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.rotateY" 
+		"reggie_rigRN1.placeHolderList[164]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.rotateZ" 
+		"reggie_rigRN1.placeHolderList[165]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.scaleX" 
+		"reggie_rigRN1.placeHolderList[166]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.scaleY" 
+		"reggie_rigRN1.placeHolderList[167]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.scaleZ" 
+		"reggie_rigRN1.placeHolderList[168]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl.visibility" 
+		"reggie_rigRN1.placeHolderList[169]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L.translateX" 
-		"reggie_rigRN1.placeHolderList[172]" ""
+		"reggie_rigRN1.placeHolderList[170]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L.translateY" 
-		"reggie_rigRN1.placeHolderList[173]" ""
+		"reggie_rigRN1.placeHolderList[171]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L.translateZ" 
-		"reggie_rigRN1.placeHolderList[174]" ""
+		"reggie_rigRN1.placeHolderList[172]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:ChestCntrlOffset_L|reggie_rig1:ChestCntrl|reggie_rig1:ShoulderCntrl_Offset_L|reggie_rig1:ShoulderCntrl_L.visibility" 
+		"reggie_rigRN1.placeHolderList[173]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK.visibility" 
+		"reggie_rigRN1.placeHolderList[174]" ""
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK.rotateX" 
 		"reggie_rigRN1.placeHolderList[175]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.translateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK.rotateY" 
 		"reggie_rigRN1.placeHolderList[176]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.translateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK.rotateZ" 
 		"reggie_rigRN1.placeHolderList[177]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.translateZ" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK.visibility" 
 		"reggie_rigRN1.placeHolderList[178]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.visibility" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK.rotateX" 
 		"reggie_rigRN1.placeHolderList[179]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.rotateX" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK.rotateY" 
 		"reggie_rigRN1.placeHolderList[180]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.rotateY" 
+		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:RootCntrlOffset|reggie_rig1:RootCntrl|reggie_rig1:Torso_GRP|reggie_rig1:PelvisJnt_FK|reggie_rig1:Spine_01_FK_Offset|reggie_rig1:Spine_01_FK|reggie_rig1:SpineJnt_FK_01|reggie_rig1:Spine_02_FK_Offset|reggie_rig1:Spine_02_FK.rotateZ" 
 		"reggie_rigRN1.placeHolderList[181]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.rotateZ" 
-		"reggie_rigRN1.placeHolderList[182]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.scaleX" 
-		"reggie_rigRN1.placeHolderList[183]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.scaleY" 
-		"reggie_rigRN1.placeHolderList[184]" ""
-		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP.scaleZ" 
-		"reggie_rigRN1.placeHolderList[185]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.RotationSpace" 
-		"reggie_rigRN1.placeHolderList[186]" ""
+		"reggie_rigRN1.placeHolderList[182]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.TranslationSpace" 
-		"reggie_rigRN1.placeHolderList[187]" ""
+		"reggie_rigRN1.placeHolderList[183]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.Stretchy" 
-		"reggie_rigRN1.placeHolderList[188]" ""
+		"reggie_rigRN1.placeHolderList[184]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.Gulp" 
-		"reggie_rigRN1.placeHolderList[189]" ""
+		"reggie_rigRN1.placeHolderList[185]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.EyeTracker" 
-		"reggie_rigRN1.placeHolderList[190]" ""
+		"reggie_rigRN1.placeHolderList[186]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.rotateX" 
-		"reggie_rigRN1.placeHolderList[191]" ""
+		"reggie_rigRN1.placeHolderList[187]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.rotateY" 
-		"reggie_rigRN1.placeHolderList[192]" ""
+		"reggie_rigRN1.placeHolderList[188]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.rotateZ" 
-		"reggie_rigRN1.placeHolderList[193]" ""
+		"reggie_rigRN1.placeHolderList[189]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.translateX" 
-		"reggie_rigRN1.placeHolderList[194]" ""
+		"reggie_rigRN1.placeHolderList[190]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.translateY" 
-		"reggie_rigRN1.placeHolderList[195]" ""
+		"reggie_rigRN1.placeHolderList[191]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.translateZ" 
-		"reggie_rigRN1.placeHolderList[196]" ""
+		"reggie_rigRN1.placeHolderList[192]" ""
 		5 4 "reggie_rigRN1" "|reggie_rig1:Reggie_Rig|reggie_rig1:ReggieMasterControl|reggie_rig1:Head_Neck_GRP|reggie_rig1:Head_GRP|reggie_rig1:HeadCntrlOffset|reggie_rig1:HeadCntrl.visibility" 
-		"reggie_rigRN1.placeHolderList[197]" "";
+		"reggie_rigRN1.placeHolderList[193]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTA -n "HeadCntrl_rotateZ";
@@ -11654,124 +11609,6 @@ createNode animCurveTA -n "HeadCntrl_rotateZ";
 		 162 -16.329773101699416 168 -4.524078736936989;
 	setAttr -s 20 ".kot[0:19]"  18 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18;
-createNode animCurveTU -n "RootCntrl_visibility1";
-	rename -uid "1EDEAD39-7C48-EBF0-6540-02B03564BA4E";
-	setAttr ".tan" 5;
-	setAttr -s 17 ".ktv[0:16]"  1 1 39 1 47 1 55 1 63 1 70 1 79 1 87 1 96 1
-		 119 1 127 1 135 1 143 1 151 1 159 1 167 1 175 1;
-	setAttr -s 17 ".kit[0:16]"  9 9 9 9 9 9 9 9 
-		9 1 9 9 9 9 9 9 9;
-	setAttr -s 17 ".kix[9:16]"  3.9583332538604736 0.33333301544189453 
-		0.33333349227905273 0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 
-		0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "RootCntrl_translateX1";
-	rename -uid "03D9E915-1144-8FE5-E9CE-4FB145B5A5CF";
-	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  1 3.7156518969695664 39 3.6208010046486123
-		 47 2.2283817933810663 55 1.4932077723229014 63 0.076174494529243783 70 -0.29930858546521943
-		 79 -0.32548290236155353 87 -0.7482995117899216 96 0 119 0 127 0 135 -0.35894546282564821
-		 143 -0.76641362022065151 151 -2.1295838270256655 159 -2.9531818293141332 167 -3.3214638689073417
-		 175 -3.3214638689073417;
-	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 18 18 18 
-		16 1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  0 0.33333301544189453 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 -0.3832068145275116 -0.88531982898712158 
-		-1.0933833122253418 -0.5959399938583374 0 0;
-	setAttr -s 17 ".kox[9:16]"  3.9583332538604736 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453 
-		0.33333301544189453;
-	setAttr -s 17 ".koy[9:16]"  0 0 -0.3832068145275116 -0.8853185772895813 
-		-1.093384861946106 -0.5959399938583374 0 0;
-createNode animCurveTL -n "RootCntrl_translateY1";
-	rename -uid "29908C92-194C-B184-B7A4-0A8B46411564";
-	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  1 -2.1730682782503439 39 -3.2915461544082438
-		 47 -2.8933668861749768 55 -3.4704185141470663 63 -1.4677287052544776 70 1.16676049664871
-		 79 -0.37849159173081359 87 3.2810950508857331 96 0 119 0 127 0 135 0.98498688246282251
-		 143 2.9388096504472925 151 5.6676461904032962 159 5.6676461904032962 167 6.3780720193134899
-		 175 6.3780720193134899;
-	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 18 18 18 
-		16 1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  0 0.33333301544189453 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 1.4694048166275024 2.3413312435150146 
-		0 0 0 0;
-	setAttr -s 17 ".kox[9:16]"  3.9583332538604736 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453 
-		0.33333301544189453;
-	setAttr -s 17 ".koy[9:16]"  0 0 1.4694048166275024 2.3413279056549072 
-		0 0 0 0;
-createNode animCurveTL -n "RootCntrl_translateZ1";
-	rename -uid "E3467CD5-7E47-1EBB-70B0-3EA05482E90D";
-	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  1 -13.758060038809891 39 -13.052328797848661
-		 47 -7.8656557275905135 55 -4.9759763811423028 63 0.10930566742340937 70 1.1219983793021409
-		 79 1.220116317840187 87 2.8051010904209837 96 0 119 0 127 0 135 1.3455552132665849
-		 143 2.8730042555441231 151 7.9830306197079857 159 11.070398201655488 167 12.450952825263569
-		 175 12.450952825263569;
-	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 18 18 18 
-		16 1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  0 0.33333301544189453 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 1.4365020990371704 3.3187401294708252 
-		4.09869384765625 2.2339611053466797 0 0;
-	setAttr -s 17 ".kox[9:16]"  3.9583332538604736 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453 
-		0.33333301544189453;
-	setAttr -s 17 ".koy[9:16]"  0 0 1.4365020990371704 3.3187353610992432 
-		4.0987000465393066 2.2339611053466797 0 0;
-createNode animCurveTA -n "RootCntrl_rotateX1";
-	rename -uid "AEE56E09-D74C-583F-3E19-DC975545E255";
-	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  1 0 39 -0.51957843065933351 47 -2.8254781067935268
-		 55 -3.3534919339309601 63 -3.5139065117860167 70 0 79 0 87 0 96 9.3583874364026052
-		 119 0 127 4.7651809864677297 135 4.7651809864677297 143 4.7651809864677297 151 4.7651809864677297
-		 159 4.7651809864677297 167 4.7651809864677297 175 4.7651809864677297;
-	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 18 18 18 
-		16 1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  0 0.33333301544189453 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 0 0 0 0 0 0;
-	setAttr -s 17 ".kox[9:16]"  3.9583332538604736 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453 
-		0.33333301544189453;
-	setAttr -s 17 ".koy[9:16]"  0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "RootCntrl_rotateY1";
-	rename -uid "1B3737E1-294D-BB52-EB00-BDAB5E0F9665";
-	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  1 0 39 0 47 0 55 0 63 0 70 0 79 0 87 0 96 41.723864978330887
-		 119 0 127 0 135 0 143 0 151 0 159 0 167 0 175 0;
-	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 18 18 18 
-		16 1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  0 0.33333301544189453 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 0 0 0 0 0 0;
-	setAttr -s 17 ".kox[9:16]"  3.9583332538604736 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453 
-		0.33333301544189453;
-	setAttr -s 17 ".koy[9:16]"  0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "RootCntrl_rotateZ1";
-	rename -uid "C0B6997C-D740-F1F9-93BD-F093FE999EA5";
-	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  1 0 39 0 47 0 55 0 63 0 70 0 79 0 87 0 96 5.6319607201980277
-		 119 0 127 0 135 0 143 0 151 0 159 0 167 0 175 0;
-	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 18 18 18 
-		16 1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kot[9:16]"  1 18 18 18 18 18 18 18;
-	setAttr -s 17 ".kix[9:16]"  0 0.33333301544189453 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453;
-	setAttr -s 17 ".kiy[9:16]"  0 0 0 0 0 0 0 0;
-	setAttr -s 17 ".kox[9:16]"  3.9583332538604736 0.33333349227905273 
-		0.33333349227905273 0.33333301544189453 0.33333349227905273 0.33333349227905273 0.33333301544189453 
-		0.33333301544189453;
-	setAttr -s 17 ".koy[9:16]"  0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "UpperArm_FK_L_visibility1";
 	rename -uid "6085B6C3-9A40-8618-0268-BDB0D6A98870";
 	setAttr ".tan" 5;
@@ -11907,41 +11744,9 @@ createNode animCurveTA -n "UpperArm_FK_R_rotateZ1";
 	setAttr ".kot[0]"  18;
 createNode animCurveTL -n "ShoulderCntrl_L_translateZ";
 	rename -uid "B3525202-4240-65FF-7BDE-50A3B905FD86";
-	setAttr ".tan" 16;
-	setAttr -s 4 ".ktv[0:3]"  1 0 89 0 92 0.0047618964514834191 96 0;
-	setAttr -s 4 ".kit[3]"  1;
-	setAttr -s 4 ".kot[0:3]"  18 18 18 1;
-	setAttr -s 4 ".kix[3]"  3.6666665077209473;
-	setAttr -s 4 ".kiy[3]"  0;
-	setAttr -s 4 ".kox[3]"  0.125;
-	setAttr -s 4 ".koy[3]"  0;
-createNode animCurveTU -n "ShoulderCntrl_L_visibility";
-	rename -uid "1C90AB1F-5441-E174-4EFB-4E82B02AD680";
-	setAttr ".tan" 5;
-	setAttr -s 3 ".ktv[0:2]"  89 1 92 1 96 1;
-	setAttr -s 3 ".kit[0:2]"  9 9 1;
-	setAttr -s 3 ".kix[2]"  0.125;
-	setAttr -s 3 ".kiy[2]"  0;
-createNode animCurveTL -n "ShoulderCntrl_L_translateX";
-	rename -uid "915B2A8F-C448-532F-B7C1-5AB74250DF2B";
-	setAttr ".tan" 16;
-	setAttr -s 3 ".ktv[0:2]"  89 0 92 0.00541082713122894 96 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[0:2]"  18 18 1;
-	setAttr -s 3 ".kix[2]"  0;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  0.125;
-	setAttr -s 3 ".koy[2]"  0;
-createNode animCurveTL -n "ShoulderCntrl_L_translateY";
-	rename -uid "8D4E6DC7-304D-AD58-9E4F-F18349F4FEA0";
-	setAttr ".tan" 16;
-	setAttr -s 3 ".ktv[0:2]"  89 0 92 2.0462604509318392 96 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[0:2]"  18 18 1;
-	setAttr -s 3 ".kix[2]"  0;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  0.125;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  25 0 80 0 84 0 98 1.5040343450463785 109 0;
+	setAttr -s 5 ".kit[0:4]"  16 18 18 18 18;
 createNode animCurveTU -n "WristCntrl_IK_R_visibility";
 	rename -uid "740DB9A8-314A-9A21-F829-43B2088D9B60";
 	setAttr ".tan" 9;
@@ -12119,443 +11924,6 @@ createNode animCurveTU -n "sidewalk_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  65 2871.82545243501;
-createNode animCurveTL -n "FootCntrl_R_translateX1";
-	rename -uid "D8468D7E-674C-C5AE-F18F-65B77D40481E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 2.4260512755515182 39 2.4260512755515182
-		 47 2.4260512755515182 55 2.4260512755515182 63 0.63610307712649605 70 -1.2521679558748733
-		 79 -1.413769113789755 87 -1.4269669215305398 95 -1.435279547070839 111 -1.435279547070839
-		 119 -1.5449440639847054 127 -3.8727544600515569 135 -3.8727544600515071 143 -3.8727544600515071
-		 151 -4.0030173767346913 159 -6.6032066302720365;
-createNode animCurveTL -n "FootCntrl_R_translateY1";
-	rename -uid "A7C4B5E3-4E4D-164D-0939-B6AECAD3F21C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -1.0830809122491547 39 -1.0830809122491547
-		 47 -1.0830809122491547 55 -2.7822028223952762 63 4.5511512845997331 70 2.7993252368308443
-		 79 2.9285693903073104 87 1.6597197749215997 95 4.6279324112847462 111 4.6504565426954994
-		 119 8.1416969113622368 127 9.9345536055652541 135 9.2651368859000609 143 9.2651368859000609
-		 151 12.688778915804971 159 12.053390445679419;
-createNode animCurveTL -n "FootCntrl_R_translateZ1";
-	rename -uid "B440A0AB-0E48-D320-2A54-138B5BC765DD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -9.0943786161058036 39 -9.0943786161058036
-		 47 -9.0943786161058036 55 -9.0943786161058036 63 -2.3845177060168488 70 4.6939195376632679
-		 79 5.2997031539005954 87 5.3491769061569512 95 5.3803378982797083 111 5.3803378982797083
-		 119 5.7914300493890138 127 14.51753955155916 135 14.51753955155915 143 14.51753955155915
-		 151 15.005847567096346 159 24.753005751057081;
-createNode animCurveTL -n "RootCntrlOffset_translateX1";
-	rename -uid "A9E38828-DA47-43EC-CD1D-AF8909ECBD16";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 -0.69484223706147497 47 -0.69484223706148085
-		 55 -0.69484223706148085 63 -0.69484223706148085 71 -0.69484223706148085 79 -1.4611185541868912
-		 87 -2.1361108866597549 95 -3.4647798527077258 111 -3.6804329397596836 119 -3.7115645014290228
-		 127 -3.7180072826325641 135 -3.7180072826325641 143 -4.2686322056316035 151 -3.8604295028081053;
-createNode animCurveTL -n "RootCntrlOffset_translateY1";
-	rename -uid "034293D7-BD44-785A-B58F-C9B150314968";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0.094095697208763873 47 1.9254122427164522
-		 55 1.9254122427164522 63 1.9254122427164522 71 1.9254122427164522 79 3.7808152726104116
-		 87 3.3364672162919438 95 5.8633222322984428 111 7.0907221985999884 119 7.4121306898925585
-		 127 7.5651048750048799 135 8.4028170859667846 143 8.3401409730502696 151 8.0296924806888175;
-createNode animCurveTL -n "RootCntrlOffset_translateZ1";
-	rename -uid "D7330DE7-EA40-C713-5095-319DD310C0D2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 1.5897344666578774 47 1.5897344666578994
-		 55 1.5897344666578994 63 1.5897344666578994 71 1.5897344666578994 79 4.4622240231339072
-		 87 6.9925233190883453 95 11.973217154574389 111 12.781621647298483 119 12.898322508626402
-		 127 12.922474141402288 135 12.922474141402288 143 14.986565521366735 151 13.456362937025046;
-createNode animCurveTU -n "RootCntrlOffset_visibility1";
-	rename -uid "D300EFD8-6F41-635E-07EA-8391C0A25A75";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 1 47 1 55 1 63 1 71 1 79 1 87 1 95 1 111 1
-		 119 1 127 1 135 1 143 1 151 1;
-	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5;
-createNode animCurveTA -n "RootCntrlOffset_rotateX1";
-	rename -uid "6919B529-924D-076D-8C93-DEAFC8FB1FCB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 9.714696544573 47 8.9756456026405065 55 8.9756456026405065
-		 63 8.9756456026405065 71 8.9756456026405065 79 8.9756456026405065 87 8.9756456026405065
-		 95 8.9756456026405065 111 8.9756456026405065 119 8.9756456026405065 127 8.9756456026405065
-		 135 8.9756456026405065 143 4.1506628813639148 151 4.1506628813639148;
-createNode animCurveTA -n "RootCntrlOffset_rotateY1";
-	rename -uid "A7DE946F-8E40-D711-3B73-19B629DE62D0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 47 0 55 0 63 0 71 0 79 0 87 0 95 0 111 0
-		 119 -3.4063767390260344 127 0 135 0 143 0 151 0;
-createNode animCurveTA -n "RootCntrlOffset_rotateZ1";
-	rename -uid "10E5FA8D-E24A-1E9A-771F-1E8AF2FF58C0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 47 0 55 0 63 0 71 0 79 0 87 0 95 0 111 0
-		 119 0 127 0 135 0 143 0 151 0;
-createNode animCurveTU -n "RootCntrlOffset_scaleX1";
-	rename -uid "357373E9-434A-9BD0-2C93-CC905DCC317A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 1 47 1 55 1 63 1 71 1 79 1 87 1 95 1 111 1
-		 119 1 127 1 135 1 143 1 151 1;
-createNode animCurveTU -n "RootCntrlOffset_scaleY1";
-	rename -uid "A08E1C33-0B43-0079-05FF-0AA742DAE5C2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 1 47 1 55 1 63 1 71 1 79 1 87 1 95 1 111 1
-		 119 1 127 1 135 1 143 1 151 1;
-createNode animCurveTU -n "RootCntrlOffset_scaleZ1";
-	rename -uid "F5B2C227-BC49-8E19-623B-E89CF44C7B0B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 1 47 1 55 1 63 1 71 1 79 1 87 1 95 1 111 1
-		 119 1 127 1 135 1 143 1 151 1;
-createNode animCurveTL -n "FootCntrl_L_translateX1";
-	rename -uid "F0E68600-264A-1C79-192D-C6BC9155C841";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 4.7808665699706507 39 4.7808665699706507
-		 47 3.7857230267282964 55 -0.52604703376997541 63 -2.9302816251204784e-15 71 0.15248440770742827
-		 79 0.49258861373357921 87 -3.1823074303158094 111 -3.1823074303158094 119 -3.1823074303158094
-		 127 -3.1823074303158094 135 -2.4842856493739336 143 -5.7591083999532051 151 -5.7591083999532051
-		 159 -5.7591083999532051 167 -6.1035438600907677;
-createNode animCurveTL -n "FootCntrl_L_translateY1";
-	rename -uid "DBD94FA6-9F49-4721-9438-778F7D2D2CAB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -1.4359976083289845 39 -1.4359976083289845
-		 47 4.332653206863986 55 -1.3513022854142622 63 -1.800657737363168 71 -2.8421709430404009e-15
-		 79 3.2608041983231857 87 6.2891739421705495 111 6.2891739421705495 119 6.2891739421705495
-		 127 6.2891739421705495 135 9.4389411663115439 143 12.143284097324667 151 12.143284097324667
-		 159 12.143284097324667 167 13.960929803295711;
-createNode animCurveTL -n "FootCntrl_L_translateZ1";
-	rename -uid "09E0E7DC-B848-CA3F-43EB-B69873FFBD08";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -17.921719601954461 39 -17.921719601954461
-		 47 -14.191290550094394 55 1.9719578655225791 63 1.0984553714598141e-14 71 -0.57160825524135839
-		 79 -1.846534490189977 87 11.92930624995256 111 11.92930624995256 119 11.92930624995256
-		 127 11.92930624995256 135 9.3126779774395914 143 21.588790314610257 151 21.588790314610257
-		 159 21.588790314610257 167 22.879952836553109;
-createNode animCurveTU -n "FootCntrl_L_visibility1";
-	rename -uid "5137D759-FB4E-1D8B-C15D-DC9F0AA66FDE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 151 1 159 1 167 1;
-	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5;
-createNode animCurveTA -n "FootCntrl_L_rotateX1";
-	rename -uid "514F45DC-814C-392E-C0A0-B3937CE03E18";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -5.6960433552884329 39 -5.6960433552884329
-		 47 54.599692813573718 55 -5.143253159013053 63 0 71 0 79 45.423504347716069 87 5.042247739492554
-		 111 5.042247739492554 119 5.042247739492554 127 5.042247739492554 135 27.614447974324687
-		 143 -1.1708467798065492 151 -1.1708467798065492 159 -1.1708467798065492 167 31.652280258780259;
-createNode animCurveTA -n "FootCntrl_L_rotateY1";
-	rename -uid "4D546208-6A4E-9F0C-14A6-E7BE849EF02D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -13.020393655979561 39 -13.020393655979561
-		 47 0 55 -2.1471915391850316 63 0 71 0 79 0 87 5.5854847389979891 111 5.5854847389979891
-		 119 5.5854847389979891 127 5.5854847389979891 135 5.5854847389979785 143 5.5854847389979829
-		 151 5.5854847389979829 159 5.5854847389979829 167 5.5854847389979687;
-createNode animCurveTA -n "FootCntrl_L_rotateZ1";
-	rename -uid "68E0B07E-5949-3795-951E-7FB9B77284E8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 11.070193540786832 39 11.070193540786832
-		 47 0 55 6.4347678458608835 63 0 71 0 79 0 87 7.9550944930678602 111 7.9550944930678602
-		 119 7.9550944930678602 127 7.9550944930678602 135 7.955094493067854 143 7.9550944930678602
-		 151 7.9550944930678602 159 7.9550944930678602 167 7.955094493067854;
-createNode animCurveTU -n "FootCntrl_L_KneeThighLength1";
-	rename -uid "B73AEA94-2246-E7B3-B821-55A27EA05C1D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 151 1 159 1 167 1;
-createNode animCurveTU -n "FootCntrl_L_KneeShinLength1";
-	rename -uid "B5C40E3B-8F43-39F3-8FD2-B88706528502";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 151 1 159 1 167 1;
-createNode animCurveTU -n "FootCntrl_L_HeelRoll1";
-	rename -uid "F07C1BF2-124E-3D3E-F480-DA8C9C87A2AF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 39 0 47 0 55 -6.8000000000000007 63 -2.7
-		 71 0 79 0 87 0 111 0 119 0 127 0 135 0 143 0 151 0 159 0 167 0;
-createNode animCurveTU -n "FootCntrl_L_BallRoll1";
-	rename -uid "0908C791-3842-B727-241C-189F91147CEE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 39.800000000000004 39 39.800000000000004
-		 47 0 55 0 63 0 71 0 79 0 87 0 111 0 119 0 127 0 135 0 143 0 151 0 159 0 167 0;
-createNode animCurveTU -n "FootCntrl_L_ToeRoll1";
-	rename -uid "A1C65EC3-8C47-8F38-46D0-05B4263C5F9E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 39 0 47 0 55 -2.7 63 0 71 0 79 0 87 0
-		 111 0 119 0 127 0 135 0 143 0 151 0 159 0 167 0;
-createNode animCurveTU -n "FootCntrl_L_Stretchy1";
-	rename -uid "4C593B00-3746-5003-4519-8E820B6EDD62";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 151 1 159 1 167 1;
-	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5;
-createNode animCurveTA -n "FootCntrl_R_rotateX1";
-	rename -uid "CEAEDB3B-DF45-B87D-C0FD-6A9496DA0C18";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1.6371636635951274 39 1.6371636635951274
-		 47 1.1613736851625176 55 -19.900074286765079 63 28.568598250803262 70 0.51862472090208189
-		 79 3.4011798862056328 87 -20.288525364004538 95 29.141047270893896 111 29.141047270893896
-		 119 41.09841973837478 127 13.962352606002607 135 3.3251919005237212 143 3.3251919005237212
-		 151 34.308338823485201 159 0.17600570211552929;
-createNode animCurveTA -n "FootCntrl_R_rotateY1";
-	rename -uid "6A000562-3043-20A7-E7B2-3ABF54B5B6A9";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 39 0 47 0 55 0 63 0 70 -2.0735947577937819
-		 79 0 87 1.6293861125683184 95 0 111 0 119 0 127 0 135 0 143 0 151 0 159 0;
-createNode animCurveTA -n "FootCntrl_R_rotateZ1";
-	rename -uid "F42A66F9-B34B-CFFC-FCAB-67BA35F6CB21";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 39 0 47 0 55 0 63 0 70 1.9297932938437483
-		 79 0 87 4.3982618351808069 95 0 111 0 119 0 127 0 135 0 143 0 151 0 159 0;
-createNode animCurveTU -n "FootCntrl_R_visibility1";
-	rename -uid "767B183B-2E45-23DB-C830-0B88B885CA9A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 70 1 79 1 87 1 95 1
-		 111 1 119 1 127 1 135 1 143 1 151 1 159 1;
-	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5;
-createNode animCurveTU -n "FootCntrl_R_KneeThighLength1";
-	rename -uid "08C230C7-584D-47F2-EF73-E1AE47AEFA8F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 70 1 79 1 87 1 95 1
-		 111 1 119 1 127 1 135 1 143 1 151 1 159 1;
-createNode animCurveTU -n "FootCntrl_R_KneeShinLength1";
-	rename -uid "5B14EE90-8D40-9F15-C064-169ECA98AB60";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 70 1 79 1 87 1 95 1
-		 111 1 119 1 127 1 135 1 143 1 151 1 159 1;
-createNode animCurveTU -n "FootCntrl_R_HeelRoll1";
-	rename -uid "9810978E-2746-B4AF-EE6E-0592E1716CEE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 39 0 47 0 55 0 63 0 70 0 79 0 87 0 95 0
-		 111 0 119 0 127 0 135 0 143 0 151 0 159 0;
-createNode animCurveTU -n "FootCntrl_R_BallRoll1";
-	rename -uid "9B42B0EC-494D-2444-C93F-3D9537F2FB11";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 39 0 47 0 55 18.900000000000002 63 0
-		 70 26.1 79 0 87 0 95 0 111 0 119 0 127 0 135 0 143 0 151 0 159 0;
-createNode animCurveTU -n "FootCntrl_R_ToeRoll1";
-	rename -uid "FFE7F04F-6741-C87F-8C02-9197CE0A90CE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -23.6 39 -23.6 47 -21.900000000000002
-		 55 0 63 0 70 0 79 0 87 0 95 0 111 0 119 0 127 0 135 0 143 0 151 0 159 0;
-createNode animCurveTU -n "FootCntrl_R_Stretchy1";
-	rename -uid "975843CF-024B-BB93-2931-FC859E542170";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 1 39 1 47 1 55 1 63 1 70 1 79 1 87 1 95 1
-		 111 1 119 1 127 1 135 1 143 1 151 1 159 1;
-	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5;
-createNode animCurveTA -n "Knee_PV_R_rotateX1";
-	rename -uid "9BBEEAFA-0F4F-0BC2-1E5C-298F73D7715B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 95 0 111 0 143 0 151 0 159 0;
-createNode animCurveTA -n "Knee_PV_R_rotateY1";
-	rename -uid "BE2F324C-764F-69F2-D514-C0A7E44C2274";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 95 0 111 0 143 0 151 0 159 0;
-createNode animCurveTA -n "Knee_PV_R_rotateZ1";
-	rename -uid "6F6F408E-6843-60A3-B034-FF8F49EADC93";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 95 0 111 0 143 0 151 0 159 0;
-createNode animCurveTU -n "Knee_PV_R_visibility1";
-	rename -uid "BE32D4D6-9D41-3D60-D436-4B99CCA634C7";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 95 1 111 1 143 1 151 1 159 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
-createNode animCurveTL -n "Knee_PV_R_translateX1";
-	rename -uid "6A054704-194B-BDC1-936F-91ABB74194DC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 -3.9805157199045507 95 -3.9805157199045507
-		 111 -3.9805157199045507 143 -3.9805157199045507 151 -3.9805157199045507 159 -8.421813504635189;
-createNode animCurveTL -n "Knee_PV_R_translateY1";
-	rename -uid "C08816FF-D944-C882-1C30-6CA340E73EF4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 95 0 111 0 143 0 151 0 159 0;
-createNode animCurveTL -n "Knee_PV_R_translateZ1";
-	rename -uid "951E21A1-D84C-B53E-EE8A-628624AFA6A8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 14.921497088286396 95 14.921497088286396
-		 111 14.921497088286396 143 14.921497088286396 151 14.921497088286396 159 31.570297551926;
-createNode animCurveTU -n "Knee_PV_R_scaleX1";
-	rename -uid "C62696A3-3440-0F0D-7760-4B9CE41C9E01";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 95 1 111 1 143 1 151 1 159 1;
-createNode animCurveTU -n "Knee_PV_R_scaleY1";
-	rename -uid "069A2B4F-8F42-5B61-8550-2DA8D7A4E2BE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 95 1 111 1 143 1 151 1 159 1;
-createNode animCurveTU -n "Knee_PV_R_scaleZ1";
-	rename -uid "10F752B2-8648-5D61-057D-089BDEBA9602";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 95 1 111 1 143 1 151 1 159 1;
-createNode animCurveTL -n "Knee_PV_L_translateX1";
-	rename -uid "B07F0038-FC45-B9EE-0A02-84B9EB0990E8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 71 0 79 0 87 -3.0902617800148349 95 -3.0902617800148349
-		 111 -3.0902617800148349 119 -3.0902617800148349 127 -3.0902617800148349 135 -3.0902617800148349
-		 143 -6.3141124481316684;
-createNode animCurveTL -n "Knee_PV_L_translateY1";
-	rename -uid "2FDF44F7-C04E-7E16-66A5-61932FCAE07B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 71 0 79 0 87 0 95 0 111 0 119 0 127 0
-		 135 0 143 0;
-createNode animCurveTL -n "Knee_PV_L_translateZ1";
-	rename -uid "C51BAC15-A84C-2558-BA8D-D9BBCA38223A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 71 0 79 0 87 11.584260783584913 95 11.584260783584913
-		 111 11.584260783584913 119 11.584260783584913 127 11.584260783584913 135 11.584260783584913
-		 143 23.669297432687355;
-createNode animCurveTU -n "Knee_PV_L_visibility1";
-	rename -uid "D0C73378-0146-16AF-284A-9AAC3B0000F2";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 71 1 79 1 87 1 95 1 111 1 119 1 127 1
-		 135 1 143 1;
-	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
-		5 5;
-createNode animCurveTA -n "Knee_PV_L_rotateX1";
-	rename -uid "18DB9553-3041-7CB5-F818-8FAF521F10F5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 71 0 79 0 87 0 95 0 111 0 119 0 127 0
-		 135 0 143 0;
-createNode animCurveTA -n "Knee_PV_L_rotateY1";
-	rename -uid "DB51B367-5447-A20A-AF97-AF86F8424872";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 71 0 79 0 87 0 95 0 111 0 119 0 127 0
-		 135 0 143 0;
-createNode animCurveTA -n "Knee_PV_L_rotateZ1";
-	rename -uid "2C92832E-4043-3E66-B9E5-F8B65103A6EB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 71 0 79 0 87 0 95 0 111 0 119 0 127 0
-		 135 0 143 0;
-createNode animCurveTU -n "Knee_PV_L_scaleX1";
-	rename -uid "DE95590A-8B48-4F95-B037-63B0EFA60172";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 71 1 79 1 87 1 95 1 111 1 119 1 127 1
-		 135 1 143 1;
-createNode animCurveTU -n "Knee_PV_L_scaleY1";
-	rename -uid "C343294B-014A-E12F-2E2D-238878431B85";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 71 1 79 1 87 1 95 1 111 1 119 1 127 1
-		 135 1 143 1;
-createNode animCurveTU -n "Knee_PV_L_scaleZ1";
-	rename -uid "B7B3CFC9-CD44-A4EA-FC2F-FB88A5FD8B7C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 71 1 79 1 87 1 95 1 111 1 119 1 127 1
-		 135 1 143 1;
-createNode animCurveTL -n "ReggieMasterControl_translateX1";
-	rename -uid "5587F7AC-344C-F1D2-D355-44810B7A8051";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 -2057.3848202977656 71 -2057.3848202977656;
-createNode animCurveTL -n "ReggieMasterControl_translateY1";
-	rename -uid "7E47CC90-E941-6DA8-061E-B0BE25602018";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 -80.173527274157351 71 -80.173527274157351;
-createNode animCurveTL -n "ReggieMasterControl_translateZ1";
-	rename -uid "A27EEAF2-AA48-959B-6314-EB8EBB24BD22";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 -485.07194729480392 71 -498.05991452289635;
-createNode animCurveTU -n "ReggieMasterControl_visibility1";
-	rename -uid "9622914E-BB4E-98D0-01DF-B9AFC8CB462D";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 1 71 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "ReggieMasterControl_rotateX1";
-	rename -uid "A5BA5BF9-7C41-B32C-3E06-46BF3C152AAE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 0 71 0;
-createNode animCurveTA -n "ReggieMasterControl_rotateY1";
-	rename -uid "A9A57610-B943-27CB-1F31-2CA76B2C7F35";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 194.93661453088069 71 194.93661453088069;
-createNode animCurveTA -n "ReggieMasterControl_rotateZ1";
-	rename -uid "6E6CE16F-694F-4EB2-9A31-968A9A20D767";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 0 71 0;
-createNode animCurveTU -n "ReggieMasterControl_Scale1";
-	rename -uid "71C0D820-9241-1409-BCE7-B78D70941937";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 5 71 5;
-createNode animCurveTU -n "ReggieMasterControl_ReggieClothing";
-	rename -uid "72B15BD1-4245-F1C4-F499-5A9973B7D58F";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 1 71 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTU -n "ReggieMasterControl_WetHair1";
-	rename -uid "7E10D322-A943-B45A-A0EB-4E98BD143841";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 0 71 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTU -n "ReggieMasterControl_Stranger";
-	rename -uid "5560458B-5E44-16BD-61D7-A483C16328B6";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  46 1 71 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode partition -n "church_camera:mtorPartition";
 	rename -uid "C253F043-0B47-0B5D-93A5-EB915BD8E1DE";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -12572,7 +11940,7 @@ createNode animCurveTA -n "church_camera:camera1_rotateX";
 createNode animCurveTU -n "church_camera:camera1_visibility";
 	rename -uid "6552DE64-F648-7AC4-0E39-8BB38F41F70C";
 	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  1 1 92 1 174 1 260 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0 92 1 174 1 260 1;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "church_camera:camera1_translateX";
 	rename -uid "3C24423E-2241-48DC-A121-5A834CECA0F9";
@@ -12674,617 +12042,1634 @@ createNode animCurveTU -n "church_camera:cameraShape1_horizontalFilmAperture";
 	rename -uid "9CA2076C-F349-118E-0C23-82A2459AADCA";
 	setAttr ".tan" 3;
 	setAttr -s 2 ".ktv[0:1]"  1 1.41732 432 1.41732;
-createNode animCurveTA -n "HeadCntrl_rotateX1";
-	rename -uid "5A3B89A3-9B45-1E42-CEC6-71A898129C85";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 9.5541249871383709 46 9.5541249871383709
-		 52 -9.086938456233721 93 -22.58962916946486 109 -20.768768094961562 121 -0.60514971027833564;
-createNode animCurveTA -n "HeadCntrl_rotateY1";
-	rename -uid "E252E2A5-5845-1C12-C0E9-A9981F4EFB8F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 -2.6149550782990585 109 -5.4510090969583578
-		 121 0;
-createNode animCurveTA -n "HeadCntrl_rotateZ1";
-	rename -uid "D6E68998-0747-1466-9060-3FA79A493B08";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 -3.2479848201415478 109 -7.1188951989076754
-		 121 0;
-createNode animCurveTU -n "HeadCntrl_visibility1";
-	rename -uid "37D5383D-4A41-0275-10D3-D8A8008D8170";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 1 46 1 52 1 93 1 109 1 121 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
-createNode animCurveTL -n "HeadCntrl_translateX1";
-	rename -uid "6326033E-AD40-8A00-4A3C-07AC63CF6459";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 0 109 0 121 0;
-createNode animCurveTL -n "HeadCntrl_translateY1";
-	rename -uid "F407EB10-DA43-4C8E-C858-339D604DBDC7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 0 109 0 121 0;
-createNode animCurveTL -n "HeadCntrl_translateZ1";
-	rename -uid "130111EC-BA4D-5A42-A313-9FB2CC52DFFE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 0 109 0 121 0;
-createNode animCurveTU -n "HeadCntrl_RotationSpace1";
-	rename -uid "0F2F1067-1D48-F6D9-4F00-C4A1433B855A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 0 109 0 121 0;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
-createNode animCurveTU -n "HeadCntrl_TranslationSpace1";
-	rename -uid "65466C04-AF4E-C569-774D-6987913B98FD";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 0 109 0 121 0;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
-createNode animCurveTU -n "HeadCntrl_Stretchy1";
-	rename -uid "46C60C49-6849-F31C-5DC8-29BD26B583D1";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 1 46 1 52 1 93 1 109 1 121 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
-createNode animCurveTU -n "HeadCntrl_Gulp1";
-	rename -uid "3DFCC520-0347-67F8-3AD2-229F0564AD9D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 0 46 0 52 0 93 0 109 0 121 0;
-createNode animCurveTU -n "HeadCntrl_EyeTracker1";
-	rename -uid "7B5CAD48-E441-9838-3F60-AB997F12F3A5";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  39 1 46 1 52 1 93 1 109 1 121 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
-createNode animCurveTL -n "ARM_FK_GRP_L_translateX1";
-	rename -uid "663097B5-6A41-9990-87BD-B598A3744115";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 6.3890744402565554e-16;
-createNode animCurveTL -n "ARM_FK_GRP_L_translateY1";
-	rename -uid "09984B8D-A64E-AD04-E86E-FA8A0B0A8E1F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.1855090380563499e-63;
-createNode animCurveTL -n "ARM_FK_GRP_L_translateZ1";
-	rename -uid "BC45DB8E-B749-398A-135B-278AA92B372F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_FK_GRP_R_translateX";
-	rename -uid "F6E5AA27-EE4A-1839-2ED2-AAA146C7CB0A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_FK_GRP_R_translateY";
-	rename -uid "6E6F080F-0E43-B7FE-D432-2A9194C285C8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_FK_GRP_R_translateZ";
-	rename -uid "C8D3DD95-244A-DC26-EADA-3A92D76E72AB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_IK_GRP_L_translateX";
-	rename -uid "74DF03F9-EE41-5F53-6F6B-F58D42737C59";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_IK_GRP_L_translateY";
-	rename -uid "7433F213-C94A-FAFB-832F-ADB72D780BF6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_IK_GRP_L_translateZ";
-	rename -uid "4F49ADC9-484F-D9F2-DC79-AD8D77DF71A5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_IK_GRP_R_translateX";
-	rename -uid "A1CD0D5E-6C4C-04DF-CC1B-CEAD6D4F7F32";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_IK_GRP_R_translateY";
-	rename -uid "99B3CC60-4043-1867-F867-49ACC3B0C728";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "ARM_IK_GRP_R_translateZ";
-	rename -uid "A5EEDFDC-0542-A83F-75B3-69B20D7BB8C4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "BindPelvisJnt_translateX";
-	rename -uid "14FEC2BA-5D4C-F543-2141-0BB4D4CAA171";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 3.0208096599081955;
-createNode animCurveTL -n "BindPelvisJnt_translateY";
-	rename -uid "87650AA7-AD49-F329-352C-F3BF84C5F336";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.28837040635279054;
-createNode animCurveTL -n "BindPelvisJnt_translateZ";
-	rename -uid "EFE9C1FF-EE4C-5A2F-CB0F-33A63BBB4C09";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -12.469705392676218;
-createNode animCurveTL -n "Head_Neck_GRP_translateX1";
-	rename -uid "B300DA1D-8C42-C846-CA14-81967E8BA774";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "Head_Neck_GRP_translateY1";
-	rename -uid "F3C08C75-3448-DDD6-C530-74800A95472D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "Head_Neck_GRP_translateZ1";
-	rename -uid "16383DE6-5844-787D-0448-D4B102B209D6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "BindPelvisJnt_visibility";
-	rename -uid "711F8994-9243-79B4-F98C-B6AD7E3EFEBF";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "BindPelvisJnt_rotateX";
-	rename -uid "FD5C72A1-6B4A-F9AF-AA8F-889795AED2CD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 6.536468543664071e-13;
-createNode animCurveTA -n "BindPelvisJnt_rotateY";
-	rename -uid "DA56235F-034B-9019-7B73-71BC3E7981F9";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.6360934994342599e-12;
-createNode animCurveTA -n "BindPelvisJnt_rotateZ";
-	rename -uid "BBC1B2E1-FE41-9A95-CC99-04921E95AC2D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -8.3458800034662648;
-createNode animCurveTA -n "ARM_IK_GRP_L_rotateX";
-	rename -uid "F86B18E7-0241-2863-F93B-10AB06878B49";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "ARM_IK_GRP_L_rotateY";
-	rename -uid "2CA73E0F-AD44-44C5-45BD-8A88F2387430";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "ARM_IK_GRP_L_rotateZ";
-	rename -uid "06288130-2D47-310D-2175-D7B0FC0D85D6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "ARM_IK_GRP_L_scaleX";
-	rename -uid "13A974D4-7840-5BCC-63DB-0085F96600B2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_IK_GRP_L_scaleY";
-	rename -uid "23CBFB67-CC45-5FB3-4999-9BADCD30C464";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_IK_GRP_L_scaleZ";
-	rename -uid "FE528C09-A641-4C29-86DE-5CA3DC9BA3B1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTA -n "ARM_IK_GRP_R_rotateX";
-	rename -uid "0B28B9C5-A64D-A5AF-F110-A99E76BE6753";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 6.3611093629270249e-15;
-createNode animCurveTA -n "ARM_IK_GRP_R_rotateY";
-	rename -uid "9279EF6E-1E4E-1D82-B1C1-5697770C45A0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.8475369207962189e-14;
-createNode animCurveTA -n "ARM_IK_GRP_R_rotateZ";
-	rename -uid "E12D5C5C-1B43-D193-CC11-4C899A87D04F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 7.2641961531629799e-18;
-createNode animCurveTU -n "ARM_IK_GRP_R_scaleX";
-	rename -uid "42A558AD-E644-D6F8-B390-15A2EE84FC1F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_IK_GRP_R_scaleY";
-	rename -uid "C00E632A-4045-440D-0996-88937F88DE1B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_IK_GRP_R_scaleZ";
-	rename -uid "B61C99B2-9240-4964-50E9-59AA0ED02C41";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTA -n "ARM_FK_GRP_L_rotateX1";
-	rename -uid "8DF3B391-AF45-5A77-EE67-9BBD2B85EE86";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.7829853462805559e-15;
-createNode animCurveTA -n "ARM_FK_GRP_L_rotateY1";
-	rename -uid "5BD8589D-5D4B-B0AE-145B-DF95BABA2DA7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.000916675755266e-14;
-createNode animCurveTA -n "ARM_FK_GRP_L_rotateZ1";
-	rename -uid "D72FBFD7-734A-8805-0EFB-D6B6B33E31F0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.2466872263722184e-14;
-createNode animCurveTU -n "ARM_FK_GRP_L_scaleX1";
-	rename -uid "95C9E7FC-4645-C05F-985E-C8850316E7FA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_FK_GRP_L_scaleY1";
-	rename -uid "0B161F91-0E4F-4B09-6916-53A53E83F6D7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_FK_GRP_L_scaleZ1";
-	rename -uid "EAEE3825-404F-50E4-4138-FC94F8B2C5B8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTA -n "ARM_FK_GRP_R_rotateX";
-	rename -uid "AD8FD8FE-0B47-4B0E-0CA2-FABECD2F668F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "ARM_FK_GRP_R_rotateY";
-	rename -uid "40C890BB-E846-E6A2-D120-3BA2C6D04F10";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "ARM_FK_GRP_R_rotateZ";
-	rename -uid "E1CFFA79-C142-026A-8630-C180767DDCF6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "ARM_FK_GRP_R_scaleX";
-	rename -uid "43D87C02-F449-7714-C002-B0A58602210A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_FK_GRP_R_scaleY";
-	rename -uid "E547F050-8248-1BD7-618E-718B651E30A0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "ARM_FK_GRP_R_scaleZ";
-	rename -uid "3B5B5D9E-AC44-BF87-473D-349A643E2793";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "Head_Neck_GRP_visibility1";
-	rename -uid "58363959-DD42-1241-F580-BC89ABEADFCE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-createNode animCurveTA -n "Head_Neck_GRP_rotateX1";
-	rename -uid "67FCD988-5C4C-89E8-73EB-398BFBA24037";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "Head_Neck_GRP_rotateY1";
-	rename -uid "6AC9BD45-AA42-0B17-80CC-A684ECDE9D44";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "Head_Neck_GRP_rotateZ1";
-	rename -uid "1C7A27F4-6445-20A0-924F-ECA2827C9D95";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTU -n "Head_Neck_GRP_scaleX1";
-	rename -uid "50031894-1544-B51C-24BC-13BFA302241C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "Head_Neck_GRP_scaleY1";
-	rename -uid "3956ADCA-3C43-001A-80F8-9C822C4E0C9C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "Head_Neck_GRP_scaleZ1";
-	rename -uid "4A275655-0F46-0676-ED56-7FA8C9E2CE57";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTA -n "ArmCntrl_L_rotateX";
-	rename -uid "A6F355A3-F646-2DA9-0398-84A042CD48E4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 -8.6944390433383614 47 -1.3202688065363817
-		 55 6.2541424261748526 63 -6.5707119260973581 70 -24.88984846158786 79 -19.217182816017626
-		 87 -19.217182816017626 119 -19.217182816017626 127 -19.217182816017626 135 -17.139763044339691
-		 143 -9.270781205398178 151 -5.9483365609233765 159 -6.770351145248573 167 -6.770351145248573;
-createNode animCurveTA -n "ArmCntrl_L_rotateY";
-	rename -uid "477EACCA-1943-258E-068F-2E8A3277A6FC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 -12.808045841084244 47 -1.857728218846904
-		 55 8.205073541955203 63 -9.5786084361589126 70 -36.496288660020497 79 -26.956006358100321
-		 87 -26.956006358100321 119 -26.956006358100321 127 -26.956006358100321 135 -5.4131088341771889
-		 143 28.031458565965814 151 -16.759726262842896 159 -32.678553706472663 167 -32.678553706472663;
-createNode animCurveTA -n "ArmCntrl_L_rotateZ";
-	rename -uid "4A57C0E2-B544-09FA-8CA9-96916B311E01";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 -57.473800502737674 47 -54.893456959684848
-		 55 -51.101416915920247 63 -56.860711041820451 70 -58.102363207519559 79 -37.735977753722572
-		 87 -37.735977753722572 119 -37.735977753722572 127 -37.735977753722572 135 -45.04861825497273
-		 143 -32.877764139592152 151 -37.562041243177717 159 -35.615392218806285 167 -35.615392218806285;
-createNode animCurveTU -n "ArmCntrl_L_visibility";
-	rename -uid "508BAFAA-C242-4F1A-E09A-38B5EB01F12F";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 1 47 1 55 1 63 1 70 1 79 1 87 1 119 1
-		 127 1 135 1 143 1 151 1 159 1 167 1;
-	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5;
-createNode animCurveTL -n "ArmCntrl_L_translateX";
-	rename -uid "1E1406A1-7546-BEC7-E502-578A1384C9CE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 -5.4437841186047651 47 -6.2049819760950617
-		 55 -6.2017303708135421 63 -8.7067977355852815 70 -10.102585875756695 79 -10.2910864965201
-		 87 -11.35683074333728 119 -12.283192046827656 127 -12.668699314967563 135 -12.371701483579161
-		 143 -12.185956295562056 151 -14.01706819390575 159 -15.700697032013959 167 -15.700697032013959;
-createNode animCurveTL -n "ArmCntrl_L_translateY";
-	rename -uid "A297842C-4643-979D-0143-63848A6BA50F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 -6.3336560876785226 47 -7.0218877469008163
-		 55 -7.2425734060781952 63 -6.4238728728883956 70 -2.2127458442544112 79 -3.5258109574514744
-		 87 -0.45729408326659615 119 1.5683220166388527 127 0.3425568083828171 135 2.2329836555480056
-		 143 4.3220428332213201 151 6.3320216698356848 159 6.1238224456049482 167 6.1238224456049482;
-createNode animCurveTL -n "ArmCntrl_L_translateZ";
-	rename -uid "1DEF9529-4A4B-4D64-A5AD-788F7B399CF2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 -8.2115971938235717 47 -5.3581449244720272
-		 55 -5.370334003011882 63 4.0202470220770161 70 9.2525460845545293 79 9.9591659453420007
-		 87 13.954251204324885 119 17.426840804615221 127 18.871966507875481 135 17.758630300175316
-		 143 17.062339548627463 151 23.92650810920707 159 30.237816636382082 167 30.237816636382082;
-createNode animCurveTU -n "ArmCntrl_L_scaleX";
-	rename -uid "4578525E-3041-116A-7CEA-CA9A4A27CC12";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 1 47 1 55 1 63 1 70 1 79 1 87 1 119 1
-		 127 1 135 1 143 1 151 1 159 1 167 1;
-createNode animCurveTU -n "ArmCntrl_L_scaleY";
-	rename -uid "91038473-B24C-D6FE-DE12-C49E916ABF2E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 1 47 1 55 1 63 1 70 1 79 1 87 1 119 1
-		 127 1 135 1 143 1 151 1 159 1 167 1;
-createNode animCurveTU -n "ArmCntrl_L_scaleZ";
-	rename -uid "61624E4F-6B4B-B18C-BE21-C098F8383F5B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  39 1 47 1 55 1 63 1 70 1 79 1 87 1 119 1
-		 127 1 135 1 143 1 151 1 159 1 167 1;
-createNode animCurveTA -n "ArmCntrl_R_rotateX";
-	rename -uid "A68D45BE-004F-B91D-6F72-02B18EE08609";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 10.068713506701126 47 -19.071547304187096
-		 55 -25.562160123634126 63 -31.445652714115628 71 -20.466425062793643 79 -20.466425062793643
-		 87 -6.3045442474399902 111 -6.3045442474399902 119 -6.3045442474399902 127 -12.709882523114612
-		 135 -12.709882523114612 143 -31.863009708499241 150 -38.594945342847396 158 -111.50265494069117
-		 167 -49.569545560813637;
-createNode animCurveTA -n "ArmCntrl_R_rotateY";
-	rename -uid "B8F7FBC8-1242-C93F-7C9A-B18EEA98D1EA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 -26.635869860521719 47 4.9226577774066662
-		 55 10.983292536559013 63 15.78483483329444 71 -1.9309213328684798 79 -1.9309213328684798
-		 87 22.378397630484837 111 22.378397630484837 119 22.378397630484837 127 -10.750826935100092
-		 135 -10.750826935100092 143 3.5712896330228991 150 32.593033531484195 158 77.549635973767892
-		 167 50.183678389952114;
-createNode animCurveTA -n "ArmCntrl_R_rotateZ";
-	rename -uid "1DD414FC-824C-CDE3-E7BB-76B0E696774A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 32.122411916614666 47 44.900936594809956
-		 55 41.639683700860779 63 38.279971036413791 71 28.84753048238867 79 28.84753048238867
-		 87 31.431531600161122 111 31.431531600161122 119 31.431531600161122 127 39.132135487874891
-		 135 39.132135487874891 143 33.894297995143255 150 47.604027531259256 158 -31.615948525590618
-		 167 22.610442065959226;
-createNode animCurveTU -n "ArmCntrl_R_visibility";
-	rename -uid "6B2C5A13-5946-8C2C-2311-3DB2A254DD74";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 150 1 158 1 167 1;
-	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5;
-createNode animCurveTL -n "ArmCntrl_R_translateX";
-	rename -uid "2C826AD7-FD48-5F5B-9037-A695AC34FC0E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 10.355935643795805 47 9.7989032198898833
-		 55 8.5316231164948828 63 7.2189493806331928 71 4.7092663738994949 79 3.6163249198957126
-		 87 5.06039710825155 111 4.0249109797655924 119 4.4046405178228643 127 5.0748501812365401
-		 135 4.2924046156531617 143 2.1200181870011017 150 1.2877794482097633 158 5.2380638016221788
-		 167 5.1879647272775804;
-createNode animCurveTL -n "ArmCntrl_R_translateY";
-	rename -uid "F1A082AA-8448-EC2F-E848-939CF9361A83";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 -6.542107324858752 47 -6.8479472814370403
-		 55 -7.2680588726892337 63 -6.0479374773976868 71 -3.7405607937439811 79 -3.7405607937439811
-		 87 -0.33734367963621542 111 -0.56323351049198001 119 0.2091667605956663 127 0.32484568258996632
-		 135 1.7692748677313346 143 4.9994898130100891 150 7.8496450997807292 158 12.190097642315667
-		 167 12.410851777066007;
-createNode animCurveTL -n "ArmCntrl_R_translateZ";
-	rename -uid "AC12BC1D-5F48-0E1E-32CF-25BFC0353E29";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 -14.660737431355184 47 -2.8485150152688283
-		 55 1.9020544343865611 63 4.3799829482173482 71 3.7188863630069831 79 7.8159240011286881
-		 87 15.723983116202332 111 18.398460610600694 119 16.974993503531028 127 14.462622684051322
-		 135 17.395724837175045 143 23.340888222659391 150 26.460646764382506 158 34.331580529454499
-		 167 34.835837172136308;
-createNode animCurveTU -n "ArmCntrl_R_scaleX";
-	rename -uid "CF380249-1441-3442-2F00-FCB944745DAD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 150 1 158 1 167 1;
-createNode animCurveTU -n "ArmCntrl_R_scaleY";
-	rename -uid "EF901A8E-CB41-5D03-D180-30A00A0EAAFC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 150 1 158 1 167 1;
-createNode animCurveTU -n "ArmCntrl_R_scaleZ";
-	rename -uid "3C8F079E-AF4D-4880-D4BF-F7BFAB0DAB0D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  38 1 47 1 55 1 63 1 71 1 79 1 87 1 111 1
-		 119 1 127 1 135 1 143 1 150 1 158 1 167 1;
 createNode animCurveTL -n "ElbowPV_IK_R_translateX";
 	rename -uid "8CD2FBA8-7346-0688-94DD-B482D3B52C9D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 6.5260136344574162 150 6.5260136344574162
-		 159 -20.505777205018678 167 -13.431019424416819;
+	setAttr -s 10 ".ktv[0:9]"  63 8.7489712906419967 71 7.181750448091071
+		 98 -4.1953101379578115 104 -4.0053931274926242 108 4.0946066574163904 112 -2.0393564053679647
+		 148 3.3063398976487899 168 6.5260136344574162 177 -20.505777205018678 185 -13.431019424416819;
 createNode animCurveTL -n "ElbowPV_IK_R_translateY";
 	rename -uid "7E4F70F7-7F47-4DBB-AA69-EEA7DBA4F10F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 0 150 0 159 -3.1912538479085835 167 -5.2099704338003203;
+	setAttr -s 10 ".ktv[0:9]"  63 -5.0830459998925956 71 -5.0076419901763707
+		 98 -3.7400770580879845 104 -3.4263591363124148 108 -5.0717305668077195 112 -0.82887133443379557
+		 148 -0.037758381061566169 168 0 177 -3.1912538479085835 185 -5.2099704338003203;
 createNode animCurveTL -n "ElbowPV_IK_R_translateZ";
 	rename -uid "F9157AB2-FF48-353F-7F4D-7CB0BCA8D6DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 -10.394566585589986 150 -10.394566585589986
-		 159 23.560388021575957 167 38.525503631425117;
+	setAttr -s 10 ".ktv[0:9]"  63 -21.586335276493013 71 -8.276649722765594
+		 98 -9.7507513350837378 104 -9.8668185218611093 108 -9.2731005197851513 112 -9.9494245946854658
+		 148 -10.42321091286569 168 -10.394566585589986 177 23.560388021575957 185 38.525503631425117;
 createNode animCurveTU -n "ElbowPV_IK_R_visibility";
 	rename -uid "ECA45CE4-A549-AC19-C1B6-C5BC0A829757";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 1 150 1 159 1 167 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 10 ".ktv[0:9]"  63 1 71 1 98 1 104 1 108 1 112 1 148 1 168 1
+		 177 1 185 1;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
+		5 5;
 createNode animCurveTA -n "ElbowPV_IK_R_rotateX";
 	rename -uid "B9506200-8A41-ADDD-9D63-479BDBE153DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 0 150 0 159 0 167 0;
+	setAttr -s 10 ".ktv[0:9]"  63 0 71 0 98 0 104 0 108 0 112 0 148 0 168 0
+		 177 0 185 0;
 createNode animCurveTA -n "ElbowPV_IK_R_rotateY";
 	rename -uid "4C9F8CCD-044F-8F11-6840-03A3BDD07AD2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 0 150 0 159 0 167 0;
+	setAttr -s 10 ".ktv[0:9]"  63 0 71 0 98 0 104 0 108 0 112 0 148 0 168 0
+		 177 0 185 0;
 createNode animCurveTA -n "ElbowPV_IK_R_rotateZ";
 	rename -uid "31C5CCD7-224D-E78A-5556-E4913464FF94";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 0 150 0 159 0 167 0;
+	setAttr -s 10 ".ktv[0:9]"  63 0 71 0 98 0 104 0 108 0 112 0 148 0 168 0
+		 177 0 185 0;
 createNode animCurveTU -n "ElbowPV_IK_R_scaleX";
 	rename -uid "D1799AFC-8A41-214F-A4E0-D4B41EFCA2F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 1 150 1 159 1 167 1;
+	setAttr -s 10 ".ktv[0:9]"  63 1 71 1 98 1 104 1 108 1 112 1 148 1 168 1
+		 177 1 185 1;
 createNode animCurveTU -n "ElbowPV_IK_R_scaleY";
 	rename -uid "B7A89546-8447-6F4A-2C42-F0B013CC2C34";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 1 150 1 159 1 167 1;
+	setAttr -s 10 ".ktv[0:9]"  63 1 71 1 98 1 104 1 108 1 112 1 148 1 168 1
+		 177 1 185 1;
 createNode animCurveTU -n "ElbowPV_IK_R_scaleZ";
 	rename -uid "5A0A097F-0A4D-0E6F-515D-8BAB4BE1D33F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  38 1 150 1 159 1 167 1;
+	setAttr -s 10 ".ktv[0:9]"  63 1 71 1 98 1 104 1 108 1 112 1 148 1 168 1
+		 177 1 185 1;
 createNode animCurveTL -n "PoleVectors_translateX";
 	rename -uid "1B518921-294A-1A11-45DA-F6AB3D2CBE13";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 -0.81762835073614692;
+	setAttr -s 4 ".ktv[0:3]"  35 3.6637352710917082 39 5.4075752325019293
+		 97 5.4075752325019293 105 5.4075752325019293;
 createNode animCurveTL -n "PoleVectors_translateY";
 	rename -uid "609B3FCF-904D-73CB-92A6-038E1F06A3B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 0;
+	setAttr -s 4 ".ktv[0:3]"  35 -3.5527136788005011e-16 39 0 97 0 105 0;
 createNode animCurveTL -n "PoleVectors_translateZ";
 	rename -uid "52532B20-A14F-7BEB-CD29-278307CB0117";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 -11.146247071315303;
+	setAttr -s 4 ".ktv[0:3]"  35 -20.446247051802985 39 -20.271021084775331
+		 97 -20.271021084775331 105 -20.271021084775331;
 createNode animCurveTU -n "PoleVectors_visibility";
 	rename -uid "F62D15EB-4D49-D45F-A34C-B39608090E61";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  35 1 39 1 97 1 105 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "PoleVectors_rotateX";
 	rename -uid "F0DE93D6-0A4B-0301-394C-8297958FFAB6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 0;
+	setAttr -s 4 ".ktv[0:3]"  35 0 39 0 97 0 105 0;
 createNode animCurveTA -n "PoleVectors_rotateY";
 	rename -uid "0598D4A5-6646-A526-A804-E28F59B89D1A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 0;
+	setAttr -s 4 ".ktv[0:3]"  35 0 39 0 97 0 105 0;
 createNode animCurveTA -n "PoleVectors_rotateZ";
 	rename -uid "9F7373B6-9D41-0F8A-4450-B3B1333E29A2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 0;
+	setAttr -s 4 ".ktv[0:3]"  35 0 39 0 97 0 105 0;
 createNode animCurveTU -n "PoleVectors_scaleX";
 	rename -uid "BAA9C200-F242-C335-6829-2BA937C0F0CA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 1;
+	setAttr -s 4 ".ktv[0:3]"  35 1 39 1 97 1 105 1;
 createNode animCurveTU -n "PoleVectors_scaleY";
 	rename -uid "244B4A6E-674E-EF85-158D-0FB8E392524E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 1;
+	setAttr -s 4 ".ktv[0:3]"  35 1 39 1 97 1 105 1;
 createNode animCurveTU -n "PoleVectors_scaleZ";
 	rename -uid "7C8EF910-E145-C684-A754-4A856B1F51C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 1;
+	setAttr -s 4 ".ktv[0:3]"  35 1 39 1 97 1 105 1;
 createNode animCurveTU -n "HandCntrl_visibility";
 	rename -uid "7291169B-FF42-3F03-B186-DFA2476F000F";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  63 1 92 1 96 1 100 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTU -n "HandCntrl_Spread";
 	rename -uid "D2F54900-1F46-1B24-8B80-5EB964D545F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  39 0.1;
+	setAttr -s 4 ".ktv[0:3]"  63 0.1 92 0.1 96 -6.2 100 -1.5;
+createNode reference -n "sitting_reggie_animRN";
+	rename -uid "14203C2A-3D46-6389-BD4D-3A95A8C08FAF";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sitting_reggie_animRN"
+		"sitting_reggie_anim:reggie_rigRN" 0
+		"sitting_reggie_animRN" 0
+		"sitting_reggie_anim:redSoloCupRN" 0
+		"sitting_reggie_anim:reggie_rigRN" 210
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"translate" " -type \"double3\" -2194.91183325828706074 -76.69200990846000821 -554.50478617173916973"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"Scale" " -av -k 1 5"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"ReggieClothing" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"WetHair" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl" 
+		"Stranger" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_03" 
+		"rotate" " -type \"double3\" 0 0 -17.04490517187671728"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_03" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_03" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_PinkyJnt_L_03" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_03" 
+		"rotate" " -type \"double3\" 0 0 -12.17335409869332175"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_03" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_03" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_RingJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_RingJnt_L_03" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02" 
+		"rotate" " -type \"double3\" 0 0 -30.95118379572656053"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_03" 
+		"rotate" " -type \"double3\" 0 19.23058247566286383 -53.51030674363656914"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_03" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_03" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_L|sitting_reggie_anim:reggie_rig:BindUpperArm_L|sitting_reggie_anim:reggie_rig:BindLowerArm_L|sitting_reggie_anim:reggie_rig:BindHandJnt_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexKnuckle_L|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_01|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_02|sitting_reggie_anim:reggie_rig:CompoundCntrl_IndexJnt_L_03|sitting_reggie_anim:reggie_rig:FK_CTRL_IndexJnt_L_03" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_R|sitting_reggie_anim:reggie_rig:BindUpperArm_R|sitting_reggie_anim:reggie_rig:BindLowerArm_R|sitting_reggie_anim:reggie_rig:BindHandJnt_R|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_R" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_R|sitting_reggie_anim:reggie_rig:BindUpperArm_R|sitting_reggie_anim:reggie_rig:BindLowerArm_R|sitting_reggie_anim:reggie_rig:BindHandJnt_R|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_R" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:BindPelvisJnt|sitting_reggie_anim:reggie_rig:BindSpineJnt_01|sitting_reggie_anim:reggie_rig:BindSpineJnt_02|sitting_reggie_anim:reggie_rig:BindSpineJnt_03|sitting_reggie_anim:reggie_rig:BindSpineJnt_04|sitting_reggie_anim:reggie_rig:BindClavicleJnt_R|sitting_reggie_anim:reggie_rig:BindUpperArm_R|sitting_reggie_anim:reggie_rig:BindLowerArm_R|sitting_reggie_anim:reggie_rig:BindHandJnt_R|sitting_reggie_anim:reggie_rig:CompoundCntrl_PinkyKnuckle_R" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"translate" " -type \"double3\" 1.29018350161813933 2.97589323595707045 -1.15573370900760897"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"KneeThighLength" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"KneeShinLength" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"HeelRoll" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"BallRoll" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"ToeRoll" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_L" 
+		"Stretchy" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"translate" " -type \"double3\" -2.64638740517684701 1.68037718928436264 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"KneeThighLength" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"KneeShinLength" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"HeelRoll" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"BallRoll" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"ToeRoll" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:FootCntrl_R" 
+		"Stretchy" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"translate" " -type \"double3\" 0 0 93.12589602442201908"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_L" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"translate" " -type \"double3\" 0 0 93.12589602442201908"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Knee_PV_R" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"rotate" " -type \"double3\" 0 0 -40.34990316004990518"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"rotate" " -type \"double3\" 52.55469102599834486 -49.44839124549444875 -87.0301800000824386"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"rotate" " -type \"double3\" 4.15874414088586875 -10.16922707280383342 -1.74387456519985973"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:UpperArm_FK_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_L|sitting_reggie_anim:reggie_rig:LowerArm_FK_L|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_L|sitting_reggie_anim:reggie_rig:Wrist_FK_L" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R" 
+		"rotate" " -type \"double3\" 0 -11.67749221068219789 -27.65915442298814142"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R" 
+		"rotate" " -type \"double3\" 25.62089481780189715 -45.83862809910901603 -85.9082948345269557"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:ARM_FK_GRP_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:UpperArm_FK_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_Offset_R|sitting_reggie_anim:reggie_rig:LowerArm_FK_R|sitting_reggie_anim:reggie_rig:Wrist_FK_Offset_R|sitting_reggie_anim:reggie_rig:Wrist_FK_R" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:SpineIK" 
+		"translate" " -type \"double3\" 0 8.49970650755982859 2.94619086789032281"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:SpineIK" 
+		"rotate" " -type \"double3\" 89.99999999999995737 52.70595079064397481 -90.00000000000001421"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"translate" " -type \"double3\" -0.0053814714128703756 -0.0053814714128703756 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"rotate" " -type \"double3\" 0 0 -8.11603415369408232"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"scaleX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"scaleY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"scaleZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:ChestCntrlOffset_L|sitting_reggie_anim:reggie_rig:ChestCntrl" 
+		"Stretchy" " -av -k 1 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:PelvisJnt_FK|sitting_reggie_anim:reggie_rig:Spine_01_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_01_FK|sitting_reggie_anim:reggie_rig:SpineJnt_FK_01|sitting_reggie_anim:reggie_rig:Spine_02_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_02_FK" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:PelvisJnt_FK|sitting_reggie_anim:reggie_rig:Spine_01_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_01_FK|sitting_reggie_anim:reggie_rig:SpineJnt_FK_01|sitting_reggie_anim:reggie_rig:Spine_02_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_02_FK" 
+		"rotate" " -type \"double3\" 0 0 -64.12106072035753357"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:PelvisJnt_FK|sitting_reggie_anim:reggie_rig:Spine_01_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_01_FK|sitting_reggie_anim:reggie_rig:SpineJnt_FK_01|sitting_reggie_anim:reggie_rig:Spine_02_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_02_FK" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:PelvisJnt_FK|sitting_reggie_anim:reggie_rig:Spine_01_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_01_FK|sitting_reggie_anim:reggie_rig:SpineJnt_FK_01|sitting_reggie_anim:reggie_rig:Spine_02_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_02_FK" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:RootCntrlOffset|sitting_reggie_anim:reggie_rig:RootCntrl|sitting_reggie_anim:reggie_rig:Torso_GRP|sitting_reggie_anim:reggie_rig:PelvisJnt_FK|sitting_reggie_anim:reggie_rig:Spine_01_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_01_FK|sitting_reggie_anim:reggie_rig:SpineJnt_FK_01|sitting_reggie_anim:reggie_rig:Spine_02_FK_Offset|sitting_reggie_anim:reggie_rig:Spine_02_FK" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"translate" " -type \"double3\" 0 0 7.38032978370384907"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"rotate" " -type \"double3\" 13.75671346308922871 0 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:NeckIk" 
+		"translate" " -type \"double3\" -0.053647923089670257 2.87863222229629656 -6.38437045247856361"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:NeckIk" 
+		"rotate" " -type \"double3\" 90.38730066614952818 40.83070385446373507 -90.27436035540934256"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"translate" " -type \"double3\" -0.020351372552738667 8.29585223389769943 -5.00053683110008684"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"rotate" " -type \"double3\" 88.37526131354847791 31.76815444059830895 -91.80062522316963225"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"visibility" " -av 1"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"translate" " -type \"double3\" 1.46470256480599148 3.47511316636608925 -0.068608675079718101"
+		
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"translateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"translateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"translateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"rotate" " -type \"double3\" 0 0 -9.73427826332902413"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"rotateX" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"rotateY" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"rotateZ" " -av"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"RotationSpace" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"TranslationSpace" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"Stretchy" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"Gulp" " -av -k 1 0"
+		2 "|sitting_reggie_anim:reggie_rig:Reggie_Rig|sitting_reggie_anim:reggie_rig:ReggieMasterControl|sitting_reggie_anim:reggie_rig:Head_Neck_GRP|sitting_reggie_anim:reggie_rig:Head_GRP|sitting_reggie_anim:reggie_rig:HeadCntrlOffset|sitting_reggie_anim:reggie_rig:HeadCntrl" 
+		"EyeTracker" " -av -k 1 1"
+		"sitting_reggie_anim:redSoloCupRN" 12
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "translate" " -type \"double3\" -2194.97325414273564093 -28.19771124901292225 -533.14092857886760157"
+		
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "translateX" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "translateY" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "translateZ" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "rotate" " -type \"double3\" -3.4163231660441542 -12.79496019797653084 2.07125212788402902"
+		
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "rotateZ" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "rotateX" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "rotateY" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "scaleX" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "scaleY" " -av"
+		2 "|sitting_reggie_anim:redSoloCup1:CoinCup" "scaleZ" " -av";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode animCurveTA -n "ArmCntrl_L_rotateX";
+	rename -uid "8E24F754-D348-2B70-41AA-8A9FF05A20B6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 -40.917663086486833 63 -40.917663086486833
+		 67 -76.545064638326181 71 -58.875511145161994 75 -61.191727882102661 79 -72.849752072285824
+		 83 -81.022376224073284 87 -80.363584196321469 92 -79.438580169011004 98 -79.438580169011004
+		 104 -78.293392684666387 108 -5.2780201795289594 112 -37.956964937221258 120 -35.598863894010051
+		 128 -35.598863894010051 136 -16.228867813705111 140 -12.732373789654204 144 -12.732373789654204
+		 148 -12.732373789654204 152 -12.732373789654204 156 -12.732373789654204;
+createNode animCurveTA -n "ArmCntrl_L_rotateY";
+	rename -uid "F0A82411-E34C-C8B6-0EBB-9B989FD497C1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 -3.7623237653543482 63 -3.7623237653543482
+		 67 -3.7623237653543531 71 -3.7623237653543553 75 -36.260017300515194 79 -46.193834713307012
+		 83 8.5055083128950155 87 8.6185755204393377 92 25.448561243383356 98 25.448561243383356
+		 104 35.343644609652564 108 -5.2411582490087554 112 -18.967372538623259 120 -2.2109530904571826
+		 128 -2.2109530904571826 136 -38.437577431558736 140 19.183944730054733 144 19.183944730054733
+		 148 19.183944730054733 152 19.183944730054733 156 19.183944730054733;
+createNode animCurveTA -n "ArmCntrl_L_rotateZ";
+	rename -uid "BDAB50B9-B847-2877-2375-E9A5043E6D27";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 -10.062557378291828 63 -10.062557378291828
+		 67 -10.062557378291823 71 -10.062557378291828 75 -10.696416901826357 79 -18.759809229078371
+		 83 -27.722070809518677 87 -47.83352461831975 92 -44.710482358935003 98 -44.710482358935003
+		 104 -42.455803512416274 108 -37.582581811885369 112 -32.65830195343721 120 -45.303691723977273
+		 128 -45.303691723977273 136 -22.609033831930784 140 -34.379148797820868 144 -34.379148797820868
+		 148 -34.379148797820868 152 -34.379148797820868 156 -34.379148797820868;
+createNode animCurveTU -n "ArmCntrl_L_visibility";
+	rename -uid "3D89E6F6-D74E-679F-8A58-93BD7F14C3D9";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 98 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1 156 1;
+	setAttr -s 21 ".kot[0:20]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5;
+createNode animCurveTL -n "ArmCntrl_L_translateX";
+	rename -uid "1CBF8FCB-A548-AA11-1B24-E2A044B173A1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 -3.9335721378853883 63 -4.3362914520829907
+		 67 -4.2220003177096395 71 -5.9682817954455887 75 -5.3499368743877032 79 -6.2766622507992302
+		 83 -3.9878333241018815 87 -0.71669032901858998 92 0.43683705778739479 98 2.2861563286030968
+		 104 -3.7456832669698956 108 -3.5601725516368159 112 -6.486076362399543 120 -6.5325008654616026
+		 128 -5.9173511763782765 136 -5.3358471405311363 140 -7.5107553898986863 144 -7.6141563776751919
+		 148 -7.4789578348768702 152 -7.8589583071962164 156 -8.2760621798648852;
+createNode animCurveTL -n "ArmCntrl_L_translateY";
+	rename -uid "F1078FDD-0346-8DFA-350C-0995DFCFBA40";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 -4.3792010462609738 63 -5.4357825897752514
+		 67 -3.0115484787959397 71 -1.8386694358467333 75 -4.2695385099188243 79 -2.6236240597046998
+		 83 -4.643384094432724 87 -4.6691529398310143 92 -4.2968019600063938 98 -4.0920795794351301
+		 104 -5.2671763166852585 108 -4.0268356385970492 112 -2.4435379322734545 120 -2.0057869646508877
+		 128 0.93935609983366486 136 1.8012434878750998 140 2.6493761018615061 144 3.2046036251542356
+		 148 3.8308768674114857 152 5.600879381104785 156 6.7553503221748947;
+createNode animCurveTL -n "ArmCntrl_L_translateZ";
+	rename -uid "637A8CC8-AA4C-CE82-79E9-B5A50E23E691";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 -15.719514736604923 63 -14.167368517410891
+		 67 -4.7983320688954016 71 -0.55926841728004761 75 4.9631036444056233 79 7.6799509556252055
+		 83 11.742577213029323 87 10.26112167195968 92 10.377031363398634 98 10.019219661204458
+		 104 9.9567599022916866 108 9.9754005431804877 112 11.497208303600992 120 11.959222610053219
+		 128 18.651781026711642 136 21.520639066878545 140 21.694762159821703 144 22.72380356043498
+		 148 21.37831450047775 152 25.160059981619558 156 29.31105662644773;
+createNode animCurveTU -n "ArmCntrl_L_scaleX";
+	rename -uid "09C7D606-3141-123E-B767-8588F46ECAF9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 98 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1 156 1;
+createNode animCurveTU -n "ArmCntrl_L_scaleY";
+	rename -uid "2A455C82-C24F-EC88-BDEB-55A3A3D83BC3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 98 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1 156 1;
+createNode animCurveTU -n "ArmCntrl_L_scaleZ";
+	rename -uid "869C3EA7-B047-436A-B5B8-17A82021D474";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 21 ".ktv[0:20]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 98 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1 156 1;
+createNode animCurveTA -n "FootCntrl_L_rotateX1";
+	rename -uid "A75124B4-F045-83A1-E435-4CBD233D8DD5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  59 61.514767420133204 67 102.05068548361774
+		 71 34.305560316987318 75 -33.439710215102053 79 -0.064549103059704363 83 -0.064549103059704363
+		 104 0.031441056386519652 108 22.474407015953894 112 51.170819186219134 120 4.0421366365990297
+		 128 4.0421366365990297 136 4.0421366365990297 140 55.25127478291499 144 55.25127478291499
+		 148 0.92898285759069077 152 0.92898285759069077;
+createNode animCurveTA -n "FootCntrl_L_rotateY1";
+	rename -uid "129BFFE8-A643-F08C-C3B6-94BC2CE226B8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  59 -1.6536771162406994 67 -1.6536771162406991
+		 71 -1.6536771162406978 75 -1.6536771162406962 79 -1.6536771162406947 83 -1.6536771162406947
+		 104 0.83157090490104169 108 -0.14016960599378492 112 5.4915562604346277 120 -2.4625702368159406
+		 128 -2.4625702368159406 136 -2.4625702368159406 140 -2.462570236815945 144 -2.462570236815945
+		 148 -7.6254950889837847 152 -7.6254950889837847;
+createNode animCurveTA -n "FootCntrl_L_rotateZ1";
+	rename -uid "AD1DC2AE-B144-AD87-B847-AC87EA88C6EA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  59 0.54168661553657105 67 0.54168661553657071
+		 71 0.54168661553657094 75 0.54168661553657127 79 0.54168661553657116 83 0.54168661553657116
+		 104 0.20985939086132513 108 1.8712964989752645 112 0.7987205316596917 120 0.23585496886737695
+		 128 0.23585496886737695 136 0.23585496886737695 140 0.2358549688673772 144 0.2358549688673772
+		 148 0.15217302382347328 152 0.15217302382347328;
+createNode animCurveTU -n "FootCntrl_L_visibility1";
+	rename -uid "539B13B8-564C-27F4-EEC7-92A16E58441E";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 1 67 1 71 1 75 1 79 1 83 1 87 1 92 1
+		 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+	setAttr -s 18 ".kot[0:17]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5;
+createNode animCurveTL -n "FootCntrl_L_translateX1";
+	rename -uid "17B595F6-9849-8493-EDA4-B4BF410FCAFB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 3.7725444015193821 67 2.2909628377543978
+		 71 1.7191353049146099 75 1.439 79 1.439 83 1.439 87 1.3159258861768555 92 1.3159258861768555
+		 104 1.3159258861768555 108 1.3159258861768555 112 0.50007795938524535 120 0.90241018996580713
+		 128 0.90241018996580713 136 0.90241018996580713 140 1.0825876388787099 144 0.52745447536467016
+		 148 -1.2498000644617926 152 -1.2498000644617926;
+createNode animCurveTL -n "FootCntrl_L_translateY1";
+	rename -uid "C0BF671F-404B-BAA5-4D30-5DBA7972A2D7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 2.3177316364807563 67 5.2924764601407697
+		 71 1.1298759139281667 75 -0.11826030731500405 79 -1.8009316727717739 83 -1.8009316727717739
+		 87 -1.8009316727717739 92 -1.8263479134585052 104 -1.8263479134585052 108 0.90755942382861632
+		 112 7.5898737491077961 120 6.2461063790740878 128 6.2461063790740878 136 6.2461063790740878
+		 140 11.300058938918395 144 14.66000913701577 148 11.924769517405405 152 11.924769517405405;
+createNode animCurveTL -n "FootCntrl_L_translateZ1";
+	rename -uid "569C513A-044A-6E0E-846B-C194BE0A252C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 -34.281455611986551 67 -19.536830823733133
+		 71 -5.2470239643224845 75 4.229 79 4.229 83 4.229 87 4.229 92 4.229 104 4.229 108 3.192
+		 112 5.5986482488025695 120 14.351307967648262 128 14.351307967648262 136 14.351307967648262
+		 140 12.558191108948479 144 18.082848275127546 148 27.401221412021801 152 27.401221412021801;
+createNode animCurveTU -n "FootCntrl_L_KneeThighLength1";
+	rename -uid "AD448BBF-6943-25EC-4181-ED8301B78DDE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 1 67 1 71 1 75 1 79 1 83 1 87 1 92 1
+		 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+createNode animCurveTU -n "FootCntrl_L_KneeShinLength1";
+	rename -uid "F6CBE511-A74E-63B0-4840-48A4C04944DC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 1 67 1 71 1 75 1 79 1 83 1 87 1 92 1
+		 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+createNode animCurveTU -n "FootCntrl_L_HeelRoll1";
+	rename -uid "BAD59C0F-784C-B63E-3184-EF89247D3A8B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 0 67 0 71 0 75 0 79 0 83 0 87 0 92 0
+		 104 0 108 0 112 0 120 0 128 0 136 0 140 0 144 0 148 0 152 0;
+createNode animCurveTU -n "FootCntrl_L_BallRoll1";
+	rename -uid "172F3B7A-F84E-9948-48CF-E9B2F18FD430";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 0 67 0 71 0 75 0 79 0 83 0 87 0 92 0
+		 104 0 108 0 112 0 120 0 128 0 136 0 140 0 144 0 148 0 152 0;
+createNode animCurveTU -n "FootCntrl_L_ToeRoll1";
+	rename -uid "57CDA8CE-C448-650C-298B-0F93CE5F1232";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 0 67 0 71 0 75 0 79 0 83 0 87 0 92 0
+		 104 0 108 0 112 0 120 0 128 0 136 0 140 0 144 0 148 0 152 0;
+createNode animCurveTU -n "FootCntrl_L_Stretchy1";
+	rename -uid "7B22A6C6-B943-4BF5-FB9B-139E58217471";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 18 ".ktv[0:17]"  59 1 67 1 71 1 75 1 79 1 83 1 87 1 92 1
+		 104 0 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+	setAttr -s 18 ".kot[0:17]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5;
+createNode animCurveTA -n "FootCntrl_R_rotateX1";
+	rename -uid "1E232C39-8C45-F74D-40D0-9487843750DD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 -54.956577774759715 63 -11.108813602356685
+		 67 -11.108813602356685 75 48.026616140657445 79 96.481208794301494 83 51.536585220976391
+		 87 1.7541311113975007 120 1.7541311113975007 128 48.301833714261001 136 -1.5478652905910006
+		 144 -1.5478652905910006 148 -1.5478652905910006 152 23.867592893942287 156 15.993824150886024;
+createNode animCurveTA -n "FootCntrl_R_rotateY1";
+	rename -uid "5A8E8C62-A343-C804-0149-AF9419FCDAFA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 8.0008139211638056 63 8.0008139211638092
+		 67 8.0008139211638074 75 8.0008139211638092 79 8.0008139211637932 83 9.3008032601165933
+		 87 6.1151737956139511 120 6.1151737956139511 128 6.1151737956139591 136 -10.50642747753451
+		 144 -10.50642747753451 148 -10.50642747753451 152 -10.506427477534512 156 -10.506427477534507;
+createNode animCurveTA -n "FootCntrl_R_rotateZ1";
+	rename -uid "1A2D211F-A24C-EE18-1276-A5AB012ACE4C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 1.6221411436693336 63 1.6221411436693316
+		 67 1.6221411436693316 75 1.6221411436693334 79 1.6221411436693336 83 -12.110267870961431
+		 87 1.826884826346016 120 1.826884826346016 128 1.8268848263460182 136 2.2722893271846103
+		 144 2.2722893271846103 148 2.2722893271846103 152 2.2722893271846032 156 2.272289327184593;
+createNode animCurveTU -n "FootCntrl_R_visibility1";
+	rename -uid "26FE3049-CA40-74C7-0684-13BD2611B7B2";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 1 63 1 67 1 75 1 79 1 83 1 87 1 120 1
+		 128 1 136 1 144 1 148 1 152 1 156 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
+createNode animCurveTL -n "FootCntrl_R_translateX1";
+	rename -uid "E5ADFD59-F649-3487-DEB8-4A990832ACBA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 2.1291660168194135 63 2.2470772200148774
+		 67 2.2470772200147868 75 2.1327850138104365 79 1.8247502824378024 83 0.97147845927559029
+		 87 2.1657616609101757 120 2.1657616609101757 128 2.0165317026754415 136 1.0252193441672246
+		 144 1.0252193441672246 148 1.0252193441672246 152 1.0252193441672246 156 0.64775006182810324;
+createNode animCurveTL -n "FootCntrl_R_translateY1";
+	rename -uid "983E29A2-9E4E-465A-1A28-93BF981F20EC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 -1.7597269592808953 63 -2.3412751475039224
+		 67 -2.3412751475039224 75 1.6709363708850753 79 3.3781283426580018 83 3.3781283426580098
+		 87 2.9908891542661706 120 2.9908891542661706 128 10.33480825141126 136 8.8154082008951526
+		 144 8.8154082008951526 148 8.8154082008951526 152 11.651190127959369 156 12.855822721378775;
+createNode animCurveTL -n "FootCntrl_R_translateZ1";
+	rename -uid "935604E5-5146-047C-6EDB-64B195607BEF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 -12.209809474875474 63 -13.383255805451316
+		 67 -13.383255805451325 75 -12.245825549891187 79 -9.2837023880560725 83 -0.68856145486324138
+		 87 7.3452635451065573 120 7.3452635451065573 128 8.8303925418182594 136 18.695882995830516
+		 144 18.695882995830516 148 18.695882995830516 152 18.695882995830516 156 22.452438202307938;
+createNode animCurveTU -n "FootCntrl_R_KneeThighLength1";
+	rename -uid "9D6D81A0-6C4F-6F13-7C56-71B33610359C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 1 63 1 67 1 75 1 79 1 83 1 87 1 120 1
+		 128 1 136 1 144 1 148 1 152 1 156 1;
+createNode animCurveTU -n "FootCntrl_R_KneeShinLength1";
+	rename -uid "1EB2CD51-ED49-1E18-E61E-85B58881EF9A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 1 63 1 67 1 75 1 79 1 83 1 87 1 120 1
+		 128 1 136 1 144 1 148 1 152 1 156 1;
+createNode animCurveTU -n "FootCntrl_R_HeelRoll1";
+	rename -uid "32E3A2D0-9C48-6671-1548-B4A56A27171A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 0 63 0 67 0 75 0 79 0 83 0 87 0 120 0
+		 128 0 136 0 144 0 148 0 152 0 156 0;
+createNode animCurveTU -n "FootCntrl_R_BallRoll1";
+	rename -uid "0F3D7C08-344E-BB92-C150-9889053599B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 0 63 0 67 0 75 0 79 0 83 0 87 0 120 0
+		 128 0 136 0 144 0 148 0 152 0 156 0;
+createNode animCurveTU -n "FootCntrl_R_ToeRoll1";
+	rename -uid "2CA09556-2D4A-E18F-1472-90ACB9A5EAFD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 0 63 0 67 0 75 0 79 0 83 0 87 0 120 0
+		 128 0 136 0 144 0 148 0 152 0 156 0;
+createNode animCurveTU -n "FootCntrl_R_Stretchy1";
+	rename -uid "E9DC2EF6-B348-6D1C-2925-E189879232ED";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  59 1 63 1 67 1 75 1 79 1 83 1 87 1 120 1
+		 128 1 136 1 144 1 148 1 152 1 156 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
+createNode animCurveTA -n "RootCntrlOffset_rotateX1";
+	rename -uid "2CDD2445-F64F-F00D-BDD7-BCAFB014079F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 8.9756456026405065;
+createNode animCurveTA -n "RootCntrlOffset_rotateY1";
+	rename -uid "F156C52E-BB42-4F2A-A08D-9D953C2BAED3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 -0.53224773596497754;
+createNode animCurveTA -n "RootCntrlOffset_rotateZ1";
+	rename -uid "9C09C1CB-D746-9E54-7F77-45B33C2EBE7C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 0;
+createNode animCurveTU -n "RootCntrlOffset_visibility1";
+	rename -uid "925464B6-8448-0013-6B1A-35BE3869E409";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "RootCntrlOffset_translateX1";
+	rename -uid "2DC98F22-5749-4986-B792-D494111CF3F8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 -3.6959846456288923;
+createNode animCurveTL -n "RootCntrlOffset_translateY1";
+	rename -uid "912F3C11-6E43-2174-F769-26A05FDC48AD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 7.2024244777323387;
+createNode animCurveTL -n "RootCntrlOffset_translateZ1";
+	rename -uid "03D24C57-AA44-7E7B-6BB9-CE9BD00AADE9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 12.839919306559583;
+createNode animCurveTU -n "RootCntrlOffset_scaleX1";
+	rename -uid "94306355-3942-4A82-C8A6-4EBF807743EE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 1;
+createNode animCurveTU -n "RootCntrlOffset_scaleY1";
+	rename -uid "CC844824-4C40-D582-5309-32B2206324C9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 1;
+createNode animCurveTU -n "RootCntrlOffset_scaleZ1";
+	rename -uid "BE012643-C945-1EA2-25AF-2CB32087FC06";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  39 1;
+createNode animCurveTU -n "IndexCntrl_L_visibility";
+	rename -uid "D500C804-0043-54CC-6BE2-3BAFA8873246";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 1 92 1 96 1 100 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTU -n "IndexCntrl_L_Curl";
+	rename -uid "EFC5C3AB-2B41-7215-DB1E-B2B2DA19FECF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 8.6 92 8.6 96 0.79999999999999938 100 3.6;
+createNode animCurveTU -n "IndexCntrl_L_Scrunch";
+	rename -uid "3AC20573-F947-8687-A3A7-DC823330212D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 1.9000000000000001 100 0;
+createNode animCurveTU -n "IndexCntrl_L_Lean";
+	rename -uid "996424FB-BE44-D0EE-DC86-13A6C830289F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "IndexCntrl_L_Relax";
+	rename -uid "1BB8AB28-4C42-F6A8-5E31-2A8A94A5E6D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "MiddleCntrl_L_visibility";
+	rename -uid "08BE49F0-B24D-9F60-1D1B-548BD0FEE611";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 1 92 1 96 1 100 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTU -n "MiddleCntrl_L_Curl";
+	rename -uid "F59D82C8-5746-5BD2-03E9-9B9F8EFCC60E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 8.6 92 8.6 96 0.79999999999999938 100 3.6;
+createNode animCurveTU -n "MiddleCntrl_L_Scrunch";
+	rename -uid "8BA78855-4249-778B-371F-C39C07C98F10";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 1.9000000000000001 100 0;
+createNode animCurveTU -n "MiddleCntrl_L_Lean";
+	rename -uid "5869F3E9-9147-2899-9914-21B127CE6F45";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "MiddleCntrl_L_Relax";
+	rename -uid "2F31211A-654F-2BE9-D939-08917A821F1D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "RingCntrl_L_visibility";
+	rename -uid "ABA8D744-9244-B0DF-EDBF-F39B1FEFA35B";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 1 92 1 96 1 100 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTU -n "RingCntrl_L_Curl";
+	rename -uid "B042A540-E04F-1568-B1A9-1798AB84CBC6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 8.6 92 8.6 96 0.79999999999999938 100 3.6;
+createNode animCurveTU -n "RingCntrl_L_Scrunch";
+	rename -uid "A2191038-1641-339A-0F68-968C0DFFDE00";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 1.9000000000000001 100 0;
+createNode animCurveTU -n "RingCntrl_L_Lean";
+	rename -uid "357486D9-2B4E-8FE9-04AD-9D8006B7DE98";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "RingCntrl_L_Relax";
+	rename -uid "D0054F6E-1343-77CE-F86A-F69AD312CCA0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "PinkyCntrl_L_visibility";
+	rename -uid "BA0F014D-C44D-6E72-05AF-A8ACC1D07796";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 1 92 1 96 1 100 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTU -n "PinkyCntrl_L_Curl";
+	rename -uid "EC8E8C60-7C4D-04C0-F1C0-F7A57E9E13F6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 8.6 92 8.6 96 0.79999999999999938 100 3.6;
+createNode animCurveTU -n "PinkyCntrl_L_Scrunch";
+	rename -uid "533247DD-9A4D-4043-A3FE-89BA9ECF5E2B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 1.9000000000000001 100 0;
+createNode animCurveTU -n "PinkyCntrl_L_Lean";
+	rename -uid "A5BD79E8-EA43-9BB3-E561-3E8F40D15C1C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTU -n "PinkyCntrl_L_Relax";
+	rename -uid "705F79C6-A54B-D54A-43F7-BFA089587C7D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  63 0 92 0 96 0 100 0;
+createNode animCurveTL -n "RootCntrl_translateX1";
+	rename -uid "C0390EB4-F849-560A-4F24-028890F2D210";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 6.8545577581049688 63 6.4384462989889473
+		 67 5.9069407045457973 71 5.830011395516939 75 5.9052414187404478 79 5.6318731395305148
+		 83 5.3584760259293862 88 5.3005559270656235 91 4.7589274124402348 104 5.3004580701212447
+		 109 5.6695473886421404 113 4.7812022127391147 121 5.0033349788965076 124 5.2942585620374176
+		 129 5.7082120311812128 136 5.6384557992639275 137 5.6040857892369589 141 4.5861834772849415
+		 145 4.44354975039934 149 4.0050490155916565 153 3.7189736695902016 157 3.5125100044857249;
+createNode animCurveTL -n "RootCntrl_translateY1";
+	rename -uid "6F16F442-BA40-1ACD-E65C-7894D6F28824";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 -12.986298131388034 63 -12.180673874994365
+		 67 -10.624816733508901 71 -9.5992592283650495 75 -9.6710723575220054 79 -9.5361286014404811
+		 83 -8.0347397616431682 88 -7.7220513267438751 91 -7.7283740833661065 104 -7.7184120077721152
+		 109 -5.0734130001405466 113 -3.269717489904433 121 -2.718727253851196 124 -0.59632787164716738
+		 129 0.79831851913419505 136 1.4620524918007405 137 1.3881140568426773 141 3.4010337699589774
+		 145 4.3783491232020992 149 5.1480315477587473 153 7.2674593119119573 157 8.6515124667503613;
+createNode animCurveTL -n "RootCntrl_translateZ1";
+	rename -uid "7B9C5536-294A-3CDB-3CF8-EB940BE4AB1D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 -32.891977701008472 63 -29.037718722196871
+		 67 -22.735002726994441 71 -18.025231918559989 75 -12.647577136813439 79 -9.6312093721686551
+		 83 -6.8303494805899527 88 -6.1052021424029999 91 -6.154038755937572 104 -6.1062667593310724
+		 109 -3.4040938372983671 113 -3.1633468136022858 121 -1.9967637540944008 124 -0.57698272588155419
+		 129 2.43135910841711 136 3.2180074991106546 137 3.4952576420468868 141 5.9817572973368254
+		 145 7.4123446579322003 149 7.7850559167673472 153 10.629178488763181 157 12.704803584150199;
+createNode animCurveTU -n "RootCntrl_visibility1";
+	rename -uid "8B39EA9B-184E-06A5-385F-679857B3DB68";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 88 1
+		 91 1 104 1 109 1 113 1 121 1 124 1 129 1 136 1 137 1 141 1 145 1 149 1 153 1 157 1;
+	setAttr -s 22 ".kot[0:21]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+createNode animCurveTA -n "RootCntrl_rotateX1";
+	rename -uid "EF318FFC-294A-A1B2-51BE-EBA9C8B6B57A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 -5.6317565909068827 63 -5.6317565909068827
+		 67 -5.6317565909068827 71 -2.1786633382890814 75 -5.6317565909068827 79 -2.2353723385825766
+		 83 1.2111809573184411 88 3.483430637213111 91 3.483430637213111 104 3.483430637213111
+		 109 -0.092835637421287656 113 0.45904632128295381 121 -0.56609611437623097 124 -0.23928340307169108
+		 129 0.46679426320640288 136 -4.4161248582718553 137 -5.0317236851486662 141 -5.6923232837251518
+		 145 -5.6923232837251518 149 -2.1607907884737347 153 -2.1607907884737347 157 -2.1607907884737347;
+createNode animCurveTA -n "RootCntrl_rotateY1";
+	rename -uid "0D942AB5-3042-1597-DE20-0795BA73B912";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 9.0657333579421095 63 9.0657333579421095
+		 67 9.0657333579421095 71 9.0657333579421095 75 9.0657333579421095 79 9.0657333579421202
+		 83 9.0657333579421078 88 6.5422340345427887 91 6.5422304700529352 104 6.5421954098232629
+		 109 3.4729208973097569 113 3.3012187183288257 121 -0.54583652707537123 124 -4.8842722922560089
+		 129 -10.956942495918842 136 -10.956942495918863 137 -10.956942495918865 141 -10.631732435888857
+		 145 -10.631732435888857 149 -18.862422317970125 153 -18.862422317970125 157 -18.862422317970125;
+createNode animCurveTA -n "RootCntrl_rotateZ1";
+	rename -uid "1D62A9AE-8B45-ED7C-07F1-009AD43E881D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 22 ".ktv[0:21]"  59 -0.3964062421545092 63 -0.3964062421545092
+		 67 -0.3964062421545092 71 -0.39640624215450909 75 -0.3964062421545092 79 -0.39640624215450998
+		 83 -0.39640624215450843 88 -0.84041389292323065 91 -0.84041298238356876 104 -0.8404040263390945
+		 109 1.0147541809455001 113 0 121 0.14408531034503635 124 -0.48273060181951799 129 -1.836964085212718
+		 136 -1.8369640852127185 137 -1.8369640852127185 141 1.6892042452009792 145 1.6892042452009792
+		 149 2.5533551536678472 153 2.5533551536678472 157 2.5533551536678472;
+createNode animCurveTL -n "ReggieMasterControl_translateX1";
+	rename -uid "FE16F31E-4944-6912-6275-EBBE26D951DA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 -2099.8737638947041 157 -2099.8737638947041
+		 184 -2099.8737638947041;
+createNode animCurveTL -n "ReggieMasterControl_translateY1";
+	rename -uid "CDB0616B-5C4D-1AA5-4931-9E828775D831";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 -80.173527274157408 157 -80.173527274157408
+		 184 -80.173527274157408;
+createNode animCurveTL -n "ReggieMasterControl_translateZ1";
+	rename -uid "C720298E-2741-4C36-71A9-EBB9E19AEB45";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 -489.3501343426297 157 -489.3501343426297
+		 184 -587.69869172593758;
+createNode animCurveTU -n "ReggieMasterControl_visibility1";
+	rename -uid "A9C390C0-2542-DB2A-B26A-56AAE2DA5A34";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 1 157 1 184 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTA -n "ReggieMasterControl_rotateX1";
+	rename -uid "B53CEC5E-FE43-F078-77DC-52841F511512";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 0 157 0 184 0;
+createNode animCurveTA -n "ReggieMasterControl_rotateY1";
+	rename -uid "4B9D6769-D44C-457F-F826-EE80E42B4FF7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 185.73798180565348 157 185.73798180565348
+		 184 185.73798180565348;
+createNode animCurveTA -n "ReggieMasterControl_rotateZ1";
+	rename -uid "603C4244-F34F-0469-B004-E6801DB8310E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 0 157 0 184 0;
+createNode animCurveTU -n "ReggieMasterControl_Scale1";
+	rename -uid "6DAA5379-BB47-0F3D-ABBD-0AA8ABC06D11";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 5 157 5 184 5;
+createNode animCurveTU -n "ReggieMasterControl_ReggieClothing";
+	rename -uid "82656ECE-4142-961B-A7BC-53A5110F6ECB";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 1 157 1 184 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTU -n "ReggieMasterControl_WetHair1";
+	rename -uid "34D0E8A9-484E-5CC9-89C2-9DB8997D85AE";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 0 157 0 184 0;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTU -n "ReggieMasterControl_Stranger";
+	rename -uid "3FEE1C26-464A-B831-D241-D682E88A493D";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  63 1 157 1 184 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTL -n "ArmCntrl_R_translateX";
+	rename -uid "82A3FA8B-A84B-8A47-EA51-529FBE850D9B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 12.073151391184652 63 11.669294858669275
+		 67 10.812961034004456 71 10.610015503863893 75 9.9043145896101503 79 9.505234002504519
+		 83 9.3989116588462931 87 10.168307899008202 92 8.9279547262773633 96 8.9649574145690547
+		 104 10.08442301793734 108 10.001324875677259 112 9.7052905664939431 120 9.4010505247255143
+		 128 9.3149033246935922 136 9.3658599700740801 140 8.9191313420011316 144 8.5735528938907244
+		 148 7.4533534555123495 152 4.2035749780808693;
+createNode animCurveTL -n "ArmCntrl_R_translateY";
+	rename -uid "2592874C-C945-EDC3-CD54-839272365D8D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 -6.5844287409142463 63 -6.5844287409142463
+		 67 -6.7712680457497489 71 -6.4042403939513841 75 -7.5996397230563169 79 -7.4898198840086812
+		 83 -7.2013218445470004 87 -6.1956936930757402 92 -5.0243870687791343 96 -5.3280594047919987
+		 104 -5.3916305338969028 108 -4.5492631442512232 112 -1.9421721976699118 120 -1.6906075943718726
+		 128 0.93147893787526348 136 1.7473553404062325 140 2.6699813497457048 144 4.2539357838946179
+		 148 6.8474822028945024 152 12.215314217327474;
+createNode animCurveTL -n "ArmCntrl_R_translateZ";
+	rename -uid "C661EFD3-8649-EC24-FB27-658C6BA5DE1E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 -18.336165957473195 63 -14.317006171837409
+		 67 -8.1968776833682604 71 -5.5033299985046833 75 1.5197698077345643 79 5.4913996262050011
+		 83 6.5495142127998998 87 8.7283342129128858 92 8.6037000211537844 96 11.447089237097911
+		 104 9.5631523066627615 108 10.390140815559757 112 13.336259287947421 120 16.364040795999575
+		 128 17.221373373628051 136 16.714255416049806 140 21.160076128322466 144 24.599255365506707
+		 148 28.528766165574329 152 32.956040719014467;
+createNode animCurveTU -n "ArmCntrl_R_visibility";
+	rename -uid "FD525E20-5A4B-3422-C9D0-72840D63D81A";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 96 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+	setAttr -s 20 ".kot[0:19]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5;
+createNode animCurveTA -n "ArmCntrl_R_rotateX";
+	rename -uid "6761143F-3543-B42C-74EF-BCA2CB3215AC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 -24.278789976835935 63 -24.278789976835935
+		 67 -18.249462653186658 71 -18.405790285635604 75 -23.502827576421488 79 -22.039628931510524
+		 83 -22.357560366266966 87 9.853498122583769 92 9.853498122583769 96 9.853498122583769
+		 104 9.853498122583769 108 9.853498122583769 112 -7.0762853192444162 120 -7.0762853192444162
+		 128 -6.4253112010714393 136 -6.4253112010714393 140 -29.501341629855588 144 -29.501341629855588
+		 148 -73.768644240280054 152 -73.768644240280054;
+createNode animCurveTA -n "ArmCntrl_R_rotateY";
+	rename -uid "82122544-0E49-AE46-0F78-05B56F05F1EE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 12.645829495140189 63 12.645829495140189
+		 67 5.449841306236106 71 -3.3348673167314695 75 4.4257827144371698 79 9.0884073374922849
+		 83 -13.066351708854949 87 16.480280125672902 92 16.480280125672902 96 16.480280125672902
+		 104 16.480280125672902 108 16.480280125672902 112 25.684309613362775 120 25.684309613362775
+		 128 7.2266394468981199 136 7.2266394468981199 140 7.2266394468981412 144 7.2266394468981412
+		 148 37.989221786522592 152 37.989221786522592;
+createNode animCurveTA -n "ArmCntrl_R_rotateZ";
+	rename -uid "B8A6651C-A04D-2150-3315-69B90739B3D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 21.108880414377335 63 21.108880414377335
+		 67 38.772256162408219 71 19.332215667633697 75 35.029005428125622 79 47.07635853000729
+		 83 56.047739698118235 87 40.84610843754453 92 40.84610843754453 96 40.84610843754453
+		 104 40.84610843754453 108 40.84610843754453 112 42.380640874717216 120 42.380640874717216
+		 128 44.648690351718663 136 44.648690351718663 140 44.648690351718692 144 44.648690351718692
+		 148 10.515514562830713 152 10.515514562830713;
+createNode animCurveTU -n "ArmCntrl_R_scaleX";
+	rename -uid "431E2CB8-3A4E-9E26-A822-3C916F4725FB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 96 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+createNode animCurveTU -n "ArmCntrl_R_scaleY";
+	rename -uid "9621AEA2-BD4A-9F6E-B7FE-D987A296522C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 96 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+createNode animCurveTU -n "ArmCntrl_R_scaleZ";
+	rename -uid "C4383996-2540-9D31-CADE-4E9301C0022A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 20 ".ktv[0:19]"  59 1 63 1 67 1 71 1 75 1 79 1 83 1 87 1
+		 92 1 96 1 104 1 108 1 112 1 120 1 128 1 136 1 140 1 144 1 148 1 152 1;
+createNode animCurveTL -n "ElbowPV_IK_L_translateX";
+	rename -uid "5B33B4F3-0249-57BF-2368-FE92E09F132E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 -1.0198623903264075 63 -5.0823555230675455
+		 75 -6.0641343887447094;
+createNode animCurveTL -n "ElbowPV_IK_L_translateY";
+	rename -uid "0D9BC705-C246-BCDA-9C20-18BA9E9EF628";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 0 63 -0.70624883662900362 75 -4.5199940092538649;
+createNode animCurveTL -n "ElbowPV_IK_L_translateZ";
+	rename -uid "10A68134-2E45-EE80-B70C-519B4356E90D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 -0.40521677698409997 63 2.6279511160048776
+		 75 21.112751176744041;
+createNode animCurveTU -n "ElbowPV_IK_L_visibility";
+	rename -uid "D07A59BA-4C4E-9C86-83F9-E1A2A8A94C32";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 1 63 1 75 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTA -n "ElbowPV_IK_L_rotateX";
+	rename -uid "F28E2F64-A347-7A92-CFB6-01B22FD54ED4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 0 63 -6.72859074107983 75 -43.062994603385192;
+createNode animCurveTA -n "ElbowPV_IK_L_rotateY";
+	rename -uid "449AA54C-0D43-ECAC-DCDC-2F868917FBFE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 0 63 0 75 0;
+createNode animCurveTA -n "ElbowPV_IK_L_rotateZ";
+	rename -uid "9236D499-E845-135F-142B-BFA30AF0C65D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 0 63 0 75 0;
+createNode animCurveTU -n "ElbowPV_IK_L_scaleX";
+	rename -uid "2966CB5E-8D47-5BA4-1676-A5A6C41F551B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 1 63 1 75 1;
+createNode animCurveTU -n "ElbowPV_IK_L_scaleY";
+	rename -uid "3A343549-9C46-CF8E-5DD6-558AAD7761A8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 1 63 1 75 1;
+createNode animCurveTU -n "ElbowPV_IK_L_scaleZ";
+	rename -uid "91964D1D-814F-F0FB-DBE3-B0AE8785A9FD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  59 1 63 1 75 1;
+createNode animCurveTL -n "Knee_PV_R_translateX1";
+	rename -uid "D8FB29F4-9441-00E6-9A7A-F1B2E846C910";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  71 11.575792704569924 79 11.575792704569924
+		 83 1.8555233480617477 128 1.4466895159492874 136 0.23100451075058276 140 0.14387918310807471
+		 148 -1.2744008045049164;
+createNode animCurveTL -n "Knee_PV_R_translateY1";
+	rename -uid "96CE95D0-8645-5002-4ECA-B08CF9809ABE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 0 79 0 83 0 120 0 128 0 136 6.773067189596885
+		 140 10.123466477302834 148 8.5571230954356547;
+createNode animCurveTL -n "Knee_PV_R_translateZ1";
+	rename -uid "013B237B-684B-AC3E-73C4-F5A031A1E2EF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  71 16.484638917456707 79 16.484638917456707
+		 83 15.507918785188338 128 15.466838006463858 136 15.470168184931024 140 15.33592794276673
+		 148 21.665857865605272;
+createNode animCurveTU -n "Knee_PV_R_visibility1";
+	rename -uid "652A4B92-2343-C42A-1AAA-509842A9A475";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 1 79 1 83 1 120 1 128 1 136 1 140 1 148 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode animCurveTA -n "Knee_PV_R_rotateX1";
+	rename -uid "39B8F69D-F84B-1B78-9358-E99466E47EE0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 0 79 0 83 0 120 0 128 0 136 0 140 0 148 0;
+createNode animCurveTA -n "Knee_PV_R_rotateY1";
+	rename -uid "C99CD269-CB4C-A2BA-57E5-149373CFC79A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 0 79 0 83 0 120 0 128 0 136 0 140 0 148 0;
+createNode animCurveTA -n "Knee_PV_R_rotateZ1";
+	rename -uid "7E2ED756-B44B-A036-D6CA-1E9C8E0CCFEA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 0 79 0 83 0 120 0 128 0 136 0 140 0 148 0;
+createNode animCurveTU -n "Knee_PV_R_scaleX1";
+	rename -uid "1AAEFAA9-0945-7579-1743-7D906AE9F019";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 1 79 1 83 1 120 1 128 1 136 1 140 1 148 1;
+createNode animCurveTU -n "Knee_PV_R_scaleY1";
+	rename -uid "09E1E948-CD44-0608-356A-38AD11A1C2E2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 1 79 1 83 1 120 1 128 1 136 1 140 1 148 1;
+createNode animCurveTU -n "Knee_PV_R_scaleZ1";
+	rename -uid "77DAF8ED-D04A-6756-C99D-7FAA1B00CFFD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  71 1 79 1 83 1 120 1 128 1 136 1 140 1 148 1;
+createNode animCurveTL -n "Knee_PV_L_translateX1";
+	rename -uid "ADF12FFB-6D46-F30B-4AF1-9894D2C5A9B3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 1.7330809374762666 67 1.8222840258224342
+		 71 4.2877914080881077 79 2.7917086941230544 83 11.917331249340343 87 7.5718514426018082
+		 98 7.5718514426018082 104 5.0444374547667463 112 -0.58441245108826578 121 1.1503449554374461
+		 128 -0.50308885845735096 144 -1.8470616595378282 148 -4.4688652265204389;
+createNode animCurveTL -n "Knee_PV_L_translateY1";
+	rename -uid "650967AE-2041-19E8-C8B1-C58A10E199E2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 0 67 0 71 0 79 0 83 0 87 0 98 0 104 0
+		 112 0 121 0 128 0 144 0 148 11.193602490070564;
+createNode animCurveTL -n "Knee_PV_L_translateZ1";
+	rename -uid "68EE2FC8-5B49-C4D6-A5B7-499B40820749";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 12.068923889535734 67 12.077887270446411
+		 71 12.325628416668295 79 12.175297799800772 83 13.0922661393056 87 12.655620048961874
+		 98 12.655620048961874 104 12.401658349552548 112 12.010368931377656 121 12.010368931377769
+		 128 11.844227229520211 144 25.2193765714132 148 27.578943904286483;
+createNode animCurveTU -n "Knee_PV_L_visibility1";
+	rename -uid "ED79D45A-D748-FB38-9382-34A9C996081E";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 1 67 1 71 1 79 1 83 1 87 1 98 1 104 1
+		 112 1 121 1 128 1 144 1 148 1;
+	setAttr -s 13 ".kot[0:12]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5;
+createNode animCurveTA -n "Knee_PV_L_rotateX1";
+	rename -uid "A4B8C4E0-144C-30B3-E6BF-909EC71C2CD8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 0 67 0 71 0 79 0 83 0 87 0 98 0 104 0
+		 112 0 121 0 128 0 144 0 148 0;
+createNode animCurveTA -n "Knee_PV_L_rotateY1";
+	rename -uid "61452177-6F48-EE5E-6780-17BF45AF514E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 0 67 0 71 0 79 0 83 0 87 0 98 0 104 0
+		 112 0 121 0 128 0 144 0 148 0;
+createNode animCurveTA -n "Knee_PV_L_rotateZ1";
+	rename -uid "DBD2F164-E541-B5A9-630A-C08D5DC2DAEF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 0 67 0 71 0 79 0 83 0 87 0 98 0 104 0
+		 112 0 121 0 128 0 144 0 148 0;
+createNode animCurveTU -n "Knee_PV_L_scaleX1";
+	rename -uid "7D9F6A4A-A342-A05D-94F2-AFB2566E00C6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 1 67 1 71 1 79 1 83 1 87 1 98 1 104 1
+		 112 1 121 1 128 1 144 1 148 1;
+createNode animCurveTU -n "Knee_PV_L_scaleY1";
+	rename -uid "20ABB4A6-1C44-A812-1FEA-41AF063D2326";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 1 67 1 71 1 79 1 83 1 87 1 98 1 104 1
+		 112 1 121 1 128 1 144 1 148 1;
+createNode animCurveTU -n "Knee_PV_L_scaleZ1";
+	rename -uid "00C812FF-0141-10C0-63BF-999684A1AF21";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  63 1 67 1 71 1 79 1 83 1 87 1 98 1 104 1
+		 112 1 121 1 128 1 144 1 148 1;
+createNode animCurveTA -n "Spine_02_FK_rotateX1";
+	rename -uid "DAC41CF5-3648-7D40-704B-199ECC4D8252";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  73 0 81 0.58790530021494691 85 -20.038474629562192
+		 92 -16.371009344130041 98 -14.130674397278513 103 -4.503067491730997 118 0 130 0
+		 143 0 147 0 151 0;
+createNode animCurveTA -n "Spine_02_FK_rotateY1";
+	rename -uid "845C0990-CF4A-C549-AE52-6C989CD1C642";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  73 0 81 -2.0331327627929294 85 0.21681427195843506
+		 92 -11.590907496518957 98 -11.147371949769861 103 -4.503067491730997 118 0 130 0
+		 143 0 147 0 151 0;
+createNode animCurveTA -n "Spine_02_FK_rotateZ1";
+	rename -uid "BC0B6948-8843-7ED0-87C7-7B801BC087F4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  73 0 81 -0.59462296464745357 85 -4.7202440988566909
+		 92 -3.932189274710896 98 -4.0888090834734783 105 -5.5569249325455923 118 -7.4462168691568129
+		 130 -3.4222259360644616 143 -8.025132284116447 147 -4.5165978662897652 151 0;
+createNode animCurveTU -n "Spine_02_FK_visibility1";
+	rename -uid "524BDFF3-4C4D-B014-B20E-40BF8090420C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  73 1 81 1 85 1 92 1 98 1 103 1 118 1 130 1
+		 143 1 147 1 151 1;
+	setAttr -s 11 ".kot[0:10]"  5 5 5 5 5 5 5 5 
+		5 5 5;
+createNode animCurveTA -n "Spine_01_FK_rotateX";
+	rename -uid "7A986E74-9E4F-0A9F-CE46-9E88DE2B8874";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 10 ".ktv[0:9]"  57 0 61 0 65 0 69 0 76.996 0 77 0 85 12.470468337609333
+		 98 10.650235477552419 135 0 139 0;
+createNode animCurveTA -n "Spine_01_FK_rotateY";
+	rename -uid "8077AE4F-F242-E835-48DA-F1ADE2816145";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 10 ".ktv[0:9]"  57 0 61 0 65 0 73 0 81 0 85 -16.64737018778229
+		 98 -14.217462230119951 112 -2.3168417969587556 139 0 143 0;
+createNode animCurveTA -n "Spine_01_FK_rotateZ";
+	rename -uid "9D1DA76E-2346-BBE3-F4D6-BB96239E0DB2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 10 ".ktv[0:9]"  57 -3.077070091104265 61 -4.8024897157082957
+		 65 -4.8024897157082957 73 0 81 -0.035391386974525978 85 -6.3701465461860209 98 -6.1427425310994082
+		 103 -2.737433448804437 139 -2.9616397838189492 143 0.22297989679847202;
+createNode animCurveTU -n "Spine_01_FK_visibility";
+	rename -uid "4D25BF8E-3042-9854-9F52-378012E4E1FF";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 10 ".ktv[0:9]"  57 1 61 1 65 1 73 1 81 1 85 1 98 1 103 1
+		 139 1 143 1;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
+		5 5;
+createNode animCurveTA -n "ChestCntrl_rotateX1";
+	rename -uid "9AB403F5-D14B-B9D9-85D8-8A92C131FE45";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 0 71 0 85 0 98 0 103 0 143 0 147 0 151 4.6126734170184021;
+createNode animCurveTA -n "ChestCntrl_rotateY1";
+	rename -uid "7BD73BD8-134F-1E5A-CF54-ADA782262F04";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 0 71 0 85 0 98 0 103 0 143 0 147 0 151 0;
+createNode animCurveTA -n "ChestCntrl_rotateZ1";
+	rename -uid "18B396A1-1E49-1544-FDA6-619E2780CF38";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 -1.7353656801241819 75 -4.1380164325258546
+		 85 -20.033147586111443 98 -17.465039068299113 103 -15.501559681447192 143 0 147 -1.9021598851421853
+		 151 -5.5944886348486857;
+	setAttr -s 8 ".kit[1:7]"  1 18 18 18 18 18 18;
+	setAttr -s 8 ".kot[1:7]"  1 18 18 18 18 18 18;
+	setAttr -s 8 ".kix[1:7]"  0.98534059524536133 1 0.99448555707931519 
+		0.98704147338867188 1 0.95967423915863037 1;
+	setAttr -s 8 ".kiy[1:7]"  -0.17059886455535889 0 0.10487334430217743 
+		0.16046525537967682 0 -0.28111451864242554 0;
+	setAttr -s 8 ".kox[1:7]"  0.98534059524536133 1 0.99448555707931519 
+		0.98704147338867188 1 0.95967423915863037 1;
+	setAttr -s 8 ".koy[1:7]"  -0.17059887945652008 0 0.10487335175275803 
+		0.16046527028083801 0 -0.28111451864242554 0;
+createNode animCurveTU -n "ChestCntrl_visibility1";
+	rename -uid "6FE1764E-3842-14F7-EE05-98A4C754CB52";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 1 81 1 85 1 98 1 103 1 143 1 147 1 151 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode animCurveTL -n "ChestCntrl_translateX1";
+	rename -uid "859A741A-4543-90EB-DD40-038807149267";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 0 71 0 85 -0.01992673026338334 98 -0.017372263697329519
+		 103 -0.015419214487435034 143 0 147 0 151 0;
+createNode animCurveTL -n "ChestCntrl_translateY1";
+	rename -uid "5C5D4787-CC4B-DE46-EA4D-509B91CA50CA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 0 71 0 85 0.33978062955766808 98 0.29622314438446273
+		 103 0.26292072586837417 143 0 147 0 151 0;
+createNode animCurveTL -n "ChestCntrl_translateZ1";
+	rename -uid "D09C41A2-6846-5EE7-E6F8-1AAF3CCADE45";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 0 71 0 85 0.069918079985055476 98 0.060955074247345642
+		 103 0.054102296443046101 143 0 147 0 151 0;
+createNode animCurveTU -n "ChestCntrl_scaleX1";
+	rename -uid "40EB5215-8642-64B2-8229-4E9F0500E17E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 1 81 1 85 1 98 1 103 1 143 1 147 1 151 1;
+createNode animCurveTU -n "ChestCntrl_scaleY1";
+	rename -uid "2CB9601E-3E43-D9F5-8E9A-71BC6CFC98CA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 1 81 1 85 1 98 1 103 1 143 1 147 1 151 1;
+createNode animCurveTU -n "ChestCntrl_scaleZ1";
+	rename -uid "1F0AB795-094B-A1A7-CC88-7B904B6D866B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 1 81 1 85 1 98 1 103 1 143 1 147 1 151 1;
+createNode animCurveTU -n "ChestCntrl_Stretchy1";
+	rename -uid "45B5EBFA-3A49-53FA-1D12-41B984996353";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  53 1 71 0 85 0 98 0 103 0 143 1 147 1 151 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode animCurveTA -n "HeadCntrl_rotateX1";
+	rename -uid "FE81939F-6740-E68C-36C7-31BEA799621B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 -20.629401626336222 88 -20.629401626336222;
+createNode animCurveTA -n "HeadCntrl_rotateY1";
+	rename -uid "010F0791-8C45-9452-1566-02B9D699A911";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 -1.1621754472234143 88 -1.1621754472234143;
+createNode animCurveTA -n "HeadCntrl_rotateZ1";
+	rename -uid "62FD996E-0E46-7A64-EECE-1991F1C20190";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 -1.407164742321519 88 -1.407164742321519;
+createNode animCurveTU -n "HeadCntrl_visibility1";
+	rename -uid "6AC26A19-AF4F-FFA0-96FA-DC87E4903728";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 1 88 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "HeadCntrl_translateX1";
+	rename -uid "821D9174-754A-CFE1-EB32-D7AE0EA2EB8B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 0 88 0;
+createNode animCurveTL -n "HeadCntrl_translateY1";
+	rename -uid "15C93571-974D-A4F1-590C-40ACB8152297";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 0 88 0;
+createNode animCurveTL -n "HeadCntrl_translateZ1";
+	rename -uid "ED3222FA-4348-8275-73C0-A882AABB15E5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 0 88 0;
+createNode animCurveTU -n "HeadCntrl_RotationSpace1";
+	rename -uid "DBBAF1D9-4E49-6C5A-F9A1-9D8E1BB86903";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 0 88 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "HeadCntrl_TranslationSpace1";
+	rename -uid "FFA9775D-254C-5856-EC14-179E55478524";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 0 88 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "HeadCntrl_Stretchy1";
+	rename -uid "17F60A73-7E42-B07E-943A-608AEFB4299D";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 1 88 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "HeadCntrl_Gulp1";
+	rename -uid "9450CC95-5B42-7EC0-75AD-F3BDECF979EE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 0 88 0;
+createNode animCurveTU -n "HeadCntrl_EyeTracker1";
+	rename -uid "FB907608-0241-A14D-F814-39B3D5C3EF6A";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  63 1 88 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "ShoulderCntrl_L_visibility";
+	rename -uid "56B60226-A047-9E1C-8C0B-E6B9788FE23F";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  87 1 91 1 98 1 109 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTL -n "ShoulderCntrl_L_translateX";
+	rename -uid "903F8C93-CF47-7376-F48F-CFBCCDBA96D8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 84 0 98 1.64102097242939 109 0;
+createNode animCurveTL -n "ShoulderCntrl_L_translateY";
+	rename -uid "FF640E7E-A547-6B18-5338-E9A4735BECF1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  80 0 84 0 98 1.2223852356562817 109 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 200;
-	setAttr ".unw" 200;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :sequenceManager1;
 	setAttr ".o" 501;
 select -ne :hardwareRenderingGlobals;
@@ -13298,7 +13683,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 71 ".st";
+	setAttr -s 85 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -13311,7 +13696,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 62 ".s";
+	setAttr -s 65 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -13323,15 +13708,15 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 890 ".u";
+	setAttr -s 895 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 7 ".r";
+	setAttr -s 8 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 27 ".tx";
+	setAttr -s 29 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -13345,7 +13730,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 223 ".gn";
+	setAttr -s 224 ".gn";
 select -ne :initialParticleSE;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -13429,275 +13814,7 @@ connectAttr "Building1_visibility.o" "Extra_BuildingsRN.phl[7]";
 connectAttr "Building1_rotateX.o" "Extra_BuildingsRN.phl[8]";
 connectAttr "Building1_rotateY.o" "Extra_BuildingsRN.phl[9]";
 connectAttr "Building1_rotateZ.o" "Extra_BuildingsRN.phl[10]";
-connectAttr "ReggieMasterControl_Scale.o" "reggie_rigRN.phl[1978]";
-connectAttr "ReggieMasterControl_ReggieClothing1.o" "reggie_rigRN.phl[1979]";
-connectAttr "ReggieMasterControl_WetHair.o" "reggie_rigRN.phl[1980]";
-connectAttr "ReggieMasterControl_Stranger1.o" "reggie_rigRN.phl[1981]";
-connectAttr "ReggieMasterControl_translateX.o" "reggie_rigRN.phl[1982]";
-connectAttr "ReggieMasterControl_translateY.o" "reggie_rigRN.phl[1983]";
-connectAttr "ReggieMasterControl_translateZ.o" "reggie_rigRN.phl[1984]";
-connectAttr "ReggieMasterControl_rotateX.o" "reggie_rigRN.phl[1985]";
-connectAttr "ReggieMasterControl_rotateY.o" "reggie_rigRN.phl[1986]";
-connectAttr "ReggieMasterControl_rotateZ.o" "reggie_rigRN.phl[1987]";
-connectAttr "ReggieMasterControl_visibility.o" "reggie_rigRN.phl[1988]";
-connectAttr "PinkyCntrl_R_Curl.o" "reggie_rigRN.phl[1989]";
-connectAttr "RingCntrl_R_Curl.o" "reggie_rigRN.phl[1990]";
-connectAttr "MiddleCntrl_R_Curl.o" "reggie_rigRN.phl[1991]";
-connectAttr "IndexCntrl_R_Curl.o" "reggie_rigRN.phl[1992]";
-connectAttr "FootCntrl_L_KneeThighLength.o" "reggie_rigRN.phl[1993]";
-connectAttr "FootCntrl_L_KneeShinLength.o" "reggie_rigRN.phl[1994]";
-connectAttr "FootCntrl_L_HeelRoll.o" "reggie_rigRN.phl[1995]";
-connectAttr "FootCntrl_L_BallRoll.o" "reggie_rigRN.phl[1996]";
-connectAttr "FootCntrl_L_ToeRoll.o" "reggie_rigRN.phl[1997]";
-connectAttr "FootCntrl_L_Stretchy.o" "reggie_rigRN.phl[1998]";
-connectAttr "FootCntrl_L_visibility.o" "reggie_rigRN.phl[1999]";
-connectAttr "FootCntrl_L_translateX.o" "reggie_rigRN.phl[2000]";
-connectAttr "FootCntrl_L_translateY.o" "reggie_rigRN.phl[2001]";
-connectAttr "FootCntrl_L_translateZ.o" "reggie_rigRN.phl[2002]";
-connectAttr "FootCntrl_L_rotateX.o" "reggie_rigRN.phl[2003]";
-connectAttr "FootCntrl_L_rotateY.o" "reggie_rigRN.phl[2004]";
-connectAttr "FootCntrl_L_rotateZ.o" "reggie_rigRN.phl[2005]";
-connectAttr "FootCntrl_R_KneeThighLength.o" "reggie_rigRN.phl[2006]";
-connectAttr "FootCntrl_R_KneeShinLength.o" "reggie_rigRN.phl[2007]";
-connectAttr "FootCntrl_R_HeelRoll.o" "reggie_rigRN.phl[2008]";
-connectAttr "FootCntrl_R_BallRoll.o" "reggie_rigRN.phl[2009]";
-connectAttr "FootCntrl_R_ToeRoll.o" "reggie_rigRN.phl[2010]";
-connectAttr "FootCntrl_R_Stretchy.o" "reggie_rigRN.phl[2011]";
-connectAttr "FootCntrl_R_visibility.o" "reggie_rigRN.phl[2012]";
-connectAttr "FootCntrl_R_translateX.o" "reggie_rigRN.phl[2013]";
-connectAttr "FootCntrl_R_translateY.o" "reggie_rigRN.phl[2014]";
-connectAttr "FootCntrl_R_translateZ.o" "reggie_rigRN.phl[2015]";
-connectAttr "FootCntrl_R_rotateX.o" "reggie_rigRN.phl[2016]";
-connectAttr "FootCntrl_R_rotateY.o" "reggie_rigRN.phl[2017]";
-connectAttr "FootCntrl_R_rotateZ.o" "reggie_rigRN.phl[2018]";
-connectAttr "Knee_PV_L_translateX.o" "reggie_rigRN.phl[2019]";
-connectAttr "Knee_PV_L_translateY.o" "reggie_rigRN.phl[2020]";
-connectAttr "Knee_PV_L_translateZ.o" "reggie_rigRN.phl[2021]";
-connectAttr "Knee_PV_L_rotateX.o" "reggie_rigRN.phl[2022]";
-connectAttr "Knee_PV_L_rotateY.o" "reggie_rigRN.phl[2023]";
-connectAttr "Knee_PV_L_rotateZ.o" "reggie_rigRN.phl[2024]";
-connectAttr "Knee_PV_L_visibility.o" "reggie_rigRN.phl[2025]";
-connectAttr "Knee_PV_L_scaleX.o" "reggie_rigRN.phl[2026]";
-connectAttr "Knee_PV_L_scaleY.o" "reggie_rigRN.phl[2027]";
-connectAttr "Knee_PV_L_scaleZ.o" "reggie_rigRN.phl[2028]";
-connectAttr "Knee_PV_R_translateX.o" "reggie_rigRN.phl[2029]";
-connectAttr "Knee_PV_R_translateY.o" "reggie_rigRN.phl[2030]";
-connectAttr "Knee_PV_R_translateZ.o" "reggie_rigRN.phl[2031]";
-connectAttr "Knee_PV_R_rotateX.o" "reggie_rigRN.phl[2032]";
-connectAttr "Knee_PV_R_rotateY.o" "reggie_rigRN.phl[2033]";
-connectAttr "Knee_PV_R_rotateZ.o" "reggie_rigRN.phl[2034]";
-connectAttr "Knee_PV_R_visibility.o" "reggie_rigRN.phl[2035]";
-connectAttr "Knee_PV_R_scaleX.o" "reggie_rigRN.phl[2036]";
-connectAttr "Knee_PV_R_scaleY.o" "reggie_rigRN.phl[2037]";
-connectAttr "Knee_PV_R_scaleZ.o" "reggie_rigRN.phl[2038]";
-connectAttr "ARM_FK_GRP_L_translateX.o" "reggie_rigRN.phl[2039]";
-connectAttr "ARM_FK_GRP_L_translateY.o" "reggie_rigRN.phl[2040]";
-connectAttr "ARM_FK_GRP_L_translateZ.o" "reggie_rigRN.phl[2041]";
-connectAttr "ARM_FK_GRP_L_rotateX.o" "reggie_rigRN.phl[2042]";
-connectAttr "ARM_FK_GRP_L_rotateY.o" "reggie_rigRN.phl[2043]";
-connectAttr "ARM_FK_GRP_L_rotateZ.o" "reggie_rigRN.phl[2044]";
-connectAttr "ARM_FK_GRP_L_scaleX.o" "reggie_rigRN.phl[2045]";
-connectAttr "ARM_FK_GRP_L_scaleY.o" "reggie_rigRN.phl[2046]";
-connectAttr "ARM_FK_GRP_L_scaleZ.o" "reggie_rigRN.phl[2047]";
-connectAttr "UpperArm_FK_Offset_L_translateX.o" "reggie_rigRN.phl[2048]";
-connectAttr "UpperArm_FK_Offset_L_translateY.o" "reggie_rigRN.phl[2049]";
-connectAttr "UpperArm_FK_Offset_L_translateZ.o" "reggie_rigRN.phl[2050]";
-connectAttr "UpperArm_FK_Offset_L_visibility.o" "reggie_rigRN.phl[2051]";
-connectAttr "UpperArm_FK_Offset_L_rotateX.o" "reggie_rigRN.phl[2052]";
-connectAttr "UpperArm_FK_Offset_L_rotateY.o" "reggie_rigRN.phl[2053]";
-connectAttr "UpperArm_FK_Offset_L_rotateZ.o" "reggie_rigRN.phl[2054]";
-connectAttr "UpperArm_FK_Offset_L_scaleX.o" "reggie_rigRN.phl[2055]";
-connectAttr "UpperArm_FK_Offset_L_scaleY.o" "reggie_rigRN.phl[2056]";
-connectAttr "UpperArm_FK_Offset_L_scaleZ.o" "reggie_rigRN.phl[2057]";
-connectAttr "UpperArm_FK_L_rotateX.o" "reggie_rigRN.phl[2058]";
-connectAttr "UpperArm_FK_L_rotateY.o" "reggie_rigRN.phl[2059]";
-connectAttr "UpperArm_FK_L_rotateZ.o" "reggie_rigRN.phl[2060]";
-connectAttr "UpperArm_FK_L_visibility.o" "reggie_rigRN.phl[2061]";
-connectAttr "LowerArm_FK_Offset_L_visibility1.o" "reggie_rigRN.phl[2062]";
-connectAttr "LowerArm_FK_Offset_L_translateX1.o" "reggie_rigRN.phl[2063]";
-connectAttr "LowerArm_FK_Offset_L_translateY1.o" "reggie_rigRN.phl[2064]";
-connectAttr "LowerArm_FK_Offset_L_translateZ1.o" "reggie_rigRN.phl[2065]";
-connectAttr "LowerArm_FK_Offset_L_rotateX1.o" "reggie_rigRN.phl[2066]";
-connectAttr "LowerArm_FK_Offset_L_rotateY1.o" "reggie_rigRN.phl[2067]";
-connectAttr "LowerArm_FK_Offset_L_rotateZ1.o" "reggie_rigRN.phl[2068]";
-connectAttr "LowerArm_FK_Offset_L_scaleX1.o" "reggie_rigRN.phl[2069]";
-connectAttr "LowerArm_FK_Offset_L_scaleY1.o" "reggie_rigRN.phl[2070]";
-connectAttr "LowerArm_FK_Offset_L_scaleZ1.o" "reggie_rigRN.phl[2071]";
-connectAttr "LowerArm_FK_L_rotateX1.o" "reggie_rigRN.phl[2072]";
-connectAttr "LowerArm_FK_L_rotateY1.o" "reggie_rigRN.phl[2073]";
-connectAttr "LowerArm_FK_L_rotateZ1.o" "reggie_rigRN.phl[2074]";
-connectAttr "LowerArm_FK_L_visibility1.o" "reggie_rigRN.phl[2075]";
-connectAttr "Wrist_FK_Offset_L_visibility1.o" "reggie_rigRN.phl[2076]";
-connectAttr "Wrist_FK_Offset_L_translateX1.o" "reggie_rigRN.phl[2077]";
-connectAttr "Wrist_FK_Offset_L_translateY1.o" "reggie_rigRN.phl[2078]";
-connectAttr "Wrist_FK_Offset_L_translateZ1.o" "reggie_rigRN.phl[2079]";
-connectAttr "Wrist_FK_Offset_L_rotateX1.o" "reggie_rigRN.phl[2080]";
-connectAttr "Wrist_FK_Offset_L_rotateY1.o" "reggie_rigRN.phl[2081]";
-connectAttr "Wrist_FK_Offset_L_rotateZ1.o" "reggie_rigRN.phl[2082]";
-connectAttr "Wrist_FK_Offset_L_scaleX1.o" "reggie_rigRN.phl[2083]";
-connectAttr "Wrist_FK_Offset_L_scaleY1.o" "reggie_rigRN.phl[2084]";
-connectAttr "Wrist_FK_Offset_L_scaleZ1.o" "reggie_rigRN.phl[2085]";
-connectAttr "Wrist_FK_L_rotateX.o" "reggie_rigRN.phl[2086]";
-connectAttr "Wrist_FK_L_rotateY.o" "reggie_rigRN.phl[2087]";
-connectAttr "Wrist_FK_L_rotateZ.o" "reggie_rigRN.phl[2088]";
-connectAttr "Wrist_FK_L_visibility.o" "reggie_rigRN.phl[2089]";
-connectAttr "UpperArm_FK_Offset_R_translateX.o" "reggie_rigRN.phl[2090]";
-connectAttr "UpperArm_FK_Offset_R_translateY.o" "reggie_rigRN.phl[2091]";
-connectAttr "UpperArm_FK_Offset_R_translateZ.o" "reggie_rigRN.phl[2092]";
-connectAttr "UpperArm_FK_Offset_R_rotateX.o" "reggie_rigRN.phl[2093]";
-connectAttr "UpperArm_FK_Offset_R_rotateY.o" "reggie_rigRN.phl[2094]";
-connectAttr "UpperArm_FK_Offset_R_rotateZ.o" "reggie_rigRN.phl[2095]";
-connectAttr "UpperArm_FK_Offset_R_scaleX.o" "reggie_rigRN.phl[2096]";
-connectAttr "UpperArm_FK_Offset_R_scaleZ.o" "reggie_rigRN.phl[2097]";
-connectAttr "UpperArm_FK_Offset_R_scaleY.o" "reggie_rigRN.phl[2098]";
-connectAttr "UpperArm_FK_Offset_R_visibility.o" "reggie_rigRN.phl[2099]";
-connectAttr "UpperArm_FK_R_rotateX.o" "reggie_rigRN.phl[2100]";
-connectAttr "UpperArm_FK_R_rotateY.o" "reggie_rigRN.phl[2101]";
-connectAttr "UpperArm_FK_R_rotateZ.o" "reggie_rigRN.phl[2102]";
-connectAttr "UpperArm_FK_R_visibility.o" "reggie_rigRN.phl[2103]";
-connectAttr "RootCntrlOffset_translateX.o" "reggie_rigRN.phl[2104]";
-connectAttr "RootCntrlOffset_translateY.o" "reggie_rigRN.phl[2105]";
-connectAttr "RootCntrlOffset_translateZ.o" "reggie_rigRN.phl[2106]";
-connectAttr "RootCntrlOffset_rotateX.o" "reggie_rigRN.phl[2107]";
-connectAttr "RootCntrlOffset_rotateY.o" "reggie_rigRN.phl[2108]";
-connectAttr "RootCntrlOffset_rotateZ.o" "reggie_rigRN.phl[2109]";
-connectAttr "RootCntrlOffset_visibility.o" "reggie_rigRN.phl[2110]";
-connectAttr "RootCntrlOffset_scaleX.o" "reggie_rigRN.phl[2111]";
-connectAttr "RootCntrlOffset_scaleY.o" "reggie_rigRN.phl[2112]";
-connectAttr "RootCntrlOffset_scaleZ.o" "reggie_rigRN.phl[2113]";
-connectAttr "RootCntrl_translateX.o" "reggie_rigRN.phl[2114]";
-connectAttr "RootCntrl_translateY.o" "reggie_rigRN.phl[2115]";
-connectAttr "RootCntrl_translateZ.o" "reggie_rigRN.phl[2116]";
-connectAttr "RootCntrl_visibility.o" "reggie_rigRN.phl[2117]";
-connectAttr "RootCntrl_rotateX.o" "reggie_rigRN.phl[2118]";
-connectAttr "RootCntrl_rotateY.o" "reggie_rigRN.phl[2119]";
-connectAttr "RootCntrl_rotateZ.o" "reggie_rigRN.phl[2120]";
-connectAttr "Torso_GRP_rotateX.o" "reggie_rigRN.phl[2121]";
-connectAttr "Torso_GRP_rotateY.o" "reggie_rigRN.phl[2122]";
-connectAttr "Torso_GRP_rotateZ.o" "reggie_rigRN.phl[2123]";
-connectAttr "Torso_GRP_translateX.o" "reggie_rigRN.phl[2124]";
-connectAttr "Torso_GRP_translateY.o" "reggie_rigRN.phl[2125]";
-connectAttr "Torso_GRP_translateZ.o" "reggie_rigRN.phl[2126]";
-connectAttr "Torso_GRP_visibility.o" "reggie_rigRN.phl[2127]";
-connectAttr "Torso_GRP_scaleX.o" "reggie_rigRN.phl[2128]";
-connectAttr "Torso_GRP_scaleY.o" "reggie_rigRN.phl[2129]";
-connectAttr "Torso_GRP_scaleZ.o" "reggie_rigRN.phl[2130]";
-connectAttr "HipCntrl_rotateX.o" "reggie_rigRN.phl[2131]";
-connectAttr "HipCntrl_rotateY.o" "reggie_rigRN.phl[2132]";
-connectAttr "HipCntrl_rotateZ.o" "reggie_rigRN.phl[2133]";
-connectAttr "HipCntrl_visibility.o" "reggie_rigRN.phl[2134]";
-connectAttr "ChestCntrl_Stretchy.o" "reggie_rigRN.phl[2135]";
-connectAttr "ChestCntrl_translateX.o" "reggie_rigRN.phl[2136]";
-connectAttr "ChestCntrl_translateY.o" "reggie_rigRN.phl[2137]";
-connectAttr "ChestCntrl_translateZ.o" "reggie_rigRN.phl[2138]";
-connectAttr "ChestCntrl_rotateX.o" "reggie_rigRN.phl[2139]";
-connectAttr "ChestCntrl_rotateY.o" "reggie_rigRN.phl[2140]";
-connectAttr "ChestCntrl_rotateZ.o" "reggie_rigRN.phl[2141]";
-connectAttr "ChestCntrl_scaleX.o" "reggie_rigRN.phl[2142]";
-connectAttr "ChestCntrl_scaleY.o" "reggie_rigRN.phl[2143]";
-connectAttr "ChestCntrl_scaleZ.o" "reggie_rigRN.phl[2144]";
-connectAttr "ChestCntrl_visibility.o" "reggie_rigRN.phl[2145]";
-connectAttr "ShoulderCntrl_R_translateX.o" "reggie_rigRN.phl[2146]";
-connectAttr "ShoulderCntrl_R_translateY.o" "reggie_rigRN.phl[2147]";
-connectAttr "ShoulderCntrl_R_translateZ.o" "reggie_rigRN.phl[2148]";
-connectAttr "ShoulderCntrl_R_visibility.o" "reggie_rigRN.phl[2149]";
-connectAttr "Spine_02_FK_visibility.o" "reggie_rigRN.phl[2150]";
-connectAttr "Spine_02_FK_rotateX.o" "reggie_rigRN.phl[2151]";
-connectAttr "Spine_02_FK_rotateY.o" "reggie_rigRN.phl[2152]";
-connectAttr "Spine_02_FK_rotateZ.o" "reggie_rigRN.phl[2153]";
-connectAttr "Head_Neck_GRP_translateX.o" "reggie_rigRN.phl[2154]";
-connectAttr "Head_Neck_GRP_translateY.o" "reggie_rigRN.phl[2155]";
-connectAttr "Head_Neck_GRP_translateZ.o" "reggie_rigRN.phl[2156]";
-connectAttr "Head_Neck_GRP_rotateX.o" "reggie_rigRN.phl[2157]";
-connectAttr "Head_Neck_GRP_rotateY.o" "reggie_rigRN.phl[2158]";
-connectAttr "Head_Neck_GRP_rotateZ.o" "reggie_rigRN.phl[2159]";
-connectAttr "Head_Neck_GRP_visibility.o" "reggie_rigRN.phl[2160]";
-connectAttr "Head_Neck_GRP_scaleX.o" "reggie_rigRN.phl[2161]";
-connectAttr "Head_Neck_GRP_scaleY.o" "reggie_rigRN.phl[2162]";
-connectAttr "Head_Neck_GRP_scaleZ.o" "reggie_rigRN.phl[2163]";
-connectAttr "pairBlend1.otx" "reggie_rigRN.phl[2164]";
-connectAttr "pairBlend1.oty" "reggie_rigRN.phl[2165]";
-connectAttr "pairBlend1.otz" "reggie_rigRN.phl[2166]";
-connectAttr "pairBlend1.orx" "reggie_rigRN.phl[2167]";
-connectAttr "pairBlend1.ory" "reggie_rigRN.phl[2168]";
-connectAttr "pairBlend1.orz" "reggie_rigRN.phl[2169]";
-connectAttr "reggie_rigRN.phl[2170]" "pairBlend1.w";
-connectAttr "NeckCntrlFk_Offset_blendParent1.o" "reggie_rigRN.phl[2171]";
-connectAttr "NeckCntrlFk_Offset_visibility.o" "reggie_rigRN.phl[2172]";
-connectAttr "NeckCntrlFk_Offset_scaleX.o" "reggie_rigRN.phl[2173]";
-connectAttr "NeckCntrlFk_Offset_scaleY.o" "reggie_rigRN.phl[2174]";
-connectAttr "NeckCntrlFk_Offset_scaleZ.o" "reggie_rigRN.phl[2175]";
-connectAttr "reggie_rigRN.phl[2176]" "pairBlend1.itx2";
-connectAttr "reggie_rigRN.phl[2177]" "pairBlend1.ity2";
-connectAttr "reggie_rigRN.phl[2178]" "pairBlend1.itz2";
-connectAttr "reggie_rigRN.phl[2179]" "pairBlend1.irx2";
-connectAttr "reggie_rigRN.phl[2180]" "pairBlend1.iry2";
-connectAttr "reggie_rigRN.phl[2181]" "pairBlend1.irz2";
-connectAttr "pairBlend3.otx" "reggie_rigRN.phl[2182]";
-connectAttr "pairBlend3.oty" "reggie_rigRN.phl[2183]";
-connectAttr "pairBlend3.otz" "reggie_rigRN.phl[2184]";
-connectAttr "pairBlend2.orx" "reggie_rigRN.phl[2185]";
-connectAttr "pairBlend2.ory" "reggie_rigRN.phl[2186]";
-connectAttr "pairBlend2.orz" "reggie_rigRN.phl[2187]";
-connectAttr "reggie_rigRN.phl[2188]" "pairBlend2.w";
-connectAttr "Head_GRP_blendOrient1.o" "reggie_rigRN.phl[2189]";
-connectAttr "reggie_rigRN.phl[2190]" "pairBlend3.w";
-connectAttr "Head_GRP_blendPoint1.o" "reggie_rigRN.phl[2191]";
-connectAttr "Head_GRP_visibility.o" "reggie_rigRN.phl[2192]";
-connectAttr "Head_GRP_scaleX.o" "reggie_rigRN.phl[2193]";
-connectAttr "Head_GRP_scaleY.o" "reggie_rigRN.phl[2194]";
-connectAttr "Head_GRP_scaleZ.o" "reggie_rigRN.phl[2195]";
-connectAttr "HeadCntrl_RotationSpace.o" "reggie_rigRN.phl[2196]";
-connectAttr "HeadCntrl_TranslationSpace.o" "reggie_rigRN.phl[2197]";
-connectAttr "HeadCntrl_Stretchy.o" "reggie_rigRN.phl[2198]";
-connectAttr "HeadCntrl_Gulp.o" "reggie_rigRN.phl[2199]";
-connectAttr "HeadCntrl_EyeTracker.o" "reggie_rigRN.phl[2200]";
-connectAttr "HeadCntrl_rotateX.o" "reggie_rigRN.phl[2201]";
-connectAttr "HeadCntrl_rotateY.o" "reggie_rigRN.phl[2202]";
-connectAttr "HeadCntrl_rotateZ.o" "reggie_rigRN.phl[2203]";
-connectAttr "HeadCntrl_translateX.o" "reggie_rigRN.phl[2204]";
-connectAttr "HeadCntrl_translateY.o" "reggie_rigRN.phl[2205]";
-connectAttr "HeadCntrl_translateZ.o" "reggie_rigRN.phl[2206]";
-connectAttr "HeadCntrl_visibility.o" "reggie_rigRN.phl[2207]";
-connectAttr "EyebrowCntrl_L_translateY.o" "reggie_rigRN.phl[2208]";
-connectAttr "EyebrowCntrl_L_translateX.o" "reggie_rigRN.phl[2209]";
-connectAttr "EyebrowCntrl_L_translateZ.o" "reggie_rigRN.phl[2210]";
-connectAttr "EyebrowCntrl_L_visibility.o" "reggie_rigRN.phl[2211]";
-connectAttr "InnerBrowCntrl_L_translateY.o" "reggie_rigRN.phl[2212]";
-connectAttr "InnerBrowCntrl_L_visibility.o" "reggie_rigRN.phl[2213]";
-connectAttr "OuterBrowCntrl_L_translateY.o" "reggie_rigRN.phl[2214]";
-connectAttr "OuterBrowCntrl_L_visibility.o" "reggie_rigRN.phl[2215]";
-connectAttr "EyebrowCntrl_R_translateY.o" "reggie_rigRN.phl[2216]";
-connectAttr "EyebrowCntrl_R_translateX.o" "reggie_rigRN.phl[2217]";
-connectAttr "EyebrowCntrl_R_translateZ.o" "reggie_rigRN.phl[2218]";
-connectAttr "EyebrowCntrl_R_visibility.o" "reggie_rigRN.phl[2219]";
-connectAttr "InnerBrowCntrl_R_translateY.o" "reggie_rigRN.phl[2220]";
-connectAttr "InnerBrowCntrl_R_visibility.o" "reggie_rigRN.phl[2221]";
-connectAttr "OuterBrowCntrl_R_translateY.o" "reggie_rigRN.phl[2222]";
-connectAttr "OuterBrowCntrl_R_visibility.o" "reggie_rigRN.phl[2223]";
-connectAttr "TopLipCntrl_L_translateY.o" "reggie_rigRN.phl[2224]";
-connectAttr "TopLipCntrl_L_translateX.o" "reggie_rigRN.phl[2225]";
-connectAttr "TopLipCntrl_L_visibility.o" "reggie_rigRN.phl[2226]";
-connectAttr "TopLipCntrl_R_translateY.o" "reggie_rigRN.phl[2227]";
-connectAttr "TopLipCntrl_R_translateX.o" "reggie_rigRN.phl[2228]";
-connectAttr "TopLipCntrl_R_visibility.o" "reggie_rigRN.phl[2229]";
-connectAttr "LipCornerCntrl_L_translateY.o" "reggie_rigRN.phl[2230]";
-connectAttr "LipCornerCntrl_L_visibility.o" "reggie_rigRN.phl[2231]";
-connectAttr "LipCornerCntrl_R_translateY.o" "reggie_rigRN.phl[2232]";
-connectAttr "LipCornerCntrl_R_visibility.o" "reggie_rigRN.phl[2233]";
-connectAttr "LowerLid_R_translateY.o" "reggie_rigRN.phl[2234]";
-connectAttr "LowerLid_R_visibility.o" "reggie_rigRN.phl[2235]";
-connectAttr "LowerLid_L_translateY.o" "reggie_rigRN.phl[2236]";
-connectAttr "LowerLid_L_visibility.o" "reggie_rigRN.phl[2237]";
-connectAttr "reggie_rigRN.phl[2238]" "pairBlend2.irx2";
-connectAttr "reggie_rigRN.phl[2239]" "pairBlend2.iry2";
-connectAttr "reggie_rigRN.phl[2240]" "pairBlend2.irz2";
-connectAttr "reggie_rigRN.phl[2241]" "pairBlend3.itx2";
-connectAttr "reggie_rigRN.phl[2242]" "pairBlend3.ity2";
-connectAttr "reggie_rigRN.phl[2243]" "pairBlend3.itz2";
-connectAttr "EyeSuite_translateX.o" "reggie_rigRN.phl[2244]";
-connectAttr "EyeSuite_translateY.o" "reggie_rigRN.phl[2245]";
-connectAttr "EyeSuite_translateZ.o" "reggie_rigRN.phl[2246]";
+connectAttr "stepShape.iog" "churchRN1.phl[13]";
 connectAttr "ReggieMasterControl_Scale1.o" "reggie_rigRN1.phl[1]";
 connectAttr "ReggieMasterControl_ReggieClothing.o" "reggie_rigRN1.phl[2]";
 connectAttr "ReggieMasterControl_WetHair1.o" "reggie_rigRN1.phl[3]";
@@ -13709,192 +13826,188 @@ connectAttr "ReggieMasterControl_translateZ1.o" "reggie_rigRN1.phl[8]";
 connectAttr "ReggieMasterControl_rotateX1.o" "reggie_rigRN1.phl[9]";
 connectAttr "ReggieMasterControl_rotateY1.o" "reggie_rigRN1.phl[10]";
 connectAttr "ReggieMasterControl_rotateZ1.o" "reggie_rigRN1.phl[11]";
-connectAttr "BindPelvisJnt_translateX.o" "reggie_rigRN1.phl[12]";
-connectAttr "BindPelvisJnt_translateY.o" "reggie_rigRN1.phl[13]";
-connectAttr "BindPelvisJnt_translateZ.o" "reggie_rigRN1.phl[14]";
-connectAttr "BindPelvisJnt_rotateX.o" "reggie_rigRN1.phl[15]";
-connectAttr "BindPelvisJnt_rotateY.o" "reggie_rigRN1.phl[16]";
-connectAttr "BindPelvisJnt_rotateZ.o" "reggie_rigRN1.phl[17]";
-connectAttr "BindPelvisJnt_visibility.o" "reggie_rigRN1.phl[18]";
-connectAttr "HandCntrl_Spread.o" "reggie_rigRN1.phl[19]";
-connectAttr "HandCntrl_visibility.o" "reggie_rigRN1.phl[20]";
-connectAttr "FootCntrl_L_KneeThighLength1.o" "reggie_rigRN1.phl[21]";
-connectAttr "FootCntrl_L_KneeShinLength1.o" "reggie_rigRN1.phl[22]";
-connectAttr "FootCntrl_L_HeelRoll1.o" "reggie_rigRN1.phl[23]";
-connectAttr "FootCntrl_L_BallRoll1.o" "reggie_rigRN1.phl[24]";
-connectAttr "FootCntrl_L_ToeRoll1.o" "reggie_rigRN1.phl[25]";
-connectAttr "FootCntrl_L_Stretchy1.o" "reggie_rigRN1.phl[26]";
-connectAttr "FootCntrl_L_visibility1.o" "reggie_rigRN1.phl[27]";
-connectAttr "FootCntrl_L_translateX1.o" "reggie_rigRN1.phl[28]";
-connectAttr "FootCntrl_L_translateY1.o" "reggie_rigRN1.phl[29]";
-connectAttr "FootCntrl_L_translateZ1.o" "reggie_rigRN1.phl[30]";
-connectAttr "FootCntrl_L_rotateX1.o" "reggie_rigRN1.phl[31]";
-connectAttr "FootCntrl_L_rotateY1.o" "reggie_rigRN1.phl[32]";
-connectAttr "FootCntrl_L_rotateZ1.o" "reggie_rigRN1.phl[33]";
-connectAttr "FootCntrl_R_KneeThighLength1.o" "reggie_rigRN1.phl[34]";
-connectAttr "FootCntrl_R_KneeShinLength1.o" "reggie_rigRN1.phl[35]";
-connectAttr "FootCntrl_R_HeelRoll1.o" "reggie_rigRN1.phl[36]";
-connectAttr "FootCntrl_R_BallRoll1.o" "reggie_rigRN1.phl[37]";
-connectAttr "FootCntrl_R_ToeRoll1.o" "reggie_rigRN1.phl[38]";
-connectAttr "FootCntrl_R_Stretchy1.o" "reggie_rigRN1.phl[39]";
-connectAttr "FootCntrl_R_visibility1.o" "reggie_rigRN1.phl[40]";
-connectAttr "FootCntrl_R_translateX1.o" "reggie_rigRN1.phl[41]";
-connectAttr "FootCntrl_R_translateY1.o" "reggie_rigRN1.phl[42]";
-connectAttr "FootCntrl_R_translateZ1.o" "reggie_rigRN1.phl[43]";
-connectAttr "FootCntrl_R_rotateX1.o" "reggie_rigRN1.phl[44]";
-connectAttr "FootCntrl_R_rotateY1.o" "reggie_rigRN1.phl[45]";
-connectAttr "FootCntrl_R_rotateZ1.o" "reggie_rigRN1.phl[46]";
-connectAttr "Knee_PV_L_translateX1.o" "reggie_rigRN1.phl[47]";
-connectAttr "Knee_PV_L_translateY1.o" "reggie_rigRN1.phl[48]";
-connectAttr "Knee_PV_L_translateZ1.o" "reggie_rigRN1.phl[49]";
-connectAttr "Knee_PV_L_visibility1.o" "reggie_rigRN1.phl[50]";
-connectAttr "Knee_PV_L_rotateX1.o" "reggie_rigRN1.phl[51]";
-connectAttr "Knee_PV_L_rotateY1.o" "reggie_rigRN1.phl[52]";
-connectAttr "Knee_PV_L_rotateZ1.o" "reggie_rigRN1.phl[53]";
-connectAttr "Knee_PV_L_scaleX1.o" "reggie_rigRN1.phl[54]";
-connectAttr "Knee_PV_L_scaleY1.o" "reggie_rigRN1.phl[55]";
-connectAttr "Knee_PV_L_scaleZ1.o" "reggie_rigRN1.phl[56]";
-connectAttr "Knee_PV_R_translateX1.o" "reggie_rigRN1.phl[57]";
-connectAttr "Knee_PV_R_translateY1.o" "reggie_rigRN1.phl[58]";
-connectAttr "Knee_PV_R_translateZ1.o" "reggie_rigRN1.phl[59]";
-connectAttr "Knee_PV_R_rotateX1.o" "reggie_rigRN1.phl[60]";
-connectAttr "Knee_PV_R_rotateY1.o" "reggie_rigRN1.phl[61]";
-connectAttr "Knee_PV_R_rotateZ1.o" "reggie_rigRN1.phl[62]";
-connectAttr "Knee_PV_R_visibility1.o" "reggie_rigRN1.phl[63]";
-connectAttr "Knee_PV_R_scaleX1.o" "reggie_rigRN1.phl[64]";
-connectAttr "Knee_PV_R_scaleY1.o" "reggie_rigRN1.phl[65]";
-connectAttr "Knee_PV_R_scaleZ1.o" "reggie_rigRN1.phl[66]";
-connectAttr "ARM_IK_GRP_L_translateX.o" "reggie_rigRN1.phl[67]";
-connectAttr "ARM_IK_GRP_L_translateY.o" "reggie_rigRN1.phl[68]";
-connectAttr "ARM_IK_GRP_L_translateZ.o" "reggie_rigRN1.phl[69]";
-connectAttr "ARM_IK_GRP_L_rotateX.o" "reggie_rigRN1.phl[70]";
-connectAttr "ARM_IK_GRP_L_rotateY.o" "reggie_rigRN1.phl[71]";
-connectAttr "ARM_IK_GRP_L_rotateZ.o" "reggie_rigRN1.phl[72]";
-connectAttr "ARM_IK_GRP_L_scaleX.o" "reggie_rigRN1.phl[73]";
-connectAttr "ARM_IK_GRP_L_scaleY.o" "reggie_rigRN1.phl[74]";
-connectAttr "ARM_IK_GRP_L_scaleZ.o" "reggie_rigRN1.phl[75]";
-connectAttr "PoleVectors_translateX.o" "reggie_rigRN1.phl[76]";
-connectAttr "PoleVectors_translateZ.o" "reggie_rigRN1.phl[77]";
-connectAttr "PoleVectors_translateY.o" "reggie_rigRN1.phl[78]";
-connectAttr "PoleVectors_visibility.o" "reggie_rigRN1.phl[79]";
-connectAttr "PoleVectors_rotateX.o" "reggie_rigRN1.phl[80]";
-connectAttr "PoleVectors_rotateY.o" "reggie_rigRN1.phl[81]";
-connectAttr "PoleVectors_rotateZ.o" "reggie_rigRN1.phl[82]";
-connectAttr "PoleVectors_scaleX.o" "reggie_rigRN1.phl[83]";
-connectAttr "PoleVectors_scaleY.o" "reggie_rigRN1.phl[84]";
-connectAttr "PoleVectors_scaleZ.o" "reggie_rigRN1.phl[85]";
-connectAttr "ArmCntrl_L_rotateX.o" "reggie_rigRN1.phl[86]";
-connectAttr "ArmCntrl_L_rotateY.o" "reggie_rigRN1.phl[87]";
-connectAttr "ArmCntrl_L_rotateZ.o" "reggie_rigRN1.phl[88]";
-connectAttr "ArmCntrl_L_translateX.o" "reggie_rigRN1.phl[89]";
-connectAttr "ArmCntrl_L_translateY.o" "reggie_rigRN1.phl[90]";
-connectAttr "ArmCntrl_L_translateZ.o" "reggie_rigRN1.phl[91]";
-connectAttr "ArmCntrl_L_visibility.o" "reggie_rigRN1.phl[92]";
-connectAttr "ArmCntrl_L_scaleX.o" "reggie_rigRN1.phl[93]";
-connectAttr "ArmCntrl_L_scaleY.o" "reggie_rigRN1.phl[94]";
-connectAttr "ArmCntrl_L_scaleZ.o" "reggie_rigRN1.phl[95]";
-connectAttr "ARM_IK_GRP_R_translateX.o" "reggie_rigRN1.phl[96]";
-connectAttr "ARM_IK_GRP_R_translateY.o" "reggie_rigRN1.phl[97]";
-connectAttr "ARM_IK_GRP_R_translateZ.o" "reggie_rigRN1.phl[98]";
-connectAttr "ARM_IK_GRP_R_rotateX.o" "reggie_rigRN1.phl[99]";
-connectAttr "ARM_IK_GRP_R_rotateY.o" "reggie_rigRN1.phl[100]";
-connectAttr "ARM_IK_GRP_R_rotateZ.o" "reggie_rigRN1.phl[101]";
-connectAttr "ARM_IK_GRP_R_scaleX.o" "reggie_rigRN1.phl[102]";
-connectAttr "ARM_IK_GRP_R_scaleY.o" "reggie_rigRN1.phl[103]";
-connectAttr "ARM_IK_GRP_R_scaleZ.o" "reggie_rigRN1.phl[104]";
-connectAttr "ElbowPV_IK_R_translateX.o" "reggie_rigRN1.phl[105]";
-connectAttr "ElbowPV_IK_R_translateY.o" "reggie_rigRN1.phl[106]";
-connectAttr "ElbowPV_IK_R_translateZ.o" "reggie_rigRN1.phl[107]";
-connectAttr "ElbowPV_IK_R_rotateX.o" "reggie_rigRN1.phl[108]";
-connectAttr "ElbowPV_IK_R_rotateY.o" "reggie_rigRN1.phl[109]";
-connectAttr "ElbowPV_IK_R_rotateZ.o" "reggie_rigRN1.phl[110]";
-connectAttr "ElbowPV_IK_R_visibility.o" "reggie_rigRN1.phl[111]";
-connectAttr "ElbowPV_IK_R_scaleX.o" "reggie_rigRN1.phl[112]";
-connectAttr "ElbowPV_IK_R_scaleY.o" "reggie_rigRN1.phl[113]";
-connectAttr "ElbowPV_IK_R_scaleZ.o" "reggie_rigRN1.phl[114]";
-connectAttr "ArmCntrl_R_rotateX.o" "reggie_rigRN1.phl[115]";
-connectAttr "ArmCntrl_R_rotateY.o" "reggie_rigRN1.phl[116]";
-connectAttr "ArmCntrl_R_rotateZ.o" "reggie_rigRN1.phl[117]";
-connectAttr "ArmCntrl_R_translateX.o" "reggie_rigRN1.phl[118]";
-connectAttr "ArmCntrl_R_translateY.o" "reggie_rigRN1.phl[119]";
-connectAttr "ArmCntrl_R_translateZ.o" "reggie_rigRN1.phl[120]";
-connectAttr "ArmCntrl_R_visibility.o" "reggie_rigRN1.phl[121]";
-connectAttr "ArmCntrl_R_scaleX.o" "reggie_rigRN1.phl[122]";
-connectAttr "ArmCntrl_R_scaleY.o" "reggie_rigRN1.phl[123]";
-connectAttr "ArmCntrl_R_scaleZ.o" "reggie_rigRN1.phl[124]";
-connectAttr "ARM_FK_GRP_L_translateX1.o" "reggie_rigRN1.phl[125]";
-connectAttr "ARM_FK_GRP_L_translateY1.o" "reggie_rigRN1.phl[126]";
-connectAttr "ARM_FK_GRP_L_translateZ1.o" "reggie_rigRN1.phl[127]";
-connectAttr "ARM_FK_GRP_L_rotateX1.o" "reggie_rigRN1.phl[128]";
-connectAttr "ARM_FK_GRP_L_rotateY1.o" "reggie_rigRN1.phl[129]";
-connectAttr "ARM_FK_GRP_L_rotateZ1.o" "reggie_rigRN1.phl[130]";
-connectAttr "ARM_FK_GRP_L_scaleX1.o" "reggie_rigRN1.phl[131]";
-connectAttr "ARM_FK_GRP_L_scaleY1.o" "reggie_rigRN1.phl[132]";
-connectAttr "ARM_FK_GRP_L_scaleZ1.o" "reggie_rigRN1.phl[133]";
-connectAttr "UpperArm_FK_L_rotateX1.o" "reggie_rigRN1.phl[134]";
-connectAttr "UpperArm_FK_L_rotateY1.o" "reggie_rigRN1.phl[135]";
-connectAttr "UpperArm_FK_L_rotateZ1.o" "reggie_rigRN1.phl[136]";
-connectAttr "UpperArm_FK_L_visibility1.o" "reggie_rigRN1.phl[137]";
-connectAttr "LowerArm_FK_L_rotateX2.o" "reggie_rigRN1.phl[138]";
-connectAttr "LowerArm_FK_L_rotateY2.o" "reggie_rigRN1.phl[139]";
-connectAttr "LowerArm_FK_L_rotateZ2.o" "reggie_rigRN1.phl[140]";
-connectAttr "LowerArm_FK_L_visibility2.o" "reggie_rigRN1.phl[141]";
-connectAttr "ARM_FK_GRP_R_translateX.o" "reggie_rigRN1.phl[142]";
-connectAttr "ARM_FK_GRP_R_translateY.o" "reggie_rigRN1.phl[143]";
-connectAttr "ARM_FK_GRP_R_translateZ.o" "reggie_rigRN1.phl[144]";
-connectAttr "ARM_FK_GRP_R_rotateX.o" "reggie_rigRN1.phl[145]";
-connectAttr "ARM_FK_GRP_R_rotateY.o" "reggie_rigRN1.phl[146]";
-connectAttr "ARM_FK_GRP_R_rotateZ.o" "reggie_rigRN1.phl[147]";
-connectAttr "ARM_FK_GRP_R_scaleX.o" "reggie_rigRN1.phl[148]";
-connectAttr "ARM_FK_GRP_R_scaleY.o" "reggie_rigRN1.phl[149]";
-connectAttr "ARM_FK_GRP_R_scaleZ.o" "reggie_rigRN1.phl[150]";
-connectAttr "UpperArm_FK_R_rotateX1.o" "reggie_rigRN1.phl[151]";
-connectAttr "UpperArm_FK_R_rotateY1.o" "reggie_rigRN1.phl[152]";
-connectAttr "UpperArm_FK_R_rotateZ1.o" "reggie_rigRN1.phl[153]";
-connectAttr "UpperArm_FK_R_visibility1.o" "reggie_rigRN1.phl[154]";
-connectAttr "RootCntrlOffset_visibility1.o" "reggie_rigRN1.phl[155]";
-connectAttr "RootCntrlOffset_translateX1.o" "reggie_rigRN1.phl[156]";
-connectAttr "RootCntrlOffset_translateY1.o" "reggie_rigRN1.phl[157]";
-connectAttr "RootCntrlOffset_translateZ1.o" "reggie_rigRN1.phl[158]";
-connectAttr "RootCntrlOffset_rotateX1.o" "reggie_rigRN1.phl[159]";
-connectAttr "RootCntrlOffset_rotateY1.o" "reggie_rigRN1.phl[160]";
-connectAttr "RootCntrlOffset_rotateZ1.o" "reggie_rigRN1.phl[161]";
-connectAttr "RootCntrlOffset_scaleX1.o" "reggie_rigRN1.phl[162]";
-connectAttr "RootCntrlOffset_scaleY1.o" "reggie_rigRN1.phl[163]";
-connectAttr "RootCntrlOffset_scaleZ1.o" "reggie_rigRN1.phl[164]";
-connectAttr "RootCntrl_translateX1.o" "reggie_rigRN1.phl[165]";
-connectAttr "RootCntrl_translateY1.o" "reggie_rigRN1.phl[166]";
-connectAttr "RootCntrl_translateZ1.o" "reggie_rigRN1.phl[167]";
-connectAttr "RootCntrl_visibility1.o" "reggie_rigRN1.phl[168]";
-connectAttr "RootCntrl_rotateX1.o" "reggie_rigRN1.phl[169]";
-connectAttr "RootCntrl_rotateY1.o" "reggie_rigRN1.phl[170]";
-connectAttr "RootCntrl_rotateZ1.o" "reggie_rigRN1.phl[171]";
-connectAttr "ShoulderCntrl_L_translateX.o" "reggie_rigRN1.phl[172]";
-connectAttr "ShoulderCntrl_L_translateY.o" "reggie_rigRN1.phl[173]";
-connectAttr "ShoulderCntrl_L_translateZ.o" "reggie_rigRN1.phl[174]";
-connectAttr "ShoulderCntrl_L_visibility.o" "reggie_rigRN1.phl[175]";
-connectAttr "Head_Neck_GRP_translateX1.o" "reggie_rigRN1.phl[176]";
-connectAttr "Head_Neck_GRP_translateY1.o" "reggie_rigRN1.phl[177]";
-connectAttr "Head_Neck_GRP_translateZ1.o" "reggie_rigRN1.phl[178]";
-connectAttr "Head_Neck_GRP_visibility1.o" "reggie_rigRN1.phl[179]";
-connectAttr "Head_Neck_GRP_rotateX1.o" "reggie_rigRN1.phl[180]";
-connectAttr "Head_Neck_GRP_rotateY1.o" "reggie_rigRN1.phl[181]";
-connectAttr "Head_Neck_GRP_rotateZ1.o" "reggie_rigRN1.phl[182]";
-connectAttr "Head_Neck_GRP_scaleX1.o" "reggie_rigRN1.phl[183]";
-connectAttr "Head_Neck_GRP_scaleY1.o" "reggie_rigRN1.phl[184]";
-connectAttr "Head_Neck_GRP_scaleZ1.o" "reggie_rigRN1.phl[185]";
-connectAttr "HeadCntrl_RotationSpace1.o" "reggie_rigRN1.phl[186]";
-connectAttr "HeadCntrl_TranslationSpace1.o" "reggie_rigRN1.phl[187]";
-connectAttr "HeadCntrl_Stretchy1.o" "reggie_rigRN1.phl[188]";
-connectAttr "HeadCntrl_Gulp1.o" "reggie_rigRN1.phl[189]";
-connectAttr "HeadCntrl_EyeTracker1.o" "reggie_rigRN1.phl[190]";
-connectAttr "HeadCntrl_rotateX1.o" "reggie_rigRN1.phl[191]";
-connectAttr "HeadCntrl_rotateY1.o" "reggie_rigRN1.phl[192]";
-connectAttr "HeadCntrl_rotateZ1.o" "reggie_rigRN1.phl[193]";
-connectAttr "HeadCntrl_translateX1.o" "reggie_rigRN1.phl[194]";
-connectAttr "HeadCntrl_translateY1.o" "reggie_rigRN1.phl[195]";
-connectAttr "HeadCntrl_translateZ1.o" "reggie_rigRN1.phl[196]";
-connectAttr "HeadCntrl_visibility1.o" "reggie_rigRN1.phl[197]";
+connectAttr "IndexCntrl_L_Curl.o" "reggie_rigRN1.phl[12]";
+connectAttr "IndexCntrl_L_Scrunch.o" "reggie_rigRN1.phl[13]";
+connectAttr "IndexCntrl_L_Lean.o" "reggie_rigRN1.phl[14]";
+connectAttr "IndexCntrl_L_Relax.o" "reggie_rigRN1.phl[15]";
+connectAttr "IndexCntrl_L_visibility.o" "reggie_rigRN1.phl[16]";
+connectAttr "MiddleCntrl_L_Curl.o" "reggie_rigRN1.phl[17]";
+connectAttr "MiddleCntrl_L_Scrunch.o" "reggie_rigRN1.phl[18]";
+connectAttr "MiddleCntrl_L_Lean.o" "reggie_rigRN1.phl[19]";
+connectAttr "MiddleCntrl_L_Relax.o" "reggie_rigRN1.phl[20]";
+connectAttr "MiddleCntrl_L_visibility.o" "reggie_rigRN1.phl[21]";
+connectAttr "RingCntrl_L_Curl.o" "reggie_rigRN1.phl[22]";
+connectAttr "RingCntrl_L_Scrunch.o" "reggie_rigRN1.phl[23]";
+connectAttr "RingCntrl_L_Lean.o" "reggie_rigRN1.phl[24]";
+connectAttr "RingCntrl_L_Relax.o" "reggie_rigRN1.phl[25]";
+connectAttr "RingCntrl_L_visibility.o" "reggie_rigRN1.phl[26]";
+connectAttr "PinkyCntrl_L_Curl.o" "reggie_rigRN1.phl[27]";
+connectAttr "PinkyCntrl_L_Scrunch.o" "reggie_rigRN1.phl[28]";
+connectAttr "PinkyCntrl_L_Lean.o" "reggie_rigRN1.phl[29]";
+connectAttr "PinkyCntrl_L_Relax.o" "reggie_rigRN1.phl[30]";
+connectAttr "PinkyCntrl_L_visibility.o" "reggie_rigRN1.phl[31]";
+connectAttr "HandCntrl_Spread.o" "reggie_rigRN1.phl[32]";
+connectAttr "HandCntrl_visibility.o" "reggie_rigRN1.phl[33]";
+connectAttr "FootCntrl_L_KneeThighLength1.o" "reggie_rigRN1.phl[34]";
+connectAttr "FootCntrl_L_KneeShinLength1.o" "reggie_rigRN1.phl[35]";
+connectAttr "FootCntrl_L_HeelRoll1.o" "reggie_rigRN1.phl[36]";
+connectAttr "FootCntrl_L_BallRoll1.o" "reggie_rigRN1.phl[37]";
+connectAttr "FootCntrl_L_ToeRoll1.o" "reggie_rigRN1.phl[38]";
+connectAttr "FootCntrl_L_Stretchy1.o" "reggie_rigRN1.phl[39]";
+connectAttr "FootCntrl_L_visibility1.o" "reggie_rigRN1.phl[40]";
+connectAttr "FootCntrl_L_translateX1.o" "reggie_rigRN1.phl[41]";
+connectAttr "FootCntrl_L_translateY1.o" "reggie_rigRN1.phl[42]";
+connectAttr "FootCntrl_L_translateZ1.o" "reggie_rigRN1.phl[43]";
+connectAttr "FootCntrl_L_rotateX1.o" "reggie_rigRN1.phl[44]";
+connectAttr "FootCntrl_L_rotateY1.o" "reggie_rigRN1.phl[45]";
+connectAttr "FootCntrl_L_rotateZ1.o" "reggie_rigRN1.phl[46]";
+connectAttr "FootCntrl_R_KneeThighLength1.o" "reggie_rigRN1.phl[47]";
+connectAttr "FootCntrl_R_KneeShinLength1.o" "reggie_rigRN1.phl[48]";
+connectAttr "FootCntrl_R_HeelRoll1.o" "reggie_rigRN1.phl[49]";
+connectAttr "FootCntrl_R_BallRoll1.o" "reggie_rigRN1.phl[50]";
+connectAttr "FootCntrl_R_ToeRoll1.o" "reggie_rigRN1.phl[51]";
+connectAttr "FootCntrl_R_Stretchy1.o" "reggie_rigRN1.phl[52]";
+connectAttr "FootCntrl_R_visibility1.o" "reggie_rigRN1.phl[53]";
+connectAttr "FootCntrl_R_translateX1.o" "reggie_rigRN1.phl[54]";
+connectAttr "FootCntrl_R_translateY1.o" "reggie_rigRN1.phl[55]";
+connectAttr "FootCntrl_R_translateZ1.o" "reggie_rigRN1.phl[56]";
+connectAttr "FootCntrl_R_rotateX1.o" "reggie_rigRN1.phl[57]";
+connectAttr "FootCntrl_R_rotateY1.o" "reggie_rigRN1.phl[58]";
+connectAttr "FootCntrl_R_rotateZ1.o" "reggie_rigRN1.phl[59]";
+connectAttr "Knee_PV_L_translateX1.o" "reggie_rigRN1.phl[60]";
+connectAttr "Knee_PV_L_translateY1.o" "reggie_rigRN1.phl[61]";
+connectAttr "Knee_PV_L_translateZ1.o" "reggie_rigRN1.phl[62]";
+connectAttr "Knee_PV_L_visibility1.o" "reggie_rigRN1.phl[63]";
+connectAttr "Knee_PV_L_rotateX1.o" "reggie_rigRN1.phl[64]";
+connectAttr "Knee_PV_L_rotateY1.o" "reggie_rigRN1.phl[65]";
+connectAttr "Knee_PV_L_rotateZ1.o" "reggie_rigRN1.phl[66]";
+connectAttr "Knee_PV_L_scaleX1.o" "reggie_rigRN1.phl[67]";
+connectAttr "Knee_PV_L_scaleY1.o" "reggie_rigRN1.phl[68]";
+connectAttr "Knee_PV_L_scaleZ1.o" "reggie_rigRN1.phl[69]";
+connectAttr "Knee_PV_R_translateX1.o" "reggie_rigRN1.phl[70]";
+connectAttr "Knee_PV_R_translateY1.o" "reggie_rigRN1.phl[71]";
+connectAttr "Knee_PV_R_translateZ1.o" "reggie_rigRN1.phl[72]";
+connectAttr "Knee_PV_R_visibility1.o" "reggie_rigRN1.phl[73]";
+connectAttr "Knee_PV_R_rotateX1.o" "reggie_rigRN1.phl[74]";
+connectAttr "Knee_PV_R_rotateY1.o" "reggie_rigRN1.phl[75]";
+connectAttr "Knee_PV_R_rotateZ1.o" "reggie_rigRN1.phl[76]";
+connectAttr "Knee_PV_R_scaleX1.o" "reggie_rigRN1.phl[77]";
+connectAttr "Knee_PV_R_scaleY1.o" "reggie_rigRN1.phl[78]";
+connectAttr "Knee_PV_R_scaleZ1.o" "reggie_rigRN1.phl[79]";
+connectAttr "PoleVectors_translateX.o" "reggie_rigRN1.phl[80]";
+connectAttr "PoleVectors_translateY.o" "reggie_rigRN1.phl[81]";
+connectAttr "PoleVectors_translateZ.o" "reggie_rigRN1.phl[82]";
+connectAttr "PoleVectors_visibility.o" "reggie_rigRN1.phl[83]";
+connectAttr "PoleVectors_rotateX.o" "reggie_rigRN1.phl[84]";
+connectAttr "PoleVectors_rotateY.o" "reggie_rigRN1.phl[85]";
+connectAttr "PoleVectors_rotateZ.o" "reggie_rigRN1.phl[86]";
+connectAttr "PoleVectors_scaleX.o" "reggie_rigRN1.phl[87]";
+connectAttr "PoleVectors_scaleY.o" "reggie_rigRN1.phl[88]";
+connectAttr "PoleVectors_scaleZ.o" "reggie_rigRN1.phl[89]";
+connectAttr "ElbowPV_IK_L_translateX.o" "reggie_rigRN1.phl[90]";
+connectAttr "ElbowPV_IK_L_translateY.o" "reggie_rigRN1.phl[91]";
+connectAttr "ElbowPV_IK_L_translateZ.o" "reggie_rigRN1.phl[92]";
+connectAttr "ElbowPV_IK_L_rotateX.o" "reggie_rigRN1.phl[93]";
+connectAttr "ElbowPV_IK_L_rotateY.o" "reggie_rigRN1.phl[94]";
+connectAttr "ElbowPV_IK_L_rotateZ.o" "reggie_rigRN1.phl[95]";
+connectAttr "ElbowPV_IK_L_visibility.o" "reggie_rigRN1.phl[96]";
+connectAttr "ElbowPV_IK_L_scaleX.o" "reggie_rigRN1.phl[97]";
+connectAttr "ElbowPV_IK_L_scaleY.o" "reggie_rigRN1.phl[98]";
+connectAttr "ElbowPV_IK_L_scaleZ.o" "reggie_rigRN1.phl[99]";
+connectAttr "ArmCntrl_L_rotateX.o" "reggie_rigRN1.phl[100]";
+connectAttr "ArmCntrl_L_rotateY.o" "reggie_rigRN1.phl[101]";
+connectAttr "ArmCntrl_L_rotateZ.o" "reggie_rigRN1.phl[102]";
+connectAttr "ArmCntrl_L_translateX.o" "reggie_rigRN1.phl[103]";
+connectAttr "ArmCntrl_L_translateY.o" "reggie_rigRN1.phl[104]";
+connectAttr "ArmCntrl_L_translateZ.o" "reggie_rigRN1.phl[105]";
+connectAttr "ArmCntrl_L_visibility.o" "reggie_rigRN1.phl[106]";
+connectAttr "ArmCntrl_L_scaleX.o" "reggie_rigRN1.phl[107]";
+connectAttr "ArmCntrl_L_scaleY.o" "reggie_rigRN1.phl[108]";
+connectAttr "ArmCntrl_L_scaleZ.o" "reggie_rigRN1.phl[109]";
+connectAttr "ElbowPV_IK_R_translateX.o" "reggie_rigRN1.phl[110]";
+connectAttr "ElbowPV_IK_R_translateY.o" "reggie_rigRN1.phl[111]";
+connectAttr "ElbowPV_IK_R_translateZ.o" "reggie_rigRN1.phl[112]";
+connectAttr "ElbowPV_IK_R_visibility.o" "reggie_rigRN1.phl[113]";
+connectAttr "ElbowPV_IK_R_rotateX.o" "reggie_rigRN1.phl[114]";
+connectAttr "ElbowPV_IK_R_rotateY.o" "reggie_rigRN1.phl[115]";
+connectAttr "ElbowPV_IK_R_rotateZ.o" "reggie_rigRN1.phl[116]";
+connectAttr "ElbowPV_IK_R_scaleX.o" "reggie_rigRN1.phl[117]";
+connectAttr "ElbowPV_IK_R_scaleY.o" "reggie_rigRN1.phl[118]";
+connectAttr "ElbowPV_IK_R_scaleZ.o" "reggie_rigRN1.phl[119]";
+connectAttr "ArmCntrl_R_rotateX.o" "reggie_rigRN1.phl[120]";
+connectAttr "ArmCntrl_R_rotateY.o" "reggie_rigRN1.phl[121]";
+connectAttr "ArmCntrl_R_rotateZ.o" "reggie_rigRN1.phl[122]";
+connectAttr "ArmCntrl_R_translateX.o" "reggie_rigRN1.phl[123]";
+connectAttr "ArmCntrl_R_translateY.o" "reggie_rigRN1.phl[124]";
+connectAttr "ArmCntrl_R_translateZ.o" "reggie_rigRN1.phl[125]";
+connectAttr "ArmCntrl_R_visibility.o" "reggie_rigRN1.phl[126]";
+connectAttr "ArmCntrl_R_scaleX.o" "reggie_rigRN1.phl[127]";
+connectAttr "ArmCntrl_R_scaleY.o" "reggie_rigRN1.phl[128]";
+connectAttr "ArmCntrl_R_scaleZ.o" "reggie_rigRN1.phl[129]";
+connectAttr "UpperArm_FK_L_rotateX1.o" "reggie_rigRN1.phl[130]";
+connectAttr "UpperArm_FK_L_rotateY1.o" "reggie_rigRN1.phl[131]";
+connectAttr "UpperArm_FK_L_rotateZ1.o" "reggie_rigRN1.phl[132]";
+connectAttr "UpperArm_FK_L_visibility1.o" "reggie_rigRN1.phl[133]";
+connectAttr "LowerArm_FK_L_rotateX2.o" "reggie_rigRN1.phl[134]";
+connectAttr "LowerArm_FK_L_rotateY2.o" "reggie_rigRN1.phl[135]";
+connectAttr "LowerArm_FK_L_rotateZ2.o" "reggie_rigRN1.phl[136]";
+connectAttr "LowerArm_FK_L_visibility2.o" "reggie_rigRN1.phl[137]";
+connectAttr "UpperArm_FK_R_rotateX1.o" "reggie_rigRN1.phl[138]";
+connectAttr "UpperArm_FK_R_rotateY1.o" "reggie_rigRN1.phl[139]";
+connectAttr "UpperArm_FK_R_rotateZ1.o" "reggie_rigRN1.phl[140]";
+connectAttr "UpperArm_FK_R_visibility1.o" "reggie_rigRN1.phl[141]";
+connectAttr "RootCntrlOffset_visibility1.o" "reggie_rigRN1.phl[142]";
+connectAttr "RootCntrlOffset_translateX1.o" "reggie_rigRN1.phl[143]";
+connectAttr "RootCntrlOffset_translateY1.o" "reggie_rigRN1.phl[144]";
+connectAttr "RootCntrlOffset_translateZ1.o" "reggie_rigRN1.phl[145]";
+connectAttr "RootCntrlOffset_rotateX1.o" "reggie_rigRN1.phl[146]";
+connectAttr "RootCntrlOffset_rotateY1.o" "reggie_rigRN1.phl[147]";
+connectAttr "RootCntrlOffset_rotateZ1.o" "reggie_rigRN1.phl[148]";
+connectAttr "RootCntrlOffset_scaleX1.o" "reggie_rigRN1.phl[149]";
+connectAttr "RootCntrlOffset_scaleY1.o" "reggie_rigRN1.phl[150]";
+connectAttr "RootCntrlOffset_scaleZ1.o" "reggie_rigRN1.phl[151]";
+connectAttr "RootCntrl_translateX1.o" "reggie_rigRN1.phl[152]";
+connectAttr "RootCntrl_translateY1.o" "reggie_rigRN1.phl[153]";
+connectAttr "RootCntrl_translateZ1.o" "reggie_rigRN1.phl[154]";
+connectAttr "RootCntrl_visibility1.o" "reggie_rigRN1.phl[155]";
+connectAttr "RootCntrl_rotateX1.o" "reggie_rigRN1.phl[156]";
+connectAttr "RootCntrl_rotateY1.o" "reggie_rigRN1.phl[157]";
+connectAttr "RootCntrl_rotateZ1.o" "reggie_rigRN1.phl[158]";
+connectAttr "ChestCntrl_Stretchy1.o" "reggie_rigRN1.phl[159]";
+connectAttr "ChestCntrl_translateX1.o" "reggie_rigRN1.phl[160]";
+connectAttr "ChestCntrl_translateY1.o" "reggie_rigRN1.phl[161]";
+connectAttr "ChestCntrl_translateZ1.o" "reggie_rigRN1.phl[162]";
+connectAttr "ChestCntrl_rotateX1.o" "reggie_rigRN1.phl[163]";
+connectAttr "ChestCntrl_rotateY1.o" "reggie_rigRN1.phl[164]";
+connectAttr "ChestCntrl_rotateZ1.o" "reggie_rigRN1.phl[165]";
+connectAttr "ChestCntrl_scaleX1.o" "reggie_rigRN1.phl[166]";
+connectAttr "ChestCntrl_scaleY1.o" "reggie_rigRN1.phl[167]";
+connectAttr "ChestCntrl_scaleZ1.o" "reggie_rigRN1.phl[168]";
+connectAttr "ChestCntrl_visibility1.o" "reggie_rigRN1.phl[169]";
+connectAttr "ShoulderCntrl_L_translateX.o" "reggie_rigRN1.phl[170]";
+connectAttr "ShoulderCntrl_L_translateY.o" "reggie_rigRN1.phl[171]";
+connectAttr "ShoulderCntrl_L_translateZ.o" "reggie_rigRN1.phl[172]";
+connectAttr "ShoulderCntrl_L_visibility.o" "reggie_rigRN1.phl[173]";
+connectAttr "Spine_01_FK_visibility.o" "reggie_rigRN1.phl[174]";
+connectAttr "Spine_01_FK_rotateX.o" "reggie_rigRN1.phl[175]";
+connectAttr "Spine_01_FK_rotateY.o" "reggie_rigRN1.phl[176]";
+connectAttr "Spine_01_FK_rotateZ.o" "reggie_rigRN1.phl[177]";
+connectAttr "Spine_02_FK_visibility1.o" "reggie_rigRN1.phl[178]";
+connectAttr "Spine_02_FK_rotateX1.o" "reggie_rigRN1.phl[179]";
+connectAttr "Spine_02_FK_rotateY1.o" "reggie_rigRN1.phl[180]";
+connectAttr "Spine_02_FK_rotateZ1.o" "reggie_rigRN1.phl[181]";
+connectAttr "HeadCntrl_RotationSpace1.o" "reggie_rigRN1.phl[182]";
+connectAttr "HeadCntrl_TranslationSpace1.o" "reggie_rigRN1.phl[183]";
+connectAttr "HeadCntrl_Stretchy1.o" "reggie_rigRN1.phl[184]";
+connectAttr "HeadCntrl_Gulp1.o" "reggie_rigRN1.phl[185]";
+connectAttr "HeadCntrl_EyeTracker1.o" "reggie_rigRN1.phl[186]";
+connectAttr "HeadCntrl_rotateX1.o" "reggie_rigRN1.phl[187]";
+connectAttr "HeadCntrl_rotateY1.o" "reggie_rigRN1.phl[188]";
+connectAttr "HeadCntrl_rotateZ1.o" "reggie_rigRN1.phl[189]";
+connectAttr "HeadCntrl_translateX1.o" "reggie_rigRN1.phl[190]";
+connectAttr "HeadCntrl_translateY1.o" "reggie_rigRN1.phl[191]";
+connectAttr "HeadCntrl_translateZ1.o" "reggie_rigRN1.phl[192]";
+connectAttr "HeadCntrl_visibility1.o" "reggie_rigRN1.phl[193]";
 connectAttr "sidewalk_translateX.o" "sidewalk.tx";
 connectAttr "sidewalk_translateY.o" "sidewalk.ty";
 connectAttr "sidewalk_translateZ.o" "sidewalk.tz";
@@ -13914,24 +14027,6 @@ connectAttr "roadShape.o" "roadPfxToonShape.ins[0].srf";
 connectAttr "roadShape.wm" "roadPfxToonShape.ins[0].iwm";
 connectAttr ":persp.t" "roadPfxToonShape.cpt";
 connectAttr "roadPfxToonShape.wmm" "|road|roadPfxToonMesh|Main|MainShape.i";
-connectAttr "camera1_visibility.o" "churchCamera.v";
-connectAttr "camera1_translateX.o" "churchCamera.tx";
-connectAttr "camera1_translateY.o" "churchCamera.ty";
-connectAttr "camera1_translateZ.o" "churchCamera.tz";
-connectAttr "camera1_rotateX.o" "churchCamera.rx";
-connectAttr "camera1_rotateY.o" "churchCamera.ry";
-connectAttr "camera1_rotateZ.o" "churchCamera.rz";
-connectAttr "camera1_scaleX.o" "churchCamera.sx";
-connectAttr "camera1_scaleY.o" "churchCamera.sy";
-connectAttr "camera1_scaleZ.o" "churchCamera.sz";
-connectAttr "cameraShape1_horizontalFilmAperture.o" "churchCameraShape.hfa";
-connectAttr "cameraShape1_verticalFilmAperture.o" "churchCameraShape.vfa";
-connectAttr "cameraShape1_focalLength.o" "churchCameraShape.fl";
-connectAttr "cameraShape1_lensSqueezeRatio.o" "churchCameraShape.lsr";
-connectAttr "cameraShape1_fStop.o" "churchCameraShape.fs";
-connectAttr "cameraShape1_focusDistance.o" "churchCameraShape.fd";
-connectAttr "cameraShape1_shutterAngle.o" "churchCameraShape.sa";
-connectAttr "cameraShape1_centerOfInterest.o" "churchCameraShape.coi";
 connectAttr "churchRN1.phl[7]" "stairs_parentConstraint1.crp";
 connectAttr "churchRN1.phl[8]" "stairs_parentConstraint1.crt";
 connectAttr "churchRN1.phl[9]" "stairs_parentConstraint1.cro";
@@ -13957,16 +14052,18 @@ connectAttr "stairLOCK.s" "WristCntrl_IK_R_parentConstraint1.tg[0].ts";
 connectAttr "stairLOCK.pm" "WristCntrl_IK_R_parentConstraint1.tg[0].tpm";
 connectAttr "WristCntrl_IK_R_parentConstraint1.w0" "WristCntrl_IK_R_parentConstraint1.tg[0].tw"
 		;
-connectAttr "church_camera:camera1_visibility.o" "new_church_camera.v";
 connectAttr "church_camera:camera1_translateX.o" "new_church_camera.tx";
 connectAttr "church_camera:camera1_translateY.o" "new_church_camera.ty";
 connectAttr "church_camera:camera1_translateZ.o" "new_church_camera.tz";
+connectAttr "church_camera:camera1_visibility.o" "new_church_camera.v";
 connectAttr "church_camera:camera1_rotateX.o" "new_church_camera.rx";
 connectAttr "church_camera:camera1_rotateY.o" "new_church_camera.ry";
 connectAttr "church_camera:camera1_rotateZ.o" "new_church_camera.rz";
 connectAttr "church_camera:camera1_scaleX.o" "new_church_camera.sx";
 connectAttr "church_camera:camera1_scaleY.o" "new_church_camera.sy";
 connectAttr "church_camera:camera1_scaleZ.o" "new_church_camera.sz";
+connectAttr "church_camera:cameraShape1_centerOfInterest.o" "new_church_cameraShape.coi"
+		;
 connectAttr "church_camera:cameraShape1_horizontalFilmAperture.o" "new_church_cameraShape.hfa"
 		;
 connectAttr "church_camera:cameraShape1_verticalFilmAperture.o" "new_church_cameraShape.vfa"
@@ -13979,8 +14076,6 @@ connectAttr "church_camera:cameraShape1_fStop.o" "new_church_cameraShape.fs";
 connectAttr "church_camera:cameraShape1_focusDistance.o" "new_church_cameraShape.fd"
 		;
 connectAttr "church_camera:cameraShape1_shutterAngle.o" "new_church_cameraShape.sa"
-		;
-connectAttr "church_camera:cameraShape1_centerOfInterest.o" "new_church_cameraShape.coi"
 		;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -14283,7 +14378,6 @@ connectAttr "churchRN1fosterParent1.msg" "churchRN1.fp";
 connectAttr "sharedReferenceNode.sr" "churchRN1.sr";
 connectAttr "church1.msg" "sequencer1.shts" -na;
 connectAttr "liquorStore.msg" "sequencer1.shts" -na;
-connectAttr "churchCameraShape.msg" "church1.ccm";
 connectAttr "ReggieMasterControl_Clothing.o" "reggie_rigRN.phl[2]";
 connectAttr "reggie_rigRN.phl[124]" "reggie_rigRN.phl[125]";
 connectAttr "pairBlend4.orx" "reggie_rigRN.phl[187]";
@@ -14298,35 +14392,290 @@ connectAttr "WristCntrl_IK_R_scaleY.o" "reggie_rigRN.phl[200]";
 connectAttr "WristCntrl_IK_R_scaleZ.o" "reggie_rigRN.phl[201]";
 connectAttr "WristCntrl_IK_R_visibility.o" "reggie_rigRN.phl[202]";
 connectAttr "reggie_rigRN.phl[264]" "reggie_rigRN.phl[265]";
-connectAttr "LowerArm_FK_Offset_L_visibility.o" "reggie_rigRN.phl[1950]";
-connectAttr "LowerArm_FK_Offset_L_translateX.o" "reggie_rigRN.phl[1951]";
-connectAttr "LowerArm_FK_Offset_L_translateY.o" "reggie_rigRN.phl[1952]";
-connectAttr "LowerArm_FK_Offset_L_translateZ.o" "reggie_rigRN.phl[1953]";
-connectAttr "LowerArm_FK_Offset_L_rotateX.o" "reggie_rigRN.phl[1954]";
-connectAttr "LowerArm_FK_Offset_L_rotateY.o" "reggie_rigRN.phl[1955]";
-connectAttr "LowerArm_FK_Offset_L_rotateZ.o" "reggie_rigRN.phl[1956]";
-connectAttr "LowerArm_FK_Offset_L_scaleX.o" "reggie_rigRN.phl[1957]";
-connectAttr "LowerArm_FK_Offset_L_scaleY.o" "reggie_rigRN.phl[1958]";
-connectAttr "LowerArm_FK_Offset_L_scaleZ.o" "reggie_rigRN.phl[1959]";
-connectAttr "LowerArm_FK_L_rotateX.o" "reggie_rigRN.phl[1960]";
-connectAttr "LowerArm_FK_L_rotateY.o" "reggie_rigRN.phl[1961]";
-connectAttr "LowerArm_FK_L_rotateZ.o" "reggie_rigRN.phl[1962]";
-connectAttr "LowerArm_FK_L_visibility.o" "reggie_rigRN.phl[1963]";
-connectAttr "Wrist_FK_Offset_L_visibility.o" "reggie_rigRN.phl[1964]";
-connectAttr "Wrist_FK_Offset_L_translateX.o" "reggie_rigRN.phl[1965]";
-connectAttr "Wrist_FK_Offset_L_translateY.o" "reggie_rigRN.phl[1966]";
-connectAttr "Wrist_FK_Offset_L_translateZ.o" "reggie_rigRN.phl[1967]";
-connectAttr "Wrist_FK_Offset_L_rotateX.o" "reggie_rigRN.phl[1968]";
-connectAttr "Wrist_FK_Offset_L_rotateY.o" "reggie_rigRN.phl[1969]";
-connectAttr "Wrist_FK_Offset_L_rotateZ.o" "reggie_rigRN.phl[1970]";
-connectAttr "Wrist_FK_Offset_L_scaleX.o" "reggie_rigRN.phl[1971]";
-connectAttr "Wrist_FK_Offset_L_scaleY.o" "reggie_rigRN.phl[1972]";
-connectAttr "Wrist_FK_Offset_L_scaleZ.o" "reggie_rigRN.phl[1973]";
-connectAttr "Wrist_FK_L_rotateX1.o" "reggie_rigRN.phl[1974]";
-connectAttr "Wrist_FK_L_rotateY1.o" "reggie_rigRN.phl[1975]";
-connectAttr "Wrist_FK_L_rotateZ1.o" "reggie_rigRN.phl[1976]";
-connectAttr "Wrist_FK_L_visibility1.o" "reggie_rigRN.phl[1977]";
+connectAttr "LowerArm_FK_Offset_L_visibility1.o" "reggie_rigRN.phl[2062]";
+connectAttr "LowerArm_FK_Offset_L_translateX1.o" "reggie_rigRN.phl[2063]";
+connectAttr "LowerArm_FK_Offset_L_translateY1.o" "reggie_rigRN.phl[2064]";
+connectAttr "LowerArm_FK_Offset_L_translateZ1.o" "reggie_rigRN.phl[2065]";
+connectAttr "LowerArm_FK_Offset_L_rotateX1.o" "reggie_rigRN.phl[2066]";
+connectAttr "LowerArm_FK_Offset_L_rotateY1.o" "reggie_rigRN.phl[2067]";
+connectAttr "LowerArm_FK_Offset_L_rotateZ1.o" "reggie_rigRN.phl[2068]";
+connectAttr "LowerArm_FK_Offset_L_scaleX1.o" "reggie_rigRN.phl[2069]";
+connectAttr "LowerArm_FK_Offset_L_scaleY1.o" "reggie_rigRN.phl[2070]";
+connectAttr "LowerArm_FK_Offset_L_scaleZ1.o" "reggie_rigRN.phl[2071]";
+connectAttr "LowerArm_FK_L_rotateX1.o" "reggie_rigRN.phl[2072]";
+connectAttr "LowerArm_FK_L_rotateY1.o" "reggie_rigRN.phl[2073]";
+connectAttr "LowerArm_FK_L_rotateZ1.o" "reggie_rigRN.phl[2074]";
+connectAttr "LowerArm_FK_L_visibility1.o" "reggie_rigRN.phl[2075]";
+connectAttr "Wrist_FK_Offset_L_visibility1.o" "reggie_rigRN.phl[2076]";
+connectAttr "Wrist_FK_Offset_L_translateX1.o" "reggie_rigRN.phl[2077]";
+connectAttr "Wrist_FK_Offset_L_translateY1.o" "reggie_rigRN.phl[2078]";
+connectAttr "Wrist_FK_Offset_L_translateZ1.o" "reggie_rigRN.phl[2079]";
+connectAttr "Wrist_FK_Offset_L_rotateX1.o" "reggie_rigRN.phl[2080]";
+connectAttr "Wrist_FK_Offset_L_rotateY1.o" "reggie_rigRN.phl[2081]";
+connectAttr "Wrist_FK_Offset_L_rotateZ1.o" "reggie_rigRN.phl[2082]";
+connectAttr "Wrist_FK_Offset_L_scaleX1.o" "reggie_rigRN.phl[2083]";
+connectAttr "Wrist_FK_Offset_L_scaleY1.o" "reggie_rigRN.phl[2084]";
+connectAttr "Wrist_FK_Offset_L_scaleZ1.o" "reggie_rigRN.phl[2085]";
+connectAttr "Wrist_FK_L_rotateX.o" "reggie_rigRN.phl[2086]";
+connectAttr "Wrist_FK_L_rotateY.o" "reggie_rigRN.phl[2087]";
+connectAttr "Wrist_FK_L_rotateZ.o" "reggie_rigRN.phl[2088]";
+connectAttr "Wrist_FK_L_visibility.o" "reggie_rigRN.phl[2089]";
+connectAttr "ReggieMasterControl_Scale.o" "reggie_rigRN.phl[2090]";
+connectAttr "ReggieMasterControl_ReggieClothing1.o" "reggie_rigRN.phl[2091]";
+connectAttr "ReggieMasterControl_WetHair.o" "reggie_rigRN.phl[2092]";
+connectAttr "ReggieMasterControl_Stranger1.o" "reggie_rigRN.phl[2093]";
+connectAttr "ReggieMasterControl_translateX.o" "reggie_rigRN.phl[2094]";
+connectAttr "ReggieMasterControl_translateY.o" "reggie_rigRN.phl[2095]";
+connectAttr "ReggieMasterControl_translateZ.o" "reggie_rigRN.phl[2096]";
+connectAttr "ReggieMasterControl_rotateX.o" "reggie_rigRN.phl[2097]";
+connectAttr "ReggieMasterControl_rotateY.o" "reggie_rigRN.phl[2098]";
+connectAttr "ReggieMasterControl_rotateZ.o" "reggie_rigRN.phl[2099]";
+connectAttr "ReggieMasterControl_visibility.o" "reggie_rigRN.phl[2100]";
+connectAttr "PinkyCntrl_R_Curl.o" "reggie_rigRN.phl[2101]";
+connectAttr "RingCntrl_R_Curl.o" "reggie_rigRN.phl[2102]";
+connectAttr "MiddleCntrl_R_Curl.o" "reggie_rigRN.phl[2103]";
+connectAttr "IndexCntrl_R_Curl.o" "reggie_rigRN.phl[2104]";
+connectAttr "FootCntrl_L_KneeThighLength.o" "reggie_rigRN.phl[2105]";
+connectAttr "FootCntrl_L_KneeShinLength.o" "reggie_rigRN.phl[2106]";
+connectAttr "FootCntrl_L_HeelRoll.o" "reggie_rigRN.phl[2107]";
+connectAttr "FootCntrl_L_BallRoll.o" "reggie_rigRN.phl[2108]";
+connectAttr "FootCntrl_L_ToeRoll.o" "reggie_rigRN.phl[2109]";
+connectAttr "FootCntrl_L_Stretchy.o" "reggie_rigRN.phl[2110]";
+connectAttr "FootCntrl_L_visibility.o" "reggie_rigRN.phl[2111]";
+connectAttr "FootCntrl_L_translateX.o" "reggie_rigRN.phl[2112]";
+connectAttr "FootCntrl_L_translateY.o" "reggie_rigRN.phl[2113]";
+connectAttr "FootCntrl_L_translateZ.o" "reggie_rigRN.phl[2114]";
+connectAttr "FootCntrl_L_rotateX.o" "reggie_rigRN.phl[2115]";
+connectAttr "FootCntrl_L_rotateY.o" "reggie_rigRN.phl[2116]";
+connectAttr "FootCntrl_L_rotateZ.o" "reggie_rigRN.phl[2117]";
+connectAttr "FootCntrl_R_KneeThighLength.o" "reggie_rigRN.phl[2118]";
+connectAttr "FootCntrl_R_KneeShinLength.o" "reggie_rigRN.phl[2119]";
+connectAttr "FootCntrl_R_HeelRoll.o" "reggie_rigRN.phl[2120]";
+connectAttr "FootCntrl_R_BallRoll.o" "reggie_rigRN.phl[2121]";
+connectAttr "FootCntrl_R_ToeRoll.o" "reggie_rigRN.phl[2122]";
+connectAttr "FootCntrl_R_Stretchy.o" "reggie_rigRN.phl[2123]";
+connectAttr "FootCntrl_R_visibility.o" "reggie_rigRN.phl[2124]";
+connectAttr "FootCntrl_R_translateX.o" "reggie_rigRN.phl[2125]";
+connectAttr "FootCntrl_R_translateY.o" "reggie_rigRN.phl[2126]";
+connectAttr "FootCntrl_R_translateZ.o" "reggie_rigRN.phl[2127]";
+connectAttr "FootCntrl_R_rotateX.o" "reggie_rigRN.phl[2128]";
+connectAttr "FootCntrl_R_rotateY.o" "reggie_rigRN.phl[2129]";
+connectAttr "FootCntrl_R_rotateZ.o" "reggie_rigRN.phl[2130]";
+connectAttr "Knee_PV_L_translateX.o" "reggie_rigRN.phl[2131]";
+connectAttr "Knee_PV_L_translateY.o" "reggie_rigRN.phl[2132]";
+connectAttr "Knee_PV_L_translateZ.o" "reggie_rigRN.phl[2133]";
+connectAttr "Knee_PV_L_rotateX.o" "reggie_rigRN.phl[2134]";
+connectAttr "Knee_PV_L_rotateY.o" "reggie_rigRN.phl[2135]";
+connectAttr "Knee_PV_L_rotateZ.o" "reggie_rigRN.phl[2136]";
+connectAttr "Knee_PV_L_visibility.o" "reggie_rigRN.phl[2137]";
+connectAttr "Knee_PV_L_scaleX.o" "reggie_rigRN.phl[2138]";
+connectAttr "Knee_PV_L_scaleY.o" "reggie_rigRN.phl[2139]";
+connectAttr "Knee_PV_L_scaleZ.o" "reggie_rigRN.phl[2140]";
+connectAttr "Knee_PV_R_translateX.o" "reggie_rigRN.phl[2141]";
+connectAttr "Knee_PV_R_translateY.o" "reggie_rigRN.phl[2142]";
+connectAttr "Knee_PV_R_translateZ.o" "reggie_rigRN.phl[2143]";
+connectAttr "Knee_PV_R_rotateX.o" "reggie_rigRN.phl[2144]";
+connectAttr "Knee_PV_R_rotateY.o" "reggie_rigRN.phl[2145]";
+connectAttr "Knee_PV_R_rotateZ.o" "reggie_rigRN.phl[2146]";
+connectAttr "Knee_PV_R_visibility.o" "reggie_rigRN.phl[2147]";
+connectAttr "Knee_PV_R_scaleX.o" "reggie_rigRN.phl[2148]";
+connectAttr "Knee_PV_R_scaleY.o" "reggie_rigRN.phl[2149]";
+connectAttr "Knee_PV_R_scaleZ.o" "reggie_rigRN.phl[2150]";
+connectAttr "ARM_FK_GRP_L_translateX.o" "reggie_rigRN.phl[2151]";
+connectAttr "ARM_FK_GRP_L_translateY.o" "reggie_rigRN.phl[2152]";
+connectAttr "ARM_FK_GRP_L_translateZ.o" "reggie_rigRN.phl[2153]";
+connectAttr "ARM_FK_GRP_L_rotateX.o" "reggie_rigRN.phl[2154]";
+connectAttr "ARM_FK_GRP_L_rotateY.o" "reggie_rigRN.phl[2155]";
+connectAttr "ARM_FK_GRP_L_rotateZ.o" "reggie_rigRN.phl[2156]";
+connectAttr "ARM_FK_GRP_L_scaleX.o" "reggie_rigRN.phl[2157]";
+connectAttr "ARM_FK_GRP_L_scaleY.o" "reggie_rigRN.phl[2158]";
+connectAttr "ARM_FK_GRP_L_scaleZ.o" "reggie_rigRN.phl[2159]";
+connectAttr "UpperArm_FK_Offset_L_translateX.o" "reggie_rigRN.phl[2160]";
+connectAttr "UpperArm_FK_Offset_L_translateY.o" "reggie_rigRN.phl[2161]";
+connectAttr "UpperArm_FK_Offset_L_translateZ.o" "reggie_rigRN.phl[2162]";
+connectAttr "UpperArm_FK_Offset_L_visibility.o" "reggie_rigRN.phl[2163]";
+connectAttr "UpperArm_FK_Offset_L_rotateX.o" "reggie_rigRN.phl[2164]";
+connectAttr "UpperArm_FK_Offset_L_rotateY.o" "reggie_rigRN.phl[2165]";
+connectAttr "UpperArm_FK_Offset_L_rotateZ.o" "reggie_rigRN.phl[2166]";
+connectAttr "UpperArm_FK_Offset_L_scaleX.o" "reggie_rigRN.phl[2167]";
+connectAttr "UpperArm_FK_Offset_L_scaleY.o" "reggie_rigRN.phl[2168]";
+connectAttr "UpperArm_FK_Offset_L_scaleZ.o" "reggie_rigRN.phl[2169]";
+connectAttr "UpperArm_FK_L_rotateX.o" "reggie_rigRN.phl[2170]";
+connectAttr "UpperArm_FK_L_rotateY.o" "reggie_rigRN.phl[2171]";
+connectAttr "UpperArm_FK_L_rotateZ.o" "reggie_rigRN.phl[2172]";
+connectAttr "UpperArm_FK_L_visibility.o" "reggie_rigRN.phl[2173]";
+connectAttr "LowerArm_FK_Offset_L_visibility.o" "reggie_rigRN.phl[2174]";
+connectAttr "LowerArm_FK_Offset_L_translateX.o" "reggie_rigRN.phl[2175]";
+connectAttr "LowerArm_FK_Offset_L_translateY.o" "reggie_rigRN.phl[2176]";
+connectAttr "LowerArm_FK_Offset_L_translateZ.o" "reggie_rigRN.phl[2177]";
+connectAttr "LowerArm_FK_Offset_L_rotateX.o" "reggie_rigRN.phl[2178]";
+connectAttr "LowerArm_FK_Offset_L_rotateY.o" "reggie_rigRN.phl[2179]";
+connectAttr "LowerArm_FK_Offset_L_rotateZ.o" "reggie_rigRN.phl[2180]";
+connectAttr "LowerArm_FK_Offset_L_scaleX.o" "reggie_rigRN.phl[2181]";
+connectAttr "LowerArm_FK_Offset_L_scaleY.o" "reggie_rigRN.phl[2182]";
+connectAttr "LowerArm_FK_Offset_L_scaleZ.o" "reggie_rigRN.phl[2183]";
+connectAttr "LowerArm_FK_L_rotateX.o" "reggie_rigRN.phl[2184]";
+connectAttr "LowerArm_FK_L_rotateY.o" "reggie_rigRN.phl[2185]";
+connectAttr "LowerArm_FK_L_rotateZ.o" "reggie_rigRN.phl[2186]";
+connectAttr "LowerArm_FK_L_visibility.o" "reggie_rigRN.phl[2187]";
+connectAttr "Wrist_FK_Offset_L_visibility.o" "reggie_rigRN.phl[2188]";
+connectAttr "Wrist_FK_Offset_L_translateX.o" "reggie_rigRN.phl[2189]";
+connectAttr "Wrist_FK_Offset_L_translateY.o" "reggie_rigRN.phl[2190]";
+connectAttr "Wrist_FK_Offset_L_translateZ.o" "reggie_rigRN.phl[2191]";
+connectAttr "Wrist_FK_Offset_L_rotateX.o" "reggie_rigRN.phl[2192]";
+connectAttr "Wrist_FK_Offset_L_rotateY.o" "reggie_rigRN.phl[2193]";
+connectAttr "Wrist_FK_Offset_L_rotateZ.o" "reggie_rigRN.phl[2194]";
+connectAttr "Wrist_FK_Offset_L_scaleX.o" "reggie_rigRN.phl[2195]";
+connectAttr "Wrist_FK_Offset_L_scaleY.o" "reggie_rigRN.phl[2196]";
+connectAttr "Wrist_FK_Offset_L_scaleZ.o" "reggie_rigRN.phl[2197]";
+connectAttr "Wrist_FK_L_rotateX1.o" "reggie_rigRN.phl[2198]";
+connectAttr "Wrist_FK_L_rotateY1.o" "reggie_rigRN.phl[2199]";
+connectAttr "Wrist_FK_L_rotateZ1.o" "reggie_rigRN.phl[2200]";
+connectAttr "Wrist_FK_L_visibility1.o" "reggie_rigRN.phl[2201]";
+connectAttr "UpperArm_FK_Offset_R_translateX.o" "reggie_rigRN.phl[2202]";
+connectAttr "UpperArm_FK_Offset_R_translateY.o" "reggie_rigRN.phl[2203]";
+connectAttr "UpperArm_FK_Offset_R_translateZ.o" "reggie_rigRN.phl[2204]";
+connectAttr "UpperArm_FK_Offset_R_rotateX.o" "reggie_rigRN.phl[2205]";
+connectAttr "UpperArm_FK_Offset_R_rotateY.o" "reggie_rigRN.phl[2206]";
+connectAttr "UpperArm_FK_Offset_R_rotateZ.o" "reggie_rigRN.phl[2207]";
+connectAttr "UpperArm_FK_Offset_R_scaleX.o" "reggie_rigRN.phl[2208]";
+connectAttr "UpperArm_FK_Offset_R_scaleZ.o" "reggie_rigRN.phl[2209]";
+connectAttr "UpperArm_FK_Offset_R_scaleY.o" "reggie_rigRN.phl[2210]";
+connectAttr "UpperArm_FK_Offset_R_visibility.o" "reggie_rigRN.phl[2211]";
+connectAttr "UpperArm_FK_R_rotateX.o" "reggie_rigRN.phl[2212]";
+connectAttr "UpperArm_FK_R_rotateY.o" "reggie_rigRN.phl[2213]";
+connectAttr "UpperArm_FK_R_rotateZ.o" "reggie_rigRN.phl[2214]";
+connectAttr "UpperArm_FK_R_visibility.o" "reggie_rigRN.phl[2215]";
+connectAttr "RootCntrlOffset_translateX.o" "reggie_rigRN.phl[2216]";
+connectAttr "RootCntrlOffset_translateY.o" "reggie_rigRN.phl[2217]";
+connectAttr "RootCntrlOffset_translateZ.o" "reggie_rigRN.phl[2218]";
+connectAttr "RootCntrlOffset_rotateX.o" "reggie_rigRN.phl[2219]";
+connectAttr "RootCntrlOffset_rotateY.o" "reggie_rigRN.phl[2220]";
+connectAttr "RootCntrlOffset_rotateZ.o" "reggie_rigRN.phl[2221]";
+connectAttr "RootCntrlOffset_visibility.o" "reggie_rigRN.phl[2222]";
+connectAttr "RootCntrlOffset_scaleX.o" "reggie_rigRN.phl[2223]";
+connectAttr "RootCntrlOffset_scaleY.o" "reggie_rigRN.phl[2224]";
+connectAttr "RootCntrlOffset_scaleZ.o" "reggie_rigRN.phl[2225]";
+connectAttr "RootCntrl_translateX.o" "reggie_rigRN.phl[2226]";
+connectAttr "RootCntrl_translateY.o" "reggie_rigRN.phl[2227]";
+connectAttr "RootCntrl_translateZ.o" "reggie_rigRN.phl[2228]";
+connectAttr "RootCntrl_visibility.o" "reggie_rigRN.phl[2229]";
+connectAttr "RootCntrl_rotateX.o" "reggie_rigRN.phl[2230]";
+connectAttr "RootCntrl_rotateY.o" "reggie_rigRN.phl[2231]";
+connectAttr "RootCntrl_rotateZ.o" "reggie_rigRN.phl[2232]";
+connectAttr "Torso_GRP_rotateX.o" "reggie_rigRN.phl[2233]";
+connectAttr "Torso_GRP_rotateY.o" "reggie_rigRN.phl[2234]";
+connectAttr "Torso_GRP_rotateZ.o" "reggie_rigRN.phl[2235]";
+connectAttr "Torso_GRP_translateX.o" "reggie_rigRN.phl[2236]";
+connectAttr "Torso_GRP_translateY.o" "reggie_rigRN.phl[2237]";
+connectAttr "Torso_GRP_translateZ.o" "reggie_rigRN.phl[2238]";
+connectAttr "Torso_GRP_visibility.o" "reggie_rigRN.phl[2239]";
+connectAttr "Torso_GRP_scaleX.o" "reggie_rigRN.phl[2240]";
+connectAttr "Torso_GRP_scaleY.o" "reggie_rigRN.phl[2241]";
+connectAttr "Torso_GRP_scaleZ.o" "reggie_rigRN.phl[2242]";
+connectAttr "HipCntrl_rotateX.o" "reggie_rigRN.phl[2243]";
+connectAttr "HipCntrl_rotateY.o" "reggie_rigRN.phl[2244]";
+connectAttr "HipCntrl_rotateZ.o" "reggie_rigRN.phl[2245]";
+connectAttr "HipCntrl_visibility.o" "reggie_rigRN.phl[2246]";
+connectAttr "ChestCntrl_Stretchy.o" "reggie_rigRN.phl[2247]";
+connectAttr "ChestCntrl_translateX.o" "reggie_rigRN.phl[2248]";
+connectAttr "ChestCntrl_translateY.o" "reggie_rigRN.phl[2249]";
+connectAttr "ChestCntrl_translateZ.o" "reggie_rigRN.phl[2250]";
+connectAttr "ChestCntrl_rotateX.o" "reggie_rigRN.phl[2251]";
+connectAttr "ChestCntrl_rotateY.o" "reggie_rigRN.phl[2252]";
+connectAttr "ChestCntrl_rotateZ.o" "reggie_rigRN.phl[2253]";
+connectAttr "ChestCntrl_scaleX.o" "reggie_rigRN.phl[2254]";
+connectAttr "ChestCntrl_scaleY.o" "reggie_rigRN.phl[2255]";
+connectAttr "ChestCntrl_scaleZ.o" "reggie_rigRN.phl[2256]";
+connectAttr "ChestCntrl_visibility.o" "reggie_rigRN.phl[2257]";
+connectAttr "ShoulderCntrl_R_translateX.o" "reggie_rigRN.phl[2258]";
+connectAttr "ShoulderCntrl_R_translateY.o" "reggie_rigRN.phl[2259]";
+connectAttr "ShoulderCntrl_R_translateZ.o" "reggie_rigRN.phl[2260]";
+connectAttr "ShoulderCntrl_R_visibility.o" "reggie_rigRN.phl[2261]";
+connectAttr "Spine_02_FK_visibility.o" "reggie_rigRN.phl[2262]";
+connectAttr "Spine_02_FK_rotateX.o" "reggie_rigRN.phl[2263]";
+connectAttr "Spine_02_FK_rotateY.o" "reggie_rigRN.phl[2264]";
+connectAttr "Spine_02_FK_rotateZ.o" "reggie_rigRN.phl[2265]";
+connectAttr "Head_Neck_GRP_translateX.o" "reggie_rigRN.phl[2266]";
+connectAttr "Head_Neck_GRP_translateY.o" "reggie_rigRN.phl[2267]";
+connectAttr "Head_Neck_GRP_translateZ.o" "reggie_rigRN.phl[2268]";
+connectAttr "Head_Neck_GRP_rotateX.o" "reggie_rigRN.phl[2269]";
+connectAttr "Head_Neck_GRP_rotateY.o" "reggie_rigRN.phl[2270]";
+connectAttr "Head_Neck_GRP_rotateZ.o" "reggie_rigRN.phl[2271]";
+connectAttr "Head_Neck_GRP_visibility.o" "reggie_rigRN.phl[2272]";
+connectAttr "Head_Neck_GRP_scaleX.o" "reggie_rigRN.phl[2273]";
+connectAttr "Head_Neck_GRP_scaleY.o" "reggie_rigRN.phl[2274]";
+connectAttr "Head_Neck_GRP_scaleZ.o" "reggie_rigRN.phl[2275]";
+connectAttr "pairBlend1.otx" "reggie_rigRN.phl[2276]";
+connectAttr "pairBlend1.oty" "reggie_rigRN.phl[2277]";
+connectAttr "pairBlend1.otz" "reggie_rigRN.phl[2278]";
+connectAttr "pairBlend1.orx" "reggie_rigRN.phl[2279]";
+connectAttr "pairBlend1.ory" "reggie_rigRN.phl[2280]";
+connectAttr "pairBlend1.orz" "reggie_rigRN.phl[2281]";
+connectAttr "NeckCntrlFk_Offset_blendParent1.o" "reggie_rigRN.phl[2283]";
+connectAttr "NeckCntrlFk_Offset_visibility.o" "reggie_rigRN.phl[2284]";
+connectAttr "NeckCntrlFk_Offset_scaleX.o" "reggie_rigRN.phl[2285]";
+connectAttr "NeckCntrlFk_Offset_scaleY.o" "reggie_rigRN.phl[2286]";
+connectAttr "NeckCntrlFk_Offset_scaleZ.o" "reggie_rigRN.phl[2287]";
+connectAttr "pairBlend3.otx" "reggie_rigRN.phl[2294]";
+connectAttr "pairBlend3.oty" "reggie_rigRN.phl[2295]";
+connectAttr "pairBlend3.otz" "reggie_rigRN.phl[2296]";
+connectAttr "pairBlend2.orx" "reggie_rigRN.phl[2297]";
+connectAttr "pairBlend2.ory" "reggie_rigRN.phl[2298]";
+connectAttr "pairBlend2.orz" "reggie_rigRN.phl[2299]";
+connectAttr "Head_GRP_blendOrient1.o" "reggie_rigRN.phl[2301]";
+connectAttr "Head_GRP_blendPoint1.o" "reggie_rigRN.phl[2303]";
+connectAttr "Head_GRP_visibility.o" "reggie_rigRN.phl[2304]";
+connectAttr "Head_GRP_scaleX.o" "reggie_rigRN.phl[2305]";
+connectAttr "Head_GRP_scaleY.o" "reggie_rigRN.phl[2306]";
+connectAttr "Head_GRP_scaleZ.o" "reggie_rigRN.phl[2307]";
+connectAttr "HeadCntrl_RotationSpace.o" "reggie_rigRN.phl[2308]";
+connectAttr "HeadCntrl_TranslationSpace.o" "reggie_rigRN.phl[2309]";
+connectAttr "HeadCntrl_Stretchy.o" "reggie_rigRN.phl[2310]";
+connectAttr "HeadCntrl_Gulp.o" "reggie_rigRN.phl[2311]";
+connectAttr "HeadCntrl_EyeTracker.o" "reggie_rigRN.phl[2312]";
+connectAttr "HeadCntrl_rotateX.o" "reggie_rigRN.phl[2313]";
+connectAttr "HeadCntrl_rotateY.o" "reggie_rigRN.phl[2314]";
+connectAttr "HeadCntrl_rotateZ.o" "reggie_rigRN.phl[2315]";
+connectAttr "HeadCntrl_translateX.o" "reggie_rigRN.phl[2316]";
+connectAttr "HeadCntrl_translateY.o" "reggie_rigRN.phl[2317]";
+connectAttr "HeadCntrl_translateZ.o" "reggie_rigRN.phl[2318]";
+connectAttr "HeadCntrl_visibility.o" "reggie_rigRN.phl[2319]";
+connectAttr "EyebrowCntrl_L_translateY.o" "reggie_rigRN.phl[2320]";
+connectAttr "EyebrowCntrl_L_translateX.o" "reggie_rigRN.phl[2321]";
+connectAttr "EyebrowCntrl_L_translateZ.o" "reggie_rigRN.phl[2322]";
+connectAttr "EyebrowCntrl_L_visibility.o" "reggie_rigRN.phl[2323]";
+connectAttr "InnerBrowCntrl_L_translateY.o" "reggie_rigRN.phl[2324]";
+connectAttr "InnerBrowCntrl_L_visibility.o" "reggie_rigRN.phl[2325]";
+connectAttr "OuterBrowCntrl_L_translateY.o" "reggie_rigRN.phl[2326]";
+connectAttr "OuterBrowCntrl_L_visibility.o" "reggie_rigRN.phl[2327]";
+connectAttr "EyebrowCntrl_R_translateY.o" "reggie_rigRN.phl[2328]";
+connectAttr "EyebrowCntrl_R_translateX.o" "reggie_rigRN.phl[2329]";
+connectAttr "EyebrowCntrl_R_translateZ.o" "reggie_rigRN.phl[2330]";
+connectAttr "EyebrowCntrl_R_visibility.o" "reggie_rigRN.phl[2331]";
+connectAttr "InnerBrowCntrl_R_translateY.o" "reggie_rigRN.phl[2332]";
+connectAttr "InnerBrowCntrl_R_visibility.o" "reggie_rigRN.phl[2333]";
+connectAttr "OuterBrowCntrl_R_translateY.o" "reggie_rigRN.phl[2334]";
+connectAttr "OuterBrowCntrl_R_visibility.o" "reggie_rigRN.phl[2335]";
+connectAttr "TopLipCntrl_L_translateY.o" "reggie_rigRN.phl[2336]";
+connectAttr "TopLipCntrl_L_translateX.o" "reggie_rigRN.phl[2337]";
+connectAttr "TopLipCntrl_L_visibility.o" "reggie_rigRN.phl[2338]";
+connectAttr "TopLipCntrl_R_translateY.o" "reggie_rigRN.phl[2339]";
+connectAttr "TopLipCntrl_R_translateX.o" "reggie_rigRN.phl[2340]";
+connectAttr "TopLipCntrl_R_visibility.o" "reggie_rigRN.phl[2341]";
+connectAttr "LipCornerCntrl_L_translateY.o" "reggie_rigRN.phl[2342]";
+connectAttr "LipCornerCntrl_L_visibility.o" "reggie_rigRN.phl[2343]";
+connectAttr "LipCornerCntrl_R_translateY.o" "reggie_rigRN.phl[2344]";
+connectAttr "LipCornerCntrl_R_visibility.o" "reggie_rigRN.phl[2345]";
+connectAttr "LowerLid_R_translateY.o" "reggie_rigRN.phl[2346]";
+connectAttr "LowerLid_R_visibility.o" "reggie_rigRN.phl[2347]";
+connectAttr "LowerLid_L_translateY.o" "reggie_rigRN.phl[2348]";
+connectAttr "LowerLid_L_visibility.o" "reggie_rigRN.phl[2349]";
+connectAttr "EyeSuite_translateX.o" "reggie_rigRN.phl[2356]";
+connectAttr "EyeSuite_translateY.o" "reggie_rigRN.phl[2357]";
+connectAttr "EyeSuite_translateZ.o" "reggie_rigRN.phl[2358]";
 connectAttr "reggie_rigRNfosterParent1.msg" "reggie_rigRN.fp";
+connectAttr "sharedReferenceNode.sr" "reggie_rigRN.sr";
 connectAttr ":defaultRenderGlobals.msg" "redSoloCup:mtorPartition.rgcnx";
 connectAttr "redSoloCup:PxrDisney1SG.msg" "redSoloCup:materialInfo1.sg";
 connectAttr "redSoloCup:PxrDisney2SG.msg" "redSoloCup:materialInfo2.sg";
@@ -14433,18 +14782,34 @@ connectAttr "redSoloCup:contour_shader_simple1.msg" "redSoloCup:hyperShadePrimar
 		;
 connectAttr "redSoloCup:file1.msg" "redSoloCup:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
+connectAttr "reggie_rigRN.phl[2282]" "pairBlend1.w";
+connectAttr "reggie_rigRN.phl[2288]" "pairBlend1.itx2";
+connectAttr "reggie_rigRN.phl[2289]" "pairBlend1.ity2";
+connectAttr "reggie_rigRN.phl[2290]" "pairBlend1.itz2";
+connectAttr "reggie_rigRN.phl[2291]" "pairBlend1.irx2";
+connectAttr "reggie_rigRN.phl[2292]" "pairBlend1.iry2";
+connectAttr "reggie_rigRN.phl[2293]" "pairBlend1.irz2";
 connectAttr "pairBlend1_inRotateX1.o" "pairBlend1.irx1";
 connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
 connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
 connectAttr "pairBlend1_inTranslateX1.o" "pairBlend1.itx1";
 connectAttr "pairBlend1_inTranslateY1.o" "pairBlend1.ity1";
 connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
+connectAttr "reggie_rigRN.phl[2300]" "pairBlend2.w";
+connectAttr "reggie_rigRN.phl[2350]" "pairBlend2.irx2";
+connectAttr "reggie_rigRN.phl[2351]" "pairBlend2.iry2";
+connectAttr "reggie_rigRN.phl[2352]" "pairBlend2.irz2";
 connectAttr "pairBlend2_inRotateX1.o" "pairBlend2.irx1";
 connectAttr "pairBlend2_inRotateY1.o" "pairBlend2.iry1";
 connectAttr "pairBlend2_inRotateZ1.o" "pairBlend2.irz1";
+connectAttr "reggie_rigRN.phl[2302]" "pairBlend3.w";
+connectAttr "reggie_rigRN.phl[2353]" "pairBlend3.itx2";
+connectAttr "reggie_rigRN.phl[2354]" "pairBlend3.ity2";
+connectAttr "reggie_rigRN.phl[2355]" "pairBlend3.itz2";
 connectAttr "pairBlend3_inTranslateX1.o" "pairBlend3.itx1";
 connectAttr "pairBlend3_inTranslateY1.o" "pairBlend3.ity1";
 connectAttr "pairBlend3_inTranslateZ1.o" "pairBlend3.itz1";
+connectAttr "sharedReferenceNode.sr" "reggie_rigRN1.sr";
 connectAttr "reggie_rigRN.phl[196]" "pairBlend4.w";
 connectAttr "WristCntrl_IK_R_parentConstraint1.ctx" "pairBlend4.itx2";
 connectAttr "WristCntrl_IK_R_parentConstraint1.cty" "pairBlend4.ity2";
