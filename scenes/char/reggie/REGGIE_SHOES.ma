@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: REGGIE_SHOES.ma
-//Last modified: Tue, Feb 21, 2017 02:46:20 AM
+//Last modified: Tue, Feb 21, 2017 02:48:52 AM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4F181384-FB49-F900-09FC-AAB7AC81E07A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.6093218399633162 9.912222870129165 20.518129515421492 ;
-	setAttr ".r" -type "double3" 333.26164731286082 -5370.5999999941314 -9.1267913830405558e-16 ;
+	setAttr ".t" -type "double3" -0.46331545004971242 10.662391746126085 20.668610191179067 ;
+	setAttr ".r" -type "double3" 333.26164730326832 -5762.9999999951788 -1.2938735480684591e-15 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 3.3306690738754696e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.1620876893858856e-15 -1.1691244099914081e-15 -2.4015304627739593e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -22,7 +22,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 19.14046839765474;
+	setAttr ".coi" 19.686128641333909;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -92,7 +92,8 @@ createNode mesh -n "reggie_shoeShape" -p "reggie_shoe";
 	setAttr ".clst[1].clsn" -type "string" "SculptMaskColorTemp";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".dr" 1;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
 createNode mesh -n "polySurfaceShape1" -p "reggie_shoe";
 	rename -uid "5DB04959-3B4E-3251-3E8C-67AA0DA6E628";
 	setAttr -k off ".v";
@@ -2102,52 +2103,59 @@ createNode polySplit -n "polySplit1";
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
 createNode polyTweak -n "polyTweak1";
-	rename -uid "A8722F00-AB45-9F5B-BCBA-5091B1D548ED";
+	rename -uid "7EF422A6-8344-53B5-7415-C6A196009B7D";
 	setAttr ".uopa" yes;
 	setAttr -s 610 ".tk";
-	setAttr ".tk[299:464]" -type "float3"  0 -0.013163349 0 -1.5825033e-05 -0.055389673
-		 -0.039806545 0 -0.012090114 0 0 -0.013563549 0 0 -0.023166109 0 0 -0.023182213 0
-		 -0.00055767596 -0.026092142 -0.0060175657 0 -0.022560988 0 0.0061957911 -0.043018874
-		 -0.017923594 0 -0.020865528 0 -0.0030785352 -0.023927592 -0.011992395 0 -0.017599389
-		 0 0 -0.014470996 0 0 -0.014658375 0 0 -0.021595521 0 0 -0.023077235 0 0 -0.023185041
-		 0 0 -0.021685161 0 0 -0.023597904 0 0 -0.023644254 0 0 -0.023185257 0 0 -0.023629868
-		 0 0 -0.023185257 0 0 -0.023622479 0 0 -0.018353317 0 0 -0.01837364 0 0 -0.014651623
-		 0 0 -0.014633562 0 0 -0.012148164 0 0 -0.013571013 0 0 -0.013439703 0 0 -0.011314628
+	setAttr ".tk[299:464]" -type "float3"  0 -0.013163349 0 0 -0.011654854 0 0
+		 -0.012090114 0 0 -0.013563549 0 0 -0.023166109 0 0 -0.023182213 0 0 -0.021432564
+		 0 0 -0.022560988 0 0 -0.01932415 0 0 -0.020865528 0 -0.0030785352 -0.023927592 -0.011992395
+		 0 -0.017599389 0 0 -0.014470996 0 0 -0.014658375 0 0 -0.021595521 0 0 -0.023077235
+		 0 0 -0.023185041 0 0 -0.021685161 0 0 -0.023597904 0 0 -0.023644254 0 0 -0.023185257
+		 0 0 -0.023629868 0 0 -0.023185257 0 0 -0.023622479 0 0 -0.018353317 0 0 -0.01837364
+		 0 0 -0.014651623 0 0 -0.014633562 0 0 -0.012148164 0 0 -0.013571013 0 0 -0.013439703
+		 0 0 -0.011314628 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.010704776 0 -0.0025129616 -0.015113698 -0.0074571967
-		 0 -0.011959479 0 0 -0.011659804 0 0 0 0 -0.0052869618 0.014344513 0.0062339157 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.010704776 0 0 -0.010476219 0
+		 0 -0.011959479 0 0 -0.011659804 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr ".tk[600:609]" 0 -0.010287439 0 -0.0072217882 -0.023389764 -0.021430641
-		 0 0 0 0 0 0 0 -0.011669919 0 0 -0.011678258 0 0 0 0 0 0 0 0 0 0 -0.0069169402 0.01876691
-		 0.0081558377;
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr ".tk[600:609]" 0 -0.010287439 0 0 -0.010062404 0 0 0 0 0 0 0 0 -0.011669919
+		 0 0 -0.011678258 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode deleteComponent -n "deleteComponent1";
-	rename -uid "FF2033F7-A345-570B-7915-7BB71808BA7A";
-	setAttr ".dc" -type "componentList" 1 "f[579]";
+	rename -uid "9D16780C-9E46-9B0B-03CA-AC9D7C23F516";
+	setAttr ".dc" -type "componentList" 1 "e[817]";
 createNode deleteComponent -n "deleteComponent2";
-	rename -uid "82DEC20C-B34C-9785-C4CC-7D9C4EC383B9";
-	setAttr ".dc" -type "componentList" 1 "f[333]";
+	rename -uid "9E2D1F75-C747-C9EB-3AB4-EF8F9DA1B39D";
+	setAttr ".dc" -type "componentList" 1 "e[841]";
 createNode deleteComponent -n "deleteComponent3";
-	rename -uid "F05AD315-4843-C870-75B7-BF9FA069626D";
-	setAttr ".dc" -type "componentList" 3 "f[46]" "f[99]" "f[340]";
+	rename -uid "0CEF0C74-7F4F-40FE-2F7C-4C8EC46F992F";
+	setAttr ".dc" -type "componentList" 1 "f[46]";
+createNode deleteComponent -n "deleteComponent4";
+	rename -uid "3AE26CE2-D946-B55D-F7FD-65A67E7BF1BF";
+	setAttr ".dc" -type "componentList" 1 "f[331]";
+createNode deleteComponent -n "deleteComponent5";
+	rename -uid "3FAD3AC2-C946-B369-1C6E-CC8361CBEE8D";
+	setAttr ".dc" -type "componentList" 1 "f[576]";
 createNode polyAppend -n "polyAppend1";
-	rename -uid "CB99C51D-254F-5D36-A1AB-F8BC221C7F82";
+	rename -uid "886CA2F5-4E4B-B105-FCE6-8897FD36FF56";
 	setAttr -s 3 ".d[0:2]"  -2147483191 -2147482949 -2147482948;
 	setAttr ".tx" 1;
 createNode polyAppend -n "polyAppend2";
-	rename -uid "35F7D152-3642-315A-B7AF-B19C7B919592";
-	setAttr -s 3 ".d[0:2]"  -2147483542 -2147482431 -2147482946;
+	rename -uid "AD98887D-DD45-3A3F-9650-24A381C98A51";
+	setAttr -s 3 ".d[0:2]"  -2147483542 -2147482434 -2147482946;
 	setAttr ".tx" 1;
 createNode polyAppend -n "polyAppend3";
-	rename -uid "9BFBC662-9142-FE47-D433-4BBF5CC6ED19";
-	setAttr -s 4 ".d[0:3]"  -2147483192 -2147482430 -2147482944 -2147482945;
+	rename -uid "BFD1DBDD-F445-3001-85E0-4C947417234B";
+	setAttr -s 4 ".d[0:3]"  -2147483192 -2147482433 -2147482944 -2147482945;
 	setAttr ".tx" 1;
+createNode deleteComponent -n "deleteComponent6";
+	rename -uid "A4F2A07D-0E45-6E92-53B6-E1A58B5F1AC6";
+	setAttr ".dc" -type "componentList" 65 "vtx[4:9]" "vtx[12]" "vtx[14]" "vtx[16]" "vtx[18:21]" "vtx[23]" "vtx[28:30]" "vtx[32:34]" "vtx[39]" "vtx[46]" "vtx[48]" "vtx[50]" "vtx[52:53]" "vtx[56]" "vtx[64:65]" "vtx[67]" "vtx[77]" "vtx[79]" "vtx[81]" "vtx[84]" "vtx[87]" "vtx[89]" "vtx[91]" "vtx[95]" "vtx[97]" "vtx[103]" "vtx[105]" "vtx[107:108]" "vtx[121]" "vtx[123:124]" "vtx[143:145]" "vtx[170]" "vtx[172]" "vtx[174]" "vtx[180]" "vtx[204:211]" "vtx[237:244]" "vtx[261:262]" "vtx[286]" "vtx[303:304]" "vtx[314]" "vtx[317]" "vtx[321:322]" "vtx[353]" "vtx[369:371]" "vtx[386]" "vtx[388]" "vtx[394]" "vtx[396]" "vtx[398]" "vtx[402]" "vtx[404]" "vtx[410]" "vtx[412]" "vtx[414:415]" "vtx[428:429]" "vtx[431:432]" "vtx[434:435]" "vtx[446:447]" "vtx[458:459]" "vtx[464]" "vtx[487]" "vtx[489]" "vtx[491]" "vtx[524:530]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2176,7 +2184,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyAppend3.out" "reggie_shoeShape.i";
+connectAttr "deleteComponent6.og" "reggie_shoeShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "reggie_shoes:reggie_shoes_blinnSG.message" ":defaultLightSet.message";
@@ -2196,9 +2204,12 @@ connectAttr "polySplit1.out" "polyTweak1.ip";
 connectAttr "polyTweak1.out" "deleteComponent1.ig";
 connectAttr "deleteComponent1.og" "deleteComponent2.ig";
 connectAttr "deleteComponent2.og" "deleteComponent3.ig";
-connectAttr "deleteComponent3.og" "polyAppend1.ip";
+connectAttr "deleteComponent3.og" "deleteComponent4.ig";
+connectAttr "deleteComponent4.og" "deleteComponent5.ig";
+connectAttr "deleteComponent5.og" "polyAppend1.ip";
 connectAttr "polyAppend1.out" "polyAppend2.ip";
 connectAttr "polyAppend2.out" "polyAppend3.ip";
+connectAttr "polyAppend3.out" "deleteComponent6.ig";
 connectAttr "reggie_shoes:reggie_shoes_blinnSG.pa" ":renderPartition.st" -na;
 connectAttr "reggie_shoes:reggie_shoes_blinn.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
