@@ -1,21 +1,21 @@
-//Maya ASCII 2016 scene
+//Maya ASCII 2017 scene
 //Name: church_cam_new.ma
-//Last modified: Tue, Feb 14, 2017 10:36:13 PM
+//Last modified: Mon, Feb 20, 2017 06:18:08 PM
 //Codeset: UTF-8
-requires maya "2016";
+requires maya "2017";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2016";
-fileInfo "version" "2016";
-fileInfo "cutIdentifier" "201603180400-990260";
-fileInfo "osv" "Mac OS X 10.9.6";
+fileInfo "product" "Maya 2017";
+fileInfo "version" "2017";
+fileInfo "cutIdentifier" "201606150345-997974";
+fileInfo "osv" "Mac OS X 10.11.6";
 fileInfo "license" "student";
 createNode transform -n "new_church_camera1";
-	rename -uid "F57C095E-4DCE-3ACA-031D-ACAA4B59EB26";
+	rename -uid "7EA16D5B-4FF7-CA01-190D-2CB0BE89686E";
 createNode camera -n "new_church_cameraShape1" -p "new_church_camera1";
-	rename -uid "3825E587-4415-1FF7-F19C-D5AF97B7D47C";
+	rename -uid "F4CC7254-4349-BAEE-1C1D-C3A7ECEBBF44";
 	setAttr -k off ".v";
 	setAttr ".ff" 0;
 	setAttr ".coi" 9.8896930896907591;
@@ -24,153 +24,163 @@ createNode camera -n "new_church_cameraShape1" -p "new_church_camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".tp" -type "double3" -2189.364 38.029908811334799 -511.32939740221502 ;
-createNode partition -n "mtorPartition";
-	rename -uid "91568E84-C747-D6DE-9B58-039DE26C7DFE";
-	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
-	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
-	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
-	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
-	setAttr ".sr" -type "string" "";
-createNode animCurveTL -n "temp_cam:church_camera:camera1_translateX1";
-	rename -uid "49A1B832-4D2E-47EC-6225-6DB7A2C187B1";
+createNode animCurveTL -n "temp_cam:temp_cam:church_camera:camera1_translateX1";
+	rename -uid "C8612DC2-4009-665F-C27C-36BBF2187BA1";
 	setAttr ".tan" 1;
-	setAttr -s 5 ".ktv[0:4]"  1 -2241.3760052751181 26 -2246.5801987853192
-		 92 -2331.7115625490183 136 -2393.2105570751542 192 -2529.8067835280381;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 -2241.487975081573 101 -2247.0219245263779
+		 163 -2331.7115625490183 207 -2393.2105570751542 263 -2529.8067835280381;
+	setAttr -s 5 ".kit[2:4]"  18 1 1;
+	setAttr -s 5 ".kot[2:4]"  18 1 1;
+	setAttr -s 5 ".kix[0:4]"  0.99374991655349731 0.092252790927886963 
+		0.030198326334357262 0.030868316069245338 0.014228617772459984;
+	setAttr -s 5 ".kiy[0:4]"  -0.11162956804037094 -0.99573564529418945 
+		-0.99954390525817871 -0.99952346086502075 -0.99989873170852661;
+	setAttr -s 5 ".kox[0:4]"  0.99374991655349731 0.092252820730209351 
+		0.030198326334357262 0.03086831234395504 0.014228599146008492;
+	setAttr -s 5 ".koy[0:4]"  -0.11162953823804855 -0.99573570489883423 
+		-0.99954396486282349 -0.99952346086502075 -0.99989873170852661;
+createNode animCurveTL -n "temp_cam:temp_cam:church_camera:camera1_translateZ1";
+	rename -uid "DF8B082C-49A4-1EBF-BC2A-9E8443C32FFD";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 -405.28704556488179 101 -400.80982050658179
+		 163 -338.19493367268512 207 -285.79818720070375 263 -175.65404314046998;
 	setAttr -s 5 ".kit[0:4]"  18 1 18 1 1;
 	setAttr -s 5 ".kot[0:4]"  18 1 18 1 1;
-	setAttr -s 5 ".kix[1:4]"  0.83665132522583008 2.75 3.5062136650085449 
-		0.54189091920852661;
-	setAttr -s 5 ".kiy[1:4]"  -8.78570556640625 -87.978218078613281 -113.53203582763672 
-		-38.080722808837891;
-	setAttr -s 5 ".kox[1:4]"  2.2087607383728027 1.8333332538604736 3.6772475242614746 
-		0.54189050197601318;
-	setAttr -s 5 ".koy[1:4]"  -23.194276809692383 -58.652145385742188 
-		-119.07016754150391 -38.080741882324219;
-createNode animCurveTL -n "temp_cam:church_camera:camera1_translateZ1";
-	rename -uid "78031C35-44A2-B55C-A8FE-16A358A80241";
+	setAttr -s 5 ".kix[1:4]"  0.12167113274335861 0.03837362676858902 
+		0.033257685601711273 0.018758418038487434;
+	setAttr -s 5 ".kiy[1:4]"  0.99257045984268188 0.9992634654045105 
+		0.9994468092918396 0.99982404708862305;
+	setAttr -s 5 ".kox[1:4]"  0.12167108803987503 0.03837362676858902 
+		0.033257685601711273 0.018758438527584076;
+	setAttr -s 5 ".koy[1:4]"  0.99257045984268188 0.99926352500915527 
+		0.9994468092918396 0.99982404708862305;
+createNode animCurveTL -n "temp_cam:temp_cam:church_camera:camera1_translateY1";
+	rename -uid "3DEC4ACE-4F2B-95C2-5E82-DDA639A5169A";
 	setAttr ".tan" 1;
-	setAttr -s 5 ".ktv[0:4]"  1 -405.28704556488179 26 -400.1737430199841
-		 92 -338.19493367268512 136 -285.79818720070375 192 -175.65404314046998;
-	setAttr -s 5 ".kit[0:4]"  18 1 18 1 1;
-	setAttr -s 5 ".kot[0:4]"  18 1 18 1 1;
-	setAttr -s 5 ".kix[1:4]"  0.90255826711654663 2.75 3.3396244049072266 
-		0.71290361881256104;
-	setAttr -s 5 ".kiy[1:4]"  7.3629026412963867 68.625335693359375 100.36106872558594 
-		37.997776031494141;
-	setAttr -s 5 ".kox[1:4]"  2.3827536106109619 1.8333332538604736 3.5025315284729004 
-		0.71290469169616699;
-	setAttr -s 5 ".koy[1:4]"  19.438068389892578 45.750225067138672 105.25669097900391 
-		37.997791290283203;
-createNode animCurveTL -n "temp_cam:church_camera:camera1_translateY1";
-	rename -uid "5D57225E-4813-4C8D-7D74-299E8CC9BC4D";
-	setAttr ".tan" 1;
-	setAttr -s 5 ".ktv[0:4]"  1 23.253239730823665 26 23.844372568475492
-		 92 40.083310922475277 136 53.549113644048866 192 56.387522620834702;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  60 32.739365667161543 97 33.07645082425465
+		 163 43.489253218480876 207 56.955055940054471 263 59.7934649168403;
 	setAttr -s 5 ".kit[0:4]"  18 1 1 1 18;
 	setAttr -s 5 ".kot[0:4]"  18 1 1 1 18;
-	setAttr -s 5 ".kix[1:4]"  1.0410728454589844 3.3419327735900879 1.9876308441162109 
-		2.3333334922790527;
-	setAttr -s 5 ".kiy[1:4]"  0.49792370200157166 35.092800140380859 
-		3.8025221824645996 0;
-	setAttr -s 5 ".kox[1:4]"  2.7484321594238281 2.497267484664917 3.9752609729766846 
-		2.3333334922790527;
-	setAttr -s 5 ".koy[1:4]"  1.3145184516906738 26.223188400268555 7.6050443649291992 
-		0;
-createNode animCurveTA -n "temp_cam:church_camera:camera1_rotateX1";
-	rename -uid "8B2A28CA-453B-341A-5988-8D8CEAD2975F";
+	setAttr -s 5 ".kix[1:4]"  0.85289669036865234 0.094802387058734894 
+		0.46324482560157776 1;
+	setAttr -s 5 ".kiy[1:4]"  0.52207964658737183 0.99549615383148193 
+		0.88623028993606567 0;
+	setAttr -s 5 ".kox[1:4]"  0.85289669036865234 0.094802357256412506 
+		0.4632447361946106 1;
+	setAttr -s 5 ".koy[1:4]"  0.52207982540130615 0.99549609422683716 
+		0.88623028993606567 0;
+createNode animCurveTA -n "temp_cam:temp_cam:church_camera:camera1_rotateX1";
+	rename -uid "47D42AFE-4F7A-6E38-6297-189071CD3A20";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 -2.9834774546595768 26 -2.8553938631425724
-		 136 0 192 0;
+	setAttr -s 4 ".ktv[0:3]"  60 -4.180247070334671 97 -4.0521634788176666
+		 207 0 263 0;
 	setAttr -s 4 ".kit[1:3]"  3 18 18;
 	setAttr -s 4 ".kot[1:3]"  3 18 18;
-createNode animCurveTA -n "temp_cam:church_camera:camera1_rotateY1";
-	rename -uid "82193D24-49D8-A69A-E521-24BD007FB502";
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "temp_cam:temp_cam:church_camera:camera1_rotateY1";
+	rename -uid "240B3E4D-48E2-EF9E-DBF8-33A825DAFB08";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 -30.436470004290609 26 -31.217989454738564
-		 92 -46.965074444654078 136 -50.593709056996239 192 -51.109484024719322;
+	setAttr -s 5 ".ktv[0:4]"  60 -29.605189653176414 97 -30.57315993698041
+		 163 -46.965074444654078 207 -50.593709056996239 263 -51.109484024719322;
+	setAttr -s 5 ".kit[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 1 18 18 18;
+	setAttr -s 5 ".kwl[0:4]" yes yes yes yes yes;
+	setAttr -s 5 ".kix[0:4]"  1.0001876354217529 1.5416665077209473 2.75 
+		1.8333334922790527 2.3333330154418945;
+	setAttr -s 5 ".kiy[0:4]"  -5.0927068514283746e-05 -0.050999574363231659 
+		-0.20965468883514404 -0.021218936890363693 0;
+	setAttr -s 5 ".kox[0:4]"  1.5418621301651001 2.75 1.8333334922790527 
+		2.3333330154418945 2.3333330154418945;
+	setAttr -s 5 ".koy[0:4]"  -7.8510245657525957e-05 -0.090972274541854858 
+		-0.13976980745792389 -0.027005914598703384 0;
+createNode animCurveTA -n "temp_cam:temp_cam:church_camera:camera1_rotateZ1";
+	rename -uid "1A0DC9E4-47BE-A1CA-B1F3-CEA5340E15EF";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  60 -4.5618752663489488 97 -4.3655428152141411
+		 163 -0.99718877329310052 207 1.1431712979878477 263 1.1431712979878477;
 	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
 	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
-	setAttr -s 5 ".kix[1:4]"  1.0173534154891968 2.75 1.8333332538604736 
-		2.3333334922790527;
-	setAttr -s 5 ".kiy[1:4]"  -0.033654872328042984 -0.20290207862854004 
-		-0.021218929439783096 0;
-	setAttr -s 5 ".kox[1:4]"  2.7256815433502197 1.8333332538604736 2.3333334922790527 
-		2.3333334922790527;
-	setAttr -s 5 ".koy[1:4]"  -0.090167805552482605 -0.13526804745197296 
-		-0.027005914598703384 0;
-createNode animCurveTA -n "temp_cam:church_camera:camera1_rotateZ1";
-	rename -uid "1C11AE54-4A87-6757-ACD5-0D958153D55E";
-	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 -4.5618752663489488 26 -4.4914067437864373
-		 92 -0.99718877329310052 136 1.1431712979878477 192 1.1431712979878477;
-	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
-	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
-	setAttr -s 5 ".kix[1:4]"  1.0416557788848877 2.75 1.8333332538604736 
-		2.3333334922790527;
-	setAttr -s 5 ".kiy[1:4]"  0.0011806989787146449 0.059005167335271835 
+	setAttr -s 5 ".kwl[0:4]" yes yes yes yes yes;
+	setAttr -s 5 ".kix[1:4]"  1.0416557788848877 2.75 1.8333334922790527 
+		2.3333330154418945;
+	setAttr -s 5 ".kiy[1:4]"  0.0011806989787146449 0.057687118649482727 
 		0 0;
-	setAttr -s 5 ".kox[1:4]"  2.7499890327453613 1.8333332538604736 2.3333334922790527 
-		2.3333334922790527;
-	setAttr -s 5 ".koy[1:4]"  0.0031170656438916922 0.039336778223514557 
+	setAttr -s 5 ".kox[1:4]"  2.7499890327453613 1.8333334922790527 2.3333330154418945 
+		2.3333330154418945;
+	setAttr -s 5 ".koy[1:4]"  0.0031170656438916922 0.03845808282494545 
 		0 0;
-createNode animCurveTU -n "temp_cam:church_camera:camera1_visibility1";
-	rename -uid "3B3C38AB-4135-0FCE-6105-81B90F499C5C";
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:camera1_visibility1";
+	rename -uid "67D7173E-4B96-526E-66A8-44B81698D0F1";
 	setAttr ".tan" 9;
-	setAttr -s 5 ".ktv[0:4]"  1 1 26 1 92 1 136 1 192 1;
+	setAttr -s 5 ".ktv[0:4]"  60 1 97 1 163 1 207 1 263 1;
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
-createNode animCurveTU -n "temp_cam:church_camera:camera1_scaleX1";
-	rename -uid "7A2B4D9C-400E-5CC2-D76F-1FAD84C9AD62";
+	setAttr -s 5 ".kwl[0:4]" yes yes yes yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:camera1_scaleX1";
+	rename -uid "D483EE30-48F1-C9CC-58D5-338D2C9460D1";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 64.255678656369128 26 64.255678656369128
-		 92 64.255678656369128 136 64.255678656369128 192 64.255678656369128;
+	setAttr -s 5 ".ktv[0:4]"  60 64.255678656369128 97 64.255678656369128
+		 163 64.255678656369128 207 64.255678656369128 263 64.255678656369128;
 	setAttr -s 5 ".kit[1:4]"  3 18 18 18;
 	setAttr -s 5 ".kot[1:4]"  3 18 18 18;
-createNode animCurveTU -n "temp_cam:church_camera:camera1_scaleY1";
-	rename -uid "7AA511CC-4829-090D-64D5-13A308A0AB48";
+	setAttr -s 5 ".kwl[0:4]" yes yes yes yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:camera1_scaleY1";
+	rename -uid "25E51975-4AB4-7E2E-7D52-51A781882015";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 64.255678656369128 26 64.255678656369128
-		 92 64.255678656369128 136 64.255678656369128 192 64.255678656369128;
+	setAttr -s 5 ".ktv[0:4]"  60 64.255678656369128 97 64.255678656369128
+		 163 64.255678656369128 207 64.255678656369128 263 64.255678656369128;
 	setAttr -s 5 ".kit[1:4]"  3 18 18 18;
 	setAttr -s 5 ".kot[1:4]"  3 18 18 18;
-createNode animCurveTU -n "temp_cam:church_camera:camera1_scaleZ1";
-	rename -uid "C789621D-4BFA-7822-FE04-D0857890442B";
+	setAttr -s 5 ".kwl[0:4]" yes yes yes yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:camera1_scaleZ1";
+	rename -uid "F4095AAF-4FBA-D01F-9543-AD98FDDAB70F";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 64.255678656369128 26 64.255678656369128
-		 92 64.255678656369128 136 64.255678656369128 192 64.255678656369128;
+	setAttr -s 5 ".ktv[0:4]"  60 64.255678656369128 97 64.255678656369128
+		 163 64.255678656369128 207 64.255678656369128 263 64.255678656369128;
 	setAttr -s 5 ".kit[1:4]"  3 18 18 18;
 	setAttr -s 5 ".kot[1:4]"  3 18 18 18;
-createNode animCurveTU -n "temp_cam:church_camera:cameraShape1_horizontalFilmAperture1";
-	rename -uid "36B09E1E-4778-7A2A-FB74-90A174A8B263";
+	setAttr -s 5 ".kwl[0:4]" yes yes yes yes yes;
+createNode animCurveTL -n "temp_cam:temp_cam:church_camera:cameraShape1_centerOfInterest1";
+	rename -uid "9843E482-4357-F193-FF91-0D9D5F91B9EE";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 1.41732 432 1.41732;
-createNode animCurveTU -n "temp_cam:church_camera:cameraShape1_verticalFilmAperture1";
-	rename -uid "EC825CFA-4A09-F5BF-4F3E-30B6016E8A3C";
+	setAttr -s 2 ".ktv[0:1]"  97 9.8896930896907591 503 9.8896930896907591;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:cameraShape1_horizontalFilmAperture1";
+	rename -uid "7FB9C241-455D-9084-59D0-FE8AF79C0AA2";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 0.94488 432 0.94488;
-createNode animCurveTU -n "temp_cam:church_camera:cameraShape1_focalLength1";
-	rename -uid "4C838DF9-4C15-B2BC-6129-E9A62D1F59BB";
+	setAttr -s 2 ".ktv[0:1]"  97 1.41732 503 1.41732;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:cameraShape1_verticalFilmAperture1";
+	rename -uid "20944EF2-4626-4660-6DBC-D296EF60885B";
 	setAttr ".tan" 3;
-	setAttr ".ktv[0]"  26 35;
-createNode animCurveTU -n "temp_cam:church_camera:cameraShape1_lensSqueezeRatio1";
-	rename -uid "61E55576-4564-03C5-E8CE-DFA519B08D9B";
+	setAttr -s 2 ".ktv[0:1]"  97 0.94488 503 0.94488;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:cameraShape1_focalLength1";
+	rename -uid "A3EAFDA8-4B37-98B4-950A-F4A1A08D5355";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 1 432 1;
-createNode animCurveTU -n "temp_cam:church_camera:cameraShape1_fStop1";
-	rename -uid "9E2194CA-4243-6066-8C2F-6E8416DD9998";
+	setAttr ".ktv[0]"  97 35;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:cameraShape1_lensSqueezeRatio1";
+	rename -uid "654A16AE-479B-8B0E-90D3-60A0FE83A8B3";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 5.6 432 5.6;
-createNode animCurveTL -n "temp_cam:church_camera:cameraShape1_focusDistance1";
-	rename -uid "A1C1D087-4077-B001-ABA6-889C40275476";
+	setAttr -s 2 ".ktv[0:1]"  97 1 503 1;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
+createNode animCurveTU -n "temp_cam:temp_cam:church_camera:cameraShape1_fStop1";
+	rename -uid "11176532-415E-34BB-7549-D4BA6A9D1734";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 5 432 5;
-createNode animCurveTA -n "temp_cam:church_camera:cameraShape1_shutterAngle1";
-	rename -uid "B583DE8D-41C5-4431-1DE5-0F959D7D8F43";
+	setAttr -s 2 ".ktv[0:1]"  97 5.6 503 5.6;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
+createNode animCurveTL -n "temp_cam:temp_cam:church_camera:cameraShape1_focusDistance1";
+	rename -uid "4B82A000-4DB5-E5F9-C538-BF88C83A322F";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 144 432 144;
-createNode animCurveTL -n "temp_cam:church_camera:cameraShape1_centerOfInterest1";
-	rename -uid "EE580C93-4C0E-2B72-235B-E59F945F3580";
+	setAttr -s 2 ".ktv[0:1]"  97 5 503 5;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
+createNode animCurveTA -n "temp_cam:temp_cam:church_camera:cameraShape1_shutterAngle1";
+	rename -uid "49D106DC-4CE2-FE4A-C0F0-6F8CD6468C15";
 	setAttr ".tan" 3;
-	setAttr -s 2 ".ktv[0:1]"  26 9.8896930896907591 432 9.8896930896907591;
+	setAttr -s 2 ".ktv[0:1]"  97 144 503 144;
+	setAttr -s 2 ".kwl[0:1]" yes yes;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -191,7 +201,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 67 ".st";
+	setAttr -s 93 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -204,7 +214,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 48 ".s";
+	setAttr -s 73 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -216,21 +226,20 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 459 ".u";
+	setAttr -s 915 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 9 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 23 ".tx";
+	setAttr -s 49 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 5 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -239,7 +248,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 113 ".gn";
+	setAttr -s 224 ".gn";
 select -ne :initialParticleSE;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -254,8 +263,6 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
-	setAttr ".ren" -type "string" "renderManRIS";
-	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
 	setAttr ".an" yes;
 	setAttr ".ef" 275;
@@ -313,36 +320,41 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "temp_cam:church_camera:camera1_translateX1.o" "new_church_camera1.tx"
+	setAttr -s 6 ".sol";
+connectAttr "temp_cam:temp_cam:church_camera:camera1_translateX1.o" "new_church_camera1.tx"
 		;
-connectAttr "temp_cam:church_camera:camera1_translateZ1.o" "new_church_camera1.tz"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_translateZ1.o" "new_church_camera1.tz"
 		;
-connectAttr "temp_cam:church_camera:camera1_translateY1.o" "new_church_camera1.ty"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_translateY1.o" "new_church_camera1.ty"
 		;
-connectAttr "temp_cam:church_camera:camera1_rotateX1.o" "new_church_camera1.rx";
-connectAttr "temp_cam:church_camera:camera1_rotateY1.o" "new_church_camera1.ry";
-connectAttr "temp_cam:church_camera:camera1_rotateZ1.o" "new_church_camera1.rz";
-connectAttr "temp_cam:church_camera:camera1_visibility1.o" "new_church_camera1.v"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_rotateX1.o" "new_church_camera1.rx"
 		;
-connectAttr "temp_cam:church_camera:camera1_scaleX1.o" "new_church_camera1.sx";
-connectAttr "temp_cam:church_camera:camera1_scaleY1.o" "new_church_camera1.sy";
-connectAttr "temp_cam:church_camera:camera1_scaleZ1.o" "new_church_camera1.sz";
-connectAttr "temp_cam:church_camera:cameraShape1_horizontalFilmAperture1.o" "new_church_cameraShape1.hfa"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_rotateY1.o" "new_church_camera1.ry"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_verticalFilmAperture1.o" "new_church_cameraShape1.vfa"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_rotateZ1.o" "new_church_camera1.rz"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_focalLength1.o" "new_church_cameraShape1.fl"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_visibility1.o" "new_church_camera1.v"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_lensSqueezeRatio1.o" "new_church_cameraShape1.lsr"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_scaleX1.o" "new_church_camera1.sx"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_fStop1.o" "new_church_cameraShape1.fs"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_scaleY1.o" "new_church_camera1.sy"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_focusDistance1.o" "new_church_cameraShape1.fd"
+connectAttr "temp_cam:temp_cam:church_camera:camera1_scaleZ1.o" "new_church_camera1.sz"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_shutterAngle1.o" "new_church_cameraShape1.sa"
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_centerOfInterest1.o" "new_church_cameraShape1.coi"
 		;
-connectAttr "temp_cam:church_camera:cameraShape1_centerOfInterest1.o" "new_church_cameraShape1.coi"
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_horizontalFilmAperture1.o" "new_church_cameraShape1.hfa"
 		;
-connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_verticalFilmAperture1.o" "new_church_cameraShape1.vfa"
+		;
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_focalLength1.o" "new_church_cameraShape1.fl"
+		;
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_lensSqueezeRatio1.o" "new_church_cameraShape1.lsr"
+		;
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_fStop1.o" "new_church_cameraShape1.fs"
+		;
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_focusDistance1.o" "new_church_cameraShape1.fd"
+		;
+connectAttr "temp_cam:temp_cam:church_camera:cameraShape1_shutterAngle1.o" "new_church_cameraShape1.sa"
+		;
 // End of church_cam_new.ma
