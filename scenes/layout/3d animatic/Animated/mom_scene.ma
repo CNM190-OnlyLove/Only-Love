@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: mom_scene.ma
-//Last modified: Wed, Feb 22, 2017 01:48:13 PM
+//Last modified: Wed, Feb 22, 2017 09:26:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "mom1" -dr 1 -rfn "momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -rdi 1 -ns "baby" -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
@@ -9,6 +9,8 @@ file -rdi 1 -ns "wine" -rfn "wineRN" -op "v=0;" -typ "mayaAscii" "/Users/veronic
 file -rdi 1 -ns "chair" -rfn "chairRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/chair/chair.ma";
 file -rdi 1 -ns "table1" -rfn "tableRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/table/table.ma";
 file -rdi 1 -ns "mom2" -rfn "momRN1" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
+file -rdi 1 -ns "mom1" -dr 1 -rfn "mom_scene:momRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -r -ns "mom1" -dr 1 -rfn "momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -r -ns "baby" -dr 1 -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
 file -r -ns "bible2" -dr 1 -rfn "bibleRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/bible/bible.ma";
@@ -16,6 +18,7 @@ file -r -ns "wine" -dr 1 -rfn "wineRN" -op "v=0;" -typ "mayaAscii" "/Users/veron
 file -r -ns "chair" -dr 1 -rfn "chairRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/chair/chair.ma";
 file -r -ns "table1" -dr 1 -rfn "tableRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/table/table.ma";
 file -r -ns "mom2" -dr 1 -rfn "momRN1" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
+file -r -ns "mom1" -dr 1 -rfn "mom_scene:momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 requires maya "2017";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -nodeType "mia_material_x" -nodeType "contour_store_function"
@@ -35,8 +38,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "17733B9D-464D-8275-C5F8-31998A43294B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.2235216758989456 5.225536179436272 46.452379471025885 ;
-	setAttr ".r" -type "double3" -5.1383529728421582 -6118.9999999947286 1.1183340829014126e-016 ;
+	setAttr ".t" -type "double3" -9.2277789905613297 1.7130947062381652 85.943689033390015 ;
+	setAttr ".r" -type "double3" -0.93835297282542485 -6127.7999999948106 0 ;
 	setAttr ".rp" -type "double3" -6.6613381477509392e-016 -8.8817841970012523e-016 
 		-3.5527136788005009e-015 ;
 	setAttr ".rpt" -type "double3" 3.0423021090415793e-016 -2.6571173952804654e-015 
@@ -46,11 +49,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 44.245894269601436;
+	setAttr ".coi" 82.029357838203723;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 2.2823387093899146 3.2538459920124971 2.6943297019604824 ;
+	setAttr ".tp" -type "double3" 0.83281881193123464 1.7229729034850605 8.2845450336160145 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr -s 30 ".b";
 createNode transform -s -n "top";
@@ -1969,22 +1972,33 @@ createNode ambientLight -n "ambientLightShape1" -p "ambientLight1";
 	setAttr -k off ".v";
 	setAttr ".in" 0.20000000298023224;
 	setAttr ".urs" no;
-createNode fosterParent -n "babyRNfosterParent1";
-	rename -uid "D388D95C-42E4-086E-6C0C-D18D8E1CCE4D";
-createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
-	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
-createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
-	rename -uid "DE09F5E1-4E65-C1D9-9C53-D5AD0315365A";
+createNode transform -n "mom_scene:new_camera_test";
+	rename -uid "DA7F978D-41E2-55CC-A4BA-46ACC31BF2EF";
+createNode camera -n "mom_scene:new_camera_testShape" -p "mom_scene:new_camera_test";
+	rename -uid "F2A4A093-4C2D-1A87-4064-AB9D0439B40B";
 	setAttr -k off ".v";
-	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+	setAttr ".coi" 97.220912340654223;
+	setAttr ".imn" -type "string" "persp1";
+	setAttr ".den" -type "string" "persp1_depth";
+	setAttr ".man" -type "string" "persp1_mask";
+	setAttr ".tp" -type "double3" -2.8316990712966876 8.972867790999544 3.2304612550660941 ;
+	setAttr ".hc" -type "string" "viewSet -p %camera";
+createNode fosterParent -n "babyRNfosterParent1";
+	rename -uid "F380DEC6-4362-7536-283F-D7B266533E36";
 createNode transform -n "BabyGrab_One" -p "babyRNfosterParent1";
 	rename -uid "852E98AC-471B-65FD-5F51-1EAD293B521F";
 createNode locator -n "BabyGrab_OneShape" -p "BabyGrab_One";
 	rename -uid "29531E57-4C35-2473-32EE-0BB5385EEE1C";
 	setAttr -k off ".v";
 	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
+	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
+createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
+	rename -uid "DE09F5E1-4E65-C1D9-9C53-D5AD0315365A";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
 createNode fosterParent -n "wineRNfosterParent1";
-	rename -uid "EDE112C3-4984-A957-31FC-27A1CE2D880F";
+	rename -uid "A0EC7622-4EA9-E9A5-ADDE-0DBA14B6EFE6";
 createNode transform -n "battle_grab_loc" -p "wineRNfosterParent1";
 	rename -uid "13CA559F-47AD-A738-C358-AEA7771E6926";
 createNode locator -n "battle_grab_locShape" -p "battle_grab_loc";
@@ -1992,7 +2006,7 @@ createNode locator -n "battle_grab_locShape" -p "battle_grab_loc";
 	setAttr -k off ".v";
 	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
 createNode fosterParent -n "momRN1fosterParent1";
-	rename -uid "6FDE8C88-48E6-5231-6817-688418742AC9";
+	rename -uid "3DF95CD3-4773-B0F6-B723-A388CD6E07F8";
 createNode parentConstraint -n "Arm_Cntrl_L_parentConstraint1" -p "momRN1fosterParent1";
 	rename -uid "D93AD2F6-4A3A-9D49-3119-BB8A73C9CF2C";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "BabyGrab_OneW0" -dv 1 -min 0 -at "double";
@@ -5997,18 +6011,18 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 	setAttr ".nt" -type "string" "pass:command";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D4BAEEB0-4862-4ABF-A0A1-11B91251E1F9";
-	setAttr -s 417 ".lnk";
-	setAttr -s 417 ".slnk";
+	rename -uid "ADD0AB55-4385-1287-0248-9C9849192134";
+	setAttr -s 418 ".lnk";
+	setAttr -s 418 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "159368C3-4377-EB2A-75DE-5DAE8220306A";
+	rename -uid "DF68BD5F-44A3-9D69-CCBA-D9AE7712B228";
 	setAttr ".cdl" 3;
 	setAttr -s 5 ".dli[1:4]"  1 2 3 4;
 	setAttr -s 5 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8FE7AEEF-A64E-0BCA-8F16-3E847524724C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "84F41AE6-4803-5926-D5C6-12B070883CC3";
+	rename -uid "BE8CF219-47A6-9F81-13B9-35BBFE784B13";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3364DFD3-5743-413F-CAFD-25A163300DC5";
 	setAttr ".g" yes;
@@ -6032,18 +6046,18 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
 		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
 		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
-		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n"
-		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 1\n            -maximumNumHardwareLights 0\n            -occlusionCulling 1\n            -shadingModel 0\n            -useBaseRenderer 0\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_scene:new_camera_test\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n"
+		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 1\n            -maximumNumHardwareLights 0\n            -occlusionCulling 1\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n"
-		+ "            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1711\n            -height 785\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1205\n            -height 640\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
 		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n"
 		+ "            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
 		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n"
-		+ "                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n"
+		+ "                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
 		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
 		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
 		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n"
@@ -6054,28 +6068,31 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n"
-		+ "                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
-		+ "                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
-		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n"
-		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1711\\n    -height 785\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1711\\n    -height 785\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"momBaby\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
+		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n"
+		+ "                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n"
+		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
+		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_scene:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1205\\n    -height 640\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_scene:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1205\\n    -height 640\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "01062556-A348-669A-7B1D-C28162489BFC";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 260 -ast -20 -aet 420 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 250 -ast -20 -aet 420 ";
 	setAttr ".st" 6;
 createNode shapeEditorManager -n "mom:shapeEditorManager";
-	rename -uid "52B233DD-497E-4B30-20FA-68A9379559EE";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 1 2 ;
+	rename -uid "478CC3DE-49CE-0861-0A25-D68D1394A01D";
+	setAttr -s 2 ".bsdt";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 4 0 1 2 -1 ;
+	setAttr ".bsdt[1].bscd" -type "Int32Array" 3 3 4 5 ;
+	setAttr ".bsdt[1].bsdn" -type "string" "mom_scene:mom";
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "mom:poseInterpolatorManager";
-	rename -uid "AEF2F265-4070-CC23-D28C-329C1CC93D25";
+	rename -uid "56B3B0A7-4B4D-295D-478D-33A15829FBEA";
 createNode partition -n "mom:mom2:mom:mtorPartition";
 	rename -uid "372F30A3-9D44-512C-928F-6192B73536B1";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -8400,9 +8417,9 @@ createNode reference -n "babyRN";
 		5 4 "babyRN" "|baby:baby_master|baby:baby_COG|baby:Head_Controller.scaleZ" 
 		"babyRN.placeHolderList[119]" ""
 		"babyRN" 252
-		0 "|babyRNfosterParent1|BabyGrab_One" "|baby:Baby_Rig|baby:baby_master" "-s -r "
-		
 		0 "|babyRNfosterParent1|BabyGrab_Two" "|baby:Baby_Rig|baby:baby_master" "-s -r "
+		
+		0 "|babyRNfosterParent1|BabyGrab_One" "|baby:Baby_Rig|baby:baby_master" "-s -r "
 		
 		2 "|baby:bottom" "visibility" " 0"
 		2 "|baby:bottom|baby:bottomShape" "renderable" " 0"
@@ -8444,7 +8461,7 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" -0.38329520451244115 -0.51699498951345824 1.8530563527518471"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
-		"rotate" " -type \"double3\" 2.8005801552115503 -0.75017447549363037 4.9865885744089882"
+		"rotate" " -type \"double3\" 2.8005801552115503 -0.75017447549363048 4.9865885744090077"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
 		"rotateX" " -av"
@@ -8616,7 +8633,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L" "rotate" 
 		" -type \"double3\" -52.686508238803484 5.0644261316904906 -39.131301618597732"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"translate" " -type \"double3\" -5.3218841689790892 0.53334953465787294 -0.43313459042585256"
+		"translate" " -type \"double3\" 0.56660474391238047 -3.7475782158431983 1.5504646547309284"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateX" " -av -k 0"
@@ -8654,7 +8671,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L|baby:Wrist_Cntrl_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
-		"rotate" " -type \"double3\" 51.474972734469489 -6.696398525662886 -43.295159075006289"
+		"rotate" " -type \"double3\" 51.474972734469489 -10.117231419308959 -43.295159075006289"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"rotateX" " -av"
@@ -8694,7 +8711,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" 77.878140271057148 0 13.709294963158955"
+		"rotate" " -type \"double3\" 5.3430553982821669 0 13.709294963158955"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
@@ -9065,12 +9082,12 @@ createNode reference -n "wineRN";
 		"wineRN" 31
 		0 "|wineRNfosterParent1|battle_grab_loc" "|wine:wine_bottle" "-s -r "
 		2 "|wine:wine_bottle" "visibility" " -av 1"
-		2 "|wine:wine_bottle" "translate" " -type \"double3\" -5.6647221688070744 -2.7291637911683782 8.4825159937989181"
+		2 "|wine:wine_bottle" "translate" " -type \"double3\" -3.1929486341016471 5.9940386771238909 3.2304622755098213"
 		
 		2 "|wine:wine_bottle" "translateX" " -av"
 		2 "|wine:wine_bottle" "translateY" " -av"
 		2 "|wine:wine_bottle" "translateZ" " -av"
-		2 "|wine:wine_bottle" "rotate" " -type \"double3\" -1.5687694818714735 -220.46232287924551 -0.27548825937616211"
+		2 "|wine:wine_bottle" "rotate" " -type \"double3\" 77.591694087293277 -202.88319721727453 -14.838059131836234"
 		
 		2 "|wine:wine_bottle" "rotateX" " -av"
 		2 "|wine:wine_bottle" "rotateY" " -av"
@@ -9890,7 +9907,6 @@ createNode animCurveTU -n "baby_master_visibility";
 createNode animCurveTU -n "baby_master_scaleX";
 	rename -uid "1E347035-114C-C6A4-FA4D-23AC1E196E02";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 0.33116149682379614 20 0.33116149682379614
 		 58 0.33116149682379614 82 0.33116149682379614 133 0.33116149682379614 214 0.33116149682379614
 		 233 0.33116149682379614;
@@ -9899,7 +9915,6 @@ createNode animCurveTU -n "baby_master_scaleX";
 createNode animCurveTU -n "baby_master_scaleY";
 	rename -uid "607E2513-284D-0F0B-B724-F7ADA33AE164";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 0.33116149682379614 20 0.33116149682379614
 		 58 0.33116149682379614 82 0.33116149682379614 133 0.33116149682379614 214 0.33116149682379614
 		 233 0.33116149682379614;
@@ -9908,7 +9923,6 @@ createNode animCurveTU -n "baby_master_scaleY";
 createNode animCurveTU -n "baby_master_scaleZ";
 	rename -uid "D01F49BF-7E45-114F-3FFE-80B5D90984E3";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 0.33116149682379614 20 0.33116149682379614
 		 58 0.33116149682379614 82 0.33116149682379614 133 0.33116149682379614 214 0.33116149682379614
 		 233 0.33116149682379614;
@@ -10042,7 +10056,7 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" 0.063002526760101318;
+	setAttr ".d" 0.028245460242033005;
 createNode shadingEngine -n "oceanShader1SG";
 	rename -uid "C24C89DE-4C1E-A7AD-E016-F0AFD29A9F35";
 	setAttr ".ihi" 0;
@@ -10055,7 +10069,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "momRN1";
 	rename -uid "888DDD94-4242-7823-C276-798D9AFBE8BF";
-	setAttr -s 495 ".phl";
+	setAttr -s 489 ".phl";
 	setAttr ".phl[95]" 0;
 	setAttr ".phl[96]" 0;
 	setAttr ".phl[97]" 0;
@@ -10524,12 +10538,6 @@ createNode reference -n "momRN1";
 	setAttr ".phl[560]" 0;
 	setAttr ".phl[561]" 0;
 	setAttr ".phl[562]" 0;
-	setAttr ".phl[563]" 0;
-	setAttr ".phl[564]" 0;
-	setAttr ".phl[565]" 0;
-	setAttr ".phl[566]" 0;
-	setAttr ".phl[567]" 0;
-	setAttr ".phl[568]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"momRN1"
 		"momRN1" 44
@@ -10624,7 +10632,7 @@ createNode reference -n "momRN1";
 		"momRN1.placeHolderList[93]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleZ" 
 		"momRN1.placeHolderList[94]" ""
-		"momRN1" 768
+		"momRN1" 774
 		0 "|momRN1fosterParent1|Arm_Cntrl_R_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" 
 		"-s -r "
 		0 "|momRN1fosterParent1|Arm_Cntrl_L_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" 
@@ -10633,6 +10641,8 @@ createNode reference -n "momRN1";
 		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L "blendParent1" 
 		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape" 
+		"uvPivot" " -type \"double2\" 0.7980656623840332 0.19027304649353027"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape" 
@@ -10649,6 +10659,10 @@ createNode reference -n "momRN1";
 		"colorSet[1].clamped" " 0"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape" 
 		"colorSet[1].representation" " 4"
+		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape" 
+		"dispResolution" " 3"
+		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape" 
+		"displaySmoothMesh" " 2"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:ear_LShapeOrig" 
@@ -10660,6 +10674,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
 		"instObjGroups.objectGroups" " -s 8"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
+		"uvPivot" " -type \"double2\" 0.09761684387922287 0.85528463125228882"
+		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
 		"colorSet[0].colorName" " -type \"string\" \"SculptFreezeColorTemp\""
@@ -10667,6 +10683,10 @@ createNode reference -n "momRN1";
 		"colorSet[0].clamped" " 0"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
 		"colorSet[0].representation" " 4"
+		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
+		"dispResolution" " 3"
+		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
+		"displaySmoothMesh" " 2"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShapeOrig1" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShapeOrig1" 
@@ -10714,6 +10734,8 @@ createNode reference -n "momRN1";
 		"displaySmoothMesh" " 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R" 
 		"translateY" " 0"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L" 
+		"translateY" " 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
 		"translateX" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
@@ -10726,8 +10748,12 @@ createNode reference -n "momRN1";
 		"translateY" " 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
 		"translateY" " 0"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_R|mom2:TopMouth_Cntrl_R" 
 		"translateY" " 0.54033338067106318"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_L|mom2:TopMouth_Cntrl_L" 
+		"translateY" " 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
@@ -10897,7 +10923,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" 8.0502282663164149 2.1399226149547297 0"
+		"rotate" " -type \"double3\" 7.3607086438597085 2.5805930002790158 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
@@ -10907,7 +10933,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
-		"rotate" " -type \"double3\" 10.350723247453541 0 5.8873697157432501"
+		"rotate" " -type \"double3\" -1.1370086154101899 0 5.8873697157432501"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
@@ -10931,7 +10957,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
-		"translate" " -type \"double3\" 0.0062443936001911338 -0.36828324255021205 -0.27341653407088878"
+		"translate" " -type \"double3\" 0.46924266317959551 0.68344406787921086 -0.27341653407088884"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
 		"translateX" " -av"
@@ -10958,7 +10984,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
-		"rotate" " -type \"double3\" -28.649564524428047 -1.3203070655485281 10.883780267489991"
+		"rotate" " -type \"double3\" -30.913693886927202 0.60547485039663929 8.0522324953468054"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"rotateX" " -av"
@@ -10985,7 +11011,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
-		"rotate" " -type \"double3\" -0.69596505759600891 5.5080649640715444 -0.11741556864542604"
+		"rotate" " -type \"double3\" -7.795193548684864 22.906819956678607 -12.488166452729107"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"rotateX" " -av"
@@ -11032,6 +11058,10 @@ createNode reference -n "momRN1";
 		"translateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
 		"translateZ" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl" 
+		"translateX" " -av 0"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl" 
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
@@ -11048,6 +11078,8 @@ createNode reference -n "momRN1";
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_low_eyelid_ctrl" 
 		"translateY" " -av 0"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_nose_flare_ctrl" 
+		"translateY" " -av 0.0025558622125956276"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_knee_vec" "visibility" 
 		" 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_knee_vec" "translateX" 
@@ -11059,7 +11091,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translate" 
-		" -type \"double3\" 1.0140341154059298 -1.833079240661823 13.353022020650076"
+		" -type \"double3\" 1.0140341154059298 -1.833079240661823 11.244702568482943"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translateY" 
@@ -11163,23 +11195,23 @@ createNode reference -n "momRN1";
 		
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nucleus1" "enable" " 0"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid1|mom2:nRigidShape1" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid2|mom2:nRigidShape2" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid3|mom2:nRigidShape3" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid4|mom2:nRigidShape4" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid5|mom2:nRigidShape5" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nCloth1|mom2:nClothShape1" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid6|mom2:nRigidShape6" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid7|mom2:nRigidShape7" "cacheWidth" 
-		" 260"
+		" 250"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:skirt_ncloth|mom2:skirt_nclothShape" 
-		"cacheWidth" " 260"
+		"cacheWidth" " 250"
 		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt" 
 		"visibility" " 0"
 		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt|mom2:mom_skirt:mom:skirtShape" 
@@ -11189,23 +11221,23 @@ createNode reference -n "momRN1";
 		2 "mom2:groupParts39" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:109]\""
 		
 		2 "mom2:groupParts39" "groupId" " 323"
-		3 "mom2:groupId39.groupId" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "mom2:mom2:mom:rampShader2SG.memberWireframeColor" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
 		3 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest.message" 
 		"mom2:skinCluster1.paintTrans" ""
-		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_R|mom2:mom2:mom:ear_RShape.instObjGroups" 
-		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
-		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
-		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
 		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0]" 
 		"mom2:mom2:mom:rampShader2SG.dagSetMembers" "-na"
 		3 "mom2:groupId39.message" "mom2:mom2:mom:rampShader2SG.groupNodes" "-na"
 		
+		3 "mom2:groupId39.groupId" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "mom2:mom2:mom:rampShader2SG.memberWireframeColor" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "mom2:groupId39.groupId" "mom2:groupParts39.groupId" ""
+		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_R|mom2:mom2:mom:ear_RShape.instObjGroups" 
+		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
+		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
+		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
 		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.instObjGroups" 
 		"mom2:mom2:mom:rampShader1SG.dagSetMembers" "-na"
-		3 "mom2:groupId39.groupId" "mom2:groupParts39.groupId" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.instObjGroups" 
 		"momRN1.placeHolderList[95]" "mom2:mom2:mom:rampShader1SG.dsm"
 		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
@@ -12138,20 +12170,8 @@ createNode reference -n "momRN1";
 		"momRN1.placeHolderList[559]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.parentInverseMatrix" 
 		"momRN1.placeHolderList[560]" ""
-		5 3 "momRN1" "mom2:mom2:mom:file5.message" "momRN1.placeHolderList[561]" 
-		""
-		5 3 "momRN1" "mom2:mom2:mom:place2dTexture7.message" "momRN1.placeHolderList[562]" 
-		""
-		5 3 "momRN1" "mom2:mom2:mom:file6.message" "momRN1.placeHolderList[563]" 
-		""
-		5 3 "momRN1" "mom2:mom2:mom:place2dTexture8.message" "momRN1.placeHolderList[564]" 
-		""
-		5 3 "momRN1" "mom2:mom2:mom:momBrightnessRamp.message" "momRN1.placeHolderList[565]" 
-		""
-		5 3 "momRN1" "mom2:mom2:mom:rampShader1SG.message" "momRN1.placeHolderList[566]" 
-		""
 		5 0 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG.message" 
-		"mom2:skinCluster1.paintTrans" "momRN1.placeHolderList[567]" "momRN1.placeHolderList[568]" 
+		"mom2:skinCluster1.paintTrans" "momRN1.placeHolderList[561]" "momRN1.placeHolderList[562]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -12165,7 +12185,6 @@ createNode animCurveTA -n "Arm_Cntrl_R_rotateX";
 	setAttr -s 9 ".kot[0:8]"  18 3 3 3 3 3 3 3 
 		3;
 	setAttr -s 9 ".ktl[5:8]" no yes yes yes;
-	setAttr -s 9 ".kwl[0:8]" yes no no no no no no no no;
 	setAttr -s 9 ".kix[5:8]"  1.3017070293426514 3.4583334922790527 0.875 
 		0.16666603088378906;
 	setAttr -s 9 ".kiy[5:8]"  0 0 0 0;
@@ -12180,7 +12199,6 @@ createNode animCurveTA -n "Arm_Cntrl_R_rotateY";
 	setAttr -s 9 ".kot[0:8]"  18 3 3 3 3 3 3 3 
 		3;
 	setAttr -s 9 ".ktl[5:8]" no yes yes yes;
-	setAttr -s 9 ".kwl[0:8]" yes no no no no no no no no;
 	setAttr -s 9 ".kix[5:8]"  1.3017070293426514 3.4583334922790527 0.875 
 		0.16666603088378906;
 	setAttr -s 9 ".kiy[5:8]"  0 0 0 0;
@@ -12195,7 +12213,6 @@ createNode animCurveTA -n "Arm_Cntrl_R_rotateZ";
 	setAttr -s 9 ".kot[0:8]"  18 3 3 3 3 3 3 3 
 		3;
 	setAttr -s 9 ".ktl[5:8]" no yes yes yes;
-	setAttr -s 9 ".kwl[0:8]" yes no no no no no no no no;
 	setAttr -s 9 ".kix[5:8]"  1.3670433759689331 3.4583334922790527 0.875 
 		0.16666603088378906;
 	setAttr -s 9 ".kiy[5:8]"  0 0 0 0;
@@ -12204,7 +12221,6 @@ createNode animCurveTU -n "Arm_Cntrl_R_visibility";
 	setAttr ".tan" 9;
 	setAttr -s 7 ".ktv[0:6]"  -10 1 1 1 20 1 137 1 139 1 240 1 248 1;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
-	setAttr -s 7 ".kwl[0:6]" yes no no no no no no;
 createNode animCurveTL -n "Arm_Cntrl_R_translateX";
 	rename -uid "1016E29D-8F49-C668-DE1F-EFB8235857F7";
 	setAttr ".tan" 3;
@@ -12216,7 +12232,6 @@ createNode animCurveTL -n "Arm_Cntrl_R_translateX";
 	setAttr -s 11 ".kot[0:10]"  18 3 3 1 3 3 1 3 
 		1 3 3;
 	setAttr -s 11 ".ktl[3:10]" no yes yes no no no yes yes;
-	setAttr -s 11 ".kwl[0:10]" yes no no no no no no no no no no;
 	setAttr -s 11 ".kix[4:10]"  0.82755583524703979 0.041666984558105469 
 		2.9583334922790527 0.64595919847488403 0.18529701232910156 0.083333969116210938 0.16666603088378906;
 	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
@@ -12235,7 +12250,6 @@ createNode animCurveTL -n "Arm_Cntrl_R_translateY";
 	setAttr -s 10 ".kot[0:9]"  18 3 3 1 3 3 1 3 
 		1 3;
 	setAttr -s 10 ".ktl[3:9]" no yes yes no yes yes yes;
-	setAttr -s 10 ".kwl[0:9]" yes no no no no no no no no no;
 	setAttr -s 10 ".kix[4:9]"  0.82755583524703979 0.041666984558105469 
 		2.9583334922790527 0.375 0.70076996088027954 0.16666603088378906;
 	setAttr -s 10 ".kiy[4:9]"  0 0 0 0 1.4899766445159912 0;
@@ -12253,7 +12267,6 @@ createNode animCurveTL -n "Arm_Cntrl_R_translateZ";
 	setAttr -s 11 ".kot[0:10]"  18 3 3 1 1 1 3 1 
 		1 1 3;
 	setAttr -s 11 ".ktl[3:10]" no no yes yes no no yes yes;
-	setAttr -s 11 ".kwl[0:10]" yes no no no no no no no no no no;
 	setAttr -s 11 ".kix[3:10]"  4.3333330154418945 0.51569080352783203 
 		0.12816798686981201 0.041666984558105469 2.9583334922790527 0.21598434448242188 0.88647937774658203 
 		0.16666603088378906;
@@ -12270,207 +12283,177 @@ createNode animCurveTA -n "MasterCntrl_rotateX";
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 0 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "MasterCntrl_rotateY";
 	rename -uid "F56EABE5-8947-F513-9944-12BC37C9B9AF";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 0 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "MasterCntrl_rotateZ";
 	rename -uid "A6A44672-8049-6880-3D70-DBB80F7F1BBD";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 0 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "MasterCntrl_visibility";
 	rename -uid "1CDFF636-8A4B-4461-E2EA-3D97F6C96049";
 	setAttr ".tan" 9;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 0 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "MasterCntrl_translateX";
 	rename -uid "33787FD0-7A45-2F46-4CE3-73B11CE1905D";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 0 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "MasterCntrl_translateY";
 	rename -uid "EDBE6C1E-A34C-F756-DFB4-738BC79030A3";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 0 -3.6793382229090739;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "MasterCntrl_translateZ";
 	rename -uid "6345EC57-E64C-8163-0190-1E959ED65181";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 0 -1.9889678370977339;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "MasterCntrl_scaleX";
 	rename -uid "24A0637A-4647-2DC3-B2CA-E3875768103F";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 0 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "MasterCntrl_scaleY";
 	rename -uid "7BFC9870-314D-4951-9F01-14B747C31ECA";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 0 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "MasterCntrl_scaleZ";
 	rename -uid "45936879-E84E-2551-111B-B5BD9C5E460D";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 0 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_r_foot_ctrl_rotateX1";
 	rename -uid "CB4DCE80-944E-65EB-4408-9F9F0331C764";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_r_foot_ctrl_rotateY1";
 	rename -uid "32B3BE21-9748-36BE-16FF-4D96C87AEA3F";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_r_foot_ctrl_rotateZ1";
 	rename -uid "0141AB26-C749-6DAB-0045-A8BA8369A539";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_r_foot_ctrl_visibility1";
 	rename -uid "0879D83F-E540-5F7F-373F-CD9BE94FBBD4";
 	setAttr ".tan" 9;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "mom_r_foot_ctrl_translateX1";
 	rename -uid "06203FAA-3049-DDD2-1CB7-06BDB90043AE";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0.16664688425978191;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "mom_r_foot_ctrl_translateY1";
 	rename -uid "295000DF-434C-2567-9CB3-A592454C126D";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 5.5369802966071404;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "mom_r_foot_ctrl_translateZ1";
 	rename -uid "314FC5A5-214A-1CCF-EBB3-B6A809A92B79";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 4.4891510112009856;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_r_foot_ctrl_scaleX1";
 	rename -uid "2FE35A73-8741-01BA-B4F7-789C2C17002F";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_r_foot_ctrl_scaleY1";
 	rename -uid "E4F88FB0-FB48-6A37-D2BE-7CBE06A21B34";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_r_foot_ctrl_scaleZ1";
 	rename -uid "F8F2CF12-B74A-0F90-E7E4-6CBFE451F0F1";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_l_foot_ctrl_rotateX1";
 	rename -uid "97F8EA48-BC42-5021-245E-3AA711335B36";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_l_foot_ctrl_rotateY1";
 	rename -uid "DFC6D5AC-7A4F-888A-DAAD-988361872882";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_l_foot_ctrl_rotateZ1";
 	rename -uid "D7C99884-3B4A-F583-8E5B-8FA713158725";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_l_foot_ctrl_visibility1";
 	rename -uid "BE8A768F-8A43-E2F9-B9E7-AAAA6DBBE439";
 	setAttr ".tan" 9;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "mom_l_foot_ctrl_translateX1";
 	rename -uid "9E883D60-7E46-5841-9894-E9A243E959C5";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 0.23286893718544799;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "mom_l_foot_ctrl_translateY1";
 	rename -uid "0FA18E15-1C49-06F9-D1C9-35B54A4162F7";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 5.6412119717417939;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTL -n "mom_l_foot_ctrl_translateZ1";
 	rename -uid "5A47E9D9-B540-C4FF-7DC2-1D99C627AA70";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 0 -10 0 1 4.5000642486259945;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_l_foot_ctrl_scaleX1";
 	rename -uid "4E48F0E2-1D45-B6E1-7545-C9B6771E32C2";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_l_foot_ctrl_scaleY1";
 	rename -uid "8ECF486C-AB40-6488-2A22-B1A39577150C";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTU -n "mom_l_foot_ctrl_scaleZ1";
 	rename -uid "89838598-0F48-37B0-403D-028FD69D0897";
 	setAttr ".tan" 16;
 	setAttr -s 3 ".ktv[0:2]"  -20 1 -10 1 1 1;
 	setAttr -s 3 ".kit[2]"  3;
 	setAttr -s 3 ".kot[0:2]"  18 18 3;
-	setAttr -s 3 ".kwl[0:2]" yes yes no;
 createNode animCurveTA -n "mom_cog_ctrl_rotateX1";
 	rename -uid "8DAEF04F-FC4E-024D-B7B7-C8B407171F6A";
 	setAttr ".tan" 1;
@@ -12479,7 +12462,6 @@ createNode animCurveTA -n "mom_cog_ctrl_rotateX1";
 	setAttr -s 5 ".kit[0:4]"  16 16 1 1 1;
 	setAttr -s 5 ".kot[0:4]"  18 18 1 1 1;
 	setAttr -s 5 ".ktl[3:4]" no yes;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 	setAttr -s 5 ".kix[2:4]"  0.66611003875732422 1.1762411594390869 
 		2.0038876533508301;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
@@ -12493,7 +12475,6 @@ createNode animCurveTA -n "mom_cog_ctrl_rotateY1";
 		 50 0;
 	setAttr -s 5 ".kit[0:4]"  16 16 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 18 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "mom_cog_ctrl_rotateZ1";
 	rename -uid "9E48D57F-6149-E40B-53B4-6C8F70772FCB";
 	setAttr ".tan" 3;
@@ -12501,20 +12482,17 @@ createNode animCurveTA -n "mom_cog_ctrl_rotateZ1";
 		 50 0;
 	setAttr -s 5 ".kit[0:4]"  16 16 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 18 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTU -n "mom_cog_ctrl_visibility1";
 	rename -uid "C4099511-F248-37CD-6F49-B491D2DCA454";
 	setAttr ".tan" 9;
 	setAttr -s 5 ".ktv[0:4]"  -20 1 -10 1 1 1 20 1 50 1;
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTL -n "mom_cog_ctrl_translateX1";
 	rename -uid "B20AEC0C-DC4E-8083-D4C1-2FACB4F47754";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 0 20 0 50 0;
 	setAttr -s 5 ".kit[0:4]"  16 16 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 18 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTL -n "mom_cog_ctrl_translateY1";
 	rename -uid "F67AD2B3-E445-4AFC-297A-C69F3603617E";
 	setAttr ".tan" 3;
@@ -12522,7 +12500,6 @@ createNode animCurveTL -n "mom_cog_ctrl_translateY1";
 		 50 -0.0037532781858922999;
 	setAttr -s 5 ".kit[0:4]"  16 16 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 18 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTL -n "mom_cog_ctrl_translateZ1";
 	rename -uid "5FB9BEBA-2D46-F15B-0301-9B8DC0472F9E";
 	setAttr ".tan" 3;
@@ -12530,7 +12507,6 @@ createNode animCurveTL -n "mom_cog_ctrl_translateZ1";
 		 50 1.7007622477019599;
 	setAttr -s 5 ".kit[0:4]"  16 16 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 18 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTU -n "mom_cog_ctrl_scaleX1";
 	rename -uid "7B8DBEDF-3041-5D25-FD21-348D6ACC8F11";
 	setAttr ".tan" 3;
@@ -12588,98 +12564,81 @@ createNode animCurveTA -n "Arm_Cntrl_L_rotateX";
 	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 0 1 0 20 19.095761469965087;
 	setAttr -s 4 ".kit[0:3]"  16 16 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTA -n "Arm_Cntrl_L_rotateY";
 	rename -uid "1F756628-A844-0597-C4CE-A0B8AEBC372B";
 	setAttr ".tan" 3;
 	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 0 1 -86.349639218297369 20 -15.475442673954262;
 	setAttr -s 4 ".kit[0:3]"  16 16 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTA -n "Arm_Cntrl_L_rotateZ";
 	rename -uid "195CB4F1-4E4E-29FB-7D38-DD97EBE6FB00";
 	setAttr ".tan" 3;
 	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 0 1 0 20 -121.32841567964314;
 	setAttr -s 4 ".kit[0:3]"  16 16 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTU -n "Arm_Cntrl_L_visibility";
 	rename -uid "69A6635D-8146-6762-04BF-C2BB9AC85CCD";
 	setAttr ".tan" 9;
 	setAttr -s 4 ".ktv[0:3]"  -20 1 -10 1 1 1 20 1;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTL -n "Arm_Cntrl_L_translateX";
 	rename -uid "57FCDEB0-6848-E41A-818E-57980A39B08A";
 	setAttr ".tan" 3;
 	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 0 1 -6.0376941268606146 20 -7.6341341092173289;
 	setAttr -s 4 ".kit[0:3]"  16 16 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTL -n "Arm_Cntrl_L_translateY";
 	rename -uid "6F8AE378-AA48-7CE9-B708-E2B78C46DB63";
 	setAttr ".tan" 3;
 	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 0 1 1.3322676295501878e-015 20 -1.8904991462042422;
 	setAttr -s 4 ".kit[0:3]"  16 16 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTL -n "Arm_Cntrl_L_translateZ";
 	rename -uid "FDA51D83-5A40-7095-F105-86AC00754F63";
 	setAttr ".tan" 3;
 	setAttr -s 4 ".ktv[0:3]"  -20 0 -10 0 1 2.3186220686465471 20 15.155008364450964;
 	setAttr -s 4 ".kit[0:3]"  16 16 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
-	setAttr -s 4 ".kwl[0:3]" yes yes no no;
 createNode animCurveTU -n "persp1_scaleZ";
 	rename -uid "750FDD1E-DB46-837E-021A-CA801FE1FD19";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
 createNode animCurveTU -n "persp1_scaleY";
 	rename -uid "0867777E-FA4D-73DD-AE4A-7C832B6AFE99";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
 createNode animCurveTU -n "persp1_scaleX";
 	rename -uid "64187361-9C4F-DB14-6B52-CAB143D2DDCC";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
 createNode animCurveTA -n "persp1_rotateZ";
 	rename -uid "2BE7AEF4-C845-9F3F-2922-74B46C3BFAFD";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 0.24151334562832272;
 createNode animCurveTA -n "persp1_rotateY";
 	rename -uid "CD6024CC-FA4F-18BC-5904-47A0CCE60857";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 2.1819024658339417;
 createNode animCurveTA -n "persp1_rotateX";
 	rename -uid "EFCAEA0F-6844-85E7-1051-83A38797D32A";
 	setAttr ".tan" 3;
 	setAttr ".ktv[0]"  0 -60.632201324987442;
-	setAttr ".kwl[0]" yes;
 createNode animCurveTU -n "persp1_visibility";
 	rename -uid "F94C1ABC-3641-369C-CEFC-039326A40B69";
 	setAttr ".tan" 9;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
 	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "persp1_translateZ";
 	rename -uid "FD60AFD7-3D43-B38F-5C8D-E4949506AEB2";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 27.428245896520387;
 createNode animCurveTL -n "persp1_translateY";
 	rename -uid "2A01F7F1-DD4F-9D47-2550-5F993ACAD783";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 24.368160346824865;
 createNode animCurveTL -n "persp1_translateX";
 	rename -uid "44A2E169-E447-1C7B-F5BA-358589EBCEF4";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1.230252461940788;
 createNode animCurveTL -n "mom_shoulder_ctrl_translateX1";
 	rename -uid "4B767334-D04C-2BFF-8C86-AF9104687F52";
@@ -12725,7 +12684,6 @@ createNode animCurveTU -n "mom_shoulder_ctrl_visibility1";
 	setAttr ".tan" 9;
 	setAttr -s 8 ".ktv[0:7]"  -20 1 -10 1 1 1 20 1 50 1 174 1 208 1 248 1;
 	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
-	setAttr -s 8 ".kwl[0:7]" yes yes no no no no no no;
 createNode animCurveTA -n "mom_shoulder_ctrl_rotateX1";
 	rename -uid "6BE983CB-944D-C6E6-BD8E-A29D66C5AFCB";
 	setAttr ".tan" 1;
@@ -12737,7 +12695,6 @@ createNode animCurveTA -n "mom_shoulder_ctrl_rotateX1";
 	setAttr -s 11 ".kot[0:10]"  18 18 1 1 1 1 1 1 
 		1 1 1;
 	setAttr -s 11 ".ktl[3:10]" no no yes no yes yes no yes;
-	setAttr -s 11 ".kwl[0:10]" yes yes no no no no no no no no no;
 	setAttr -s 11 ".kix[2:10]"  0.86576586961746216 1.5613940954208374 
 		1.7052329778671265 4.2937831878662109 0.73884201049804688 1.1514384746551514 0.95833301544189453 
 		0.95833301544189453 1.0977520942687988;
@@ -12756,7 +12713,6 @@ createNode animCurveTA -n "mom_shoulder_ctrl_rotateY1";
 	setAttr -s 9 ".kot[0:8]"  18 18 1 1 1 3 1 1 
 		1;
 	setAttr -s 9 ".ktl[3:8]" no yes yes yes no yes;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 	setAttr -s 9 ".kix[2:8]"  1.1299432516098022 0.91505330801010132 
 		1.6900386810302734 5.1666669845581055 1.4166665077209473 1.4166665077209473 1.0977520942687988;
 	setAttr -s 9 ".kiy[2:8]"  0 0 0 0 0 0 0;
@@ -12771,7 +12727,6 @@ createNode animCurveTA -n "mom_shoulder_ctrl_rotateZ1";
 	setAttr -s 8 ".kit[0:7]"  16 16 1 1 1 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 18 1 1 3 3 3 3;
 	setAttr -s 8 ".ktl[3:7]" no no yes yes yes;
-	setAttr -s 8 ".kwl[0:7]" yes yes no no no no no no;
 	setAttr -s 8 ".kix[2:7]"  0.45064663887023926 0.90702176094055176 
 		1.5806243419647217 5.1666669845581055 1.4166669845581055 1.6666660308837891;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
@@ -12895,7 +12850,6 @@ createNode animCurveTA -n "NeckCntrl_01_rotateX";
 	setAttr -s 11 ".kot[0:10]"  18 18 3 3 3 1 3 3 
 		1 1 3;
 	setAttr -s 11 ".ktl[5:10]" no no yes no no yes;
-	setAttr -s 11 ".kwl[0:10]" yes yes no no no no no no no no no;
 	setAttr -s 11 ".kix[6:10]"  0.72867703437805176 1.7916665077209473 
 		0.79166698455810547 2.7395510673522949 0.41666603088378906;
 	setAttr -s 11 ".kiy[6:10]"  0 0 0 0 0;
@@ -12913,7 +12867,6 @@ createNode animCurveTA -n "NeckCntrl_01_rotateY";
 	setAttr -s 12 ".kot[0:11]"  18 18 3 3 3 1 1 3 
 		1 1 1 3;
 	setAttr -s 12 ".ktl[5:11]" no yes yes no no no yes;
-	setAttr -s 12 ".kwl[0:11]" yes yes no no no no no no no no no no;
 	setAttr -s 12 ".kix[6:11]"  0.66220545768737793 0.16666650772094727 
 		1.75 0.79166698455810547 2.7395510673522949 0.41666603088378906;
 	setAttr -s 12 ".kiy[6:11]"  0.11858835816383362 0 0 0 0 0;
@@ -12932,8 +12885,6 @@ createNode animCurveTA -n "NeckCntrl_01_rotateZ";
 	setAttr -s 15 ".kot[0:14]"  18 18 3 3 3 1 1 1 
 		1 1 1 1 1 1 3;
 	setAttr -s 15 ".ktl[5:14]" no yes no no yes no no no no yes;
-	setAttr -s 15 ".kwl[0:14]" yes yes no no no no no no no no no no no 
-		no no;
 	setAttr -s 15 ".kix[5:14]"  2.7083332538604736 0.16886329650878906 
 		0.17398466169834137 0.22009918093681335 0.61152076721191406 0.41666650772094727 0.66293048858642578 
 		0.79166698455810547 2.7395510673522949 0.41666603088378906;
@@ -12951,7 +12902,6 @@ createNode animCurveTU -n "NeckCntrl_01_visibility";
 		 239 1;
 	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
 		5;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTL -n "NeckCntrl_01_translateX";
 	rename -uid "95954489-824E-4282-0100-E1998774E1C0";
 	setAttr ".tan" 3;
@@ -12961,7 +12911,6 @@ createNode animCurveTL -n "NeckCntrl_01_translateX";
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 18 3 3 3 3 3 3 
 		3;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTL -n "NeckCntrl_01_translateY";
 	rename -uid "BAC4F46D-0E46-25C8-92D8-8BAC5E95F576";
 	setAttr ".tan" 3;
@@ -12971,7 +12920,6 @@ createNode animCurveTL -n "NeckCntrl_01_translateY";
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 18 3 3 3 3 3 3 
 		3;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTL -n "NeckCntrl_01_translateZ";
 	rename -uid "8F38DC45-AA40-080D-CB8A-1F8B92B209B3";
 	setAttr ".tan" 3;
@@ -12981,7 +12929,6 @@ createNode animCurveTL -n "NeckCntrl_01_translateZ";
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 18 3 3 3 3 3 3 
 		3;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTU -n "NeckCntrl_01_scaleX";
 	rename -uid "00CB47CC-1440-6F08-19BC-7C83CF10422C";
 	setAttr ".tan" 3;
@@ -12991,7 +12938,6 @@ createNode animCurveTU -n "NeckCntrl_01_scaleX";
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 18 3 3 3 3 3 3 
 		3;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTU -n "NeckCntrl_01_scaleY";
 	rename -uid "682198C4-4649-9433-8439-B186FA24FF56";
 	setAttr ".tan" 3;
@@ -13001,7 +12947,6 @@ createNode animCurveTU -n "NeckCntrl_01_scaleY";
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 18 3 3 3 3 3 3 
 		3;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTU -n "NeckCntrl_01_scaleZ";
 	rename -uid "347C33A3-2947-2DC0-5DCF-FD8977E8EFEC";
 	setAttr ".tan" 3;
@@ -13011,7 +12956,6 @@ createNode animCurveTU -n "NeckCntrl_01_scaleZ";
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 18 3 3 3 3 3 3 
 		3;
-	setAttr -s 9 ".kwl[0:8]" yes yes no no no no no no no;
 createNode animCurveTA -n "mom_jaw_ctrl_rotateX";
 	rename -uid "B02DAB15-C348-658F-BFDA-E2BE9BC4FC76";
 	setAttr ".tan" 3;
@@ -13082,21 +13026,18 @@ createNode animCurveTU -n "ThumbCntrl_R_01_visibility";
 	setAttr ".tan" 9;
 	setAttr -s 7 ".ktv[0:6]"  -20 1 -10 1 0 1 1 1 20 1 138 1 140 1;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
-	setAttr -s 7 ".kwl[0:6]" yes yes yes no no no no;
 createNode animCurveTA -n "ThumbCntrl_R_01_rotateX";
 	rename -uid "1203DBA5-B54C-3013-0E30-9BA5FA330432";
 	setAttr ".tan" 3;
 	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 0 0 1 0 20 0 138 0 140 0;
 	setAttr -s 7 ".kit[0:6]"  16 16 3 3 3 3 3;
 	setAttr -s 7 ".kot[0:6]"  18 18 3 3 3 3 3;
-	setAttr -s 7 ".kwl[0:6]" yes yes yes no no no no;
 createNode animCurveTA -n "ThumbCntrl_R_01_rotateY";
 	rename -uid "B3EE46A2-7545-9E89-93CA-F198734A6285";
 	setAttr ".tan" 3;
 	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 0 0 1 0 20 0 138 0 140 6.4893959674419293;
 	setAttr -s 7 ".kit[0:6]"  16 16 3 3 3 3 3;
 	setAttr -s 7 ".kot[0:6]"  18 18 3 3 3 3 3;
-	setAttr -s 7 ".kwl[0:6]" yes yes yes no no no no;
 createNode animCurveTA -n "ThumbCntrl_R_01_rotateZ";
 	rename -uid "F51A6DD7-014E-A40A-0F8B-0BB6DFC68046";
 	setAttr ".tan" 3;
@@ -13104,34 +13045,29 @@ createNode animCurveTA -n "ThumbCntrl_R_01_rotateZ";
 		 138 55.533429870372878 140 -5.671658329680711;
 	setAttr -s 7 ".kit[0:6]"  16 16 3 3 3 3 3;
 	setAttr -s 7 ".kot[0:6]"  18 18 3 3 3 3 3;
-	setAttr -s 7 ".kwl[0:6]" yes yes yes no no no no;
 createNode animCurveTU -n "IndexCntrl_R_01_visibility";
 	rename -uid "023BEADD-C948-39AC-B2D9-C2B208A3DFE5";
 	setAttr ".tan" 9;
 	setAttr -s 5 ".ktv[0:4]"  -10 1 0 1 64 1 138 1 140 1;
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "IndexCntrl_R_01_rotateX";
 	rename -uid "BC63A688-7B4F-7C02-0E36-48B2829CE226";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "IndexCntrl_R_01_rotateY";
 	rename -uid "8FC00780-3941-5499-4B94-24BFAF847E78";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "IndexCntrl_R_01_rotateZ";
 	rename -uid "C40BAFE1-C243-67F6-C90B-839ACDFD44D1";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 -38.303129217618384;
 	setAttr -s 5 ".kit[0:4]"  16 3 1 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 1 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 	setAttr -s 5 ".kix[2:4]"  2.6666667461395264 3.0833332538604736 0.083333492279052734;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  0.4830622673034668 0.083333492279052734 
@@ -13142,145 +13078,122 @@ createNode animCurveTU -n "MiddleCntrl_R_01_visibility";
 	setAttr ".tan" 9;
 	setAttr -s 5 ".ktv[0:4]"  -10 1 0 1 64 1 138 1 140 1;
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "MiddleCntrl_R_01_rotateX";
 	rename -uid "96A6274B-194B-E0DC-07A2-B39F9C038FAB";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "MiddleCntrl_R_01_rotateY";
 	rename -uid "96DC5771-4E44-E7E3-4003-47815FE8BBD6";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "MiddleCntrl_R_01_rotateZ";
 	rename -uid "A94394ED-9B49-7BC8-722D-0D9A40E1F804";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 -43.022787995562545;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTU -n "RingCntrl_R_01_visibility";
 	rename -uid "8DA93332-EC45-AE54-1E5F-DF857B21A0EC";
 	setAttr ".tan" 9;
 	setAttr -s 5 ".ktv[0:4]"  -10 1 0 1 64 1 138 1 140 1;
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "RingCntrl_R_01_rotateX";
 	rename -uid "D832F7A8-D147-19FD-BCD4-1E88AD0DB497";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "RingCntrl_R_01_rotateY";
 	rename -uid "6FF221AC-354C-3E93-FEB5-3080BC2E4EE8";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "RingCntrl_R_01_rotateZ";
 	rename -uid "1ED39A63-8047-B3D4-5A29-73B734E25E5F";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 -9.3418327762537352;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTU -n "PinkyCntrl_R_01_visibility";
 	rename -uid "07C56FD0-804F-83FC-FAD6-7FB1C0F8E65A";
 	setAttr ".tan" 9;
 	setAttr -s 5 ".ktv[0:4]"  -10 1 0 1 64 1 138 1 140 1;
 	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "PinkyCntrl_R_01_rotateX";
 	rename -uid "ACA659A9-B547-500B-26BB-D28B7011548C";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 0;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "PinkyCntrl_R_01_rotateY";
 	rename -uid "64596A79-3F45-B0D4-CFCE-5486DDCA0C18";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 -17.013124939604435;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTA -n "PinkyCntrl_R_01_rotateZ";
 	rename -uid "5D2D16C7-6C4E-DF48-6483-A499E1B57F36";
 	setAttr ".tan" 3;
 	setAttr -s 5 ".ktv[0:4]"  -10 0 0 0 64 0 138 0 140 24.841083941624081;
 	setAttr -s 5 ".kit[0:4]"  16 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kwl[0:4]" yes yes no no no;
 createNode animCurveTU -n "momBabyShape_focalLength";
 	rename -uid "DB6C2D35-2F4B-2BFE-3901-D199EB861173";
 	setAttr ".tan" 3;
 	setAttr ".ktv[0]"  0 120;
-	setAttr ".kwl[0]" yes;
 createNode animCurveTA -n "Wrist_Cntrl_L_rotateX";
 	rename -uid "4A1A6C60-F644-EDB7-95B0-77A95F964E16";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -36.348186724227872 24 22.886255742748109
 		 27 10.875968614487039 30 20.452056171149831 50 15.238490711319457;
 createNode animCurveTA -n "Wrist_Cntrl_L_rotateY";
 	rename -uid "0D6DC8C2-E742-9416-ACA1-76A0E3B00A08";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -29.438072995000411 24 -21.726562322285321
 		 27 -19.742596369063669 30 6.1133092298665979 50 2.2021751863127048;
 createNode animCurveTA -n "Wrist_Cntrl_L_rotateZ";
 	rename -uid "C67075D6-3E42-5BC8-8476-95A87F3DB6BF";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -3.838300915987217 24 22.539135512434111
 		 27 18.548453542408858 30 -13.363610945983204 50 -32.573748093671988;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateX";
 	rename -uid "2774A3F3-3C49-DE16-8781-1990EA9E0B2A";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 63.435937703704276 24 62.567632070308846
 		 30 27.28604226379079 37 61.936190023873408 50 41.939237357262691;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateY";
 	rename -uid "DFDE8055-F246-B515-90A3-E39F7015E8C9";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  1 3.0160523102150978 24 -26.892478107646266
 		 37 -26.892478107646266 50 -43.668599040326932;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateZ";
 	rename -uid "6F53C000-CA41-C460-0FC9-26B533E9A774";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  1 -20.390271083798996 24 -82.717033636898222
 		 37 -62.87527685095214 50 -42.021416787763215;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateX";
 	rename -uid "E91A9B3D-3346-0635-AE1E-D890DF48E076";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 73.168895458034797 24 12.932179441832572
 		 27 16.62392772789023 37 14.26556621607212 50 15.592738814255592;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateY";
 	rename -uid "60D9DED6-424E-00A4-2EF9-FDBD3455E8B6";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -63.837160958703024 24 -26.424288316869998
 		 27 1.3671972705821756 37 -2.6090819422958775 50 -3.6886001286294183;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateZ";
 	rename -uid "13BFCFDE-9E42-3F44-8110-C58BDA7E433E";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -80.554692405176283 24 7.7290864466738336
 		 27 3.170009334805465 37 -24.961240472093873 50 -83.537779571310608;
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateX";
 	rename -uid "78D6ED10-C347-CB81-E332-FFA32111D533";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -6.6286633142222424 20 51.474972734469489
 		 176 51.474972734469489;
 	setAttr -s 3 ".kit[0:2]"  18 3 3;
@@ -13288,7 +13201,6 @@ createNode animCurveTA -n "UpperArm_Cntrl_R_rotateX";
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateY";
 	rename -uid "517B47CF-CA4B-68AA-970A-EABCF4A9E80C";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -4.5943330699915146 20 -69.980435190069528
 		 176 -6.696398525662886;
 	setAttr -s 3 ".kit[0:2]"  18 3 3;
@@ -13296,7 +13208,6 @@ createNode animCurveTA -n "UpperArm_Cntrl_R_rotateY";
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateZ";
 	rename -uid "0B151863-7841-0643-0828-9EAD00F19879";
 	setAttr ".tan" 3;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -26.044377223027162 20 -43.295159075006289
 		 176 -43.295159075006289;
 	setAttr -s 3 ".kit[0:2]"  18 3 3;
@@ -13304,303 +13215,246 @@ createNode animCurveTA -n "UpperArm_Cntrl_R_rotateZ";
 createNode animCurveTA -n "LowerArm_Cntrl_R_rotateX";
 	rename -uid "A1556166-C040-B53C-BB70-DEB5E3E85101";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 45.037906213387487 24 26.613048895366614;
 createNode animCurveTA -n "LowerArm_Cntrl_R_rotateY";
 	rename -uid "93FD680C-6944-8D73-0FE2-FC9CB302712B";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -53.107114259433558 24 -9.9596574945976286;
 createNode animCurveTA -n "LowerArm_Cntrl_R_rotateZ";
 	rename -uid "747E81C5-9C45-17F8-7A89-E79D5E6E4D9A";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -95.731812528765758 24 -31.837210120965295;
 createNode animCurveTA -n "Wrist_Cntrl_R_rotateX";
 	rename -uid "49E642D2-D34C-6965-03B3-4B8E33B38FF7";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 24.80001081595536 24 21.6646138612549;
 createNode animCurveTA -n "Wrist_Cntrl_R_rotateY";
 	rename -uid "1184604B-1942-534A-EDB8-D1BDE29E2042";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -1.9705124020976108 24 0;
 createNode animCurveTA -n "Wrist_Cntrl_R_rotateZ";
 	rename -uid "0829643E-A74D-CE1D-62DE-90A87794493C";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -44.256602234927044 24 0;
 createNode animCurveTA -n "Neck_Cntrl_rotateX";
 	rename -uid "507252D8-AA45-1868-858D-F998C166A93E";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -2.9245693067029039 22 9.9987742009936618
 		 27 -3.0718361128712202;
 createNode animCurveTA -n "Neck_Cntrl_rotateY";
 	rename -uid "C8293C18-C246-E626-FB62-74B316BC6BDC";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 2.1423720876489112 22 0.88996564215100227
 		 27 1.0376308611150673;
 createNode animCurveTA -n "Neck_Cntrl_rotateZ";
 	rename -uid "4C10D69F-064C-5CE8-2049-D6AD59E71DCA";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -14.211394943616888 22 -7.0452552850263928
 		 27 0.26869047839667054;
 createNode animCurveTA -n "Index_Cntrl_01_L_rotateX";
 	rename -uid "4610268D-2A44-C8FA-0A47-D5AB9768FA94";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -1.9517610258286568 50 -4.2446628147325534;
 createNode animCurveTA -n "Index_Cntrl_01_L_rotateY";
 	rename -uid "DC9342D8-474A-1A95-1207-6C997A230C02";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -10.119678082020849 50 -9.3979958792255598;
 createNode animCurveTA -n "Index_Cntrl_01_L_rotateZ";
 	rename -uid "87701EE2-2343-A323-3373-BBB3271D6B8D";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -36.223808462148369 24 18.785647388469041
 		 50 32.252171490533996;
 createNode animCurveTA -n "Index_Cntrl_02_L_rotateX";
 	rename -uid "478DC004-6A49-E23E-A064-E9B5D42BD45C";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -1.8847324801652847 24 0 50 -1.9267865942097016;
 createNode animCurveTA -n "Index_Cntrl_02_L_rotateY";
 	rename -uid "B8A3C4B1-D043-929A-621F-7589E7796723";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 21.209792872440485 24 0 50 1.6499707418895808;
 createNode animCurveTA -n "Index_Cntrl_02_L_rotateZ";
 	rename -uid "669916A1-5B4F-4F93-A812-BC864629840B";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -61.193754862715835 24 0 50 -33.472341353662728;
 createNode animCurveTA -n "Index_Cntrl_03_L_rotateX";
 	rename -uid "5B3E63EA-CF4C-E2C3-9A96-459B638C6B58";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
 createNode animCurveTA -n "Index_Cntrl_03_L_rotateY";
 	rename -uid "F149C8B9-024F-C19A-16E5-CBA798A4B5B1";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -52.312246055106741 24 0;
 createNode animCurveTA -n "Index_Cntrl_03_L_rotateZ";
 	rename -uid "9C82CD3E-3848-8229-6655-2890E3200C28";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -90.995785587987882 24 0;
 createNode animCurveTA -n "Thumb_Cntrl_02_L_rotateX";
 	rename -uid "7F9F7C82-0A40-BC86-171C-D7A3A8BCB538";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 34.402968967676507 24 22.529540238085907
 		 50 20.912810144760474;
 createNode animCurveTA -n "Thumb_Cntrl_02_L_rotateY";
 	rename -uid "432D1426-AF42-060D-F951-70BE65960A5B";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 61.929588733380662 24 -21.318323881738472
 		 50 0.29865403993159806;
 createNode animCurveTA -n "Thumb_Cntrl_02_L_rotateZ";
 	rename -uid "10DA0A45-C941-DD14-6ECF-0683BC36A95E";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 19.168996266195013 24 0 50 8.6900812086101826;
 createNode animCurveTA -n "Thumb_Cntrl_03_L_rotateX";
 	rename -uid "4772A2A2-014F-2369-AAC8-0AAE6000786F";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0.043362162814394402 24 0.035637991177171681;
 createNode animCurveTA -n "Thumb_Cntrl_03_L_rotateY";
 	rename -uid "8E5075F9-BA4A-CD41-BDF3-4AA4795FEEE1";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 38.250743724306943 24 -17.153785088617582;
 createNode animCurveTA -n "Thumb_Cntrl_03_L_rotateZ";
 	rename -uid "BE657E66-EF44-71FD-B403-D9A5097FCCED";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -25.746346220889397 24 -25.783702897255893;
 createNode animCurveTA -n "Pinky_Cntrl_01_L_rotateX";
 	rename -uid "042544CE-374D-026D-A570-CC9AC6D51F01";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -1.6210949953134202 24 18.924500219132778
 		 50 22.441849630413451;
 createNode animCurveTA -n "Middle_Cntrl_01_L_rotateX";
 	rename -uid "5E672E00-1647-EB6A-D8FF-F19EA9A8D861";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 1.1095555908140626 24 2.9785646161780948;
 createNode animCurveTA -n "Ring_Cntrl_01_L_rotateX";
 	rename -uid "900144C0-1242-0AAE-8EA4-F9B816870271";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0.38404452510654019 24 1.2087053775271202;
 createNode animCurveTA -n "Pinky_Cntrl_01_L_rotateY";
 	rename -uid "BA266C8C-9043-3CC2-E964-5C928A554C42";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 4.5089760083445203 24 21.03480373521765
 		 50 17.204484622489574;
 createNode animCurveTA -n "Middle_Cntrl_01_L_rotateY";
 	rename -uid "2DE21C0B-A245-87C7-CE4D-13B134F78150";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 4.6609373719955096 24 -10.253347742889384;
 createNode animCurveTA -n "Ring_Cntrl_01_L_rotateY";
 	rename -uid "5A54D922-B541-10B4-591B-BD9D9440174E";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 4.7689761786425011 24 3.2716128096050872;
 createNode animCurveTA -n "Pinky_Cntrl_01_L_rotateZ";
 	rename -uid "5C2E3156-5140-8614-0CD1-CA89870AE176";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -72.6014410978878 24 28.332861226914577
 		 50 39.037612244549955;
 createNode animCurveTA -n "Middle_Cntrl_01_L_rotateZ";
 	rename -uid "CDECC610-B141-555D-3E26-CFA75DFCCAC0";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -44.19262214678249 24 43.499822384882172;
 createNode animCurveTA -n "Ring_Cntrl_01_L_rotateZ";
 	rename -uid "50EC03EE-7A42-FD44-3A24-C0B5C7013E08";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 -37.687953322093115 24 27.676801460461107;
 createNode animCurveTA -n "Middle_Cntrl_02_L_rotateX";
 	rename -uid "406636C6-0040-729D-0B48-E683AB69D5CE";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -0.36460754400154494 50 -0.57693474694985847;
 createNode animCurveTA -n "Ring_Cntrl_02_L_rotateX";
 	rename -uid "F541E18E-774A-B6E6-E6F2-18B98E2F265B";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 0.84778070648485815 50 1.7109695289938238;
 createNode animCurveTA -n "Pinky_Cntrl_02_L_rotateX";
 	rename -uid "FBF02B0A-EF41-4A1C-7C6A-B7AD2B87EB66";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -1.3438715850611231 50 -2.9782487024047666;
 createNode animCurveTA -n "Middle_Cntrl_02_L_rotateY";
 	rename -uid "7AD675D9-EA40-A8E5-5BBA-B6BD87F6E398";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 0.51640648671466716 50 0.25837816279246473;
 createNode animCurveTA -n "Ring_Cntrl_02_L_rotateY";
 	rename -uid "0D6177B9-0A4C-2B17-1B8D-5AAA8601CCC6";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -1.963643326161236 50 -1.2835181411730725;
 createNode animCurveTA -n "Pinky_Cntrl_02_L_rotateY";
 	rename -uid "8B007DC6-894D-D87A-7DBC-EA996187B33F";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 4.4887698394197653 50 3.618450114914642;
 createNode animCurveTA -n "Middle_Cntrl_02_L_rotateZ";
 	rename -uid "81F38C34-EE47-08B3-43BD-6CB7DF74CEFB";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -54.540607909329935 24 -20.491991661123354
 		 50 -51.143095326997212;
 createNode animCurveTA -n "Ring_Cntrl_02_L_rotateZ";
 	rename -uid "FD1FD41C-B744-85D8-C5B1-88A21C7784E3";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -41.556772226813287 24 -4.4819338761111123
 		 50 -34.258949271993608;
 createNode animCurveTA -n "Pinky_Cntrl_02_L_rotateZ";
 	rename -uid "8B330B3E-D344-5C49-F534-BD840667C68D";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -54.540607909329935 24 -4.5531413367702704
 		 50 -27.368119758000411;
 createNode animCurveTA -n "Ring_Cntrl_03_L_rotateX";
 	rename -uid "68F853EE-FE41-19DD-A0E3-C49BACB236F0";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -11.195764257486193 24 0 50 0;
 createNode animCurveTA -n "Ring_Cntrl_03_L_rotateY";
 	rename -uid "FCE8F631-CF40-2EC4-C22D-0BA94AD0A52B";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 6.5816697752173861 24 0 50 0;
 createNode animCurveTA -n "Ring_Cntrl_03_L_rotateZ";
 	rename -uid "4E8E511B-9E44-D378-1D31-A6B4E6984F65";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -65.32631133018009 24 0 50 -34.213493473725244;
 createNode animCurveTA -n "Thumb_Cntrl_01_L_rotateX";
 	rename -uid "C68BF95A-CA4E-6165-A59D-6BA20B414198";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 3.9349603261218187 50 41.366316404762934;
 createNode animCurveTA -n "Thumb_Cntrl_01_L_rotateY";
 	rename -uid "C3CE5DC9-CC4E-C182-DD1A-98B88322004C";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -17.365119489760225 50 -9.6223302633533816;
 createNode animCurveTA -n "Thumb_Cntrl_01_L_rotateZ";
 	rename -uid "6911F81E-0442-980C-B77C-3480C09E3063";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -2.245087748397204 50 -19.887962202052236;
 createNode animCurveTA -n "Thigh_Cntrl_R_rotateX";
 	rename -uid "99E1C1B8-224C-22D0-6B85-459FA1F7ACFA";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -9.8663587513398134 24 -6.515752459976782
 		 28 -19.8672254245391;
 createNode animCurveTA -n "Thigh_Cntrl_R_rotateY";
 	rename -uid "9732F8EC-A746-EC65-3A87-EA8057B69D87";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 4.2225228813098976 24 4.8113132341951186
 		 28 7.3909032712283445;
 createNode animCurveTA -n "Thigh_Cntrl_R_rotateZ";
 	rename -uid "C85A5200-7E43-290D-2194-61991A451000";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 6.7561367824113781 24 45.621129468948745
 		 28 -9.8931527360674476;
 createNode animCurveTA -n "Knee_Cntrl_R_rotateX";
 	rename -uid "EFDFEF9B-0145-4EC7-42D9-FF87C37FF6B8";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 0 28 0;
 createNode animCurveTA -n "Knee_Cntrl_R_rotateY";
 	rename -uid "99E6EFD0-DB48-E8DB-3FA2-9DBC65883F99";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 0 28 0;
 createNode animCurveTA -n "Knee_Cntrl_R_rotateZ";
 	rename -uid "347F79FA-2C46-60B2-D513-508B14E3D689";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 -42.107879586680369 24 -107.24109268893433
 		 28 -10.997424048654294;
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateX";
 	rename -uid "06418279-CD48-344E-25AC-418A942E29EE";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 -10.914188515382424 28 -9.0099999516092453;
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateY";
 	rename -uid "A8114E7D-5045-20A3-5D38-64BEAA3F08D9";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 0 28 -6.1851043313381293;
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateZ";
 	rename -uid "F346D056-C342-F635-8AE7-079A2DA36DDF";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 24 19.247718459369192 28 -14.947671119324145;
 createNode animCurveTA -n "mom_l_toe_ptr_rotateX";
 	rename -uid "F0382C58-0146-E7B4-0E1C-0AA560D039FB";
@@ -13639,21 +13493,18 @@ createNode animCurveTA -n "NeckCntrl_02_rotateX";
 createNode animCurveTA -n "Spine_Cntrl_04_rotateX";
 	rename -uid "7CF5559E-CD40-90B3-BC8B-87828BF382A0";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  11 0 21 0 150 0 175 77.878140271057148;
 	setAttr -s 4 ".kit[2:3]"  3 3;
 	setAttr -s 4 ".kot[2:3]"  3 3;
 createNode animCurveTA -n "Spine_Cntrl_04_rotateY";
 	rename -uid "FC1DCB96-BE49-CC67-F4FC-FC8C8E5DB030";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  11 0 21 0 150 0 175 0;
 	setAttr -s 4 ".kit[2:3]"  3 3;
 	setAttr -s 4 ".kot[2:3]"  3 3;
 createNode animCurveTA -n "Spine_Cntrl_04_rotateZ";
 	rename -uid "DBC8F9F4-5D42-72DC-F2F7-488AC746BF31";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  11 0 21 13.709294963158955 150 13.709294963158955
 		 175 13.709294963158955;
 	setAttr -s 4 ".kit[2:3]"  3 3;
@@ -13661,17 +13512,14 @@ createNode animCurveTA -n "Spine_Cntrl_04_rotateZ";
 createNode animCurveTA -n "Spine_Cntrl_01_rotateX";
 	rename -uid "0A01F728-D94C-210C-0042-DCB6E7C6E832";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  11 0 21 5.30140826395166 36 0;
 createNode animCurveTA -n "Spine_Cntrl_01_rotateY";
 	rename -uid "9AE99C1D-9843-53EF-BA94-E38398CB7AEC";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  11 0 21 0 36 0;
 createNode animCurveTA -n "Spine_Cntrl_01_rotateZ";
 	rename -uid "AFA69AB5-084C-D59A-5C42-0B828B85F37E";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  11 0 21 1.3 36 0;
 createNode partition -n "mtorPartition1";
 	rename -uid "3B5F43CA-DE4E-B225-705E-12A35D4BF5F6";
@@ -13697,7 +13545,6 @@ createNode partition -n "mtorPartition3";
 createNode animCurveTL -n "persp1_translateX3";
 	rename -uid "0E8CF25C-E644-FCD5-7F05-63A8481BA4A0";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 0.8641883453145256 57 -5.9925514263365969
 		 72 -9.158202621038555;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
@@ -13705,7 +13552,6 @@ createNode animCurveTL -n "persp1_translateX3";
 createNode animCurveTL -n "persp1_translateY3";
 	rename -uid "A6B3F1DD-C048-75D3-C3A1-B7924AB0AA45";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 8.9132163161386551 57 13.620358990152381
 		 72 14.938203678430449;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
@@ -13713,7 +13559,6 @@ createNode animCurveTL -n "persp1_translateY3";
 createNode animCurveTL -n "persp1_translateZ3";
 	rename -uid "464A26D4-5148-D92F-9A32-AF9BE970978C";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 15.883392151901129 57 24.683822740985669
 		 72 30.694961082207499;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
@@ -13725,11 +13570,9 @@ createNode animCurveTA -n "persp1_rotateX3";
 		 72 -36.43803762537032;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
 	setAttr -s 3 ".kot[0:2]"  3 18 18;
-	setAttr -s 3 ".kwl[0:2]" yes yes yes;
 createNode animCurveTA -n "persp1_rotateY3";
 	rename -uid "AF17B935-F94A-3BBB-53F0-F1BDA8685468";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 2.1819024658339417 57 -20.473681021721553
 		 72 -22.212785469220055;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
@@ -13737,7 +13580,6 @@ createNode animCurveTA -n "persp1_rotateY3";
 createNode animCurveTA -n "persp1_rotateZ3";
 	rename -uid "A0F8DE1A-2D41-E96E-4BD7-26AE90746A24";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 0.24151334562832272 57 0.86087392279478814
 		 72 1.2998403992883107;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
@@ -13745,27 +13587,23 @@ createNode animCurveTA -n "persp1_rotateZ3";
 createNode animCurveTU -n "persp1_visibility3";
 	rename -uid "55334D34-CC46-2CFE-E1AA-D29C9B076C52";
 	setAttr ".tan" 9;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  0 1 37 1 52 1;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTU -n "persp1_scaleX3";
 	rename -uid "8DB95D59-7D48-2277-DF84-29AB4EC42A21";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 1 57 1 72 1;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
 	setAttr -s 3 ".kot[0:2]"  3 18 18;
 createNode animCurveTU -n "persp1_scaleY3";
 	rename -uid "961FE223-E142-1B7D-3924-B8BE84C631D3";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 1 57 1 72 1;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
 	setAttr -s 3 ".kot[0:2]"  3 18 18;
 createNode animCurveTU -n "persp1_scaleZ3";
 	rename -uid "41C451D7-2348-7FF8-5EF1-04BEAE9F885C";
 	setAttr ".tan" 18;
-	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  20 1 57 1 72 1;
 	setAttr -s 3 ".kit[0:2]"  3 18 18;
 	setAttr -s 3 ".kot[0:2]"  3 18 18;
@@ -13773,7 +13611,6 @@ createNode animCurveTU -n "momBabyShape_focalLength3";
 	rename -uid "7299CF29-8042-7E2A-7D87-C781EC5AAA08";
 	setAttr ".tan" 3;
 	setAttr ".ktv[0]"  0 70;
-	setAttr ".kwl[0]" yes;
 createNode animCurveTU -n "Spine_Cntrl_Offset_01_visibility";
 	rename -uid "0C34EEFF-443E-606C-236B-AE887A99EDEE";
 	setAttr ".tan" 9;
@@ -14523,8 +14360,8 @@ createNode animCurveTA -n "NeckCntrl_02_rotateZ";
 	rename -uid "238DAD87-4D85-1E10-D2AC-CC87BEB79D8B";
 	setAttr ".tan" 1;
 	setAttr -s 14 ".ktv[0:13]"  1 0 20 -8.1604887201917684 50 11.647159389531963
-		 115 11.647159389531963 128 12.591676169499399 140 5.0503550131502735 148 1.7132150120625798
-		 159 -11.242613322878414 174 -11.242613322878414 186 -0.11741556864542604 207 -0.11741556864542604
+		 115 11.647159389531963 128 12.591676169499399 140 5.0503550131502735 150 1.7132150120625798
+		 159 -34.844494039143903 174 -34.844494039143903 186 -0.11741556864542604 207 -0.11741556864542604
 		 226 11.647159389531963 238 11.647159389531963 248 3.7567320405726741;
 	setAttr -s 14 ".kit[0:13]"  3 3 1 3 1 1 3 1 
 		1 1 3 1 3 3;
@@ -14532,12 +14369,12 @@ createNode animCurveTA -n "NeckCntrl_02_rotateZ";
 		1 3 1 1 3 3;
 	setAttr -s 14 ".ktl[3:13]" no no yes no no no no no yes yes yes;
 	setAttr -s 14 ".kix[2:13]"  1.25 2.7083332538604736 0.68963223695755005 
-		0.4999995231628418 0.33333301544189453 0.67391467094421387 0.67391467094421387 0.70857101678848267 
+		0.4999995231628418 0.41666650772094727 0.67391467094421387 0.67391467094421387 0.70857101678848267 
 		0.875 1.2229222059249878 0.5 0.41666603088378906;
 	setAttr -s 14 ".kiy[2:13]"  0 0 0 -0.2193681001663208 0 0 0 0 0 0 0 
 		0;
 	setAttr -s 14 ".kox[3:13]"  0.70273607969284058 0.4999995231628418 
-		0.45833301544189453 0.51119464635848999 0.79217123985290527 0.79217123985290527 0.875 
+		0.45833301544189453 0.64768719673156738 0.79217123985290527 0.79217123985290527 0.875 
 		1.0766817331314087 2.6812553405761719 0.41666603088378906 0.41666603088378906;
 	setAttr -s 14 ".koy[3:13]"  0 0 -0.20108731091022491 0 0 0 0 0 0 0 
 		0;
@@ -15265,6 +15102,7 @@ createNode animCurveTU -n "wine_bottle_blendParent5";
 	setAttr ".ktv[0]"  1 1;
 createNode timeEditor -s -n "timeEditor";
 	rename -uid "C38ACA43-4EE1-6346-5C56-6DAAD57036A9";
+	setAttr -s 2 ".cmp";
 	setAttr ".ac" 0;
 createNode timeEditorTracks -n "Composition1";
 	rename -uid "602ED1D7-4902-A83E-6992-93BF3F4F9A63";
@@ -15981,66 +15819,74 @@ createNode animCurveTU -n "battle_grab_loc_scaleZ";
 createNode animCurveTL -n "wine_bottle_translateX1";
 	rename -uid "94CAE8A0-401F-8350-E4DF-93B2B893CE55";
 	setAttr ".tan" 1;
-	setAttr -s 6 ".ktv[0:5]"  140 -10.848717455721358 157 -3.172816993170021
-		 174 -3.172816993170021 182 -6.6536313744487989 185 -5.6647221688070744 193 -5.6647221688070744;
+	setAttr -s 6 ".ktv[0:5]"  140 -10.848717455721358 157 -2.8316990712966872
+		 174 -2.8316990712966872 182 -6.6536313744487989 185 -5.6647221688070744 193 -5.6647221688070744;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  3 1 1 3 3;
-	setAttr -s 6 ".ktl[2:5]" no yes no yes;
-	setAttr -s 6 ".kix[0:5]"  1.100985050201416 1.1173926591873169 0.16666698455810547 
+	setAttr -s 6 ".ktl[4:5]" no yes;
+	setAttr -s 6 ".kwl[0:5]" yes yes yes yes yes yes;
+	setAttr -s 6 ".kix[0:5]"  1.100985050201416 1.1173926591873169 1.1173926591873169 
 		0.21620579063892365 0.01949634961783886 0.33333349227905273;
 	setAttr -s 6 ".kiy[0:5]"  0 0 0 0 0 0;
-	setAttr -s 6 ".kox[0:5]"  1.100985050201416 0.70833349227905273 0.34978294372558594 
+	setAttr -s 6 ".kox[0:5]"  1.100985050201416 0.70833349227905273 0.70833349227905273 
 		0.17453926801681519 0.33333349227905273 0.33333349227905273;
 	setAttr -s 6 ".koy[0:5]"  0 0 0 0 0 0;
 createNode animCurveTL -n "wine_bottle_translateY1";
 	rename -uid "57BFB3BE-4239-209F-42BF-F48F09CC71DF";
 	setAttr ".tan" 1;
 	setAttr -s 6 ".ktv[0:5]"  140 -6.0737050868616995 153 4.4623573913658543
-		 157 6.6439915670052843 174 6.6439915670052843 185 -2.7291637911683782 193 -2.7291637911683782;
+		 157 8.9354834755650341 174 8.9354834755650341 185 -2.7291637911683782 193 -2.7291637911683782;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[5]"  3;
-	setAttr -s 6 ".ktl[3:5]" no no yes;
+	setAttr -s 6 ".ktl[4:5]" no yes;
 	setAttr -s 6 ".kix[0:5]"  1.100985050201416 0.59588170051574707 0.20126152038574219 
-		0.16666698455810547 0.0039324760437011719 0.33333349227905273;
+		0.20126152038574219 0.0039324760437011719 0.33333349227905273;
 	setAttr -s 6 ".kiy[0:5]"  0 19.323394775390625 0 0 0 0;
 	setAttr -s 6 ".kox[0:5]"  0.90267848968505859 0.15602757036685944 
-		0.70833349227905273 0.73735654354095459 0.41666650772094727 0.33333349227905273;
+		0.70833349227905273 0.70833349227905273 0.41666650772094727 0.33333349227905273;
 	setAttr -s 6 ".koy[0:5]"  0 5.0597090721130371 0 0 0 0;
 createNode animCurveTL -n "wine_bottle_translateZ1";
 	rename -uid "2F5DB1FF-4457-12AC-282A-08AD29DED693";
 	setAttr ".tan" 1;
-	setAttr -s 6 ".ktv[0:5]"  140 3.2304622755098213 157 4.0859373355825985
-		 174 4.0859373355825985 183 7.7315157021931995 185 8.4825159937989181 193 8.4825159937989181;
+	setAttr -s 6 ".ktv[0:5]"  140 3.2304622755098213 157 3.2304622755098213
+		 174 3.2304622755098213 183 7.7315157021931995 185 8.4825159937989181 193 8.4825159937989181;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  3 1 1 1 3;
-	setAttr -s 6 ".ktl[2:5]" no no no yes;
-	setAttr -s 6 ".kix[0:5]"  1.100985050201416 1.1173926591873169 0.16666698455810547 
+	setAttr -s 6 ".ktl[3:5]" no no yes;
+	setAttr -s 6 ".kwl[0:5]" yes yes yes yes yes yes;
+	setAttr -s 6 ".kix[0:5]"  1.100985050201416 1.1173926591873169 1.1173926591873169 
 		0.24717338383197784 0.15147688984870911 0.33333349227905273;
 	setAttr -s 6 ".kiy[0:5]"  0 0 0 0 0 0;
-	setAttr -s 6 ".kox[0:5]"  1.100985050201416 0.70833349227905273 0.13216781616210938 
+	setAttr -s 6 ".kox[0:5]"  1.100985050201416 0.70833349227905273 0.70833349227905273 
 		0.18218459188938141 0.41666650772094727 0.33333349227905273;
 	setAttr -s 6 ".koy[0:5]"  0 0 0 0 0 0;
 createNode animCurveTU -n "wine_bottle_visibility2";
 	rename -uid "02F8DBE3-45F8-6AF1-C280-37972053CD39";
-	setAttr ".tan" 9;
-	setAttr -s 3 ".ktv[0:2]"  140 1 157 1 194 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr ".tan" 5;
+	setAttr -s 4 ".ktv[0:3]"  140 1 157 1 174 1 194 1;
+	setAttr -s 4 ".kit[0:3]"  9 9 1 9;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+	setAttr -s 4 ".kix[2:3]"  0.70833301544189453 0.83333301544189453;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTA -n "wine_bottle_rotateX1";
 	rename -uid "ECDBFDE1-4E47-110A-541C-C8B2C92910B4";
 	setAttr ".tan" 1;
-	setAttr -s 7 ".ktv[0:6]"  140 -65.880963125957138 149 -8.4537343611736997
-		 157 93.033584545411117 174 93.033584545411117 179 50.493382293082249 186 -1.5687694818714735
-		 193 -1.5687694818714735;
-	setAttr -s 7 ".kit[6]"  3;
-	setAttr -s 7 ".kot[6]"  3;
-	setAttr -s 7 ".ktl[0:6]" no yes yes no no no yes;
-	setAttr -s 7 ".kix[0:6]"  0.83333301544189453 0.15878391265869141 
-		0.39157187938690186 0.16666698455810547 0.1131591796875 0.31666147708892822 0.29166698455810547;
-	setAttr -s 7 ".kiy[0:6]"  0 0.83532845973968506 0 0 -0.68194955587387085 
+	setAttr -s 8 ".ktv[0:7]"  140 -65.880963125957138 149 30.457731507825006
+		 153 72.357230251252304 157 114.34056300414207 174 114.34056300414207 179 50.493382293082249
+		 186 -1.5687694818714735 193 -1.5687694818714735;
+	setAttr -s 8 ".kit[2:7]"  3 1 1 1 1 3;
+	setAttr -s 8 ".kot[7]"  3;
+	setAttr -s 8 ".ktl[0:7]" no yes no no yes no no yes;
+	setAttr -s 8 ".kwl[0:7]" yes yes no no yes yes yes yes;
+	setAttr -s 8 ".kix[0:7]"  0.83333301544189453 0.15878391265869141 
+		0.16666650772094727 0.35047119855880737 0.39157187938690186 0.1131591796875 0.31666147708892822 
+		0.29166698455810547;
+	setAttr -s 8 ".kiy[0:7]"  0 0.83532845973968506 0 0 0 -0.68194955587387085 
 		0 0;
-	setAttr -s 7 ".kox[0:6]"  0.24885749816894531 0.35688400268554688 
-		0.5673518180847168 0.23764228820800781 0.16157643496990204 0.41666650772094727 0.29166698455810547;
-	setAttr -s 7 ".koy[0:6]"  0 1.8774822950363159 0 0 -0.97373968362808228 
+	setAttr -s 8 ".kox[0:7]"  0.24885749816894531 0.18338298797607422 
+		0.25510042905807495 0.5673518180847168 0.5673518180847168 0.16157643496990204 0.41666650772094727 
+		0.29166698455810547;
+	setAttr -s 8 ".koy[0:7]"  0 0.96473807096481323 0 0 0 -0.97373968362808228 
 		0 0;
 createNode animCurveTA -n "wine_bottle_rotateY1";
 	rename -uid "4E947088-46C5-39CE-45B4-07B55A595914";
@@ -16049,18 +15895,20 @@ createNode animCurveTA -n "wine_bottle_rotateY1";
 		 149 -209.21120099415981 157 -202.31147160064722 174 -202.31147160064722 186 -240.02808595451654
 		 195 -240.02800000000002 201 -220.46231178086137 209 -220.46257006629631 213 -242.65708868909985
 		 215 -242.65708868909985 218 -228.78645985953017;
-	setAttr -s 12 ".kit[0:11]"  3 1 1 1 3 1 1 1 
+	setAttr -s 12 ".kit[0:11]"  3 1 1 1 1 1 1 1 
 		3 1 1 1;
 	setAttr -s 12 ".kot[0:11]"  3 1 1 1 1 1 1 3 
 		1 1 1 3;
 	setAttr -s 12 ".ktl[1:11]" no yes no no no yes no no no yes no;
+	setAttr -s 12 ".kwl[0:11]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes;
 	setAttr -s 12 ".kix[1:11]"  0.041666507720947266 0.30071926116943359 
-		0.75752967596054077 0.70833349227905273 0.21190743148326874 0.25100943446159363 0.29066175222396851 
+		0.75752967596054077 0.75752967596054077 0.21190743148326874 0.25100943446159363 0.29066175222396851 
 		0.33333301544189453 0.23459804058074951 0.25099021196365356 0.2225436270236969;
 	setAttr -s 12 ".kiy[1:11]"  0 0.090808570384979248 0 0 0 0 0 0 0 0 
 		0;
 	setAttr -s 12 ".kox[1:11]"  0.41178989410400391 0.36041450500488281 
-		0.79166650772094727 0.61104661226272583 0.13685131072998047 0.33434244990348816 0.33333301544189453 
+		0.79166650772094727 0.79166650772094727 0.13685131072998047 0.33434244990348816 0.33333301544189453 
 		0.28788384795188904 0.094249248504638672 0.16765719652175903 0.125;
 	setAttr -s 12 ".koy[1:11]"  0 0.10883504152297974 0 0 0 0 0 0.05696646124124527 
 		0 0 0;
@@ -16069,30 +15917,52 @@ createNode animCurveTA -n "wine_bottle_rotateZ1";
 	setAttr ".tan" 1;
 	setAttr -s 6 ".ktv[0:5]"  140 -65.87716733757955 144 -61.378864678864012
 		 157 -12.754957584005137 174 -12.754957584005137 186 -0.27548825937616211 193 -0.27548825937616211;
-	setAttr -s 6 ".kit[3:5]"  3 1 3;
+	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[4:5]"  3 3;
-	setAttr -s 6 ".ktl[0:5]" no yes yes no no yes;
+	setAttr -s 6 ".ktl[0:5]" no yes yes yes no yes;
+	setAttr -s 6 ".kwl[0:5]" yes yes yes yes yes yes;
 	setAttr -s 6 ".kix[0:5]"  0.70833301544189453 0.13330793380737305 
-		0.99075078964233398 0.70833349227905273 0.21190743148326874 0.29166698455810547;
+		0.99075078964233398 0.99075078964233398 0.21190743148326874 0.29166698455810547;
 	setAttr -s 6 ".kiy[0:5]"  0 0.14638005197048187 0 0 0 0;
 	setAttr -s 6 ".kox[0:5]"  0.20540428161621094 0.61130619049072266 
-		0.70833349227905273 0.63588327169418335 0.29166698455810547 0.29166698455810547;
+		0.70833349227905273 0.70833349227905273 0.29166698455810547 0.29166698455810547;
 	setAttr -s 6 ".koy[0:5]"  0 0.67125040292739868 0 0 0 0;
 createNode animCurveTU -n "wine_bottle_scaleX1";
 	rename -uid "9763EEDB-40C5-6646-D3A4-4FADAF0AE6C8";
 	setAttr ".tan" 3;
-	setAttr -s 3 ".ktv[0:2]"  140 0.74435670947324362 157 0.74435670947324362
-		 194 0.74435670947324362;
+	setAttr -s 4 ".ktv[0:3]"  140 0.74435670947324362 157 0.74435670947324362
+		 174 0.74435670947324362 194 0.74435670947324362;
+	setAttr -s 4 ".kit[2:3]"  1 3;
+	setAttr -s 4 ".kot[2:3]"  1 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+	setAttr -s 4 ".kix[2:3]"  0.70833301544189453 0.83333301544189453;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1.5416665077209473 0.83333301544189453;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTU -n "wine_bottle_scaleY1";
 	rename -uid "A9CDE788-45F3-E94A-0C24-C89B37F84603";
 	setAttr ".tan" 3;
-	setAttr -s 3 ".ktv[0:2]"  140 0.87954174293886356 157 0.87954174293886356
-		 194 0.87954174293886356;
+	setAttr -s 4 ".ktv[0:3]"  140 0.87954174293886356 157 0.87954174293886356
+		 174 0.87954174293886356 194 0.87954174293886356;
+	setAttr -s 4 ".kit[2:3]"  1 3;
+	setAttr -s 4 ".kot[2:3]"  1 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+	setAttr -s 4 ".kix[2:3]"  0.70833301544189453 0.83333301544189453;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1.5416665077209473 0.83333301544189453;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTU -n "wine_bottle_scaleZ1";
 	rename -uid "C7E429D3-49E0-C174-161E-909CFEB41981";
 	setAttr ".tan" 3;
-	setAttr -s 3 ".ktv[0:2]"  140 0.74435670947324362 157 0.74435670947324362
-		 194 0.74435670947324362;
+	setAttr -s 4 ".ktv[0:3]"  140 0.74435670947324362 157 0.74435670947324362
+		 174 0.74435670947324362 194 0.74435670947324362;
+	setAttr -s 4 ".kit[2:3]"  1 3;
+	setAttr -s 4 ".kot[2:3]"  1 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+	setAttr -s 4 ".kix[2:3]"  0.70833301544189453 0.83333301544189453;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1.5416665077209473 0.83333301544189453;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTU -n "Spine_Cntrl_04_visibility1";
 	rename -uid "B356B8F3-4A16-1CB1-C753-2295D9AFA26A";
 	setAttr ".tan" 9;
@@ -16120,43 +15990,2889 @@ createNode animCurveTU -n "EdgeMouth_Cntrl_R_visibility";
 	setAttr ".tan" 9;
 	setAttr ".ktv[0]"  1 1;
 	setAttr ".kot[0]"  5;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "72365397-4B14-50B8-A810-BDA1CA906F18";
+createNode renderLayerManager -n "mom_scene:renderLayerManager";
+	rename -uid "0CA2C7D6-43D0-8779-A194-DCA95324F75C";
+createNode renderLayer -n "mom_scene:defaultRenderLayer";
+	rename -uid "962B6A67-4ADD-78F5-38FC-1C94507D9E02";
+	setAttr ".g" yes;
+createNode partition -n "mom_scene:mtorPartition";
+	rename -uid "BCFFEEC3-404E-C89A-80F1-8786D4C39A0F";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom3:mtorPartition";
+	rename -uid "1E550749-4155-CA39-1CE8-28A9E2D31EE5";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom3:mom_k:mtorPartition";
+	rename -uid "60B2BEDA-41C2-577A-D1B8-C693D365191D";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom3:mom_k:pasted__mtorPartition";
+	rename -uid "9E23C995-4C8E-1ECD-F5EB-32B3BD548E7B";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode lambert -n "mom_scene:mom3:unwrapBaseShader";
+	rename -uid "88F6EC18-43B9-9A7A-F52E-E3ACCC7D5AB6";
+	setAttr ".dc" 1;
+	setAttr ".c" -type "float3" 0 0.60000002 0.40000001 ;
+createNode lambert -n "mom_scene:mom3:unwrapChekcerShader";
+	rename -uid "E438452B-4F2A-9BD8-27B7-31967C9FD768";
+createNode checker -n "mom_scene:mom3:unwrapTestPattern";
+	rename -uid "A7959782-4F47-C0CB-FDC6-A49B339436CD";
+	addAttr -ci true -sn "resolution" -ln "resolution" -at "double";
+	setAttr ".c1" -type "float3" 0.30000001 0.30000001 0.30000001 ;
+	setAttr ".c2" -type "float3" 0.69999999 0.69999999 0.69999999 ;
+	setAttr ".resolution" 512;
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture1";
+	rename -uid "4CCDA08D-4C75-F6EF-F27E-BDBA91EA3531";
+	setAttr ".re" -type "float2" 13.5 13.5 ;
+createNode groupId -n "mom_scene:mom3:groupId13";
+	rename -uid "6C950427-45DD-5AA8-8122-6F8C52A02348";
+	setAttr ".ihi" 0;
+createNode lambert -n "mom_scene:mom3:momEyes";
+	rename -uid "CDB07168-4FE4-4E0E-EBE2-7583777C7FE1";
+createNode file -n "mom_scene:mom3:file1";
+	rename -uid "3E30E9E6-479D-A27A-EB87-D388FA8C6520";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/MomEye-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture3";
+	rename -uid "86A73EE9-475D-4912-45D9-FABF7358B931";
+createNode lambert -n "mom_scene:mom3:momHair_LBang1";
+	rename -uid "62CD5EAA-4451-AE63-B8EE-3BBB448CF820";
+createNode file -n "mom_scene:mom3:file3";
+	rename -uid "2B804516-4D88-DDA4-8910-CC9504A8F5F7";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture5";
+	rename -uid "D9343D6C-4D42-4C29-38A1-66960850B382";
+createNode lambert -n "mom_scene:mom3:shirtShader";
+	rename -uid "743A3F46-445B-8B43-837C-488719CD85EC";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode lambert -n "mom_scene:mom3:apronShader";
+	rename -uid "404DFAFF-4926-677E-758D-9D9411D951E2";
+	setAttr ".c" -type "float3" 0.116021 0.1420126 0.18099999 ;
+createNode lambert -n "mom_scene:mom3:skirtShader";
+	rename -uid "C1174817-4E75-8C50-CDAE-0787B36D9A30";
+	setAttr ".c" -type "float3" 0 0.033600006 0.083999999 ;
+createNode materialInfo -n "mom_scene:mom3:materialInfo11";
+	rename -uid "E033B1DF-47C5-A676-5443-139B3D1FEC4D";
+createNode file -n "mom_scene:mom3:file5";
+	rename -uid "DBCC3CB5-4D3E-1CF4-BA70-CE85B4DF35A3";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture7";
+	rename -uid "683BDA68-4E4D-0E53-863C-E7A0A62B015E";
+createNode file -n "mom_scene:mom3:file6";
+	rename -uid "828F3D91-4DD8-D193-6C2F-BC88A362DEF1";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture8";
+	rename -uid "AB858E04-41B7-431D-0F02-948A5A5A82B9";
+createNode rampShader -n "mom_scene:mom3:momBrightnessRamp";
+	rename -uid "158CBA83-4062-C8EC-0795-0083F84BE7BD";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode rampShader -n "mom_scene:mom3:momEarBrightnessRamp1";
+	rename -uid "78D43386-4583-474D-CCB5-C49A18C30EB0";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.50800001621246338;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom3:file7";
+	rename -uid "51902C01-4543-CD71-4C94-1E9D858FF981";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture9";
+	rename -uid "5754F03A-42EE-CADD-A697-87B73FEB65AF";
+createNode file -n "mom_scene:mom3:file8";
+	rename -uid "163FE821-403D-BE5B-3EF8-CE9BF01C8DB7";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture10";
+	rename -uid "8B54F37E-4C5F-D394-A7D2-BA82304D3CEB";
+createNode rampShader -n "mom_scene:mom3:momEarBrightnessRamp";
+	rename -uid "8CD4E151-44FB-E9DC-1C14-20AE38A80E5A";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom3:file9";
+	rename -uid "76A58E40-4165-6B52-0958-81AE9163DA84";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture11";
+	rename -uid "5A748392-49A6-6C2B-EA29-7C8079837111";
+createNode file -n "mom_scene:mom3:file10";
+	rename -uid "0E0F215F-4676-8DA7-0D7E-A49C187B3ED9";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom3:place2dTexture12";
+	rename -uid "6AAC5C72-4C9C-BC57-0183-9982595377CE";
+createNode groupId -n "mom_scene:mom3:celshadingreggie:groupId3";
+	rename -uid "6F664369-4EEE-3565-95C1-48A62E71AE4F";
+	setAttr ".ihi" 0;
+createNode groupId -n "mom_scene:mom3:celshadingreggie:groupId11";
+	rename -uid "4D56A991-4899-2B0D-FAAB-93911B0946EE";
+	setAttr ".ihi" 0;
+createNode contour_contrast_function_levels -n "mom_scene:mom3:ContourContrastLevelFunction";
+	rename -uid "C4D78B63-4968-5F5F-36D4-08B6F35865B2";
+	setAttr ".S00" 20;
+	setAttr ".S01" 30;
+createNode contour_store_function -n "mom_scene:mom3:ContourContrastStore";
+	rename -uid "EA537BEE-4211-5CE6-0489-1A8324C779AE";
+createNode nodeGraphEditorInfo -n "mom_scene:mom3:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "9D353F40-4C2B-C9FC-C482-9BA6A676858E";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -127.38094731928837 -985.11778621916824 ;
-	setAttr ".tgi[0].vh" -type "double2" 1221.4285228933625 499.40351980543329 ;
-	setAttr -s 8 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -12.857142448425293;
-	setAttr ".tgi[0].ni[0].y" -98.571426391601563;
+	setAttr ".tgi[0].vl" -type "double2" -2115.2684891540625 -137.01454542816953 ;
+	setAttr ".tgi[0].vh" -type "double2" 62.882710254642852 546.17871271969989 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -1731.4285888671875;
+	setAttr ".tgi[0].ni[0].y" 1.4285714626312256;
+	setAttr ".tgi[0].ni[0].nvs" 1922;
+	setAttr ".tgi[0].ni[1].x" -1967.142822265625;
+	setAttr ".tgi[0].ni[1].y" 142.85714721679687;
+	setAttr ".tgi[0].ni[1].nvs" 1922;
+createNode contour_shader_simple -n "mom_scene:mom3:contour_shader_simple1";
+	rename -uid "DBE0A012-4F4F-ED9C-F776-ECAC327C0431";
+	setAttr ".S01" 0.10000000149011612;
+createNode contour_shader_simple -n "mom_scene:mom3:contour_shader_simple2";
+	rename -uid "AB93732A-45EA-8B4E-B570-BBAC0E2BC6CD";
+	setAttr ".S01" 0.10000000149011612;
+createNode contour_shader_simple -n "mom_scene:mom3:contour_shader_simple3";
+	rename -uid "299F550E-4F2C-5585-79FC-E1B7F66C3534";
+	setAttr ".S01" 0.10000000149011612;
+createNode nodeGraphEditorInfo -n "mom_scene:mom3:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "9E3656D2-4263-85F5-ECD7-D09BB38EB48A";
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -116.66666203075003 -822.19558673120616 ;
+	setAttr ".tgi[0].vh" -type "double2" 1093.6507501930175 192.03688161273305 ;
+	setAttr -s 6 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[0].y" -208.51412963867187;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 601.4285888671875;
-	setAttr ".tgi[0].ni[1].y" -177.14285278320312;
+	setAttr ".tgi[0].ni[1].x" 253.25822448730469;
+	setAttr ".tgi[0].ni[1].y" -1.4285714626312256;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 908.5714111328125;
-	setAttr ".tgi[0].ni[2].y" -177.14285278320312;
+	setAttr ".tgi[0].ni[2].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[2].y" -21.428571701049805;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" -12.857142448425293;
-	setAttr ".tgi[0].ni[3].y" -301.42855834960937;
+	setAttr ".tgi[0].ni[3].x" 785.71429443359375;
+	setAttr ".tgi[0].ni[3].y" -100;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" -116.65901184082031;
-	setAttr ".tgi[0].ni[4].y" 402.64422607421875;
+	setAttr ".tgi[0].ni[4].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[4].y" -227.14285278320312;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 294.28570556640625;
-	setAttr ".tgi[0].ni[5].y" -90;
+	setAttr ".tgi[0].ni[5].x" 524.28570556640625;
+	setAttr ".tgi[0].ni[5].y" -104.28571319580078;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 294.28570556640625;
-	setAttr ".tgi[0].ni[6].y" -265.71429443359375;
+createNode partition -n "mom_scene:mtorPartition4";
+	rename -uid "B1B02606-4FFE-A765-1453-F7B40884E9F6";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom:mom_skeleton:mtorPartition";
+	rename -uid "38593DDC-4BA7-0626-D43B-AD84B7A61D8F";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom:mom_skeleton:mom_k:mtorPartition";
+	rename -uid "995F8653-4323-44D2-8F38-D9BA343A23C0";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom:mom_skeleton:mom_k:pasted__mtorPartition";
+	rename -uid "14AAD785-4BE0-5B05-9B72-02A6E92D2F2B";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode lambert -n "mom_scene:mom:mom_skeleton:unwrapBaseShader";
+	rename -uid "D61147B7-4B4B-16F4-E091-FAB8A8A87143";
+	setAttr ".dc" 1;
+	setAttr ".c" -type "float3" 0 0.60000002 0.40000001 ;
+createNode lambert -n "mom_scene:mom:mom_skeleton:unwrapChekcerShader";
+	rename -uid "533484A4-48F5-BAAC-752B-20BAF41EBC35";
+createNode checker -n "mom_scene:mom:mom_skeleton:unwrapTestPattern";
+	rename -uid "17908C98-4A98-93F0-1A05-E7A8BF07EA0A";
+	addAttr -ci true -sn "resolution" -ln "resolution" -at "double";
+	setAttr ".c1" -type "float3" 0.30000001 0.30000001 0.30000001 ;
+	setAttr ".c2" -type "float3" 0.69999999 0.69999999 0.69999999 ;
+	setAttr ".resolution" 512;
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture1";
+	rename -uid "F84D8B32-4566-50D1-13E8-AF9DCC351E99";
+	setAttr ".re" -type "float2" 13.5 13.5 ;
+createNode groupId -n "mom_scene:mom:mom_skeleton:groupId13";
+	rename -uid "C2109809-4491-5CCB-6226-C0A8C648F53A";
+	setAttr ".ihi" 0;
+createNode lambert -n "mom_scene:mom:mom_skeleton:momEyes";
+	rename -uid "93DA8CE9-4092-EF75-B1C9-2BB8B5FB45C2";
+createNode file -n "mom_scene:mom:mom_skeleton:file1";
+	rename -uid "87598529-4946-46AE-CFF7-FCB96BD55B77";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/MomEye-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture3";
+	rename -uid "2A9484D1-4CF1-8757-13ED-BAB25F32ED3B";
+createNode lambert -n "mom_scene:mom:mom_skeleton:momHair_LBang1";
+	rename -uid "6A15FAA3-4B61-A77E-292F-33A3FA88A419";
+createNode file -n "mom_scene:mom:mom_skeleton:file3";
+	rename -uid "831FB93D-43A5-7604-0314-0CBED5F9C2FC";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture5";
+	rename -uid "7BA7FA43-4D87-2BF0-CC2F-AFA24848B09B";
+createNode lambert -n "mom_scene:mom:mom_skeleton:shirtShader";
+	rename -uid "725A2DEE-4273-4BE7-9F5A-E7BBF616AE50";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode lambert -n "mom_scene:mom:mom_skeleton:apronShader";
+	rename -uid "BC1B534C-4741-BBC6-9640-4C84308CD968";
+	setAttr ".c" -type "float3" 0.116021 0.1420126 0.18099999 ;
+createNode lambert -n "mom_scene:mom:mom_skeleton:skirtShader";
+	rename -uid "E7CCE4B0-4B21-CCE9-B307-27864B41D434";
+	setAttr ".c" -type "float3" 0 0.033600006 0.083999999 ;
+createNode materialInfo -n "mom_scene:mom:mom_skeleton:materialInfo11";
+	rename -uid "E1CACE15-4497-096F-63D2-889607B0B820";
+createNode file -n "mom_scene:mom:mom_skeleton:file5";
+	rename -uid "E914C42B-436A-8A7D-370B-CD94B1F50371";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture7";
+	rename -uid "B03F9E7C-41A1-FA03-8D0E-ECB0078B06B5";
+createNode file -n "mom_scene:mom:mom_skeleton:file6";
+	rename -uid "0B16A165-4953-38F0-22F7-1F9F08FEDBBF";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture8";
+	rename -uid "63D10159-4CA2-4141-F53F-15B1E597F32B";
+createNode rampShader -n "mom_scene:mom:mom_skeleton:momBrightnessRamp";
+	rename -uid "38F7E10D-45DE-D02B-F8FE-4CA03E9AEF35";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode rampShader -n "mom_scene:mom:mom_skeleton:momEarBrightnessRamp1";
+	rename -uid "A2B20C7F-4020-D95A-B300-A8BC894E5E43";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.50800001621246338;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_skeleton:file7";
+	rename -uid "9496D5E2-4322-BDA5-3D43-CEBBE3AD41E2";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture9";
+	rename -uid "1B5F8268-48DD-0F13-4AA0-809A6D863EEE";
+createNode file -n "mom_scene:mom:mom_skeleton:file8";
+	rename -uid "B747D78D-4C1F-7972-284C-A49189338649";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture10";
+	rename -uid "4A3642CC-44AF-87DC-5442-A49251DA0F94";
+createNode rampShader -n "mom_scene:mom:mom_skeleton:momEarBrightnessRamp";
+	rename -uid "5E77C065-4CEE-4168-3E93-C3B49341DA4E";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_skeleton:file9";
+	rename -uid "33496582-4F13-9DF5-4DA8-4BACF75D6162";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture11";
+	rename -uid "461EDD24-44A3-B19E-0F44-039C77F986C1";
+createNode file -n "mom_scene:mom:mom_skeleton:file10";
+	rename -uid "21630D7E-4AB7-4E27-2D1A-F3BF9513960A";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture12";
+	rename -uid "6BA7AB6B-4F07-9E17-2702-758A040C8A2A";
+createNode groupId -n "mom_scene:mom:mom_skeleton:celshadingreggie:groupId3";
+	rename -uid "FFEF33A4-46D1-5141-01BA-1BBDE63E3109";
+	setAttr ".ihi" 0;
+createNode groupId -n "mom_scene:mom:mom_skeleton:celshadingreggie:groupId11";
+	rename -uid "9A42EA83-4E59-0668-C297-578F841E936D";
+	setAttr ".ihi" 0;
+createNode contour_contrast_function_levels -n "mom_scene:mom:mom_skeleton:ContourContrastLevelFunction";
+	rename -uid "C5D11520-49E5-1ABE-DEBA-ED9E630F5066";
+	setAttr ".S00" 20;
+	setAttr ".S01" 30;
+createNode contour_store_function -n "mom_scene:mom:mom_skeleton:ContourContrastStore";
+	rename -uid "C4B28A18-44E9-4BC4-E96E-D990BF5B7D19";
+createNode nodeGraphEditorInfo -n "mom_scene:mom:mom_skeleton:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "409E7E6D-4098-4D86-1EBE-B4B096B4F117";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -2115.2684891540625 -137.01454542816953 ;
+	setAttr ".tgi[0].vh" -type "double2" 62.882710254642852 546.17871271969989 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -1731.4285888671875;
+	setAttr ".tgi[0].ni[0].y" 1.4285714626312256;
+	setAttr ".tgi[0].ni[0].nvs" 1922;
+	setAttr ".tgi[0].ni[1].x" -1967.142822265625;
+	setAttr ".tgi[0].ni[1].y" 142.85714721679687;
+	setAttr ".tgi[0].ni[1].nvs" 1922;
+createNode contour_shader_simple -n "mom_scene:mom:mom_skeleton:contour_shader_simple1";
+	rename -uid "B7FD3603-46C1-FA1B-461B-208DBB4BFF77";
+	setAttr ".S01" 0.10000000149011612;
+createNode contour_shader_simple -n "mom_scene:mom:mom_skeleton:contour_shader_simple2";
+	rename -uid "C16FB649-4D0C-4E52-83C8-03B21D3E8AA9";
+	setAttr ".S01" 0.10000000149011612;
+createNode contour_shader_simple -n "mom_scene:mom:mom_skeleton:contour_shader_simple3";
+	rename -uid "A653823F-439F-2816-8153-1C9458CF9248";
+	setAttr ".S01" 0.10000000149011612;
+createNode nodeGraphEditorInfo -n "mom_scene:mom:mom_skeleton:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "66176E98-4C15-C511-0551-F587054E810C";
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -68.508180820578559 -822.89125773790931 ;
+	setAttr ".tgi[0].vh" -type "double2" 876.09414458350886 221.83891415901152 ;
+	setAttr -s 7 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 524.28570556640625;
+	setAttr ".tgi[0].ni[0].y" -104.28571319580078;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[1].y" -227.14285278320312;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[2].y" -207.14285278320312;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 785.71429443359375;
+	setAttr ".tgi[0].ni[3].y" -100;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[4].y" -21.428571701049805;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 1125.7142333984375;
+	setAttr ".tgi[0].ni[5].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[5].nvs" 2178;
+	setAttr ".tgi[0].ni[6].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[6].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[6].nvs" 18305;
+createNode partition -n "mom_scene:mom:mtorPartition";
+	rename -uid "8E31193E-42B1-BDDB-15A2-7898F14874B9";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mom:mom_blendshapes_to_import:mtorPartition";
+	rename -uid "DB73026A-44E6-737F-8597-3DA9C420AE03";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode rampShader -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momBrightnessRamp";
+	rename -uid "0A35916D-4B16-02C3-70F5-CB87FEEE3D6B";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5";
+	rename -uid "CA818201-4695-70D7-9049-5CB1608EDE8C";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7";
+	rename -uid "73080A6C-4D0E-454E-26DB-D583ED69D5B7";
+createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6";
+	rename -uid "8BEBD05E-4262-B46E-B301-9EBD9E1C515D";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8";
+	rename -uid "B03C26F7-46E3-4E81-8F6C-AE9CAEDEE2E7";
+createNode contour_shader_simple -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:contour_shader_simple1";
+	rename -uid "0E3F21A7-45A0-3D3C-195B-4E850FF1BC0F";
+	setAttr ".S01" 0.10000000149011612;
+createNode rampShader -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp";
+	rename -uid "BDA12871-4AE3-5C84-FDAE-D493B3B1206B";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9";
+	rename -uid "866F9A29-492B-FB8C-2C4F-ABBC276A9DA7";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11";
+	rename -uid "05C973F2-43A9-DE8F-C563-0DB07F8FF8F7";
+createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10";
+	rename -uid "F156326C-4763-AEDF-AC04-1D90FC115417";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12";
+	rename -uid "08A537B5-46BF-0DFD-6B77-52ACD5574DF5";
+createNode contour_shader_simple -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:contour_shader_simple3";
+	rename -uid "A8ADAC40-43F5-354F-1B10-92B6C9D1598B";
+	setAttr ".S01" 0.10000000149011612;
+createNode rampShader -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp1";
+	rename -uid "D21F8DF9-4842-010A-A124-D783A3BC1B3E";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.50800001621246338;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7";
+	rename -uid "14E7C3BA-424B-B050-FA09-A3BFFEC3BB4D";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9";
+	rename -uid "8A802ED1-4B9A-460A-694C-3CA4E8CFB4E2";
+createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8";
+	rename -uid "25801A78-4660-158F-AB5E-F6BB99155BDB";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10";
+	rename -uid "395BEF56-4B6B-F243-E00F-5B85DD081730";
+createNode contour_shader_simple -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:contour_shader_simple2";
+	rename -uid "6B0325C5-4E2E-5F4B-E15B-90A4EE1E8558";
+	setAttr ".S01" 0.10000000149011612;
+createNode partition -n "mom_scene:mom:mom:mtorPartition";
+	rename -uid "0E4BD9C2-4D37-C5E7-2F79-03BF8839DBB9";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode lambert -n "mom_scene:mom:mom:shirtShader";
+	rename -uid "5E9AABE4-4A28-CBB3-5E64-2B867855AB40";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode rampShader -n "mom_scene:mom:mom:momBrightnessRamp";
+	rename -uid "DB6EBF75-4447-9C4A-6DE8-31BD53A8A583";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom:file5";
+	rename -uid "C8BDFA9A-4A16-27C7-B975-2F9482D6BDAE";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture7";
+	rename -uid "AF5B632F-4A5B-4183-7F32-5291F727CEFE";
+createNode file -n "mom_scene:mom:mom:file6";
+	rename -uid "63169CAD-4B02-6CEB-1B00-278B762FEDBF";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture8";
+	rename -uid "0AFFB111-489B-36B6-01FF-A48916FDB96A";
+createNode contour_shader_simple -n "mom_scene:mom:mom:contour_shader_simple1";
+	rename -uid "C1524018-4775-DB60-2D1B-65BC2DFB524F";
+	setAttr ".S01" 0.10000000149011612;
+createNode rampShader -n "mom_scene:mom:mom:momEarBrightnessRamp";
+	rename -uid "330395AC-41EA-2857-F208-52A589BFE500";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom:file9";
+	rename -uid "5B71D08D-4A00-E383-4F6E-CF976DB389F2";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture11";
+	rename -uid "C3E6DD88-45D4-D8F8-7E76-488F9344802D";
+createNode file -n "mom_scene:mom:mom:file10";
+	rename -uid "A2E1AE1D-45B3-25FF-7719-FFA4256CCB93";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture12";
+	rename -uid "A9721790-459D-E525-48D0-3DB8DDCCE38D";
+createNode contour_shader_simple -n "mom_scene:mom:mom:contour_shader_simple3";
+	rename -uid "2CAC346A-44BF-C787-3B18-B2B5EC21F94A";
+	setAttr ".S01" 0.10000000149011612;
+createNode rampShader -n "mom_scene:mom:mom:momEarBrightnessRamp1";
+	rename -uid "9CC454EC-4D7E-E3DC-CBA2-E3B8312D674A";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.50800001621246338;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom:file7";
+	rename -uid "4EECDA64-41FB-718E-73DE-0E9DB98E0B8C";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture9";
+	rename -uid "828040C1-4D84-9439-E60E-55AE253B1ADE";
+createNode file -n "mom_scene:mom:mom:file8";
+	rename -uid "8404D865-43F5-3D31-03D0-BD8D9A928FC4";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture10";
+	rename -uid "2CE4BE90-41C5-1D40-102A-0A9A337456E5";
+createNode contour_shader_simple -n "mom_scene:mom:mom:contour_shader_simple2";
+	rename -uid "6235B177-4C55-3015-480B-42B16BBAF0EB";
+	setAttr ".S01" 0.10000000149011612;
+createNode lambert -n "mom_scene:mom:mom:apronShader";
+	rename -uid "2D76A03C-4280-CD23-1BA9-D38F93EC2AA5";
+	setAttr ".c" -type "float3" 0.116021 0.1420126 0.18099999 ;
+createNode partition -n "mom_scene:mom:mom_mesh:mtorPartition";
+	rename -uid "4336860F-4E4E-0B3E-1642-BF8F87E2FB38";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode lambert -n "mom_scene:mom:mom_mesh:shirtShader";
+	rename -uid "6E235292-4DFF-2740-08CF-A593F05EEC47";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode rampShader -n "mom_scene:mom:mom_mesh:momBrightnessRamp";
+	rename -uid "1E4E63AC-41B6-14DC-A332-818E8B8ABCA2";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_mesh:file5";
+	rename -uid "D6FE8B9F-4C96-DB2C-C9BD-0D8CE9FF7855";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture7";
+	rename -uid "44D8D512-42B6-F155-642E-6B89D816E3FE";
+createNode file -n "mom_scene:mom:mom_mesh:file6";
+	rename -uid "98B1761F-4DB1-089F-9292-3C924C1D0641";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture8";
+	rename -uid "C2D265E1-4772-04E1-E78E-C6AD31E5EC91";
+createNode contour_shader_simple -n "mom_scene:mom:mom_mesh:contour_shader_simple1";
+	rename -uid "9C8B22F4-424D-1F7F-5412-9193285A5EDF";
+	setAttr ".S01" 0.10000000149011612;
+createNode rampShader -n "mom_scene:mom:mom_mesh:momEarBrightnessRamp";
+	rename -uid "2CD6A719-42C8-6962-9713-B0943B3EF69F";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_mesh:file9";
+	rename -uid "06C86EBF-41DB-B545-E7C0-AE9A5D5A5CDD";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture11";
+	rename -uid "CDDC65E3-4B20-6976-CFF4-7F837C5166EA";
+createNode file -n "mom_scene:mom:mom_mesh:file10";
+	rename -uid "B2F261C9-4982-DFB9-4682-BFBE47913E63";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momEar-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture12";
+	rename -uid "C8BA3E78-4B22-8E23-F431-289E3B2B583D";
+createNode contour_shader_simple -n "mom_scene:mom:mom_mesh:contour_shader_simple3";
+	rename -uid "239549E0-47C6-A03E-4311-E6A7F9696F8B";
+	setAttr ".S01" 0.10000000149011612;
+createNode rampShader -n "mom_scene:mom:mom_mesh:momEarBrightnessRamp1";
+	rename -uid "C4ACCA30-4F20-2DEF-0B4C-3CA2B143DF8C";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.50800001621246338;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:mom:mom_mesh:file7";
+	rename -uid "AAA75287-4C48-E938-38E0-90BFF7F31F08";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture9";
+	rename -uid "C3AFB4F9-44C9-2D15-EB9E-45BEC9F6AA25";
+createNode file -n "mom_scene:mom:mom_mesh:file8";
+	rename -uid "62A94EDF-4268-54BA-FF2F-9E95FAE005D6";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Mom/momHair-LBang-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture10";
+	rename -uid "A64863FD-4609-866B-8409-F181DDE0D32C";
+createNode contour_shader_simple -n "mom_scene:mom:mom_mesh:contour_shader_simple2";
+	rename -uid "EE5F3452-44B5-B4EC-58E7-588F22E07FE8";
+	setAttr ".S01" 0.10000000149011612;
+createNode lambert -n "mom_scene:mom:mom_mesh:apronShader";
+	rename -uid "B9FE4D02-4DA5-D50F-4C1C-40AF5E131142";
+	setAttr ".c" -type "float3" 0.116021 0.1420126 0.18099999 ;
+createNode renderSetup -n "mom_scene:mom:renderSetup";
+	rename -uid "F14DBD1C-4592-5B01-A218-0FB5ADCF911F";
+createNode file -n "mom_scene:table:file1";
+	rename -uid "94F3A250-4A77-9ADE-6161-D8997B1FFFBC";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/table/wood-table.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:table:place2dTexture1";
+	rename -uid "56ED5B86-476F-0F17-4B2B-8FBBC489C093";
+createNode rampShader -n "mom_scene:table:tableBrightnessShader";
+	rename -uid "E122235E-4601-ED62-1F3B-BEB503CC5A26";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:table:file2";
+	rename -uid "B87DE795-466C-1E95-CF62-81AEBB08E983";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:table:place2dTexture2";
+	rename -uid "95628B38-46D4-CF38-CF66-19A0F6D378D8";
+createNode surfaceShader -n "mom_scene:table:surfaceShader1";
+	rename -uid "97FBCA99-4BEC-653E-9ACA-6B8D760B2481";
+createNode nodeGraphEditorInfo -n "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "06870035-4C49-99B9-BB54-998E53F24B42";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -1564.7825465167798 -330.14146376196425 ;
+	setAttr ".tgi[0].vh" -type "double2" 4423.2365392122174 123.86818003306219 ;
+	setAttr -s 8 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 545.71429443359375;
+	setAttr ".tgi[0].ni[0].y" -8.5714282989501953;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[1].y" -220;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" -11.428571701049805;
+	setAttr ".tgi[0].ni[2].y" -180;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 245.71427917480469;
+	setAttr ".tgi[0].ni[3].y" 77.142860412597656;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -11.428571701049805;
+	setAttr ".tgi[0].ni[4].y" 77.142860412597656;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 245.71427917480469;
+	setAttr ".tgi[0].ni[5].y" -137.14285278320312;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 845.71429443359375;
+	setAttr ".tgi[0].ni[6].y" -51.428569793701172;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" 104.76956176757812;
-	setAttr ".tgi[0].ni[7].y" 402.64422607421875;
+	setAttr ".tgi[0].ni[7].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[7].y" -224.28572082519531;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
+createNode partition -n "mom_scene:bible:mtorPartition";
+	rename -uid "BED981F1-40CC-2236-1C1E-FBB649BE6221";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sd" -type "string" "#\n# generated by slim for Kyle at Fri Sep 30 1:26:50 PM Eastern Daylight Time 2016\n#\nslim 2 TOR slim {\n}\n";
+	setAttr ".sr" -type "string" "";
+createNode file -n "mom_scene:bible:file1";
+	rename -uid "CE178130-4E89-00B7-BF7D-628938E0CA6E";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:bible:place2dTexture1";
+	rename -uid "0742DE28-4B64-AF86-84D1-7797D983651C";
+createNode file -n "mom_scene:bible:file2";
+	rename -uid "D1FD3A84-4934-BF03-59DC-2A9C2CF95878";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:bible:place2dTexture2";
+	rename -uid "911580C0-4E12-AF96-FCA7-50A7E51E2A50";
+createNode groupId -n "mom_scene:bible:celshadingreggie:groupId3";
+	rename -uid "CB7A4AFD-4236-A766-6EBD-948C40355915";
+	setAttr ".ihi" 0;
+createNode groupId -n "mom_scene:bible:celshadingreggie:groupId11";
+	rename -uid "481BFEC1-409E-A832-D9F8-FBA6D0071B4D";
+	setAttr ".ihi" 0;
+createNode contour_contrast_function_levels -n "mom_scene:bible:ContourContrastLevelFunction";
+	rename -uid "2DD4FE05-4E0F-6EBE-9C66-49B8466585D5";
+	setAttr ".S00" 0.10000000149011612;
+	setAttr ".S01" 30;
+createNode contour_store_function -n "mom_scene:bible:ContourContrastStore";
+	rename -uid "8206A0D2-4556-8B39-DE5C-379AF602653E";
+createNode partition -n "mom_scene:bible:celshadingreggie:mtorPartition";
+	rename -uid "F4E997EB-407A-A221-6828-22AD0D185D96";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode nodeGraphEditorInfo -n "mom_scene:bible:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "5BEE4D96-4860-C294-962A-CB97C9E6B7D1";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -2115.2684891540625 -137.01454542816953 ;
+	setAttr ".tgi[0].vh" -type "double2" 62.882710254642852 546.17871271969989 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -1731.4285888671875;
+	setAttr ".tgi[0].ni[0].y" 1.4285714626312256;
+	setAttr ".tgi[0].ni[0].nvs" 1922;
+	setAttr ".tgi[0].ni[1].x" -1967.142822265625;
+	setAttr ".tgi[0].ni[1].y" 142.85714721679687;
+	setAttr ".tgi[0].ni[1].nvs" 1922;
+createNode unitConversion -n "mom_scene:bible:unitConversion1";
+	rename -uid "BEE62525-4685-3209-8254-3A92E5A10D20";
+	setAttr ".cf" 0.032808398950131233;
+createNode surfaceShader -n "mom_scene:bible:surfaceShader1";
+	rename -uid "E2B8BDA8-4D1A-CA5F-3D82-9C804E2BD2F9";
+createNode nodeGraphEditorInfo -n "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "81A6FD7C-4D49-552F-9463-7E8D324F7A29";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -14804.130600636105 -1377.8164857739857 ;
+	setAttr ".tgi[0].vh" -type "double2" 29603.814654618247 6081.78586681467 ;
+	setAttr -s 11 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 1142.857177734375;
+	setAttr ".tgi[0].ni[0].y" -220;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 678.5714111328125;
+	setAttr ".tgi[0].ni[1].y" -264.28570556640625;
+	setAttr ".tgi[0].ni[1].nvs" 2914;
+	setAttr ".tgi[0].ni[2].x" 1404.2857666015625;
+	setAttr ".tgi[0].ni[2].y" -224.28572082519531;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 207.14285278320312;
+	setAttr ".tgi[0].ni[3].y" -221.42857360839844;
+	setAttr ".tgi[0].ni[3].nvs" 2914;
+	setAttr ".tgi[0].ni[4].x" 2454.28564453125;
+	setAttr ".tgi[0].ni[4].y" -151.42857360839844;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" -92.857139587402344;
+	setAttr ".tgi[0].ni[5].y" 164.28572082519531;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" -392.85714721679687;
+	setAttr ".tgi[0].ni[6].y" 121.42857360839844;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" 207.14285278320312;
+	setAttr ".tgi[0].ni[7].y" 78.571426391601562;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" -92.857139587402344;
+	setAttr ".tgi[0].ni[8].y" -7.1428570747375488;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 807.14288330078125;
+	setAttr ".tgi[0].ni[9].y" 78.571426391601562;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" -392.85714721679687;
+	setAttr ".tgi[0].ni[10].y" -50;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
+createNode partition -n "mom_scene:main_bottle:mtorPartition";
+	rename -uid "7E2A78A3-44E2-FD9E-20DF-68B60E7522CE";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode mia_material_x -n "mom_scene:main_bottle:glassMaterial";
+	rename -uid "30F9102E-4BDE-4E9C-E01E-52983A700860";
+createNode nodeGraphEditorInfo -n "mom_scene:main_bottle:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "7C9DE182-423C-57FB-93A4-21A813DBA390";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -762.29571628616839 -103.57142445586992 ;
+	setAttr ".tgi[0].vh" -type "double2" 1561.5137151834642 72.619044733426037 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[0].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[1].y" -141.42857360839844;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+createNode mia_material_x -n "mom_scene:main_bottle:pasted__glassMaterial";
+	rename -uid "8F652DE7-4F71-9045-9596-CFAAD89511CF";
+createNode partition -n "mom_scene:shotglass:mtorPartition";
+	rename -uid "1EA55B83-4668-F02C-22F7-7080E249B85A";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode file -n "mom_scene:shotglass:file1";
+	rename -uid "93B626A9-4B16-8B99-C0CE-C8944EE530FC";
+	setAttr ".ftn" -type "string" "/Users/keeyuneCho/Desktop/CNM 190/Only-Love/images/shotglass-outUV.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:shotglass:place2dTexture1";
+	rename -uid "CED8A8EC-41A8-3024-677A-789541F1EF74";
+createNode checker -n "mom_scene:shotglass:unwrapTestPattern";
+	rename -uid "F1A59626-495F-8058-B806-DEA45631F30A";
+	addAttr -ci true -sn "resolution" -ln "resolution" -at "double";
+	setAttr ".c1" -type "float3" 0.30000001 0.30000001 0.30000001 ;
+	setAttr ".c2" -type "float3" 0.69999999 0.69999999 0.69999999 ;
+	setAttr ".resolution" 512;
+createNode place2dTexture -n "mom_scene:shotglass:place2dTexture2";
+	rename -uid "F58B628D-47B9-5B87-8765-0B80193C30DC";
+	setAttr ".re" -type "float2" 13.5 13.5 ;
+createNode groupId -n "mom_scene:shotglass:groupId1";
+	rename -uid "C2614711-49C8-B770-C2A4-7AA9C2C1800D";
+	setAttr ".ihi" 0;
+createNode materialInfo -n "mom_scene:bible:materialInfo1";
+	rename -uid "0B6740FC-45C9-2DDB-6DDA-AFAA4819D5C0";
+createNode partition -n "mom_scene:bible1:mtorPartition";
+	rename -uid "1741626D-4A05-AF31-C488-1FA4DECFDDD7";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sd" -type "string" "#\n# generated by slim for Kyle at Fri Sep 30 1:26:50 PM Eastern Daylight Time 2016\n#\nslim 2 TOR slim {\n}\n";
+	setAttr ".sr" -type "string" "";
+createNode file -n "mom_scene:bible1:file1";
+	rename -uid "56EC779B-4A8D-5DCD-B7BB-508AA50F7B61";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:bible1:place2dTexture1";
+	rename -uid "7677CC7B-4891-BDEB-159D-9EA04C79610F";
+createNode rampShader -n "mom_scene:bible1:BibleBrightnessRamp";
+	rename -uid "DAA05530-4AA3-8F5B-8926-22B41B3719CE";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "mom_scene:bible1:file2";
+	rename -uid "94B7419C-4573-2335-360E-479B4CAEB0E2";
+	setAttr ".ftn" -type "string" "C:/Users/mikha/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:bible1:place2dTexture2";
+	rename -uid "5372A348-4BAE-D084-1D1B-8DB56CBF4718";
+createNode groupId -n "mom_scene:bible1:celshadingreggie:groupId3";
+	rename -uid "DF7E7FB2-4FD1-90D5-71DD-4CAB740C6797";
+	setAttr ".ihi" 0;
+createNode groupId -n "mom_scene:bible1:celshadingreggie:groupId11";
+	rename -uid "DFE08299-42A2-1973-4D8E-7BAE682DC287";
+	setAttr ".ihi" 0;
+createNode contour_contrast_function_levels -n "mom_scene:bible1:ContourContrastLevelFunction";
+	rename -uid "65EA68C9-4CFF-8902-ADA8-74861BD6F25C";
+	setAttr ".S00" 0.10000000149011612;
+	setAttr ".S01" 30;
+createNode contour_store_function -n "mom_scene:bible1:ContourContrastStore";
+	rename -uid "0BE5B5D3-47B7-307C-1715-CDAA248E631F";
+createNode partition -n "mom_scene:bible1:celshadingreggie:mtorPartition";
+	rename -uid "9DC4E2A8-42B4-82C0-BD90-668579022615";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode nodeGraphEditorInfo -n "mom_scene:bible1:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "7C6153F9-4610-38E8-3BCA-B3AF2DDBF11D";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -2115.2684891540625 -137.01454542816953 ;
+	setAttr ".tgi[0].vh" -type "double2" 62.882710254642852 546.17871271969989 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -1731.4285888671875;
+	setAttr ".tgi[0].ni[0].y" 1.4285714626312256;
+	setAttr ".tgi[0].ni[0].nvs" 1922;
+	setAttr ".tgi[0].ni[1].x" -1967.142822265625;
+	setAttr ".tgi[0].ni[1].y" 142.85714721679687;
+	setAttr ".tgi[0].ni[1].nvs" 1922;
+createNode unitConversion -n "mom_scene:bible1:unitConversion1";
+	rename -uid "36FD72CA-41D4-EA78-460E-87A34238AE58";
+	setAttr ".cf" 0.032808398950131233;
+createNode surfaceShader -n "mom_scene:bible1:surfaceShader1";
+	rename -uid "A966DF97-4B33-F7D7-8497-36B62ED62F22";
+createNode nodeGraphEditorInfo -n "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "0E792EF3-45B4-2B50-220E-5193F16FD6B1";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -14804.130600636105 -1377.8164857739857 ;
+	setAttr ".tgi[0].vh" -type "double2" 29603.814654618247 6081.78586681467 ;
+	setAttr -s 11 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 1142.857177734375;
+	setAttr ".tgi[0].ni[0].y" -220;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 678.5714111328125;
+	setAttr ".tgi[0].ni[1].y" -264.28570556640625;
+	setAttr ".tgi[0].ni[1].nvs" 2914;
+	setAttr ".tgi[0].ni[2].x" 1404.2857666015625;
+	setAttr ".tgi[0].ni[2].y" -224.28572082519531;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 207.14285278320312;
+	setAttr ".tgi[0].ni[3].y" -221.42857360839844;
+	setAttr ".tgi[0].ni[3].nvs" 2914;
+	setAttr ".tgi[0].ni[4].x" 2454.28564453125;
+	setAttr ".tgi[0].ni[4].y" -151.42857360839844;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" -92.857139587402344;
+	setAttr ".tgi[0].ni[5].y" 164.28572082519531;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" -392.85714721679687;
+	setAttr ".tgi[0].ni[6].y" 121.42857360839844;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" 207.14285278320312;
+	setAttr ".tgi[0].ni[7].y" 78.571426391601562;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" -92.857139587402344;
+	setAttr ".tgi[0].ni[8].y" -7.1428570747375488;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 807.14288330078125;
+	setAttr ".tgi[0].ni[9].y" 78.571426391601562;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" -392.85714721679687;
+	setAttr ".tgi[0].ni[10].y" -50;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
+createNode nodeGraphEditorInfo -n "mom_scene:MayaNodeEditorSavedTabsInfo";
+	rename -uid "437C484D-489D-506E-EF3F-3F8E79291BE5";
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -112.65097483279513 -335.60932932939522 ;
+	setAttr ".tgi[0].vh" -type "double2" 833.5996746461019 163.17355098160695 ;
+	setAttr -s 4 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[0].y" -64.285713195800781;
+	setAttr ".tgi[0].ni[0].nvs" 18304;
+	setAttr ".tgi[0].ni[1].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[1].y" -62.233108520507813;
+	setAttr ".tgi[0].ni[1].nvs" 18304;
+	setAttr ".tgi[0].ni[2].x" 524.28570556640625;
+	setAttr ".tgi[0].ni[2].y" -128.57142639160156;
+	setAttr ".tgi[0].ni[2].nvs" 18304;
+	setAttr ".tgi[0].ni[3].x" 524.28570556640625;
+	setAttr ".tgi[0].ni[3].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[3].nvs" 18304;
+createNode reference -n "mom_scene:momRN";
+	rename -uid "CEB83C52-4CDD-BDEA-C721-F094DB09B70C";
+	setAttr -s 3 ".fn";
+	setAttr ".fn[0]" -type "string" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma{1}";
+	setAttr ".fn[1]" -type "string" "C:/Users/mikha/Desktop/Only-Love//scenes/char/mom/mom_shirt_nclothrig.ma";
+	setAttr ".fn[2]" -type "string" "C:/Users/mikha/Desktop/Only-Love//scenes/char/mom/mom.ma";
+	setAttr -s 122 ".phl";
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"mom_scene:momRN"
+		"momRN" 247
+		1 |mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0 
+		"blendOrient1" "blendOrient1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		2 "|mom1:mom2:mom:bottom" "visibility" " 1"
+		2 "|mom1:mom2:mom:bottom|mom1:mom2:mom:bottomShape" "renderable" " 0"
+		2 "|mom1:mom:mom" "visibility" " 1"
+		2 "|mom1:mom:clothing" "visibility" " 1"
+		2 "|mom1:mom:clothing|mom1:mom_mesh:outfit|mom1:mom_mesh:outfit|mom1:mom_mesh:apron" 
+		"visibility" " 1"
+		2 "|mom1:mom:clothing|mom1:mom_mesh:outfit|mom1:mom_mesh:outfit|mom1:mom_mesh:shirt" 
+		"visibility" " 1"
+		2 "|mom1:mom:clothing|mom1:mom_mesh:outfit|mom1:mom_mesh:outfit|mom1:mom_mesh:skirt" 
+		"visibility" " 1"
+		2 "|mom1:mom_skeleton:mom_master" "visibility" " 1"
+		2 "|mom1:mom_skeleton:mom_master" "translate" " -type \"double3\" -0.019057959279493719 0 2.4133368993350786"
+		
+		2 "|mom1:mom_skeleton:mom_master" "translateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master" "translateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master" "translateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master" "rotate" " -type \"double3\" 0.083125604590456204 0.037828487638166465 0.30145111944494712"
+		
+		2 "|mom1:mom_skeleton:mom_master" "scale" " -type \"double3\" 1 1 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0" 
+		"segmentScaleCompensate" " 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0" 
+		"blendOrient1" " -k 1 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_r_chest|mom1:mom_skeleton:mom_r_shoulder|mom1:mom_skeleton:mom_r_elbow|mom1:mom_skeleton:mom_r_rotator|mom1:mom_skeleton:mom_r_wrist" 
+		"rotate" " -type \"double3\" 158.51271676304142 200.43275547600561 -184.81402961504256"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_r_chest|mom1:mom_skeleton:mom_r_shoulder|mom1:mom_skeleton:mom_r_elbow|mom1:mom_skeleton:mom_r_rotator|mom1:mom_skeleton:mom_r_wrist" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_r_chest|mom1:mom_skeleton:mom_r_shoulder|mom1:mom_skeleton:mom_r_elbow|mom1:mom_skeleton:mom_r_rotator|mom1:mom_skeleton:mom_r_wrist" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_r_chest|mom1:mom_skeleton:mom_r_shoulder|mom1:mom_skeleton:mom_r_elbow|mom1:mom_skeleton:mom_r_rotator|mom1:mom_skeleton:mom_r_wrist" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_r_chest|mom1:mom_skeleton:mom_r_shoulder|mom1:mom_skeleton:mom_r_elbow|mom1:mom_skeleton:mom_r_rotator|mom1:mom_skeleton:mom_r_wrist" 
+		"segmentScaleCompensate" " 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl" 
+		"visibility" " -av 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl" 
+		"translate" " -type \"double3\" 5.0648415543691732 1.2787170322493808 6.0204940354102652"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl" 
+		"translateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl" 
+		"translateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl" 
+		"translateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_arm_IK" 
+		"translate" " -type \"double3\" -5.5523763364817569e-010 1.5610566173052121e-009 7.9328366098252445e-010"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl" 
+		"visibility" " -av 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl" 
+		"rotate" " -type \"double3\" 35.329189692057376 132.00067344955923 51.813291683601193"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl" 
+		"translateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl" 
+		"translateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl" 
+		"translateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_thumb0_ctrl|mom1:mom_skeleton:mom_r_thumb1_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl" 
+		"visibility" " -av 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl" 
+		"translate" " -type \"double3\" -4.7728745089798474 1.8539105166883769 4.0119301403156653"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl" 
+		"translateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl" 
+		"translateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl" 
+		"translateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_arm_IK" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_arm_IK" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl" 
+		"visibility" " -av 1"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl" 
+		"rotate" " -type \"double3\" -138.56089039381379 -62.864168900232123 92.657507466619151"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl" 
+		"rotate" " -type \"double3\" 159.00086659705997 26.974651735435778 137.55791041969277"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_ring0_ctrl|mom1:mom_skeleton:mom_l_ring1_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_ring0_ctrl|mom1:mom_skeleton:mom_l_ring1_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_ring0_ctrl|mom1:mom_skeleton:mom_l_ring1_ctrl" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_ring0_ctrl|mom1:mom_skeleton:mom_l_ring1_ctrl" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_middle0_ctrl|mom1:mom_skeleton:mom_l_middle1_ctrl" 
+		"rotate" " -type \"double3\" 18.954041437514533 -25.79877649716607 -39.23063756435598"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_index0_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_index0_ctrl|mom1:mom_skeleton:mom_l_index1_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl" 
+		"rotate" " -type \"double3\" 15.009575134621745 0.42462034768029505 0.030655147173871335"
+		
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl" 
+		"rotateX" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl" 
+		"rotateY" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl|mom1:mom_r_mouth_ctrl" 
+		"translateY" " 0.53433464263926567"
+		2 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl|mom1:mom_l_mouth_ctrl" 
+		"translateY" " 0.72261444161308397"
+		2 "|mom1:curve2" "visibility" " 1"
+		2 "|mom1:curve1" "visibility" " 1"
+		2 "|mom1:mom3" "visibility" " 1"
+		2 "|mom1:mom4" "visibility" " 0"
+		2 "|mom1:MomRig|mom1:Clothing|mom1:mom_mesh:outfit" "visibility" " 1"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "visibility" 
+		" -av 1"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "translate" 
+		" -type \"double3\" -0.16092657835075622 -4.05869989858165425 -4.27377266058172545"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "translateX" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "translateY" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "translateZ" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "rotate" 
+		" -type \"double3\" 29.11711882993416012 0.37314082987912434 -1.87796207014208805"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "rotateX" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "rotateY" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "rotateZ" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "scale" 
+		" -type \"double3\" 1 1 1"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "scaleX" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "scaleY" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl" "scaleZ" 
+		" -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"visibility" " -av 1"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"translate" " -type \"double3\" 0.00055420839584224347 0.10533542809818225 -0.00015245647188298199"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"translateX" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"translateY" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"translateZ" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"rotate" " -type \"double3\" 20.27617096217710468 0.56974906961164584 0.06756125289777036"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"rotateX" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"rotateY" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"scaleX" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"scaleY" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl" 
+		"scaleZ" " -av"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_jaw_ctrl" 
+		"rotateX" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_r_brow_ctrl" 
+		"translateX" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_r_brow_ctrl" 
+		"translateY" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_l_brow_ctrl" 
+		"translateX" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_l_brow_ctrl" 
+		"translateY" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_r_blink_ctrl" 
+		"translateY" " -av 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_l_blink_ctrl" 
+		"translateY" " -av 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_r_low_eyelid_ctrl" 
+		"translateY" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_l_low_eyelid_ctrl" 
+		"translateY" " 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_spline_ctrl" 
+		"translate" " -type \"double3\" 2.9735094327052488e-08 0 -7.5608373673943241"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_spline_ctrl" 
+		"rotate" " -type \"double3\" -90.00000000000002842 0 0"
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_spline_ctrl|mom1:mom_skeleton:mom_spline0_ctrl" 
+		"translate" " -type \"double3\" -2.9735094327052485e-08 -7.56083736739432055 0.12265621671020832"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_spline_ctrl|mom1:mom_skeleton:mom_spline1_ctrl" 
+		"translate" " -type \"double3\" -2.9735094327052485e-08 -7.56083736739432055 0.12265621671020832"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_spline_ctrl|mom1:mom_skeleton:mom_spline2_ctrl" 
+		"translate" " -type \"double3\" -2.9735094327052485e-08 -7.56083736739432055 0.12265621671020832"
+		
+		2 "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_spline_ctrl|mom1:mom_skeleton:mom_spline3_ctrl" 
+		"translate" " -type \"double3\" -2.9735094327052485e-08 -7.56083736739432055 0.12265621671020832"
+		
+		2 "|mom1:MomRig|mom1:DoNotTouch|mom1:mom_spline_ik_DONOTTOUCH" "visibility" 
+		" 1"
+		2 "|mom1:MomRig|mom1:DoNotTouch|mom1:mom_spline_ik_DONOTTOUCH" "translate" 
+		" -type \"double3\" 0.23610672306770694 4.86112250908526899 -7.70912320943248552"
+		
+		2 "|mom1:MomRig|mom1:DoNotTouch|mom1:mom_spline_ik_DONOTTOUCH" "rotate" " -type \"double3\" 91.41767661501431519 65.93475187203250698 89.53501977197124972"
+		
+		2 "|mom1:MomRig|mom1:DoNotTouch|mom1:mom_spline_crv_DONOTTOUCH" "visibility" 
+		" 1"
+		2 "|mom1:MomRig|mom1:DoNotTouch|mom1:CLUSTERS_DONOTTOUCH" "visibility" " 1"
+		
+		3 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0|mom1:mom_skeleton:mom_l_pinky0_orientConstraint1.constraintRotateX" 
+		"|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.rotateX" 
+		""
+		3 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0|mom1:mom_skeleton:mom_l_pinky0_orientConstraint1.constraintRotateY" 
+		"|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.rotateY" 
+		""
+		3 "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0|mom1:mom_skeleton:mom_l_pinky0_orientConstraint1.constraintRotateZ" 
+		"|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.rotateZ" 
+		""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.rotateX" 
+		"mom_scene:momRN.placeHolderList[1]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.rotateY" 
+		"mom_scene:momRN.placeHolderList[2]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.rotateZ" 
+		"mom_scene:momRN.placeHolderList[3]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.scaleX" 
+		"mom_scene:momRN.placeHolderList[4]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.scaleY" 
+		"mom_scene:momRN.placeHolderList[5]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.scaleZ" 
+		"mom_scene:momRN.placeHolderList[6]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.blendOrient1" 
+		"mom_scene:momRN.placeHolderList[7]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.visibility" 
+		"mom_scene:momRN.placeHolderList[8]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.translateX" 
+		"mom_scene:momRN.placeHolderList[9]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.translateY" 
+		"mom_scene:momRN.placeHolderList[10]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0.translateZ" 
+		"mom_scene:momRN.placeHolderList[11]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0|mom1:mom_skeleton:mom_l_pinky0_orientConstraint1.constraintRotateX" 
+		"mom_scene:momRN.placeHolderList[12]" "mom1:mom_skeleton:mom_l_pinky0.rx"
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0|mom1:mom_skeleton:mom_l_pinky0_orientConstraint1.constraintRotateY" 
+		"mom_scene:momRN.placeHolderList[13]" "mom1:mom_skeleton:mom_l_pinky0.ry"
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_COG|mom1:mom_skeleton:mom_spine0|mom1:mom_skeleton:mom_spine1|mom1:mom_skeleton:mom_spine2|mom1:mom_skeleton:mom_spine3|mom1:mom_skeleton:mom_spine4|mom1:mom_skeleton:mom_l_chest|mom1:mom_skeleton:mom_l_shoulder|mom1:mom_skeleton:mom_l_elbow|mom1:mom_skeleton:mom_l_rotator|mom1:mom_skeleton:mom_l_wrist|mom1:mom_skeleton:mom_l_pinky0|mom1:mom_skeleton:mom_l_pinky0_orientConstraint1.constraintRotateZ" 
+		"mom_scene:momRN.placeHolderList[14]" "mom1:mom_skeleton:mom_l_pinky0.rz"
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[55]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.translate" 
+		"mom_scene:momRN.placeHolderList[56]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[57]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[58]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[59]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.parentMatrix" 
+		"mom_scene:momRN.placeHolderList[60]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.rotatePivot" 
+		"mom_scene:momRN.placeHolderList[61]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl.rotatePivotTranslate" 
+		"mom_scene:momRN.placeHolderList[62]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.rotate" 
+		"mom_scene:momRN.placeHolderList[63]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[64]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[65]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[66]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.rotateOrder" 
+		"mom_scene:momRN.placeHolderList[67]" ""
+		5 3 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.parentMatrix" 
+		"mom_scene:momRN.placeHolderList[68]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[69]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[70]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[71]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[72]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[73]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[74]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[75]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[76]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[77]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[78]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_r_arm_ctrl|mom1:mom_skeleton:mom_r_wrist_ctrl|mom1:mom_skeleton:mom_r_pinky0_ctrl|mom1:mom_skeleton:mom_r_pinky1_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[79]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[80]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[81]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[82]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[83]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[84]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[85]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[86]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[87]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[88]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[89]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[90]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[91]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[92]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[93]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[94]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[95]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[96]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_pinky0_ctrl|mom1:mom_skeleton:mom_l_pinky1_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[97]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[98]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[99]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[100]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[101]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[102]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[103]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[104]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[105]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[106]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_l_arm_ctrl|mom1:mom_skeleton:mom_l_wrist_ctrl|mom1:mom_skeleton:mom_l_thumb0_ctrl|mom1:mom_skeleton:mom_l_thumb1_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[107]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[108]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[109]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[110]" ""
+		5 4 "mom_scene:momRN" "|mom1:mom_skeleton:mom_master|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:mom_skeleton:mom_neck_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[111]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[112]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[113]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[114]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[115]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[116]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[117]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[118]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[119]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[120]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_l_foot_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[121]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[122]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[123]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[124]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[125]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[126]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[127]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[128]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[129]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[130]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_r_foot_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[131]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[132]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[133]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[134]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[135]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[136]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[137]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[138]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[139]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[140]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[141]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.translateX" 
+		"mom_scene:momRN.placeHolderList[142]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[143]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.translateZ" 
+		"mom_scene:momRN.placeHolderList[144]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.rotateX" 
+		"mom_scene:momRN.placeHolderList[145]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.rotateY" 
+		"mom_scene:momRN.placeHolderList[146]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.rotateZ" 
+		"mom_scene:momRN.placeHolderList[147]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.scaleX" 
+		"mom_scene:momRN.placeHolderList[148]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.scaleY" 
+		"mom_scene:momRN.placeHolderList[149]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.scaleZ" 
+		"mom_scene:momRN.placeHolderList[150]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[151]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_r_blink_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[152]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_r_blink_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[153]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_l_blink_ctrl.translateY" 
+		"mom_scene:momRN.placeHolderList[154]" ""
+		5 4 "mom_scene:momRN" "|mom1:MomRig|mom1:MasterCntrl|mom1:mom_skeleton:mom_cog_ctrl|mom1:mom_skeleton:mom_shoulder_ctrl|mom1:NeckCntrl_Offset_01|mom1:NeckCntrl_01|mom1:NeckCntrl_Offset_02|mom1:NeckCntrl_02|mom1:FaceCntrls_Offset|mom1:mom_l_blink_ctrl.visibility" 
+		"mom_scene:momRN.placeHolderList[155]" ""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:file5.message" "mom_scene:momRN.placeHolderList[156]" 
+		""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:place2dTexture7.message" "mom_scene:momRN.placeHolderList[157]" 
+		""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:file6.message" "mom_scene:momRN.placeHolderList[158]" 
+		""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:place2dTexture8.message" "mom_scene:momRN.placeHolderList[159]" 
+		""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:momBrightnessRamp.message" "mom_scene:momRN.placeHolderList[160]" 
+		""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:rampShader1SG.message" "mom_scene:momRN.placeHolderList[161]" 
+		""
+		5 3 "mom_scene:momRN" "mom1:mom2:mom:contour_shader_simple1.message" 
+		"mom_scene:momRN.placeHolderList[162]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode animCurveTU -n "mom_scene:mom_shoulder_ctrl_visibility";
+	rename -uid "4C36BDE5-4BC7-30C6-FCE2-B6AAC9BBD026";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  1 1 211 1 230 1 248 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_shoulder_ctrl_translateX";
+	rename -uid "1E485647-48DD-48F2-6516-8EBF16F9AD2D";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 0.00055420839584224347 211 0.00055420839584224347
+		 230 0.00055420839584224347 248 0.00055420839584224347;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_shoulder_ctrl_translateY";
+	rename -uid "EFFBCE68-4A4C-E75F-96F1-8AA4530F27D8";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 0.10533542809818225 211 0.10533542809818225
+		 230 0.10533542809818225 248 0.10533542809818225;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_shoulder_ctrl_translateZ";
+	rename -uid "BBE8B660-4292-1D84-5CDF-30BBA986FF05";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.00015245647188298199 211 -0.00015245647188298199
+		 230 -0.00015245647188298199 248 -0.00015245647188298199;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_shoulder_ctrl_rotateX";
+	rename -uid "7A2F007C-402C-990C-B91B-C7AC7DC564E5";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 20.276170962177105 211 20.276170962177105
+		 230 20.276170962177105 248 20.276170962177105;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_shoulder_ctrl_rotateY";
+	rename -uid "34DC2323-47E5-2AD5-0E91-5AAE4C12D21D";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 0.56974906961164584 211 0.56974906961164584
+		 230 0.56974906961164584 248 0.56974906961164584;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_shoulder_ctrl_rotateZ";
+	rename -uid "DC5668E5-4D00-4537-92CC-DF8CB8C4C5C0";
+	setAttr ".tan" 1;
+	setAttr -s 4 ".ktv[0:3]"  1 0.06756125289777036 209 0.06756125289777036
+		 228 -17.541670164069629 271 -17.541670164069629;
+	setAttr -s 4 ".kit[0:3]"  16 3 1 1;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 3;
+	setAttr -s 4 ".ktl[1:3]" no no no;
+	setAttr -s 4 ".kwl[0:3]" yes no yes yes;
+	setAttr -s 4 ".kix[2:3]"  0.59842818975448608 0.51945477724075317;
+	setAttr -s 4 ".kiy[2:3]"  -0.0099953152239322662 0.026696303859353065;
+	setAttr -s 4 ".kox[1:3]"  1.666633129119873 0.67475265264511108 1.7916669845581055;
+	setAttr -s 4 ".koy[1:3]"  -0.5711292028427124 -0.01260500680655241 
+		0;
+createNode animCurveTU -n "mom_scene:mom_shoulder_ctrl_scaleX";
+	rename -uid "4D4931DC-4B64-DEE3-6172-F3B55BF457E7";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 1 211 1 230 1 248 1;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_shoulder_ctrl_scaleY";
+	rename -uid "2651B020-40A7-1617-FF71-A096AB4773D2";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 1 211 1 230 1 248 1;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_shoulder_ctrl_scaleZ";
+	rename -uid "442A756C-44E2-A6DB-E771-F99E9BF9CFDD";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 1 211 1 230 1 248 1;
+	setAttr -s 4 ".kit[0:3]"  16 3 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 3 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_r_arm_ctrl_visibility";
+	rename -uid "5DF3A4B1-4E43-CB25-A7BC-C2864598B8B0";
+	setAttr ".tan" 9;
+	setAttr -s 22 ".ktv[0:21]"  1 1 3 1 6 1 46 1 70 1 79 1 85 1 90 1 91 1
+		 100 1 101 1 109 1 117 1 135 1 144 1 149 1 159 1 173 1 183 1 188 1 192 1 205 1;
+	setAttr -s 22 ".kot[0:21]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 22 ".kwl[0:21]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_r_arm_ctrl_translateX";
+	rename -uid "BED9BF58-43B9-699A-738E-4D824D286DB3";
+	setAttr ".tan" 18;
+	setAttr -s 18 ".ktv[0:17]"  1 5.0648415543691732 6 5.0648415543691732
+		 26 7.3324683687297272 47 7.233996097059439 74 6.6156151033368831 85 8.8426861594578732
+		 95 9.3206669473007242 100 9.2886786260261811 108 9.2073145658542153 121 6.5328330023578838
+		 142 1.7519908001720541 144 1.7265368230383404 149 2.2975689368760195 159 4.4729310610532478
+		 173 4.4729310610532478 188 3.0606408901836226 192 2.298 205 8.4394310669104371;
+	setAttr -s 18 ".kit[0:17]"  16 18 18 18 3 1 1 3 
+		3 18 18 18 18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  3 1 1 3 3 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kwl[0:17]" yes yes yes yes yes yes no yes yes yes yes 
+		yes yes yes yes yes yes yes;
+	setAttr -s 18 ".kix[5:17]"  0.53757894039154053 0.2285836786031723 
+		0.20833325386047363 0.33333349227905273 0.54166650772094727 0.875 0.083333492279052734 
+		0.20833349227905273 0.41666650772094727 0.58333349227905273 0.625 0.16666650772094727 
+		0.54166698455810547;
+	setAttr -s 18 ".kiy[5:17]"  0.67255574464797974 -0.013226180337369442 
+		0 0 -2.8505644798278809 -0.80179876089096069 0 0.91546547412872314 0 0 -1.7170511484146118 
+		0 0;
+	setAttr -s 18 ".kox[5:17]"  0.43006327748298645 0.72833418846130371 
+		0.33333349227905273 0.54166650772094727 0.875 0.083333492279052734 0.20833349227905273 
+		0.41666650772094727 0.58333349227905273 0.625 0.16666650772094727 0.54166698455810547 
+		0.54166698455810547;
+	setAttr -s 18 ".koy[5:17]"  0.53804439306259155 -0.04214245080947876 
+		0 0 -4.6047592163085938 -0.07636193186044693 0 1.8309288024902344 0 0 -0.45787987112998962 
+		0 0;
+createNode animCurveTL -n "mom_scene:mom_r_arm_ctrl_translateY";
+	rename -uid "BBACF0B7-4DA7-3096-869F-AB9BD3180BDB";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  1 1.2787170322493808 6 1.2787170322493808
+		 24 2.829601280033998 46 5.1330642844322236 74 5.2506447612182985 85 6.1930280740166204
+		 96 6.3391581364964704 100 6.36477779537499 109 6.36477779537499 124 6.767374687903061
+		 135 5.2898298203803025 144 2.4795839885912487 149 2.9447513999845256 159 8.6231918453178817
+		 173 8.6231918453178817 183 3.4795679407311706 188 3.4795679407311644 192 2.945 205 4.9773235292923994;
+	setAttr -s 19 ".kit[0:18]"  16 18 1 18 3 3 18 3 
+		3 1 18 18 18 18 18 18 18 18 18;
+	setAttr -s 19 ".kot[2:18]"  1 18 3 3 18 3 3 1 
+		18 18 18 18 18 18 18 18 18;
+	setAttr -s 19 ".kwl[0:18]" yes yes no yes yes yes yes yes yes no yes 
+		yes yes yes yes yes yes yes yes;
+	setAttr -s 19 ".kix[2:18]"  0.35926347970962524 0.91666662693023682 
+		1.1666666269302368 0.45833349227905273 0.45833325386047363 0.16666650772094727 0.375 
+		1.2399876117706299 0.45833349227905273 0.375 0.20833349227905273 0.41666650772094727 
+		0.58333349227905273 0.41666650772094727 0.20833349227905273 0.16666650772094727 0.54166698455810547;
+	setAttr -s 19 ".kiy[2:18]"  2.3068933486938477 0.27715396881103516 
+		0 0 0.12594981491565704 0 0 -2.4786381721496582 -2.3582851886749268 0 1.3955022096633911 
+		0 0 0 0 0 0;
+	setAttr -s 19 ".kox[2:18]"  0.68958526849746704 1.1666666269302368 
+		0.45833349227905273 0.45833325386047363 0.16666650772094727 0.375 0.625 1.1573307514190674 
+		0.375 0.20833349227905273 0.41666650772094727 0.58333349227905273 0.41666650772094727 
+		0.20833349227905273 0.16666650772094727 0.54166698455810547 0.54166698455810547;
+	setAttr -s 19 ".koy[2:18]"  4.4279475212097168 0.35274142026901245 
+		0 0 0.045799899846315384 0 0 -2.3134136199951172 -1.929505467414856 0 2.7910013198852539 
+		0 0 0 0 0 0;
+createNode animCurveTL -n "mom_scene:mom_r_arm_ctrl_translateZ";
+	rename -uid "01BDF1E9-4F12-CF22-E6C3-15B20CD05EEA";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  1 6.0204940354102652 6 6.0204940354102652
+		 26 7.6962113616114287 47 6.8652937818063933 74 6.6497573132678012 90 4.7570675243628129
+		 100 4.4284423049652615 109 4.4284423049652615 126 4.2624854925627522 135 4.2624854925627522
+		 144 4.5638534695377695 149 6.4286042721411372 159 2.5560630820994561 173 2.5560630820994583
+		 176 2.5560630820994583 188 5.9890032499331038 192 6.429 198 4.2594897803230936 205 5.4697927187597291;
+	setAttr -s 19 ".kit[0:18]"  16 18 18 18 3 3 3 3 
+		1 1 18 18 18 18 18 18 18 18 18;
+	setAttr -s 19 ".kot[4:18]"  3 3 3 3 1 1 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 19 ".ktl[8:18]" no no yes yes yes yes yes yes yes yes yes;
+	setAttr -s 19 ".kwl[0:18]" yes yes yes yes yes yes yes yes no no yes 
+		yes yes yes yes yes yes yes yes;
+	setAttr -s 19 ".kix[8:18]"  2.88326096534729 1.0642048120498657 0.375 
+		0.20833349227905273 0.41666650772094727 0.58333349227905273 0.125 0.5 0.16666650772094727 
+		0.25 0.29166698455810547;
+	setAttr -s 19 ".kiy[8:18]"  -0.029415544122457504 1.0536479949951172 
+		0.90410393476486206 0 0 0 0 2.9047033786773682 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  3.7997889518737793 0.94836390018463135 
+		0.20833349227905273 0.41666650772094727 0.58333349227905273 0.125 0.5 0.16666650772094727 
+		0.25 0.29166698455810547 0.29166698455810547;
+	setAttr -s 19 ".koy[8:18]"  -0.011537790298461914 1.0163663625717163 
+		0.50228035449981689 0 0 0 0 0.96823352575302124 0 0 0;
+createNode animCurveTU -n "mom_scene:mom_r_wrist_ctrl_visibility";
+	rename -uid "CBF79425-4A48-DD31-46AF-92A6FD97EE4E";
+	setAttr ".tan" 9;
+	setAttr -s 19 ".ktv[0:18]"  1 1 3 1 38 1 55 1 83 1 99 1 104 1 109 1
+		 118 1 136 1 142 1 149 1 158 1 159 1 173 1 188 1 192 1 194 1 205 1;
+	setAttr -s 19 ".kot[0:18]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 19 ".kwl[0:18]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_r_wrist_ctrl_rotateX";
+	rename -uid "249DF158-4151-9FB6-218C-99B36C294796";
+	setAttr ".tan" 18;
+	setAttr -s 18 ".ktv[0:17]"  1 35.329189692057376 3 -73.70559368282764
+		 38 -73.70559368282764 55 -48.892200481357676 83 -79.742974063021421 99 -74.294604551055201
+		 104 -73.384940099513102 109 -73.384940099513102 118 -73.384940099513102 136 81.818166654113298
+		 142 81.818166654113298 149 57.972927749139764 155 27.44663336165819 159 34.659264432194092
+		 173 34.659264432194092 188 73.364919188743443 192 73.364919188743443 205 -42.418134340841902;
+	setAttr -s 18 ".kit[0:17]"  16 18 18 18 18 3 18 3 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 18 ".kot[5:17]"  3 18 3 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 18 ".kwl[0:17]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_r_wrist_ctrl_rotateY";
+	rename -uid "D0EAC466-44EF-742E-96BF-6B8CA7625197";
+	setAttr ".tan" 18;
+	setAttr -s 18 ".ktv[0:17]"  1 132.00067344955923 3 98.914293059424239
+		 38 98.914293059424239 55 98.914293059424182 83 161.53647543321387 99 120.24399346980721
+		 104 113.34976522857713 109 113.34976522857713 118 113.34976522857713 136 130.49687457301553
+		 142 130.49687457301553 149 137.08176626189825 156 146.51365667196853 159 180.99857757774913
+		 173 180.99857757774913 188 150.96824786578279 192 137.4742396126027 205 124.69542011972999;
+	setAttr -s 18 ".kit[0:17]"  16 18 18 18 18 3 18 3 
+		18 18 18 18 1 18 18 18 18 18;
+	setAttr -s 18 ".kot[5:17]"  3 18 3 18 18 18 18 1 
+		18 18 18 18 18;
+	setAttr -s 18 ".kwl[0:17]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes;
+	setAttr -s 18 ".kix[12:17]"  0.38896042108535767 0.125 0.58333349227905273 
+		0.625 0.16666650772094727 0.54166698455810547;
+	setAttr -s 18 ".kiy[12:17]"  0.28325974941253662 0 0 -0.59971827268600464 
+		-0.10789337009191513 0;
+	setAttr -s 18 ".kox[12:17]"  0.22218643128871918 0.58333349227905273 
+		0.625 0.16666650772094727 0.54166698455810547 0.54166698455810547;
+	setAttr -s 18 ".koy[12:17]"  0.1618068665266037 0 0 -0.15992471575737 
+		-0.35065397620201111 0;
+createNode animCurveTA -n "mom_scene:mom_r_wrist_ctrl_rotateZ";
+	rename -uid "84B2B057-455F-BFBC-F891-3684ACD2A4CA";
+	setAttr ".tan" 18;
+	setAttr -s 17 ".ktv[0:16]"  1 51.813291683601193 3 55.35285999872702
+		 38 55.35285999872702 55 55.352859998726991 83 23.031351635701881 99 29.080356906016171
+		 104 30.090304019461851 109 30.090304019461851 118 30.090304019461851 136 188.48513971743338
+		 142 188.48513971743338 149 155.92184241042446 159 76.417298058622634 173 76.417298058622634
+		 188 169.5651154455299 192 169.5651154455299 205 70.323995259080661;
+	setAttr -s 17 ".kit[0:16]"  16 18 18 18 18 3 18 3 
+		18 18 18 18 18 18 18 18 18;
+	setAttr -s 17 ".kot[5:16]"  3 18 3 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 17 ".kwl[0:16]" yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_r_pinky1_ctrl_visibility";
+	rename -uid "51498E4E-4C26-2186-5E65-089955EB850A";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "mom_scene:mom_r_pinky1_ctrl_translateX";
+	rename -uid "AAD77857-44D9-75F1-1016-CFB2443B8A79";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_r_pinky1_ctrl_translateY";
+	rename -uid "56DBA73F-4F93-F321-2392-C9B51CF5DFEB";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_r_pinky1_ctrl_translateZ";
+	rename -uid "4F91FE3E-48DC-6073-0189-C790D64ED4A1";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_r_pinky1_ctrl_rotateX";
+	rename -uid "EAEE2C29-4528-25BA-1E00-8B8A6777A138";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -20.654080032794628;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_r_pinky1_ctrl_rotateY";
+	rename -uid "4B57B108-46EA-73C2-45F2-D8ADF5805028";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -8.2037349267712916;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_r_pinky1_ctrl_rotateZ";
+	rename -uid "2D6AEBAB-4808-F01A-7D87-148468483D29";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 35.830403734518221;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_r_pinky1_ctrl_scaleX";
+	rename -uid "6D713CFC-4983-0F32-8CB3-7681A0F870C7";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_r_pinky1_ctrl_scaleY";
+	rename -uid "66DC5D88-4EC5-13E1-D99E-909D60DDDB32";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_r_pinky1_ctrl_scaleZ";
+	rename -uid "0C049484-4761-4891-890A-5FB63B284047";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_arm_ctrl_visibility";
+	rename -uid "9FB74100-4DAE-B16D-FCF6-3CBD2F400C29";
+	setAttr ".tan" 9;
+	setAttr -s 8 ".ktv[0:7]"  1 1 6 1 24 1 50 1 77 1 207 1 230 1 264 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+	setAttr -s 8 ".kwl[0:7]" yes yes yes yes yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_l_arm_ctrl_translateX";
+	rename -uid "AF0C0816-4114-E228-B99F-A7A437528543";
+	setAttr ".tan" 18;
+	setAttr -s 8 ".ktv[0:7]"  1 -4.7728745089798474 6 -4.7728745089798474
+		 24 -6.5800990252984928 50 -6.5800990252984928 77 -5.533500497154197 207 -5.533500497154197
+		 230 -6.8069868784969305 264 -6.8069868784969305;
+	setAttr -s 8 ".kit[0:7]"  16 18 18 18 18 3 3 3;
+	setAttr -s 8 ".kot[5:7]"  3 3 3;
+	setAttr -s 8 ".kwl[0:7]" yes yes yes yes yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_l_arm_ctrl_translateY";
+	rename -uid "4CB394C9-459F-06DB-BA85-2A8CFD43538A";
+	setAttr ".tan" 18;
+	setAttr -s 8 ".ktv[0:7]"  1 1.8539105166883769 6 0.90806167579076735
+		 24 3.4495415550258999 50 3.4495415550258999 77 4.4229845902745897 207 4.4229845902745897
+		 230 4.350738176407063 264 4.350738176407063;
+	setAttr -s 8 ".kit[0:7]"  16 18 18 18 18 3 3 3;
+	setAttr -s 8 ".kot[5:7]"  3 3 3;
+	setAttr -s 8 ".kwl[0:7]" yes yes yes yes yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_l_arm_ctrl_translateZ";
+	rename -uid "A1726EC6-40C4-2B9B-E995-BF9CA2EF415E";
+	setAttr ".tan" 18;
+	setAttr -s 8 ".ktv[0:7]"  1 4.0119301403156653 6 5.0067296324202228
+		 24 7.5798955509463699 50 7.5798955509463699 77 6.9201462301243621 207 6.9201462301243621
+		 230 6.9201462301243692 264 6.9201462301243684;
+	setAttr -s 8 ".kit[0:7]"  16 18 18 18 18 3 3 3;
+	setAttr -s 8 ".kot[5:7]"  3 3 3;
+	setAttr -s 8 ".kwl[0:7]" yes yes yes yes yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_l_wrist_ctrl_visibility";
+	rename -uid "F0015DC4-4A25-1947-C664-56B01ECDCF93";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  1 1 11 1 60 1 72 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_l_wrist_ctrl_rotateX";
+	rename -uid "FFEB6F63-44A7-19DE-8560-0C91304486CC";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 -138.56089039381379 11 -168.90800824319226
+		 60 -163.57899939055008 72 -149.45494101209704;
+	setAttr -s 4 ".kit[0:3]"  16 18 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_l_wrist_ctrl_rotateY";
+	rename -uid "31F1D622-428D-A3F1-B8F9-BC87A3C8CEDA";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 -62.864168900232123 11 -75.751290689223922
+		 60 -75.751290689223922 72 -112.24000062337376;
+	setAttr -s 4 ".kit[0:3]"  16 18 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_l_wrist_ctrl_rotateZ";
+	rename -uid "65FB48F0-4544-99D8-881F-60B97D9E6F54";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  1 92.657507466619151 11 14.012054001691316
+		 60 14.012054001691316 72 14.012054001691316;
+	setAttr -s 4 ".kit[0:3]"  16 18 3 3;
+	setAttr -s 4 ".kot[0:3]"  18 18 3 3;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_neck_ctrl_visibility";
+	rename -uid "2AEEDC3F-4A25-64DB-A583-98A96592D527";
+	setAttr ".tan" 9;
+	setAttr -s 10 ".ktv[0:9]"  1 1 45 1 85 1 93 1 108 0.59592373642958307
+		 148 0.59592373642958307 159 0.59592373642958307 164 1 175 1 185 1;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
+		5 5;
+	setAttr -s 10 ".kwl[0:9]" yes yes yes yes yes yes yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_neck_ctrl_rotateX";
+	rename -uid "57A1713C-453A-175C-C9EE-D3A9A4D78FC6";
+	setAttr ".tan" 18;
+	setAttr -s 10 ".ktv[0:9]"  1 15.009575134621745 45 15.611784496975092
+		 85 12.244368956097558 93 12.244368956097558 108 11.025612471778048 148 11.025612471778048
+		 159 -30.530954347544892 171 -30.530954347544892 185 -13.717805922672117 191 3.0707549281182622;
+	setAttr -s 10 ".kit[0:9]"  16 18 18 18 18 18 18 18 
+		18 3;
+	setAttr -s 10 ".kot[9]"  3;
+	setAttr -s 10 ".kwl[0:9]" yes yes yes yes yes yes yes yes yes yes;
+createNode animCurveTA -n "mom_scene:mom_neck_ctrl_rotateY";
+	rename -uid "088F9466-401E-5C32-CBF7-48BC075A642F";
+	setAttr ".tan" 18;
+	setAttr -s 11 ".ktv[0:10]"  1 0.42462034768029505 45 15.781809268872287
+		 85 33.632206421244796 93 33.632206421244796 108 -20.37932640657661 148 -20.37932640657661
+		 159 -20.379326406576649 164 -20.379326406576649 175 -20.379326406576666 190 -18.509751220808671
+		 206 45.540236614265076;
+	setAttr -s 11 ".kit[0:10]"  16 18 18 18 18 18 18 18 
+		18 3 3;
+	setAttr -s 11 ".kot[9:10]"  3 3;
+	setAttr -s 11 ".kwl[0:10]" yes yes yes yes yes yes yes yes yes yes 
+		yes;
+createNode animCurveTA -n "mom_scene:mom_neck_ctrl_rotateZ";
+	rename -uid "08E8C952-4F45-7C45-3AF1-F3BD8F8A4077";
+	setAttr ".tan" 18;
+	setAttr -s 10 ".ktv[0:9]"  1 0.030655147173871335 45 4.2627579384780701
+		 85 11.872168471379009 93 11.872168471379009 108 1.9438591306321824 148 1.9438591306321824
+		 159 2.4657026345424646 164 2.4657026345424646 175 2.4657026345424637 185 2.4657026345424637;
+	setAttr -s 10 ".kit[0:9]"  16 18 18 18 18 18 18 18 
+		18 3;
+	setAttr -s 10 ".kot[9]"  3;
+	setAttr -s 10 ".kwl[0:9]" yes yes yes yes yes yes yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_r_foot_ctrl_visibility";
+	rename -uid "22774ADE-440B-7947-6850-D89382B6B0F9";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "mom_scene:mom_r_foot_ctrl_translateX";
+	rename -uid "2626DDBF-47D8-BD9C-79FE-AD8679EBDE84";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -2.414682621526663;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_r_foot_ctrl_translateY";
+	rename -uid "CA7674FE-4804-7F02-19F4-92851859397F";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0.012109913668476999;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_r_foot_ctrl_translateZ";
+	rename -uid "E4F798CF-49E4-12D2-C49B-0AB32B6F3A76";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -0.41083491484184081;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_r_foot_ctrl_rotateX";
+	rename -uid "9BD58ABA-44EA-53AA-441C-39AD0B9EBDDA";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_r_foot_ctrl_rotateY";
+	rename -uid "F496303D-4E9D-5C0C-D11F-C18B8F550EFA";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_r_foot_ctrl_rotateZ";
+	rename -uid "2E5F9D9F-449B-365A-A3B6-4EA80AA578B1";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_r_foot_ctrl_scaleX";
+	rename -uid "9D8AB496-4DC8-ECA1-21D9-289EEE50B743";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_r_foot_ctrl_scaleY";
+	rename -uid "CB33068F-4054-C41B-C227-1FBE3A9EFEF0";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_r_foot_ctrl_scaleZ";
+	rename -uid "6E2CED28-42E0-620E-2969-9389C315E153";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_foot_ctrl_visibility";
+	rename -uid "B429E8C4-48F1-B8F4-7CAA-3D97A958A088";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "mom_scene:mom_l_foot_ctrl_translateX";
+	rename -uid "FF60EE80-4E23-4A8A-B361-B1A082D6387F";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0.80548257784496613;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_foot_ctrl_translateY";
+	rename -uid "A2A80067-43EB-8481-77BD-728C949F4381";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -0.00423716123792386;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_foot_ctrl_translateZ";
+	rename -uid "8F501F89-492B-9B62-95D3-B6AAE4B9B94B";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0.00053795308018673885;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_foot_ctrl_rotateX";
+	rename -uid "53901688-40F4-65B2-B292-0381B0FDE938";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_foot_ctrl_rotateY";
+	rename -uid "3A097D95-449B-EE95-EC2B-2CB0CC87460A";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_foot_ctrl_rotateZ";
+	rename -uid "AB991E59-4592-74BE-5A22-10BAB183DE5D";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_foot_ctrl_scaleX";
+	rename -uid "B12F19E7-44B5-55A8-106E-74BC5F23B352";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_foot_ctrl_scaleY";
+	rename -uid "74071871-4DB3-1493-6FEA-3592DFAA1BBC";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_foot_ctrl_scaleZ";
+	rename -uid "6003D370-436C-80D4-8419-77BFE09559C4";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky0_visibility";
+	rename -uid "0B6EE050-4E61-80C2-3964-03BFAA341FDF";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "mom_scene:mom_l_pinky0_translateX";
+	rename -uid "D8506BD0-44D9-2DC0-1AB1-309F3B22767E";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1.3801253748776714;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_pinky0_translateY";
+	rename -uid "4F288F8F-4498-D3E2-23DB-A5B038E13717";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0.69398520698515576;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_pinky0_translateZ";
+	rename -uid "2F75D4D4-4266-EA36-AF58-7C80E2B5A5CE";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -0.023101219971990973;
+	setAttr ".kot[0]"  18;
+createNode pairBlend -n "mom_scene:pairBlend1";
+	rename -uid "2A9FDF02-4EA4-0485-56BD-3DA3D364A4B4";
+	setAttr ".txm" 2;
+	setAttr ".tym" 2;
+	setAttr ".tzm" 2;
+createNode animCurveTA -n "mom_scene:pairBlend1_inRotateX1";
+	rename -uid "38D36EDF-4203-584E-D8D1-A4A57166E677";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 7.1562480332929135e-015;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:pairBlend1_inRotateY1";
+	rename -uid "460599CF-4515-A546-59E2-20807D078E83";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1.3903804838857999e-030;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:pairBlend1_inRotateZ1";
+	rename -uid "BD56BAA1-4DEB-3658-74C9-12AA12DCD0EE";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -2.2263882770244617e-014;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky0_scaleX";
+	rename -uid "8A3E61DD-47E0-5175-9612-96AA59CC1F41";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky0_scaleY";
+	rename -uid "88E5E116-46F5-BFB8-49D7-B1B22E0E9229";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky0_scaleZ";
+	rename -uid "AE3E5AD9-41C2-448A-9ABD-E4A64F25E916";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky1_ctrl_visibility";
+	rename -uid "F5151B6C-4A2E-C948-2905-5C9A0BBD9650";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "mom_scene:mom_l_pinky1_ctrl_translateX";
+	rename -uid "C4BACC8A-4E26-C653-62DA-52900A71EB01";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -0.17592602275478714;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_pinky1_ctrl_translateY";
+	rename -uid "777372A8-43B3-72B8-E014-50B702AA5E57";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -0.25803990291001921;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_pinky1_ctrl_translateZ";
+	rename -uid "C3EC3381-4884-9FC3-C39C-F38277555D60";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -1.3423932896480322;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_pinky1_ctrl_rotateX";
+	rename -uid "FBB8D0D5-4E1B-F0B1-363F-70BE59F65151";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 159.00086659705997;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_pinky1_ctrl_rotateY";
+	rename -uid "4ADBA702-4379-4012-D804-29BA3DAED3A1";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 26.974651735435778;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_pinky1_ctrl_rotateZ";
+	rename -uid "A78CB39D-4ABD-5D8A-C3A5-EA83B8D0FF0D";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 137.55791041969277;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky1_ctrl_scaleX";
+	rename -uid "D4786F8D-497B-01C1-BF28-4F9B3F691DD3";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky1_ctrl_scaleY";
+	rename -uid "03F426EC-4D10-3E89-4A81-E0BB9C5FEA8A";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_pinky1_ctrl_scaleZ";
+	rename -uid "5C335E0F-4DCB-D37B-6546-B69C8F5BC6AB";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 -0.5297756616862731;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_thumb1_ctrl_visibility";
+	rename -uid "71C821A6-4F6D-901D-D03D-D89520E7B113";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "mom_scene:mom_l_thumb1_ctrl_translateX";
+	rename -uid "6C3CD550-45A9-6132-C386-5BAED439F1F7";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_thumb1_ctrl_translateY";
+	rename -uid "34C8B14E-431E-79CA-3860-89B2EBB4106C";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_l_thumb1_ctrl_translateZ";
+	rename -uid "D9E7F728-4D13-3DBE-5F2E-F79AD5D68112";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_thumb1_ctrl_rotateX";
+	rename -uid "55A3D455-4DD5-880D-6DF8-839C9AE89B43";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 2.5587053916639761;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_thumb1_ctrl_rotateY";
+	rename -uid "1817F608-4401-9885-E6C7-67879DEFA5A7";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 36.86176181210768;
+	setAttr ".kot[0]"  18;
+createNode animCurveTA -n "mom_scene:mom_l_thumb1_ctrl_rotateZ";
+	rename -uid "EAD418AF-414D-E69E-C01B-76A996FCE5C0";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 7.5165939568416533;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_thumb1_ctrl_scaleX";
+	rename -uid "832BB2B9-42A4-91F6-0DE8-3D888EC70EBF";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_thumb1_ctrl_scaleY";
+	rename -uid "296F4F2F-4138-8FE9-7344-78AF3A1C2999";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTU -n "mom_scene:mom_l_thumb1_ctrl_scaleZ";
+	rename -uid "D936E1D2-46BB-8D50-9B99-5BAF57E102C6";
+	setAttr ".tan" 16;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  18;
+createNode animCurveTL -n "mom_scene:mom_cog_ctrl_translateX";
+	rename -uid "879E0C67-4E26-DB14-751B-38A4E34D7722";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -0.16092657835075622 3 -0.16092657835075622
+		 28 -0.16092657835075622 72 -0.16092657835075622 75 -0.16092657835075622 150 -0.16092657835075622
+		 158 -0.16092657835075622 160 -0.16092657835075622;
+createNode animCurveTL -n "mom_scene:mom_cog_ctrl_translateY";
+	rename -uid "C423EBC0-420E-703E-969D-52AF893D3C56";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -4.0586998985816543 3 -4.0586998985816543
+		 28 -4.0586998985816543 72 -4.0586998985816543 75 -4.0586998985816543 150 -4.0586998985816543
+		 158 -4.0586998985816543 160 -4.0586998985816543;
+createNode animCurveTL -n "mom_scene:mom_cog_ctrl_translateZ";
+	rename -uid "AC140C07-4BD8-8DAF-7165-568CEE05B616";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -4.2737726605817254 3 -4.2737726605817254
+		 28 -4.2737726605817254 72 -4.2737726605817254 75 -4.2737726605817254 150 -4.2737726605817254
+		 158 -4.2737726605817254 160 -4.2737726605817254;
+createNode animCurveTU -n "mom_scene:mom_cog_ctrl_visibility";
+	rename -uid "2A21CDB5-4DEB-A301-8BCA-3DA3E456E547";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 1 3 1 28 1 72 1 75 1 150 1 158 1 160 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode animCurveTA -n "mom_scene:mom_cog_ctrl_rotateX";
+	rename -uid "00AB6269-4FF5-B4C5-0F1A-559D6DA5E9DA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 13.065959639073844 3 29.11711882993416
+		 28 29.11711882993416 72 10.934211956608175 75 11.251648837427844 150 11.251648837427844
+		 158 7.1762246857256962 160 7.3506176083783101;
+	setAttr -s 8 ".kit[3:7]"  1 18 18 18 18;
+	setAttr -s 8 ".kot[3:7]"  1 18 18 18 18;
+	setAttr -s 8 ".ktl[0:7]" no no no yes no yes yes yes;
+	setAttr -s 8 ".kix[3:7]"  0.99998235702514648 1 1 1 1;
+	setAttr -s 8 ".kiy[3:7]"  -0.0059357080608606339 0 0 0 0;
+	setAttr -s 8 ".kox[3:7]"  0.99946272373199463 1 1 1 1;
+	setAttr -s 8 ".koy[3:7]"  0.032776590436697006 0 0 0 0;
+createNode animCurveTA -n "mom_scene:mom_cog_ctrl_rotateY";
+	rename -uid "1E8DBD92-45EA-9BA7-B93B-3086F7B1687A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 0.37314082987912411 3 0.37314082987912434
+		 28 0.37314082987912434 72 0.373140829879125 75 0.373140829879125 150 0.373140829879125
+		 158 0.37314082987912511 160 0.37314082987912511;
+createNode animCurveTA -n "mom_scene:mom_cog_ctrl_rotateZ";
+	rename -uid "D2F7FED8-48BB-0184-ED3A-7EB02725AA2E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -1.877962070142086 3 -1.877962070142088
+		 28 -1.877962070142088 72 -1.8779620701420936 75 -1.8779620701420936 150 -1.8779620701420936
+		 158 -1.8779620701420958 160 -1.8779620701420958;
+createNode animCurveTU -n "mom_scene:mom_cog_ctrl_scaleX";
+	rename -uid "C31B5067-4760-FD55-5133-E198CF77D449";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 1 3 1 28 1 72 1 75 1 150 1 158 1 160 1;
+createNode animCurveTU -n "mom_scene:mom_cog_ctrl_scaleY";
+	rename -uid "14D3C0EA-44C4-FEEB-F4B5-F1B50800CEAE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 1 3 1 28 1 72 1 75 1 150 1 158 1 160 1;
+createNode animCurveTU -n "mom_scene:mom_cog_ctrl_scaleZ";
+	rename -uid "112D1472-4D39-67A7-CFEB-B0B46F5E98CB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 1 3 1 28 1 72 1 75 1 150 1 158 1 160 1;
+createNode animCurveTU -n "mom_scene:baby_master_visibility";
+	rename -uid "1343217D-48DD-0BEC-DF2B-88B0F401CD97";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 1 25 1 38 1 53 1 84 1 99 1 150 1 159 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+createNode audio -n "mom_scene:animatic_audio";
+	rename -uid "03133095-469E-B044-572F-DFB4BFED6277";
+	setAttr ".ef" 1184.2560000000001;
+	setAttr ".se" 1184.2560000000001;
+	setAttr ".f" -type "string" "C:/Users/Gogo/Documents/maya/projects/Only-Love//scenes/layout/3d animatic/Animated/animatic_audio.wav";
+createNode audio -n "mom_scene:mom_scene_audio";
+	rename -uid "F514776A-4771-BA3F-DFCB-F2BFE2CB1A63";
+	setAttr ".ef" 613.192;
+	setAttr ".se" 613.192;
+	setAttr ".f" -type "string" "C:/Users/mikha/Desktop/Only-Love//sound/mom_scene_audio.wav";
+createNode animCurveTU -n "mom_scene:wine_bottle_blendParent1";
+	rename -uid "B601C9F3-4F75-125F-D37D-49833B5F9ED9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "mom_scene:wine_bottle_blendParent2";
+	rename -uid "5C6A94BF-4F08-9165-3C3F-C89136F562A8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 149 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "mom_scene:wine_bottle_blendParent3";
+	rename -uid "83730932-457A-B682-FC5D-469AD387BBAE";
+	setAttr ".tan" 10;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 148 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "mom_scene:wine_bottle_visibility";
+	rename -uid "F318FF3B-4A38-22DA-6057-F19E2C6BDB78";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mom_scene:wine_bottle_blendParent4";
+	rename -uid "83FB88E1-41D5-4F2C-8FCE-C089DBCDC70F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 148 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "mom_scene:mom_r_blink_ctrl_translateY";
+	rename -uid "3830599E-4E29-50ED-6E68-7D9715CA0C0A";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  73 0 88 -0.10464755319275376 221 0 226 -0.66317762104606715;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_r_blink_ctrl_visibility";
+	rename -uid "755CB8AC-4BA9-7396-6EC9-6CABD1BCAC98";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  73 1 88 1 221 1 226 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTU -n "mom_scene:mom_l_blink_ctrl_visibility";
+	rename -uid "7CC6F72E-4A98-0494-BFF1-F29E7FFA280F";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  73 1 88 1 221 1 226 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode animCurveTL -n "mom_scene:mom_l_blink_ctrl_translateY";
+	rename -uid "3B6CDA19-459A-97EF-C241-28A21469DE8A";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  73 0 88 -0.10464755319275376 221 0 226 -0.66317762104606715;
+	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
+createNode oceanShader -n "mom_scene:oceanShader1";
+	rename -uid "26B15F5C-49B4-59EF-2E29-8A8553820A7A";
+	setAttr ".wc" -type "float3" 0 1 1 ;
+	setAttr -s 3 ".env";
+	setAttr ".env[0].envp" 0.20000000298023224;
+	setAttr ".env[0].envc" -type "float3" 0.015 0.13 0.145 ;
+	setAttr ".env[0].envi" 2;
+	setAttr ".env[1].envp" 0.55000001192092896;
+	setAttr ".env[1].envc" -type "float3" 0.47999999 0.55000001 0.69999999 ;
+	setAttr ".env[1].envi" 2;
+	setAttr ".env[2].envp" 1;
+	setAttr ".env[2].envc" -type "float3" 0 0.1 0.44999999 ;
+	setAttr ".env[2].envi" 2;
+	setAttr ".wh[0]"  0 0.16 1;
+	setAttr ".wtb[0]"  0 1 1;
+	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
+	setAttr ".d" 0.028245460242033005;
+createNode reference -n "mom_scene:sharedReferenceNode";
+	rename -uid "A3BD9126-4746-2ED1-43E2-FE8A628D59A2";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"mom_scene:sharedReferenceNode";
+createNode nodeGraphEditorInfo -n "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "68829A6F-431C-640F-F673-B9BCA4C4DB6A";
+	setAttr ".pee" yes;
+	setAttr ".def" no;
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -112.49645885320629 -1158.2027839783052 ;
+	setAttr ".tgi[0].vh" -type "double2" 1182.1870335591186 616.56935111395478 ;
+	setAttr -s 7 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[0].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[1].y" -251.42857360839844;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 491.42855834960937;
+	setAttr ".tgi[0].ni[2].y" -401.42855834960937;
+	setAttr ".tgi[0].ni[2].nvs" 2914;
+	setAttr ".tgi[0].ni[3].x" 568.5714111328125;
+	setAttr ".tgi[0].ni[3].y" -94.285713195800781;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[4].y" -11.428571701049805;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[5].y" -241.42857360839844;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 874.28570556640625;
+	setAttr ".tgi[0].ni[6].y" -255.71427917480469;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+createNode animCurveTA -n "mom_scene:wine_bottle_rotateZ";
+	rename -uid "FCECBA70-4126-9485-9BBE-50BCF55CD77D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "mom_scene:wine_bottle_rotateY";
+	rename -uid "B3A71C44-4767-EAED-0100-F0B1F79F956E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "mom_scene:wine_bottle_rotateX";
+	rename -uid "01F2CB2F-43C9-8989-B84F-93B1A3AAC1E0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "mom_scene:wine_bottle_translateZ";
+	rename -uid "4697795F-45B1-ADA5-8C99-FC995B7B1F4E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 6.4986199236401898;
+createNode animCurveTL -n "mom_scene:wine_bottle_translateY";
+	rename -uid "A672CDBC-4CC6-03EE-B681-DAB8C5815C34";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -2.7009876143174445;
+createNode animCurveTL -n "mom_scene:wine_bottle_translateX";
+	rename -uid "FB610AD5-469E-BF57-B0C3-98B6CE7C6403";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -6.1215570167412485;
+createNode animCurveTU -n "mom_scene:wine_bottle_scaleZ";
+	rename -uid "D315349E-4AC8-FEB9-8963-F899FB582516";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.74435670947324362;
+createNode animCurveTU -n "mom_scene:wine_bottle_scaleY";
+	rename -uid "3F2DBC3D-4A11-6948-0DA7-D38B25D4D754";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.87954174293886356;
+createNode animCurveTU -n "mom_scene:wine_bottle_scaleX";
+	rename -uid "EBAA7830-4C86-4CEC-3DF8-9F93B3552462";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.74435670947324362;
+createNode animCurveTU -n "mom_scene:wine_bottle_blendOrient1";
+	rename -uid "7D11A4E3-4E9C-6B88-22A2-C3BC41B7A32E";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 133 0 200 0;
+	setAttr -s 3 ".kit[0:2]"  18 3 3;
+	setAttr -s 3 ".kot[0:2]"  5 3 3;
+createNode partition -n "mom_scene:mtorPartition1";
+	rename -uid "F461866B-4F6A-C53D-A91E-8A9DA827CFF3";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mtorPartition2";
+	rename -uid "9BFDA569-4DE4-3910-89D0-6FA3F7851C16";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode partition -n "mom_scene:mtorPartition3";
+	rename -uid "19E1C8FB-426C-49EF-1CE1-CA89020810AD";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode animCurveTU -n "mom_scene:wine_bottle_visibility1";
+	rename -uid "EA3FE980-4186-9A35-03FF-54AB7A8D0F88";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mom_scene:wine_bottle_blendParent5";
+	rename -uid "AB95FCC7-4CD7-57E2-296F-03A84254B257";
+	setAttr ".tan" 3;
+	setAttr ".ktv[0]"  1 1;
+createNode timeEditorTracks -n "mom_scene:Composition1";
+	rename -uid "A4FE5E10-4AE4-AEB7-99A8-67B4FD6B1B7D";
+createNode partition -n "mom_scene:new_mom_camera:mtorPartition";
+	rename -uid "2EDF2D5D-4AEB-E347-3FBC-2ABE38EDEE46";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode animCurveTL -n "mom_scene:new_mom_camera:persp1_translateX3";
+	rename -uid "ED64BF6F-43D5-ECB7-5E34-9BBE506E73FF";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  0 1.7709148427768691 48 -4.3340829744940628
+		 143 -2.7404974086005836 286 -0.72787963995155014 356 -0.72787963995155014;
+	setAttr -s 5 ".kit[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kot[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kix[1:4]"  2 3.9583334922790527 5.9583334922790527 
+		2.9166660308837891;
+	setAttr -s 5 ".kiy[1:4]"  0.094578847289085388 1.4394509792327881 
+		0 0;
+	setAttr -s 5 ".kox[1:4]"  3.9583334922790527 5.9583334922790527 2.9166660308837891 
+		2.9166660308837891;
+	setAttr -s 5 ".koy[1:4]"  0.18718734383583069 2.1667523384094238 
+		0 0;
+createNode animCurveTL -n "mom_scene:new_mom_camera:persp1_translateY3";
+	rename -uid "2448B072-4A2D-C952-7919-42A72D69AB8C";
+	setAttr ".tan" 3;
+	setAttr -s 6 ".ktv[0:5]"  0 10.778188823505422 65 13.494912202121196
+		 184 16.212413492396067 243 14.825928171315921 286 11.221026986745791 356 -2.5789672333244873;
+	setAttr -s 6 ".kit[1:5]"  18 3 18 1 3;
+	setAttr -s 6 ".kot[1:5]"  18 3 18 1 3;
+	setAttr -s 6 ".kix[4:5]"  1.7916669845581055 2.9166660308837891;
+	setAttr -s 6 ".kiy[4:5]"  -6.153867244720459 0;
+	setAttr -s 6 ".kox[4:5]"  2.9166660308837891 2.9166660308837891;
+	setAttr -s 6 ".koy[4:5]"  -10.01792049407959 0;
+createNode animCurveTL -n "mom_scene:new_mom_camera:persp1_translateZ3";
+	rename -uid "74D935F4-4194-0EE6-45A1-C8B157268748";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  0 13.180505975386327 62 27.803288823928519
+		 143 31.005733760014991 286 37.375127276840374 356 32.651624630365845;
+	setAttr -s 5 ".kit[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kot[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kix[1:4]"  2.5833332538604736 3.3750002384185791 5.9583334922790527 
+		2.9166660308837891;
+	setAttr -s 5 ".kiy[1:4]"  4.789402961730957 3.461245059967041 0 0;
+	setAttr -s 5 ".kox[1:4]"  3.3750002384185791 5.9583334922790527 2.9166660308837891 
+		2.9166660308837891;
+	setAttr -s 5 ".koy[1:4]"  6.2571258544921875 6.1105928421020508 0 
+		0;
+createNode animCurveTA -n "mom_scene:new_mom_camera:persp1_rotateX3";
+	rename -uid "88445161-4BDF-C6CF-F119-DC8C0E954D1F";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  0 -80.174704251391049 42 -38.145043426137697
+		 65 -24.365155853534127 132 -23.058556171865558 164 -20.226083499291672 243 -24.115792612060755
+		 356 -16.594667375244303;
+	setAttr -s 7 ".kit[0:6]"  3 1 18 18 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 1 18 18 18 18 3;
+	setAttr -s 7 ".kix[1:6]"  1.75 0.95833325386047363 2.7916667461395264 
+		1.3333334922790527 3.2916665077209473 4.7083330154418945;
+	setAttr -s 7 ".kiy[1:6]"  0.83907747268676758 0.023485194891691208 
+		0.048889998346567154 0 0 0;
+	setAttr -s 7 ".kox[1:6]"  0.95833325386047363 2.7916667461395264 
+		1.3333334922790527 3.2916665077209473 4.7083330154418945 4.7083330154418945;
+	setAttr -s 7 ".koy[1:6]"  0.45949485898017883 0.068413399159908295 
+		0.023350447416305542 0 0 0;
+createNode animCurveTA -n "mom_scene:new_mom_camera:persp1_rotateY3";
+	rename -uid "202E51EE-4967-0C62-52B8-BDBD23849498";
+	setAttr ".tan" 1;
+	setAttr -s 5 ".ktv[0:4]"  0 2.1819024658339417 42 -10.229676513868746
+		 143 -4.5150232729938065 286 1.0541230444573084 356 1.0541230444573084;
+	setAttr -s 5 ".kit[0:4]"  3 1 1 18 3;
+	setAttr -s 5 ".kot[0:4]"  3 1 1 18 3;
+	setAttr -s 5 ".kix[1:4]"  1.75 4.2083334922790527 5.9583334922790527 
+		2.9166660308837891;
+	setAttr -s 5 ".kiy[1:4]"  0.015798337757587433 0.11131975799798965 
+		0 0;
+	setAttr -s 5 ".kox[1:4]"  4.2083334922790527 5.9583334922790527 2.9166660308837891 
+		2.9166660308837891;
+	setAttr -s 5 ".koy[1:4]"  0.037991240620613098 0.15761145949363708 
+		0 0;
+createNode animCurveTA -n "mom_scene:new_mom_camera:persp1_rotateZ3";
+	rename -uid "EB1176F8-4CC7-BBE7-5D5E-2EB359404283";
+	setAttr ".tan" 18;
+	setAttr -s 8 ".ktv[0:7]"  0 -2.2756725322093683 65 4.0943550745839499
+		 132 2.1154667855289664 164 1.6737916446285304 184 1.3416635776815604 243 0.74374413613486168
+		 286 0.74374413613486168 356 0.74374413613486168;
+	setAttr -s 8 ".kit[0:7]"  3 18 18 18 1 18 18 3;
+	setAttr -s 8 ".kot[0:7]"  3 18 18 18 1 18 18 3;
+	setAttr -s 8 ".kix[4:7]"  0.83333301544189453 2.4583334922790527 
+		1.7916669845581055 2.9166660308837891;
+	setAttr -s 8 ".kiy[4:7]"  -0.0052325762808322906 0 0 0;
+	setAttr -s 8 ".kox[4:7]"  2.4583334922790527 1.7916669845581055 2.9166660308837891 
+		2.9166660308837891;
+	setAttr -s 8 ".koy[4:7]"  -0.015436107292771339 0 0 0;
+createNode animCurveTU -n "mom_scene:new_mom_camera:persp1_visibility3";
+	rename -uid "5AAD5594-4251-5C16-2CFF-A6A6EC2EB4B2";
+	setAttr ".tan" 9;
+	setAttr -s 7 ".ktv[0:6]"  0 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTU -n "mom_scene:new_mom_camera:persp1_scaleX3";
+	rename -uid "02EC25C6-4A66-6FA3-6416-F1B2B1F2F562";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  0 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kit[0:6]"  3 18 18 3 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 18 18 3 18 18 3;
+createNode animCurveTU -n "mom_scene:new_mom_camera:persp1_scaleY3";
+	rename -uid "676BC486-4B2B-76C9-A38A-6FACBD8A9E61";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  0 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kit[0:6]"  3 18 18 3 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 18 18 3 18 18 3;
+createNode animCurveTU -n "mom_scene:new_mom_camera:persp1_scaleZ3";
+	rename -uid "DB195F93-4864-3594-2E18-7EB2739BC96D";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  0 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kit[0:6]"  3 18 18 3 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 18 18 3 18 18 3;
+createNode animCurveTU -n "mom_scene:new_mom_camera:momBabyShape_focalLength3";
+	rename -uid "71307C8D-48E6-0241-6BBF-14AFCC76E369";
+	setAttr ".tan" 3;
+	setAttr -s 3 ".ktv[0:2]"  0 80.47965670774343 65 51.715776183713963
+		 184 50.126717435251358;
+	setAttr -s 3 ".kit[1:2]"  1 3;
+	setAttr -s 3 ".kot[1:2]"  1 3;
+	setAttr -s 3 ".kix[1:2]"  3.6695573329925537 4.9583330154418945;
+	setAttr -s 3 ".kiy[1:2]"  -4.5319643020629883 0;
+	setAttr -s 3 ".kox[1:2]"  4.1503963470458984 4.9583330154418945;
+	setAttr -s 3 ".koy[1:2]"  -5.1258058547973633 0;
+createNode renderLayerManager -n "mom_scene:shotglass1:renderLayerManager";
+	rename -uid "14AFC27D-41F4-A12E-8767-40BC1BB07973";
+createNode renderLayer -n "mom_scene:shotglass1:defaultRenderLayer";
+	rename -uid "865436D4-4FAB-303E-0D20-448E11DC98E0";
+	setAttr ".g" yes;
+createNode partition -n "mom_scene:shotglass1:mtorPartition";
+	rename -uid "2CA3010C-4DB4-D857-4D6A-589B8960AEF9";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode file -n "mom_scene:shotglass1:file1";
+	rename -uid "83800913-4304-42B5-D15A-B6846F43549D";
+	setAttr ".ftn" -type "string" "/Users/keeyuneCho/Desktop/CNM 190/Only-Love/images/shotglass-outUV.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "mom_scene:shotglass1:place2dTexture1";
+	rename -uid "10078D52-4AAB-5630-0D6B-87B5F83EC2C9";
+createNode checker -n "mom_scene:shotglass1:unwrapTestPattern";
+	rename -uid "C00454DB-4ED6-D37D-0CB3-CF90EC799BBE";
+	addAttr -ci true -sn "resolution" -ln "resolution" -at "double";
+	setAttr ".c1" -type "float3" 0.30000001 0.30000001 0.30000001 ;
+	setAttr ".c2" -type "float3" 0.69999999 0.69999999 0.69999999 ;
+	setAttr ".resolution" 512;
+createNode place2dTexture -n "mom_scene:shotglass1:place2dTexture2";
+	rename -uid "D7C38E20-4660-BD58-5C80-7997ED95E85D";
+	setAttr ".re" -type "float2" 13.5 13.5 ;
+createNode groupId -n "mom_scene:shotglass1:groupId1";
+	rename -uid "003149D7-4AEB-BF7D-5009-C7AD7B74656E";
+	setAttr ".ihi" 0;
+createNode objectSet -n "mom_scene:mom2:ShirtShapeHiddenFacesSet";
+	rename -uid "167974B2-4CCC-5C4C-24ED-5BA5CA8098DC";
+	setAttr ".ihi" 0;
+createNode objectSet -n "mom_scene:mom2:ShirtShapeHiddenFacesSet1";
+	rename -uid "7CACBED8-4E61-0EF4-4316-03AEB912803A";
+	setAttr ".ihi" 0;
+createNode reference -n "mom_scene:_UNKNOWN_REF_NODE_";
+	rename -uid "0E083222-4D5E-9A73-51CA-02ACEED5FBCE";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"mom_scene:_UNKNOWN_REF_NODE_"
+		"_UNKNOWN_REF_NODE_" 1
+		2 ":defaultHideFaceDataSet" "dnsm" " -s 2";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "48F08458-499B-BF0E-D8A9-AB8926D0DD5D";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -57.142854872204104 -15.476189861221945 ;
+	setAttr ".tgi[0].vh" -type "double2" 57.142854872204104 15.476189861221945 ;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 202;
-	setAttr ".unw" 202;
+	setAttr ".o" 154;
+	setAttr ".unw" 154;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -16170,7 +18886,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 417 ".st";
+	setAttr -s 418 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -16183,7 +18899,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 390 ".s";
+	setAttr -s 432 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -16195,16 +18911,16 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 623 ".u";
+	setAttr -s 695 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 21 ".r";
+	setAttr -s 23 ".r";
 select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 416 ".tx";
+	setAttr -s 465 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -16219,7 +18935,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 141 ".gn";
+	setAttr -s 145 ".gn";
 select -ne :initialParticleSE;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -16863,19 +19579,7 @@ connectAttr "momRN1.phl[557]" "pairBlend2.w";
 connectAttr "Arm_Cntrl_L_blendParent1.o" "momRN1.phl[558]";
 connectAttr "Arm_Cntrl_L_visibility.o" "momRN1.phl[559]";
 connectAttr "momRN1.phl[560]" "Arm_Cntrl_L_parentConstraint1.cpim";
-connectAttr "momRN1.phl[561]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "momRN1.phl[562]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "momRN1.phl[563]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "momRN1.phl[564]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "momRN1.phl[565]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "momRN1.phl[566]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "momRN1.phl[567]" "momRN1.phl[568]";
+connectAttr "momRN1.phl[561]" "momRN1.phl[562]";
 connectAttr "persp1_translateX.o" "momBaby.tx";
 connectAttr "persp1_translateY.o" "momBaby.ty";
 connectAttr "persp1_translateZ.o" "momBaby.tz";
@@ -16898,16 +19602,28 @@ connectAttr "persp1_scaleX3.o" "momBaby_new.sx";
 connectAttr "persp1_scaleY3.o" "momBaby_new.sy";
 connectAttr "persp1_scaleZ3.o" "momBaby_new.sz";
 connectAttr "momBabyShape_focalLength3.o" "momBaby_newShape.fl";
-connectAttr "BabyGrab_Two_translateX.o" "BabyGrab_Two.tx";
-connectAttr "BabyGrab_Two_translateY.o" "BabyGrab_Two.ty";
-connectAttr "BabyGrab_Two_translateZ.o" "BabyGrab_Two.tz";
-connectAttr "BabyGrab_Two_rotateX.o" "BabyGrab_Two.rx";
-connectAttr "BabyGrab_Two_rotateY.o" "BabyGrab_Two.ry";
-connectAttr "BabyGrab_Two_rotateZ.o" "BabyGrab_Two.rz";
-connectAttr "BabyGrab_Two_scaleX.o" "BabyGrab_Two.sx";
-connectAttr "BabyGrab_Two_scaleY.o" "BabyGrab_Two.sy";
-connectAttr "BabyGrab_Two_scaleZ.o" "BabyGrab_Two.sz";
-connectAttr "BabyGrab_Two_visibility.o" "BabyGrab_Two.v";
+connectAttr "mom_scene:new_mom_camera:persp1_translateX3.o" "mom_scene:new_camera_test.tx"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_translateY3.o" "mom_scene:new_camera_test.ty"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_translateZ3.o" "mom_scene:new_camera_test.tz"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_rotateX3.o" "mom_scene:new_camera_test.rx"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_rotateY3.o" "mom_scene:new_camera_test.ry"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_rotateZ3.o" "mom_scene:new_camera_test.rz"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_visibility3.o" "mom_scene:new_camera_test.v"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_scaleX3.o" "mom_scene:new_camera_test.sx"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_scaleY3.o" "mom_scene:new_camera_test.sy"
+		;
+connectAttr "mom_scene:new_mom_camera:persp1_scaleZ3.o" "mom_scene:new_camera_test.sz"
+		;
+connectAttr "mom_scene:new_mom_camera:momBabyShape_focalLength3.o" "mom_scene:new_camera_testShape.fl"
+		;
 connectAttr "BabyGrab_One_translateX.o" "BabyGrab_One.tx";
 connectAttr "BabyGrab_One_translateY.o" "BabyGrab_One.ty";
 connectAttr "BabyGrab_One_translateZ.o" "BabyGrab_One.tz";
@@ -16918,6 +19634,16 @@ connectAttr "BabyGrab_One_scaleX.o" "BabyGrab_One.sx";
 connectAttr "BabyGrab_One_scaleY.o" "BabyGrab_One.sy";
 connectAttr "BabyGrab_One_scaleZ.o" "BabyGrab_One.sz";
 connectAttr "BabyGrab_One_visibility.o" "BabyGrab_One.v";
+connectAttr "BabyGrab_Two_translateX.o" "BabyGrab_Two.tx";
+connectAttr "BabyGrab_Two_translateY.o" "BabyGrab_Two.ty";
+connectAttr "BabyGrab_Two_translateZ.o" "BabyGrab_Two.tz";
+connectAttr "BabyGrab_Two_rotateX.o" "BabyGrab_Two.rx";
+connectAttr "BabyGrab_Two_rotateY.o" "BabyGrab_Two.ry";
+connectAttr "BabyGrab_Two_rotateZ.o" "BabyGrab_Two.rz";
+connectAttr "BabyGrab_Two_scaleX.o" "BabyGrab_Two.sx";
+connectAttr "BabyGrab_Two_scaleY.o" "BabyGrab_Two.sy";
+connectAttr "BabyGrab_Two_scaleZ.o" "BabyGrab_Two.sz";
+connectAttr "BabyGrab_Two_visibility.o" "BabyGrab_Two.v";
 connectAttr "battle_grab_loc_translateX.o" "battle_grab_loc.tx";
 connectAttr "battle_grab_loc_translateY.o" "battle_grab_loc.ty";
 connectAttr "battle_grab_loc_translateZ.o" "battle_grab_loc.tz";
@@ -18888,9 +21614,1807 @@ connectAttr "Arm_Cntrl_R_parentConstraint1.crz" "pairBlend3.irz2";
 connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "lambert2.msg" "materialInfo2.m";
-connectAttr "lambert2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "mom_scene:renderLayerManager.rlmi[0]" "mom_scene:defaultRenderLayer.rlid"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mtorPartition.rgcnx";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom3:mtorPartition.rgcnx";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom3:mom_k:mtorPartition.rgcnx"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom3:mom_k:pasted__mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:mom3:unwrapTestPattern.oc" "mom_scene:mom3:unwrapChekcerShader.c"
+		;
+connectAttr "mom_scene:mom3:place2dTexture1.o" "mom_scene:mom3:unwrapTestPattern.uv"
+		;
+connectAttr "mom_scene:mom3:place2dTexture1.ofs" "mom_scene:mom3:unwrapTestPattern.fs"
+		;
+connectAttr "mom_scene:mom3:file1.oc" "mom_scene:mom3:momEyes.c";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file1.ws";
+connectAttr "mom_scene:mom3:place2dTexture3.c" "mom_scene:mom3:file1.c";
+connectAttr "mom_scene:mom3:place2dTexture3.tf" "mom_scene:mom3:file1.tf";
+connectAttr "mom_scene:mom3:place2dTexture3.rf" "mom_scene:mom3:file1.rf";
+connectAttr "mom_scene:mom3:place2dTexture3.mu" "mom_scene:mom3:file1.mu";
+connectAttr "mom_scene:mom3:place2dTexture3.mv" "mom_scene:mom3:file1.mv";
+connectAttr "mom_scene:mom3:place2dTexture3.s" "mom_scene:mom3:file1.s";
+connectAttr "mom_scene:mom3:place2dTexture3.wu" "mom_scene:mom3:file1.wu";
+connectAttr "mom_scene:mom3:place2dTexture3.wv" "mom_scene:mom3:file1.wv";
+connectAttr "mom_scene:mom3:place2dTexture3.re" "mom_scene:mom3:file1.re";
+connectAttr "mom_scene:mom3:place2dTexture3.of" "mom_scene:mom3:file1.of";
+connectAttr "mom_scene:mom3:place2dTexture3.r" "mom_scene:mom3:file1.ro";
+connectAttr "mom_scene:mom3:place2dTexture3.n" "mom_scene:mom3:file1.n";
+connectAttr "mom_scene:mom3:place2dTexture3.vt1" "mom_scene:mom3:file1.vt1";
+connectAttr "mom_scene:mom3:place2dTexture3.vt2" "mom_scene:mom3:file1.vt2";
+connectAttr "mom_scene:mom3:place2dTexture3.vt3" "mom_scene:mom3:file1.vt3";
+connectAttr "mom_scene:mom3:place2dTexture3.vc1" "mom_scene:mom3:file1.vc1";
+connectAttr "mom_scene:mom3:place2dTexture3.o" "mom_scene:mom3:file1.uv";
+connectAttr "mom_scene:mom3:place2dTexture3.ofs" "mom_scene:mom3:file1.fs";
+connectAttr "mom_scene:mom3:file3.oc" "mom_scene:mom3:momHair_LBang1.c";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file3.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file3.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file3.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file3.ws";
+connectAttr "mom_scene:mom3:place2dTexture5.c" "mom_scene:mom3:file3.c";
+connectAttr "mom_scene:mom3:place2dTexture5.tf" "mom_scene:mom3:file3.tf";
+connectAttr "mom_scene:mom3:place2dTexture5.rf" "mom_scene:mom3:file3.rf";
+connectAttr "mom_scene:mom3:place2dTexture5.mu" "mom_scene:mom3:file3.mu";
+connectAttr "mom_scene:mom3:place2dTexture5.mv" "mom_scene:mom3:file3.mv";
+connectAttr "mom_scene:mom3:place2dTexture5.s" "mom_scene:mom3:file3.s";
+connectAttr "mom_scene:mom3:place2dTexture5.wu" "mom_scene:mom3:file3.wu";
+connectAttr "mom_scene:mom3:place2dTexture5.wv" "mom_scene:mom3:file3.wv";
+connectAttr "mom_scene:mom3:place2dTexture5.re" "mom_scene:mom3:file3.re";
+connectAttr "mom_scene:mom3:place2dTexture5.of" "mom_scene:mom3:file3.of";
+connectAttr "mom_scene:mom3:place2dTexture5.r" "mom_scene:mom3:file3.ro";
+connectAttr "mom_scene:mom3:place2dTexture5.n" "mom_scene:mom3:file3.n";
+connectAttr "mom_scene:mom3:place2dTexture5.vt1" "mom_scene:mom3:file3.vt1";
+connectAttr "mom_scene:mom3:place2dTexture5.vt2" "mom_scene:mom3:file3.vt2";
+connectAttr "mom_scene:mom3:place2dTexture5.vt3" "mom_scene:mom3:file3.vt3";
+connectAttr "mom_scene:mom3:place2dTexture5.vc1" "mom_scene:mom3:file3.vc1";
+connectAttr "mom_scene:mom3:place2dTexture5.o" "mom_scene:mom3:file3.uv";
+connectAttr "mom_scene:mom3:place2dTexture5.ofs" "mom_scene:mom3:file3.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file5.ws";
+connectAttr "mom_scene:mom3:place2dTexture7.c" "mom_scene:mom3:file5.c";
+connectAttr "mom_scene:mom3:place2dTexture7.tf" "mom_scene:mom3:file5.tf";
+connectAttr "mom_scene:mom3:place2dTexture7.rf" "mom_scene:mom3:file5.rf";
+connectAttr "mom_scene:mom3:place2dTexture7.mu" "mom_scene:mom3:file5.mu";
+connectAttr "mom_scene:mom3:place2dTexture7.mv" "mom_scene:mom3:file5.mv";
+connectAttr "mom_scene:mom3:place2dTexture7.s" "mom_scene:mom3:file5.s";
+connectAttr "mom_scene:mom3:place2dTexture7.wu" "mom_scene:mom3:file5.wu";
+connectAttr "mom_scene:mom3:place2dTexture7.wv" "mom_scene:mom3:file5.wv";
+connectAttr "mom_scene:mom3:place2dTexture7.re" "mom_scene:mom3:file5.re";
+connectAttr "mom_scene:mom3:place2dTexture7.of" "mom_scene:mom3:file5.of";
+connectAttr "mom_scene:mom3:place2dTexture7.r" "mom_scene:mom3:file5.ro";
+connectAttr "mom_scene:mom3:place2dTexture7.n" "mom_scene:mom3:file5.n";
+connectAttr "mom_scene:mom3:place2dTexture7.vt1" "mom_scene:mom3:file5.vt1";
+connectAttr "mom_scene:mom3:place2dTexture7.vt2" "mom_scene:mom3:file5.vt2";
+connectAttr "mom_scene:mom3:place2dTexture7.vt3" "mom_scene:mom3:file5.vt3";
+connectAttr "mom_scene:mom3:place2dTexture7.vc1" "mom_scene:mom3:file5.vc1";
+connectAttr "mom_scene:mom3:place2dTexture7.o" "mom_scene:mom3:file5.uv";
+connectAttr "mom_scene:mom3:place2dTexture7.ofs" "mom_scene:mom3:file5.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file6.ws";
+connectAttr "mom_scene:mom3:place2dTexture8.c" "mom_scene:mom3:file6.c";
+connectAttr "mom_scene:mom3:place2dTexture8.tf" "mom_scene:mom3:file6.tf";
+connectAttr "mom_scene:mom3:place2dTexture8.rf" "mom_scene:mom3:file6.rf";
+connectAttr "mom_scene:mom3:place2dTexture8.mu" "mom_scene:mom3:file6.mu";
+connectAttr "mom_scene:mom3:place2dTexture8.mv" "mom_scene:mom3:file6.mv";
+connectAttr "mom_scene:mom3:place2dTexture8.s" "mom_scene:mom3:file6.s";
+connectAttr "mom_scene:mom3:place2dTexture8.wu" "mom_scene:mom3:file6.wu";
+connectAttr "mom_scene:mom3:place2dTexture8.wv" "mom_scene:mom3:file6.wv";
+connectAttr "mom_scene:mom3:place2dTexture8.re" "mom_scene:mom3:file6.re";
+connectAttr "mom_scene:mom3:place2dTexture8.of" "mom_scene:mom3:file6.of";
+connectAttr "mom_scene:mom3:place2dTexture8.r" "mom_scene:mom3:file6.ro";
+connectAttr "mom_scene:mom3:place2dTexture8.n" "mom_scene:mom3:file6.n";
+connectAttr "mom_scene:mom3:place2dTexture8.vt1" "mom_scene:mom3:file6.vt1";
+connectAttr "mom_scene:mom3:place2dTexture8.vt2" "mom_scene:mom3:file6.vt2";
+connectAttr "mom_scene:mom3:place2dTexture8.vt3" "mom_scene:mom3:file6.vt3";
+connectAttr "mom_scene:mom3:place2dTexture8.vc1" "mom_scene:mom3:file6.vc1";
+connectAttr "mom_scene:mom3:place2dTexture8.o" "mom_scene:mom3:file6.uv";
+connectAttr "mom_scene:mom3:place2dTexture8.ofs" "mom_scene:mom3:file6.fs";
+connectAttr "mom_scene:mom3:file5.oc" "mom_scene:mom3:momBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom3:file6.oc" "mom_scene:mom3:momBrightnessRamp.clr[1].clrc"
+		;
+connectAttr "mom_scene:mom3:file7.oc" "mom_scene:mom3:momEarBrightnessRamp1.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom3:file8.oc" "mom_scene:mom3:momEarBrightnessRamp1.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file7.ws";
+connectAttr "mom_scene:mom3:place2dTexture9.c" "mom_scene:mom3:file7.c";
+connectAttr "mom_scene:mom3:place2dTexture9.tf" "mom_scene:mom3:file7.tf";
+connectAttr "mom_scene:mom3:place2dTexture9.rf" "mom_scene:mom3:file7.rf";
+connectAttr "mom_scene:mom3:place2dTexture9.mu" "mom_scene:mom3:file7.mu";
+connectAttr "mom_scene:mom3:place2dTexture9.mv" "mom_scene:mom3:file7.mv";
+connectAttr "mom_scene:mom3:place2dTexture9.s" "mom_scene:mom3:file7.s";
+connectAttr "mom_scene:mom3:place2dTexture9.wu" "mom_scene:mom3:file7.wu";
+connectAttr "mom_scene:mom3:place2dTexture9.wv" "mom_scene:mom3:file7.wv";
+connectAttr "mom_scene:mom3:place2dTexture9.re" "mom_scene:mom3:file7.re";
+connectAttr "mom_scene:mom3:place2dTexture9.of" "mom_scene:mom3:file7.of";
+connectAttr "mom_scene:mom3:place2dTexture9.r" "mom_scene:mom3:file7.ro";
+connectAttr "mom_scene:mom3:place2dTexture9.n" "mom_scene:mom3:file7.n";
+connectAttr "mom_scene:mom3:place2dTexture9.vt1" "mom_scene:mom3:file7.vt1";
+connectAttr "mom_scene:mom3:place2dTexture9.vt2" "mom_scene:mom3:file7.vt2";
+connectAttr "mom_scene:mom3:place2dTexture9.vt3" "mom_scene:mom3:file7.vt3";
+connectAttr "mom_scene:mom3:place2dTexture9.vc1" "mom_scene:mom3:file7.vc1";
+connectAttr "mom_scene:mom3:place2dTexture9.o" "mom_scene:mom3:file7.uv";
+connectAttr "mom_scene:mom3:place2dTexture9.ofs" "mom_scene:mom3:file7.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file8.ws";
+connectAttr "mom_scene:mom3:place2dTexture10.c" "mom_scene:mom3:file8.c";
+connectAttr "mom_scene:mom3:place2dTexture10.tf" "mom_scene:mom3:file8.tf";
+connectAttr "mom_scene:mom3:place2dTexture10.rf" "mom_scene:mom3:file8.rf";
+connectAttr "mom_scene:mom3:place2dTexture10.mu" "mom_scene:mom3:file8.mu";
+connectAttr "mom_scene:mom3:place2dTexture10.mv" "mom_scene:mom3:file8.mv";
+connectAttr "mom_scene:mom3:place2dTexture10.s" "mom_scene:mom3:file8.s";
+connectAttr "mom_scene:mom3:place2dTexture10.wu" "mom_scene:mom3:file8.wu";
+connectAttr "mom_scene:mom3:place2dTexture10.wv" "mom_scene:mom3:file8.wv";
+connectAttr "mom_scene:mom3:place2dTexture10.re" "mom_scene:mom3:file8.re";
+connectAttr "mom_scene:mom3:place2dTexture10.of" "mom_scene:mom3:file8.of";
+connectAttr "mom_scene:mom3:place2dTexture10.r" "mom_scene:mom3:file8.ro";
+connectAttr "mom_scene:mom3:place2dTexture10.n" "mom_scene:mom3:file8.n";
+connectAttr "mom_scene:mom3:place2dTexture10.vt1" "mom_scene:mom3:file8.vt1";
+connectAttr "mom_scene:mom3:place2dTexture10.vt2" "mom_scene:mom3:file8.vt2";
+connectAttr "mom_scene:mom3:place2dTexture10.vt3" "mom_scene:mom3:file8.vt3";
+connectAttr "mom_scene:mom3:place2dTexture10.vc1" "mom_scene:mom3:file8.vc1";
+connectAttr "mom_scene:mom3:place2dTexture10.o" "mom_scene:mom3:file8.uv";
+connectAttr "mom_scene:mom3:place2dTexture10.ofs" "mom_scene:mom3:file8.fs";
+connectAttr "mom_scene:mom3:file9.oc" "mom_scene:mom3:momEarBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom3:file10.oc" "mom_scene:mom3:momEarBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file9.ws";
+connectAttr "mom_scene:mom3:place2dTexture11.c" "mom_scene:mom3:file9.c";
+connectAttr "mom_scene:mom3:place2dTexture11.tf" "mom_scene:mom3:file9.tf";
+connectAttr "mom_scene:mom3:place2dTexture11.rf" "mom_scene:mom3:file9.rf";
+connectAttr "mom_scene:mom3:place2dTexture11.mu" "mom_scene:mom3:file9.mu";
+connectAttr "mom_scene:mom3:place2dTexture11.mv" "mom_scene:mom3:file9.mv";
+connectAttr "mom_scene:mom3:place2dTexture11.s" "mom_scene:mom3:file9.s";
+connectAttr "mom_scene:mom3:place2dTexture11.wu" "mom_scene:mom3:file9.wu";
+connectAttr "mom_scene:mom3:place2dTexture11.wv" "mom_scene:mom3:file9.wv";
+connectAttr "mom_scene:mom3:place2dTexture11.re" "mom_scene:mom3:file9.re";
+connectAttr "mom_scene:mom3:place2dTexture11.of" "mom_scene:mom3:file9.of";
+connectAttr "mom_scene:mom3:place2dTexture11.r" "mom_scene:mom3:file9.ro";
+connectAttr "mom_scene:mom3:place2dTexture11.n" "mom_scene:mom3:file9.n";
+connectAttr "mom_scene:mom3:place2dTexture11.vt1" "mom_scene:mom3:file9.vt1";
+connectAttr "mom_scene:mom3:place2dTexture11.vt2" "mom_scene:mom3:file9.vt2";
+connectAttr "mom_scene:mom3:place2dTexture11.vt3" "mom_scene:mom3:file9.vt3";
+connectAttr "mom_scene:mom3:place2dTexture11.vc1" "mom_scene:mom3:file9.vc1";
+connectAttr "mom_scene:mom3:place2dTexture11.o" "mom_scene:mom3:file9.uv";
+connectAttr "mom_scene:mom3:place2dTexture11.ofs" "mom_scene:mom3:file9.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom3:file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom3:file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom3:file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom3:file10.ws";
+connectAttr "mom_scene:mom3:place2dTexture12.c" "mom_scene:mom3:file10.c";
+connectAttr "mom_scene:mom3:place2dTexture12.tf" "mom_scene:mom3:file10.tf";
+connectAttr "mom_scene:mom3:place2dTexture12.rf" "mom_scene:mom3:file10.rf";
+connectAttr "mom_scene:mom3:place2dTexture12.mu" "mom_scene:mom3:file10.mu";
+connectAttr "mom_scene:mom3:place2dTexture12.mv" "mom_scene:mom3:file10.mv";
+connectAttr "mom_scene:mom3:place2dTexture12.s" "mom_scene:mom3:file10.s";
+connectAttr "mom_scene:mom3:place2dTexture12.wu" "mom_scene:mom3:file10.wu";
+connectAttr "mom_scene:mom3:place2dTexture12.wv" "mom_scene:mom3:file10.wv";
+connectAttr "mom_scene:mom3:place2dTexture12.re" "mom_scene:mom3:file10.re";
+connectAttr "mom_scene:mom3:place2dTexture12.of" "mom_scene:mom3:file10.of";
+connectAttr "mom_scene:mom3:place2dTexture12.r" "mom_scene:mom3:file10.ro";
+connectAttr "mom_scene:mom3:place2dTexture12.n" "mom_scene:mom3:file10.n";
+connectAttr "mom_scene:mom3:place2dTexture12.vt1" "mom_scene:mom3:file10.vt1";
+connectAttr "mom_scene:mom3:place2dTexture12.vt2" "mom_scene:mom3:file10.vt2";
+connectAttr "mom_scene:mom3:place2dTexture12.vt3" "mom_scene:mom3:file10.vt3";
+connectAttr "mom_scene:mom3:place2dTexture12.vc1" "mom_scene:mom3:file10.vc1";
+connectAttr "mom_scene:mom3:place2dTexture12.o" "mom_scene:mom3:file10.uv";
+connectAttr "mom_scene:mom3:place2dTexture12.ofs" "mom_scene:mom3:file10.fs";
+connectAttr "mom_scene:mom3:ContourContrastStore.msg" "mom_scene:mom3:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:mom3:ContourContrastLevelFunction.msg" "mom_scene:mom3:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:mom3:file5.msg" "mom_scene:mom3:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:mom3:file6.msg" "mom_scene:mom3:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:mom3:place2dTexture8.msg" "mom_scene:mom3:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "mom_scene:mom3:place2dTexture7.msg" "mom_scene:mom3:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "mom_scene:mom3:momBrightnessRamp.msg" "mom_scene:mom3:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mtorPartition4.rgcnx";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mom_skeleton:mtorPartition.rgcnx"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mom_skeleton:mom_k:mtorPartition.rgcnx"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mom_skeleton:mom_k:pasted__mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:unwrapTestPattern.oc" "mom_scene:mom:mom_skeleton:unwrapChekcerShader.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture1.o" "mom_scene:mom:mom_skeleton:unwrapTestPattern.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture1.ofs" "mom_scene:mom:mom_skeleton:unwrapTestPattern.fs"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file1.oc" "mom_scene:mom:mom_skeleton:momEyes.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file1.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file1.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file1.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file1.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.c" "mom_scene:mom:mom_skeleton:file1.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.tf" "mom_scene:mom:mom_skeleton:file1.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.rf" "mom_scene:mom:mom_skeleton:file1.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.mu" "mom_scene:mom:mom_skeleton:file1.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.mv" "mom_scene:mom:mom_skeleton:file1.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.s" "mom_scene:mom:mom_skeleton:file1.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.wu" "mom_scene:mom:mom_skeleton:file1.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.wv" "mom_scene:mom:mom_skeleton:file1.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.re" "mom_scene:mom:mom_skeleton:file1.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.of" "mom_scene:mom:mom_skeleton:file1.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.r" "mom_scene:mom:mom_skeleton:file1.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.n" "mom_scene:mom:mom_skeleton:file1.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.vt1" "mom_scene:mom:mom_skeleton:file1.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.vt2" "mom_scene:mom:mom_skeleton:file1.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.vt3" "mom_scene:mom:mom_skeleton:file1.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.vc1" "mom_scene:mom:mom_skeleton:file1.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.o" "mom_scene:mom:mom_skeleton:file1.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.ofs" "mom_scene:mom:mom_skeleton:file1.fs"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file3.oc" "mom_scene:mom:mom_skeleton:momHair_LBang1.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file3.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file3.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file3.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file3.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.c" "mom_scene:mom:mom_skeleton:file3.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.tf" "mom_scene:mom:mom_skeleton:file3.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.rf" "mom_scene:mom:mom_skeleton:file3.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.mu" "mom_scene:mom:mom_skeleton:file3.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.mv" "mom_scene:mom:mom_skeleton:file3.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.s" "mom_scene:mom:mom_skeleton:file3.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.wu" "mom_scene:mom:mom_skeleton:file3.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.wv" "mom_scene:mom:mom_skeleton:file3.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.re" "mom_scene:mom:mom_skeleton:file3.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.of" "mom_scene:mom:mom_skeleton:file3.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.r" "mom_scene:mom:mom_skeleton:file3.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.n" "mom_scene:mom:mom_skeleton:file3.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.vt1" "mom_scene:mom:mom_skeleton:file3.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.vt2" "mom_scene:mom:mom_skeleton:file3.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.vt3" "mom_scene:mom:mom_skeleton:file3.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.vc1" "mom_scene:mom:mom_skeleton:file3.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.o" "mom_scene:mom:mom_skeleton:file3.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.ofs" "mom_scene:mom:mom_skeleton:file3.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file5.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file5.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file5.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file5.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.c" "mom_scene:mom:mom_skeleton:file5.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.tf" "mom_scene:mom:mom_skeleton:file5.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.rf" "mom_scene:mom:mom_skeleton:file5.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.mu" "mom_scene:mom:mom_skeleton:file5.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.mv" "mom_scene:mom:mom_skeleton:file5.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.s" "mom_scene:mom:mom_skeleton:file5.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.wu" "mom_scene:mom:mom_skeleton:file5.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.wv" "mom_scene:mom:mom_skeleton:file5.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.re" "mom_scene:mom:mom_skeleton:file5.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.of" "mom_scene:mom:mom_skeleton:file5.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.r" "mom_scene:mom:mom_skeleton:file5.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.n" "mom_scene:mom:mom_skeleton:file5.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.vt1" "mom_scene:mom:mom_skeleton:file5.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.vt2" "mom_scene:mom:mom_skeleton:file5.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.vt3" "mom_scene:mom:mom_skeleton:file5.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.vc1" "mom_scene:mom:mom_skeleton:file5.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.o" "mom_scene:mom:mom_skeleton:file5.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.ofs" "mom_scene:mom:mom_skeleton:file5.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file6.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file6.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file6.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file6.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.c" "mom_scene:mom:mom_skeleton:file6.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.tf" "mom_scene:mom:mom_skeleton:file6.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.rf" "mom_scene:mom:mom_skeleton:file6.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.mu" "mom_scene:mom:mom_skeleton:file6.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.mv" "mom_scene:mom:mom_skeleton:file6.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.s" "mom_scene:mom:mom_skeleton:file6.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.wu" "mom_scene:mom:mom_skeleton:file6.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.wv" "mom_scene:mom:mom_skeleton:file6.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.re" "mom_scene:mom:mom_skeleton:file6.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.of" "mom_scene:mom:mom_skeleton:file6.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.r" "mom_scene:mom:mom_skeleton:file6.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.n" "mom_scene:mom:mom_skeleton:file6.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.vt1" "mom_scene:mom:mom_skeleton:file6.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.vt2" "mom_scene:mom:mom_skeleton:file6.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.vt3" "mom_scene:mom:mom_skeleton:file6.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.vc1" "mom_scene:mom:mom_skeleton:file6.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.o" "mom_scene:mom:mom_skeleton:file6.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.ofs" "mom_scene:mom:mom_skeleton:file6.fs"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file5.oc" "mom_scene:mom:mom_skeleton:momBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file6.oc" "mom_scene:mom:mom_skeleton:momBrightnessRamp.clr[1].clrc"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file7.oc" "mom_scene:mom:mom_skeleton:momEarBrightnessRamp1.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file8.oc" "mom_scene:mom:mom_skeleton:momEarBrightnessRamp1.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file7.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file7.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file7.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file7.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.c" "mom_scene:mom:mom_skeleton:file7.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.tf" "mom_scene:mom:mom_skeleton:file7.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.rf" "mom_scene:mom:mom_skeleton:file7.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.mu" "mom_scene:mom:mom_skeleton:file7.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.mv" "mom_scene:mom:mom_skeleton:file7.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.s" "mom_scene:mom:mom_skeleton:file7.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.wu" "mom_scene:mom:mom_skeleton:file7.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.wv" "mom_scene:mom:mom_skeleton:file7.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.re" "mom_scene:mom:mom_skeleton:file7.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.of" "mom_scene:mom:mom_skeleton:file7.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.r" "mom_scene:mom:mom_skeleton:file7.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.n" "mom_scene:mom:mom_skeleton:file7.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.vt1" "mom_scene:mom:mom_skeleton:file7.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.vt2" "mom_scene:mom:mom_skeleton:file7.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.vt3" "mom_scene:mom:mom_skeleton:file7.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.vc1" "mom_scene:mom:mom_skeleton:file7.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.o" "mom_scene:mom:mom_skeleton:file7.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.ofs" "mom_scene:mom:mom_skeleton:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file8.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file8.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file8.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file8.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.c" "mom_scene:mom:mom_skeleton:file8.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.tf" "mom_scene:mom:mom_skeleton:file8.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.rf" "mom_scene:mom:mom_skeleton:file8.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.mu" "mom_scene:mom:mom_skeleton:file8.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.mv" "mom_scene:mom:mom_skeleton:file8.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.s" "mom_scene:mom:mom_skeleton:file8.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.wu" "mom_scene:mom:mom_skeleton:file8.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.wv" "mom_scene:mom:mom_skeleton:file8.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.re" "mom_scene:mom:mom_skeleton:file8.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.of" "mom_scene:mom:mom_skeleton:file8.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.r" "mom_scene:mom:mom_skeleton:file8.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.n" "mom_scene:mom:mom_skeleton:file8.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.vt1" "mom_scene:mom:mom_skeleton:file8.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.vt2" "mom_scene:mom:mom_skeleton:file8.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.vt3" "mom_scene:mom:mom_skeleton:file8.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.vc1" "mom_scene:mom:mom_skeleton:file8.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.o" "mom_scene:mom:mom_skeleton:file8.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.ofs" "mom_scene:mom:mom_skeleton:file8.fs"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file9.oc" "mom_scene:mom:mom_skeleton:momEarBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file10.oc" "mom_scene:mom:mom_skeleton:momEarBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file9.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file9.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file9.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file9.ws";
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.c" "mom_scene:mom:mom_skeleton:file9.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.tf" "mom_scene:mom:mom_skeleton:file9.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.rf" "mom_scene:mom:mom_skeleton:file9.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.mu" "mom_scene:mom:mom_skeleton:file9.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.mv" "mom_scene:mom:mom_skeleton:file9.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.s" "mom_scene:mom:mom_skeleton:file9.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.wu" "mom_scene:mom:mom_skeleton:file9.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.wv" "mom_scene:mom:mom_skeleton:file9.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.re" "mom_scene:mom:mom_skeleton:file9.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.of" "mom_scene:mom:mom_skeleton:file9.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.r" "mom_scene:mom:mom_skeleton:file9.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.n" "mom_scene:mom:mom_skeleton:file9.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.vt1" "mom_scene:mom:mom_skeleton:file9.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.vt2" "mom_scene:mom:mom_skeleton:file9.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.vt3" "mom_scene:mom:mom_skeleton:file9.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.vc1" "mom_scene:mom:mom_skeleton:file9.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.o" "mom_scene:mom:mom_skeleton:file9.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.ofs" "mom_scene:mom:mom_skeleton:file9.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_skeleton:file10.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_skeleton:file10.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_skeleton:file10.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_skeleton:file10.ws"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.c" "mom_scene:mom:mom_skeleton:file10.c"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.tf" "mom_scene:mom:mom_skeleton:file10.tf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.rf" "mom_scene:mom:mom_skeleton:file10.rf"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.mu" "mom_scene:mom:mom_skeleton:file10.mu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.mv" "mom_scene:mom:mom_skeleton:file10.mv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.s" "mom_scene:mom:mom_skeleton:file10.s"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.wu" "mom_scene:mom:mom_skeleton:file10.wu"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.wv" "mom_scene:mom:mom_skeleton:file10.wv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.re" "mom_scene:mom:mom_skeleton:file10.re"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.of" "mom_scene:mom:mom_skeleton:file10.of"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.r" "mom_scene:mom:mom_skeleton:file10.ro"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.n" "mom_scene:mom:mom_skeleton:file10.n"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.vt1" "mom_scene:mom:mom_skeleton:file10.vt1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.vt2" "mom_scene:mom:mom_skeleton:file10.vt2"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.vt3" "mom_scene:mom:mom_skeleton:file10.vt3"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.vc1" "mom_scene:mom:mom_skeleton:file10.vc1"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.o" "mom_scene:mom:mom_skeleton:file10.uv"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.ofs" "mom_scene:mom:mom_skeleton:file10.fs"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:ContourContrastStore.msg" "mom_scene:mom:mom_skeleton:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:ContourContrastLevelFunction.msg" "mom_scene:mom:mom_skeleton:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:momBrightnessRamp.msg" "mom_scene:mom:mom_skeleton:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.msg" "mom_scene:mom:mom_skeleton:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file5.msg" "mom_scene:mom:mom_skeleton:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.msg" "mom_scene:mom:mom_skeleton:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file6.msg" "mom_scene:mom:mom_skeleton:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mtorPartition.rgcnx";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mom_blendshapes_to_import:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.oc" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.oc" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.ws"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.c" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.c"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.tf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.tf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.rf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.rf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.mu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.mu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.mv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.mv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.s" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.s"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.wu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.wu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.wv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.wv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.re" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.re"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.of" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.of"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.r" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.ro"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.n" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.n"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.vt1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.vt1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.vt2" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.vt2"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.vt3" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.vt3"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.vc1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.vc1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.o" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.uv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.ofs" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.ws"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.c" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.c"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.tf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.tf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.rf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.rf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.mu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.mu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.mv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.mv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.s" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.s"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.wu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.wu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.wv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.wv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.re" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.re"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.of" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.of"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.r" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.ro"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.n" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.n"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.vt1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.vt1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.vt2" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.vt2"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.vt3" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.vt3"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.vc1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.vc1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.o" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.uv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.ofs" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.fs"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.oc" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.oc" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.ws"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.c" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.c"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.tf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.tf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.rf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.rf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.mu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.mu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.mv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.mv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.s" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.s"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.wu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.wu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.wv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.wv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.re" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.re"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.of" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.of"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.r" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.ro"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.n" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.n"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.vt1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.vt1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.vt2" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.vt2"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.vt3" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.vt3"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.vc1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.vc1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.o" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.uv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.ofs" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.ws"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.c" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.c"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.tf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.tf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.rf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.rf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.mu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.mu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.mv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.mv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.s" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.s"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.wu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.wu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.wv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.wv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.re" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.re"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.of" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.of"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.r" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.ro"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.n" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.n"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.vt1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.vt1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.vt2" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.vt2"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.vt3" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.vt3"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.vc1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.vc1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.o" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.uv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.ofs" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.fs"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.oc" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp1.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.oc" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp1.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.ws"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.c" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.c"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.tf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.tf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.rf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.rf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.mu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.mu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.mv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.mv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.s" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.s"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.wu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.wu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.wv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.wv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.re" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.re"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.of" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.of"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.r" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.ro"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.n" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.n"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.vt1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.vt1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.vt2" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.vt2"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.vt3" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.vt3"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.vc1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.vc1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.o" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.uv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.ofs" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.ws"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.c" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.c"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.tf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.tf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.rf" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.rf"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.mu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.mu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.mv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.mv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.s" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.s"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.wu" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.wu"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.wv" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.wv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.re" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.re"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.of" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.of"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.r" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.ro"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.n" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.n"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.vt1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.vt1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.vt2" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.vt2"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.vt3" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.vt3"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.vc1" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.vc1"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.o" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.uv"
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.ofs" "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.fs"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mom:mtorPartition.rgcnx";
+connectAttr "mom_scene:mom:mom:file5.oc" "mom_scene:mom:mom:momBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom:file6.oc" "mom_scene:mom:mom:momBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom:file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom:file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom:file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom:file5.ws";
+connectAttr "mom_scene:mom:mom:place2dTexture7.c" "mom_scene:mom:mom:file5.c";
+connectAttr "mom_scene:mom:mom:place2dTexture7.tf" "mom_scene:mom:mom:file5.tf";
+connectAttr "mom_scene:mom:mom:place2dTexture7.rf" "mom_scene:mom:mom:file5.rf";
+connectAttr "mom_scene:mom:mom:place2dTexture7.mu" "mom_scene:mom:mom:file5.mu";
+connectAttr "mom_scene:mom:mom:place2dTexture7.mv" "mom_scene:mom:mom:file5.mv";
+connectAttr "mom_scene:mom:mom:place2dTexture7.s" "mom_scene:mom:mom:file5.s";
+connectAttr "mom_scene:mom:mom:place2dTexture7.wu" "mom_scene:mom:mom:file5.wu";
+connectAttr "mom_scene:mom:mom:place2dTexture7.wv" "mom_scene:mom:mom:file5.wv";
+connectAttr "mom_scene:mom:mom:place2dTexture7.re" "mom_scene:mom:mom:file5.re";
+connectAttr "mom_scene:mom:mom:place2dTexture7.of" "mom_scene:mom:mom:file5.of";
+connectAttr "mom_scene:mom:mom:place2dTexture7.r" "mom_scene:mom:mom:file5.ro";
+connectAttr "mom_scene:mom:mom:place2dTexture7.n" "mom_scene:mom:mom:file5.n";
+connectAttr "mom_scene:mom:mom:place2dTexture7.vt1" "mom_scene:mom:mom:file5.vt1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture7.vt2" "mom_scene:mom:mom:file5.vt2"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture7.vt3" "mom_scene:mom:mom:file5.vt3"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture7.vc1" "mom_scene:mom:mom:file5.vc1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture7.o" "mom_scene:mom:mom:file5.uv";
+connectAttr "mom_scene:mom:mom:place2dTexture7.ofs" "mom_scene:mom:mom:file5.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom:file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom:file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom:file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom:file6.ws";
+connectAttr "mom_scene:mom:mom:place2dTexture8.c" "mom_scene:mom:mom:file6.c";
+connectAttr "mom_scene:mom:mom:place2dTexture8.tf" "mom_scene:mom:mom:file6.tf";
+connectAttr "mom_scene:mom:mom:place2dTexture8.rf" "mom_scene:mom:mom:file6.rf";
+connectAttr "mom_scene:mom:mom:place2dTexture8.mu" "mom_scene:mom:mom:file6.mu";
+connectAttr "mom_scene:mom:mom:place2dTexture8.mv" "mom_scene:mom:mom:file6.mv";
+connectAttr "mom_scene:mom:mom:place2dTexture8.s" "mom_scene:mom:mom:file6.s";
+connectAttr "mom_scene:mom:mom:place2dTexture8.wu" "mom_scene:mom:mom:file6.wu";
+connectAttr "mom_scene:mom:mom:place2dTexture8.wv" "mom_scene:mom:mom:file6.wv";
+connectAttr "mom_scene:mom:mom:place2dTexture8.re" "mom_scene:mom:mom:file6.re";
+connectAttr "mom_scene:mom:mom:place2dTexture8.of" "mom_scene:mom:mom:file6.of";
+connectAttr "mom_scene:mom:mom:place2dTexture8.r" "mom_scene:mom:mom:file6.ro";
+connectAttr "mom_scene:mom:mom:place2dTexture8.n" "mom_scene:mom:mom:file6.n";
+connectAttr "mom_scene:mom:mom:place2dTexture8.vt1" "mom_scene:mom:mom:file6.vt1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture8.vt2" "mom_scene:mom:mom:file6.vt2"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture8.vt3" "mom_scene:mom:mom:file6.vt3"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture8.vc1" "mom_scene:mom:mom:file6.vc1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture8.o" "mom_scene:mom:mom:file6.uv";
+connectAttr "mom_scene:mom:mom:place2dTexture8.ofs" "mom_scene:mom:mom:file6.fs"
+		;
+connectAttr "mom_scene:mom:mom:file9.oc" "mom_scene:mom:mom:momEarBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom:file10.oc" "mom_scene:mom:mom:momEarBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom:file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom:file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom:file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom:file9.ws";
+connectAttr "mom_scene:mom:mom:place2dTexture11.c" "mom_scene:mom:mom:file9.c";
+connectAttr "mom_scene:mom:mom:place2dTexture11.tf" "mom_scene:mom:mom:file9.tf"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.rf" "mom_scene:mom:mom:file9.rf"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.mu" "mom_scene:mom:mom:file9.mu"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.mv" "mom_scene:mom:mom:file9.mv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.s" "mom_scene:mom:mom:file9.s";
+connectAttr "mom_scene:mom:mom:place2dTexture11.wu" "mom_scene:mom:mom:file9.wu"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.wv" "mom_scene:mom:mom:file9.wv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.re" "mom_scene:mom:mom:file9.re"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.of" "mom_scene:mom:mom:file9.of"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.r" "mom_scene:mom:mom:file9.ro";
+connectAttr "mom_scene:mom:mom:place2dTexture11.n" "mom_scene:mom:mom:file9.n";
+connectAttr "mom_scene:mom:mom:place2dTexture11.vt1" "mom_scene:mom:mom:file9.vt1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.vt2" "mom_scene:mom:mom:file9.vt2"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.vt3" "mom_scene:mom:mom:file9.vt3"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.vc1" "mom_scene:mom:mom:file9.vc1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture11.o" "mom_scene:mom:mom:file9.uv";
+connectAttr "mom_scene:mom:mom:place2dTexture11.ofs" "mom_scene:mom:mom:file9.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom:file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom:file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom:file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom:file10.ws";
+connectAttr "mom_scene:mom:mom:place2dTexture12.c" "mom_scene:mom:mom:file10.c";
+connectAttr "mom_scene:mom:mom:place2dTexture12.tf" "mom_scene:mom:mom:file10.tf"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.rf" "mom_scene:mom:mom:file10.rf"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.mu" "mom_scene:mom:mom:file10.mu"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.mv" "mom_scene:mom:mom:file10.mv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.s" "mom_scene:mom:mom:file10.s";
+connectAttr "mom_scene:mom:mom:place2dTexture12.wu" "mom_scene:mom:mom:file10.wu"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.wv" "mom_scene:mom:mom:file10.wv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.re" "mom_scene:mom:mom:file10.re"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.of" "mom_scene:mom:mom:file10.of"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.r" "mom_scene:mom:mom:file10.ro"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.n" "mom_scene:mom:mom:file10.n";
+connectAttr "mom_scene:mom:mom:place2dTexture12.vt1" "mom_scene:mom:mom:file10.vt1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.vt2" "mom_scene:mom:mom:file10.vt2"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.vt3" "mom_scene:mom:mom:file10.vt3"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.vc1" "mom_scene:mom:mom:file10.vc1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.o" "mom_scene:mom:mom:file10.uv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture12.ofs" "mom_scene:mom:mom:file10.fs"
+		;
+connectAttr "mom_scene:mom:mom:file7.oc" "mom_scene:mom:mom:momEarBrightnessRamp1.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom:file8.oc" "mom_scene:mom:mom:momEarBrightnessRamp1.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom:file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom:file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom:file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom:file7.ws";
+connectAttr "mom_scene:mom:mom:place2dTexture9.c" "mom_scene:mom:mom:file7.c";
+connectAttr "mom_scene:mom:mom:place2dTexture9.tf" "mom_scene:mom:mom:file7.tf";
+connectAttr "mom_scene:mom:mom:place2dTexture9.rf" "mom_scene:mom:mom:file7.rf";
+connectAttr "mom_scene:mom:mom:place2dTexture9.mu" "mom_scene:mom:mom:file7.mu";
+connectAttr "mom_scene:mom:mom:place2dTexture9.mv" "mom_scene:mom:mom:file7.mv";
+connectAttr "mom_scene:mom:mom:place2dTexture9.s" "mom_scene:mom:mom:file7.s";
+connectAttr "mom_scene:mom:mom:place2dTexture9.wu" "mom_scene:mom:mom:file7.wu";
+connectAttr "mom_scene:mom:mom:place2dTexture9.wv" "mom_scene:mom:mom:file7.wv";
+connectAttr "mom_scene:mom:mom:place2dTexture9.re" "mom_scene:mom:mom:file7.re";
+connectAttr "mom_scene:mom:mom:place2dTexture9.of" "mom_scene:mom:mom:file7.of";
+connectAttr "mom_scene:mom:mom:place2dTexture9.r" "mom_scene:mom:mom:file7.ro";
+connectAttr "mom_scene:mom:mom:place2dTexture9.n" "mom_scene:mom:mom:file7.n";
+connectAttr "mom_scene:mom:mom:place2dTexture9.vt1" "mom_scene:mom:mom:file7.vt1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture9.vt2" "mom_scene:mom:mom:file7.vt2"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture9.vt3" "mom_scene:mom:mom:file7.vt3"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture9.vc1" "mom_scene:mom:mom:file7.vc1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture9.o" "mom_scene:mom:mom:file7.uv";
+connectAttr "mom_scene:mom:mom:place2dTexture9.ofs" "mom_scene:mom:mom:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom:file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom:file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom:file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom:file8.ws";
+connectAttr "mom_scene:mom:mom:place2dTexture10.c" "mom_scene:mom:mom:file8.c";
+connectAttr "mom_scene:mom:mom:place2dTexture10.tf" "mom_scene:mom:mom:file8.tf"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.rf" "mom_scene:mom:mom:file8.rf"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.mu" "mom_scene:mom:mom:file8.mu"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.mv" "mom_scene:mom:mom:file8.mv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.s" "mom_scene:mom:mom:file8.s";
+connectAttr "mom_scene:mom:mom:place2dTexture10.wu" "mom_scene:mom:mom:file8.wu"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.wv" "mom_scene:mom:mom:file8.wv"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.re" "mom_scene:mom:mom:file8.re"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.of" "mom_scene:mom:mom:file8.of"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.r" "mom_scene:mom:mom:file8.ro";
+connectAttr "mom_scene:mom:mom:place2dTexture10.n" "mom_scene:mom:mom:file8.n";
+connectAttr "mom_scene:mom:mom:place2dTexture10.vt1" "mom_scene:mom:mom:file8.vt1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.vt2" "mom_scene:mom:mom:file8.vt2"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.vt3" "mom_scene:mom:mom:file8.vt3"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.vc1" "mom_scene:mom:mom:file8.vc1"
+		;
+connectAttr "mom_scene:mom:mom:place2dTexture10.o" "mom_scene:mom:mom:file8.uv";
+connectAttr "mom_scene:mom:mom:place2dTexture10.ofs" "mom_scene:mom:mom:file8.fs"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mom:mom_mesh:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:mom:mom_mesh:file5.oc" "mom_scene:mom:mom_mesh:momBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_mesh:file6.oc" "mom_scene:mom:mom_mesh:momBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_mesh:file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_mesh:file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_mesh:file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_mesh:file5.ws";
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.c" "mom_scene:mom:mom_mesh:file5.c"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.tf" "mom_scene:mom:mom_mesh:file5.tf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.rf" "mom_scene:mom:mom_mesh:file5.rf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.mu" "mom_scene:mom:mom_mesh:file5.mu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.mv" "mom_scene:mom:mom_mesh:file5.mv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.s" "mom_scene:mom:mom_mesh:file5.s"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.wu" "mom_scene:mom:mom_mesh:file5.wu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.wv" "mom_scene:mom:mom_mesh:file5.wv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.re" "mom_scene:mom:mom_mesh:file5.re"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.of" "mom_scene:mom:mom_mesh:file5.of"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.r" "mom_scene:mom:mom_mesh:file5.ro"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.n" "mom_scene:mom:mom_mesh:file5.n"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.vt1" "mom_scene:mom:mom_mesh:file5.vt1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.vt2" "mom_scene:mom:mom_mesh:file5.vt2"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.vt3" "mom_scene:mom:mom_mesh:file5.vt3"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.vc1" "mom_scene:mom:mom_mesh:file5.vc1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.o" "mom_scene:mom:mom_mesh:file5.uv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.ofs" "mom_scene:mom:mom_mesh:file5.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_mesh:file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_mesh:file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_mesh:file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_mesh:file6.ws";
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.c" "mom_scene:mom:mom_mesh:file6.c"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.tf" "mom_scene:mom:mom_mesh:file6.tf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.rf" "mom_scene:mom:mom_mesh:file6.rf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.mu" "mom_scene:mom:mom_mesh:file6.mu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.mv" "mom_scene:mom:mom_mesh:file6.mv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.s" "mom_scene:mom:mom_mesh:file6.s"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.wu" "mom_scene:mom:mom_mesh:file6.wu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.wv" "mom_scene:mom:mom_mesh:file6.wv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.re" "mom_scene:mom:mom_mesh:file6.re"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.of" "mom_scene:mom:mom_mesh:file6.of"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.r" "mom_scene:mom:mom_mesh:file6.ro"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.n" "mom_scene:mom:mom_mesh:file6.n"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.vt1" "mom_scene:mom:mom_mesh:file6.vt1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.vt2" "mom_scene:mom:mom_mesh:file6.vt2"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.vt3" "mom_scene:mom:mom_mesh:file6.vt3"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.vc1" "mom_scene:mom:mom_mesh:file6.vc1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.o" "mom_scene:mom:mom_mesh:file6.uv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.ofs" "mom_scene:mom:mom_mesh:file6.fs"
+		;
+connectAttr "mom_scene:mom:mom_mesh:file9.oc" "mom_scene:mom:mom_mesh:momEarBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_mesh:file10.oc" "mom_scene:mom:mom_mesh:momEarBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_mesh:file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_mesh:file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_mesh:file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_mesh:file9.ws";
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.c" "mom_scene:mom:mom_mesh:file9.c"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.tf" "mom_scene:mom:mom_mesh:file9.tf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.rf" "mom_scene:mom:mom_mesh:file9.rf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.mu" "mom_scene:mom:mom_mesh:file9.mu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.mv" "mom_scene:mom:mom_mesh:file9.mv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.s" "mom_scene:mom:mom_mesh:file9.s"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.wu" "mom_scene:mom:mom_mesh:file9.wu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.wv" "mom_scene:mom:mom_mesh:file9.wv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.re" "mom_scene:mom:mom_mesh:file9.re"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.of" "mom_scene:mom:mom_mesh:file9.of"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.r" "mom_scene:mom:mom_mesh:file9.ro"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.n" "mom_scene:mom:mom_mesh:file9.n"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.vt1" "mom_scene:mom:mom_mesh:file9.vt1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.vt2" "mom_scene:mom:mom_mesh:file9.vt2"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.vt3" "mom_scene:mom:mom_mesh:file9.vt3"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.vc1" "mom_scene:mom:mom_mesh:file9.vc1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.o" "mom_scene:mom:mom_mesh:file9.uv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.ofs" "mom_scene:mom:mom_mesh:file9.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_mesh:file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_mesh:file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_mesh:file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_mesh:file10.ws";
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.c" "mom_scene:mom:mom_mesh:file10.c"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.tf" "mom_scene:mom:mom_mesh:file10.tf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.rf" "mom_scene:mom:mom_mesh:file10.rf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.mu" "mom_scene:mom:mom_mesh:file10.mu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.mv" "mom_scene:mom:mom_mesh:file10.mv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.s" "mom_scene:mom:mom_mesh:file10.s"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.wu" "mom_scene:mom:mom_mesh:file10.wu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.wv" "mom_scene:mom:mom_mesh:file10.wv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.re" "mom_scene:mom:mom_mesh:file10.re"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.of" "mom_scene:mom:mom_mesh:file10.of"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.r" "mom_scene:mom:mom_mesh:file10.ro"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.n" "mom_scene:mom:mom_mesh:file10.n"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.vt1" "mom_scene:mom:mom_mesh:file10.vt1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.vt2" "mom_scene:mom:mom_mesh:file10.vt2"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.vt3" "mom_scene:mom:mom_mesh:file10.vt3"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.vc1" "mom_scene:mom:mom_mesh:file10.vc1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.o" "mom_scene:mom:mom_mesh:file10.uv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.ofs" "mom_scene:mom:mom_mesh:file10.fs"
+		;
+connectAttr "mom_scene:mom:mom_mesh:file7.oc" "mom_scene:mom:mom_mesh:momEarBrightnessRamp1.clr[0].clrc"
+		;
+connectAttr "mom_scene:mom:mom_mesh:file8.oc" "mom_scene:mom:mom_mesh:momEarBrightnessRamp1.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_mesh:file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_mesh:file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_mesh:file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_mesh:file7.ws";
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.c" "mom_scene:mom:mom_mesh:file7.c"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.tf" "mom_scene:mom:mom_mesh:file7.tf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.rf" "mom_scene:mom:mom_mesh:file7.rf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.mu" "mom_scene:mom:mom_mesh:file7.mu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.mv" "mom_scene:mom:mom_mesh:file7.mv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.s" "mom_scene:mom:mom_mesh:file7.s"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.wu" "mom_scene:mom:mom_mesh:file7.wu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.wv" "mom_scene:mom:mom_mesh:file7.wv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.re" "mom_scene:mom:mom_mesh:file7.re"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.of" "mom_scene:mom:mom_mesh:file7.of"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.r" "mom_scene:mom:mom_mesh:file7.ro"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.n" "mom_scene:mom:mom_mesh:file7.n"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.vt1" "mom_scene:mom:mom_mesh:file7.vt1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.vt2" "mom_scene:mom:mom_mesh:file7.vt2"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.vt3" "mom_scene:mom:mom_mesh:file7.vt3"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.vc1" "mom_scene:mom:mom_mesh:file7.vc1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.o" "mom_scene:mom:mom_mesh:file7.uv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.ofs" "mom_scene:mom:mom_mesh:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:mom:mom_mesh:file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:mom:mom_mesh:file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:mom:mom_mesh:file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:mom:mom_mesh:file8.ws";
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.c" "mom_scene:mom:mom_mesh:file8.c"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.tf" "mom_scene:mom:mom_mesh:file8.tf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.rf" "mom_scene:mom:mom_mesh:file8.rf"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.mu" "mom_scene:mom:mom_mesh:file8.mu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.mv" "mom_scene:mom:mom_mesh:file8.mv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.s" "mom_scene:mom:mom_mesh:file8.s"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.wu" "mom_scene:mom:mom_mesh:file8.wu"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.wv" "mom_scene:mom:mom_mesh:file8.wv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.re" "mom_scene:mom:mom_mesh:file8.re"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.of" "mom_scene:mom:mom_mesh:file8.of"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.r" "mom_scene:mom:mom_mesh:file8.ro"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.n" "mom_scene:mom:mom_mesh:file8.n"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.vt1" "mom_scene:mom:mom_mesh:file8.vt1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.vt2" "mom_scene:mom:mom_mesh:file8.vt2"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.vt3" "mom_scene:mom:mom_mesh:file8.vt3"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.vc1" "mom_scene:mom:mom_mesh:file8.vc1"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.o" "mom_scene:mom:mom_mesh:file8.uv"
+		;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.ofs" "mom_scene:mom:mom_mesh:file8.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:table:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:table:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:table:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:table:file1.ws";
+connectAttr "mom_scene:table:place2dTexture1.c" "mom_scene:table:file1.c";
+connectAttr "mom_scene:table:place2dTexture1.tf" "mom_scene:table:file1.tf";
+connectAttr "mom_scene:table:place2dTexture1.rf" "mom_scene:table:file1.rf";
+connectAttr "mom_scene:table:place2dTexture1.mu" "mom_scene:table:file1.mu";
+connectAttr "mom_scene:table:place2dTexture1.mv" "mom_scene:table:file1.mv";
+connectAttr "mom_scene:table:place2dTexture1.s" "mom_scene:table:file1.s";
+connectAttr "mom_scene:table:place2dTexture1.wu" "mom_scene:table:file1.wu";
+connectAttr "mom_scene:table:place2dTexture1.wv" "mom_scene:table:file1.wv";
+connectAttr "mom_scene:table:place2dTexture1.re" "mom_scene:table:file1.re";
+connectAttr "mom_scene:table:place2dTexture1.of" "mom_scene:table:file1.of";
+connectAttr "mom_scene:table:place2dTexture1.r" "mom_scene:table:file1.ro";
+connectAttr "mom_scene:table:place2dTexture1.n" "mom_scene:table:file1.n";
+connectAttr "mom_scene:table:place2dTexture1.vt1" "mom_scene:table:file1.vt1";
+connectAttr "mom_scene:table:place2dTexture1.vt2" "mom_scene:table:file1.vt2";
+connectAttr "mom_scene:table:place2dTexture1.vt3" "mom_scene:table:file1.vt3";
+connectAttr "mom_scene:table:place2dTexture1.vc1" "mom_scene:table:file1.vc1";
+connectAttr "mom_scene:table:place2dTexture1.o" "mom_scene:table:file1.uv";
+connectAttr "mom_scene:table:place2dTexture1.ofs" "mom_scene:table:file1.fs";
+connectAttr "mom_scene:table:file2.oc" "mom_scene:table:tableBrightnessShader.clr[0].clrc"
+		;
+connectAttr "mom_scene:table:file1.oc" "mom_scene:table:tableBrightnessShader.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:table:file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:table:file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:table:file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:table:file2.ws";
+connectAttr "mom_scene:table:place2dTexture2.c" "mom_scene:table:file2.c";
+connectAttr "mom_scene:table:place2dTexture2.tf" "mom_scene:table:file2.tf";
+connectAttr "mom_scene:table:place2dTexture2.rf" "mom_scene:table:file2.rf";
+connectAttr "mom_scene:table:place2dTexture2.mu" "mom_scene:table:file2.mu";
+connectAttr "mom_scene:table:place2dTexture2.mv" "mom_scene:table:file2.mv";
+connectAttr "mom_scene:table:place2dTexture2.s" "mom_scene:table:file2.s";
+connectAttr "mom_scene:table:place2dTexture2.wu" "mom_scene:table:file2.wu";
+connectAttr "mom_scene:table:place2dTexture2.wv" "mom_scene:table:file2.wv";
+connectAttr "mom_scene:table:place2dTexture2.re" "mom_scene:table:file2.re";
+connectAttr "mom_scene:table:place2dTexture2.of" "mom_scene:table:file2.of";
+connectAttr "mom_scene:table:place2dTexture2.r" "mom_scene:table:file2.ro";
+connectAttr "mom_scene:table:place2dTexture2.n" "mom_scene:table:file2.n";
+connectAttr "mom_scene:table:place2dTexture2.vt1" "mom_scene:table:file2.vt1";
+connectAttr "mom_scene:table:place2dTexture2.vt2" "mom_scene:table:file2.vt2";
+connectAttr "mom_scene:table:place2dTexture2.vt3" "mom_scene:table:file2.vt3";
+connectAttr "mom_scene:table:place2dTexture2.vc1" "mom_scene:table:file2.vc1";
+connectAttr "mom_scene:table:place2dTexture2.o" "mom_scene:table:file2.uv";
+connectAttr "mom_scene:table:place2dTexture2.ofs" "mom_scene:table:file2.fs";
+connectAttr "mom_scene:table:tableBrightnessShader.msg" "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:table:surfaceShader1.msg" "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:table:place2dTexture1.msg" "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "mom_scene:table:file2.msg" "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "mom_scene:table:place2dTexture2.msg" "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "mom_scene:table:file1.msg" "mom_scene:table:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:bible:mtorPartition.rgcnx";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:bible:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:bible:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:bible:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:bible:file1.ws";
+connectAttr "mom_scene:bible:place2dTexture1.c" "mom_scene:bible:file1.c";
+connectAttr "mom_scene:bible:place2dTexture1.tf" "mom_scene:bible:file1.tf";
+connectAttr "mom_scene:bible:place2dTexture1.rf" "mom_scene:bible:file1.rf";
+connectAttr "mom_scene:bible:place2dTexture1.mu" "mom_scene:bible:file1.mu";
+connectAttr "mom_scene:bible:place2dTexture1.mv" "mom_scene:bible:file1.mv";
+connectAttr "mom_scene:bible:place2dTexture1.s" "mom_scene:bible:file1.s";
+connectAttr "mom_scene:bible:place2dTexture1.wu" "mom_scene:bible:file1.wu";
+connectAttr "mom_scene:bible:place2dTexture1.wv" "mom_scene:bible:file1.wv";
+connectAttr "mom_scene:bible:place2dTexture1.re" "mom_scene:bible:file1.re";
+connectAttr "mom_scene:bible:place2dTexture1.of" "mom_scene:bible:file1.of";
+connectAttr "mom_scene:bible:place2dTexture1.r" "mom_scene:bible:file1.ro";
+connectAttr "mom_scene:bible:place2dTexture1.n" "mom_scene:bible:file1.n";
+connectAttr "mom_scene:bible:place2dTexture1.vt1" "mom_scene:bible:file1.vt1";
+connectAttr "mom_scene:bible:place2dTexture1.vt2" "mom_scene:bible:file1.vt2";
+connectAttr "mom_scene:bible:place2dTexture1.vt3" "mom_scene:bible:file1.vt3";
+connectAttr "mom_scene:bible:place2dTexture1.vc1" "mom_scene:bible:file1.vc1";
+connectAttr "mom_scene:bible:place2dTexture1.o" "mom_scene:bible:file1.uv";
+connectAttr "mom_scene:bible:place2dTexture1.ofs" "mom_scene:bible:file1.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:bible:file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:bible:file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:bible:file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:bible:file2.ws";
+connectAttr "mom_scene:bible:place2dTexture2.c" "mom_scene:bible:file2.c";
+connectAttr "mom_scene:bible:place2dTexture2.tf" "mom_scene:bible:file2.tf";
+connectAttr "mom_scene:bible:place2dTexture2.rf" "mom_scene:bible:file2.rf";
+connectAttr "mom_scene:bible:place2dTexture2.mu" "mom_scene:bible:file2.mu";
+connectAttr "mom_scene:bible:place2dTexture2.mv" "mom_scene:bible:file2.mv";
+connectAttr "mom_scene:bible:place2dTexture2.s" "mom_scene:bible:file2.s";
+connectAttr "mom_scene:bible:place2dTexture2.wu" "mom_scene:bible:file2.wu";
+connectAttr "mom_scene:bible:place2dTexture2.wv" "mom_scene:bible:file2.wv";
+connectAttr "mom_scene:bible:place2dTexture2.re" "mom_scene:bible:file2.re";
+connectAttr "mom_scene:bible:place2dTexture2.of" "mom_scene:bible:file2.of";
+connectAttr "mom_scene:bible:place2dTexture2.r" "mom_scene:bible:file2.ro";
+connectAttr "mom_scene:bible:place2dTexture2.n" "mom_scene:bible:file2.n";
+connectAttr "mom_scene:bible:place2dTexture2.vt1" "mom_scene:bible:file2.vt1";
+connectAttr "mom_scene:bible:place2dTexture2.vt2" "mom_scene:bible:file2.vt2";
+connectAttr "mom_scene:bible:place2dTexture2.vt3" "mom_scene:bible:file2.vt3";
+connectAttr "mom_scene:bible:place2dTexture2.vc1" "mom_scene:bible:file2.vc1";
+connectAttr "mom_scene:bible:place2dTexture2.o" "mom_scene:bible:file2.uv";
+connectAttr "mom_scene:bible:place2dTexture2.ofs" "mom_scene:bible:file2.fs";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:bible:celshadingreggie:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:bible:ContourContrastStore.msg" "mom_scene:bible:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:bible:ContourContrastLevelFunction.msg" "mom_scene:bible:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr ":persp.t" "mom_scene:bible:unitConversion1.i";
+connectAttr "mom_scene:bible:surfaceShader1.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:bible:ContourContrastStore.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:bible:ContourContrastLevelFunction.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "mom_scene:bible:unitConversion1.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "mom_scene:bible:file1.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "mom_scene:bible:place2dTexture1.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "mom_scene:bible:file2.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "mom_scene:bible:place2dTexture2.msg" "mom_scene:bible:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:main_bottle:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:main_bottle:glassMaterial.msg" "mom_scene:main_bottle:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:shotglass:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.c" "mom_scene:shotglass:file1.c"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.tf" "mom_scene:shotglass:file1.tf"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.rf" "mom_scene:shotglass:file1.rf"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.mu" "mom_scene:shotglass:file1.mu"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.mv" "mom_scene:shotglass:file1.mv"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.s" "mom_scene:shotglass:file1.s"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.wu" "mom_scene:shotglass:file1.wu"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.wv" "mom_scene:shotglass:file1.wv"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.re" "mom_scene:shotglass:file1.re"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.of" "mom_scene:shotglass:file1.of"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.r" "mom_scene:shotglass:file1.ro"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.n" "mom_scene:shotglass:file1.n"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.vt1" "mom_scene:shotglass:file1.vt1"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.vt2" "mom_scene:shotglass:file1.vt2"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.vt3" "mom_scene:shotglass:file1.vt3"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.vc1" "mom_scene:shotglass:file1.vc1"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.o" "mom_scene:shotglass:file1.uv"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture1.ofs" "mom_scene:shotglass:file1.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:shotglass:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:shotglass:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:shotglass:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:shotglass:file1.ws";
+connectAttr "mom_scene:shotglass:place2dTexture2.o" "mom_scene:shotglass:unwrapTestPattern.uv"
+		;
+connectAttr "mom_scene:shotglass:place2dTexture2.ofs" "mom_scene:shotglass:unwrapTestPattern.fs"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:bible1:mtorPartition.rgcnx";
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:bible1:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:bible1:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:bible1:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:bible1:file1.ws";
+connectAttr "mom_scene:bible1:place2dTexture1.c" "mom_scene:bible1:file1.c";
+connectAttr "mom_scene:bible1:place2dTexture1.tf" "mom_scene:bible1:file1.tf";
+connectAttr "mom_scene:bible1:place2dTexture1.rf" "mom_scene:bible1:file1.rf";
+connectAttr "mom_scene:bible1:place2dTexture1.mu" "mom_scene:bible1:file1.mu";
+connectAttr "mom_scene:bible1:place2dTexture1.mv" "mom_scene:bible1:file1.mv";
+connectAttr "mom_scene:bible1:place2dTexture1.s" "mom_scene:bible1:file1.s";
+connectAttr "mom_scene:bible1:place2dTexture1.wu" "mom_scene:bible1:file1.wu";
+connectAttr "mom_scene:bible1:place2dTexture1.wv" "mom_scene:bible1:file1.wv";
+connectAttr "mom_scene:bible1:place2dTexture1.re" "mom_scene:bible1:file1.re";
+connectAttr "mom_scene:bible1:place2dTexture1.of" "mom_scene:bible1:file1.of";
+connectAttr "mom_scene:bible1:place2dTexture1.r" "mom_scene:bible1:file1.ro";
+connectAttr "mom_scene:bible1:place2dTexture1.n" "mom_scene:bible1:file1.n";
+connectAttr "mom_scene:bible1:place2dTexture1.vt1" "mom_scene:bible1:file1.vt1";
+connectAttr "mom_scene:bible1:place2dTexture1.vt2" "mom_scene:bible1:file1.vt2";
+connectAttr "mom_scene:bible1:place2dTexture1.vt3" "mom_scene:bible1:file1.vt3";
+connectAttr "mom_scene:bible1:place2dTexture1.vc1" "mom_scene:bible1:file1.vc1";
+connectAttr "mom_scene:bible1:place2dTexture1.o" "mom_scene:bible1:file1.uv";
+connectAttr "mom_scene:bible1:place2dTexture1.ofs" "mom_scene:bible1:file1.fs";
+connectAttr "mom_scene:bible1:file2.oc" "mom_scene:bible1:BibleBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "mom_scene:bible1:file1.oc" "mom_scene:bible1:BibleBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:bible1:file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:bible1:file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:bible1:file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:bible1:file2.ws";
+connectAttr "mom_scene:bible1:place2dTexture2.c" "mom_scene:bible1:file2.c";
+connectAttr "mom_scene:bible1:place2dTexture2.tf" "mom_scene:bible1:file2.tf";
+connectAttr "mom_scene:bible1:place2dTexture2.rf" "mom_scene:bible1:file2.rf";
+connectAttr "mom_scene:bible1:place2dTexture2.mu" "mom_scene:bible1:file2.mu";
+connectAttr "mom_scene:bible1:place2dTexture2.mv" "mom_scene:bible1:file2.mv";
+connectAttr "mom_scene:bible1:place2dTexture2.s" "mom_scene:bible1:file2.s";
+connectAttr "mom_scene:bible1:place2dTexture2.wu" "mom_scene:bible1:file2.wu";
+connectAttr "mom_scene:bible1:place2dTexture2.wv" "mom_scene:bible1:file2.wv";
+connectAttr "mom_scene:bible1:place2dTexture2.re" "mom_scene:bible1:file2.re";
+connectAttr "mom_scene:bible1:place2dTexture2.of" "mom_scene:bible1:file2.of";
+connectAttr "mom_scene:bible1:place2dTexture2.r" "mom_scene:bible1:file2.ro";
+connectAttr "mom_scene:bible1:place2dTexture2.n" "mom_scene:bible1:file2.n";
+connectAttr "mom_scene:bible1:place2dTexture2.vt1" "mom_scene:bible1:file2.vt1";
+connectAttr "mom_scene:bible1:place2dTexture2.vt2" "mom_scene:bible1:file2.vt2";
+connectAttr "mom_scene:bible1:place2dTexture2.vt3" "mom_scene:bible1:file2.vt3";
+connectAttr "mom_scene:bible1:place2dTexture2.vc1" "mom_scene:bible1:file2.vc1";
+connectAttr "mom_scene:bible1:place2dTexture2.o" "mom_scene:bible1:file2.uv";
+connectAttr "mom_scene:bible1:place2dTexture2.ofs" "mom_scene:bible1:file2.fs";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:bible1:celshadingreggie:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:bible1:ContourContrastStore.msg" "mom_scene:bible1:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:bible1:ContourContrastLevelFunction.msg" "mom_scene:bible1:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr ":persp.t" "mom_scene:bible1:unitConversion1.i";
+connectAttr "mom_scene:bible1:surfaceShader1.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:bible1:ContourContrastStore.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:bible1:ContourContrastLevelFunction.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "mom_scene:bible1:unitConversion1.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "mom_scene:bible1:file1.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "mom_scene:bible1:place2dTexture1.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "mom_scene:bible1:BibleBrightnessRamp.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "mom_scene:bible1:file2.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "mom_scene:bible1:place2dTexture2.msg" "mom_scene:bible1:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr ":initialShadingGroup.msg" "mom_scene:MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr ":lambert1.msg" "mom_scene:MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr ":lightLinker1.msg" "mom_scene:MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr ":renderPartition.msg" "mom_scene:MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "mom_scene:pairBlend1.orx" "mom_scene:momRN.phl[1]";
+connectAttr "mom_scene:pairBlend1.ory" "mom_scene:momRN.phl[2]";
+connectAttr "mom_scene:pairBlend1.orz" "mom_scene:momRN.phl[3]";
+connectAttr "mom_scene:mom_l_pinky0_scaleX.o" "mom_scene:momRN.phl[4]";
+connectAttr "mom_scene:mom_l_pinky0_scaleY.o" "mom_scene:momRN.phl[5]";
+connectAttr "mom_scene:mom_l_pinky0_scaleZ.o" "mom_scene:momRN.phl[6]";
+connectAttr "mom_scene:mom_l_pinky0_visibility.o" "mom_scene:momRN.phl[8]";
+connectAttr "mom_scene:mom_l_pinky0_translateX.o" "mom_scene:momRN.phl[9]";
+connectAttr "mom_scene:mom_l_pinky0_translateY.o" "mom_scene:momRN.phl[10]";
+connectAttr "mom_scene:mom_l_pinky0_translateZ.o" "mom_scene:momRN.phl[11]";
+connectAttr "mom_scene:mom_r_arm_ctrl_visibility.o" "mom_scene:momRN.phl[55]";
+connectAttr "mom_scene:mom_r_arm_ctrl_translateX.o" "mom_scene:momRN.phl[57]";
+connectAttr "mom_scene:mom_r_arm_ctrl_translateY.o" "mom_scene:momRN.phl[58]";
+connectAttr "mom_scene:mom_r_arm_ctrl_translateZ.o" "mom_scene:momRN.phl[59]";
+connectAttr "mom_scene:mom_r_wrist_ctrl_rotateX.o" "mom_scene:momRN.phl[64]";
+connectAttr "mom_scene:mom_r_wrist_ctrl_rotateY.o" "mom_scene:momRN.phl[65]";
+connectAttr "mom_scene:mom_r_wrist_ctrl_rotateZ.o" "mom_scene:momRN.phl[66]";
+connectAttr "mom_scene:mom_r_wrist_ctrl_visibility.o" "mom_scene:momRN.phl[69]";
+connectAttr "mom_scene:mom_r_pinky1_ctrl_rotateX.o" "mom_scene:momRN.phl[70]";
+connectAttr "mom_scene:mom_r_pinky1_ctrl_rotateY.o" "mom_scene:momRN.phl[71]";
+connectAttr "mom_scene:mom_r_pinky1_ctrl_rotateZ.o" "mom_scene:momRN.phl[72]";
+connectAttr "mom_scene:mom_r_pinky1_ctrl_translateX.o" "mom_scene:momRN.phl[73]"
+		;
+connectAttr "mom_scene:mom_r_pinky1_ctrl_translateY.o" "mom_scene:momRN.phl[74]"
+		;
+connectAttr "mom_scene:mom_r_pinky1_ctrl_translateZ.o" "mom_scene:momRN.phl[75]"
+		;
+connectAttr "mom_scene:mom_r_pinky1_ctrl_visibility.o" "mom_scene:momRN.phl[76]"
+		;
+connectAttr "mom_scene:mom_r_pinky1_ctrl_scaleX.o" "mom_scene:momRN.phl[77]";
+connectAttr "mom_scene:mom_r_pinky1_ctrl_scaleY.o" "mom_scene:momRN.phl[78]";
+connectAttr "mom_scene:mom_r_pinky1_ctrl_scaleZ.o" "mom_scene:momRN.phl[79]";
+connectAttr "mom_scene:mom_l_arm_ctrl_visibility.o" "mom_scene:momRN.phl[80]";
+connectAttr "mom_scene:mom_l_arm_ctrl_translateX.o" "mom_scene:momRN.phl[81]";
+connectAttr "mom_scene:mom_l_arm_ctrl_translateY.o" "mom_scene:momRN.phl[82]";
+connectAttr "mom_scene:mom_l_arm_ctrl_translateZ.o" "mom_scene:momRN.phl[83]";
+connectAttr "mom_scene:mom_l_wrist_ctrl_rotateX.o" "mom_scene:momRN.phl[84]";
+connectAttr "mom_scene:mom_l_wrist_ctrl_rotateY.o" "mom_scene:momRN.phl[85]";
+connectAttr "mom_scene:mom_l_wrist_ctrl_rotateZ.o" "mom_scene:momRN.phl[86]";
+connectAttr "mom_scene:mom_l_wrist_ctrl_visibility.o" "mom_scene:momRN.phl[87]";
+connectAttr "mom_scene:mom_l_pinky1_ctrl_rotateX.o" "mom_scene:momRN.phl[88]";
+connectAttr "mom_scene:mom_l_pinky1_ctrl_rotateY.o" "mom_scene:momRN.phl[89]";
+connectAttr "mom_scene:mom_l_pinky1_ctrl_rotateZ.o" "mom_scene:momRN.phl[90]";
+connectAttr "mom_scene:mom_l_pinky1_ctrl_visibility.o" "mom_scene:momRN.phl[91]"
+		;
+connectAttr "mom_scene:mom_l_pinky1_ctrl_translateX.o" "mom_scene:momRN.phl[92]"
+		;
+connectAttr "mom_scene:mom_l_pinky1_ctrl_translateY.o" "mom_scene:momRN.phl[93]"
+		;
+connectAttr "mom_scene:mom_l_pinky1_ctrl_translateZ.o" "mom_scene:momRN.phl[94]"
+		;
+connectAttr "mom_scene:mom_l_pinky1_ctrl_scaleX.o" "mom_scene:momRN.phl[95]";
+connectAttr "mom_scene:mom_l_pinky1_ctrl_scaleY.o" "mom_scene:momRN.phl[96]";
+connectAttr "mom_scene:mom_l_pinky1_ctrl_scaleZ.o" "mom_scene:momRN.phl[97]";
+connectAttr "mom_scene:mom_l_thumb1_ctrl_rotateX.o" "mom_scene:momRN.phl[98]";
+connectAttr "mom_scene:mom_l_thumb1_ctrl_rotateY.o" "mom_scene:momRN.phl[99]";
+connectAttr "mom_scene:mom_l_thumb1_ctrl_rotateZ.o" "mom_scene:momRN.phl[100]";
+connectAttr "mom_scene:mom_l_thumb1_ctrl_visibility.o" "mom_scene:momRN.phl[101]"
+		;
+connectAttr "mom_scene:mom_l_thumb1_ctrl_translateX.o" "mom_scene:momRN.phl[102]"
+		;
+connectAttr "mom_scene:mom_l_thumb1_ctrl_translateY.o" "mom_scene:momRN.phl[103]"
+		;
+connectAttr "mom_scene:mom_l_thumb1_ctrl_translateZ.o" "mom_scene:momRN.phl[104]"
+		;
+connectAttr "mom_scene:mom_l_thumb1_ctrl_scaleX.o" "mom_scene:momRN.phl[105]";
+connectAttr "mom_scene:mom_l_thumb1_ctrl_scaleY.o" "mom_scene:momRN.phl[106]";
+connectAttr "mom_scene:mom_l_thumb1_ctrl_scaleZ.o" "mom_scene:momRN.phl[107]";
+connectAttr "mom_scene:mom_neck_ctrl_rotateX.o" "mom_scene:momRN.phl[108]";
+connectAttr "mom_scene:mom_neck_ctrl_rotateY.o" "mom_scene:momRN.phl[109]";
+connectAttr "mom_scene:mom_neck_ctrl_rotateZ.o" "mom_scene:momRN.phl[110]";
+connectAttr "mom_scene:mom_neck_ctrl_visibility.o" "mom_scene:momRN.phl[111]";
+connectAttr "mom_scene:mom_l_foot_ctrl_translateX.o" "mom_scene:momRN.phl[112]";
+connectAttr "mom_scene:mom_l_foot_ctrl_translateY.o" "mom_scene:momRN.phl[113]";
+connectAttr "mom_scene:mom_l_foot_ctrl_translateZ.o" "mom_scene:momRN.phl[114]";
+connectAttr "mom_scene:mom_l_foot_ctrl_visibility.o" "mom_scene:momRN.phl[115]";
+connectAttr "mom_scene:mom_l_foot_ctrl_rotateX.o" "mom_scene:momRN.phl[116]";
+connectAttr "mom_scene:mom_l_foot_ctrl_rotateY.o" "mom_scene:momRN.phl[117]";
+connectAttr "mom_scene:mom_l_foot_ctrl_rotateZ.o" "mom_scene:momRN.phl[118]";
+connectAttr "mom_scene:mom_l_foot_ctrl_scaleX.o" "mom_scene:momRN.phl[119]";
+connectAttr "mom_scene:mom_l_foot_ctrl_scaleY.o" "mom_scene:momRN.phl[120]";
+connectAttr "mom_scene:mom_l_foot_ctrl_scaleZ.o" "mom_scene:momRN.phl[121]";
+connectAttr "mom_scene:mom_r_foot_ctrl_translateX.o" "mom_scene:momRN.phl[122]";
+connectAttr "mom_scene:mom_r_foot_ctrl_translateY.o" "mom_scene:momRN.phl[123]";
+connectAttr "mom_scene:mom_r_foot_ctrl_translateZ.o" "mom_scene:momRN.phl[124]";
+connectAttr "mom_scene:mom_r_foot_ctrl_visibility.o" "mom_scene:momRN.phl[125]";
+connectAttr "mom_scene:mom_r_foot_ctrl_rotateX.o" "mom_scene:momRN.phl[126]";
+connectAttr "mom_scene:mom_r_foot_ctrl_rotateY.o" "mom_scene:momRN.phl[127]";
+connectAttr "mom_scene:mom_r_foot_ctrl_rotateZ.o" "mom_scene:momRN.phl[128]";
+connectAttr "mom_scene:mom_r_foot_ctrl_scaleX.o" "mom_scene:momRN.phl[129]";
+connectAttr "mom_scene:mom_r_foot_ctrl_scaleY.o" "mom_scene:momRN.phl[130]";
+connectAttr "mom_scene:mom_r_foot_ctrl_scaleZ.o" "mom_scene:momRN.phl[131]";
+connectAttr "mom_scene:mom_cog_ctrl_translateX.o" "mom_scene:momRN.phl[132]";
+connectAttr "mom_scene:mom_cog_ctrl_translateY.o" "mom_scene:momRN.phl[133]";
+connectAttr "mom_scene:mom_cog_ctrl_translateZ.o" "mom_scene:momRN.phl[134]";
+connectAttr "mom_scene:mom_cog_ctrl_rotateX.o" "mom_scene:momRN.phl[135]";
+connectAttr "mom_scene:mom_cog_ctrl_rotateY.o" "mom_scene:momRN.phl[136]";
+connectAttr "mom_scene:mom_cog_ctrl_rotateZ.o" "mom_scene:momRN.phl[137]";
+connectAttr "mom_scene:mom_cog_ctrl_scaleX.o" "mom_scene:momRN.phl[138]";
+connectAttr "mom_scene:mom_cog_ctrl_scaleY.o" "mom_scene:momRN.phl[139]";
+connectAttr "mom_scene:mom_cog_ctrl_scaleZ.o" "mom_scene:momRN.phl[140]";
+connectAttr "mom_scene:mom_cog_ctrl_visibility.o" "mom_scene:momRN.phl[141]";
+connectAttr "mom_scene:mom_shoulder_ctrl_translateX.o" "mom_scene:momRN.phl[142]"
+		;
+connectAttr "mom_scene:mom_shoulder_ctrl_translateY.o" "mom_scene:momRN.phl[143]"
+		;
+connectAttr "mom_scene:mom_shoulder_ctrl_translateZ.o" "mom_scene:momRN.phl[144]"
+		;
+connectAttr "mom_scene:mom_shoulder_ctrl_rotateX.o" "mom_scene:momRN.phl[145]";
+connectAttr "mom_scene:mom_shoulder_ctrl_rotateY.o" "mom_scene:momRN.phl[146]";
+connectAttr "mom_scene:mom_shoulder_ctrl_rotateZ.o" "mom_scene:momRN.phl[147]";
+connectAttr "mom_scene:mom_shoulder_ctrl_scaleX.o" "mom_scene:momRN.phl[148]";
+connectAttr "mom_scene:mom_shoulder_ctrl_scaleY.o" "mom_scene:momRN.phl[149]";
+connectAttr "mom_scene:mom_shoulder_ctrl_scaleZ.o" "mom_scene:momRN.phl[150]";
+connectAttr "mom_scene:mom_shoulder_ctrl_visibility.o" "mom_scene:momRN.phl[151]"
+		;
+connectAttr "mom_scene:mom_r_blink_ctrl_translateY.o" "mom_scene:momRN.phl[152]"
+		;
+connectAttr "mom_scene:mom_r_blink_ctrl_visibility.o" "mom_scene:momRN.phl[153]"
+		;
+connectAttr "mom_scene:mom_l_blink_ctrl_translateY.o" "mom_scene:momRN.phl[154]"
+		;
+connectAttr "mom_scene:mom_l_blink_ctrl_visibility.o" "mom_scene:momRN.phl[155]"
+		;
+connectAttr "mom_scene:sharedReferenceNode.sr" "mom_scene:momRN.sr";
+connectAttr "mom_scene:_UNKNOWN_REF_NODE_.ur" "mom_scene:momRN.ur";
+connectAttr "mom_scene:momRN.phl[7]" "mom_scene:pairBlend1.w";
+connectAttr "mom_scene:momRN.phl[12]" "mom_scene:pairBlend1.irx2";
+connectAttr "mom_scene:momRN.phl[13]" "mom_scene:pairBlend1.iry2";
+connectAttr "mom_scene:momRN.phl[14]" "mom_scene:pairBlend1.irz2";
+connectAttr "mom_scene:pairBlend1_inRotateX1.o" "mom_scene:pairBlend1.irx1";
+connectAttr "mom_scene:pairBlend1_inRotateY1.o" "mom_scene:pairBlend1.iry1";
+connectAttr "mom_scene:pairBlend1_inRotateZ1.o" "mom_scene:pairBlend1.irz1";
+connectAttr ":time1.o" "mom_scene:oceanShader1.ti";
+connectAttr "mom_scene:momRN.phl[157]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "mom_scene:momRN.phl[158]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "mom_scene:momRN.phl[162]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "mom_scene:momRN.phl[160]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "mom_scene:momRN.phl[156]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "mom_scene:momRN.phl[159]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "mom_scene:momRN.phl[161]" "mom_scene:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mtorPartition1.rgcnx";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mtorPartition2.rgcnx";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:mtorPartition3.rgcnx";
+connectAttr ":timeEditor.cmp[1]" "mom_scene:Composition1.cmp";
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:new_mom_camera:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:shotglass1:renderLayerManager.rlmi[0]" "mom_scene:shotglass1:defaultRenderLayer.rlid"
+		;
+connectAttr ":defaultRenderGlobals.msg" "mom_scene:shotglass1:mtorPartition.rgcnx"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.c" "mom_scene:shotglass1:file1.c"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.tf" "mom_scene:shotglass1:file1.tf"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.rf" "mom_scene:shotglass1:file1.rf"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.mu" "mom_scene:shotglass1:file1.mu"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.mv" "mom_scene:shotglass1:file1.mv"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.s" "mom_scene:shotglass1:file1.s"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.wu" "mom_scene:shotglass1:file1.wu"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.wv" "mom_scene:shotglass1:file1.wv"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.re" "mom_scene:shotglass1:file1.re"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.of" "mom_scene:shotglass1:file1.of"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.r" "mom_scene:shotglass1:file1.ro"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.n" "mom_scene:shotglass1:file1.n"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.vt1" "mom_scene:shotglass1:file1.vt1"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.vt2" "mom_scene:shotglass1:file1.vt2"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.vt3" "mom_scene:shotglass1:file1.vt3"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.vc1" "mom_scene:shotglass1:file1.vc1"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.o" "mom_scene:shotglass1:file1.uv"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture1.ofs" "mom_scene:shotglass1:file1.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "mom_scene:shotglass1:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "mom_scene:shotglass1:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "mom_scene:shotglass1:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "mom_scene:shotglass1:file1.ws";
+connectAttr "mom_scene:shotglass1:place2dTexture2.o" "mom_scene:shotglass1:unwrapTestPattern.uv"
+		;
+connectAttr "mom_scene:shotglass1:place2dTexture2.ofs" "mom_scene:shotglass1:unwrapTestPattern.fs"
 		;
 connectAttr "mom:mom2:mom:unwrapBaseShaderSG.pa" ":renderPartition.st" -na;
 connectAttr "mom:mom2:mom:unwrapChekcerShaderSG.pa" ":renderPartition.st" -na;
@@ -19015,6 +23539,75 @@ connectAttr "bible1:BibleBrightnessRamp.msg" ":defaultShaderList1.s" -na;
 connectAttr "bible1:surfaceShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "oceanShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:unwrapBaseShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:unwrapChekcerShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom3:momEyes.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:momHair_LBang1.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:shirtShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:apronShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:skirtShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:momBrightnessRamp.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom3:momEarBrightnessRamp1.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom3:momEarBrightnessRamp.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:unwrapBaseShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:unwrapChekcerShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:momEyes.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:momHair_LBang1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:shirtShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:apronShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:skirtShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:momBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:momEarBrightnessRamp1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:momEarBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momEarBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom:shirtShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom:mom:apronShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:mom:mom:momBrightnessRamp.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom:mom:momEarBrightnessRamp1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom:momEarBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:shirtShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom:mom_mesh:apronShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:mom:mom_mesh:momBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:momEarBrightnessRamp1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:momEarBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:table:tableBrightnessShader.msg" ":defaultShaderList1.s" 
+		-na;
+connectAttr "mom_scene:table:surfaceShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:bible:surfaceShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:main_bottle:glassMaterial.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:main_bottle:pasted__glassMaterial.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "mom_scene:bible1:BibleBrightnessRamp.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "mom_scene:bible1:surfaceShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "mom_scene:oceanShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "mom:mom2:mom:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
 		;
 connectAttr "mom:mom2:mom:place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na
@@ -19134,7 +23727,148 @@ connectAttr "bible1:ContourContrastLevelFunction.msg" ":defaultRenderUtilityList
 		 -na;
 connectAttr "bible1:ContourContrastStore.msg" ":defaultRenderUtilityList1.u" -na
 		;
+connectAttr "mom_scene:mom3:place2dTexture1.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "mom_scene:mom3:place2dTexture3.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "mom_scene:mom3:place2dTexture5.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "mom_scene:mom3:place2dTexture7.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "mom_scene:mom3:place2dTexture8.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "mom_scene:mom3:place2dTexture9.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "mom_scene:mom3:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:place2dTexture11.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:place2dTexture12.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:ContourContrastLevelFunction.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:ContourContrastStore.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:contour_shader_simple1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:contour_shader_simple2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom3:contour_shader_simple3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture5.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture8.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture11.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:place2dTexture12.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:ContourContrastLevelFunction.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:ContourContrastStore.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:contour_shader_simple1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:contour_shader_simple2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:contour_shader_simple3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture11.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture12.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:contour_shader_simple1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:contour_shader_simple2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:contour_shader_simple3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:place2dTexture7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:place2dTexture8.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:place2dTexture11.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:place2dTexture12.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:contour_shader_simple1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:contour_shader_simple2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom:contour_shader_simple3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture8.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture11.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:place2dTexture12.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:contour_shader_simple1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:contour_shader_simple2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:mom:mom_mesh:contour_shader_simple3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:table:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:table:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible:ContourContrastLevelFunction.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible:ContourContrastStore.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:shotglass:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:shotglass:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible1:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible1:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible1:ContourContrastLevelFunction.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:bible1:ContourContrastStore.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:shotglass1:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "mom_scene:shotglass1:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "mom_scene:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "mom_scene:shotglass1:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
 connectAttr "ambientLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "mom:mom2:mom:unwrapTestPattern.msg" ":defaultTextureList1.tx" -na;
 connectAttr "mom:mom2:mom:file1.msg" ":defaultTextureList1.tx" -na;
@@ -19187,6 +23921,70 @@ connectAttr "shotglass:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "shotglass:unwrapTestPattern.msg" ":defaultTextureList1.tx" -na;
 connectAttr "bible1:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "bible1:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:unwrapTestPattern.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom3:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom3:file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_skeleton:unwrapTestPattern.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:file1.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file3.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file5.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file6.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file7.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file8.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file9.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_skeleton:file10.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file7.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file8.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file9.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file10.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:mom:mom:file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom:file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom:file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom:file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom:file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom:file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_mesh:file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_mesh:file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_mesh:file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_mesh:file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_mesh:file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:mom:mom_mesh:file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:table:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:table:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:bible:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:bible:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:shotglass:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:shotglass:unwrapTestPattern.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "mom_scene:bible1:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:bible1:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:shotglass1:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "mom_scene:shotglass1:unwrapTestPattern.msg" ":defaultTextureList1.tx"
+		 -na;
 connectAttr "mom:mom2:mom:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn"
 		 -na;
 connectAttr "mom:mom_skeleton:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn"
@@ -19194,6 +23992,14 @@ connectAttr "mom:mom_skeleton:celshadingreggie:groupId3.msg" ":initialShadingGro
 connectAttr "bible:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "bible1:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn" -na
 		;
+connectAttr "mom_scene:mom3:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "mom_scene:mom:mom_skeleton:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "mom_scene:bible:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "mom_scene:bible1:celshadingreggie:groupId3.msg" ":initialShadingGroup.gn"
+		 -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "ambientLight1.iog" ":defaultLightSet.dsm" -na;
