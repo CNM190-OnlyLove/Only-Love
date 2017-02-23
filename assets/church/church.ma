@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: church.ma
-//Last modified: Thu, Feb 23, 2017 12:38:24 AM
+//Last modified: Thu, Feb 23, 2017 02:32:38 PM
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "hairPhysicalShader" "hairPhysicalShader" "1.0";
@@ -10016,15 +10016,15 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "2DB77DE2-F64E-77E1-3A69-EDB255FF0799";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F6E58ECF-F540-8C2E-5926-D79A685A3759";
+	rename -uid "6C59DE78-7A41-F0B1-9B4E-38821CDC2EAD";
 	setAttr -s 19 ".lnk";
 	setAttr -s 19 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "40F0EA42-9342-5918-0DA5-FCA40D5A499D";
+	rename -uid "A8F114C5-8349-DD13-40E0-CEB414F4BC51";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "99E0BD97-964F-3F9B-DB29-19AEF89F7C25";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B05FADA1-BF43-08D7-B9A7-FBA0EBD8C863";
+	rename -uid "E0F581CD-A643-A414-8A89-49B743043795";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E17DB6BA-734F-6EA2-C8F5-F8A0535DAEBF";
 	setAttr ".g" yes;
@@ -10159,7 +10159,7 @@ createNode materialInfo -n "materialInfo3";
 	rename -uid "D6530565-554E-E000-C384-5EA03BE23B45";
 createNode file -n "file3";
 	rename -uid "41E13BC2-764A-020D-0754-94BA821C8C48";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/ChurchTextures/Gold Cross.psd";
+	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/ChurchTextures/Gold Cross.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture3";
 	rename -uid "41FC515D-9A48-EECE-21E6-27B5E504B456";
@@ -10175,7 +10175,7 @@ createNode materialInfo -n "materialInfo4";
 	rename -uid "07BF58B6-1D44-86FD-71C8-6080DE5A61D6";
 createNode file -n "file4";
 	rename -uid "AFECD115-7349-AED4-B7D0-A393441077D6";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/ChurchTextures/Church UV.psd";
+	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/ChurchTextures/Church UV.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture4";
 	rename -uid "45321F5B-0540-4D9F-EB16-F58BF652B3E0";
@@ -10299,9 +10299,9 @@ createNode polyCloseBorder -n "polyCloseBorder1";
 	rename -uid "B0C97F88-064D-018C-C093-38BC3C8C8D60";
 	setAttr ".ics" -type "componentList" 3 "e[38]" "e[40]" "e[42:43]";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9F8BF35D-C548-575A-6DBF-0E80EA5DEF95";
+	rename -uid "7CB22F14-0F40-90AB-686C-5AAD5AF1939B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BED82345-EC48-39A4-C641-B7900041E2C4";
+	rename -uid "FA1D0FE9-F643-7C0C-32E4-419A4A8A010E";
 createNode hairPhysicalShader -n "hairPhysicalShader1";
 	rename -uid "67931F67-9340-8DE9-A9C0-2584C239568D";
 	setAttr ".tcD" -type "float3" 0.1038961 0.069264054 0.034632031 ;
