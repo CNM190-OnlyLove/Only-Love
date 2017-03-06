@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: reggie_church_anim.ma
-//Last modified: Mon, Mar 06, 2017 01:18:33 PM
+//Last modified: Mon, Mar 06, 2017 01:30:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "reggie_rig" -rfn "reggie_rigRN" -op "VERS|2017|UVER|undef|MADE|undef|CHNG|Fri, Mar 03, 2017 12:48:10 PM|ICON|undef|INFO|undef|OBJN|2520|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
 		 -typ "mayaBinary" "C:/Users/Gogo/Documents/maya/projects/Only-Love//scenes/char/reggie/reggie_rig.mb";
@@ -26,7 +26,7 @@ fileInfo "cutIdentifier" "201611102145-1007295";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode fosterParent -n "redSoloCupRNfosterParent1";
-	rename -uid "1F31478F-424A-60C4-9DF7-AF9DFBC86F93";
+	rename -uid "E6330E3F-46C6-2408-D2E5-C6BE3A0B46E0";
 createNode parentConstraint -n "CoinCup_parentConstraint1" -p "redSoloCupRNfosterParent1";
 	rename -uid "DA0A72B3-4379-35B1-948A-F79DA2DA30A4";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "HandCntrlW0" -dv 1 -min 0 -at "double";
@@ -991,7 +991,7 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:ElbowPV_IK_R" 
 		"visibility" " -av 1"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:ElbowPV_IK_R" 
-		"translate" " -type \"double3\" 4.6285475703728434 -0.0088690754121470428 -13.878000000000004"
+		"translate" " -type \"double3\" 4.6285475703728434 -0.0088690754121470428 -13.878000000000005"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:ARM_IK_GRP_R|reggie_rig:ElbowPV_IK_R" 
 		"translateX" " -av"
@@ -1308,10 +1308,10 @@ createNode reference -n "reggie_rigRN";
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckIk" 
-		"translate" " -type \"double3\" 0.035875934424836942 4.0673624286379599 -4.7716636597274373"
+		"translate" " -type \"double3\" 0.035875934424950628 4.067362428637967 -4.7716636597274373"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckIk" 
-		"rotate" " -type \"double3\" 94.226332584182913 57.786315895555987 -92.060436661556835"
+		"rotate" " -type \"double3\" 94.226332584180554 57.786315895555752 -92.060436661560857"
 		
 		2 "|reggie_rig:Reggie_Rig|reggie_rig:ReggieMasterControl|reggie_rig:Head_Neck_GRP|reggie_rig:NeckCntrlFk_Offset|reggie_rig:NeckCntrlFk" 
 		"visibility" " -av 1"
@@ -2244,7 +2244,7 @@ createNode reference -n "redSoloCupRN";
 		0 "|redSoloCupRNfosterParent1|CoinCup_parentConstraint1" "|redSoloCup1:CoinCup" 
 		"-s -r "
 		2 "|redSoloCup1:CoinCup" "visibility" " -av 1"
-		2 "|redSoloCup1:CoinCup" "translate" " -type \"double3\" -2184.7434645786893 -4.2491152351293282 -498.66244833910588"
+		2 "|redSoloCup1:CoinCup" "translate" " -type \"double3\" -2184.7434645786893 -4.2491152351292847 -498.66244833910594"
 		
 		2 "|redSoloCup1:CoinCup" "translateX" " -av"
 		2 "|redSoloCup1:CoinCup" "translateY" " -av"
@@ -2285,7 +2285,7 @@ createNode reference -n "redSoloCupRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9BDDF928-4101-2874-FC65-24B953C44269";
+	rename -uid "A0DAF569-44A5-BDB3-F1DE-D3B36735C5D1";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 6 0 1 2 3 4
 		 5 ;
 	setAttr -s 3 ".bspr";
@@ -3485,22 +3485,20 @@ createNode animCurveTU -n "ArmCntrl_L_scaleZ";
 createNode animCurveTL -n "ElbowPV_IK_R_translateX";
 	rename -uid "9DD95122-42F5-C9E0-BDD5-7081A76EB5CC";
 	setAttr ".tan" 18;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.84396403337741976 56 4.6285475703728434
+	setAttr -s 5 ".ktv[0:4]"  1 3.8558668118755941 56 4.6285475703728434
 		 107 4.6285475703728434 115 4.6285475703728434 136 4.6285475703728434;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTL -n "ElbowPV_IK_R_translateY";
 	rename -uid "1F221BE8-44DB-9D50-7F7E-E6BB91DE079C";
 	setAttr ".tan" 18;
 	setAttr -s 4 ".ktv[0:3]"  1 -0.0088690754121470428 56 -0.0088690754121470428
 		 107 -0.0088690754121470428 151 -0.0088690754121470428;
-	setAttr -s 4 ".kit[0:3]"  3 18 18 18;
-	setAttr -s 4 ".kot[0:3]"  3 18 18 18;
 createNode animCurveTL -n "ElbowPV_IK_R_translateZ";
 	rename -uid "3F0A7755-41FB-5DB9-FF84-FFA1E829E25A";
 	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  1 -13.878000000000023 107 -13.878 115 -13.878
-		 136 -13.878;
+	setAttr -s 5 ".ktv[0:4]"  1 -13.878000000000013 56 -13.878000000000011
+		 107 -13.878 115 -13.878 136 -13.878;
+	setAttr -s 5 ".kit[0:4]"  18 18 9 9 9;
+	setAttr -s 5 ".kot[0:4]"  18 18 9 9 9;
 createNode animCurveTU -n "ElbowPV_IK_R_visibility";
 	rename -uid "ECA06C07-4FCE-3E7F-E900-DE9C9AE11AC7";
 	setAttr ".tan" 9;
@@ -3510,38 +3508,26 @@ createNode animCurveTA -n "ElbowPV_IK_R_rotateX";
 	rename -uid "568A9991-4680-B534-39BA-9AB1D3845518";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 0 56 0 107 0 115 0 136 0;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTA -n "ElbowPV_IK_R_rotateY";
 	rename -uid "FF91E7F9-424D-8816-7C99-C4AE2A22C4D6";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 0 56 0 107 0 115 0 136 0;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTA -n "ElbowPV_IK_R_rotateZ";
 	rename -uid "F4A5E2D3-4308-FB8B-D44B-88B00CDD8DEC";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 0 56 0 107 0 115 0 136 0;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTU -n "ElbowPV_IK_R_scaleX";
 	rename -uid "DA05B81D-4E78-B06C-8039-9380169D3AD9";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 1 56 1 107 1 115 1 136 1;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTU -n "ElbowPV_IK_R_scaleY";
 	rename -uid "D545CF01-420B-BE59-4597-D88AAE347863";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 1 56 1 107 1 115 1 136 1;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTU -n "ElbowPV_IK_R_scaleZ";
 	rename -uid "48DE77DF-484A-11EF-DBE9-2E94711922B7";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  1 1 56 1 107 1 115 1 136 1;
-	setAttr -s 5 ".kit[0:4]"  3 18 18 18 18;
-	setAttr -s 5 ".kot[0:4]"  3 18 18 18 18;
 createNode animCurveTA -n "ArmCntrl_R_rotateX";
 	rename -uid "B528B5A9-4A67-0088-078B-8C85FFE2C9F0";
 	setAttr ".tan" 18;
@@ -5125,7 +5111,7 @@ createNode animCurveTU -n "EyeCntrl_R_visibility";
 		0.33333301544189453 0.16666698455810547 0.41666603088378906 0.33333396911621094 0.16666698455810547;
 	setAttr -s 21 ".kiy[14:20]"  0 0 0 0 0 0 0;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A26A06C5-4D16-0F95-DF76-81AF3B9B67BA";
+	rename -uid "0076613C-402E-1E50-21CF-B598F6EF0F7E";
 	setAttr -s 88 ".lnk";
 	setAttr -s 88 ".slnk";
 select -ne :time1;
