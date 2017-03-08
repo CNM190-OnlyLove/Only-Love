@@ -1,15 +1,16 @@
-//Maya ASCII 2017 scene
+//Maya ASCII 2017ff04 scene
 //Name: church_cam_3-8.ma
-//Last modified: Wed, Mar 08, 2017 10:50:57 AM
+//Last modified: Wed, Mar 08, 2017 03:06:30 PM
 //Codeset: UTF-8
-requires maya "2017";
+requires maya "2017ff04";
+requires -dataType "byteArray" "Mayatomr" "268000.13910 - 3.14.3.31 ";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
 fileInfo "version" "2017";
-fileInfo "cutIdentifier" "201606150345-997974";
+fileInfo "cutIdentifier" "201702071345-1015190";
 fileInfo "osv" "Mac OS X 10.11.6";
 fileInfo "license" "student";
 createNode transform -n "church_cam:church_cam_new1:new_church_camera1";
@@ -23,7 +24,7 @@ createNode camera -n "church_cam:church_cam_new1:new_church_cameraShape1" -p "ch
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
-	setAttr ".tp" -type "double3" -2189.364 38.029908811334799 -511.32939740221502 ;
+	setAttr ".tp" -type "double3" -2109.0224510260787 -79.561662147934541 -322.77187792478071 ;
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode partition -n "mtorPartition";
 	rename -uid "91568E84-C747-D6DE-9B58-039DE26C7DFE";
@@ -41,13 +42,13 @@ createNode animCurveTL -n "church_cam:church_cam_new1:temp_cam:temp_cam:church_c
 	setAttr -s 6 ".kit[2:5]"  18 1 1 1;
 	setAttr -s 6 ".kot[2:5]"  18 1 1 1;
 	setAttr -s 6 ".kix[0:5]"  0.99374991655349731 0.092252790927886963 
-		0.028490416705608368 0.030868316069245338 0.013610082678496838 0.013608093373477459;
+		0.028490418173453724 0.030868316069245338 0.013610082735019112 0.013608092987367858;
 	setAttr -s 6 ".kiy[0:5]"  -0.11162956804037094 -0.99573564529418945 
-		-0.99959403276443481 -0.99952346086502075 -0.99990737438201904 -0.99990743398666382;
+		-0.99959406564480058 -0.99952346086502075 -0.99990737853460498 -0.99990740561576352;
 	setAttr -s 6 ".kox[0:5]"  0.99374991655349731 0.092252820730209351 
-		0.028490416705608368 0.03086831234395504 0.013610061258077621 0.013608093373477459;
+		0.02849041817345372 0.03086831234395504 0.013610061318567596 0.013608092987367858;
 	setAttr -s 6 ".koy[0:5]"  -0.11162953823804855 -0.99573570489883423 
-		-0.99959403276443481 -0.99952346086502075 -0.99990737438201904 -0.99990743398666382;
+		-0.99959406564480047 -0.99952346086502075 -0.99990737882611147 -0.99990740561576352;
 createNode animCurveTL -n "church_cam:church_cam_new1:temp_cam:temp_cam:church_camera:camera1_translateZ1";
 	rename -uid "94A73E83-1B49-E084-C7D6-B191A659BA33";
 	setAttr ".tan" 1;
@@ -92,17 +93,17 @@ createNode animCurveTA -n "church_cam:church_cam_new1:temp_cam:temp_cam:church_c
 	rename -uid "6FA93FDD-6049-9524-DCDC-1D9A5895FDD3";
 	setAttr ".tan" 18;
 	setAttr -s 5 ".ktv[0:4]"  60 -29.605189653176414 97 -30.57315993698041
-		 201 -50.593709056996239 246 -51.109484024719322 315 -51.109484024719322;
+		 201 -49.406021339393405 246 -49.921796307116495 315 -49.921796307116495;
 	setAttr -s 5 ".kit[0:4]"  1 1 18 18 18;
 	setAttr -s 5 ".kot[0:4]"  1 1 18 18 18;
 	setAttr -s 5 ".kwl[0:4]" yes yes yes yes no;
-	setAttr -s 5 ".kix[0:4]"  1.0001876354217529 1.5416665077209473 4.3333334922790527 
+	setAttr -s 5 ".kix[0:4]"  1.0001876354217529 1.5416665077209473 4.333333333333333 
 		1.875 2.875;
 	setAttr -s 5 ".kiy[0:4]"  -5.0927068514283746e-05 -0.050999574363231659 
-		-0.062413670122623444 0 0;
+		-0.062413668277205042 0 0;
 	setAttr -s 5 ".kox[0:4]"  1.5418621301651001 2.75 1.875 2.875 2.875;
 	setAttr -s 5 ".koy[0:4]"  -7.8510245657525957e-05 -0.090972274541854858 
-		-0.027005914598703384 0 0;
+		-0.02700591415840603 0 0;
 createNode animCurveTA -n "church_cam:church_cam_new1:temp_cam:temp_cam:church_camera:camera1_rotateZ1";
 	rename -uid "DE7F5CEE-144F-F5DB-91A3-E991220EC7BD";
 	setAttr ".tan" 18;
@@ -193,8 +194,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 201;
-	setAttr ".unw" 201;
+	setAttr ".o" 357;
+	setAttr ".unw" 357;
 select -ne :sequenceManager1;
 	setAttr ".o" 501;
 select -ne :hardwareRenderingGlobals;
