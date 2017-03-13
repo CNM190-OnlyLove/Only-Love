@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: wine.ma
-//Last modified: Mon, Mar 06, 2017 04:11:08 PM
+//Last modified: Mon, Mar 06, 2017 04:23:20 PM
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -17,8 +17,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1CFEB4AF-458D-A8A9-5D65-CDA39BF9282E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.319024839212368 1.6756593239874056 2.8197219308502306 ;
-	setAttr ".r" -type "double3" -18.338352732966371 -384.59999999990305 0 ;
+	setAttr ".t" -type "double3" -1.3272320536013853 1.1795321455735139 2.9530423900699749 ;
+	setAttr ".r" -type "double3" -9.9383527329663934 -383.79999999990292 4.3452115885822516e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4D82666C-446E-4391-324E-83996029CD5D";
 	setAttr -k off ".v" no;
@@ -2194,13 +2194,15 @@ createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	rename -uid "E11379D1-5143-EB5E-0547-44879065483F";
 	setAttr ".rvb" 3;
 	setAttr ".ivb" no;
+	setAttr ".imformat" 32;
+	setAttr ".imfkey" -type "string" "png";
 createNode mentalrayOptions -s -n "miDefaultOptions";
 	rename -uid "4B4B3EB2-1A4E-8174-4374-768ABEBB0832";
 	setAttr ".miSamplesMax" 50;
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "EE68C572-F543-2F47-384C-BEAFEB0E0248";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "1B66A134-E541-B44F-3D5C-F4B5086AC593";
+	rename -uid "422350EF-3A4A-0D91-B0A3-0A9B97B79AFF";
 	setAttr ".pee" yes;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 277552.38290430221 -8336.9049317661793 ;
@@ -2309,8 +2311,8 @@ select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
-	setAttr ".outf" 51;
-	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".outf" 32;
+	setAttr ".imfkey" -type "string" "png";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
