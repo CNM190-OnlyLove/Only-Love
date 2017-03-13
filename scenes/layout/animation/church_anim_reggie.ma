@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: church_anim_reggie.ma
-//Last modified: Mon, Mar 13, 2017 03:32:33 PM
+//Last modified: Mon, Mar 13, 2017 03:33:39 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "firehydrant" -dr 1 -rfn "firehydrantRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/veronicachen/Desktop/Only-Love//assets/firehydrant/firehydrant.ma";
@@ -58,8 +58,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "13DF4CCC-A24C-56FF-B347-8BAA32859CE4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2438.1517220623286 118.41830851680673 -426.92880706027779 ;
-	setAttr ".r" -type "double3" -26.738352725692433 -1145.800000000354 3.8794534814265545e-15 ;
+	setAttr ".t" -type "double3" -2450.4212679191992 96.003361530894253 -429.7555012742684 ;
+	setAttr ".r" -type "double3" -21.938352725692674 -1147.4000000003452 0 ;
 	setAttr ".rp" -type "double3" -2.2737367544323206e-13 3.5527136788005009e-15 -2.2737367544323206e-13 ;
 	setAttr ".rpt" -type "double3" 2.4535367069326406e-13 -3.7240870309921297e-15 -7.9292409312733225e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -650,7 +650,7 @@ createNode dynamicConstraint -n "dynamicConstraintShape1" -p "dynamicConstraint1
 	setAttr ".cdnr[0]"  0 1 1;
 	setAttr ".sdp[0]"  0 1 1;
 createNode fosterParent -n "redSoloCupRNfosterParent1";
-	rename -uid "72DDCE46-B949-986C-8FF8-2987A7D6806C";
+	rename -uid "A6B2E3F3-B147-F8BC-B950-57A6068A83EC";
 createNode parentConstraint -n "CoinCup_parentConstraint1" -p "redSoloCupRNfosterParent1";
 	rename -uid "DA0A72B3-4379-35B1-948A-F79DA2DA30A4";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "HandCntrlW0" -dv 1 -min 0 -at "double";
@@ -673,7 +673,7 @@ createNode parentConstraint -n "CoinCup_parentConstraint1" -p "redSoloCupRNfoste
 	setAttr ".rsrr" -type "double3" 3.99576800120269e-16 3.1553552038693116e-15 14.434412796412662 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "reggie_clothesRNfosterParent1";
-	rename -uid "9426D132-1149-7B91-8D26-8289F1FA47E0";
+	rename -uid "BA16DD8B-D046-487D-1D12-00A4215E6A95";
 createNode mesh -n "outputCloth1" -p "reggie_clothesRNfosterParent1";
 	rename -uid "61DC2051-DD41-FB0E-9C74-4DB02913C25E";
 	setAttr -k off ".v";
@@ -13445,7 +13445,7 @@ createNode reference -n "reggie_clothesRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"reggie_clothesRN"
 		"reggie_clothesRN" 0
-		"reggie_clothesRN" 28
+		"reggie_clothesRN" 29
 		0 "|reggie_clothesRNfosterParent1|outputCloth1" "|reggie_clothes:reggie_jacket:reggie_naked:jacket" 
 		"-s -r "
 		2 "|reggie_clothes:Reggie_Rig|reggie_clothes:ReggieMasterControl|reggie_clothes:Head_Neck_GRP|reggie_clothes:NeckIk" 
@@ -13499,6 +13499,7 @@ createNode reference -n "reggie_clothesRN";
 		"useMeshSculptCache" " 0"
 		2 "|reggie_clothes:Pants|reggie_clothes:reggie_jacket:reggie_naked:outputCloth2" 
 		"computeFromSculptCache" " 0"
+		2 "|reggie_clothes:reggie_jacket:reggie_naked:jacket" "visibility" " 0"
 		2 "|reggie_clothes:reggie_jacket:reggie_naked:jacket" "translate" " -type \"double3\" -2189.36400000000003274 8.69467960771928716 -531.21321287837690761"
 		
 		2 "|reggie_clothes:reggie_jacket:reggie_naked:jacket" "scale" " -type \"double3\" 5.46122666136679413 5.46122666136679413 6.35912536662504024"
