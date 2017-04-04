@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: momscene_anim.ma
-//Last modified: Sun, Apr 02, 2017 04:42:38 PM
+//Last modified: Mon, Apr 03, 2017 01:06:45 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "mom1" -dr 1 -rfn "momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -rdi 1 -ns "baby" -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
@@ -108,23 +108,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".tp" -type "double3" -0.50641057352217111 4.1306052903378472 0.52919280356135612 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
-	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "mom:mom2:mom:bottom";
-	rename -uid "680CB81B-7F47-6925-90AE-BC92EDBE5715";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 -100.1 0 ;
-	setAttr ".r" -type "double3" 89.999999999999986 0 0 ;
-createNode camera -n "mom:mom2:mom:bottomShape" -p "mom:mom2:mom:bottom";
-	rename -uid "18D43E3A-9945-A08D-FF37-028D8BA0249A";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "bottom1";
-	setAttr ".den" -type "string" "bottom1_depth";
-	setAttr ".man" -type "string" "bottom1_mask";
-	setAttr ".hc" -type "string" "viewSet -bo %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "TearGrp";
@@ -1960,353 +1943,13 @@ createNode transform -n "mom_cam:new_camera_test";
 createNode camera -n "mom_cam:new_camera_testShape" -p "mom_cam:new_camera_test";
 	rename -uid "3A27BF67-4EEF-DDFA-587F-3A8B9A008F7E";
 	setAttr -k off ".v";
-	setAttr ".coi" 22.042410840820835;
+	setAttr ".coi" 26.147028100549157;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
-	setAttr ".tp" -type "double3" 2.5559743390120997 -1.987219638159095 2.855170985492574 ;
+	setAttr ".tp" -type "double3" -2.8730183721353484 5.2158579420028026 0.041720474858689363 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
-createNode nucleus -n "nucleus1";
-	rename -uid "8DAB748B-E64F-E94C-5D60-C4B243CF283A";
-	setAttr ".v" no;
-	setAttr -s 4 ".is";
-	setAttr -s 4 ".ic";
-	setAttr -s 4 ".nipo";
-	setAttr -s 4 ".nips";
-	setAttr ".stf" -20;
-	setAttr ".sstp" 6;
-	setAttr ".mcit" 64;
-	setAttr ".spsc" 0.0080000003799796104;
-createNode transform -n "nCloth1";
-	rename -uid "70693AF6-4946-0596-141F-69B4F44188DD";
-	setAttr ".v" no;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode nCloth -n "nClothShape1" -p "nCloth1";
-	rename -uid "975CBDD7-8944-C235-17F7-38BFD04EA17F";
-	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
-	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
-	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
-	setAttr -k off ".v";
-	setAttr ".gf" -type "Int32Array" 0 ;
-	setAttr ".pos0" -type "vectorArray" 0 ;
-	setAttr ".vel0" -type "vectorArray" 0 ;
-	setAttr ".acc0" -type "vectorArray" 0 ;
-	setAttr ".mas0" -type "doubleArray" 0 ;
-	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".bt0" -type "doubleArray" 0 ;
-	setAttr ".ag0" -type "doubleArray" 0 ;
-	setAttr -k off ".dve";
-	setAttr -k off ".lfm";
-	setAttr -k off ".lfr";
-	setAttr -k off ".ead";
-	setAttr ".irbx" -type "string" "";
-	setAttr ".irax" -type "string" "";
-	setAttr ".icx" -type "string" "";
-	setAttr ".isd" no;
-	setAttr -k off ".dw";
-	setAttr -k off ".fiw";
-	setAttr -k off ".con";
-	setAttr -k off ".eiw";
-	setAttr -k off ".mxc";
-	setAttr -k off ".lod";
-	setAttr -k off ".inh";
-	setAttr ".cts" 157;
-	setAttr -k off ".stf";
-	setAttr -k off ".igs";
-	setAttr -k off ".ecfh";
-	setAttr -k off ".tgs";
-	setAttr -k off ".gsm";
-	setAttr -k off ".chd";
-	setAttr ".chw" 199;
-	setAttr -k off ".trd";
-	setAttr -k off ".prt";
-	setAttr ".thss" 0.11585365980863571;
-	setAttr ".fron" 0.38414633274078369;
-	setAttr ".adng" 1;
-	setAttr ".stck" 0.15853658318519592;
-	setAttr ".msci" 32;
-	setAttr ".mxit" 14000;
-	setAttr ".por" 0.52688735723495483;
-	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
-	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
-	setAttr ".lsou" yes;
-	setAttr ".stch" 139.02438354492188;
-	setAttr ".comr" 143.90243530273438;
-	setAttr ".bnd" 45.121952056884766;
-	setAttr ".shr" 15.853658676147461;
-	setAttr ".dety" 0.12195121496915817;
-	setAttr ".scws" 2.2391171455383301;
-	setAttr -k on ".lifespan" 1;
-	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
-createNode transform -n "nRigid1";
-	rename -uid "7D079E34-4F4C-D08D-D322-078F5544FE78";
-	setAttr ".v" no;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode nRigid -n "nRigidShape1" -p "nRigid1";
-	rename -uid "73F1AEC1-0249-0CB1-9DBF-5F8C8DB29DF4";
-	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
-	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
-	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
-	setAttr -k off ".v";
-	setAttr ".gf" -type "Int32Array" 0 ;
-	setAttr ".pos0" -type "vectorArray" 0 ;
-	setAttr ".vel0" -type "vectorArray" 0 ;
-	setAttr ".acc0" -type "vectorArray" 0 ;
-	setAttr ".mas0" -type "doubleArray" 0 ;
-	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".bt0" -type "doubleArray" 0 ;
-	setAttr ".ag0" -type "doubleArray" 0 ;
-	setAttr -k off ".dve";
-	setAttr -k off ".lfm";
-	setAttr -k off ".lfr";
-	setAttr -k off ".ead";
-	setAttr ".irbx" -type "string" "";
-	setAttr ".irax" -type "string" "";
-	setAttr ".icx" -type "string" "";
-	setAttr -k off ".dw";
-	setAttr -k off ".fiw";
-	setAttr -k off ".con";
-	setAttr -k off ".eiw";
-	setAttr -k off ".mxc";
-	setAttr -k off ".lod";
-	setAttr -k off ".inh";
-	setAttr ".cts" 157;
-	setAttr -k off ".stf";
-	setAttr -k off ".igs";
-	setAttr -k off ".ecfh";
-	setAttr -k off ".tgs";
-	setAttr -k off ".gsm";
-	setAttr -k off ".chd";
-	setAttr ".chw" 199;
-	setAttr -k off ".trd";
-	setAttr -k off ".prt";
-	setAttr ".thss" 0.046616941690444946;
-	setAttr ".actv" no;
-	setAttr ".scld" no;
-	setAttr ".por" 0.18646776676177979;
-	setAttr ".tpc" yes;
-	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
-	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
-	setAttr -k on ".lifespan" 1;
-	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
-createNode transform -n "nRigid2";
-	rename -uid "26DF8F4E-1A45-2A84-F72B-368E950F0027";
-	setAttr ".v" no;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode nRigid -n "nRigidShape2" -p "nRigid2";
-	rename -uid "720AA391-4E49-EA76-0976-B4B1F3704DFA";
-	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
-	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
-	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
-	setAttr -k off ".v";
-	setAttr ".gf" -type "Int32Array" 0 ;
-	setAttr ".pos0" -type "vectorArray" 0 ;
-	setAttr ".vel0" -type "vectorArray" 0 ;
-	setAttr ".acc0" -type "vectorArray" 0 ;
-	setAttr ".mas0" -type "doubleArray" 0 ;
-	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".bt0" -type "doubleArray" 0 ;
-	setAttr ".ag0" -type "doubleArray" 0 ;
-	setAttr -k off ".dve";
-	setAttr -k off ".lfm";
-	setAttr -k off ".lfr";
-	setAttr -k off ".ead";
-	setAttr ".irbx" -type "string" "";
-	setAttr ".irax" -type "string" "";
-	setAttr ".icx" -type "string" "";
-	setAttr -k off ".dw";
-	setAttr -k off ".fiw";
-	setAttr -k off ".con";
-	setAttr -k off ".eiw";
-	setAttr -k off ".mxc";
-	setAttr -k off ".lod";
-	setAttr -k off ".inh";
-	setAttr ".cts" 157;
-	setAttr -k off ".stf";
-	setAttr -k off ".igs";
-	setAttr -k off ".ecfh";
-	setAttr -k off ".tgs";
-	setAttr -k off ".gsm";
-	setAttr -k off ".chd";
-	setAttr ".chw" 199;
-	setAttr -k off ".trd";
-	setAttr -k off ".prt";
-	setAttr ".thss" 0.046616941690444946;
-	setAttr ".actv" no;
-	setAttr ".scld" no;
-	setAttr ".por" 0.18646776676177979;
-	setAttr ".tpc" yes;
-	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
-	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
-	setAttr -k on ".lifespan" 1;
-	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
-createNode transform -n "nRigid3";
-	rename -uid "0B94DEAA-9B48-2F56-5D74-E7AFCCAE9AD4";
-	setAttr ".v" no;
-	setAttr -l on ".t";
-	setAttr -l on ".r";
-	setAttr -l on ".s";
-createNode nRigid -n "nRigidShape3" -p "nRigid3";
-	rename -uid "F7BA3D36-F743-D22C-0186-FE92E0FB9DA5";
-	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
-	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
-	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
-	setAttr -k off ".v";
-	setAttr ".gf" -type "Int32Array" 0 ;
-	setAttr ".pos0" -type "vectorArray" 0 ;
-	setAttr ".vel0" -type "vectorArray" 0 ;
-	setAttr ".acc0" -type "vectorArray" 0 ;
-	setAttr ".mas0" -type "doubleArray" 0 ;
-	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".bt0" -type "doubleArray" 0 ;
-	setAttr ".ag0" -type "doubleArray" 0 ;
-	setAttr -k off ".dve";
-	setAttr -k off ".lfm";
-	setAttr -k off ".lfr";
-	setAttr -k off ".ead";
-	setAttr ".irbx" -type "string" "";
-	setAttr ".irax" -type "string" "";
-	setAttr ".icx" -type "string" "";
-	setAttr ".isd" no;
-	setAttr -k off ".dw";
-	setAttr -k off ".fiw";
-	setAttr -k off ".con";
-	setAttr -k off ".eiw";
-	setAttr -k off ".mxc";
-	setAttr -k off ".lod";
-	setAttr -k off ".inh";
-	setAttr ".cts" 157;
-	setAttr -k off ".stf";
-	setAttr -k off ".igs";
-	setAttr -k off ".ecfh";
-	setAttr -k off ".tgs";
-	setAttr -k off ".gsm";
-	setAttr -k off ".chd";
-	setAttr ".chw" 199;
-	setAttr -k off ".trd";
-	setAttr -k off ".prt";
-	setAttr ".thss" 0.07386363297700882;
-	setAttr ".actv" no;
-	setAttr ".scld" no;
-	setAttr ".por" 0.44482547044754028;
-	setAttr ".tpc" yes;
-	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
-	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
-	setAttr -k on ".lifespan" 1;
-	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
-createNode transform -n "nRigid4";
-	rename -uid "4152EBFE-CD47-A470-61F4-B9A103BC1E04";
-	setAttr ".v" no;
-createNode nRigid -n "nRigidShape4" -p "nRigid4";
-	rename -uid "B990ED48-984E-AE0C-E11E-26B69DC61472";
-	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
-	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
-	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
-	setAttr -k off ".v";
-	setAttr ".gf" -type "Int32Array" 0 ;
-	setAttr ".pos0" -type "vectorArray" 0 ;
-	setAttr ".vel0" -type "vectorArray" 0 ;
-	setAttr ".acc0" -type "vectorArray" 0 ;
-	setAttr ".mas0" -type "doubleArray" 0 ;
-	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".bt0" -type "doubleArray" 0 ;
-	setAttr ".ag0" -type "doubleArray" 0 ;
-	setAttr -k off ".dve";
-	setAttr -k off ".lfm";
-	setAttr -k off ".lfr";
-	setAttr -k off ".ead";
-	setAttr ".irbx" -type "string" "";
-	setAttr ".irax" -type "string" "";
-	setAttr ".icx" -type "string" "";
-	setAttr -k off ".dw";
-	setAttr -k off ".fiw";
-	setAttr -k off ".con";
-	setAttr -k off ".eiw";
-	setAttr -k off ".mxc";
-	setAttr -k off ".lod";
-	setAttr -k off ".inh";
-	setAttr ".cts" 157;
-	setAttr -k off ".stf";
-	setAttr -k off ".igs";
-	setAttr -k off ".ecfh";
-	setAttr -k off ".tgs";
-	setAttr -k off ".gsm";
-	setAttr -k off ".chd";
-	setAttr ".chw" 199;
-	setAttr -k off ".trd";
-	setAttr -k off ".prt";
-	setAttr ".actv" no;
-	setAttr ".cold" no;
-	setAttr ".scld" no;
-	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
-	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
-	setAttr -k on ".lifespan" 1;
-	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
-createNode transform -n "dynamicConstraint3";
-	rename -uid "20C62D02-9A4F-1852-1B16-65B4BE70A06F";
-	setAttr ".v" no;
-createNode dynamicConstraint -n "dynamicConstraintShape3" -p "dynamicConstraint3";
-	rename -uid "50E75F9E-5046-816E-DDF3-92875B8FB769";
-	setAttr -k off ".v";
-	setAttr -s 2 ".cid";
-	setAttr ".cdnr[0]"  0 1 1;
-	setAttr ".sdp[0]"  0 1 1;
-createNode transform -n "dynamicConstraint4";
-	rename -uid "BA6D6FFA-FE45-3C20-E782-7095B91B676C";
-	setAttr ".v" no;
-createNode dynamicConstraint -n "dynamicConstraintShape4" -p "dynamicConstraint4";
-	rename -uid "FEB2538A-8444-D9CD-79D5-A3854F036E0B";
-	setAttr -k off ".v";
-	setAttr -s 2 ".cid";
-	setAttr ".cdnr[0]"  0 1 1;
-	setAttr ".sdp[0]"  0 1 1;
-createNode transform -n "dynamicConstraint5";
-	rename -uid "88C1EA03-C043-89FF-70F2-4D8BD7886026";
-	setAttr ".v" no;
-createNode dynamicConstraint -n "dynamicConstraintShape5" -p "dynamicConstraint5";
-	rename -uid "2252AC14-A443-BE30-9E7E-E3B3BBA0EA2D";
-	setAttr -k off ".v";
-	setAttr -s 2 ".cid";
-	setAttr ".cdnr[0]"  0 1 1;
-	setAttr ".sdp[0]"  0 1 1;
-createNode transform -n "dynamicConstraint6";
-	rename -uid "944FC3E4-914A-5E26-5BE1-3893701B38F0";
-	setAttr ".v" no;
-createNode dynamicConstraint -n "dynamicConstraintShape6" -p "dynamicConstraint6";
-	rename -uid "AEF89222-4F49-2081-7992-F8A290A3ED58";
-	setAttr -k off ".v";
-	setAttr -s 2 ".cid";
-	setAttr ".cdnr[0]"  0 1 1;
-	setAttr ".sdp[0]"  0 1 1;
-createNode fosterParent -n "babyRNfosterParent1";
-	rename -uid "424B90DC-6540-C5ED-1799-C2846D034998";
-createNode transform -n "BabyGrab_One" -p "babyRNfosterParent1";
-	rename -uid "852E98AC-471B-65FD-5F51-1EAD293B521F";
-createNode locator -n "BabyGrab_OneShape" -p "BabyGrab_One";
-	rename -uid "29531E57-4C35-2473-32EE-0BB5385EEE1C";
-	setAttr -k off ".v";
-	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
-createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
-	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
-createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
-	rename -uid "DE09F5E1-4E65-C1D9-9C53-D5AD0315365A";
-	setAttr -k off ".v";
-	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
-createNode fosterParent -n "wineRNfosterParent1";
-	rename -uid "583135E6-EB43-BACE-EEF9-58954EDC8EC8";
-createNode transform -n "battle_grab_loc" -p "wineRNfosterParent1";
-	rename -uid "13CA559F-47AD-A738-C358-AEA7771E6926";
-createNode locator -n "battle_grab_locShape" -p "battle_grab_loc";
-	rename -uid "5AD7CC5A-4535-0744-9457-6C9EB02EF115";
-	setAttr -k off ".v";
-	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
 createNode fosterParent -n "momRN1fosterParent1";
 	rename -uid "648E85BF-A945-00EC-4AD4-FBA5E2FE60D0";
 createNode mesh -n "outputCloth1" -p "momRN1fosterParent1";
@@ -2706,7 +2349,7 @@ createNode parentConstraint -n "Arm_Cntrl_L_parentConstraint1" -p "momRN1fosterP
 	setAttr ".tg[0].tot" -type "double3" -1.6737109476139267e-09 -1.4068140252732064e-07 
 		3.9553126751634693e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 19.09576146996509 -15.475442673954277 -121.32841567964314 ;
-	setAttr ".lr" -type "double3" 97.168685396274498 161.91346651069512 -278.23154426930131 ;
+	setAttr ".lr" -type "double3" 97.370792205130883 168.31866073222199 -267.83988983525603 ;
 	setAttr ".rst" -type "double3" -7.6341341092173316 -1.890499146204244 15.155008364450964 ;
 	setAttr ".rsrr" -type "double3" 19.095761469965069 -15.475442673954266 -121.32841567964314 ;
 	setAttr -k on ".w0";
@@ -2736,6 +2379,28 @@ createNode parentConstraint -n "Arm_Cntrl_R_parentConstraint1" -p "momRN1fosterP
 	setAttr ".rst" -type "double3" 0.89170921733452246 -0.076094303266758256 1.8656905100542547 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
+createNode fosterParent -n "babyRNfosterParent1";
+	rename -uid "72A088FA-A741-AFE8-8013-EE9289ADEEDD";
+createNode transform -n "BabyGrab_One" -p "babyRNfosterParent1";
+	rename -uid "852E98AC-471B-65FD-5F51-1EAD293B521F";
+createNode locator -n "BabyGrab_OneShape" -p "BabyGrab_One";
+	rename -uid "29531E57-4C35-2473-32EE-0BB5385EEE1C";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
+	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
+createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
+	rename -uid "DE09F5E1-4E65-C1D9-9C53-D5AD0315365A";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+createNode fosterParent -n "wineRNfosterParent1";
+	rename -uid "4B4CEEFB-AB45-FE95-E298-12924AAA8C00";
+createNode transform -n "battle_grab_loc" -p "wineRNfosterParent1";
+	rename -uid "13CA559F-47AD-A738-C358-AEA7771E6926";
+createNode locator -n "battle_grab_locShape" -p "battle_grab_loc";
+	rename -uid "5AD7CC5A-4535-0744-9457-6C9EB02EF115";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
 createNode RenderMan -s -n "renderManGlobals";
 	rename -uid "46F48DD2-004C-0C12-3976-5B9CFE26B322";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
@@ -2748,34 +2413,34 @@ createNode RenderMan -s -n "renderManGlobals";
 	setAttr ".nt" -type "string" "settings:job";
 	setAttr -s 2 ".p";
 createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
-	rename -uid "96D1D394-E54E-EA89-0265-8F8C15A4258A";
+	rename -uid "7E2E36A7-BB4E-EC5B-FA0F-4E8B04C1C7B1";
 lockNode -l 1 ;
 createNode PxrCamera -s -n "PxrCamera";
-	rename -uid "EAFAE67A-C646-DFE1-A821-C4B4CE5D3939";
+	rename -uid "327C3825-E842-B9BE-FAFE-0AA32F0EE864";
 lockNode -l 1 ;
 createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
-	rename -uid "C9869D36-634E-2ACF-1C56-B0906817FE56";
+	rename -uid "49EA6971-5246-E0FE-A0C0-A096AFC993A2";
 lockNode -l 1 ;
 createNode PxrDefault -s -n "PxrDefault";
-	rename -uid "95E0F90C-A947-2B8D-D917-13A7BE255050";
+	rename -uid "59AE47C9-BD4D-D320-25AC-AEA694DC21B5";
 lockNode -l 1 ;
 createNode PxrDirectLighting -s -n "PxrDirectLighting";
-	rename -uid "0ED72F82-434B-8FAD-E47A-15A9DF761ADD";
+	rename -uid "44061429-FF45-5938-3F24-F1AB21C9AC8C";
 lockNode -l 1 ;
 createNode PxrOcclusion -s -n "PxrOcclusion";
-	rename -uid "F62E25A4-2644-93D4-A232-95B6DCDC2E2B";
+	rename -uid "CB9F72AD-E14B-2F24-4C98-979060016A0C";
 lockNode -l 1 ;
 createNode PxrPathTracer -s -n "PxrPathTracer";
-	rename -uid "EC0A4D45-9B4F-3FF5-40DC-22A5850C2AF3";
+	rename -uid "12206E71-EF46-24E6-5461-979B4D869186";
 lockNode -l 1 ;
 createNode PxrVCM -s -n "PxrVCM";
-	rename -uid "E682DF39-0747-6F75-D4BB-06AF164E3EE6";
+	rename -uid "95D47344-AF4C-CE6A-07AF-7297E938336A";
 lockNode -l 1 ;
 createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
-	rename -uid "8F1E51B6-D748-3E0F-B383-4680FFA6280C";
+	rename -uid "A6014A03-8248-BEA2-D68C-459A6B9B7A32";
 lockNode -l 1 ;
 createNode PxrVisualizer -s -n "PxrVisualizer";
-	rename -uid "AA7C2578-0C4D-64D4-396B-DD897D8A93EF";
+	rename -uid "33F2591E-9C42-5E48-AEA1-A8BDAAC664F9";
 lockNode -l 1 ;
 createNode RenderMan -s -n "rmanFinalGlobals";
 	rename -uid "3B27B1BB-7248-4484-DB24-67A71E5447A4";
@@ -6831,18 +6496,18 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7F911F5E-D640-71D2-3B7B-7FB238E92ED6";
-	setAttr -s 433 ".lnk";
-	setAttr -s 433 ".slnk";
+	rename -uid "8CF0B0B1-F94E-F641-B533-89BFEE9F800C";
+	setAttr -s 440 ".lnk";
+	setAttr -s 440 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "94AC88FE-6D47-9982-58EF-F3A29C7E5260";
+	rename -uid "F7CB0791-2A4E-87C0-F2D5-74A0FBFA8BC4";
 	setAttr ".cdl" 3;
 	setAttr -s 8 ".dli[1:7]"  1 2 3 4 5 6 0;
 	setAttr -s 7 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8FE7AEEF-A64E-0BCA-8F16-3E847524724C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2EC26D69-7640-9818-BABB-BA8E4B64A2B2";
+	rename -uid "2C3397FA-DB48-FE40-DF71-A3A77DDACCDF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3364DFD3-5743-413F-CAFD-25A163300DC5";
 	setAttr ".g" yes;
@@ -6868,25 +6533,25 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 365\n            -height 203\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_cam:new_camera_test\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -rendererOverrideName \"mentalrayVP2\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 1\n            -maximumNumHardwareLights 0\n            -occlusionCulling 1\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n"
-		+ "            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 940\n            -height 450\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n"
+		+ "            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 740\n            -height 450\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
 		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n"
 		+ "            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
-		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n"
-		+ "                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n"
-		+ "                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
-		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n"
-		+ "                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
-		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
-		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n"
+		+ "                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
+		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n"
+		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n"
+		+ "                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManControlsType\" (localizedPanelLabel(\"RenderMan Controls\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManLightingType\" (localizedPanelLabel(\"RenderMan Light Lister\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Light Lister\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n"
@@ -6898,8 +6563,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
 		+ "                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -rendererOverrideName \\\"mentalrayVP2\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 940\\n    -height 450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -rendererOverrideName \\\"mentalrayVP2\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 940\\n    -height 450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -rendererOverrideName \\\"mentalrayVP2\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 740\\n    -height 450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -rendererOverrideName \\\"mentalrayVP2\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 740\\n    -height 450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -6907,16 +6572,16 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 0 -max 198 -ast -40 -aet 420 ";
 	setAttr ".st" 6;
 createNode shapeEditorManager -n "mom:shapeEditorManager";
-	rename -uid "3E06431B-8F45-F457-82C5-F79401150498";
+	rename -uid "B65A34FF-5F4F-97D6-025D-BBBA81220F99";
 	setAttr -s 2 ".bsdt";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 10 -1 3 4 5 6
-		 7 8 0 1 2 ;
+		 7 8 1 2 0 ;
 	setAttr ".bsdt[1].bscd" -type "Int32Array" 3 3 4 5 ;
 	setAttr ".bsdt[1].bsdn" -type "string" "mom_scene:mom";
 	setAttr -s 7 ".bspr";
 	setAttr -s 7 ".obsv";
 createNode poseInterpolatorManager -n "mom:poseInterpolatorManager";
-	rename -uid "7A6489A8-3A43-47D5-DB1B-C99DAD568F3A";
+	rename -uid "FB41B975-5142-7FBC-0F0E-EF98CAA2163F";
 createNode partition -n "mom:mom2:mom:mtorPartition";
 	rename -uid "372F30A3-9D44-512C-928F-6192B73536B1";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -9092,6 +8757,7 @@ createNode reference -n "momRN";
 lockNode -l 1 ;
 createNode reference -n "babyRN";
 	rename -uid "9556886D-844A-8EE4-CAC3-4C9AF3E2DBA6";
+	setAttr ".fn[0]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
 	setAttr -s 175 ".phl";
 	setAttr ".phl[120]" 0;
 	setAttr ".phl[121]" 0;
@@ -9323,12 +8989,12 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShapeOrig" "intermediateObject" 
 		" 1"
 		2 "|baby:Baby_Rig|baby:baby_master" "visibility" " -av 1"
-		2 "|baby:Baby_Rig|baby:baby_master" "translate" " -type \"double3\" -2.19960081443967903 19.22583583188817968 3.49838825387958297"
+		2 "|baby:Baby_Rig|baby:baby_master" "translate" " -type \"double3\" -1.16559896405692043 19.87632645749527072 3.04432704537227794"
 		
 		2 "|baby:Baby_Rig|baby:baby_master" "translateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "translateY" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "translateZ" " -av"
-		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -142.61313405762169282 294.95055798396072078 67.14271633562873376"
+		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -103.58028078518908899 281.25682102691860109 19.53122783936538553"
 		
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateY" " -av"
@@ -9357,7 +9023,7 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" -0.38329520451244115 -0.51699498951345824 1.8530563527518471"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
-		"rotate" " -type \"double3\" -20.01095122882801647 -37.34915484120269724 59.79878625480498755"
+		"rotate" " -type \"double3\" -13.78777072050647767 -14.09777062286936555 53.52041673396484356"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
 		"rotateX" " -av"
@@ -9483,7 +9149,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_lf_collar_def|baby:baby_lf_shoulder_def|baby:baby_lf_elbow_def|baby:baby_lf_wrist_def|baby:FingerCntrls_L|baby:Thumb_Cntrl_Offset_01_L|baby:Thumb_Cntrl_01_L|baby:Thumb_Cntrl_Offset_02_L|baby:Thumb_Cntrl_02_L|baby:Thumb_Cntrl_Offset_03_L|baby:Thumb_Cntrl_03_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball" 
-		"rotate" " -type \"double3\" 385.0494184402412543 -36.26613986126679379 -338.21043919067574279"
+		"rotate" " -type \"double3\" 386.67383748733482207 -15.61798761361129451 -28.6850610804451378"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball" 
 		"rotateX" " -av"
@@ -10116,7 +9782,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball|baby:baby:rEyeballShape" 
 		"displaySmoothMesh" " 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
-		"rotate" " -type \"double3\" 197.99025083344386644 226.42787221803357056 193.51905343835073836"
+		"rotate" " -type \"double3\" 198.78146939104644275 208.12261060306312288 492.44018315557701726"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
 		"rotateX" " -av"
@@ -10807,16 +10473,16 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:EyeBrowControls|baby:Brow_In_Cntrl_Offset_R|baby:Brow_In_Cntrl_R" 
 		"translateY" " -av 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_diaper:diaper|baby:baby_diaper:diaperShape" 
-		"dispResolution" " 1"
+		"dispResolution" " 3"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_diaper:diaper|baby:baby_diaper:diaperShape" 
-		"displaySmoothMesh" " 0"
+		"displaySmoothMesh" " 2"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L" "translate" 
 		" -type \"double3\" 1.85305635275184755 -13.19825226621486358 -0.86620895281952337"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L" "rotate" " -type \"double3\" 92.87800948543282686 -5.13146434569953414 -89.48458745412389703"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
-		"rotate" " -type \"double3\" -21.22728924865424815 -34.62200205271835074 62.18810688240964879"
+		"rotate" " -type \"double3\" -15.10664877555972474 -11.49934540208776568 55.4870699829558589"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
 		"rotateX" " -av"
@@ -10825,7 +10491,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
-		"rotate" " -type \"double3\" 24.65983639815229722 -5.21022792677936319 -56.10878774146784309"
+		"rotate" " -type \"double3\" 6.21558529294739692 20.26097082507218516 -46.25252450166606621"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"rotateX" " -av"
@@ -10834,7 +10500,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
-		"rotate" " -type \"double3\" 0 0 0.10187737433427009"
+		"rotate" " -type \"double3\" 0 0 -35.44889712496622991"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
@@ -10855,7 +10521,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R|baby:Ankle_Cntrl_Offset_R|baby:Ankle_Cntrl_R" 
-		"rotate" " -type \"double3\" -1.89649151489213041 -10.75012270422169358 -60.68600295975844006"
+		"rotate" " -type \"double3\" -7.27669648909410771 -11.69445159335531237 -57.38961992041611637"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R|baby:Ankle_Cntrl_Offset_R|baby:Ankle_Cntrl_R" 
 		"rotateX" " -av"
@@ -10869,7 +10535,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"translate" " -type \"double3\" 4.6983473825455464 -4.37462612327870204 0.94806176105716711"
+		"translate" " -type \"double3\" -0.16569130338632831 -8.6725428952811292 0.067918796285750815"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateX" " -av -k 0"
@@ -10878,7 +10544,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateZ" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"rotate" " -type \"double3\" 117.1693585247837035 -18.20311925041943368 -77.55292100671718458"
+		"rotate" " -type \"double3\" 91.46270313735966795 -15.09452846931152337 -97.81837629138065893"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"rotateX" " -av"
@@ -10889,7 +10555,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
-		"rotate" " -type \"double3\" -14.80005832480640038 -10.43098417779314779 5.40679738672994858"
+		"rotate" " -type \"double3\" -66.53624970428849394 -30.48257270954557185 -1.39756935350339906"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
 		"rotateX" " -av"
@@ -10900,7 +10566,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L" 
 		"translate" " -type \"double3\" 6.42208273165459431 0 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L|baby:Wrist_Cntrl_L" 
-		"rotate" " -type \"double3\" -23.46610394017983836 -11.329241836419083 4.5889026565359412"
+		"rotate" " -type \"double3\" -44.02647871724659012 7.83505222364254195 25.24010660585623"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L|baby:Wrist_Cntrl_L" 
 		"rotateX" " -av"
@@ -10911,7 +10577,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
-		"rotate" " -type \"double3\" 45.73032433209869652 -8.33891334341350188 -33.32248307733507175"
+		"rotate" " -type \"double3\" -68.08925903740616548 -11.37260231109464748 79.52734670585950028"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"rotateX" " -av"
@@ -10942,7 +10608,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
-		"translate" " -type \"double3\" 0.0088478237763345291 -0.066214859599801557 0"
+		"translate" " -type \"double3\" 0.0088478237763407463 -0.066214859599798004 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"translateX" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
@@ -10950,7 +10616,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"translateZ" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
-		"rotate" " -type \"double3\" -10.24611575643268857 -13.40979635958364646 1.89346745047526976"
+		"rotate" " -type \"double3\" -16.01094711789211189 7.45705837983688102 13.60655453217040645"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"rotateX" " -av"
@@ -10959,7 +10625,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
-		"rotate" " -type \"double3\" 16.04585703904191618 -5.42706699820125493 22.40742993148247919"
+		"rotate" " -type \"double3\" 18.98252017328825403 -1.7945982074611766 9.8319093529048871"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
 		"rotateX" " -av"
@@ -10970,7 +10636,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
-		"rotate" " -type \"double3\" 4.28706056608979935 -3.23911378247016923 1.73756700839377731"
+		"rotate" " -type \"double3\" -34.73218960413894507 -1.10984080627266368 -3.5561115286671785"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"rotateX" " -av"
@@ -10981,7 +10647,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" -1.25881419276810447 -0.71237269436058004 22.58553033128886156"
+		"rotate" " -type \"double3\" -9.91561796317061983 -13.4166364099415496 26.93150725241969923"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"rotateX" " -av"
@@ -10992,7 +10658,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
-		"rotate" " -type \"double3\" -24.29368151598054482 -3.42604575662433852 -11.89439177821218507"
+		"rotate" " -type \"double3\" 6.21101624055376522 -29.25604096622740613 -18.50355578821901759"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
 		"rotateX" " -av"
@@ -11003,7 +10669,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
-		"rotate" " -type \"double3\" -46.96565896426564279 3.98812150380088504 -11.06919193716380789"
+		"rotate" " -type \"double3\" -38.03324040486966595 24.34078143691104046 18.31865780205698613"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
 		"rotateX" " -av"
@@ -11532,12 +11198,12 @@ createNode reference -n "wineRN";
 		"wineRN" 31
 		0 "|wineRNfosterParent1|battle_grab_loc" "|wine:wine_bottle" "-s -r "
 		2 "|wine:wine_bottle" "visibility" " -av 1"
-		2 "|wine:wine_bottle" "translate" " -type \"double3\" -6.62544631126188044 5.39179912767224945 -0.51462607719572184"
+		2 "|wine:wine_bottle" "translate" " -type \"double3\" -5.66472216880707435 -2.72916379116837815 8.48251599379891807"
 		
 		2 "|wine:wine_bottle" "translateX" " -av"
 		2 "|wine:wine_bottle" "translateY" " -av"
 		2 "|wine:wine_bottle" "translateZ" " -av"
-		2 "|wine:wine_bottle" "rotate" " -type \"double3\" 84.77117839169663682 -238.35015501698421758 9.13774509284482406"
+		2 "|wine:wine_bottle" "rotate" " -type \"double3\" 4.33126997875738784 -226.98838445432326694 -0.35415743699192581"
 		
 		2 "|wine:wine_bottle" "rotateX" " -av"
 		2 "|wine:wine_bottle" "rotateY" " -av"
@@ -12514,7 +12180,7 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" 0.011279402300715446;
+	setAttr ".d" 0.020042307674884796;
 createNode shadingEngine -n "oceanShader1SG";
 	rename -uid "C24C89DE-4C1E-A7AD-E016-F0AFD29A9F35";
 	setAttr ".ihi" 0;
@@ -12527,7 +12193,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "momRN1";
 	rename -uid "888DDD94-4242-7823-C276-798D9AFBE8BF";
-	setAttr -s 585 ".phl";
+	setAttr -s 592 ".phl";
 	setAttr ".phl[1047]" 0;
 	setAttr ".phl[1049]" 0;
 	setAttr ".phl[1050]" 0;
@@ -12536,550 +12202,6 @@ createNode reference -n "momRN1";
 	setAttr ".phl[1053]" 0;
 	setAttr ".phl[1054]" 0;
 	setAttr ".phl[1055]" 0;
-	setAttr ".phl[1056]" 0;
-	setAttr ".phl[1057]" 0;
-	setAttr ".phl[1058]" 0;
-	setAttr ".phl[1059]" 0;
-	setAttr ".phl[1060]" 0;
-	setAttr ".phl[1061]" 0;
-	setAttr ".phl[1062]" 0;
-	setAttr ".phl[1063]" 0;
-	setAttr ".phl[1064]" 0;
-	setAttr ".phl[1065]" 0;
-	setAttr ".phl[1066]" 0;
-	setAttr ".phl[1067]" 0;
-	setAttr ".phl[1068]" 0;
-	setAttr ".phl[1069]" 0;
-	setAttr ".phl[1070]" 0;
-	setAttr ".phl[1071]" 0;
-	setAttr ".phl[1072]" 0;
-	setAttr ".phl[1073]" 0;
-	setAttr ".phl[1074]" 0;
-	setAttr ".phl[1075]" 0;
-	setAttr ".phl[1076]" 0;
-	setAttr ".phl[1077]" 0;
-	setAttr ".phl[1078]" 0;
-	setAttr ".phl[1079]" 0;
-	setAttr ".phl[1080]" 0;
-	setAttr ".phl[1081]" 0;
-	setAttr ".phl[1082]" 0;
-	setAttr ".phl[1083]" 0;
-	setAttr ".phl[1084]" 0;
-	setAttr ".phl[1085]" 0;
-	setAttr ".phl[1086]" 0;
-	setAttr ".phl[1087]" 0;
-	setAttr ".phl[1088]" 0;
-	setAttr ".phl[1089]" 0;
-	setAttr ".phl[1090]" 0;
-	setAttr ".phl[1091]" 0;
-	setAttr ".phl[1092]" 0;
-	setAttr ".phl[1093]" 0;
-	setAttr ".phl[1094]" 0;
-	setAttr ".phl[1095]" 0;
-	setAttr ".phl[1096]" 0;
-	setAttr ".phl[1097]" 0;
-	setAttr ".phl[1098]" 0;
-	setAttr ".phl[1099]" 0;
-	setAttr ".phl[1100]" 0;
-	setAttr ".phl[1101]" 0;
-	setAttr ".phl[1102]" 0;
-	setAttr ".phl[1103]" 0;
-	setAttr ".phl[1104]" 0;
-	setAttr ".phl[1105]" 0;
-	setAttr ".phl[1106]" 0;
-	setAttr ".phl[1107]" 0;
-	setAttr ".phl[1108]" 0;
-	setAttr ".phl[1109]" 0;
-	setAttr ".phl[1110]" 0;
-	setAttr ".phl[1111]" 0;
-	setAttr ".phl[1112]" 0;
-	setAttr ".phl[1113]" 0;
-	setAttr ".phl[1114]" 0;
-	setAttr ".phl[1115]" 0;
-	setAttr ".phl[1116]" 0;
-	setAttr ".phl[1117]" 0;
-	setAttr ".phl[1118]" 0;
-	setAttr ".phl[1119]" 0;
-	setAttr ".phl[1120]" 0;
-	setAttr ".phl[1121]" 0;
-	setAttr ".phl[1122]" 0;
-	setAttr ".phl[1123]" 0;
-	setAttr ".phl[1124]" 0;
-	setAttr ".phl[1125]" 0;
-	setAttr ".phl[1126]" 0;
-	setAttr ".phl[1127]" 0;
-	setAttr ".phl[1128]" 0;
-	setAttr ".phl[1129]" 0;
-	setAttr ".phl[1130]" 0;
-	setAttr ".phl[1131]" 0;
-	setAttr ".phl[1132]" 0;
-	setAttr ".phl[1133]" 0;
-	setAttr ".phl[1134]" 0;
-	setAttr ".phl[1135]" 0;
-	setAttr ".phl[1136]" 0;
-	setAttr ".phl[1137]" 0;
-	setAttr ".phl[1138]" 0;
-	setAttr ".phl[1139]" 0;
-	setAttr ".phl[1140]" 0;
-	setAttr ".phl[1141]" 0;
-	setAttr ".phl[1142]" 0;
-	setAttr ".phl[1143]" 0;
-	setAttr ".phl[1144]" 0;
-	setAttr ".phl[1145]" 0;
-	setAttr ".phl[1146]" 0;
-	setAttr ".phl[1147]" 0;
-	setAttr ".phl[1148]" 0;
-	setAttr ".phl[1149]" 0;
-	setAttr ".phl[1150]" 0;
-	setAttr ".phl[1151]" 0;
-	setAttr ".phl[1152]" 0;
-	setAttr ".phl[1153]" 0;
-	setAttr ".phl[1154]" 0;
-	setAttr ".phl[1155]" 0;
-	setAttr ".phl[1156]" 0;
-	setAttr ".phl[1157]" 0;
-	setAttr ".phl[1158]" 0;
-	setAttr ".phl[1159]" 0;
-	setAttr ".phl[1160]" 0;
-	setAttr ".phl[1161]" 0;
-	setAttr ".phl[1162]" 0;
-	setAttr ".phl[1163]" 0;
-	setAttr ".phl[1164]" 0;
-	setAttr ".phl[1165]" 0;
-	setAttr ".phl[1166]" 0;
-	setAttr ".phl[1167]" 0;
-	setAttr ".phl[1168]" 0;
-	setAttr ".phl[1169]" 0;
-	setAttr ".phl[1170]" 0;
-	setAttr ".phl[1171]" 0;
-	setAttr ".phl[1172]" 0;
-	setAttr ".phl[1173]" 0;
-	setAttr ".phl[1174]" 0;
-	setAttr ".phl[1175]" 0;
-	setAttr ".phl[1176]" 0;
-	setAttr ".phl[1177]" 0;
-	setAttr ".phl[1178]" 0;
-	setAttr ".phl[1179]" 0;
-	setAttr ".phl[1180]" 0;
-	setAttr ".phl[1181]" 0;
-	setAttr ".phl[1182]" 0;
-	setAttr ".phl[1183]" 0;
-	setAttr ".phl[1184]" 0;
-	setAttr ".phl[1185]" 0;
-	setAttr ".phl[1186]" 0;
-	setAttr ".phl[1187]" 0;
-	setAttr ".phl[1188]" 0;
-	setAttr ".phl[1189]" 0;
-	setAttr ".phl[1190]" 0;
-	setAttr ".phl[1191]" 0;
-	setAttr ".phl[1192]" 0;
-	setAttr ".phl[1193]" 0;
-	setAttr ".phl[1194]" 0;
-	setAttr ".phl[1195]" 0;
-	setAttr ".phl[1196]" 0;
-	setAttr ".phl[1197]" 0;
-	setAttr ".phl[1198]" 0;
-	setAttr ".phl[1199]" 0;
-	setAttr ".phl[1200]" 0;
-	setAttr ".phl[1201]" 0;
-	setAttr ".phl[1202]" 0;
-	setAttr ".phl[1203]" 0;
-	setAttr ".phl[1204]" 0;
-	setAttr ".phl[1205]" 0;
-	setAttr ".phl[1206]" 0;
-	setAttr ".phl[1207]" 0;
-	setAttr ".phl[1208]" 0;
-	setAttr ".phl[1209]" 0;
-	setAttr ".phl[1210]" 0;
-	setAttr ".phl[1211]" 0;
-	setAttr ".phl[1212]" 0;
-	setAttr ".phl[1213]" 0;
-	setAttr ".phl[1214]" 0;
-	setAttr ".phl[1215]" 0;
-	setAttr ".phl[1216]" 0;
-	setAttr ".phl[1217]" 0;
-	setAttr ".phl[1218]" 0;
-	setAttr ".phl[1219]" 0;
-	setAttr ".phl[1220]" 0;
-	setAttr ".phl[1221]" 0;
-	setAttr ".phl[1222]" 0;
-	setAttr ".phl[1223]" 0;
-	setAttr ".phl[1224]" 0;
-	setAttr ".phl[1225]" 0;
-	setAttr ".phl[1226]" 0;
-	setAttr ".phl[1227]" 0;
-	setAttr ".phl[1228]" 0;
-	setAttr ".phl[1229]" 0;
-	setAttr ".phl[1230]" 0;
-	setAttr ".phl[1231]" 0;
-	setAttr ".phl[1232]" 0;
-	setAttr ".phl[1233]" 0;
-	setAttr ".phl[1234]" 0;
-	setAttr ".phl[1235]" 0;
-	setAttr ".phl[1236]" 0;
-	setAttr ".phl[1237]" 0;
-	setAttr ".phl[1238]" 0;
-	setAttr ".phl[1239]" 0;
-	setAttr ".phl[1240]" 0;
-	setAttr ".phl[1241]" 0;
-	setAttr ".phl[1242]" 0;
-	setAttr ".phl[1243]" 0;
-	setAttr ".phl[1244]" 0;
-	setAttr ".phl[1245]" 0;
-	setAttr ".phl[1246]" 0;
-	setAttr ".phl[1247]" 0;
-	setAttr ".phl[1248]" 0;
-	setAttr ".phl[1249]" 0;
-	setAttr ".phl[1250]" 0;
-	setAttr ".phl[1251]" 0;
-	setAttr ".phl[1252]" 0;
-	setAttr ".phl[1253]" 0;
-	setAttr ".phl[1254]" 0;
-	setAttr ".phl[1255]" 0;
-	setAttr ".phl[1256]" 0;
-	setAttr ".phl[1257]" 0;
-	setAttr ".phl[1258]" 0;
-	setAttr ".phl[1259]" 0;
-	setAttr ".phl[1260]" 0;
-	setAttr ".phl[1261]" 0;
-	setAttr ".phl[1262]" 0;
-	setAttr ".phl[1263]" 0;
-	setAttr ".phl[1264]" 0;
-	setAttr ".phl[1265]" 0;
-	setAttr ".phl[1266]" 0;
-	setAttr ".phl[1267]" 0;
-	setAttr ".phl[1268]" 0;
-	setAttr ".phl[1269]" 0;
-	setAttr ".phl[1270]" 0;
-	setAttr ".phl[1271]" 0;
-	setAttr ".phl[1272]" 0;
-	setAttr ".phl[1273]" 0;
-	setAttr ".phl[1274]" 0;
-	setAttr ".phl[1275]" 0;
-	setAttr ".phl[1276]" 0;
-	setAttr ".phl[1277]" 0;
-	setAttr ".phl[1278]" 0;
-	setAttr ".phl[1279]" 0;
-	setAttr ".phl[1280]" 0;
-	setAttr ".phl[1281]" 0;
-	setAttr ".phl[1282]" 0;
-	setAttr ".phl[1283]" 0;
-	setAttr ".phl[1284]" 0;
-	setAttr ".phl[1285]" 0;
-	setAttr ".phl[1286]" 0;
-	setAttr ".phl[1287]" 0;
-	setAttr ".phl[1288]" 0;
-	setAttr ".phl[1289]" 0;
-	setAttr ".phl[1290]" 0;
-	setAttr ".phl[1291]" 0;
-	setAttr ".phl[1292]" 0;
-	setAttr ".phl[1293]" 0;
-	setAttr ".phl[1294]" 0;
-	setAttr ".phl[1295]" 0;
-	setAttr ".phl[1296]" 0;
-	setAttr ".phl[1297]" 0;
-	setAttr ".phl[1298]" 0;
-	setAttr ".phl[1299]" 0;
-	setAttr ".phl[1300]" 0;
-	setAttr ".phl[1301]" 0;
-	setAttr ".phl[1302]" 0;
-	setAttr ".phl[1303]" 0;
-	setAttr ".phl[1304]" 0;
-	setAttr ".phl[1305]" 0;
-	setAttr ".phl[1306]" 0;
-	setAttr ".phl[1307]" 0;
-	setAttr ".phl[1308]" 0;
-	setAttr ".phl[1309]" 0;
-	setAttr ".phl[1310]" 0;
-	setAttr ".phl[1311]" 0;
-	setAttr ".phl[1312]" 0;
-	setAttr ".phl[1313]" 0;
-	setAttr ".phl[1314]" 0;
-	setAttr ".phl[1315]" 0;
-	setAttr ".phl[1316]" 0;
-	setAttr ".phl[1317]" 0;
-	setAttr ".phl[1318]" 0;
-	setAttr ".phl[1319]" 0;
-	setAttr ".phl[1320]" 0;
-	setAttr ".phl[1321]" 0;
-	setAttr ".phl[1322]" 0;
-	setAttr ".phl[1323]" 0;
-	setAttr ".phl[1324]" 0;
-	setAttr ".phl[1325]" 0;
-	setAttr ".phl[1326]" 0;
-	setAttr ".phl[1327]" 0;
-	setAttr ".phl[1328]" 0;
-	setAttr ".phl[1329]" 0;
-	setAttr ".phl[1330]" 0;
-	setAttr ".phl[1331]" 0;
-	setAttr ".phl[1332]" 0;
-	setAttr ".phl[1333]" 0;
-	setAttr ".phl[1334]" 0;
-	setAttr ".phl[1335]" 0;
-	setAttr ".phl[1336]" 0;
-	setAttr ".phl[1337]" 0;
-	setAttr ".phl[1338]" 0;
-	setAttr ".phl[1339]" 0;
-	setAttr ".phl[1340]" 0;
-	setAttr ".phl[1341]" 0;
-	setAttr ".phl[1342]" 0;
-	setAttr ".phl[1343]" 0;
-	setAttr ".phl[1344]" 0;
-	setAttr ".phl[1345]" 0;
-	setAttr ".phl[1346]" 0;
-	setAttr ".phl[1347]" 0;
-	setAttr ".phl[1348]" 0;
-	setAttr ".phl[1349]" 0;
-	setAttr ".phl[1350]" 0;
-	setAttr ".phl[1351]" 0;
-	setAttr ".phl[1352]" 0;
-	setAttr ".phl[1353]" 0;
-	setAttr ".phl[1354]" 0;
-	setAttr ".phl[1355]" 0;
-	setAttr ".phl[1356]" 0;
-	setAttr ".phl[1357]" 0;
-	setAttr ".phl[1358]" 0;
-	setAttr ".phl[1359]" 0;
-	setAttr ".phl[1360]" 0;
-	setAttr ".phl[1361]" 0;
-	setAttr ".phl[1362]" 0;
-	setAttr ".phl[1363]" 0;
-	setAttr ".phl[1364]" 0;
-	setAttr ".phl[1365]" 0;
-	setAttr ".phl[1366]" 0;
-	setAttr ".phl[1367]" 0;
-	setAttr ".phl[1368]" 0;
-	setAttr ".phl[1369]" 0;
-	setAttr ".phl[1370]" 0;
-	setAttr ".phl[1371]" 0;
-	setAttr ".phl[1372]" 0;
-	setAttr ".phl[1373]" 0;
-	setAttr ".phl[1374]" 0;
-	setAttr ".phl[1375]" 0;
-	setAttr ".phl[1376]" 0;
-	setAttr ".phl[1377]" 0;
-	setAttr ".phl[1378]" 0;
-	setAttr ".phl[1379]" 0;
-	setAttr ".phl[1380]" 0;
-	setAttr ".phl[1381]" 0;
-	setAttr ".phl[1382]" 0;
-	setAttr ".phl[1383]" 0;
-	setAttr ".phl[1384]" 0;
-	setAttr ".phl[1385]" 0;
-	setAttr ".phl[1386]" 0;
-	setAttr ".phl[1387]" 0;
-	setAttr ".phl[1388]" 0;
-	setAttr ".phl[1389]" 0;
-	setAttr ".phl[1390]" 0;
-	setAttr ".phl[1391]" 0;
-	setAttr ".phl[1392]" 0;
-	setAttr ".phl[1393]" 0;
-	setAttr ".phl[1394]" 0;
-	setAttr ".phl[1395]" 0;
-	setAttr ".phl[1396]" 0;
-	setAttr ".phl[1397]" 0;
-	setAttr ".phl[1398]" 0;
-	setAttr ".phl[1399]" 0;
-	setAttr ".phl[1400]" 0;
-	setAttr ".phl[1401]" 0;
-	setAttr ".phl[1402]" 0;
-	setAttr ".phl[1403]" 0;
-	setAttr ".phl[1404]" 0;
-	setAttr ".phl[1405]" 0;
-	setAttr ".phl[1406]" 0;
-	setAttr ".phl[1407]" 0;
-	setAttr ".phl[1408]" 0;
-	setAttr ".phl[1409]" 0;
-	setAttr ".phl[1410]" 0;
-	setAttr ".phl[1411]" 0;
-	setAttr ".phl[1412]" 0;
-	setAttr ".phl[1413]" 0;
-	setAttr ".phl[1414]" 0;
-	setAttr ".phl[1415]" 0;
-	setAttr ".phl[1416]" 0;
-	setAttr ".phl[1417]" 0;
-	setAttr ".phl[1418]" 0;
-	setAttr ".phl[1419]" 0;
-	setAttr ".phl[1420]" 0;
-	setAttr ".phl[1421]" 0;
-	setAttr ".phl[1422]" 0;
-	setAttr ".phl[1423]" 0;
-	setAttr ".phl[1424]" 0;
-	setAttr ".phl[1425]" 0;
-	setAttr ".phl[1426]" 0;
-	setAttr ".phl[1427]" 0;
-	setAttr ".phl[1428]" 0;
-	setAttr ".phl[1429]" 0;
-	setAttr ".phl[1430]" 0;
-	setAttr ".phl[1431]" 0;
-	setAttr ".phl[1432]" 0;
-	setAttr ".phl[1433]" 0;
-	setAttr ".phl[1434]" 0;
-	setAttr ".phl[1435]" 0;
-	setAttr ".phl[1436]" 0;
-	setAttr ".phl[1437]" 0;
-	setAttr ".phl[1438]" 0;
-	setAttr ".phl[1439]" 0;
-	setAttr ".phl[1440]" 0;
-	setAttr ".phl[1441]" 0;
-	setAttr ".phl[1442]" 0;
-	setAttr ".phl[1443]" 0;
-	setAttr ".phl[1444]" 0;
-	setAttr ".phl[1445]" 0;
-	setAttr ".phl[1446]" 0;
-	setAttr ".phl[1447]" 0;
-	setAttr ".phl[1448]" 0;
-	setAttr ".phl[1449]" 0;
-	setAttr ".phl[1450]" 0;
-	setAttr ".phl[1451]" 0;
-	setAttr ".phl[1452]" 0;
-	setAttr ".phl[1453]" 0;
-	setAttr ".phl[1454]" 0;
-	setAttr ".phl[1455]" 0;
-	setAttr ".phl[1456]" 0;
-	setAttr ".phl[1457]" 0;
-	setAttr ".phl[1458]" 0;
-	setAttr ".phl[1459]" 0;
-	setAttr ".phl[1460]" 0;
-	setAttr ".phl[1461]" 0;
-	setAttr ".phl[1462]" 0;
-	setAttr ".phl[1463]" 0;
-	setAttr ".phl[1464]" 0;
-	setAttr ".phl[1465]" 0;
-	setAttr ".phl[1466]" 0;
-	setAttr ".phl[1467]" 0;
-	setAttr ".phl[1468]" 0;
-	setAttr ".phl[1469]" 0;
-	setAttr ".phl[1470]" 0;
-	setAttr ".phl[1471]" 0;
-	setAttr ".phl[1472]" 0;
-	setAttr ".phl[1473]" 0;
-	setAttr ".phl[1474]" 0;
-	setAttr ".phl[1475]" 0;
-	setAttr ".phl[1476]" 0;
-	setAttr ".phl[1477]" 0;
-	setAttr ".phl[1478]" 0;
-	setAttr ".phl[1479]" 0;
-	setAttr ".phl[1480]" 0;
-	setAttr ".phl[1481]" 0;
-	setAttr ".phl[1482]" 0;
-	setAttr ".phl[1483]" 0;
-	setAttr ".phl[1484]" 0;
-	setAttr ".phl[1485]" 0;
-	setAttr ".phl[1486]" 0;
-	setAttr ".phl[1487]" 0;
-	setAttr ".phl[1488]" 0;
-	setAttr ".phl[1489]" 0;
-	setAttr ".phl[1490]" 0;
-	setAttr ".phl[1491]" 0;
-	setAttr ".phl[1492]" 0;
-	setAttr ".phl[1493]" 0;
-	setAttr ".phl[1494]" 0;
-	setAttr ".phl[1495]" 0;
-	setAttr ".phl[1496]" 0;
-	setAttr ".phl[1497]" 0;
-	setAttr ".phl[1498]" 0;
-	setAttr ".phl[1499]" 0;
-	setAttr ".phl[1500]" 0;
-	setAttr ".phl[1501]" 0;
-	setAttr ".phl[1502]" 0;
-	setAttr ".phl[1503]" 0;
-	setAttr ".phl[1504]" 0;
-	setAttr ".phl[1505]" 0;
-	setAttr ".phl[1506]" 0;
-	setAttr ".phl[1507]" 0;
-	setAttr ".phl[1508]" 0;
-	setAttr ".phl[1509]" 0;
-	setAttr ".phl[1510]" 0;
-	setAttr ".phl[1511]" 0;
-	setAttr ".phl[1512]" 0;
-	setAttr ".phl[1513]" 0;
-	setAttr ".phl[1514]" 0;
-	setAttr ".phl[1515]" 0;
-	setAttr ".phl[1516]" 0;
-	setAttr ".phl[1517]" 0;
-	setAttr ".phl[1518]" 0;
-	setAttr ".phl[1519]" 0;
-	setAttr ".phl[1520]" 0;
-	setAttr ".phl[1521]" 0;
-	setAttr ".phl[1522]" 0;
-	setAttr ".phl[1523]" 0;
-	setAttr ".phl[1524]" 0;
-	setAttr ".phl[1525]" 0;
-	setAttr ".phl[1526]" 0;
-	setAttr ".phl[1527]" 0;
-	setAttr ".phl[1528]" 0;
-	setAttr ".phl[1529]" 0;
-	setAttr ".phl[1530]" 0;
-	setAttr ".phl[1531]" 0;
-	setAttr ".phl[1532]" 0;
-	setAttr ".phl[1533]" 0;
-	setAttr ".phl[1534]" 0;
-	setAttr ".phl[1535]" 0;
-	setAttr ".phl[1536]" 0;
-	setAttr ".phl[1537]" 0;
-	setAttr ".phl[1538]" 0;
-	setAttr ".phl[1539]" 0;
-	setAttr ".phl[1540]" 0;
-	setAttr ".phl[1541]" 0;
-	setAttr ".phl[1542]" 0;
-	setAttr ".phl[1543]" 0;
-	setAttr ".phl[1544]" 0;
-	setAttr ".phl[1545]" 0;
-	setAttr ".phl[1546]" 0;
-	setAttr ".phl[1547]" 0;
-	setAttr ".phl[1548]" 0;
-	setAttr ".phl[1549]" 0;
-	setAttr ".phl[1550]" 0;
-	setAttr ".phl[1551]" 0;
-	setAttr ".phl[1552]" 0;
-	setAttr ".phl[1553]" 0;
-	setAttr ".phl[1554]" 0;
-	setAttr ".phl[1555]" 0;
-	setAttr ".phl[1556]" 0;
-	setAttr ".phl[1557]" 0;
-	setAttr ".phl[1558]" 0;
-	setAttr ".phl[1559]" 0;
-	setAttr ".phl[1560]" 0;
-	setAttr ".phl[1561]" 0;
-	setAttr ".phl[1562]" 0;
-	setAttr ".phl[1563]" 0;
-	setAttr ".phl[1564]" 0;
-	setAttr ".phl[1565]" 0;
-	setAttr ".phl[1566]" 0;
-	setAttr ".phl[1567]" 0;
-	setAttr ".phl[1568]" 0;
-	setAttr ".phl[1569]" 0;
-	setAttr ".phl[1570]" 0;
-	setAttr ".phl[1571]" 0;
-	setAttr ".phl[1572]" 0;
-	setAttr ".phl[1573]" 0;
-	setAttr ".phl[1574]" 0;
-	setAttr ".phl[1575]" 0;
-	setAttr ".phl[1576]" 0;
-	setAttr ".phl[1577]" 0;
-	setAttr ".phl[1578]" 0;
-	setAttr ".phl[1579]" 0;
-	setAttr ".phl[1580]" 0;
-	setAttr ".phl[1581]" 0;
-	setAttr ".phl[1582]" 0;
-	setAttr ".phl[1583]" 0;
-	setAttr ".phl[1584]" 0;
-	setAttr ".phl[1585]" 0;
-	setAttr ".phl[1586]" 0;
-	setAttr ".phl[1587]" 0;
-	setAttr ".phl[1588]" 0;
-	setAttr ".phl[1589]" 0;
-	setAttr ".phl[1590]" 0;
-	setAttr ".phl[1591]" 0;
-	setAttr ".phl[1592]" 0;
-	setAttr ".phl[1593]" 0;
-	setAttr ".phl[1594]" 0;
-	setAttr ".phl[1595]" 0;
-	setAttr ".phl[1596]" 0;
-	setAttr ".phl[1597]" 0;
-	setAttr ".phl[1598]" 0;
-	setAttr ".phl[1599]" 0;
 	setAttr ".phl[1600]" 0;
 	setAttr ".phl[1601]" 0;
 	setAttr ".phl[1602]" 0;
@@ -13089,9 +12211,547 @@ createNode reference -n "momRN1";
 	setAttr ".phl[1606]" 0;
 	setAttr ".phl[1607]" 0;
 	setAttr ".phl[1608]" 0;
+	setAttr ".phl[1609]" 0;
+	setAttr ".phl[1610]" 0;
+	setAttr ".phl[1611]" 0;
+	setAttr ".phl[1612]" 0;
+	setAttr ".phl[1613]" 0;
+	setAttr ".phl[1614]" 0;
+	setAttr ".phl[1615]" 0;
+	setAttr ".phl[1616]" 0;
+	setAttr ".phl[1617]" 0;
+	setAttr ".phl[1618]" 0;
+	setAttr ".phl[1619]" 0;
+	setAttr ".phl[1620]" 0;
+	setAttr ".phl[1621]" 0;
+	setAttr ".phl[1622]" 0;
+	setAttr ".phl[1623]" 0;
+	setAttr ".phl[1624]" 0;
+	setAttr ".phl[1625]" 0;
+	setAttr ".phl[1626]" 0;
+	setAttr ".phl[1627]" 0;
+	setAttr ".phl[1628]" 0;
+	setAttr ".phl[1629]" 0;
+	setAttr ".phl[1630]" 0;
+	setAttr ".phl[1631]" 0;
+	setAttr ".phl[1632]" 0;
+	setAttr ".phl[1633]" 0;
+	setAttr ".phl[1634]" 0;
+	setAttr ".phl[1635]" 0;
+	setAttr ".phl[1636]" 0;
+	setAttr ".phl[1637]" 0;
+	setAttr ".phl[1638]" 0;
+	setAttr ".phl[1639]" 0;
+	setAttr ".phl[1640]" 0;
+	setAttr ".phl[1641]" 0;
+	setAttr ".phl[1642]" 0;
+	setAttr ".phl[1643]" 0;
+	setAttr ".phl[1644]" 0;
+	setAttr ".phl[1645]" 0;
+	setAttr ".phl[1646]" 0;
+	setAttr ".phl[1647]" 0;
+	setAttr ".phl[1648]" 0;
+	setAttr ".phl[1649]" 0;
+	setAttr ".phl[1650]" 0;
+	setAttr ".phl[1651]" 0;
+	setAttr ".phl[1652]" 0;
+	setAttr ".phl[1653]" 0;
+	setAttr ".phl[1654]" 0;
+	setAttr ".phl[1655]" 0;
+	setAttr ".phl[1656]" 0;
+	setAttr ".phl[1657]" 0;
+	setAttr ".phl[1658]" 0;
+	setAttr ".phl[1659]" 0;
+	setAttr ".phl[1660]" 0;
+	setAttr ".phl[1661]" 0;
+	setAttr ".phl[1662]" 0;
+	setAttr ".phl[1663]" 0;
+	setAttr ".phl[1664]" 0;
+	setAttr ".phl[1665]" 0;
+	setAttr ".phl[1666]" 0;
+	setAttr ".phl[1667]" 0;
+	setAttr ".phl[1668]" 0;
+	setAttr ".phl[1669]" 0;
+	setAttr ".phl[1670]" 0;
+	setAttr ".phl[1671]" 0;
+	setAttr ".phl[1672]" 0;
+	setAttr ".phl[1673]" 0;
+	setAttr ".phl[1674]" 0;
+	setAttr ".phl[1675]" 0;
+	setAttr ".phl[1676]" 0;
+	setAttr ".phl[1677]" 0;
+	setAttr ".phl[1678]" 0;
+	setAttr ".phl[1679]" 0;
+	setAttr ".phl[1680]" 0;
+	setAttr ".phl[1681]" 0;
+	setAttr ".phl[1682]" 0;
+	setAttr ".phl[1683]" 0;
+	setAttr ".phl[1684]" 0;
+	setAttr ".phl[1685]" 0;
+	setAttr ".phl[1686]" 0;
+	setAttr ".phl[1687]" 0;
+	setAttr ".phl[1688]" 0;
+	setAttr ".phl[1689]" 0;
+	setAttr ".phl[1690]" 0;
+	setAttr ".phl[1691]" 0;
+	setAttr ".phl[1692]" 0;
+	setAttr ".phl[1693]" 0;
+	setAttr ".phl[1694]" 0;
+	setAttr ".phl[1695]" 0;
+	setAttr ".phl[1696]" 0;
+	setAttr ".phl[1697]" 0;
+	setAttr ".phl[1698]" 0;
+	setAttr ".phl[1699]" 0;
+	setAttr ".phl[1700]" 0;
+	setAttr ".phl[1701]" 0;
+	setAttr ".phl[1702]" 0;
+	setAttr ".phl[1703]" 0;
+	setAttr ".phl[1704]" 0;
+	setAttr ".phl[1705]" 0;
+	setAttr ".phl[1706]" 0;
+	setAttr ".phl[1707]" 0;
+	setAttr ".phl[1708]" 0;
+	setAttr ".phl[1709]" 0;
+	setAttr ".phl[1710]" 0;
+	setAttr ".phl[1711]" 0;
+	setAttr ".phl[1712]" 0;
+	setAttr ".phl[1713]" 0;
+	setAttr ".phl[1714]" 0;
+	setAttr ".phl[1715]" 0;
+	setAttr ".phl[1716]" 0;
+	setAttr ".phl[1717]" 0;
+	setAttr ".phl[1718]" 0;
+	setAttr ".phl[1719]" 0;
+	setAttr ".phl[1720]" 0;
+	setAttr ".phl[1721]" 0;
+	setAttr ".phl[1722]" 0;
+	setAttr ".phl[1723]" 0;
+	setAttr ".phl[1724]" 0;
+	setAttr ".phl[1725]" 0;
+	setAttr ".phl[1726]" 0;
+	setAttr ".phl[1727]" 0;
+	setAttr ".phl[1728]" 0;
+	setAttr ".phl[1729]" 0;
+	setAttr ".phl[1730]" 0;
+	setAttr ".phl[1731]" 0;
+	setAttr ".phl[1732]" 0;
+	setAttr ".phl[1733]" 0;
+	setAttr ".phl[1734]" 0;
+	setAttr ".phl[1735]" 0;
+	setAttr ".phl[1736]" 0;
+	setAttr ".phl[1737]" 0;
+	setAttr ".phl[1738]" 0;
+	setAttr ".phl[1739]" 0;
+	setAttr ".phl[1740]" 0;
+	setAttr ".phl[1741]" 0;
+	setAttr ".phl[1742]" 0;
+	setAttr ".phl[1743]" 0;
+	setAttr ".phl[1744]" 0;
+	setAttr ".phl[1745]" 0;
+	setAttr ".phl[1746]" 0;
+	setAttr ".phl[1747]" 0;
+	setAttr ".phl[1748]" 0;
+	setAttr ".phl[1749]" 0;
+	setAttr ".phl[1750]" 0;
+	setAttr ".phl[1751]" 0;
+	setAttr ".phl[1752]" 0;
+	setAttr ".phl[1753]" 0;
+	setAttr ".phl[1754]" 0;
+	setAttr ".phl[1755]" 0;
+	setAttr ".phl[1756]" 0;
+	setAttr ".phl[1757]" 0;
+	setAttr ".phl[1758]" 0;
+	setAttr ".phl[1759]" 0;
+	setAttr ".phl[1760]" 0;
+	setAttr ".phl[1761]" 0;
+	setAttr ".phl[1762]" 0;
+	setAttr ".phl[1763]" 0;
+	setAttr ".phl[1764]" 0;
+	setAttr ".phl[1765]" 0;
+	setAttr ".phl[1766]" 0;
+	setAttr ".phl[1767]" 0;
+	setAttr ".phl[1768]" 0;
+	setAttr ".phl[1769]" 0;
+	setAttr ".phl[1770]" 0;
+	setAttr ".phl[1771]" 0;
+	setAttr ".phl[1772]" 0;
+	setAttr ".phl[1773]" 0;
+	setAttr ".phl[1774]" 0;
+	setAttr ".phl[1775]" 0;
+	setAttr ".phl[1776]" 0;
+	setAttr ".phl[1777]" 0;
+	setAttr ".phl[1778]" 0;
+	setAttr ".phl[1779]" 0;
+	setAttr ".phl[1780]" 0;
+	setAttr ".phl[1781]" 0;
+	setAttr ".phl[1782]" 0;
+	setAttr ".phl[1783]" 0;
+	setAttr ".phl[1784]" 0;
+	setAttr ".phl[1785]" 0;
+	setAttr ".phl[1786]" 0;
+	setAttr ".phl[1787]" 0;
+	setAttr ".phl[1788]" 0;
+	setAttr ".phl[1789]" 0;
+	setAttr ".phl[1790]" 0;
+	setAttr ".phl[1791]" 0;
+	setAttr ".phl[1792]" 0;
+	setAttr ".phl[1793]" 0;
+	setAttr ".phl[1794]" 0;
+	setAttr ".phl[1795]" 0;
+	setAttr ".phl[1796]" 0;
+	setAttr ".phl[1797]" 0;
+	setAttr ".phl[1798]" 0;
+	setAttr ".phl[1799]" 0;
+	setAttr ".phl[1800]" 0;
+	setAttr ".phl[1801]" 0;
+	setAttr ".phl[1802]" 0;
+	setAttr ".phl[1803]" 0;
+	setAttr ".phl[1804]" 0;
+	setAttr ".phl[1805]" 0;
+	setAttr ".phl[1806]" 0;
+	setAttr ".phl[1807]" 0;
+	setAttr ".phl[1808]" 0;
+	setAttr ".phl[1809]" 0;
+	setAttr ".phl[1810]" 0;
+	setAttr ".phl[1811]" 0;
+	setAttr ".phl[1812]" 0;
+	setAttr ".phl[1813]" 0;
+	setAttr ".phl[1814]" 0;
+	setAttr ".phl[1815]" 0;
+	setAttr ".phl[1816]" 0;
+	setAttr ".phl[1817]" 0;
+	setAttr ".phl[1818]" 0;
+	setAttr ".phl[1819]" 0;
+	setAttr ".phl[1820]" 0;
+	setAttr ".phl[1821]" 0;
+	setAttr ".phl[1822]" 0;
+	setAttr ".phl[1823]" 0;
+	setAttr ".phl[1824]" 0;
+	setAttr ".phl[1825]" 0;
+	setAttr ".phl[1826]" 0;
+	setAttr ".phl[1827]" 0;
+	setAttr ".phl[1828]" 0;
+	setAttr ".phl[1829]" 0;
+	setAttr ".phl[1830]" 0;
+	setAttr ".phl[1831]" 0;
+	setAttr ".phl[1832]" 0;
+	setAttr ".phl[1833]" 0;
+	setAttr ".phl[1834]" 0;
+	setAttr ".phl[1835]" 0;
+	setAttr ".phl[1836]" 0;
+	setAttr ".phl[1837]" 0;
+	setAttr ".phl[1838]" 0;
+	setAttr ".phl[1839]" 0;
+	setAttr ".phl[1840]" 0;
+	setAttr ".phl[1841]" 0;
+	setAttr ".phl[1842]" 0;
+	setAttr ".phl[1843]" 0;
+	setAttr ".phl[1844]" 0;
+	setAttr ".phl[1845]" 0;
+	setAttr ".phl[1846]" 0;
+	setAttr ".phl[1847]" 0;
+	setAttr ".phl[1848]" 0;
+	setAttr ".phl[1849]" 0;
+	setAttr ".phl[1850]" 0;
+	setAttr ".phl[1851]" 0;
+	setAttr ".phl[1852]" 0;
+	setAttr ".phl[1853]" 0;
+	setAttr ".phl[1854]" 0;
+	setAttr ".phl[1855]" 0;
+	setAttr ".phl[1856]" 0;
+	setAttr ".phl[1857]" 0;
+	setAttr ".phl[1858]" 0;
+	setAttr ".phl[1859]" 0;
+	setAttr ".phl[1860]" 0;
+	setAttr ".phl[1861]" 0;
+	setAttr ".phl[1862]" 0;
+	setAttr ".phl[1863]" 0;
+	setAttr ".phl[1864]" 0;
+	setAttr ".phl[1865]" 0;
+	setAttr ".phl[1866]" 0;
+	setAttr ".phl[1867]" 0;
+	setAttr ".phl[1868]" 0;
+	setAttr ".phl[1869]" 0;
+	setAttr ".phl[1870]" 0;
+	setAttr ".phl[1871]" 0;
+	setAttr ".phl[1872]" 0;
+	setAttr ".phl[1873]" 0;
+	setAttr ".phl[1874]" 0;
+	setAttr ".phl[1875]" 0;
+	setAttr ".phl[1876]" 0;
+	setAttr ".phl[1877]" 0;
+	setAttr ".phl[1878]" 0;
+	setAttr ".phl[1879]" 0;
+	setAttr ".phl[1880]" 0;
+	setAttr ".phl[1881]" 0;
+	setAttr ".phl[1882]" 0;
+	setAttr ".phl[1883]" 0;
+	setAttr ".phl[1884]" 0;
+	setAttr ".phl[1885]" 0;
+	setAttr ".phl[1886]" 0;
+	setAttr ".phl[1887]" 0;
+	setAttr ".phl[1888]" 0;
+	setAttr ".phl[1889]" 0;
+	setAttr ".phl[1890]" 0;
+	setAttr ".phl[1891]" 0;
+	setAttr ".phl[1892]" 0;
+	setAttr ".phl[1893]" 0;
+	setAttr ".phl[1894]" 0;
+	setAttr ".phl[1895]" 0;
+	setAttr ".phl[1896]" 0;
+	setAttr ".phl[1897]" 0;
+	setAttr ".phl[1898]" 0;
+	setAttr ".phl[1899]" 0;
+	setAttr ".phl[1900]" 0;
+	setAttr ".phl[1901]" 0;
+	setAttr ".phl[1902]" 0;
+	setAttr ".phl[1903]" 0;
+	setAttr ".phl[1904]" 0;
+	setAttr ".phl[1905]" 0;
+	setAttr ".phl[1906]" 0;
+	setAttr ".phl[1907]" 0;
+	setAttr ".phl[1908]" 0;
+	setAttr ".phl[1909]" 0;
+	setAttr ".phl[1910]" 0;
+	setAttr ".phl[1911]" 0;
+	setAttr ".phl[1912]" 0;
+	setAttr ".phl[1913]" 0;
+	setAttr ".phl[1914]" 0;
+	setAttr ".phl[1915]" 0;
+	setAttr ".phl[1916]" 0;
+	setAttr ".phl[1917]" 0;
+	setAttr ".phl[1918]" 0;
+	setAttr ".phl[1919]" 0;
+	setAttr ".phl[1920]" 0;
+	setAttr ".phl[1921]" 0;
+	setAttr ".phl[1922]" 0;
+	setAttr ".phl[1923]" 0;
+	setAttr ".phl[1924]" 0;
+	setAttr ".phl[1925]" 0;
+	setAttr ".phl[1926]" 0;
+	setAttr ".phl[1927]" 0;
+	setAttr ".phl[1928]" 0;
+	setAttr ".phl[1929]" 0;
+	setAttr ".phl[1930]" 0;
+	setAttr ".phl[1931]" 0;
+	setAttr ".phl[1932]" 0;
+	setAttr ".phl[1933]" 0;
+	setAttr ".phl[1934]" 0;
+	setAttr ".phl[1935]" 0;
+	setAttr ".phl[1936]" 0;
+	setAttr ".phl[1937]" 0;
+	setAttr ".phl[1938]" 0;
+	setAttr ".phl[1939]" 0;
+	setAttr ".phl[1940]" 0;
+	setAttr ".phl[1941]" 0;
+	setAttr ".phl[1942]" 0;
+	setAttr ".phl[1943]" 0;
+	setAttr ".phl[1944]" 0;
+	setAttr ".phl[1945]" 0;
+	setAttr ".phl[1946]" 0;
+	setAttr ".phl[1947]" 0;
+	setAttr ".phl[1948]" 0;
+	setAttr ".phl[1949]" 0;
+	setAttr ".phl[1950]" 0;
+	setAttr ".phl[1951]" 0;
+	setAttr ".phl[1952]" 0;
+	setAttr ".phl[1953]" 0;
+	setAttr ".phl[1954]" 0;
+	setAttr ".phl[1955]" 0;
+	setAttr ".phl[1956]" 0;
+	setAttr ".phl[1957]" 0;
+	setAttr ".phl[1958]" 0;
+	setAttr ".phl[1959]" 0;
+	setAttr ".phl[1960]" 0;
+	setAttr ".phl[1961]" 0;
+	setAttr ".phl[1962]" 0;
+	setAttr ".phl[1963]" 0;
+	setAttr ".phl[1964]" 0;
+	setAttr ".phl[1965]" 0;
+	setAttr ".phl[1966]" 0;
+	setAttr ".phl[1967]" 0;
+	setAttr ".phl[1968]" 0;
+	setAttr ".phl[1969]" 0;
+	setAttr ".phl[1970]" 0;
+	setAttr ".phl[1971]" 0;
+	setAttr ".phl[1972]" 0;
+	setAttr ".phl[1973]" 0;
+	setAttr ".phl[1974]" 0;
+	setAttr ".phl[1975]" 0;
+	setAttr ".phl[1976]" 0;
+	setAttr ".phl[1977]" 0;
+	setAttr ".phl[1978]" 0;
+	setAttr ".phl[1979]" 0;
+	setAttr ".phl[1980]" 0;
+	setAttr ".phl[1981]" 0;
+	setAttr ".phl[1982]" 0;
+	setAttr ".phl[1983]" 0;
+	setAttr ".phl[1984]" 0;
+	setAttr ".phl[1985]" 0;
+	setAttr ".phl[1986]" 0;
+	setAttr ".phl[1987]" 0;
+	setAttr ".phl[1988]" 0;
+	setAttr ".phl[1989]" 0;
+	setAttr ".phl[1990]" 0;
+	setAttr ".phl[1991]" 0;
+	setAttr ".phl[1992]" 0;
+	setAttr ".phl[1993]" 0;
+	setAttr ".phl[1994]" 0;
+	setAttr ".phl[1995]" 0;
+	setAttr ".phl[1996]" 0;
+	setAttr ".phl[1997]" 0;
+	setAttr ".phl[1998]" 0;
+	setAttr ".phl[1999]" 0;
+	setAttr ".phl[2000]" 0;
+	setAttr ".phl[2001]" 0;
+	setAttr ".phl[2002]" 0;
+	setAttr ".phl[2003]" 0;
+	setAttr ".phl[2004]" 0;
+	setAttr ".phl[2005]" 0;
+	setAttr ".phl[2006]" 0;
+	setAttr ".phl[2007]" 0;
+	setAttr ".phl[2008]" 0;
+	setAttr ".phl[2009]" 0;
+	setAttr ".phl[2010]" 0;
+	setAttr ".phl[2011]" 0;
+	setAttr ".phl[2012]" 0;
+	setAttr ".phl[2013]" 0;
+	setAttr ".phl[2014]" 0;
+	setAttr ".phl[2015]" 0;
+	setAttr ".phl[2016]" 0;
+	setAttr ".phl[2017]" 0;
+	setAttr ".phl[2018]" 0;
+	setAttr ".phl[2019]" 0;
+	setAttr ".phl[2020]" 0;
+	setAttr ".phl[2021]" 0;
+	setAttr ".phl[2022]" 0;
+	setAttr ".phl[2023]" 0;
+	setAttr ".phl[2024]" 0;
+	setAttr ".phl[2025]" 0;
+	setAttr ".phl[2026]" 0;
+	setAttr ".phl[2027]" 0;
+	setAttr ".phl[2028]" 0;
+	setAttr ".phl[2029]" 0;
+	setAttr ".phl[2030]" 0;
+	setAttr ".phl[2031]" 0;
+	setAttr ".phl[2032]" 0;
+	setAttr ".phl[2033]" 0;
+	setAttr ".phl[2034]" 0;
+	setAttr ".phl[2035]" 0;
+	setAttr ".phl[2036]" 0;
+	setAttr ".phl[2037]" 0;
+	setAttr ".phl[2038]" 0;
+	setAttr ".phl[2039]" 0;
+	setAttr ".phl[2040]" 0;
+	setAttr ".phl[2041]" 0;
+	setAttr ".phl[2042]" 0;
+	setAttr ".phl[2043]" 0;
+	setAttr ".phl[2044]" 0;
+	setAttr ".phl[2045]" 0;
+	setAttr ".phl[2046]" 0;
+	setAttr ".phl[2047]" 0;
+	setAttr ".phl[2048]" 0;
+	setAttr ".phl[2049]" 0;
+	setAttr ".phl[2050]" 0;
+	setAttr ".phl[2051]" 0;
+	setAttr ".phl[2052]" 0;
+	setAttr ".phl[2053]" 0;
+	setAttr ".phl[2054]" 0;
+	setAttr ".phl[2055]" 0;
+	setAttr ".phl[2056]" 0;
+	setAttr ".phl[2057]" 0;
+	setAttr ".phl[2058]" 0;
+	setAttr ".phl[2059]" 0;
+	setAttr ".phl[2060]" 0;
+	setAttr ".phl[2061]" 0;
+	setAttr ".phl[2062]" 0;
+	setAttr ".phl[2063]" 0;
+	setAttr ".phl[2064]" 0;
+	setAttr ".phl[2065]" 0;
+	setAttr ".phl[2066]" 0;
+	setAttr ".phl[2067]" 0;
+	setAttr ".phl[2068]" 0;
+	setAttr ".phl[2069]" 0;
+	setAttr ".phl[2070]" 0;
+	setAttr ".phl[2071]" 0;
+	setAttr ".phl[2072]" 0;
+	setAttr ".phl[2073]" 0;
+	setAttr ".phl[2074]" 0;
+	setAttr ".phl[2075]" 0;
+	setAttr ".phl[2076]" 0;
+	setAttr ".phl[2077]" 0;
+	setAttr ".phl[2078]" 0;
+	setAttr ".phl[2079]" 0;
+	setAttr ".phl[2080]" 0;
+	setAttr ".phl[2081]" 0;
+	setAttr ".phl[2082]" 0;
+	setAttr ".phl[2083]" 0;
+	setAttr ".phl[2084]" 0;
+	setAttr ".phl[2085]" 0;
+	setAttr ".phl[2086]" 0;
+	setAttr ".phl[2087]" 0;
+	setAttr ".phl[2088]" 0;
+	setAttr ".phl[2089]" 0;
+	setAttr ".phl[2090]" 0;
+	setAttr ".phl[2091]" 0;
+	setAttr ".phl[2092]" 0;
+	setAttr ".phl[2093]" 0;
+	setAttr ".phl[2094]" 0;
+	setAttr ".phl[2095]" 0;
+	setAttr ".phl[2096]" 0;
+	setAttr ".phl[2097]" 0;
+	setAttr ".phl[2098]" 0;
+	setAttr ".phl[2099]" 0;
+	setAttr ".phl[2100]" 0;
+	setAttr ".phl[2101]" 0;
+	setAttr ".phl[2102]" 0;
+	setAttr ".phl[2103]" 0;
+	setAttr ".phl[2104]" 0;
+	setAttr ".phl[2105]" 0;
+	setAttr ".phl[2106]" 0;
+	setAttr ".phl[2107]" 0;
+	setAttr ".phl[2108]" 0;
+	setAttr ".phl[2109]" 0;
+	setAttr ".phl[2110]" 0;
+	setAttr ".phl[2111]" 0;
+	setAttr ".phl[2112]" 0;
+	setAttr ".phl[2113]" 0;
+	setAttr ".phl[2114]" 0;
+	setAttr ".phl[2115]" 0;
+	setAttr ".phl[2116]" 0;
+	setAttr ".phl[2117]" 0;
+	setAttr ".phl[2118]" 0;
+	setAttr ".phl[2119]" 0;
+	setAttr ".phl[2120]" 0;
+	setAttr ".phl[2121]" 0;
+	setAttr ".phl[2122]" 0;
+	setAttr ".phl[2123]" 0;
+	setAttr ".phl[2124]" 0;
+	setAttr ".phl[2125]" 0;
+	setAttr ".phl[2126]" 0;
+	setAttr ".phl[2127]" 0;
+	setAttr ".phl[2128]" 0;
+	setAttr ".phl[2129]" 0;
+	setAttr ".phl[2130]" 0;
+	setAttr ".phl[2131]" 0;
+	setAttr ".phl[2132]" 0;
+	setAttr ".phl[2133]" 0;
+	setAttr ".phl[2134]" 0;
+	setAttr ".phl[2135]" 0;
+	setAttr ".phl[2136]" 0;
+	setAttr ".phl[2137]" 0;
+	setAttr ".phl[2138]" 0;
+	setAttr ".phl[2139]" 0;
+	setAttr ".phl[2140]" 0;
+	setAttr ".phl[2141]" 0;
+	setAttr ".phl[2142]" 0;
+	setAttr ".phl[2143]" 0;
+	setAttr ".phl[2144]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"momRN1"
-		"momRN1" 60
+		"momRN1" 160
+		0 "|momRN1fosterParent1|outputCloth1" "|mom2:mom_shirt:mom_shirt" "-s -r "
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "scale" 
 		" -type \"double3\" 1 1 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
@@ -13143,11 +12803,6 @@ createNode reference -n "momRN1";
 		"Blink" " -av -k 1 11.120424232849782"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:momBodyshapeShapeOrig" 
 		"intermediateObject" " 1"
-		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nucleus1" "startFrame" " -10"
-		
-		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nucleus1" "enable" " 0"
-		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid1|mom2:nRigidShape1" "cacheWidth" 
-		" 321"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid2|mom2:nRigidShape2" "cacheWidth" 
 		" 321"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid3|mom2:nRigidShape3" "cacheWidth" 
@@ -13156,76 +12811,12 @@ createNode reference -n "momRN1";
 		" 321"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid5|mom2:nRigidShape5" "cacheWidth" 
 		" 321"
-		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nCloth1|mom2:nClothShape1" "cacheWidth" 
-		" 321"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid6|mom2:nRigidShape6" "cacheWidth" 
 		" 321"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nRigid7|mom2:nRigidShape7" "cacheWidth" 
 		" 321"
 		2 "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:skirt_ncloth|mom2:skirt_nclothShape" 
 		"cacheWidth" " 321"
-		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.instObjGroups" 
-		"mom2:mom_skeleton:rampShader1SG.dagSetMembers" "-na"
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.scaleX" 
-		"momRN1.placeHolderList[58]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.scaleY" 
-		"momRN1.placeHolderList[59]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.scaleZ" 
-		"momRN1.placeHolderList[60]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.translateX" 
-		"momRN1.placeHolderList[62]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.translateY" 
-		"momRN1.placeHolderList[63]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.translateZ" 
-		"momRN1.placeHolderList[64]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.scaleX" 
-		"momRN1.placeHolderList[68]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.scaleY" 
-		"momRN1.placeHolderList[69]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.scaleZ" 
-		"momRN1.placeHolderList[70]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:mom_skeleton:mom_jaw_ctrl.rotateX" 
-		"momRN1.placeHolderList[72]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:mom_skeleton:mom_jaw_ctrl.visibility" 
-		"momRN1.placeHolderList[73]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.visibility" 
-		"momRN1.placeHolderList[85]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.translateX" 
-		"momRN1.placeHolderList[86]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.translateY" 
-		"momRN1.placeHolderList[87]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.translateZ" 
-		"momRN1.placeHolderList[88]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.rotateX" 
-		"momRN1.placeHolderList[89]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.rotateY" 
-		"momRN1.placeHolderList[90]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.rotateZ" 
-		"momRN1.placeHolderList[91]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleX" 
-		"momRN1.placeHolderList[92]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleY" 
-		"momRN1.placeHolderList[93]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleZ" 
-		"momRN1.placeHolderList[94]" ""
-		5 4 "momRN1" "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nCloth1|mom2:nClothShape1.positions" 
-		"momRN1.placeHolderList[561]" ""
-		5 4 "momRN1" "|mom2:mom_ncloth_stuff_DO_NOT_TOUCH|mom2:nCloth1|mom2:nClothShape1.playFromCache" 
-		"momRN1.placeHolderList[562]" ""
-		5 0 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.instObjGroups" 
-		"mom2:mom_skeleton:rampShader1SG.dagSetMembers" "momRN1.placeHolderList[1047]" "momRN1.placeHolderList[1048]" 
-		"mom2:mom_skeleton:rampShader1SG.dsm"
-		"momRN1" 1000
-		0 "|momRN1fosterParent1|Arm_Cntrl_R_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" 
-		"-s -r "
-		0 "|momRN1fosterParent1|Arm_Cntrl_L_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" 
-		"-s -r "
-		0 "|momRN1fosterParent1|outputCloth1" "|mom2:mom_shirt:mom_shirt" "-s -r "
-		
-		1 |mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R "blendParent1" 
-		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		1 |mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L "blendParent1" 
-		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair" "visibility" " 1"
 		2 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape" 
 		"instObjGroups.objectGroups" " -s 8"
@@ -13312,6 +12903,178 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:Clothing" "visibility" " 0"
 		2 "|mom2:MomRig|mom2:Clothing|mom2:mom_mesh:outfit|mom2:mom_mesh:outfit|mom2:Skirt|mom2:skirtShapeOrig" 
 		"intermediateObject" " 1"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:mid_rt_ctrl" 
+		"translate" " -type \"double3\" -0.63942906585782511 0 0"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"translate" " -type \"double3\" -0.038781022736833322 -0.27784732156259551 0.28993192055543798"
+		
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"translateX" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"translateY" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"translateZ" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"rotate" " -type \"double3\" 26.49092941510308918 0 0"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"rotateX" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"rotateY" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		"rotateZ" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl|mom2:necklace:cross_locator|mom2:necklace:cross" 
+		"visibility" " 1"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:chain:chain" 
+		"translate" " -type \"double3\" 0 0.91383113516556702 0"
+		2 "|mom2:mom_shirt:mom_shirt" "visibility" " -av 0"
+		2 "|mom2:mom_shirt:mom_shirt|mom2:mom_shirt:outputCloth2" "intermediateObject" 
+		" 1"
+		2 "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1" "intermediateObject" " 1"
+		
+		2 "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1" "dispResolution" " 3"
+		2 "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1" "displaySmoothMesh" " 2"
+		2 "|mom2:mom_shirt:shirt_left_ctrl" "visibility" " 0"
+		2 "|mom2:mom_shirt:shirt_left_ctrl|mom2:mom_shirt:do_not_touch" "visibility" 
+		" 0"
+		2 "|mom2:mom_shirt:shirt_right_ctrl" "visibility" " 0"
+		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "visibility" 
+		" 0"
+		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translate" 
+		" -type \"double3\" 0 0 0.26112788224323147"
+		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translateX" 
+		" -av"
+		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translateY" 
+		" -av"
+		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translateZ" 
+		" -av"
+		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt" 
+		"visibility" " 0"
+		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt|mom2:mom_skirt:mom:skirtShape" 
+		"intermediateObject" " 1"
+		2 "mom2:groupParts39" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:109]\""
+		
+		2 "mom2:groupParts39" "groupId" " 323"
+		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.instObjGroups" 
+		"mom2:mom_skeleton:rampShader1SG.dagSetMembers" "-na"
+		3 "mom2:groupId39.message" "mom2:mom2:mom:rampShader2SG.groupNodes" "-na"
+		
+		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0]" 
+		"mom2:mom2:mom:rampShader2SG.dagSetMembers" "-na"
+		3 "mom2:groupId39.groupId" "mom2:groupParts39.groupId" ""
+		3 "mom2:groupId39.groupId" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "mom2:mom2:mom:rampShader2SG.memberWireframeColor" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
+		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
+		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_R|mom2:mom2:mom:ear_RShape.instObjGroups" 
+		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.scaleX" 
+		"momRN1.placeHolderList[58]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.scaleY" 
+		"momRN1.placeHolderList[59]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.scaleZ" 
+		"momRN1.placeHolderList[60]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.translateX" 
+		"momRN1.placeHolderList[62]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.translateY" 
+		"momRN1.placeHolderList[63]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.translateZ" 
+		"momRN1.placeHolderList[64]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.scaleX" 
+		"momRN1.placeHolderList[68]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.scaleY" 
+		"momRN1.placeHolderList[69]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl.scaleZ" 
+		"momRN1.placeHolderList[70]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:mom_skeleton:mom_jaw_ctrl.rotateX" 
+		"momRN1.placeHolderList[72]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:mom_skeleton:mom_jaw_ctrl.visibility" 
+		"momRN1.placeHolderList[73]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.visibility" 
+		"momRN1.placeHolderList[85]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.translateX" 
+		"momRN1.placeHolderList[86]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.translateY" 
+		"momRN1.placeHolderList[87]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.translateZ" 
+		"momRN1.placeHolderList[88]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.rotateX" 
+		"momRN1.placeHolderList[89]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.rotateY" 
+		"momRN1.placeHolderList[90]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.rotateZ" 
+		"momRN1.placeHolderList[91]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleX" 
+		"momRN1.placeHolderList[92]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleY" 
+		"momRN1.placeHolderList[93]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:mom_skeleton:mom_spline_ctrl.scaleZ" 
+		"momRN1.placeHolderList[94]" ""
+		5 0 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.instObjGroups" 
+		"mom2:mom_skeleton:rampShader1SG.dagSetMembers" "momRN1.placeHolderList[1047]" "momRN1.placeHolderList[1048]" 
+		"mom2:mom_skeleton:rampShader1SG.dsm"
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups" 
+		"momRN1.placeHolderList[1049]" ""
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.worldMesh" 
+		"momRN1.placeHolderList[1050]" ""
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShapeOrig1.instObjGroups" 
+		"momRN1.placeHolderList[1051]" ""
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShapeOrig1.worldMesh" 
+		"momRN1.placeHolderList[1052]" ""
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
+		"momRN1.placeHolderList[1053]" "mom2:mom2:mom:rampShader3SG.dsm"
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_R|mom2:mom2:mom:ear_RShape.instObjGroups" 
+		"momRN1.placeHolderList[1054]" "mom2:mom2:mom:rampShader3SG.dsm"
+		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.worldMesh" 
+		"momRN1.placeHolderList[1055]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.translateX" 
+		"momRN1.placeHolderList[1352]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.translateY" 
+		"momRN1.placeHolderList[1353]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.translateZ" 
+		"momRN1.placeHolderList[1354]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.visibility" 
+		"momRN1.placeHolderList[1355]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.rotateX" 
+		"momRN1.placeHolderList[1356]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.rotateY" 
+		"momRN1.placeHolderList[1357]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.rotateZ" 
+		"momRN1.placeHolderList[1358]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.scaleX" 
+		"momRN1.placeHolderList[1359]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.scaleY" 
+		"momRN1.placeHolderList[1360]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.scaleZ" 
+		"momRN1.placeHolderList[1361]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.translateX" 
+		"momRN1.placeHolderList[1362]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.translateY" 
+		"momRN1.placeHolderList[1363]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.translateZ" 
+		"momRN1.placeHolderList[1364]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.visibility" 
+		"momRN1.placeHolderList[1365]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.rotateX" 
+		"momRN1.placeHolderList[1366]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.rotateY" 
+		"momRN1.placeHolderList[1367]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.rotateZ" 
+		"momRN1.placeHolderList[1368]" ""
+		5 3 "momRN1" "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1.worldMesh" 
+		"momRN1.placeHolderList[1600]" ""
+		5 3 "momRN1" "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch|mom2:mom_shirt:do_not_touchShape.worldMesh" 
+		"momRN1.placeHolderList[1601]" ""
+		"momRN1" 912
+		0 "|momRN1fosterParent1|Arm_Cntrl_R_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" 
+		"-s -r "
+		0 "|momRN1fosterParent1|Arm_Cntrl_L_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" 
+		"-s -r "
+		1 |mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R "blendParent1" 
+		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		1 |mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L "blendParent1" 
+		"blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|mom2:MomRig|mom2:MasterCntrl" "translate" " -type \"double3\" 0 -3.67933822290907386 -1.98896783709773395"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl" "translateX" " -av"
@@ -13397,31 +13160,31 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R" 
-		"translateY" " -av 0.13837983670571716"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L" 
-		"translateY" " -av 0.13837983670571716"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
-		"translateX" " -av -0.36296000000000433"
+		"translateX" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
-		"translateY" " -av -0.24226383588196859"
+		"translateY" " -av -0.76472087240444575"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
-		"translateX" " -av -0.36544081020077895"
+		"translateX" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
-		"translateY" " -av -0.2422638358819727"
+		"translateY" " -av -0.76472087240444575"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R" 
-		"translateY" " -av -0.46641153410461372"
+		"translateY" " -av -0.24868224255052243"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
-		"translateY" " -av -0.46641153410461372"
+		"translateY" " -av -0.24868224255052243"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
@@ -13437,7 +13200,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
-		"rotate" " -type \"double3\" 0.23252948317109007 1.69828586753889432 1.01768279867461509"
+		"rotate" " -type \"double3\" 1.67639661030763421 -5.18654669418014613 10.63027625960952882"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"rotateX" " -av"
@@ -13474,7 +13237,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03" 
-		"rotate" " -type \"double3\" 0 0 -3.78180557304116371"
+		"rotate" " -type \"double3\" 0 0 -0.09538823804774206"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03" 
@@ -13610,7 +13373,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
-		"rotate" " -type \"double3\" 1.73691446681625838 0.046951710930501996 -0.034732800832678171"
+		"rotate" " -type \"double3\" 0.032000834885900886 0.00093931771664925552 -0.00066017220357694761"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
 		"rotateX" " -av"
@@ -13621,7 +13384,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
-		"rotate" " -type \"double3\" 5.62842302614152601 -0.017670526206582646 0.36719139374370807"
+		"rotate" " -type \"double3\" 9.63898042779700326 -0.21499500878993996 4.85266250957847944"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
 		"rotateX" " -av"
@@ -13632,7 +13395,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" -2.42722888660066749 -2.43006448201582748 -16.09050229352176231"
+		"rotate" " -type \"double3\" 9.64810848460526316 12.24731282821004363 -3.77051971058297442"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"rotateX" " -av"
@@ -13643,7 +13406,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
-		"rotate" " -type \"double3\" -2.88277168473022005 -8.23234746306833465 14.07766822145394769"
+		"rotate" " -type \"double3\" -2.27572551436497195 1.88004039750677943 9.42229733054720242"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"rotateX" " -av"
@@ -13658,7 +13421,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
-		"translate" " -type \"double3\" 0.015779416450578676 0.090833493749226113 0.0093346326200012542"
+		"translate" " -type \"double3\" 4.61220787691742551 1.17933667670195197 1.39553723328938251"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"translateX" " -av"
@@ -13683,7 +13446,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"scaleZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
-		"translate" " -type \"double3\" 0.49882915540824968 0.74243740094579502 -0.27341653407088878"
+		"translate" " -type \"double3\" 0.43041912857502262 -0.12895452858733211 -0.31901086039897497"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
 		"translateX" " -av"
@@ -13699,29 +13462,14 @@ createNode reference -n "momRN1";
 		"rotateY" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
 		"rotateZ" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:mid_rt_ctrl" 
-		"translate" " -type \"double3\" -0.63942906585782511 0 0"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
-		"translate" " -type \"double3\" -0.038781022736833322 -0.27784732156259551 0.28993192055543798"
-		
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
+		"translate" " -type \"double3\" 0 -0.26601002695381082 0.8798968605230163"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"translateX" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"translateY" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"translateZ" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
-		"rotate" " -type \"double3\" 26.49092941510308918 0 0"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
-		"rotateX" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
-		"rotateY" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl" 
-		"rotateZ" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl|mom2:necklace:cross_locator|mom2:necklace:cross" 
-		"visibility" " 1"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:chain:chain" 
-		"translate" " -type \"double3\" 0 0.91383113516556702 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
@@ -13733,7 +13481,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
-		"rotate" " -type \"double3\" -30.91369388692720221 0.60547485039663929 8.13007416335522848"
+		"rotate" " -type \"double3\" -16.24032714766905272 -10.03743054981188187 20.05456482737307056"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"rotateX" " -av"
@@ -13766,7 +13514,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
-		"rotate" " -type \"double3\" -10.8028910950621011 25.34051004246415673 -21.27350485438557826"
+		"rotate" " -type \"double3\" -12.55409174884485779 14.62727507688594031 -0.11741556864542604"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"rotateX" " -av"
@@ -13785,7 +13533,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
-		"translate" " -type \"double3\" -0.28585627160888583 -0.60696215229614991 -0.2660490091754476"
+		"translate" " -type \"double3\" -0.49604334516153192 -0.45578727947925873 0.21499977333955367"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
 		"translateX" " -av"
@@ -13804,9 +13552,9 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr" 
-		"Blink" " -av -k 1 4.60998464174770017"
+		"Blink" " -av -k 1 2.97695813586514646"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
-		"Blink" " -av -k 1 4.60998464174770017"
+		"Blink" " -av -k 1 2.97695813586514646"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl" 
 		"translateX" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl" 
@@ -13814,12 +13562,11 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R|mom2:OuterBrow_Cntrl_R" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R|mom2:MidBrow_Cntrl_R" 
-		"translateY" " -av -0.40922619784045228"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
-		"translate" " -type \"double3\" -0.24302555244317076 -0.25915230917843823 0.017763052140176393"
-		
+		"translate" " -type \"double3\" -0.69002479706898168 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
 		"translateY" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
@@ -13833,12 +13580,11 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L|mom2:OuterBrow_Cntrl_L" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L|mom2:MidBrow_Cntrl_L" 
-		"translateY" " -av -0.40922619784045228"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
-		"translate" " -type \"double3\" -0.21803358411908769 -0.25915230917844911 0.017763052140167511"
-		
+		"translate" " -type \"double3\" -0.69002479706898168 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
 		"translateY" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
@@ -13850,13 +13596,13 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_blink_ctrl" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_low_eyelid_ctrl" 
-		"translateY" " -av 0"
+		"translateY" " -av 0.030772975616142728"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_low_eyelid_ctrl" 
-		"translateY" " -av 0"
+		"translateY" " -av 0.030772975616142728"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_nose_flare_ctrl" 
-		"translateY" " -av 0.046976704920238269"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_nose_flare_ctrl" 
-		"translateY" " -av 0.046813837050523471"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_knee_vec" "visibility" 
 		" 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_knee_vec" "translateX" 
@@ -13868,7 +13614,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translate" 
-		" -type \"double3\" 1.0140341154059298 -1.83307924066182304 9.90289708072474006"
+		" -type \"double3\" 1.36561075539056542 -1.8330792406618226 17.26011742493437495"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translateY" 
@@ -13894,7 +13641,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translate" 
-		" -type \"double3\" 13.10730370303042847 6.78522269880910933 6.25375814259665574"
+		" -type \"double3\" 12.35945722021755522 6.46547183649708312 6.71270841804430773"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateX" 
 		" -av"
@@ -13903,7 +13650,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotate" 
-		" -type \"double3\" -16.73005729470574465 -109.00497224718782263 -70.81696304306939282"
+		" -type \"double3\" -26.31270824610256298 -94.35764362610169087 -67.17021375056638988"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotateX" 
 		" -av"
@@ -13920,11 +13667,11 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "mom_arm_correct" 
 		" -av -k 1 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "blendParent1" 
-		" -av -k 1 1"
+		" -av -k 1 0.89600000000000168"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translate" 
-		" -type \"double3\" 2.98875756525983416 4.08435716719685793 11.95223143325358173"
+		" -type \"double3\" 0.29433506854657043 -3.76538123282214077 15.1034972691467182"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translateX" 
 		" -av"
@@ -13951,7 +13698,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translate" 
-		" -type \"double3\" -8.71458780220354967 -6.85603959839206212 -1.57328782864556516"
+		" -type \"double3\" -9.03764404078112804 -6.42962819173942357 -0.31863062200184533"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateX" 
 		" -av"
@@ -13960,7 +13707,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotate" 
-		" -type \"double3\" 97.16868539627449763 161.91346651069511609 -278.23154426930130967"
+		" -type \"double3\" 97.37079220513088273 168.31866073222198565 -267.83988983525603089"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotateX" 
 		" -av"
@@ -13972,33 +13719,13 @@ createNode reference -n "momRN1";
 		" -av -k 1 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "blendParent1" 
 		" -av -k 1 1"
-		2 "|mom2:mom_shirt:mom_shirt" "visibility" " -av 0"
-		2 "|mom2:mom_shirt:mom_shirt|mom2:mom_shirt:outputCloth2" "intermediateObject" 
+		2 "|mom2:MomClothing" "visibility" " 0"
+		2 "|mom2:MomClothing|mom2:MomSkirt|mom2:mom_skirt:skirtShapeOrig" "intermediateObject" 
 		" 1"
-		2 "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1" "intermediateObject" " 1"
-		
-		2 "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1" "dispResolution" " 3"
-		2 "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1" "displaySmoothMesh" " 2"
-		2 "|mom2:mom_shirt:shirt_left_ctrl" "visibility" " 0"
-		2 "|mom2:mom_shirt:shirt_left_ctrl|mom2:mom_shirt:do_not_touch" "visibility" 
-		" 0"
-		2 "|mom2:mom_shirt:shirt_right_ctrl" "visibility" " 0"
-		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "visibility" 
-		" 0"
-		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translate" 
-		" -type \"double3\" 0 0 0.26112788224323147"
-		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translateX" 
-		" -av"
-		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translateY" 
-		" -av"
-		2 "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch" "translateZ" 
-		" -av"
-		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt" 
-		"visibility" " 0"
-		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt|mom2:mom_skirt:mom:skirtShape" 
-		"intermediateObject" " 1"
-		2 "|mom2:mom_skirt:mom:clothing|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:outfit|mom2:mom_skirt:mom:skirt|mom2:mom_skirt:skirtShapeOrig" 
-		"intermediateObject" " 1"
+		2 "|mom2:nucleus1" "startFrame" " -10"
+		2 "|mom2:nucleus1" "enable" " 0"
+		2 "|mom2:nCloth1|mom2:nClothShape1" "cacheWidth" " 199"
+		2 "|mom2:nRigid1|mom2:nRigidShape1" "cacheWidth" " 199"
 		2 "mom2:blendShape1" "midLayerId" " 5"
 		2 "mom2:blendShape1" "midLayerParent" " 0"
 		2 "mom2:blendShape1" "pndr[24:57]" " -s 34 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
@@ -14063,9 +13790,6 @@ createNode reference -n "momRN1";
 		
 		2 "mom2:tweak12" "vl[0].vt[4150:4260]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
-		2 "mom2:groupParts39" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:109]\""
-		
-		2 "mom2:groupParts39" "groupId" " 323"
 		2 "mom2:blendShape2" "midLayerId" " 6"
 		2 "mom2:blendShape2" "midLayerParent" " 0"
 		2 "mom2:blendShape2" "pndr[0:7]" " -s 8 0 0 0 0 0 0 0 0"
@@ -14076,1139 +13800,1092 @@ createNode reference -n "momRN1";
 		
 		2 "mom2:blendShape2" "targetDirectory[0].directoryVisibility" " 1"
 		2 "mom2:blendShape2" "targetDirectory[0].directoryWeight" " 1"
-		3 "mom2:groupId39.message" "mom2:mom2:mom:rampShader2SG.groupNodes" "-na"
-		
-		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0]" 
-		"mom2:mom2:mom:rampShader2SG.dagSetMembers" "-na"
-		3 "mom2:groupId39.groupId" "mom2:groupParts39.groupId" ""
-		3 "mom2:groupId39.groupId" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "mom2:mom2:mom:rampShader2SG.memberWireframeColor" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
 		3 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest.message" 
 		"mom2:skinCluster1.paintTrans" ""
-		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
-		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
-		3 "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_R|mom2:mom2:mom:ear_RShape.instObjGroups" 
-		"mom2:mom2:mom:rampShader3SG.dagSetMembers" "-na"
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.instObjGroups" 
-		"momRN1.placeHolderList[1049]" ""
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShape.worldMesh" 
-		"momRN1.placeHolderList[1050]" ""
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShapeOrig1.instObjGroups" 
-		"momRN1.placeHolderList[1051]" ""
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momHair|mom2:mom2:mom:momHairShapeOrig1.worldMesh" 
-		"momRN1.placeHolderList[1052]" ""
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_L|mom2:mom2:mom:ear_LShape.instObjGroups" 
-		"momRN1.placeHolderList[1053]" "mom2:mom2:mom:rampShader3SG.dsm"
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:mom_Ears|mom2:mom2:mom:ear_R|mom2:mom2:mom:ear_RShape.instObjGroups" 
-		"momRN1.placeHolderList[1054]" "mom2:mom2:mom:rampShader3SG.dsm"
-		5 3 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:mom2:mom:momBodyshape|mom2:mom2:mom:momBodyshapeShape.worldMesh" 
-		"momRN1.placeHolderList[1055]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateX" "momRN1.placeHolderList[1056]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateX" "momRN1.placeHolderList[1602]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateY" "momRN1.placeHolderList[1057]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateY" "momRN1.placeHolderList[1603]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateZ" "momRN1.placeHolderList[1058]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateZ" "momRN1.placeHolderList[1604]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.rotateX" "momRN1.placeHolderList[1059]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.rotateX" "momRN1.placeHolderList[1605]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.rotateY" "momRN1.placeHolderList[1060]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.rotateY" "momRN1.placeHolderList[1606]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.rotateZ" "momRN1.placeHolderList[1061]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.rotateZ" "momRN1.placeHolderList[1607]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.visibility" "momRN1.placeHolderList[1062]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.visibility" "momRN1.placeHolderList[1608]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.scaleX" "momRN1.placeHolderList[1063]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.scaleX" "momRN1.placeHolderList[1609]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.scaleY" "momRN1.placeHolderList[1064]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.scaleY" "momRN1.placeHolderList[1610]" 
 		""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.scaleZ" "momRN1.placeHolderList[1065]" 
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.scaleZ" "momRN1.placeHolderList[1611]" 
 		""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01.rotateX" 
-		"momRN1.placeHolderList[1066]" ""
+		"momRN1.placeHolderList[1612]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01.rotateY" 
-		"momRN1.placeHolderList[1067]" ""
+		"momRN1.placeHolderList[1613]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01.rotateZ" 
-		"momRN1.placeHolderList[1068]" ""
+		"momRN1.placeHolderList[1614]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01.visibility" 
-		"momRN1.placeHolderList[1069]" ""
+		"momRN1.placeHolderList[1615]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02.rotateX" 
-		"momRN1.placeHolderList[1070]" ""
+		"momRN1.placeHolderList[1616]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02.rotateY" 
-		"momRN1.placeHolderList[1071]" ""
+		"momRN1.placeHolderList[1617]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02.rotateZ" 
-		"momRN1.placeHolderList[1072]" ""
+		"momRN1.placeHolderList[1618]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02.visibility" 
-		"momRN1.placeHolderList[1073]" ""
+		"momRN1.placeHolderList[1619]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01.rotateX" 
-		"momRN1.placeHolderList[1074]" ""
+		"momRN1.placeHolderList[1620]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01.rotateY" 
-		"momRN1.placeHolderList[1075]" ""
+		"momRN1.placeHolderList[1621]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01.rotateZ" 
-		"momRN1.placeHolderList[1076]" ""
+		"momRN1.placeHolderList[1622]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01.visibility" 
-		"momRN1.placeHolderList[1077]" ""
+		"momRN1.placeHolderList[1623]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02.rotateX" 
-		"momRN1.placeHolderList[1078]" ""
+		"momRN1.placeHolderList[1624]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02.rotateY" 
-		"momRN1.placeHolderList[1079]" ""
+		"momRN1.placeHolderList[1625]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02.rotateZ" 
-		"momRN1.placeHolderList[1080]" ""
+		"momRN1.placeHolderList[1626]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02.visibility" 
-		"momRN1.placeHolderList[1081]" ""
+		"momRN1.placeHolderList[1627]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02|mom2:IndexCntrl_Offset_L_03|mom2:IndexCntrl_L_03.rotateX" 
-		"momRN1.placeHolderList[1082]" ""
+		"momRN1.placeHolderList[1628]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02|mom2:IndexCntrl_Offset_L_03|mom2:IndexCntrl_L_03.rotateY" 
-		"momRN1.placeHolderList[1083]" ""
+		"momRN1.placeHolderList[1629]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02|mom2:IndexCntrl_Offset_L_03|mom2:IndexCntrl_L_03.rotateZ" 
-		"momRN1.placeHolderList[1084]" ""
+		"momRN1.placeHolderList[1630]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01|mom2:IndexCntrl_Offset_L_02|mom2:IndexCntrl_L_02|mom2:IndexCntrl_Offset_L_03|mom2:IndexCntrl_L_03.visibility" 
-		"momRN1.placeHolderList[1085]" ""
+		"momRN1.placeHolderList[1631]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02.rotateX" 
-		"momRN1.placeHolderList[1086]" ""
+		"momRN1.placeHolderList[1632]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02.rotateY" 
-		"momRN1.placeHolderList[1087]" ""
+		"momRN1.placeHolderList[1633]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02.rotateZ" 
-		"momRN1.placeHolderList[1088]" ""
+		"momRN1.placeHolderList[1634]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02.visibility" 
-		"momRN1.placeHolderList[1089]" ""
+		"momRN1.placeHolderList[1635]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03.rotateX" 
-		"momRN1.placeHolderList[1090]" ""
+		"momRN1.placeHolderList[1636]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03.rotateY" 
-		"momRN1.placeHolderList[1091]" ""
+		"momRN1.placeHolderList[1637]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03.rotateZ" 
-		"momRN1.placeHolderList[1092]" ""
+		"momRN1.placeHolderList[1638]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03.visibility" 
-		"momRN1.placeHolderList[1093]" ""
+		"momRN1.placeHolderList[1639]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02.rotateX" 
-		"momRN1.placeHolderList[1094]" ""
+		"momRN1.placeHolderList[1640]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02.rotateY" 
-		"momRN1.placeHolderList[1095]" ""
+		"momRN1.placeHolderList[1641]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02.rotateZ" 
-		"momRN1.placeHolderList[1096]" ""
+		"momRN1.placeHolderList[1642]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02.visibility" 
-		"momRN1.placeHolderList[1097]" ""
+		"momRN1.placeHolderList[1643]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02|mom2:PinkyCntrl_Offset_L_03|mom2:PinkyCntrl_L_03.rotateZ" 
-		"momRN1.placeHolderList[1098]" ""
+		"momRN1.placeHolderList[1644]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02|mom2:PinkyCntrl_Offset_L_03|mom2:PinkyCntrl_L_03.rotateX" 
-		"momRN1.placeHolderList[1099]" ""
+		"momRN1.placeHolderList[1645]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02|mom2:PinkyCntrl_Offset_L_03|mom2:PinkyCntrl_L_03.rotateY" 
-		"momRN1.placeHolderList[1100]" ""
+		"momRN1.placeHolderList[1646]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:PinkyCntrl_Offset_L_01|mom2:PinkyCntrl_L_01|mom2:PinkyCntrl_Offset_L_02|mom2:PinkyCntrl_L_02|mom2:PinkyCntrl_Offset_L_03|mom2:PinkyCntrl_L_03.visibility" 
-		"momRN1.placeHolderList[1101]" ""
+		"momRN1.placeHolderList[1647]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02.rotateZ" 
-		"momRN1.placeHolderList[1102]" ""
+		"momRN1.placeHolderList[1648]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02.rotateX" 
-		"momRN1.placeHolderList[1103]" ""
+		"momRN1.placeHolderList[1649]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02.rotateY" 
-		"momRN1.placeHolderList[1104]" ""
+		"momRN1.placeHolderList[1650]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02.visibility" 
-		"momRN1.placeHolderList[1105]" ""
+		"momRN1.placeHolderList[1651]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02|mom2:RingCntrl_Offset_L_03|mom2:RingCntrl_L_03.rotateX" 
-		"momRN1.placeHolderList[1106]" ""
+		"momRN1.placeHolderList[1652]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02|mom2:RingCntrl_Offset_L_03|mom2:RingCntrl_L_03.rotateY" 
-		"momRN1.placeHolderList[1107]" ""
+		"momRN1.placeHolderList[1653]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02|mom2:RingCntrl_Offset_L_03|mom2:RingCntrl_L_03.rotateZ" 
-		"momRN1.placeHolderList[1108]" ""
+		"momRN1.placeHolderList[1654]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:RingCntrl_Offset_L_01|mom2:RingCntrl_L_01|mom2:RingCntrl_Offset_L_02|mom2:RingCntrl_L_02|mom2:RingCntrl_Offset_L_03|mom2:RingCntrl_L_03.visibility" 
-		"momRN1.placeHolderList[1109]" ""
+		"momRN1.placeHolderList[1655]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1110]" ""
+		"momRN1.placeHolderList[1656]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1111]" ""
+		"momRN1.placeHolderList[1657]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1112]" ""
+		"momRN1.placeHolderList[1658]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1113]" ""
+		"momRN1.placeHolderList[1659]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1114]" ""
+		"momRN1.placeHolderList[1660]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R.translateX" 
-		"momRN1.placeHolderList[1115]" ""
+		"momRN1.placeHolderList[1661]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1116]" ""
+		"momRN1.placeHolderList[1662]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1117]" ""
+		"momRN1.placeHolderList[1663]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L.translateX" 
-		"momRN1.placeHolderList[1118]" ""
+		"momRN1.placeHolderList[1664]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1119]" ""
+		"momRN1.placeHolderList[1665]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1120]" ""
+		"momRN1.placeHolderList[1666]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1121]" ""
+		"momRN1.placeHolderList[1667]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1122]" ""
+		"momRN1.placeHolderList[1668]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1123]" ""
+		"momRN1.placeHolderList[1669]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl.translateZ" 
-		"momRN1.placeHolderList[1124]" ""
+		"momRN1.placeHolderList[1670]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl.translateX" 
-		"momRN1.placeHolderList[1125]" ""
+		"momRN1.placeHolderList[1671]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl.translateY" 
-		"momRN1.placeHolderList[1126]" ""
+		"momRN1.placeHolderList[1672]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl.visibility" 
-		"momRN1.placeHolderList[1127]" ""
+		"momRN1.placeHolderList[1673]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_R|mom2:TopMouth_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1128]" ""
+		"momRN1.placeHolderList[1674]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_R|mom2:TopMouth_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1129]" ""
+		"momRN1.placeHolderList[1675]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_L|mom2:TopMouth_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1130]" ""
+		"momRN1.placeHolderList[1676]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_L|mom2:TopMouth_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1131]" ""
+		"momRN1.placeHolderList[1677]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01.rotateX" 
-		"momRN1.placeHolderList[1132]" ""
+		"momRN1.placeHolderList[1678]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01.rotateY" 
-		"momRN1.placeHolderList[1133]" ""
+		"momRN1.placeHolderList[1679]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01.rotateZ" 
-		"momRN1.placeHolderList[1134]" ""
+		"momRN1.placeHolderList[1680]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01.visibility" 
-		"momRN1.placeHolderList[1135]" ""
+		"momRN1.placeHolderList[1681]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02.rotateX" 
-		"momRN1.placeHolderList[1136]" ""
+		"momRN1.placeHolderList[1682]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02.rotateY" 
-		"momRN1.placeHolderList[1137]" ""
+		"momRN1.placeHolderList[1683]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02.rotateZ" 
-		"momRN1.placeHolderList[1138]" ""
+		"momRN1.placeHolderList[1684]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02.visibility" 
-		"momRN1.placeHolderList[1139]" ""
+		"momRN1.placeHolderList[1685]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01.rotateX" 
-		"momRN1.placeHolderList[1140]" ""
+		"momRN1.placeHolderList[1686]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01.rotateY" 
-		"momRN1.placeHolderList[1141]" ""
+		"momRN1.placeHolderList[1687]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01.rotateZ" 
-		"momRN1.placeHolderList[1142]" ""
+		"momRN1.placeHolderList[1688]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01.visibility" 
-		"momRN1.placeHolderList[1143]" ""
+		"momRN1.placeHolderList[1689]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02.rotateX" 
-		"momRN1.placeHolderList[1144]" ""
+		"momRN1.placeHolderList[1690]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02.rotateY" 
-		"momRN1.placeHolderList[1145]" ""
+		"momRN1.placeHolderList[1691]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02.rotateZ" 
-		"momRN1.placeHolderList[1146]" ""
+		"momRN1.placeHolderList[1692]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02.visibility" 
-		"momRN1.placeHolderList[1147]" ""
+		"momRN1.placeHolderList[1693]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03.rotateX" 
-		"momRN1.placeHolderList[1148]" ""
+		"momRN1.placeHolderList[1694]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03.rotateY" 
-		"momRN1.placeHolderList[1149]" ""
+		"momRN1.placeHolderList[1695]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03.rotateZ" 
-		"momRN1.placeHolderList[1150]" ""
+		"momRN1.placeHolderList[1696]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03.visibility" 
-		"momRN1.placeHolderList[1151]" ""
+		"momRN1.placeHolderList[1697]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01.rotateX" 
-		"momRN1.placeHolderList[1152]" ""
+		"momRN1.placeHolderList[1698]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01.rotateY" 
-		"momRN1.placeHolderList[1153]" ""
+		"momRN1.placeHolderList[1699]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01.rotateZ" 
-		"momRN1.placeHolderList[1154]" ""
+		"momRN1.placeHolderList[1700]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01.visibility" 
-		"momRN1.placeHolderList[1155]" ""
+		"momRN1.placeHolderList[1701]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02.rotateX" 
-		"momRN1.placeHolderList[1156]" ""
+		"momRN1.placeHolderList[1702]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02.rotateY" 
-		"momRN1.placeHolderList[1157]" ""
+		"momRN1.placeHolderList[1703]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02.rotateZ" 
-		"momRN1.placeHolderList[1158]" ""
+		"momRN1.placeHolderList[1704]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02.visibility" 
-		"momRN1.placeHolderList[1159]" ""
+		"momRN1.placeHolderList[1705]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03.rotateX" 
-		"momRN1.placeHolderList[1160]" ""
+		"momRN1.placeHolderList[1706]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03.rotateY" 
-		"momRN1.placeHolderList[1161]" ""
+		"momRN1.placeHolderList[1707]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03.rotateZ" 
-		"momRN1.placeHolderList[1162]" ""
+		"momRN1.placeHolderList[1708]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03.visibility" 
-		"momRN1.placeHolderList[1163]" ""
+		"momRN1.placeHolderList[1709]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01.rotateX" 
-		"momRN1.placeHolderList[1164]" ""
+		"momRN1.placeHolderList[1710]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01.rotateY" 
-		"momRN1.placeHolderList[1165]" ""
+		"momRN1.placeHolderList[1711]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01.rotateZ" 
-		"momRN1.placeHolderList[1166]" ""
+		"momRN1.placeHolderList[1712]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01.visibility" 
-		"momRN1.placeHolderList[1167]" ""
+		"momRN1.placeHolderList[1713]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02.rotateX" 
-		"momRN1.placeHolderList[1168]" ""
+		"momRN1.placeHolderList[1714]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02.rotateY" 
-		"momRN1.placeHolderList[1169]" ""
+		"momRN1.placeHolderList[1715]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02.rotateZ" 
-		"momRN1.placeHolderList[1170]" ""
+		"momRN1.placeHolderList[1716]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02.visibility" 
-		"momRN1.placeHolderList[1171]" ""
+		"momRN1.placeHolderList[1717]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03.rotateX" 
-		"momRN1.placeHolderList[1172]" ""
+		"momRN1.placeHolderList[1718]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03.rotateY" 
-		"momRN1.placeHolderList[1173]" ""
+		"momRN1.placeHolderList[1719]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03.rotateZ" 
-		"momRN1.placeHolderList[1174]" ""
+		"momRN1.placeHolderList[1720]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03.visibility" 
-		"momRN1.placeHolderList[1175]" ""
+		"momRN1.placeHolderList[1721]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01.rotateX" 
-		"momRN1.placeHolderList[1176]" ""
+		"momRN1.placeHolderList[1722]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01.rotateY" 
-		"momRN1.placeHolderList[1177]" ""
+		"momRN1.placeHolderList[1723]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01.rotateZ" 
-		"momRN1.placeHolderList[1178]" ""
+		"momRN1.placeHolderList[1724]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01.visibility" 
-		"momRN1.placeHolderList[1179]" ""
+		"momRN1.placeHolderList[1725]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02.rotateX" 
-		"momRN1.placeHolderList[1180]" ""
+		"momRN1.placeHolderList[1726]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02.rotateY" 
-		"momRN1.placeHolderList[1181]" ""
+		"momRN1.placeHolderList[1727]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02.rotateZ" 
-		"momRN1.placeHolderList[1182]" ""
+		"momRN1.placeHolderList[1728]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02.visibility" 
-		"momRN1.placeHolderList[1183]" ""
+		"momRN1.placeHolderList[1729]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03.rotateX" 
-		"momRN1.placeHolderList[1184]" ""
+		"momRN1.placeHolderList[1730]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03.rotateY" 
-		"momRN1.placeHolderList[1185]" ""
+		"momRN1.placeHolderList[1731]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03.rotateZ" 
-		"momRN1.placeHolderList[1186]" ""
+		"momRN1.placeHolderList[1732]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03.visibility" 
-		"momRN1.placeHolderList[1187]" ""
+		"momRN1.placeHolderList[1733]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.translateX" 
-		"momRN1.placeHolderList[1188]" ""
+		"momRN1.placeHolderList[1734]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.translateY" 
-		"momRN1.placeHolderList[1189]" ""
+		"momRN1.placeHolderList[1735]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.translateZ" 
-		"momRN1.placeHolderList[1190]" ""
+		"momRN1.placeHolderList[1736]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.rotateX" 
-		"momRN1.placeHolderList[1191]" ""
+		"momRN1.placeHolderList[1737]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.rotateY" 
-		"momRN1.placeHolderList[1192]" ""
+		"momRN1.placeHolderList[1738]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.rotateZ" 
-		"momRN1.placeHolderList[1193]" ""
+		"momRN1.placeHolderList[1739]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.visibility" 
-		"momRN1.placeHolderList[1194]" ""
+		"momRN1.placeHolderList[1740]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.scaleX" 
-		"momRN1.placeHolderList[1195]" ""
+		"momRN1.placeHolderList[1741]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.scaleY" 
-		"momRN1.placeHolderList[1196]" ""
+		"momRN1.placeHolderList[1742]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl.scaleZ" 
-		"momRN1.placeHolderList[1197]" ""
+		"momRN1.placeHolderList[1743]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_foot_ctrl|mom2:mom_skeleton:mom_l_toe_ptr.rotateX" 
-		"momRN1.placeHolderList[1198]" ""
+		"momRN1.placeHolderList[1744]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.translateX" 
-		"momRN1.placeHolderList[1199]" ""
+		"momRN1.placeHolderList[1745]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.translateY" 
-		"momRN1.placeHolderList[1200]" ""
+		"momRN1.placeHolderList[1746]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.translateZ" 
-		"momRN1.placeHolderList[1201]" ""
+		"momRN1.placeHolderList[1747]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.rotateX" 
-		"momRN1.placeHolderList[1202]" ""
+		"momRN1.placeHolderList[1748]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.rotateY" 
-		"momRN1.placeHolderList[1203]" ""
+		"momRN1.placeHolderList[1749]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.rotateZ" 
-		"momRN1.placeHolderList[1204]" ""
+		"momRN1.placeHolderList[1750]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.visibility" 
-		"momRN1.placeHolderList[1205]" ""
+		"momRN1.placeHolderList[1751]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.scaleX" 
-		"momRN1.placeHolderList[1206]" ""
+		"momRN1.placeHolderList[1752]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.scaleY" 
-		"momRN1.placeHolderList[1207]" ""
+		"momRN1.placeHolderList[1753]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_r_foot_ctrl.scaleZ" 
-		"momRN1.placeHolderList[1208]" ""
+		"momRN1.placeHolderList[1754]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.translateX" 
-		"momRN1.placeHolderList[1209]" ""
+		"momRN1.placeHolderList[1755]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.translateY" 
-		"momRN1.placeHolderList[1210]" ""
+		"momRN1.placeHolderList[1756]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.translateZ" 
-		"momRN1.placeHolderList[1211]" ""
+		"momRN1.placeHolderList[1757]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.rotateX" 
-		"momRN1.placeHolderList[1212]" ""
+		"momRN1.placeHolderList[1758]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.rotateY" 
-		"momRN1.placeHolderList[1213]" ""
+		"momRN1.placeHolderList[1759]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.rotateZ" 
-		"momRN1.placeHolderList[1214]" ""
+		"momRN1.placeHolderList[1760]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl.visibility" 
-		"momRN1.placeHolderList[1215]" ""
+		"momRN1.placeHolderList[1761]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.visibility" 
-		"momRN1.placeHolderList[1216]" ""
+		"momRN1.placeHolderList[1762]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.translateX" 
-		"momRN1.placeHolderList[1217]" ""
+		"momRN1.placeHolderList[1763]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.translateY" 
-		"momRN1.placeHolderList[1218]" ""
+		"momRN1.placeHolderList[1764]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.translateZ" 
-		"momRN1.placeHolderList[1219]" ""
+		"momRN1.placeHolderList[1765]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.rotateX" 
-		"momRN1.placeHolderList[1220]" ""
+		"momRN1.placeHolderList[1766]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.rotateY" 
-		"momRN1.placeHolderList[1221]" ""
+		"momRN1.placeHolderList[1767]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.rotateZ" 
-		"momRN1.placeHolderList[1222]" ""
+		"momRN1.placeHolderList[1768]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.scaleX" 
-		"momRN1.placeHolderList[1223]" ""
+		"momRN1.placeHolderList[1769]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.scaleY" 
-		"momRN1.placeHolderList[1224]" ""
+		"momRN1.placeHolderList[1770]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01.scaleZ" 
-		"momRN1.placeHolderList[1225]" ""
+		"momRN1.placeHolderList[1771]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01.rotateX" 
-		"momRN1.placeHolderList[1226]" ""
+		"momRN1.placeHolderList[1772]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01.rotateY" 
-		"momRN1.placeHolderList[1227]" ""
+		"momRN1.placeHolderList[1773]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01.rotateZ" 
-		"momRN1.placeHolderList[1228]" ""
+		"momRN1.placeHolderList[1774]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01.visibility" 
-		"momRN1.placeHolderList[1229]" ""
+		"momRN1.placeHolderList[1775]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.visibility" 
-		"momRN1.placeHolderList[1230]" ""
+		"momRN1.placeHolderList[1776]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.translateX" 
-		"momRN1.placeHolderList[1231]" ""
+		"momRN1.placeHolderList[1777]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.translateY" 
-		"momRN1.placeHolderList[1232]" ""
+		"momRN1.placeHolderList[1778]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.translateZ" 
-		"momRN1.placeHolderList[1233]" ""
+		"momRN1.placeHolderList[1779]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.rotateX" 
-		"momRN1.placeHolderList[1234]" ""
+		"momRN1.placeHolderList[1780]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.rotateY" 
-		"momRN1.placeHolderList[1235]" ""
+		"momRN1.placeHolderList[1781]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.rotateZ" 
-		"momRN1.placeHolderList[1236]" ""
+		"momRN1.placeHolderList[1782]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.scaleX" 
-		"momRN1.placeHolderList[1237]" ""
+		"momRN1.placeHolderList[1783]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.scaleY" 
-		"momRN1.placeHolderList[1238]" ""
+		"momRN1.placeHolderList[1784]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02.scaleZ" 
-		"momRN1.placeHolderList[1239]" ""
+		"momRN1.placeHolderList[1785]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02.rotateX" 
-		"momRN1.placeHolderList[1240]" ""
+		"momRN1.placeHolderList[1786]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02.rotateY" 
-		"momRN1.placeHolderList[1241]" ""
+		"momRN1.placeHolderList[1787]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02.rotateZ" 
-		"momRN1.placeHolderList[1242]" ""
+		"momRN1.placeHolderList[1788]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02.visibility" 
-		"momRN1.placeHolderList[1243]" ""
+		"momRN1.placeHolderList[1789]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.visibility" 
-		"momRN1.placeHolderList[1244]" ""
+		"momRN1.placeHolderList[1790]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.translateX" 
-		"momRN1.placeHolderList[1245]" ""
+		"momRN1.placeHolderList[1791]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.translateY" 
-		"momRN1.placeHolderList[1246]" ""
+		"momRN1.placeHolderList[1792]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.translateZ" 
-		"momRN1.placeHolderList[1247]" ""
+		"momRN1.placeHolderList[1793]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.rotateX" 
-		"momRN1.placeHolderList[1248]" ""
+		"momRN1.placeHolderList[1794]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.rotateY" 
-		"momRN1.placeHolderList[1249]" ""
+		"momRN1.placeHolderList[1795]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.rotateZ" 
-		"momRN1.placeHolderList[1250]" ""
+		"momRN1.placeHolderList[1796]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.scaleX" 
-		"momRN1.placeHolderList[1251]" ""
+		"momRN1.placeHolderList[1797]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.scaleY" 
-		"momRN1.placeHolderList[1252]" ""
+		"momRN1.placeHolderList[1798]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03.scaleZ" 
-		"momRN1.placeHolderList[1253]" ""
+		"momRN1.placeHolderList[1799]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03.rotateX" 
-		"momRN1.placeHolderList[1254]" ""
+		"momRN1.placeHolderList[1800]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03.rotateY" 
-		"momRN1.placeHolderList[1255]" ""
+		"momRN1.placeHolderList[1801]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03.rotateZ" 
-		"momRN1.placeHolderList[1256]" ""
+		"momRN1.placeHolderList[1802]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03.visibility" 
-		"momRN1.placeHolderList[1257]" ""
+		"momRN1.placeHolderList[1803]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.visibility" 
-		"momRN1.placeHolderList[1258]" ""
+		"momRN1.placeHolderList[1804]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.translateX" 
-		"momRN1.placeHolderList[1259]" ""
+		"momRN1.placeHolderList[1805]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.translateY" 
-		"momRN1.placeHolderList[1260]" ""
+		"momRN1.placeHolderList[1806]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.translateZ" 
-		"momRN1.placeHolderList[1261]" ""
+		"momRN1.placeHolderList[1807]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.rotateX" 
-		"momRN1.placeHolderList[1262]" ""
+		"momRN1.placeHolderList[1808]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.rotateY" 
-		"momRN1.placeHolderList[1263]" ""
+		"momRN1.placeHolderList[1809]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.rotateZ" 
-		"momRN1.placeHolderList[1264]" ""
+		"momRN1.placeHolderList[1810]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.scaleX" 
-		"momRN1.placeHolderList[1265]" ""
+		"momRN1.placeHolderList[1811]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.scaleY" 
-		"momRN1.placeHolderList[1266]" ""
+		"momRN1.placeHolderList[1812]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04.scaleZ" 
-		"momRN1.placeHolderList[1267]" ""
+		"momRN1.placeHolderList[1813]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04.rotateX" 
-		"momRN1.placeHolderList[1268]" ""
+		"momRN1.placeHolderList[1814]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04.rotateY" 
-		"momRN1.placeHolderList[1269]" ""
+		"momRN1.placeHolderList[1815]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04.rotateZ" 
-		"momRN1.placeHolderList[1270]" ""
+		"momRN1.placeHolderList[1816]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04.visibility" 
-		"momRN1.placeHolderList[1271]" ""
+		"momRN1.placeHolderList[1817]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.visibility" 
-		"momRN1.placeHolderList[1272]" ""
+		"momRN1.placeHolderList[1818]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.translateX" 
-		"momRN1.placeHolderList[1273]" ""
+		"momRN1.placeHolderList[1819]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.translateY" 
-		"momRN1.placeHolderList[1274]" ""
+		"momRN1.placeHolderList[1820]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.translateZ" 
-		"momRN1.placeHolderList[1275]" ""
+		"momRN1.placeHolderList[1821]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.rotateX" 
-		"momRN1.placeHolderList[1276]" ""
+		"momRN1.placeHolderList[1822]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.rotateY" 
-		"momRN1.placeHolderList[1277]" ""
+		"momRN1.placeHolderList[1823]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.rotateZ" 
-		"momRN1.placeHolderList[1278]" ""
+		"momRN1.placeHolderList[1824]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.scaleX" 
-		"momRN1.placeHolderList[1279]" ""
+		"momRN1.placeHolderList[1825]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.scaleY" 
-		"momRN1.placeHolderList[1280]" ""
+		"momRN1.placeHolderList[1826]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1.scaleZ" 
-		"momRN1.placeHolderList[1281]" ""
+		"momRN1.placeHolderList[1827]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl.mom_boob_correct_lft" 
-		"momRN1.placeHolderList[1282]" ""
+		"momRN1.placeHolderList[1828]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl.mom_boob_correct_rgt" 
-		"momRN1.placeHolderList[1283]" ""
+		"momRN1.placeHolderList[1829]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl.rotateX" 
-		"momRN1.placeHolderList[1284]" ""
+		"momRN1.placeHolderList[1830]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl.rotateY" 
-		"momRN1.placeHolderList[1285]" ""
+		"momRN1.placeHolderList[1831]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl.rotateZ" 
-		"momRN1.placeHolderList[1286]" ""
+		"momRN1.placeHolderList[1832]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl.visibility" 
-		"momRN1.placeHolderList[1287]" ""
+		"momRN1.placeHolderList[1833]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.visibility" 
-		"momRN1.placeHolderList[1288]" ""
+		"momRN1.placeHolderList[1834]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.translateX" 
-		"momRN1.placeHolderList[1289]" ""
+		"momRN1.placeHolderList[1835]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.translateY" 
-		"momRN1.placeHolderList[1290]" ""
+		"momRN1.placeHolderList[1836]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.translateZ" 
-		"momRN1.placeHolderList[1291]" ""
+		"momRN1.placeHolderList[1837]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.rotateX" 
-		"momRN1.placeHolderList[1292]" ""
+		"momRN1.placeHolderList[1838]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.rotateY" 
-		"momRN1.placeHolderList[1293]" ""
+		"momRN1.placeHolderList[1839]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.rotateZ" 
-		"momRN1.placeHolderList[1294]" ""
+		"momRN1.placeHolderList[1840]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.scaleX" 
-		"momRN1.placeHolderList[1295]" ""
+		"momRN1.placeHolderList[1841]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.scaleY" 
-		"momRN1.placeHolderList[1296]" ""
+		"momRN1.placeHolderList[1842]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L.scaleZ" 
-		"momRN1.placeHolderList[1297]" ""
+		"momRN1.placeHolderList[1843]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.visibility" 
-		"momRN1.placeHolderList[1298]" ""
+		"momRN1.placeHolderList[1844]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.translateX" 
-		"momRN1.placeHolderList[1299]" ""
+		"momRN1.placeHolderList[1845]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.translateY" 
-		"momRN1.placeHolderList[1300]" ""
+		"momRN1.placeHolderList[1846]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.translateZ" 
-		"momRN1.placeHolderList[1301]" ""
+		"momRN1.placeHolderList[1847]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.rotateX" 
-		"momRN1.placeHolderList[1302]" ""
+		"momRN1.placeHolderList[1848]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.rotateY" 
-		"momRN1.placeHolderList[1303]" ""
+		"momRN1.placeHolderList[1849]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.rotateZ" 
-		"momRN1.placeHolderList[1304]" ""
+		"momRN1.placeHolderList[1850]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.scaleX" 
-		"momRN1.placeHolderList[1305]" ""
+		"momRN1.placeHolderList[1851]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.scaleY" 
-		"momRN1.placeHolderList[1306]" ""
+		"momRN1.placeHolderList[1852]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.scaleZ" 
-		"momRN1.placeHolderList[1307]" ""
+		"momRN1.placeHolderList[1853]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.poleVectorX" 
-		"momRN1.placeHolderList[1308]" ""
+		"momRN1.placeHolderList[1854]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.poleVectorY" 
-		"momRN1.placeHolderList[1309]" ""
+		"momRN1.placeHolderList[1855]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.poleVectorZ" 
-		"momRN1.placeHolderList[1310]" ""
+		"momRN1.placeHolderList[1856]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.offset" 
-		"momRN1.placeHolderList[1311]" ""
+		"momRN1.placeHolderList[1857]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.roll" 
-		"momRN1.placeHolderList[1312]" ""
+		"momRN1.placeHolderList[1858]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.twist" 
-		"momRN1.placeHolderList[1313]" ""
+		"momRN1.placeHolderList[1859]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L|mom2:ikHandle3.ikBlend" 
-		"momRN1.placeHolderList[1314]" ""
+		"momRN1.placeHolderList[1860]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.translateX" 
-		"momRN1.placeHolderList[1315]" ""
+		"momRN1.placeHolderList[1861]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.translateY" 
-		"momRN1.placeHolderList[1316]" ""
+		"momRN1.placeHolderList[1862]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.translateZ" 
-		"momRN1.placeHolderList[1317]" ""
+		"momRN1.placeHolderList[1863]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.rotateX" 
-		"momRN1.placeHolderList[1318]" ""
+		"momRN1.placeHolderList[1864]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.rotateY" 
-		"momRN1.placeHolderList[1319]" ""
+		"momRN1.placeHolderList[1865]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.rotateZ" 
-		"momRN1.placeHolderList[1320]" ""
+		"momRN1.placeHolderList[1866]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.visibility" 
-		"momRN1.placeHolderList[1321]" ""
+		"momRN1.placeHolderList[1867]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.scaleX" 
-		"momRN1.placeHolderList[1322]" ""
+		"momRN1.placeHolderList[1868]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.scaleY" 
-		"momRN1.placeHolderList[1323]" ""
+		"momRN1.placeHolderList[1869]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R.scaleZ" 
-		"momRN1.placeHolderList[1324]" ""
+		"momRN1.placeHolderList[1870]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.visibility" 
-		"momRN1.placeHolderList[1325]" ""
+		"momRN1.placeHolderList[1871]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.translateX" 
-		"momRN1.placeHolderList[1326]" ""
+		"momRN1.placeHolderList[1872]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.translateY" 
-		"momRN1.placeHolderList[1327]" ""
+		"momRN1.placeHolderList[1873]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.translateZ" 
-		"momRN1.placeHolderList[1328]" ""
+		"momRN1.placeHolderList[1874]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.rotateX" 
-		"momRN1.placeHolderList[1329]" ""
+		"momRN1.placeHolderList[1875]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.rotateY" 
-		"momRN1.placeHolderList[1330]" ""
+		"momRN1.placeHolderList[1876]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.rotateZ" 
-		"momRN1.placeHolderList[1331]" ""
+		"momRN1.placeHolderList[1877]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.scaleX" 
-		"momRN1.placeHolderList[1332]" ""
+		"momRN1.placeHolderList[1878]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.scaleY" 
-		"momRN1.placeHolderList[1333]" ""
+		"momRN1.placeHolderList[1879]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.scaleZ" 
-		"momRN1.placeHolderList[1334]" ""
+		"momRN1.placeHolderList[1880]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.poleVectorX" 
-		"momRN1.placeHolderList[1335]" ""
+		"momRN1.placeHolderList[1881]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.poleVectorY" 
-		"momRN1.placeHolderList[1336]" ""
+		"momRN1.placeHolderList[1882]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.poleVectorZ" 
-		"momRN1.placeHolderList[1337]" ""
+		"momRN1.placeHolderList[1883]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.offset" 
-		"momRN1.placeHolderList[1338]" ""
+		"momRN1.placeHolderList[1884]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.roll" 
-		"momRN1.placeHolderList[1339]" ""
+		"momRN1.placeHolderList[1885]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.twist" 
-		"momRN1.placeHolderList[1340]" ""
+		"momRN1.placeHolderList[1886]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R|mom2:ikHandle4.ikBlend" 
-		"momRN1.placeHolderList[1341]" ""
+		"momRN1.placeHolderList[1887]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.visibility" 
-		"momRN1.placeHolderList[1342]" ""
+		"momRN1.placeHolderList[1888]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.translateX" 
-		"momRN1.placeHolderList[1343]" ""
+		"momRN1.placeHolderList[1889]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.translateY" 
-		"momRN1.placeHolderList[1344]" ""
+		"momRN1.placeHolderList[1890]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.translateZ" 
-		"momRN1.placeHolderList[1345]" ""
+		"momRN1.placeHolderList[1891]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.rotateX" 
-		"momRN1.placeHolderList[1346]" ""
+		"momRN1.placeHolderList[1892]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.rotateY" 
-		"momRN1.placeHolderList[1347]" ""
+		"momRN1.placeHolderList[1893]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.rotateZ" 
-		"momRN1.placeHolderList[1348]" ""
+		"momRN1.placeHolderList[1894]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.scaleX" 
-		"momRN1.placeHolderList[1349]" ""
+		"momRN1.placeHolderList[1895]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.scaleY" 
-		"momRN1.placeHolderList[1350]" ""
+		"momRN1.placeHolderList[1896]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01.scaleZ" 
-		"momRN1.placeHolderList[1351]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.translateX" 
-		"momRN1.placeHolderList[1352]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.translateY" 
-		"momRN1.placeHolderList[1353]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.translateZ" 
-		"momRN1.placeHolderList[1354]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.visibility" 
-		"momRN1.placeHolderList[1355]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.rotateX" 
-		"momRN1.placeHolderList[1356]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.rotateY" 
-		"momRN1.placeHolderList[1357]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.rotateZ" 
-		"momRN1.placeHolderList[1358]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.scaleX" 
-		"momRN1.placeHolderList[1359]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.scaleY" 
-		"momRN1.placeHolderList[1360]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1.scaleZ" 
-		"momRN1.placeHolderList[1361]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.translateX" 
-		"momRN1.placeHolderList[1362]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.translateY" 
-		"momRN1.placeHolderList[1363]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.translateZ" 
-		"momRN1.placeHolderList[1364]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.visibility" 
-		"momRN1.placeHolderList[1365]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.rotateX" 
-		"momRN1.placeHolderList[1366]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.rotateY" 
-		"momRN1.placeHolderList[1367]" ""
-		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace:necklace1|mom2:necklace:master_ctrl|mom2:necklace:bot_mid_ctrl.rotateZ" 
-		"momRN1.placeHolderList[1368]" ""
+		"momRN1.placeHolderList[1897]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.translateX" 
+		"momRN1.placeHolderList[1898]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.translateY" 
+		"momRN1.placeHolderList[1899]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.translateZ" 
+		"momRN1.placeHolderList[1900]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.rotateX" 
+		"momRN1.placeHolderList[1901]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.rotateY" 
+		"momRN1.placeHolderList[1902]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.rotateZ" 
+		"momRN1.placeHolderList[1903]" ""
+		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl.visibility" 
+		"momRN1.placeHolderList[1904]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.mom_gulp_top" 
-		"momRN1.placeHolderList[1369]" ""
+		"momRN1.placeHolderList[1905]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.mom_gulp_mid" 
-		"momRN1.placeHolderList[1370]" ""
+		"momRN1.placeHolderList[1906]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.mom_gulp_bot" 
-		"momRN1.placeHolderList[1371]" ""
+		"momRN1.placeHolderList[1907]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.rotateX" 
-		"momRN1.placeHolderList[1372]" ""
+		"momRN1.placeHolderList[1908]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.rotateY" 
-		"momRN1.placeHolderList[1373]" ""
+		"momRN1.placeHolderList[1909]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.rotateZ" 
-		"momRN1.placeHolderList[1374]" ""
+		"momRN1.placeHolderList[1910]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.visibility" 
-		"momRN1.placeHolderList[1375]" ""
+		"momRN1.placeHolderList[1911]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.translateX" 
-		"momRN1.placeHolderList[1376]" ""
+		"momRN1.placeHolderList[1912]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.translateY" 
-		"momRN1.placeHolderList[1377]" ""
+		"momRN1.placeHolderList[1913]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.translateZ" 
-		"momRN1.placeHolderList[1378]" ""
+		"momRN1.placeHolderList[1914]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.scaleX" 
-		"momRN1.placeHolderList[1379]" ""
+		"momRN1.placeHolderList[1915]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.scaleY" 
-		"momRN1.placeHolderList[1380]" ""
+		"momRN1.placeHolderList[1916]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01.scaleZ" 
-		"momRN1.placeHolderList[1381]" ""
+		"momRN1.placeHolderList[1917]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.visibility" 
-		"momRN1.placeHolderList[1382]" ""
+		"momRN1.placeHolderList[1918]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.translateX" 
-		"momRN1.placeHolderList[1383]" ""
+		"momRN1.placeHolderList[1919]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.translateY" 
-		"momRN1.placeHolderList[1384]" ""
+		"momRN1.placeHolderList[1920]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.translateZ" 
-		"momRN1.placeHolderList[1385]" ""
+		"momRN1.placeHolderList[1921]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.rotateX" 
-		"momRN1.placeHolderList[1386]" ""
+		"momRN1.placeHolderList[1922]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.rotateY" 
-		"momRN1.placeHolderList[1387]" ""
+		"momRN1.placeHolderList[1923]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.rotateZ" 
-		"momRN1.placeHolderList[1388]" ""
+		"momRN1.placeHolderList[1924]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.scaleX" 
-		"momRN1.placeHolderList[1389]" ""
+		"momRN1.placeHolderList[1925]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.scaleY" 
-		"momRN1.placeHolderList[1390]" ""
+		"momRN1.placeHolderList[1926]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02.scaleZ" 
-		"momRN1.placeHolderList[1391]" ""
+		"momRN1.placeHolderList[1927]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.rotateX" 
-		"momRN1.placeHolderList[1392]" ""
+		"momRN1.placeHolderList[1928]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.rotateY" 
-		"momRN1.placeHolderList[1393]" ""
+		"momRN1.placeHolderList[1929]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.rotateZ" 
-		"momRN1.placeHolderList[1394]" ""
+		"momRN1.placeHolderList[1930]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.visibility" 
-		"momRN1.placeHolderList[1395]" ""
+		"momRN1.placeHolderList[1931]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.translateX" 
-		"momRN1.placeHolderList[1396]" ""
+		"momRN1.placeHolderList[1932]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.translateY" 
-		"momRN1.placeHolderList[1397]" ""
+		"momRN1.placeHolderList[1933]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.translateZ" 
-		"momRN1.placeHolderList[1398]" ""
+		"momRN1.placeHolderList[1934]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.scaleX" 
-		"momRN1.placeHolderList[1399]" ""
+		"momRN1.placeHolderList[1935]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.scaleY" 
-		"momRN1.placeHolderList[1400]" ""
+		"momRN1.placeHolderList[1936]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02.scaleZ" 
-		"momRN1.placeHolderList[1401]" ""
+		"momRN1.placeHolderList[1937]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.visibility" 
-		"momRN1.placeHolderList[1402]" ""
+		"momRN1.placeHolderList[1938]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.translateX" 
-		"momRN1.placeHolderList[1403]" ""
+		"momRN1.placeHolderList[1939]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.translateY" 
-		"momRN1.placeHolderList[1404]" ""
+		"momRN1.placeHolderList[1940]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.translateZ" 
-		"momRN1.placeHolderList[1405]" ""
+		"momRN1.placeHolderList[1941]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.rotateX" 
-		"momRN1.placeHolderList[1406]" ""
+		"momRN1.placeHolderList[1942]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.rotateY" 
-		"momRN1.placeHolderList[1407]" ""
+		"momRN1.placeHolderList[1943]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.rotateZ" 
-		"momRN1.placeHolderList[1408]" ""
+		"momRN1.placeHolderList[1944]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.scaleX" 
-		"momRN1.placeHolderList[1409]" ""
+		"momRN1.placeHolderList[1945]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.scaleY" 
-		"momRN1.placeHolderList[1410]" ""
+		"momRN1.placeHolderList[1946]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset.scaleZ" 
-		"momRN1.placeHolderList[1411]" ""
+		"momRN1.placeHolderList[1947]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr.visibility" 
-		"momRN1.placeHolderList[1412]" ""
+		"momRN1.placeHolderList[1948]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr.translateX" 
-		"momRN1.placeHolderList[1413]" ""
+		"momRN1.placeHolderList[1949]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr.translateY" 
-		"momRN1.placeHolderList[1414]" ""
+		"momRN1.placeHolderList[1950]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr.translateZ" 
-		"momRN1.placeHolderList[1415]" ""
+		"momRN1.placeHolderList[1951]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr.Blink" 
-		"momRN1.placeHolderList[1416]" ""
+		"momRN1.placeHolderList[1952]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr.translateX" 
-		"momRN1.placeHolderList[1417]" ""
+		"momRN1.placeHolderList[1953]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr.translateY" 
-		"momRN1.placeHolderList[1418]" ""
+		"momRN1.placeHolderList[1954]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr.translateZ" 
-		"momRN1.placeHolderList[1419]" ""
+		"momRN1.placeHolderList[1955]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr.visibility" 
-		"momRN1.placeHolderList[1420]" ""
+		"momRN1.placeHolderList[1956]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr.Blink" 
-		"momRN1.placeHolderList[1421]" ""
+		"momRN1.placeHolderList[1957]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr.translateX" 
-		"momRN1.placeHolderList[1422]" ""
+		"momRN1.placeHolderList[1958]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr.translateY" 
-		"momRN1.placeHolderList[1423]" ""
+		"momRN1.placeHolderList[1959]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr.translateZ" 
-		"momRN1.placeHolderList[1424]" ""
+		"momRN1.placeHolderList[1960]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr.visibility" 
-		"momRN1.placeHolderList[1425]" ""
+		"momRN1.placeHolderList[1961]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.visibility" 
-		"momRN1.placeHolderList[1426]" ""
+		"momRN1.placeHolderList[1962]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.translateX" 
-		"momRN1.placeHolderList[1427]" ""
+		"momRN1.placeHolderList[1963]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.translateY" 
-		"momRN1.placeHolderList[1428]" ""
+		"momRN1.placeHolderList[1964]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.translateZ" 
-		"momRN1.placeHolderList[1429]" ""
+		"momRN1.placeHolderList[1965]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.rotateX" 
-		"momRN1.placeHolderList[1430]" ""
+		"momRN1.placeHolderList[1966]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.rotateY" 
-		"momRN1.placeHolderList[1431]" ""
+		"momRN1.placeHolderList[1967]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.rotateZ" 
-		"momRN1.placeHolderList[1432]" ""
+		"momRN1.placeHolderList[1968]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.scaleX" 
-		"momRN1.placeHolderList[1433]" ""
+		"momRN1.placeHolderList[1969]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.scaleY" 
-		"momRN1.placeHolderList[1434]" ""
+		"momRN1.placeHolderList[1970]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset.scaleZ" 
-		"momRN1.placeHolderList[1435]" ""
+		"momRN1.placeHolderList[1971]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl.translateX" 
-		"momRN1.placeHolderList[1436]" ""
+		"momRN1.placeHolderList[1972]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl.translateY" 
-		"momRN1.placeHolderList[1437]" ""
+		"momRN1.placeHolderList[1973]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl.visibility" 
-		"momRN1.placeHolderList[1438]" ""
+		"momRN1.placeHolderList[1974]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.visibility" 
-		"momRN1.placeHolderList[1439]" ""
+		"momRN1.placeHolderList[1975]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.translateX" 
-		"momRN1.placeHolderList[1440]" ""
+		"momRN1.placeHolderList[1976]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.translateY" 
-		"momRN1.placeHolderList[1441]" ""
+		"momRN1.placeHolderList[1977]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.translateZ" 
-		"momRN1.placeHolderList[1442]" ""
+		"momRN1.placeHolderList[1978]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.rotateX" 
-		"momRN1.placeHolderList[1443]" ""
+		"momRN1.placeHolderList[1979]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.rotateY" 
-		"momRN1.placeHolderList[1444]" ""
+		"momRN1.placeHolderList[1980]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.rotateZ" 
-		"momRN1.placeHolderList[1445]" ""
+		"momRN1.placeHolderList[1981]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.scaleX" 
-		"momRN1.placeHolderList[1446]" ""
+		"momRN1.placeHolderList[1982]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.scaleY" 
-		"momRN1.placeHolderList[1447]" ""
+		"momRN1.placeHolderList[1983]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R.scaleZ" 
-		"momRN1.placeHolderList[1448]" ""
+		"momRN1.placeHolderList[1984]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1449]" ""
+		"momRN1.placeHolderList[1985]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.translateX" 
-		"momRN1.placeHolderList[1450]" ""
+		"momRN1.placeHolderList[1986]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1451]" ""
+		"momRN1.placeHolderList[1987]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.translateZ" 
-		"momRN1.placeHolderList[1452]" ""
+		"momRN1.placeHolderList[1988]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.rotateX" 
-		"momRN1.placeHolderList[1453]" ""
+		"momRN1.placeHolderList[1989]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.rotateY" 
-		"momRN1.placeHolderList[1454]" ""
+		"momRN1.placeHolderList[1990]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.rotateZ" 
-		"momRN1.placeHolderList[1455]" ""
+		"momRN1.placeHolderList[1991]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.scaleX" 
-		"momRN1.placeHolderList[1456]" ""
+		"momRN1.placeHolderList[1992]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.scaleY" 
-		"momRN1.placeHolderList[1457]" ""
+		"momRN1.placeHolderList[1993]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R.scaleZ" 
-		"momRN1.placeHolderList[1458]" ""
+		"momRN1.placeHolderList[1994]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R|mom2:OuterBrow_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1459]" ""
+		"momRN1.placeHolderList[1995]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R|mom2:OuterBrow_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1460]" ""
+		"momRN1.placeHolderList[1996]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1461]" ""
+		"momRN1.placeHolderList[1997]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.translateX" 
-		"momRN1.placeHolderList[1462]" ""
+		"momRN1.placeHolderList[1998]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1463]" ""
+		"momRN1.placeHolderList[1999]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.translateZ" 
-		"momRN1.placeHolderList[1464]" ""
+		"momRN1.placeHolderList[2000]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.rotateX" 
-		"momRN1.placeHolderList[1465]" ""
+		"momRN1.placeHolderList[2001]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.rotateY" 
-		"momRN1.placeHolderList[1466]" ""
+		"momRN1.placeHolderList[2002]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.rotateZ" 
-		"momRN1.placeHolderList[1467]" ""
+		"momRN1.placeHolderList[2003]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.scaleX" 
-		"momRN1.placeHolderList[1468]" ""
+		"momRN1.placeHolderList[2004]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.scaleY" 
-		"momRN1.placeHolderList[1469]" ""
+		"momRN1.placeHolderList[2005]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R.scaleZ" 
-		"momRN1.placeHolderList[1470]" ""
+		"momRN1.placeHolderList[2006]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R|mom2:MidBrow_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1471]" ""
+		"momRN1.placeHolderList[2007]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R|mom2:MidBrow_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1472]" ""
+		"momRN1.placeHolderList[2008]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1473]" ""
+		"momRN1.placeHolderList[2009]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.translateX" 
-		"momRN1.placeHolderList[1474]" ""
+		"momRN1.placeHolderList[2010]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1475]" ""
+		"momRN1.placeHolderList[2011]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.translateZ" 
-		"momRN1.placeHolderList[1476]" ""
+		"momRN1.placeHolderList[2012]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.rotateX" 
-		"momRN1.placeHolderList[1477]" ""
+		"momRN1.placeHolderList[2013]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.rotateY" 
-		"momRN1.placeHolderList[1478]" ""
+		"momRN1.placeHolderList[2014]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.rotateZ" 
-		"momRN1.placeHolderList[1479]" ""
+		"momRN1.placeHolderList[2015]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.scaleX" 
-		"momRN1.placeHolderList[1480]" ""
+		"momRN1.placeHolderList[2016]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.scaleY" 
-		"momRN1.placeHolderList[1481]" ""
+		"momRN1.placeHolderList[2017]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R.scaleZ" 
-		"momRN1.placeHolderList[1482]" ""
+		"momRN1.placeHolderList[2018]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1483]" ""
+		"momRN1.placeHolderList[2019]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R.translateX" 
-		"momRN1.placeHolderList[1484]" ""
+		"momRN1.placeHolderList[2020]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R.translateZ" 
-		"momRN1.placeHolderList[1485]" ""
+		"momRN1.placeHolderList[2021]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1486]" ""
+		"momRN1.placeHolderList[2022]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl.translateX" 
-		"momRN1.placeHolderList[1487]" ""
+		"momRN1.placeHolderList[2023]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl.translateY" 
-		"momRN1.placeHolderList[1488]" ""
+		"momRN1.placeHolderList[2024]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl.visibility" 
-		"momRN1.placeHolderList[1489]" ""
+		"momRN1.placeHolderList[2025]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.visibility" 
-		"momRN1.placeHolderList[1490]" ""
+		"momRN1.placeHolderList[2026]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.translateX" 
-		"momRN1.placeHolderList[1491]" ""
+		"momRN1.placeHolderList[2027]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.translateY" 
-		"momRN1.placeHolderList[1492]" ""
+		"momRN1.placeHolderList[2028]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.translateZ" 
-		"momRN1.placeHolderList[1493]" ""
+		"momRN1.placeHolderList[2029]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.rotateX" 
-		"momRN1.placeHolderList[1494]" ""
+		"momRN1.placeHolderList[2030]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.rotateY" 
-		"momRN1.placeHolderList[1495]" ""
+		"momRN1.placeHolderList[2031]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.rotateZ" 
-		"momRN1.placeHolderList[1496]" ""
+		"momRN1.placeHolderList[2032]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.scaleX" 
-		"momRN1.placeHolderList[1497]" ""
+		"momRN1.placeHolderList[2033]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.scaleY" 
-		"momRN1.placeHolderList[1498]" ""
+		"momRN1.placeHolderList[2034]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L.scaleZ" 
-		"momRN1.placeHolderList[1499]" ""
+		"momRN1.placeHolderList[2035]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1500]" ""
+		"momRN1.placeHolderList[2036]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.translateX" 
-		"momRN1.placeHolderList[1501]" ""
+		"momRN1.placeHolderList[2037]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1502]" ""
+		"momRN1.placeHolderList[2038]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.translateZ" 
-		"momRN1.placeHolderList[1503]" ""
+		"momRN1.placeHolderList[2039]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.rotateX" 
-		"momRN1.placeHolderList[1504]" ""
+		"momRN1.placeHolderList[2040]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.rotateY" 
-		"momRN1.placeHolderList[1505]" ""
+		"momRN1.placeHolderList[2041]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.rotateZ" 
-		"momRN1.placeHolderList[1506]" ""
+		"momRN1.placeHolderList[2042]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.scaleX" 
-		"momRN1.placeHolderList[1507]" ""
+		"momRN1.placeHolderList[2043]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.scaleY" 
-		"momRN1.placeHolderList[1508]" ""
+		"momRN1.placeHolderList[2044]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L.scaleZ" 
-		"momRN1.placeHolderList[1509]" ""
+		"momRN1.placeHolderList[2045]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L|mom2:OuterBrow_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1510]" ""
+		"momRN1.placeHolderList[2046]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L|mom2:OuterBrow_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1511]" ""
+		"momRN1.placeHolderList[2047]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1512]" ""
+		"momRN1.placeHolderList[2048]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.translateX" 
-		"momRN1.placeHolderList[1513]" ""
+		"momRN1.placeHolderList[2049]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1514]" ""
+		"momRN1.placeHolderList[2050]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.translateZ" 
-		"momRN1.placeHolderList[1515]" ""
+		"momRN1.placeHolderList[2051]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.rotateX" 
-		"momRN1.placeHolderList[1516]" ""
+		"momRN1.placeHolderList[2052]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.rotateY" 
-		"momRN1.placeHolderList[1517]" ""
+		"momRN1.placeHolderList[2053]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.rotateZ" 
-		"momRN1.placeHolderList[1518]" ""
+		"momRN1.placeHolderList[2054]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.scaleX" 
-		"momRN1.placeHolderList[1519]" ""
+		"momRN1.placeHolderList[2055]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.scaleY" 
-		"momRN1.placeHolderList[1520]" ""
+		"momRN1.placeHolderList[2056]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L.scaleZ" 
-		"momRN1.placeHolderList[1521]" ""
+		"momRN1.placeHolderList[2057]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L|mom2:MidBrow_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1522]" ""
+		"momRN1.placeHolderList[2058]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L|mom2:MidBrow_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1523]" ""
+		"momRN1.placeHolderList[2059]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1524]" ""
+		"momRN1.placeHolderList[2060]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.translateX" 
-		"momRN1.placeHolderList[1525]" ""
+		"momRN1.placeHolderList[2061]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1526]" ""
+		"momRN1.placeHolderList[2062]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.translateZ" 
-		"momRN1.placeHolderList[1527]" ""
+		"momRN1.placeHolderList[2063]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.rotateX" 
-		"momRN1.placeHolderList[1528]" ""
+		"momRN1.placeHolderList[2064]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.rotateY" 
-		"momRN1.placeHolderList[1529]" ""
+		"momRN1.placeHolderList[2065]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.rotateZ" 
-		"momRN1.placeHolderList[1530]" ""
+		"momRN1.placeHolderList[2066]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.scaleX" 
-		"momRN1.placeHolderList[1531]" ""
+		"momRN1.placeHolderList[2067]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.scaleY" 
-		"momRN1.placeHolderList[1532]" ""
+		"momRN1.placeHolderList[2068]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L.scaleZ" 
-		"momRN1.placeHolderList[1533]" ""
+		"momRN1.placeHolderList[2069]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1534]" ""
+		"momRN1.placeHolderList[2070]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L.translateX" 
-		"momRN1.placeHolderList[1535]" ""
+		"momRN1.placeHolderList[2071]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L.translateZ" 
-		"momRN1.placeHolderList[1536]" ""
+		"momRN1.placeHolderList[2072]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1537]" ""
+		"momRN1.placeHolderList[2073]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_blink_ctrl.translateY" 
-		"momRN1.placeHolderList[1538]" ""
+		"momRN1.placeHolderList[2074]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_blink_ctrl.visibility" 
-		"momRN1.placeHolderList[1539]" ""
+		"momRN1.placeHolderList[2075]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_blink_ctrl.translateY" 
-		"momRN1.placeHolderList[1540]" ""
+		"momRN1.placeHolderList[2076]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_blink_ctrl.visibility" 
-		"momRN1.placeHolderList[1541]" ""
+		"momRN1.placeHolderList[2077]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_low_eyelid_ctrl.translateY" 
-		"momRN1.placeHolderList[1542]" ""
+		"momRN1.placeHolderList[2078]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_low_eyelid_ctrl.visibility" 
-		"momRN1.placeHolderList[1543]" ""
+		"momRN1.placeHolderList[2079]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_low_eyelid_ctrl.translateY" 
-		"momRN1.placeHolderList[1544]" ""
+		"momRN1.placeHolderList[2080]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_low_eyelid_ctrl.visibility" 
-		"momRN1.placeHolderList[1545]" ""
+		"momRN1.placeHolderList[2081]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_nose_flare_ctrl.translateY" 
-		"momRN1.placeHolderList[1546]" ""
+		"momRN1.placeHolderList[2082]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_nose_flare_ctrl.visibility" 
-		"momRN1.placeHolderList[1547]" ""
+		"momRN1.placeHolderList[2083]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_nose_flare_ctrl.translateY" 
-		"momRN1.placeHolderList[1548]" ""
+		"momRN1.placeHolderList[2084]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_nose_flare_ctrl.visibility" 
-		"momRN1.placeHolderList[1549]" ""
+		"momRN1.placeHolderList[2085]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.translateX" 
-		"momRN1.placeHolderList[1550]" ""
+		"momRN1.placeHolderList[2086]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.translateY" 
-		"momRN1.placeHolderList[1551]" ""
+		"momRN1.placeHolderList[2087]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.translateZ" 
-		"momRN1.placeHolderList[1552]" ""
+		"momRN1.placeHolderList[2088]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.visibility" 
-		"momRN1.placeHolderList[1553]" ""
+		"momRN1.placeHolderList[2089]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.rotateX" 
-		"momRN1.placeHolderList[1554]" ""
+		"momRN1.placeHolderList[2090]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.rotateY" 
-		"momRN1.placeHolderList[1555]" ""
+		"momRN1.placeHolderList[2091]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.rotateZ" 
-		"momRN1.placeHolderList[1556]" ""
+		"momRN1.placeHolderList[2092]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.scaleX" 
-		"momRN1.placeHolderList[1557]" ""
+		"momRN1.placeHolderList[2093]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.scaleY" 
-		"momRN1.placeHolderList[1558]" ""
+		"momRN1.placeHolderList[2094]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV.scaleZ" 
-		"momRN1.placeHolderList[1559]" ""
+		"momRN1.placeHolderList[2095]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.mom_arm_correct" 
-		"momRN1.placeHolderList[1560]" ""
+		"momRN1.placeHolderList[2096]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotateX" 
-		"momRN1.placeHolderList[1561]" ""
+		"momRN1.placeHolderList[2097]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotateY" 
-		"momRN1.placeHolderList[1562]" ""
+		"momRN1.placeHolderList[2098]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotateZ" 
-		"momRN1.placeHolderList[1563]" ""
+		"momRN1.placeHolderList[2099]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotateOrder" 
-		"momRN1.placeHolderList[1564]" ""
+		"momRN1.placeHolderList[2100]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotateOrder" 
-		"momRN1.placeHolderList[1565]" ""
+		"momRN1.placeHolderList[2101]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.translateX" 
-		"momRN1.placeHolderList[1566]" ""
+		"momRN1.placeHolderList[2102]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.translateY" 
-		"momRN1.placeHolderList[1567]" ""
+		"momRN1.placeHolderList[2103]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.translateZ" 
-		"momRN1.placeHolderList[1568]" ""
+		"momRN1.placeHolderList[2104]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotatePivot" 
-		"momRN1.placeHolderList[1569]" ""
+		"momRN1.placeHolderList[2105]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.rotatePivotTranslate" 
-		"momRN1.placeHolderList[1570]" ""
+		"momRN1.placeHolderList[2106]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.blendParent1" 
-		"momRN1.placeHolderList[1571]" ""
+		"momRN1.placeHolderList[2107]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.blendParent1" 
-		"momRN1.placeHolderList[1572]" ""
+		"momRN1.placeHolderList[2108]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.visibility" 
-		"momRN1.placeHolderList[1573]" ""
+		"momRN1.placeHolderList[2109]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R.parentInverseMatrix" 
-		"momRN1.placeHolderList[1574]" ""
+		"momRN1.placeHolderList[2110]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.translateX" 
-		"momRN1.placeHolderList[1575]" ""
+		"momRN1.placeHolderList[2111]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.translateY" 
-		"momRN1.placeHolderList[1576]" ""
+		"momRN1.placeHolderList[2112]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.translateZ" 
-		"momRN1.placeHolderList[1577]" ""
+		"momRN1.placeHolderList[2113]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.visibility" 
-		"momRN1.placeHolderList[1578]" ""
+		"momRN1.placeHolderList[2114]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.rotateX" 
-		"momRN1.placeHolderList[1579]" ""
+		"momRN1.placeHolderList[2115]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.rotateY" 
-		"momRN1.placeHolderList[1580]" ""
+		"momRN1.placeHolderList[2116]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.rotateZ" 
-		"momRN1.placeHolderList[1581]" ""
+		"momRN1.placeHolderList[2117]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.scaleX" 
-		"momRN1.placeHolderList[1582]" ""
+		"momRN1.placeHolderList[2118]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.scaleY" 
-		"momRN1.placeHolderList[1583]" ""
+		"momRN1.placeHolderList[2119]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV.scaleZ" 
-		"momRN1.placeHolderList[1584]" ""
+		"momRN1.placeHolderList[2120]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.mom_arm_correct" 
-		"momRN1.placeHolderList[1585]" ""
+		"momRN1.placeHolderList[2121]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotateX" 
-		"momRN1.placeHolderList[1586]" ""
+		"momRN1.placeHolderList[2122]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotateY" 
-		"momRN1.placeHolderList[1587]" ""
+		"momRN1.placeHolderList[2123]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotateZ" 
-		"momRN1.placeHolderList[1588]" ""
+		"momRN1.placeHolderList[2124]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotateOrder" 
-		"momRN1.placeHolderList[1589]" ""
+		"momRN1.placeHolderList[2125]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotateOrder" 
-		"momRN1.placeHolderList[1590]" ""
+		"momRN1.placeHolderList[2126]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.translateX" 
-		"momRN1.placeHolderList[1591]" ""
+		"momRN1.placeHolderList[2127]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.translateY" 
-		"momRN1.placeHolderList[1592]" ""
+		"momRN1.placeHolderList[2128]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.translateZ" 
-		"momRN1.placeHolderList[1593]" ""
+		"momRN1.placeHolderList[2129]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotatePivot" 
-		"momRN1.placeHolderList[1594]" ""
+		"momRN1.placeHolderList[2130]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.rotatePivotTranslate" 
-		"momRN1.placeHolderList[1595]" ""
+		"momRN1.placeHolderList[2131]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.blendParent1" 
-		"momRN1.placeHolderList[1596]" ""
+		"momRN1.placeHolderList[2132]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.blendParent1" 
-		"momRN1.placeHolderList[1597]" ""
+		"momRN1.placeHolderList[2133]" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.visibility" 
-		"momRN1.placeHolderList[1598]" ""
+		"momRN1.placeHolderList[2134]" ""
 		5 3 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L.parentInverseMatrix" 
-		"momRN1.placeHolderList[1599]" ""
-		5 3 "momRN1" "|mom2:mom_shirt:mom_shirt|mom2:outputCloth1.worldMesh" 
-		"momRN1.placeHolderList[1600]" ""
-		5 3 "momRN1" "|mom2:mom_shirt:shirt_right_ctrl|mom2:mom_shirt:do_not_touch|mom2:mom_shirt:do_not_touchShape.worldMesh" 
-		"momRN1.placeHolderList[1601]" ""
-		5 3 "momRN1" "mom2:blendShape1.midLayerParent" "momRN1.placeHolderList[1602]" 
+		"momRN1.placeHolderList[2135]" ""
+		5 4 "momRN1" "|mom2:nCloth1|mom2:nClothShape1.positions" "momRN1.placeHolderList[2136]" 
+		""
+		5 4 "momRN1" "|mom2:nCloth1|mom2:nClothShape1.playFromCache" "momRN1.placeHolderList[2137]" 
+		""
+		5 3 "momRN1" "mom2:blendShape1.midLayerParent" "momRN1.placeHolderList[2138]" 
 		""
 		5 4 "momRN1" "mom2:blendShape1.targetDirectory[0].directoryParentVisibility" 
-		"momRN1.placeHolderList[1603]" ""
-		5 4 "momRN1" "mom2:lambert2SG.dagSetMembers" "momRN1.placeHolderList[1604]" 
+		"momRN1.placeHolderList[2139]" ""
+		5 4 "momRN1" "mom2:lambert2SG.dagSetMembers" "momRN1.placeHolderList[2140]" 
 		""
-		5 3 "momRN1" "mom2:blendShape2.midLayerParent" "momRN1.placeHolderList[1605]" 
+		5 3 "momRN1" "mom2:blendShape2.midLayerParent" "momRN1.placeHolderList[2141]" 
 		""
 		5 4 "momRN1" "mom2:blendShape2.targetDirectory[0].directoryParentVisibility" 
-		"momRN1.placeHolderList[1606]" ""
+		"momRN1.placeHolderList[2142]" ""
 		5 0 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG.message" 
-		"mom2:skinCluster1.paintTrans" "momRN1.placeHolderList[1607]" "momRN1.placeHolderList[1608]" 
+		"mom2:skinCluster1.paintTrans" "momRN1.placeHolderList[2143]" "momRN1.placeHolderList[2144]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -16220,92 +15897,109 @@ createNode animCurveTA -n "PinkyCntrl_R_01_rotateZ";
 createNode animCurveTA -n "Wrist_Cntrl_L_rotateX";
 	rename -uid "4A1A6C60-F644-EDB7-95B0-77A95F964E16";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  1 -36.348186724227872 24 20.677034453215875
+	setAttr -s 18 ".ktv[0:17]"  1 -36.348186724227872 24 20.677034453215875
 		 27 10.875968614487039 30 20.452056171149831 50 15.238490711319457 60 14.620897718047003
 		 72.00000017006802 15.238490711319457 79.500000680272109 10.065338758708037 88.500001190476183 26.092681715403089
-		 103 0.66571310962933394 120 -23.557932109540523 151 -12.155338630295692 166 -44.288194624284742
-		 174 -38.000187905657114 189 -39.203264093092336 200 -44.408543953754432;
+		 103 0.66571310962933394 120 -23.557932109540523 129 35.497560270068071 139 19.013937961591239
+		 151 -12.155338630295692 166 -44.288194624284742 174 -38.000187905657114 189 -39.203264093092336
+		 200 -44.408543953754432;
 createNode animCurveTA -n "Wrist_Cntrl_L_rotateY";
 	rename -uid "0D6DC8C2-E742-9416-ACA1-76A0E3B00A08";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  1 -29.438072995000411 24 5.6713276748522645
+	setAttr -s 18 ".ktv[0:17]"  1 -29.438072995000411 24 5.6713276748522645
 		 27 -19.742596369063669 30 6.1133092298665979 50 2.2021751863127048 60 -7.3607496106296191
 		 72.00000017006802 2.2021751863127048 79.500000680272109 -11.70691734302177 88.500001190476183 3.7855972901287314
-		 103 9.677563153917065 120 -6.9934333373729283 151 -21.455386814150636 166 7.3120705089503675
-		 174 -25.706936112725007 189 23.615151062197228 200 6.3284748859698112;
+		 103 9.677563153917065 120 -6.9934333373729283 129 0.90181018853473394 139 -17.883877619405251
+		 151 -21.455386814150636 166 7.3120705089503675 174 -25.706936112725007 189 23.615151062197228
+		 200 6.3284748859698112;
 createNode animCurveTA -n "Wrist_Cntrl_L_rotateZ";
 	rename -uid "C67075D6-3E42-5BC8-8476-95A87F3DB6BF";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  1 -3.838300915987217 24 25.541651850971633
+	setAttr -s 18 ".ktv[0:17]"  1 -3.838300915987217 24 25.541651850971633
 		 27 18.548453542408858 30 -13.363610945983204 50 -32.573748093671988 60 -46.541720041951216
 		 72.00000017006802 -32.573748093671988 79.500000680272109 24.275532223126287 88.500001190476183 -17.493258909982803
-		 103 -1.8754543880145464 120 37.660451860434641 151 -6.245155986512942 166 24.533419703966835
-		 174 -11.939081163463124 189 43.256109387364845 200 23.520060249761553;
+		 103 -1.8754543880145464 120 37.660451860434641 129 -15.731151390443536 139 43.145102492761772
+		 151 -6.245155986512942 166 24.533419703966835 174 -11.939081163463124 189 43.256109387364845
+		 200 23.520060249761553;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateX";
 	rename -uid "2774A3F3-3C49-DE16-8781-1990EA9E0B2A";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  -4.4599998299319727 62.293927038392894 6 68.63726112567538
+	setAttr -s 14 ".ktv[0:13]"  -4.4599998299319727 62.293927038392894 6 68.63726112567538
 		 24 65.501787890996908 30 36.568532255485692 33 58.361234022290553 37 62.807197431382356
-		 45 75.370278136641545 50 85.663708790445526 63 128.90109856009684 85 98.541567573102029
-		 105 69.788557301703577 116 117.1693585247837;
+		 45 75.370278136641545 50 85.663708790445526 63 128.90109856009684 85 96.529570087434223
+		 105 59.617544136669366 116 70.141781155876757 131 84.016104412717326 143 91.462703137359668;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateY";
 	rename -uid "DFDE8055-F246-B515-90A3-E39F7015E8C9";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  -4.4599998299319727 -21.985617610547671
+	setAttr -s 14 ".ktv[0:13]"  -4.4599998299319727 -21.985617610547671
 		 6 -45.73548836769092 24 -7.7475899542777675 30 20.328849929959194 33 13.195715942879589
 		 37 23.344059223070509 45 21.683125403676108 50 -0.42018612086928114 63 -11.980615351801093
-		 85 -41.594353801513513 105 -37.992040960405852 116 -18.203119250419434;
+		 85 -12.365688872759687 105 -37.992040960405845 116 -18.203119250419434 131 -19.150261323614071
+		 143 -15.094528469311523;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateZ";
 	rename -uid "6F53C000-CA41-C460-0FC9-26B533E9A774";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  -4.4599998299319727 -33.634919993719592
+	setAttr -s 14 ".ktv[0:13]"  -4.4599998299319727 -33.634919993719592
 		 6 -74.874404599712747 24 -92.414505674240658 30 -93.566250486750121 33 -87.006508772100815
 		 37 -87.94037003900074 45 -102.94423660818855 50 -109.00073911371504 63 -117.8322586522762
-		 85 -104.52915470715986 105 -60.897741103180742 116 -77.552921006717185;
+		 85 -100.23936266022466 105 -60.897741103180721 116 -77.552921006717199 131 -77.55292100671727
+		 143 -97.818376291380659;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateX";
 	rename -uid "E91A9B3D-3346-0635-AE1E-D890DF48E076";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  1 73.168895458034797 24 12.932179441832572
-		 37 16.044870145411405 50 -44.849435848043761 56 -59.587629711572369 69 -92.321781437531627
-		 116 -14.8000583248064;
+	setAttr -s 12 ".ktv[0:11]"  1 73.168895458034797 13 29.709210554535183
+		 24 9.0577617745787578 28 21.137669326629684 37 16.044870145411405 50 -41.963195616121546
+		 56 -65.218598087270337 69 -92.321781437531627 82 -67.556849739741736 101 -45.490199178129075
+		 116 -15.559890931614545 126 -66.536249704288494;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateY";
 	rename -uid "60D9DED6-424E-00A4-2EF9-FDBD3455E8B6";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  1 -63.837160958703024 24 -26.424288316869998
-		 37 27.047536023273203 50 12.208521026773418 56 6.0095360176563837 69 6.9501709492031818
-		 116 -10.430984177793148;
+	setAttr -s 12 ".ktv[0:11]"  1 -63.837160958703024 13 -8.1171705069444169
+		 24 9.2301298564695404 28 40.10842392231217 37 27.047536023273203 50 21.268775590614926
+		 56 9.7931568605834531 69 6.9501709492031818 82 8.4016224447525509 101 -20.799033969016953
+		 116 18.992705850638579 126 -30.482572709545572;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateZ";
 	rename -uid "13BFCFDE-9E42-3F44-8110-C58BDA7E433E";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  1 -80.554692405176283 24 7.7290864466738336
-		 37 -16.84743061660982 50 8.3647218976794306 56 -5.54306411683711 69 -34.586472575596481
-		 116 5.4067973867299486;
+	setAttr -s 12 ".ktv[0:11]"  1 -80.554692405176283 13 -25.289776580630452
+		 24 -4.8473640291391922 28 27.814004090211778 37 -16.84743061660982 50 18.331756319146518
+		 56 -8.9360501954679847 69 -34.586472575596481 82 6.6275606936077995 101 -46.960689073702262
+		 116 -3.1082359156896171 126 -1.3975693535033991;
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateX";
 	rename -uid "78D6ED10-C347-CB81-E332-FFA32111D533";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  -8.1200018707482986 -20.413701609543374
+	setAttr -s 13 ".ktv[0:12]"  -8.1200018707482986 -20.413701609543374
 		 5.1999989795918369 -31.909498623519998 20 39.360980532150911 33 -21.280956533663616
 		 37 8.4486418742560137 44 60.728163992054903 51 -3.1360932570905771 60 -28.650116289451226
-		 176 51.474972734469489;
-	setAttr -s 9 ".kit[2:8]"  3 18 18 18 18 18 3;
-	setAttr -s 9 ".kot[2:8]"  3 18 18 18 18 18 3;
+		 72 1.171458393352961 105 -35.786472825842736 135 -69.792678746298506 156 -27.318289170742492
+		 176 -68.089259037406165;
+	setAttr -s 13 ".kit[2:12]"  3 18 18 18 18 18 18 18 
+		18 18 3;
+	setAttr -s 13 ".kot[2:12]"  3 18 18 18 18 18 18 18 
+		18 18 3;
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateY";
 	rename -uid "517B47CF-CA4B-68AA-970A-EABCF4A9E80C";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  -8.1200018707482986 6.5717678467954181 5.1999989795918369 -45.905736448385959
+	setAttr -s 13 ".ktv[0:12]"  -8.1200018707482986 6.5717678467954181 5.1999989795918369 -45.905736448385959
 		 20 -52.945132507825889 33 -23.925675806999781 37 -41.28742703267865 44 -50.79877073964272
-		 51 -72.392570515572402 60 -48.682305933483804 176 -6.696398525662886;
-	setAttr -s 9 ".kit[2:8]"  3 18 18 18 18 18 3;
-	setAttr -s 9 ".kot[2:8]"  3 18 18 18 18 18 3;
+		 51 -72.392570515572402 60 -48.682305933483804 72 -63.898680288810375 105 -43.8647613243173
+		 135 -58.382159481161331 156 -17.884163990514391 176 -11.372602311094647;
+	setAttr -s 13 ".kit[2:12]"  3 18 18 18 18 18 18 18 
+		18 18 3;
+	setAttr -s 13 ".kot[2:12]"  3 18 18 18 18 18 18 18 
+		18 18 3;
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateZ";
 	rename -uid "0B151863-7841-0643-0828-9EAD00F19879";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  -8.1200018707482986 -11.683192559308974
+	setAttr -s 13 ".ktv[0:12]"  -8.1200018707482986 -11.683192559308974
 		 5.1999989795918369 5.9876534803308967 20 -32.664321997433227 33 9.6187350725353422
 		 37 -16.654885878052699 44 26.016570546570332 51 71.206652508845593 60 95.801526422813424
-		 176 -43.295159075006289;
-	setAttr -s 9 ".kit[2:8]"  3 18 18 18 18 18 3;
-	setAttr -s 9 ".kot[2:8]"  3 18 18 18 18 18 3;
+		 72 71.371822061693905 105 101.55420253199316 135 117.14740398101377 156 80.177771188988899
+		 176 79.5273467058595;
+	setAttr -s 13 ".kit[2:12]"  3 18 18 18 18 18 18 18 
+		18 18 3;
+	setAttr -s 13 ".kot[2:12]"  3 18 18 18 18 18 18 18 
+		18 18 3;
 createNode animCurveTA -n "LowerArm_Cntrl_R_rotateX";
 	rename -uid "A1556166-C040-B53C-BB70-DEB5E3E85101";
 	setAttr ".tan" 18;
@@ -16537,17 +16231,21 @@ createNode animCurveTA -n "Knee_Cntrl_R_rotateZ";
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateX";
 	rename -uid "06418279-CD48-344E-25AC-418A942E29EE";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 24 -10.914188515382424 28 -10.218047278073739
-		 36 -1.8964915148921304;
+	setAttr -s 9 ".ktv[0:8]"  1 0 24 -10.914188515382424 28 -10.218047278073739
+		 36 -1.8964915148921304 104 -1.8964915148921304 125 -6.6885768826727245 149 0.41575556859758328
+		 174 -6.6209361871966994 193 -7.2766964890941077;
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateY";
 	rename -uid "A8114E7D-5045-20A3-5D38-64BEAA3F08D9";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 24 0 28 3.8560391825558105 36 -10.750122704221694;
+	setAttr -s 9 ".ktv[0:8]"  1 0 24 0 28 3.8560391825558105 36 -10.750122704221694
+		 104 -10.750122704221694 125 -8.6442296610603382 149 -10.906362869037766 174 -8.6959834564444414
+		 193 -11.694451593355312;
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateZ";
 	rename -uid "F346D056-C342-F635-8AE7-079A2DA36DDF";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  1 0 24 19.247718459369192 28 39.707473417269689
-		 36 -60.68600295975844;
+	setAttr -s 9 ".ktv[0:8]"  1 0 24 19.247718459369192 28 39.707473417269689
+		 36 -60.68600295975844 104 -60.68600295975844 125 -32.789045887112856 149 -72.948631078060075
+		 174 -33.237752789870846 193 -57.389619920416116;
 createNode animCurveTA -n "mom_l_toe_ptr_rotateX";
 	rename -uid "F0382C58-0146-E7B4-0E1C-0AA560D039FB";
 	setAttr ".tan" 16;
@@ -17701,114 +17399,124 @@ createNode animCurveTU -n "EyeGroup_Offset_scaleZ";
 createNode animCurveTU -n "mom_eye_ptr_visibility";
 	rename -uid "BDEBC478-4AFB-E079-A963-9FB6D9A583B0";
 	setAttr ".tan" 5;
-	setAttr -s 28 ".ktv[0:27]"  1 1 47 1 64 1 65.25 1 66.5 1 68 1 69 1 71 1
+	setAttr -s 30 ".ktv[0:29]"  1 1 47 1 64 1 65.25 1 66.5 1 68 1 69 1 71 1
 		 73 1 74 1 84 1 100 1 136 1 137 1 138 1 140 1 141 1 143 1 145 1 160 1 163 1 178 1
-		 182 1 202 1 204 1 207 1 208 1 239 1;
-	setAttr -s 28 ".kit[0:27]"  9 9 9 9 9 9 9 9 
+		 182 1 186 1 187 1 202 1 204 1 207 1 208 1 239 1;
+	setAttr -s 30 ".kit[0:29]"  9 9 9 9 9 9 9 9 
 		9 9 9 9 9 9 9 9 9 9 1 9 9 9 9 9 9 
-		1 9 9;
-	setAttr -s 28 ".kix[18:27]"  0.70833333333333393 0.625 0.125 0.625 0.16666666666666607 
-		0.83333333333333304 0.083333333333333925 0.083333335816860199 0.041666666666666075 
-		1.2916666666666679;
-	setAttr -s 28 ".kiy[18:27]"  0 0 0 0 0 0 0 0 0 0;
+		9 9 1 9 9;
+	setAttr -s 30 ".kix[18:29]"  0.70833333333333393 0.625 0.125 0.625 0.16666666666666607 
+		0.16666666666666696 0.041666666666666963 0.62499999999999911 0.083333333333333925 
+		0.083333335816860199 0.041666666666666075 1.2916666666666679;
+	setAttr -s 30 ".kiy[18:29]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "mom_eye_ptr_translateX";
 	rename -uid "C6525840-4675-7D51-8619-6083B3598C6A";
 	setAttr ".tan" 1;
-	setAttr -s 26 ".ktv[0:25]"  1 0 47 0.10309101710779545 57 0.10309101710779545
+	setAttr -s 28 ".ktv[0:27]"  1 0 47 0.10309101710779545 57 0.10309101710779545
 		 83.800004421768705 -0.15568503423162275 88.600006122448974 -1.3254070111764267 91.80000697278912 -1.3254070111764267
 		 95.000007142857143 -1.0130537134095032 96 -1.0135163050553957 99 -1.1585953440515235
 		 102 -0.28585627160888583 136 -0.28585627160888583 137 -0.20103531856785439 138 -0.34354099604306559
 		 140 -0.44452053437421035 141 -0.29670087753955171 143 -0.26573776944083327 145 -0.28585627160888583
 		 160 -0.28585627160888583 163 0.050130262577793946 178 -0.093343572555451115 182 0.10734267926919951
-		 202 -0.55554245293047655 204 0.59816431393538538 207 0.59816431393538538 208 0.20380965959151115
-		 239 0.20380965959151115;
-	setAttr -s 26 ".kit[0:25]"  3 1 1 1 1 1 1 3 
-		1 1 18 18 18 18 18 18 1 3 3 3 18 3 3 1 3 
-		3;
-	setAttr -s 26 ".kot[4:25]"  3 1 1 1 1 1 18 18 
-		18 18 18 18 1 3 3 3 18 3 3 1 3 3;
-	setAttr -s 26 ".ktl[0:25]" no no yes yes yes no no no no no yes yes 
-		yes yes yes yes yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 26 ".kix[1:25]"  0.027559375390410423 1.4583334922790527 
+		 186 0.038402625520432929 187 -0.050795110591643766 202 -0.55554245293047655 204 0.59816431393538538
+		 207 0.59816431393538538 208 0.20380965959151115 239 0.20380965959151115;
+	setAttr -s 28 ".kit[0:27]"  3 1 1 1 1 1 1 3 
+		1 1 18 18 18 18 18 18 1 3 3 3 18 18 18 3 3 
+		1 3 3;
+	setAttr -s 28 ".kot[4:27]"  3 1 1 1 1 1 18 18 
+		18 18 18 18 1 3 3 3 18 18 18 3 3 1 3 3;
+	setAttr -s 28 ".ktl[0:27]" no no yes yes yes no no no no no yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes;
+	setAttr -s 28 ".kix[1:27]"  0.027559375390410423 1.4583334922790527 
 		0.33333328025479714 0.13333323580795653 0.86666736789605714 0.0063910476165313619 
 		0.04166636904761889 0.02582016565023201 0.0011157989501953125 1.416666666666667 0.041666666666666075 
 		0.041666666666666963 0.083333333333333037 0.041666666666666963 0.083333333333333037 
-		0.70833333333333393 0.625 0.125 0.625 0.16666666666666607 0.83333333333333304 0.083333333333333925 
-		0.083333335816860199 0.041666666666666075 1.2916666666666679;
-	setAttr -s 26 ".kiy[1:25]"  0 0 0 0 0 0.00025228437152691185 0 0 0 
-		0 0 -0.081161738602119227 0 0.046444662148078159 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 26 ".kox[0:25]"  0.03029346652328968 1.4583331346511841 
+		0.70833333333333393 0.625 0.125 0.625 0.16666666666666607 0.16666666666666696 0.041666666666666963 
+		0.62499999999999911 0.083333333333333925 0.083333335816860199 0.041666666666666075 
+		1.2916666666666679;
+	setAttr -s 28 ".kiy[1:27]"  0 0 0 0 0 0.00025228437152691185 0 0 0 
+		0 0 -0.081161738602119227 0 0.046444662148078159 0 0 0 0 0 0 -0.12651023188867447 
+		-0.037121567403182142 0 0 0 0 0;
+	setAttr -s 28 ".kox[0:27]"  0.03029346652328968 1.4583331346511841 
 		0.20833325386047363 0.2000004259166519 0.13333336876417201 0.0034629829473274568 
 		0.11848299752237482 0.014802493464389955 0.031595876421312653 0.083333015441894531 
 		0.041666666666666075 0.041666666666666963 0.083333333333333037 0.041666666666666963 
-		0.083333333333333037 0.083333333333333925 0.125 0.125 0.625 0.16666666666666607 0.83333333333333304 
-		0.083333333333333925 0.125 0.4166666567325592 1.2916666666666679 1.2916666666666679;
-	setAttr -s 26 ".koy[0:25]"  0 0 0 0 0 0 0.0046771150082349777 0 0 0 
-		0 0 -0.16232347720423673 0 0.092889324296155318 0 0 0 0 0 0 0 0 0 0 0;
+		0.083333333333333037 0.083333333333333925 0.125 0.125 0.625 0.16666666666666607 0.16666666666666696 
+		0.041666666666666963 0.62499999999999911 0.083333333333333925 0.125 0.4166666567325592 
+		1.2916666666666679 1.2916666666666679;
+	setAttr -s 28 ".koy[0:27]"  0 0 0 0 0 0 0.0046771150082349777 0 0 0 
+		0 0 -0.16232347720423673 0 0.092889324296155318 0 0 0 0 0 0 -0.031627557972168791 
+		-0.55682351104772732 0 0 0 0 0;
 createNode animCurveTL -n "mom_eye_ptr_translateY";
 	rename -uid "DD73D500-402B-470D-3BD0-49BF1AC43D21";
 	setAttr ".tan" 1;
-	setAttr -s 24 ".ktv[0:23]"  1 0 47 -0.86228746853303939 85.400005272108842 -0.86518431632757209
+	setAttr -s 26 ".ktv[0:25]"  1 0 47 -0.86228746853303939 85.400005272108842 -0.86518431632757209
 		 88.600005272108845 -0.60696215229614991 96.600008503401355 -0.60696215229614991 99.800008503401358 -0.62469704856909491
 		 111 -0.60696215229614991 136 -0.60696215229614991 137 -0.48774529513918841 138 -0.62364980294123995
 		 140 -0.51820121017112331 141 -0.56797728104267053 143 -0.4618330162326425 145 -0.60696215229614991
 		 160 -0.60696215229614991 163 0.36853996586116056 178 -0.14718530155807155 182 -0.30154413465642332
-		 204 -0.4804245451798923 207 -0.4804245451798923 208 -0.52096278054380041 212 -0.88557877118727546
-		 240 -0.88557877118727546 242 -0.15560124294945221;
-	setAttr -s 24 ".kit[0:23]"  3 1 1 1 1 1 1 18 
-		18 18 18 18 18 1 3 3 3 18 3 1 1 3 1 1;
-	setAttr -s 24 ".kot[3:23]"  3 1 1 1 18 18 18 18 
-		18 18 1 3 3 3 18 3 1 3 3 1 1;
-	setAttr -s 24 ".ktl[0:23]" no no yes yes no no no yes yes yes yes yes 
-		yes yes yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 24 ".kix[1:23]"  0.027559375390410423 0.2000004259166519 
+		 186 -0.35145362961125642 187 -0.35985616283667116 204 -0.4804245451798923 207 -0.4804245451798923
+		 208 -0.52096278054380041 212 -0.88557877118727546 240 -0.88557877118727546 242 -0.15560124294945221;
+	setAttr -s 26 ".kit[0:25]"  3 1 1 1 1 1 1 18 
+		18 18 18 18 18 1 3 3 3 18 18 18 3 1 1 3 1 
+		1;
+	setAttr -s 26 ".kot[3:25]"  3 1 1 1 18 18 18 18 
+		18 18 1 3 3 3 18 18 18 3 1 3 3 1 1;
+	setAttr -s 26 ".ktl[0:25]" no no yes yes no no no yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes;
+	setAttr -s 26 ".kix[1:25]"  0.027559375390410423 0.2000004259166519 
 		0.13333323580795653 0.86666736789605714 0.0014072839504192195 0.0017591045470908284 
 		1.041666666666667 0.041666666666666075 0.041666666666666963 0.083333333333333037 
 		0.041666666666666963 0.083333333333333037 0.70833333333333393 0.625 0.125 0.625 0.16666666666666607 
-		0.91666666666666696 0.083333335816860199 0.041666667908430099 0.16666666666666785 
-		1.0469553470611572 0.0052921473979949951;
-	setAttr -s 24 ".kiy[1:23]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.051267575941818411 
-		0 0 0 0 0 0;
-	setAttr -s 24 ".kox[0:23]"  0.030293464660644531 1.4583331346511841 
+		0.16666666666666696 0.041666666666666963 0.70833333333333304 0.083333335816860199 
+		0.041666667908430099 0.16666666666666785 1.0469553470611572 0.0052921473979949951;
+	setAttr -s 26 ".kiy[1:25]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.10213416402659217 
+		-0.046649622544198216 -0.0071650508649242668 0 0 0 0 0 0;
+	setAttr -s 26 ".kox[0:25]"  0.030293464660644531 1.4583331346511841 
 		0.13333323580795653 0.33333346797052155 0.012702089390716801 0.13333323580795653 
 		0.083333015441894531 0.041666666666666075 0.041666666666666963 0.083333333333333037 
 		0.041666666666666963 0.083333333333333037 0.083333333333333925 0.125 0.125 0.625 
-		0.16666666666666607 0.91666666666666696 0.125 0.4166666567325592 0.16666666666666785 
-		1.1666666666666661 0.0052886870689690113 0.0052921473979949951;
-	setAttr -s 24 ".koy[0:23]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.28197166768000237 
-		0 0 0 0 0 0;
+		0.16666666666666607 0.16666666666666696 0.041666666666666963 0.70833333333333304 
+		0.125 0.4166666567325592 0.16666666666666785 1.1666666666666661 0.0052886870689690113 
+		0.0052921473979949951;
+	setAttr -s 26 ".koy[0:25]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.10213416402659271 
+		-0.011662405636049616 -0.12180586470371162 0 0 0 0 0 0;
 createNode animCurveTL -n "mom_eye_ptr_translateZ";
 	rename -uid "9E1CD9CC-433E-F679-08EC-DD8C12F7D94A";
 	setAttr ".tan" 1;
-	setAttr -s 25 ".ktv[0:24]"  1 0 47 0.41095349999168884 63 0.41095349999168884
+	setAttr -s 27 ".ktv[0:26]"  1 0 47 0.41095349999168884 63 0.41095349999168884
 		 74 0.41095349999168751 85.400005272108842 0.41095349999168884 88.600005272108845 -0.26604900917544583
 		 96.600008503401355 -0.26604900917544583 99.800008503401358 -0.26604900917544583 111 -0.2660490091754476
 		 136 -0.2660490091754476 137 -0.32733542876216037 138 -0.042718764362161606 140 0.0056222909109053185
 		 141 -0.094402281390004089 143 -0.13754773095430067 145 -0.2660490091754476 160 -0.2660490091754476
-		 163 -0.09891635121966845 178 -0.3150388678064181 182 -0.69052091703744234 202 0.31997766398106264
-		 204 0.22932720951352975 207 0.22932720951352975 208 0.26382194321725366 239 0.26382194321725366;
-	setAttr -s 25 ".kit[0:24]"  3 1 1 1 1 1 1 1 
-		1 18 18 18 18 18 18 1 3 3 3 18 3 3 1 3 3;
-	setAttr -s 25 ".kot[5:24]"  3 1 1 1 18 18 18 18 
-		18 18 1 3 3 3 18 3 3 1 3 3;
-	setAttr -s 25 ".ktl[0:24]" no no yes yes yes yes no no no yes yes yes 
-		yes yes yes yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 25 ".kix[1:24]"  0.027559373527765274 1.4583334922790527 
+		 163 -0.09891635121966845 178 -0.3150388678064181 182 -0.69052091703744234 186 -0.58542906461151745
+		 187 -0.53085424671635306 202 0.31997766398106264 204 0.22932720951352975 207 0.22932720951352975
+		 208 0.26382194321725366 239 0.26382194321725366;
+	setAttr -s 27 ".kit[0:26]"  3 1 1 1 1 1 1 1 
+		1 18 18 18 18 18 18 1 3 3 3 18 18 18 3 3 1 
+		3 3;
+	setAttr -s 27 ".kot[5:26]"  3 1 1 1 18 18 18 18 
+		18 18 1 3 3 3 18 18 18 3 3 1 3 3;
+	setAttr -s 27 ".ktl[0:26]" no no yes yes yes yes no no no yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes;
+	setAttr -s 27 ".kix[1:26]"  0.027559373527765274 1.4583334922790527 
 		0.20833325386047363 0.2000004259166519 0.13333323580795653 0.86666736789605714 0.0014072840435514979 
 		0.0017591047799214721 1.041666666666667 0.041666666666666075 0.041666666666666963 
 		0.083333333333333037 0.041666666666666963 0.083333333333333037 0.70833333333333393 
-		0.625 0.125 0.625 0.16666666666666607 0.83333333333333304 0.083333333333333925 0.083333335816860199 
-		0.041666666666666075 1.2916666666666679;
-	setAttr -s 25 ".kiy[1:24]"  0 0 0 0 0 0 0 0 0 0 0.072511582909601163 
-		0 -0.047723340621735673 -0.085823363892721299 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 25 ".kox[0:24]"  0.03029346652328968 1.4583331346511841 
+		0.625 0.125 0.625 0.16666666666666607 0.16666666666666696 0.041666666666666963 0.62499999999999911 
+		0.083333333333333925 0.083333335816860199 0.041666666666666075 1.2916666666666679;
+	setAttr -s 27 ".kiy[1:26]"  0 0 0 0 0 0 0 0 0 0 0.072511582909601163 
+		0 -0.047723340621735673 -0.085823363892721299 0 0 0 0 0 0.12773333625687128 0.056587920537036714 
+		0 0 0 0 0;
+	setAttr -s 27 ".kox[0:26]"  0.03029346652328968 1.4583331346511841 
 		0.20833325386047363 0.1250002384185791 0.13333323580795653 0.33333346797052155 0.012702080450018097 
 		0.13333323580795653 0.083333015441894531 0.041666666666666075 0.041666666666666963 
 		0.083333333333333037 0.041666666666666963 0.083333333333333037 0.083333333333333925 
-		0.125 0.125 0.625 0.16666666666666607 0.83333333333333304 0.083333333333333925 0.125 
-		0.4166666567325592 1.2916666666666679 1.2916666666666679;
-	setAttr -s 25 ".koy[0:24]"  0 0 0 0 0 0 0 0 0 0 0 0.14502316581920077 
-		0 -0.095446681243470333 -0.085823363892722215 0 0 0 0 0 0 0 0 0 0;
+		0.125 0.125 0.625 0.16666666666666607 0.16666666666666696 0.041666666666666963 0.62499999999999911 
+		0.083333333333333925 0.125 0.4166666567325592 1.2916666666666679 1.2916666666666679;
+	setAttr -s 27 ".koy[0:26]"  0 0 0 0 0 0 0 0 0 0 0 0.14502316581920077 
+		0 -0.095446681243470333 -0.085823363892722215 0 0 0 0 0 0.031933334064217993 0.84881880805554344 
+		0 0 0 0 0;
 createNode animCurveTU -n "mom_l_eye_ptr_visibility";
 	rename -uid "91576F3A-4F06-652D-094A-9A8881113D48";
 	setAttr ".tan" 5;
@@ -18529,27 +18237,35 @@ createNode animCurveTL -n "mom_l_blink_ctrl_translateY1";
 createNode animCurveTU -n "mom_r_low_eyelid_ctrl_visibility";
 	rename -uid "4D2BC7CD-4E23-541B-3456-B4B754B7A5FC";
 	setAttr ".tan" 9;
-	setAttr -s 6 ".ktv[0:5]"  1 1 165 1 173 1 186 1 194 1 202 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 10 ".ktv[0:9]"  1 1 100 1 105 1 135 1 147 1 165 1 173 1
+		 186 1 194 1 202 1;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
+		5 5;
 createNode animCurveTL -n "mom_r_low_eyelid_ctrl_translateY";
 	rename -uid "B27F9D9D-48CC-D975-BE9E-16B758C65060";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 0 165 0 173 0.12 186 0 194 0.061545951232285456
-		 202 0;
-	setAttr -s 6 ".kit[0:5]"  3 18 18 18 18 18;
-	setAttr -s 6 ".kot[0:5]"  3 18 18 18 18 18;
+	setAttr -s 10 ".ktv[0:9]"  1 0 100 0 105 0.061851133230642286 135 0.10175863013485908
+		 147 -0.047563811652333074 165 0 173 0.12 186 0 194 0.061545951232285456 202 0;
+	setAttr -s 10 ".kit[0:9]"  3 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  3 18 18 18 18 18 18 18 
+		18 18;
 createNode animCurveTU -n "mom_l_low_eyelid_ctrl_visibility";
 	rename -uid "FBAA927B-445E-54AC-6C38-D28EFB3E5C14";
 	setAttr ".tan" 9;
-	setAttr -s 6 ".ktv[0:5]"  1 1 165 1 173 1 186 1 194 1 202 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 10 ".ktv[0:9]"  1 1 100 1 105 1 135 1 147 1 165 1 173 1
+		 186 1 194 1 202 1;
+	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
+		5 5;
 createNode animCurveTL -n "mom_l_low_eyelid_ctrl_translateY";
 	rename -uid "64E0544B-44EB-B93C-9D14-3B9767587BAA";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 0 165 0 173 0.12 186 0 194 0.061545951232285456
-		 202 0;
-	setAttr -s 6 ".kit[0:5]"  3 18 18 18 18 18;
-	setAttr -s 6 ".kot[0:5]"  3 18 18 18 18 18;
+	setAttr -s 10 ".ktv[0:9]"  1 0 100 0 105 0.061851133230642286 135 0.10175863013485908
+		 147 -0.047563811652333074 165 0 173 0.12 186 0 194 0.061545951232285456 202 0;
+	setAttr -s 10 ".kit[0:9]"  3 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  3 18 18 18 18 18 18 18 
+		18 18;
 createNode animCurveTU -n "mom_l_nose_flare_ctrl_visibility";
 	rename -uid "C0C3547A-45E7-3895-D768-1CA9485EBD0E";
 	setAttr ".tan" 9;
@@ -18651,10 +18367,10 @@ createNode animCurveTU -n "Arm_IK_R_PV_scaleZ";
 createNode animCurveTU -n "UpperArm_Cntrl_R_visibility";
 	rename -uid "6B757EAC-4631-D27F-5E65-BE97D6D59024";
 	setAttr ".tan" 9;
-	setAttr -s 9 ".ktv[0:8]"  -8.1200018707482986 1 5.1999989795918369 1
-		 20 1 33 1 37 1 44 1 51 1 60 1 176 1;
-	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
-		5;
+	setAttr -s 13 ".ktv[0:12]"  -8.1200018707482986 1 5.1999989795918369 1
+		 20 1 33 1 37 1 44 1 51 1 60 1 72 1 105 1 135 1 156 1 176 1;
+	setAttr -s 13 ".kot[0:12]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5;
 createNode animCurveTA -n "ThumbCntrl_L_01_rotateX";
 	rename -uid "9ACA415A-4799-256D-5133-1D8084D4C476";
 	setAttr ".tan" 18;
@@ -19232,7 +18948,7 @@ createNode animCurveTA -n "BabyGrab_Two_rotateY";
 	rename -uid "F9956A56-4756-2297-7502-519498FA9E34";
 	setAttr ".tan" 18;
 	setAttr -s 15 ".ktv[0:14]"  1 5.9687147719925022 15 -2.274779810905148
-		 17 -4.9148421160485833 24 -14.61472725861168 27 -9.1935999956665508 30 2.1706442266035433
+		 17 -4.9148421160485833 24 -14.61472725861168 27 -9.1935999956665508 30 2.1706442266035437
 		 33 13.328254164437457 39 26.410634292909485 49 1.7390371616266822 58 -25.046952146304665
 		 71 -28.638155987616923 79.61199948979592 -28.880735851237951 90.523999489795912 -27.651420244795673
 		 116.22175527210884 -16.415293800199731 124.0799962585034 -19.844168850842777;
@@ -22503,7 +22219,7 @@ createNode oceanShader -n "mom_scene:oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" 0.011279402300715446;
+	setAttr ".d" 0.020042307674884796;
 createNode reference -n "mom_scene:sharedReferenceNode";
 	rename -uid "A3BD9126-4746-2ED1-43E2-FE8A628D59A2";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -22854,24 +22570,6 @@ createNode cacheFile -n "mom2_nClothShape1Cache1";
 	setAttr ".ss" -20;
 	setAttr ".se" 81;
 	setAttr ".sf" -20;
-createNode nComponent -n "nComponent5";
-	rename -uid "B4D6AB2F-C24B-C04A-48AE-BD9454AE8156";
-	setAttr ".ct" 6;
-	setAttr ".el" 2;
-createNode nComponent -n "nComponent6";
-	rename -uid "53936686-2846-CF53-E391-9B89F2E84F15";
-	setAttr ".ct" 2;
-	setAttr -s 14 ".ci[0:13]"  324 325 326 327 328 329 
-		330 331 332 333 334 335 336 337;
-createNode nComponent -n "nComponent7";
-	rename -uid "EF2237ED-A74C-187A-20B3-B3909433A711";
-	setAttr ".ct" 6;
-	setAttr ".el" 2;
-createNode nComponent -n "nComponent8";
-	rename -uid "EF53E89B-C646-9F51-ADE9-F2A04CAD4DE0";
-	setAttr ".ct" 2;
-	setAttr -s 14 ".ci[0:13]"  669 670 671 672 673 674 
-		675 676 677 678 679 680 681 682;
 createNode animCurveTU -n "Arm_Cntrl_R_mom_arm_correct";
 	rename -uid "2CDCC52B-B449-D830-22DE-1BBBB9FAC5DC";
 	setAttr ".tan" 18;
@@ -22894,139 +22592,6 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "2ED0263B-704D-9C07-2F26-1EAF28541E83";
 	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
-createNode cacheFile -n "nClothShape1Cache1";
-	rename -uid "DEB7533B-5B4B-5180-4206-8FBE825BCA46";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" 305;
-	setAttr ".ss" -40;
-	setAttr ".se" 305;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 1;
-createNode cacheBlend -n "cacheBlend1";
-	rename -uid "1E8C1348-F649-C607-25FA-568AF4861EA8";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 8 ".ic[0].va";
-	setAttr -s 8 ".cd[0:7]" -40 305 no 1 -40 305 no 1 -40 165 no 1 -40 
-		-1 no 1 -40 305 no 1 -40 -15 no 1 -40 305 no 1 -40 305 yes 1;
-	setAttr -s 8 ".cd";
-	setAttr -k on ".cd[0].w";
-	setAttr -k on ".cd[1].w";
-	setAttr -k on ".cd[2].w";
-	setAttr -k on ".cd[3].w";
-	setAttr -k on ".cd[4].w";
-	setAttr -k on ".cd[5].w";
-	setAttr -k on ".cd[6].w";
-	setAttr -k on ".cd[7].w";
-	setAttr ".aal" -type "attributeAlias" {"nClothShape1Cache1","cacheData[0].weight"
-		,"nClothShape1Cache2","cacheData[1].weight","nClothShape1Cache3","cacheData[2].weight"
-		,"nClothShape1Cache4","cacheData[3].weight","nClothShape1Cache5","cacheData[4].weight"
-		,"nClothShape1Cache6","cacheData[5].weight","nClothShape1Cache7","cacheData[6].weight"
-		,"nClothShape1Cache8","cacheData[7].weight"} ;
-createNode cacheFile -n "nClothShape1Cache2";
-	rename -uid "3CEE5DCC-8348-9D0C-E5F5-D4B109CBBDC7";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" 305;
-	setAttr ".ss" -40;
-	setAttr ".se" 305;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 2;
-createNode nComponent -n "nComponent9";
-	rename -uid "A019421A-C947-3640-B013-34B62BE022DC";
-	setAttr ".ct" 6;
-	setAttr ".el" 2;
-createNode nComponent -n "nComponent10";
-	rename -uid "B852C5CC-E94E-86F8-AD32-73838365AA79";
-	setAttr ".ct" 2;
-	setAttr -s 28 ".ci[0:27]"  263 264 265 266 267 268 
-		269 270 271 272 273 274 275 276 608 609 610 611 
-		612 613 614 615 616 617 618 619 620 621;
-createNode cacheFile -n "nClothShape1Cache3";
-	rename -uid "9BB92531-FC4D-D235-C029-979B7B9330E8";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" 165;
-	setAttr ".ss" -40;
-	setAttr ".se" 165;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 3;
-createNode cacheFile -n "nClothShape1Cache4";
-	rename -uid "AD9BB391-C443-C8FA-B1B0-17BC99A4B395";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" -1;
-	setAttr ".ss" -40;
-	setAttr ".se" -1;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 4;
-createNode nComponent -n "nComponent11";
-	rename -uid "B2A8AD39-1F48-BEEB-AF84-C296B7882557";
-	setAttr ".ct" 6;
-	setAttr ".el" 2;
-createNode nComponent -n "nComponent12";
-	rename -uid "A0B17673-5E4D-18B4-1FC6-E0A2E3A43C9E";
-	setAttr ".ct" 2;
-	setAttr -s 4 ".ci[0:3]"  150 301 302 303;
-createNode cacheFile -n "nClothShape1Cache5";
-	rename -uid "04CD0CDB-2D48-8504-68F8-AEB8AAC73B7E";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" 305;
-	setAttr ".ss" -40;
-	setAttr ".se" 305;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 5;
-createNode cacheFile -n "nClothShape1Cache6";
-	rename -uid "D8DDF59F-244B-F150-0B65-CC87660E44D9";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" -15;
-	setAttr ".ss" -40;
-	setAttr ".se" -15;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 6;
-createNode cacheFile -n "nClothShape1Cache7";
-	rename -uid "BBB5BFA1-084C-4801-9C86-5E80B1A5B7B7";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" 305;
-	setAttr ".ss" -40;
-	setAttr ".se" 305;
-	setAttr ".sf" -40;
-	setAttr ".en" no;
-	setAttr ".tr" 7;
-createNode cacheFile -n "nClothShape1Cache8";
-	rename -uid "5BF143EF-4C49-D184-B116-B0A3F1917DB9";
-	setAttr ".cn" -type "string" "nClothShape1";
-	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
-	setAttr ".ch[0]" -type "string" "nClothShape1";
-	setAttr ".os" -40;
-	setAttr ".oe" 305;
-	setAttr ".ss" -40;
-	setAttr ".se" 305;
-	setAttr ".sf" -40;
-	setAttr ".tr" 8;
 createNode animCurveTU -n "mom_shoulder_ctrl_mom_boob_correct_lft";
 	rename -uid "DBDE8FC1-9941-8D46-0BE3-A585CC7F6D49";
 	setAttr ".tan" 18;
@@ -23100,19 +22665,24 @@ createNode animCurveTU -n "Spine_Cntrl_01_visibility1";
 createNode animCurveTA -n "Thigh_Cntrl_L_rotateX";
 	rename -uid "8CE80802-B946-FBD5-3E78-E49E019B4AC5";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  5 0 14 3.4401593702515342e-15 29 0 34 0
-		 39 0 47 33.406987071563051 58 8.3494934327918831 68 -1.7437065160740779 75 -21.227289248654248;
+	setAttr -s 14 ".ktv[0:13]"  5 0 14 3.4401593702515342e-15 29 0 34 0
+		 39 0 47 33.406987071563051 58 8.3494934327918831 68 -1.7437065160740779 75 -21.227289248654248
+		 112 -21.227289248654248 127 -18.527720465650543 141 -22.497615026187159 154 -24.822005808274643
+		 166 -15.106648775559725;
 createNode animCurveTA -n "Thigh_Cntrl_L_rotateY";
 	rename -uid "5555725F-4E45-1F7A-4392-0B8ABE442205";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  5 0 14 22.401355683666512 29 -16.619300580842868
-		 34 0 39 0 47 -15.026017333770165 58 -47.932966440312107 68 -49.194349477624321 75 -34.622002052718351;
+	setAttr -s 14 ".ktv[0:13]"  5 0 14 22.401355683666512 29 -16.619300580842868
+		 34 0 39 0 47 -15.026017333770165 58 -47.932966440312107 68 -49.194349477624321 75 -34.622002052718351
+		 112 -34.622002052718351 127 -3.3165084020951725 141 -17.287133216044779 154 -13.601828783653968
+		 166 -11.499345402087766;
 createNode animCurveTA -n "Thigh_Cntrl_L_rotateZ";
 	rename -uid "2048DABE-9648-FFF2-FB71-A3ADE0C10CEE";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  5 68.723929081477323 14 51.982263732164583
+	setAttr -s 12 ".ktv[0:11]"  5 68.723929081477323 14 51.982263732164583
 		 29 76.716858375070956 47 40.247980172081483 58 22.973901238987203 68 33.425789987687487
-		 75 62.188106882409649;
+		 75 62.188106882409649 112 62.188106882409649 127 63.565554480006853 141 56.525302843207612
+		 154 65.233503484751409 166 55.487069982955859;
 createNode animCurveTU -n "Thigh_Cntrl_R_visibility";
 	rename -uid "A5AD48C6-C147-410E-6AF2-FC90F4A9037B";
 	setAttr ".tan" 9;
@@ -23121,9 +22691,10 @@ createNode animCurveTU -n "Thigh_Cntrl_R_visibility";
 createNode animCurveTU -n "Thigh_Cntrl_L_visibility";
 	rename -uid "59979352-BD47-377E-0CCF-EE991527E953";
 	setAttr ".tan" 9;
-	setAttr -s 9 ".ktv[0:8]"  5 1 14 1 29 1 34 1 39 1 47 1 58 1 68 1 75 1;
-	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
-		5;
+	setAttr -s 14 ".ktv[0:13]"  5 1 14 1 29 1 34 1 39 1 47 1 58 1 68 1 75 1
+		 112 1 127 1 141 1 154 1 166 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
 createNode animCurveTA -n "Spine_Cntrl_03_rotateX1";
 	rename -uid "8CD441D0-6E4B-C603-DCA3-B19CFD1C65DB";
 	setAttr ".tan" 18;
@@ -23174,15 +22745,17 @@ createNode animCurveTU -n "Spine_Cntrl_03_visibility1";
 createNode animCurveTU -n "UpperArm_Cntrl_L_visibility";
 	rename -uid "322DA731-0D4D-39CC-3DC0-AD83E99E20F6";
 	setAttr ".tan" 9;
-	setAttr -s 12 ".ktv[0:11]"  1 1 6 1 24 1 30 1 33 1 37 1 45 1 50 1 63 1
-		 85 1 105 1 116 1;
-	setAttr -s 12 ".kot[0:11]"  5 5 5 5 5 5 5 5 
-		5 5 5 5;
+	setAttr -s 14 ".ktv[0:13]"  1 1 6 1 24 1 30 1 33 1 37 1 45 1 50 1 63 1
+		 85 1 105 1 116 1 131 1 143 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
 createNode animCurveTU -n "LowerArm_Cntrl_L_visibility";
 	rename -uid "18F8FD50-3349-9894-0B00-AC9EC9D6B5D6";
 	setAttr ".tan" 9;
-	setAttr -s 5 ".ktv[0:4]"  37 1 50 1 56 1 69 1 116 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 11 ".ktv[0:10]"  13 1 24 1 28 1 37 1 50 1 56 1 69 1 82 1
+		 101 1 116 1 126 1;
+	setAttr -s 11 ".kot[0:10]"  5 5 5 5 5 5 5 5 
+		5 5 5;
 createNode animCurveTU -n "Knee_Cntrl_R_visibility";
 	rename -uid "3B91AE10-0D41-6B7E-1FF1-ADA6B32E1D7B";
 	setAttr ".tan" 9;
@@ -23191,49 +22764,62 @@ createNode animCurveTU -n "Knee_Cntrl_R_visibility";
 createNode animCurveTU -n "Ankle_Cntrl_R_visibility";
 	rename -uid "22C79682-664E-C97F-35A2-FE9181407FAC";
 	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  28 1 36 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 7 ".ktv[0:6]"  28 1 36 1 104 1 125 1 149 1 174 1 193 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "Knee_Cntrl_L_rotateX";
 	rename -uid "065F0682-5446-82E9-0C34-E8A957172158";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  7 0 18 0 28 0 34 0 40 0 45 -1.6825558339639649e-15
-		 49 24.659836398152297;
+	setAttr -s 16 ".ktv[0:15]"  7 0 18 0 28 0 34 0 40 0 45 -1.6825558339639649e-15
+		 49 24.659836398152297 99 24.659836398152297 115 2.4257282016068267 126 3.8749547206652917
+		 135 4.683088894734202 145 2.3672262431482625 157 0.34110741174783804 165 5.280074142251765
+		 178 2.1070737343289201 191 6.2155852929473969;
 createNode animCurveTA -n "Knee_Cntrl_L_rotateY";
 	rename -uid "ABF9DFBB-F742-7576-AFA6-8C88C1C57994";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  7 0 18 0 28 0 34 0 40 0 45 19.063747582295811
-		 49 -5.2102279267793632;
+	setAttr -s 16 ".ktv[0:15]"  7 0 18 0 28 0 34 0 40 0 45 19.063747582295811
+		 49 -5.2102279267793632 99 -5.2102279267793632 115 -5.778870313233238 126 -4.9276065538957088
+		 135 -4.1673629698894246 145 -5.8030118881519757 157 -6.2564877731224522 165 6.217070667938521
+		 178 7.8746313170076192 191 20.260970825072185;
 createNode animCurveTA -n "Knee_Cntrl_L_rotateZ";
 	rename -uid "340E9471-654F-7184-F205-B18A85DFF9BF";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  7 -64.876544071710924 18 -87.481343135963627
+	setAttr -s 16 ".ktv[0:15]"  7 -64.876544071710924 18 -87.481343135963627
 		 28 -30.07479446298937 34 -51.180042096874736 40 -69.432970849407269 45 -69.432970849407326
-		 49 -56.108787741467843;
+		 49 -56.108787741467843 99 -56.108787741467843 115 -45.078032213795701 126 -60.517992997699331
+		 135 -70.683923129271889 145 -44.498229992344918 157 -25.387409722328506 165 -32.573033253419609
+		 178 -58.017836656193985 191 -46.252524501666066;
 createNode animCurveTU -n "Knee_Cntrl_L_visibility";
 	rename -uid "924FC911-634A-7D32-8F0C-69B33E08B3A4";
 	setAttr ".tan" 9;
-	setAttr -s 7 ".ktv[0:6]"  7 1 18 1 28 1 34 1 40 1 45 1 49 1;
-	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+	setAttr -s 16 ".ktv[0:15]"  7 1 18 1 28 1 34 1 40 1 45 1 49 1 99 1 115 1
+		 126 1 135 1 145 1 157 1 165 1 178 1 191 1;
+	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "Ankle_Cntrl_L_rotateX";
 	rename -uid "9FB30A26-BE47-36BA-8A26-7385D950E3D1";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  6 0 13 0 19 0 36 0 46 0 54 0 64 0 68 0 75 0;
+	setAttr -s 15 ".ktv[0:14]"  6 0 13 0 19 0 36 0 46 0 54 0 64 0 68 0 75 0
+		 104 0 119 0 131 0 145 0 163 0 187 0;
 createNode animCurveTA -n "Ankle_Cntrl_L_rotateY";
 	rename -uid "4C7A464A-C148-5234-B1B3-BF8480A31D96";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  6 0 13 0 19 0 36 0 46 0 54 0 64 0 68 0 75 0;
+	setAttr -s 15 ".ktv[0:14]"  6 0 13 0 19 0 36 0 46 0 54 0 64 0 68 0 75 0
+		 104 0 119 0 131 0 145 0 163 0 187 0;
 createNode animCurveTA -n "Ankle_Cntrl_L_rotateZ";
 	rename -uid "04095EBA-0242-45B8-0E21-FA8352FDA912";
 	setAttr ".tan" 18;
-	setAttr -s 9 ".ktv[0:8]"  6 -43.864152979364796 13 21.594721604399545
+	setAttr -s 15 ".ktv[0:14]"  6 -43.864152979364796 13 21.594721604399545
 		 19 -21.055713089666295 36 -60.36408424235794 46 40.578493200535206 54 -40.291897373829805
-		 64 -74.809568532457689 68 -33.001524338971379 75 0.10187737433427009;
+		 64 -74.809568532457689 68 -33.001524338971379 75 0.10187737433427009 104 0.10187737433427009
+		 119 -38.564899054099143 131 -5.4796922847295155 145 -7.4579184978137265 163 -56.268266834941016
+		 187 -35.44889712496623;
 createNode animCurveTU -n "Ankle_Cntrl_L_visibility";
 	rename -uid "EE5708DF-2145-F2E2-1473-D58B83923469";
 	setAttr ".tan" 9;
-	setAttr -s 9 ".ktv[0:8]"  6 1 13 1 19 1 36 1 46 1 54 1 64 1 68 1 75 1;
-	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
-		5;
+	setAttr -s 15 ".ktv[0:14]"  6 1 13 1 19 1 36 1 46 1 54 1 64 1 68 1 75 1
+		 104 1 119 1 131 1 145 1 163 1 187 1;
+	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5;
 createNode animCurveTU -n "LowerArm_Cntrl_R_visibility";
 	rename -uid "8EACDC7D-9C4B-6A3A-24C7-A78691896795";
 	setAttr ".tan" 9;
@@ -23247,10 +22833,10 @@ createNode animCurveTU -n "Wrist_Cntrl_R_visibility";
 createNode animCurveTU -n "Wrist_Cntrl_L_visibility";
 	rename -uid "3F8101B3-6043-1DA6-4EE4-20923BC07775";
 	setAttr ".tan" 9;
-	setAttr -s 12 ".ktv[0:11]"  24 1 60 1 72.00000017006802 1 79.500000680272109 1
-		 88.500001190476183 1 103 1 120 1 151 1 166 1 174 1 189 1 200 1;
-	setAttr -s 12 ".kot[0:11]"  5 5 5 5 5 5 5 5 
-		5 5 5 5;
+	setAttr -s 14 ".ktv[0:13]"  24 1 60 1 72.00000017006802 1 79.500000680272109 1
+		 88.500001190476183 1 103 1 120 1 129 1 139 1 151 1 166 1 174 1 189 1 200 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
 createNode animCurveTU -n "LowerEyelid_Cntrl_L_visibility";
 	rename -uid "7475306C-9E40-71A8-85C0-128D18DB0FAA";
 	setAttr ".tan" 9;
@@ -23515,25 +23101,27 @@ createNode animCurveTL -n "Cheek_Cntrl_R_translateY1";
 createNode animCurveTL -n "BottomMouth_Cntrl_L_translateY";
 	rename -uid "8C8CE1F2-3746-10F1-F575-8EB1ECBDD0A3";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  151 0 166 -1.3250327673426525 172 -0.68036067964415081
-		 180 0 194 -0.42656318781018854 203 0 236 0 242 -0.68509874398278248;
+	setAttr -s 9 ".ktv[0:8]"  111 -0.45021469385022073 151 0 166 -1.3250327673426525
+		 172 -0.68036067964415081 180 0 194 -0.42656318781018854 203 0 236 0 242 -0.68509874398278248;
 createNode animCurveTU -n "BottomMouth_Cntrl_L_visibility";
 	rename -uid "839D3964-3940-98CB-2A57-4E84BAC748C4";
 	setAttr ".tan" 9;
-	setAttr -s 8 ".ktv[0:7]"  151 1 166 1 172 1 180 1 194 1 203 1 236 1
-		 242 1;
-	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  111 1 151 1 166 1 172 1 180 1 194 1 203 1
+		 236 1 242 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTU -n "BottomMouth_Cntrl_R_visibility";
 	rename -uid "0329BCD1-A247-480F-BAEE-9086F0EEBE1B";
 	setAttr ".tan" 9;
-	setAttr -s 8 ".ktv[0:7]"  151 1 166 1 172 1 180 1 194 1 203 1 236 1
-		 242 1;
-	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  111 1 151 1 166 1 172 1 180 1 194 1 203 1
+		 236 1 242 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTL -n "BottomMouth_Cntrl_R_translateY";
 	rename -uid "9CEF06DE-9B43-A182-5436-D687C90EBD16";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  151 0 166 -1.3250327673426525 172 -0.68036067964415081
-		 180 0 194 -0.42656318781018854 203 0 236 0 242 -0.68509874398278248;
+	setAttr -s 9 ".ktv[0:8]"  111 -0.45021469385022073 151 0 166 -1.3250327673426525
+		 172 -0.68036067964415081 180 0 194 -0.42656318781018854 203 0 236 0 242 -0.68509874398278248;
 createNode animCurveTL -n "NoseDepress_Cntrl_translateX";
 	rename -uid "21ED791E-3F4F-B605-9765-E19498BF3891";
 	setAttr ".tan" 18;
@@ -23796,13 +23384,42 @@ createNode animCurveTA -n "bot_mid_ctrl_rotateZ";
 	rename -uid "B3D7BE4A-D34E-950B-56F4-9984BB509E97";
 	setAttr ".tan" 18;
 	setAttr -s 2 ".ktv[0:1]"  62 0 120 0;
+createNode animCurveTL -n "bot_mid_ctrl_translateX1";
+	rename -uid "ADEEFE87-A84E-489D-AF6D-DD9F9A65FF29";
+	setAttr ".tan" 18;
+	setAttr ".ktv[0]"  0 -1.1102230246251565e-16;
+createNode animCurveTL -n "bot_mid_ctrl_translateY1";
+	rename -uid "7E550956-434E-76AE-2CA7-2884A517728F";
+	setAttr ".tan" 18;
+	setAttr ".ktv[0]"  0 -0.26601002695381082;
+createNode animCurveTL -n "bot_mid_ctrl_translateZ1";
+	rename -uid "2ADA0A12-D147-F22C-3AF4-D787BE894C3F";
+	setAttr ".tan" 18;
+	setAttr ".ktv[0]"  0 0.8798968605230163;
+createNode animCurveTU -n "bot_mid_ctrl_visibility1";
+	rename -uid "117BAA9B-4A49-AF27-4408-7FB3DE0B04C3";
+	setAttr ".tan" 9;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "bot_mid_ctrl_rotateX1";
+	rename -uid "843F3171-2543-B048-AE53-81867DF04F43";
+	setAttr ".tan" 18;
+	setAttr ".ktv[0]"  0 34.436429614842986;
+createNode animCurveTA -n "bot_mid_ctrl_rotateY1";
+	rename -uid "736B00AA-D042-9DAB-17F6-8ABF7D3A0703";
+	setAttr ".tan" 18;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "bot_mid_ctrl_rotateZ1";
+	rename -uid "68A5ECEC-B240-A1F4-6115-50826E00C9F8";
+	setAttr ".tan" 18;
+	setAttr ".ktv[0]"  0 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 157;
-	setAttr ".unw" 157;
+	setAttr ".o" 198;
+	setAttr ".unw" 198;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -23816,7 +23433,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 433 ".st";
+	setAttr -s 440 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -23829,7 +23446,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 452 ".s";
+	setAttr -s 459 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -23841,21 +23458,21 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 719 ".u";
+	setAttr -s 731 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 25 ".r";
+	setAttr -s 27 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 487 ".tx";
+	setAttr -s 497 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 6 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -23879,7 +23496,7 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
-	setAttr ".ren" -type "string" "arnold";
+	setAttr ".ren" -type "string" "mentalRay";
 	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
 	setAttr ".an" yes;
@@ -24115,565 +23732,548 @@ connectAttr "wine_bottle_scaleX1.o" "wineRN.phl[8]";
 connectAttr "wine_bottle_scaleY1.o" "wineRN.phl[9]";
 connectAttr "wine_bottle_scaleZ1.o" "wineRN.phl[10]";
 connectAttr "layer2.di" "chairRN.phl[1]";
-connectAttr "momRN1.phl[1049]" "lambert2SG.dsm" -na;
-connectAttr "momRN1.phl[1050]" "nRigidShape1.imsh";
-connectAttr "momRN1.phl[1051]" "lambert2SG.dsm" -na;
-connectAttr "momRN1.phl[1052]" "nRigidShape2.imsh";
-connectAttr "momRN1.phl[1053]" "lambert2SG.dsm" -na;
-connectAttr "momRN1.phl[1054]" "lambert2SG.dsm" -na;
-connectAttr "momRN1.phl[1055]" "nRigidShape3.imsh";
-connectAttr "MasterCntrl_translateX.o" "momRN1.phl[1056]";
-connectAttr "MasterCntrl_translateY.o" "momRN1.phl[1057]";
-connectAttr "MasterCntrl_translateZ.o" "momRN1.phl[1058]";
-connectAttr "MasterCntrl_rotateX.o" "momRN1.phl[1059]";
-connectAttr "MasterCntrl_rotateY.o" "momRN1.phl[1060]";
-connectAttr "MasterCntrl_rotateZ.o" "momRN1.phl[1061]";
-connectAttr "MasterCntrl_visibility.o" "momRN1.phl[1062]";
-connectAttr "MasterCntrl_scaleX.o" "momRN1.phl[1063]";
-connectAttr "MasterCntrl_scaleY.o" "momRN1.phl[1064]";
-connectAttr "MasterCntrl_scaleZ.o" "momRN1.phl[1065]";
-connectAttr "ThumbCntrl_L_01_rotateX.o" "momRN1.phl[1066]";
-connectAttr "ThumbCntrl_L_01_rotateY.o" "momRN1.phl[1067]";
-connectAttr "ThumbCntrl_L_01_rotateZ.o" "momRN1.phl[1068]";
-connectAttr "ThumbCntrl_L_01_visibility.o" "momRN1.phl[1069]";
-connectAttr "ThumbCntrl_L_02_rotateX.o" "momRN1.phl[1070]";
-connectAttr "ThumbCntrl_L_02_rotateY.o" "momRN1.phl[1071]";
-connectAttr "ThumbCntrl_L_02_rotateZ.o" "momRN1.phl[1072]";
-connectAttr "ThumbCntrl_L_02_visibility.o" "momRN1.phl[1073]";
-connectAttr "IndexCntrl_L_01_rotateX.o" "momRN1.phl[1074]";
-connectAttr "IndexCntrl_L_01_rotateY.o" "momRN1.phl[1075]";
-connectAttr "IndexCntrl_L_01_rotateZ.o" "momRN1.phl[1076]";
-connectAttr "IndexCntrl_L_01_visibility.o" "momRN1.phl[1077]";
-connectAttr "IndexCntrl_L_02_rotateX.o" "momRN1.phl[1078]";
-connectAttr "IndexCntrl_L_02_rotateY.o" "momRN1.phl[1079]";
-connectAttr "IndexCntrl_L_02_rotateZ.o" "momRN1.phl[1080]";
-connectAttr "IndexCntrl_L_02_visibility.o" "momRN1.phl[1081]";
-connectAttr "IndexCntrl_L_03_rotateX.o" "momRN1.phl[1082]";
-connectAttr "IndexCntrl_L_03_rotateY.o" "momRN1.phl[1083]";
-connectAttr "IndexCntrl_L_03_rotateZ.o" "momRN1.phl[1084]";
-connectAttr "IndexCntrl_L_03_visibility.o" "momRN1.phl[1085]";
-connectAttr "MiddleCntrl_L_02_rotateX.o" "momRN1.phl[1086]";
-connectAttr "MiddleCntrl_L_02_rotateY.o" "momRN1.phl[1087]";
-connectAttr "MiddleCntrl_L_02_rotateZ.o" "momRN1.phl[1088]";
-connectAttr "MiddleCntrl_L_02_visibility.o" "momRN1.phl[1089]";
-connectAttr "MiddleCntrl_L_03_rotateX.o" "momRN1.phl[1090]";
-connectAttr "MiddleCntrl_L_03_rotateY.o" "momRN1.phl[1091]";
-connectAttr "MiddleCntrl_L_03_rotateZ.o" "momRN1.phl[1092]";
-connectAttr "MiddleCntrl_L_03_visibility.o" "momRN1.phl[1093]";
-connectAttr "PinkyCntrl_L_02_rotateX.o" "momRN1.phl[1094]";
-connectAttr "PinkyCntrl_L_02_rotateY.o" "momRN1.phl[1095]";
-connectAttr "PinkyCntrl_L_02_rotateZ.o" "momRN1.phl[1096]";
-connectAttr "PinkyCntrl_L_02_visibility.o" "momRN1.phl[1097]";
-connectAttr "PinkyCntrl_L_03_rotateZ.o" "momRN1.phl[1098]";
-connectAttr "PinkyCntrl_L_03_rotateX.o" "momRN1.phl[1099]";
-connectAttr "PinkyCntrl_L_03_rotateY.o" "momRN1.phl[1100]";
-connectAttr "PinkyCntrl_L_03_visibility.o" "momRN1.phl[1101]";
-connectAttr "RingCntrl_L_02_rotateZ.o" "momRN1.phl[1102]";
-connectAttr "RingCntrl_L_02_rotateX.o" "momRN1.phl[1103]";
-connectAttr "RingCntrl_L_02_rotateY.o" "momRN1.phl[1104]";
-connectAttr "RingCntrl_L_02_visibility.o" "momRN1.phl[1105]";
-connectAttr "RingCntrl_L_03_rotateX.o" "momRN1.phl[1106]";
-connectAttr "RingCntrl_L_03_rotateY.o" "momRN1.phl[1107]";
-connectAttr "RingCntrl_L_03_rotateZ.o" "momRN1.phl[1108]";
-connectAttr "RingCntrl_L_03_visibility.o" "momRN1.phl[1109]";
-connectAttr "Cheek_Cntrl_R_translateY1.o" "momRN1.phl[1110]";
-connectAttr "Cheek_Cntrl_R_visibility1.o" "momRN1.phl[1111]";
-connectAttr "Cheek_Cntrl_L_translateY1.o" "momRN1.phl[1112]";
-connectAttr "Cheek_Cntrl_L_visibility1.o" "momRN1.phl[1113]";
-connectAttr "EdgeMouth_Cntrl_R_translateY.o" "momRN1.phl[1114]";
-connectAttr "EdgeMouth_Cntrl_R_translateX.o" "momRN1.phl[1115]";
-connectAttr "EdgeMouth_Cntrl_R_visibility.o" "momRN1.phl[1116]";
-connectAttr "EdgeMouth_Cntrl_L_translateY.o" "momRN1.phl[1117]";
-connectAttr "EdgeMouth_Cntrl_L_translateX.o" "momRN1.phl[1118]";
-connectAttr "EdgeMouth_Cntrl_L_visibility.o" "momRN1.phl[1119]";
-connectAttr "BottomMouth_Cntrl_R_translateY.o" "momRN1.phl[1120]";
-connectAttr "BottomMouth_Cntrl_R_visibility.o" "momRN1.phl[1121]";
-connectAttr "BottomMouth_Cntrl_L_translateY.o" "momRN1.phl[1122]";
-connectAttr "BottomMouth_Cntrl_L_visibility.o" "momRN1.phl[1123]";
-connectAttr "NoseDepress_Cntrl_translateZ.o" "momRN1.phl[1124]";
-connectAttr "NoseDepress_Cntrl_translateX.o" "momRN1.phl[1125]";
-connectAttr "NoseDepress_Cntrl_translateY.o" "momRN1.phl[1126]";
-connectAttr "NoseDepress_Cntrl_visibility.o" "momRN1.phl[1127]";
-connectAttr "TopMouth_Cntrl_R_translateY.o" "momRN1.phl[1128]";
-connectAttr "TopMouth_Cntrl_R_visibility.o" "momRN1.phl[1129]";
-connectAttr "TopMouth_Cntrl_L_translateY.o" "momRN1.phl[1130]";
-connectAttr "TopMouth_Cntrl_L_visibility.o" "momRN1.phl[1131]";
-connectAttr "ThumbCntrl_R_01_rotateX.o" "momRN1.phl[1132]";
-connectAttr "ThumbCntrl_R_01_rotateY.o" "momRN1.phl[1133]";
-connectAttr "ThumbCntrl_R_01_rotateZ.o" "momRN1.phl[1134]";
-connectAttr "ThumbCntrl_R_01_visibility.o" "momRN1.phl[1135]";
-connectAttr "ThumbCntrl_R_02_rotateX.o" "momRN1.phl[1136]";
-connectAttr "ThumbCntrl_R_02_rotateY.o" "momRN1.phl[1137]";
-connectAttr "ThumbCntrl_R_02_rotateZ.o" "momRN1.phl[1138]";
-connectAttr "ThumbCntrl_R_02_visibility.o" "momRN1.phl[1139]";
-connectAttr "IndexCntrl_R_01_rotateX.o" "momRN1.phl[1140]";
-connectAttr "IndexCntrl_R_01_rotateY.o" "momRN1.phl[1141]";
-connectAttr "IndexCntrl_R_01_rotateZ.o" "momRN1.phl[1142]";
-connectAttr "IndexCntrl_R_01_visibility.o" "momRN1.phl[1143]";
-connectAttr "IndexCntrl_R_02_rotateX.o" "momRN1.phl[1144]";
-connectAttr "IndexCntrl_R_02_rotateY.o" "momRN1.phl[1145]";
-connectAttr "IndexCntrl_R_02_rotateZ.o" "momRN1.phl[1146]";
-connectAttr "IndexCntrl_R_02_visibility.o" "momRN1.phl[1147]";
-connectAttr "IndexCntrl_R_03_rotateX.o" "momRN1.phl[1148]";
-connectAttr "IndexCntrl_R_03_rotateY.o" "momRN1.phl[1149]";
-connectAttr "IndexCntrl_R_03_rotateZ.o" "momRN1.phl[1150]";
-connectAttr "IndexCntrl_R_03_visibility.o" "momRN1.phl[1151]";
-connectAttr "MiddleCntrl_R_01_rotateX.o" "momRN1.phl[1152]";
-connectAttr "MiddleCntrl_R_01_rotateY.o" "momRN1.phl[1153]";
-connectAttr "MiddleCntrl_R_01_rotateZ.o" "momRN1.phl[1154]";
-connectAttr "MiddleCntrl_R_01_visibility.o" "momRN1.phl[1155]";
-connectAttr "MiddleCntrl_R_02_rotateX.o" "momRN1.phl[1156]";
-connectAttr "MiddleCntrl_R_02_rotateY.o" "momRN1.phl[1157]";
-connectAttr "MiddleCntrl_R_02_rotateZ.o" "momRN1.phl[1158]";
-connectAttr "MiddleCntrl_R_02_visibility.o" "momRN1.phl[1159]";
-connectAttr "MiddleCntrl_R_03_rotateX.o" "momRN1.phl[1160]";
-connectAttr "MiddleCntrl_R_03_rotateY.o" "momRN1.phl[1161]";
-connectAttr "MiddleCntrl_R_03_rotateZ.o" "momRN1.phl[1162]";
-connectAttr "MiddleCntrl_R_03_visibility.o" "momRN1.phl[1163]";
-connectAttr "PinkyCntrl_R_01_rotateX.o" "momRN1.phl[1164]";
-connectAttr "PinkyCntrl_R_01_rotateY.o" "momRN1.phl[1165]";
-connectAttr "PinkyCntrl_R_01_rotateZ.o" "momRN1.phl[1166]";
-connectAttr "PinkyCntrl_R_01_visibility.o" "momRN1.phl[1167]";
-connectAttr "PinkyCntrl_R_02_rotateX.o" "momRN1.phl[1168]";
-connectAttr "PinkyCntrl_R_02_rotateY.o" "momRN1.phl[1169]";
-connectAttr "PinkyCntrl_R_02_rotateZ.o" "momRN1.phl[1170]";
-connectAttr "PinkyCntrl_R_02_visibility.o" "momRN1.phl[1171]";
-connectAttr "PinkyCntrl_R_03_rotateX.o" "momRN1.phl[1172]";
-connectAttr "PinkyCntrl_R_03_rotateY.o" "momRN1.phl[1173]";
-connectAttr "PinkyCntrl_R_03_rotateZ.o" "momRN1.phl[1174]";
-connectAttr "PinkyCntrl_R_03_visibility.o" "momRN1.phl[1175]";
-connectAttr "RingCntrl_R_01_rotateX.o" "momRN1.phl[1176]";
-connectAttr "RingCntrl_R_01_rotateY.o" "momRN1.phl[1177]";
-connectAttr "RingCntrl_R_01_rotateZ.o" "momRN1.phl[1178]";
-connectAttr "RingCntrl_R_01_visibility.o" "momRN1.phl[1179]";
-connectAttr "RingCntrl_R_02_rotateX.o" "momRN1.phl[1180]";
-connectAttr "RingCntrl_R_02_rotateY.o" "momRN1.phl[1181]";
-connectAttr "RingCntrl_R_02_rotateZ.o" "momRN1.phl[1182]";
-connectAttr "RingCntrl_R_02_visibility.o" "momRN1.phl[1183]";
-connectAttr "RingCntrl_R_03_rotateX.o" "momRN1.phl[1184]";
-connectAttr "RingCntrl_R_03_rotateY.o" "momRN1.phl[1185]";
-connectAttr "RingCntrl_R_03_rotateZ.o" "momRN1.phl[1186]";
-connectAttr "RingCntrl_R_03_visibility.o" "momRN1.phl[1187]";
-connectAttr "mom_l_foot_ctrl_translateX1.o" "momRN1.phl[1188]";
-connectAttr "mom_l_foot_ctrl_translateY1.o" "momRN1.phl[1189]";
-connectAttr "mom_l_foot_ctrl_translateZ1.o" "momRN1.phl[1190]";
-connectAttr "mom_l_foot_ctrl_rotateX1.o" "momRN1.phl[1191]";
-connectAttr "mom_l_foot_ctrl_rotateY1.o" "momRN1.phl[1192]";
-connectAttr "mom_l_foot_ctrl_rotateZ1.o" "momRN1.phl[1193]";
-connectAttr "mom_l_foot_ctrl_visibility1.o" "momRN1.phl[1194]";
-connectAttr "mom_l_foot_ctrl_scaleX1.o" "momRN1.phl[1195]";
-connectAttr "mom_l_foot_ctrl_scaleY1.o" "momRN1.phl[1196]";
-connectAttr "mom_l_foot_ctrl_scaleZ1.o" "momRN1.phl[1197]";
-connectAttr "mom_l_toe_ptr_rotateX.o" "momRN1.phl[1198]";
-connectAttr "mom_r_foot_ctrl_translateX1.o" "momRN1.phl[1199]";
-connectAttr "mom_r_foot_ctrl_translateY1.o" "momRN1.phl[1200]";
-connectAttr "mom_r_foot_ctrl_translateZ1.o" "momRN1.phl[1201]";
-connectAttr "mom_r_foot_ctrl_rotateX1.o" "momRN1.phl[1202]";
-connectAttr "mom_r_foot_ctrl_rotateY1.o" "momRN1.phl[1203]";
-connectAttr "mom_r_foot_ctrl_rotateZ1.o" "momRN1.phl[1204]";
-connectAttr "mom_r_foot_ctrl_visibility1.o" "momRN1.phl[1205]";
-connectAttr "mom_r_foot_ctrl_scaleX1.o" "momRN1.phl[1206]";
-connectAttr "mom_r_foot_ctrl_scaleY1.o" "momRN1.phl[1207]";
-connectAttr "mom_r_foot_ctrl_scaleZ1.o" "momRN1.phl[1208]";
-connectAttr "mom_cog_ctrl_translateX1.o" "momRN1.phl[1209]";
-connectAttr "mom_cog_ctrl_translateY1.o" "momRN1.phl[1210]";
-connectAttr "mom_cog_ctrl_translateZ1.o" "momRN1.phl[1211]";
-connectAttr "mom_cog_ctrl_rotateX1.o" "momRN1.phl[1212]";
-connectAttr "mom_cog_ctrl_rotateY1.o" "momRN1.phl[1213]";
-connectAttr "mom_cog_ctrl_rotateZ1.o" "momRN1.phl[1214]";
-connectAttr "mom_cog_ctrl_visibility1.o" "momRN1.phl[1215]";
-connectAttr "Spine_Cntrl_Offset_01_visibility.o" "momRN1.phl[1216]";
-connectAttr "Spine_Cntrl_Offset_01_translateX.o" "momRN1.phl[1217]";
-connectAttr "Spine_Cntrl_Offset_01_translateY.o" "momRN1.phl[1218]";
-connectAttr "Spine_Cntrl_Offset_01_translateZ.o" "momRN1.phl[1219]";
-connectAttr "Spine_Cntrl_Offset_01_rotateX.o" "momRN1.phl[1220]";
-connectAttr "Spine_Cntrl_Offset_01_rotateY.o" "momRN1.phl[1221]";
-connectAttr "Spine_Cntrl_Offset_01_rotateZ.o" "momRN1.phl[1222]";
-connectAttr "Spine_Cntrl_Offset_01_scaleX.o" "momRN1.phl[1223]";
-connectAttr "Spine_Cntrl_Offset_01_scaleY.o" "momRN1.phl[1224]";
-connectAttr "Spine_Cntrl_Offset_01_scaleZ.o" "momRN1.phl[1225]";
-connectAttr "Spine_Cntrl_01_rotateX1.o" "momRN1.phl[1226]";
-connectAttr "Spine_Cntrl_01_rotateY1.o" "momRN1.phl[1227]";
-connectAttr "Spine_Cntrl_01_rotateZ1.o" "momRN1.phl[1228]";
-connectAttr "Spine_Cntrl_01_visibility.o" "momRN1.phl[1229]";
-connectAttr "Spine_Cntrl_Offset_02_visibility.o" "momRN1.phl[1230]";
-connectAttr "Spine_Cntrl_Offset_02_translateX.o" "momRN1.phl[1231]";
-connectAttr "Spine_Cntrl_Offset_02_translateY.o" "momRN1.phl[1232]";
-connectAttr "Spine_Cntrl_Offset_02_translateZ.o" "momRN1.phl[1233]";
-connectAttr "Spine_Cntrl_Offset_02_rotateX.o" "momRN1.phl[1234]";
-connectAttr "Spine_Cntrl_Offset_02_rotateY.o" "momRN1.phl[1235]";
-connectAttr "Spine_Cntrl_Offset_02_rotateZ.o" "momRN1.phl[1236]";
-connectAttr "Spine_Cntrl_Offset_02_scaleX.o" "momRN1.phl[1237]";
-connectAttr "Spine_Cntrl_Offset_02_scaleY.o" "momRN1.phl[1238]";
-connectAttr "Spine_Cntrl_Offset_02_scaleZ.o" "momRN1.phl[1239]";
-connectAttr "Spine_Cntrl_02_rotateX.o" "momRN1.phl[1240]";
-connectAttr "Spine_Cntrl_02_rotateY.o" "momRN1.phl[1241]";
-connectAttr "Spine_Cntrl_02_rotateZ.o" "momRN1.phl[1242]";
-connectAttr "Spine_Cntrl_02_visibility.o" "momRN1.phl[1243]";
-connectAttr "Spine_Cntrl_Offset_03_visibility.o" "momRN1.phl[1244]";
-connectAttr "Spine_Cntrl_Offset_03_translateX.o" "momRN1.phl[1245]";
-connectAttr "Spine_Cntrl_Offset_03_translateY.o" "momRN1.phl[1246]";
-connectAttr "Spine_Cntrl_Offset_03_translateZ.o" "momRN1.phl[1247]";
-connectAttr "Spine_Cntrl_Offset_03_rotateX.o" "momRN1.phl[1248]";
-connectAttr "Spine_Cntrl_Offset_03_rotateY.o" "momRN1.phl[1249]";
-connectAttr "Spine_Cntrl_Offset_03_rotateZ.o" "momRN1.phl[1250]";
-connectAttr "Spine_Cntrl_Offset_03_scaleX.o" "momRN1.phl[1251]";
-connectAttr "Spine_Cntrl_Offset_03_scaleY.o" "momRN1.phl[1252]";
-connectAttr "Spine_Cntrl_Offset_03_scaleZ.o" "momRN1.phl[1253]";
-connectAttr "Spine_Cntrl_03_rotateX.o" "momRN1.phl[1254]";
-connectAttr "Spine_Cntrl_03_rotateY.o" "momRN1.phl[1255]";
-connectAttr "Spine_Cntrl_03_rotateZ.o" "momRN1.phl[1256]";
-connectAttr "Spine_Cntrl_03_visibility.o" "momRN1.phl[1257]";
-connectAttr "Spine_Cntrl_Offset_04_visibility.o" "momRN1.phl[1258]";
-connectAttr "Spine_Cntrl_Offset_04_translateX.o" "momRN1.phl[1259]";
-connectAttr "Spine_Cntrl_Offset_04_translateY.o" "momRN1.phl[1260]";
-connectAttr "Spine_Cntrl_Offset_04_translateZ.o" "momRN1.phl[1261]";
-connectAttr "Spine_Cntrl_Offset_04_rotateX.o" "momRN1.phl[1262]";
-connectAttr "Spine_Cntrl_Offset_04_rotateY.o" "momRN1.phl[1263]";
-connectAttr "Spine_Cntrl_Offset_04_rotateZ.o" "momRN1.phl[1264]";
-connectAttr "Spine_Cntrl_Offset_04_scaleX.o" "momRN1.phl[1265]";
-connectAttr "Spine_Cntrl_Offset_04_scaleY.o" "momRN1.phl[1266]";
-connectAttr "Spine_Cntrl_Offset_04_scaleZ.o" "momRN1.phl[1267]";
-connectAttr "Spine_Cntrl_04_rotateX1.o" "momRN1.phl[1268]";
-connectAttr "Spine_Cntrl_04_rotateY1.o" "momRN1.phl[1269]";
-connectAttr "Spine_Cntrl_04_rotateZ1.o" "momRN1.phl[1270]";
-connectAttr "Spine_Cntrl_04_visibility.o" "momRN1.phl[1271]";
-connectAttr "group1_visibility.o" "momRN1.phl[1272]";
-connectAttr "group1_translateX.o" "momRN1.phl[1273]";
-connectAttr "group1_translateY.o" "momRN1.phl[1274]";
-connectAttr "group1_translateZ.o" "momRN1.phl[1275]";
-connectAttr "group1_rotateX.o" "momRN1.phl[1276]";
-connectAttr "group1_rotateY.o" "momRN1.phl[1277]";
-connectAttr "group1_rotateZ.o" "momRN1.phl[1278]";
-connectAttr "group1_scaleX.o" "momRN1.phl[1279]";
-connectAttr "group1_scaleY.o" "momRN1.phl[1280]";
-connectAttr "group1_scaleZ.o" "momRN1.phl[1281]";
-connectAttr "mom_shoulder_ctrl_mom_boob_correct_lft.o" "momRN1.phl[1282]";
-connectAttr "mom_shoulder_ctrl_mom_boob_correct_rgt.o" "momRN1.phl[1283]";
-connectAttr "mom_shoulder_ctrl_rotateX1.o" "momRN1.phl[1284]";
-connectAttr "mom_shoulder_ctrl_rotateY1.o" "momRN1.phl[1285]";
-connectAttr "mom_shoulder_ctrl_rotateZ1.o" "momRN1.phl[1286]";
-connectAttr "mom_shoulder_ctrl_visibility1.o" "momRN1.phl[1287]";
-connectAttr "ShouldCntrl_L_visibility.o" "momRN1.phl[1288]";
-connectAttr "ShouldCntrl_L_translateX.o" "momRN1.phl[1289]";
-connectAttr "ShouldCntrl_L_translateY.o" "momRN1.phl[1290]";
-connectAttr "ShouldCntrl_L_translateZ.o" "momRN1.phl[1291]";
-connectAttr "ShouldCntrl_L_rotateX.o" "momRN1.phl[1292]";
-connectAttr "ShouldCntrl_L_rotateY.o" "momRN1.phl[1293]";
-connectAttr "ShouldCntrl_L_rotateZ.o" "momRN1.phl[1294]";
-connectAttr "ShouldCntrl_L_scaleX.o" "momRN1.phl[1295]";
-connectAttr "ShouldCntrl_L_scaleY.o" "momRN1.phl[1296]";
-connectAttr "ShouldCntrl_L_scaleZ.o" "momRN1.phl[1297]";
-connectAttr "ikHandle3_visibility.o" "momRN1.phl[1298]";
-connectAttr "ikHandle3_translateX.o" "momRN1.phl[1299]";
-connectAttr "ikHandle3_translateY.o" "momRN1.phl[1300]";
-connectAttr "ikHandle3_translateZ.o" "momRN1.phl[1301]";
-connectAttr "ikHandle3_rotateX.o" "momRN1.phl[1302]";
-connectAttr "ikHandle3_rotateY.o" "momRN1.phl[1303]";
-connectAttr "ikHandle3_rotateZ.o" "momRN1.phl[1304]";
-connectAttr "ikHandle3_scaleX.o" "momRN1.phl[1305]";
-connectAttr "ikHandle3_scaleY.o" "momRN1.phl[1306]";
-connectAttr "ikHandle3_scaleZ.o" "momRN1.phl[1307]";
-connectAttr "ikHandle3_poleVectorX.o" "momRN1.phl[1308]";
-connectAttr "ikHandle3_poleVectorY.o" "momRN1.phl[1309]";
-connectAttr "ikHandle3_poleVectorZ.o" "momRN1.phl[1310]";
-connectAttr "ikHandle3_offset.o" "momRN1.phl[1311]";
-connectAttr "ikHandle3_roll.o" "momRN1.phl[1312]";
-connectAttr "ikHandle3_twist.o" "momRN1.phl[1313]";
-connectAttr "ikHandle3_ikBlend.o" "momRN1.phl[1314]";
-connectAttr "ShouldCntrl_R_translateX.o" "momRN1.phl[1315]";
-connectAttr "ShouldCntrl_R_translateY.o" "momRN1.phl[1316]";
-connectAttr "ShouldCntrl_R_translateZ.o" "momRN1.phl[1317]";
-connectAttr "ShouldCntrl_R_rotateX.o" "momRN1.phl[1318]";
-connectAttr "ShouldCntrl_R_rotateY.o" "momRN1.phl[1319]";
-connectAttr "ShouldCntrl_R_rotateZ.o" "momRN1.phl[1320]";
-connectAttr "ShouldCntrl_R_visibility.o" "momRN1.phl[1321]";
-connectAttr "ShouldCntrl_R_scaleX.o" "momRN1.phl[1322]";
-connectAttr "ShouldCntrl_R_scaleY.o" "momRN1.phl[1323]";
-connectAttr "ShouldCntrl_R_scaleZ.o" "momRN1.phl[1324]";
-connectAttr "ikHandle4_visibility.o" "momRN1.phl[1325]";
-connectAttr "ikHandle4_translateX.o" "momRN1.phl[1326]";
-connectAttr "ikHandle4_translateY.o" "momRN1.phl[1327]";
-connectAttr "ikHandle4_translateZ.o" "momRN1.phl[1328]";
-connectAttr "ikHandle4_rotateX.o" "momRN1.phl[1329]";
-connectAttr "ikHandle4_rotateY.o" "momRN1.phl[1330]";
-connectAttr "ikHandle4_rotateZ.o" "momRN1.phl[1331]";
-connectAttr "ikHandle4_scaleX.o" "momRN1.phl[1332]";
-connectAttr "ikHandle4_scaleY.o" "momRN1.phl[1333]";
-connectAttr "ikHandle4_scaleZ.o" "momRN1.phl[1334]";
-connectAttr "ikHandle4_poleVectorX.o" "momRN1.phl[1335]";
-connectAttr "ikHandle4_poleVectorY.o" "momRN1.phl[1336]";
-connectAttr "ikHandle4_poleVectorZ.o" "momRN1.phl[1337]";
-connectAttr "ikHandle4_offset.o" "momRN1.phl[1338]";
-connectAttr "ikHandle4_roll.o" "momRN1.phl[1339]";
-connectAttr "ikHandle4_twist.o" "momRN1.phl[1340]";
-connectAttr "ikHandle4_ikBlend.o" "momRN1.phl[1341]";
-connectAttr "NeckCntrl_Offset_01_visibility.o" "momRN1.phl[1342]";
-connectAttr "NeckCntrl_Offset_01_translateX.o" "momRN1.phl[1343]";
-connectAttr "NeckCntrl_Offset_01_translateY.o" "momRN1.phl[1344]";
-connectAttr "NeckCntrl_Offset_01_translateZ.o" "momRN1.phl[1345]";
-connectAttr "NeckCntrl_Offset_01_rotateX.o" "momRN1.phl[1346]";
-connectAttr "NeckCntrl_Offset_01_rotateY.o" "momRN1.phl[1347]";
-connectAttr "NeckCntrl_Offset_01_rotateZ.o" "momRN1.phl[1348]";
-connectAttr "NeckCntrl_Offset_01_scaleX.o" "momRN1.phl[1349]";
-connectAttr "NeckCntrl_Offset_01_scaleY.o" "momRN1.phl[1350]";
-connectAttr "NeckCntrl_Offset_01_scaleZ.o" "momRN1.phl[1351]";
-connectAttr "necklace1_translateX.o" "momRN1.phl[1352]";
-connectAttr "necklace1_translateY.o" "momRN1.phl[1353]";
-connectAttr "necklace1_translateZ.o" "momRN1.phl[1354]";
-connectAttr "necklace1_visibility.o" "momRN1.phl[1355]";
-connectAttr "necklace1_rotateX.o" "momRN1.phl[1356]";
-connectAttr "necklace1_rotateY.o" "momRN1.phl[1357]";
-connectAttr "necklace1_rotateZ.o" "momRN1.phl[1358]";
-connectAttr "necklace1_scaleX.o" "momRN1.phl[1359]";
-connectAttr "necklace1_scaleY.o" "momRN1.phl[1360]";
-connectAttr "necklace1_scaleZ.o" "momRN1.phl[1361]";
-connectAttr "bot_mid_ctrl_translateX.o" "momRN1.phl[1362]";
-connectAttr "bot_mid_ctrl_translateY.o" "momRN1.phl[1363]";
-connectAttr "bot_mid_ctrl_translateZ.o" "momRN1.phl[1364]";
-connectAttr "bot_mid_ctrl_visibility.o" "momRN1.phl[1365]";
-connectAttr "bot_mid_ctrl_rotateX.o" "momRN1.phl[1366]";
-connectAttr "bot_mid_ctrl_rotateY.o" "momRN1.phl[1367]";
-connectAttr "bot_mid_ctrl_rotateZ.o" "momRN1.phl[1368]";
-connectAttr "NeckCntrl_01_mom_gulp_top.o" "momRN1.phl[1369]";
-connectAttr "NeckCntrl_01_mom_gulp_mid.o" "momRN1.phl[1370]";
-connectAttr "NeckCntrl_01_mom_gulp_bot.o" "momRN1.phl[1371]";
-connectAttr "NeckCntrl_01_rotateX.o" "momRN1.phl[1372]";
-connectAttr "NeckCntrl_01_rotateY.o" "momRN1.phl[1373]";
-connectAttr "NeckCntrl_01_rotateZ.o" "momRN1.phl[1374]";
-connectAttr "NeckCntrl_01_visibility.o" "momRN1.phl[1375]";
-connectAttr "NeckCntrl_01_translateX.o" "momRN1.phl[1376]";
-connectAttr "NeckCntrl_01_translateY.o" "momRN1.phl[1377]";
-connectAttr "NeckCntrl_01_translateZ.o" "momRN1.phl[1378]";
-connectAttr "NeckCntrl_01_scaleX.o" "momRN1.phl[1379]";
-connectAttr "NeckCntrl_01_scaleY.o" "momRN1.phl[1380]";
-connectAttr "NeckCntrl_01_scaleZ.o" "momRN1.phl[1381]";
-connectAttr "NeckCntrl_Offset_02_visibility.o" "momRN1.phl[1382]";
-connectAttr "NeckCntrl_Offset_02_translateX.o" "momRN1.phl[1383]";
-connectAttr "NeckCntrl_Offset_02_translateY.o" "momRN1.phl[1384]";
-connectAttr "NeckCntrl_Offset_02_translateZ.o" "momRN1.phl[1385]";
-connectAttr "NeckCntrl_Offset_02_rotateX.o" "momRN1.phl[1386]";
-connectAttr "NeckCntrl_Offset_02_rotateY.o" "momRN1.phl[1387]";
-connectAttr "NeckCntrl_Offset_02_rotateZ.o" "momRN1.phl[1388]";
-connectAttr "NeckCntrl_Offset_02_scaleX.o" "momRN1.phl[1389]";
-connectAttr "NeckCntrl_Offset_02_scaleY.o" "momRN1.phl[1390]";
-connectAttr "NeckCntrl_Offset_02_scaleZ.o" "momRN1.phl[1391]";
-connectAttr "NeckCntrl_02_rotateX.o" "momRN1.phl[1392]";
-connectAttr "NeckCntrl_02_rotateY.o" "momRN1.phl[1393]";
-connectAttr "NeckCntrl_02_rotateZ.o" "momRN1.phl[1394]";
-connectAttr "NeckCntrl_02_visibility.o" "momRN1.phl[1395]";
-connectAttr "NeckCntrl_02_translateX.o" "momRN1.phl[1396]";
-connectAttr "NeckCntrl_02_translateY.o" "momRN1.phl[1397]";
-connectAttr "NeckCntrl_02_translateZ.o" "momRN1.phl[1398]";
-connectAttr "NeckCntrl_02_scaleX.o" "momRN1.phl[1399]";
-connectAttr "NeckCntrl_02_scaleY.o" "momRN1.phl[1400]";
-connectAttr "NeckCntrl_02_scaleZ.o" "momRN1.phl[1401]";
-connectAttr "EyeGroup_Offset_visibility.o" "momRN1.phl[1402]";
-connectAttr "EyeGroup_Offset_translateX.o" "momRN1.phl[1403]";
-connectAttr "EyeGroup_Offset_translateY.o" "momRN1.phl[1404]";
-connectAttr "EyeGroup_Offset_translateZ.o" "momRN1.phl[1405]";
-connectAttr "EyeGroup_Offset_rotateX.o" "momRN1.phl[1406]";
-connectAttr "EyeGroup_Offset_rotateY.o" "momRN1.phl[1407]";
-connectAttr "EyeGroup_Offset_rotateZ.o" "momRN1.phl[1408]";
-connectAttr "EyeGroup_Offset_scaleX.o" "momRN1.phl[1409]";
-connectAttr "EyeGroup_Offset_scaleY.o" "momRN1.phl[1410]";
-connectAttr "EyeGroup_Offset_scaleZ.o" "momRN1.phl[1411]";
-connectAttr "mom_eye_ptr_visibility.o" "momRN1.phl[1412]";
-connectAttr "mom_eye_ptr_translateX.o" "momRN1.phl[1413]";
-connectAttr "mom_eye_ptr_translateY.o" "momRN1.phl[1414]";
-connectAttr "mom_eye_ptr_translateZ.o" "momRN1.phl[1415]";
-connectAttr "mom_l_eye_ptr_Blink.o" "momRN1.phl[1416]";
-connectAttr "mom_l_eye_ptr_translateX.o" "momRN1.phl[1417]";
-connectAttr "mom_l_eye_ptr_translateY.o" "momRN1.phl[1418]";
-connectAttr "mom_l_eye_ptr_translateZ.o" "momRN1.phl[1419]";
-connectAttr "mom_l_eye_ptr_visibility.o" "momRN1.phl[1420]";
-connectAttr "mom_r_eye_ptr_Blink.o" "momRN1.phl[1421]";
-connectAttr "mom_r_eye_ptr_translateX.o" "momRN1.phl[1422]";
-connectAttr "mom_r_eye_ptr_translateY.o" "momRN1.phl[1423]";
-connectAttr "mom_r_eye_ptr_translateZ.o" "momRN1.phl[1424]";
-connectAttr "mom_r_eye_ptr_visibility.o" "momRN1.phl[1425]";
-connectAttr "FaceCntrls_Offset_visibility.o" "momRN1.phl[1426]";
-connectAttr "FaceCntrls_Offset_translateX.o" "momRN1.phl[1427]";
-connectAttr "FaceCntrls_Offset_translateY.o" "momRN1.phl[1428]";
-connectAttr "FaceCntrls_Offset_translateZ.o" "momRN1.phl[1429]";
-connectAttr "FaceCntrls_Offset_rotateX.o" "momRN1.phl[1430]";
-connectAttr "FaceCntrls_Offset_rotateY.o" "momRN1.phl[1431]";
-connectAttr "FaceCntrls_Offset_rotateZ.o" "momRN1.phl[1432]";
-connectAttr "FaceCntrls_Offset_scaleX.o" "momRN1.phl[1433]";
-connectAttr "FaceCntrls_Offset_scaleY.o" "momRN1.phl[1434]";
-connectAttr "FaceCntrls_Offset_scaleZ.o" "momRN1.phl[1435]";
-connectAttr "mom_r_brow_ctrl_translateX.o" "momRN1.phl[1436]";
-connectAttr "mom_r_brow_ctrl_translateY.o" "momRN1.phl[1437]";
-connectAttr "mom_r_brow_ctrl_visibility.o" "momRN1.phl[1438]";
-connectAttr "EyeBrowCntrls_R_visibility.o" "momRN1.phl[1439]";
-connectAttr "EyeBrowCntrls_R_translateX.o" "momRN1.phl[1440]";
-connectAttr "EyeBrowCntrls_R_translateY.o" "momRN1.phl[1441]";
-connectAttr "EyeBrowCntrls_R_translateZ.o" "momRN1.phl[1442]";
-connectAttr "EyeBrowCntrls_R_rotateX.o" "momRN1.phl[1443]";
-connectAttr "EyeBrowCntrls_R_rotateY.o" "momRN1.phl[1444]";
-connectAttr "EyeBrowCntrls_R_rotateZ.o" "momRN1.phl[1445]";
-connectAttr "EyeBrowCntrls_R_scaleX.o" "momRN1.phl[1446]";
-connectAttr "EyeBrowCntrls_R_scaleY.o" "momRN1.phl[1447]";
-connectAttr "EyeBrowCntrls_R_scaleZ.o" "momRN1.phl[1448]";
-connectAttr "OuterBrow_Offset_Cntrl_R_visibility.o" "momRN1.phl[1449]";
-connectAttr "OuterBrow_Offset_Cntrl_R_translateX.o" "momRN1.phl[1450]";
-connectAttr "OuterBrow_Offset_Cntrl_R_translateY.o" "momRN1.phl[1451]";
-connectAttr "OuterBrow_Offset_Cntrl_R_translateZ.o" "momRN1.phl[1452]";
-connectAttr "OuterBrow_Offset_Cntrl_R_rotateX.o" "momRN1.phl[1453]";
-connectAttr "OuterBrow_Offset_Cntrl_R_rotateY.o" "momRN1.phl[1454]";
-connectAttr "OuterBrow_Offset_Cntrl_R_rotateZ.o" "momRN1.phl[1455]";
-connectAttr "OuterBrow_Offset_Cntrl_R_scaleX.o" "momRN1.phl[1456]";
-connectAttr "OuterBrow_Offset_Cntrl_R_scaleY.o" "momRN1.phl[1457]";
-connectAttr "OuterBrow_Offset_Cntrl_R_scaleZ.o" "momRN1.phl[1458]";
-connectAttr "OuterBrow_Cntrl_R_translateY.o" "momRN1.phl[1459]";
-connectAttr "OuterBrow_Cntrl_R_visibility.o" "momRN1.phl[1460]";
-connectAttr "MidBrow_Offset_Cntrl_R_visibility.o" "momRN1.phl[1461]";
-connectAttr "MidBrow_Offset_Cntrl_R_translateX.o" "momRN1.phl[1462]";
-connectAttr "MidBrow_Offset_Cntrl_R_translateY.o" "momRN1.phl[1463]";
-connectAttr "MidBrow_Offset_Cntrl_R_translateZ.o" "momRN1.phl[1464]";
-connectAttr "MidBrow_Offset_Cntrl_R_rotateX.o" "momRN1.phl[1465]";
-connectAttr "MidBrow_Offset_Cntrl_R_rotateY.o" "momRN1.phl[1466]";
-connectAttr "MidBrow_Offset_Cntrl_R_rotateZ.o" "momRN1.phl[1467]";
-connectAttr "MidBrow_Offset_Cntrl_R_scaleX.o" "momRN1.phl[1468]";
-connectAttr "MidBrow_Offset_Cntrl_R_scaleY.o" "momRN1.phl[1469]";
-connectAttr "MidBrow_Offset_Cntrl_R_scaleZ.o" "momRN1.phl[1470]";
-connectAttr "MidBrow_Cntrl_R_translateY.o" "momRN1.phl[1471]";
-connectAttr "MidBrow_Cntrl_R_visibility.o" "momRN1.phl[1472]";
-connectAttr "InnerBrow_Offset_Cntrl_R_visibility.o" "momRN1.phl[1473]";
-connectAttr "InnerBrow_Offset_Cntrl_R_translateX.o" "momRN1.phl[1474]";
-connectAttr "InnerBrow_Offset_Cntrl_R_translateY.o" "momRN1.phl[1475]";
-connectAttr "InnerBrow_Offset_Cntrl_R_translateZ.o" "momRN1.phl[1476]";
-connectAttr "InnerBrow_Offset_Cntrl_R_rotateX.o" "momRN1.phl[1477]";
-connectAttr "InnerBrow_Offset_Cntrl_R_rotateY.o" "momRN1.phl[1478]";
-connectAttr "InnerBrow_Offset_Cntrl_R_rotateZ.o" "momRN1.phl[1479]";
-connectAttr "InnerBrow_Offset_Cntrl_R_scaleX.o" "momRN1.phl[1480]";
-connectAttr "InnerBrow_Offset_Cntrl_R_scaleY.o" "momRN1.phl[1481]";
-connectAttr "InnerBrow_Offset_Cntrl_R_scaleZ.o" "momRN1.phl[1482]";
-connectAttr "InnerBrow_Cntrl_R_translateY.o" "momRN1.phl[1483]";
-connectAttr "InnerBrow_Cntrl_R_translateX.o" "momRN1.phl[1484]";
-connectAttr "InnerBrow_Cntrl_R_translateZ.o" "momRN1.phl[1485]";
-connectAttr "InnerBrow_Cntrl_R_visibility.o" "momRN1.phl[1486]";
-connectAttr "mom_l_brow_ctrl_translateX.o" "momRN1.phl[1487]";
-connectAttr "mom_l_brow_ctrl_translateY.o" "momRN1.phl[1488]";
-connectAttr "mom_l_brow_ctrl_visibility.o" "momRN1.phl[1489]";
-connectAttr "EyeBrowCntrls_L_visibility.o" "momRN1.phl[1490]";
-connectAttr "EyeBrowCntrls_L_translateX.o" "momRN1.phl[1491]";
-connectAttr "EyeBrowCntrls_L_translateY.o" "momRN1.phl[1492]";
-connectAttr "EyeBrowCntrls_L_translateZ.o" "momRN1.phl[1493]";
-connectAttr "EyeBrowCntrls_L_rotateX.o" "momRN1.phl[1494]";
-connectAttr "EyeBrowCntrls_L_rotateY.o" "momRN1.phl[1495]";
-connectAttr "EyeBrowCntrls_L_rotateZ.o" "momRN1.phl[1496]";
-connectAttr "EyeBrowCntrls_L_scaleX.o" "momRN1.phl[1497]";
-connectAttr "EyeBrowCntrls_L_scaleY.o" "momRN1.phl[1498]";
-connectAttr "EyeBrowCntrls_L_scaleZ.o" "momRN1.phl[1499]";
-connectAttr "OuterBrow_Offset_Cntrl_L_visibility.o" "momRN1.phl[1500]";
-connectAttr "OuterBrow_Offset_Cntrl_L_translateX.o" "momRN1.phl[1501]";
-connectAttr "OuterBrow_Offset_Cntrl_L_translateY.o" "momRN1.phl[1502]";
-connectAttr "OuterBrow_Offset_Cntrl_L_translateZ.o" "momRN1.phl[1503]";
-connectAttr "OuterBrow_Offset_Cntrl_L_rotateX.o" "momRN1.phl[1504]";
-connectAttr "OuterBrow_Offset_Cntrl_L_rotateY.o" "momRN1.phl[1505]";
-connectAttr "OuterBrow_Offset_Cntrl_L_rotateZ.o" "momRN1.phl[1506]";
-connectAttr "OuterBrow_Offset_Cntrl_L_scaleX.o" "momRN1.phl[1507]";
-connectAttr "OuterBrow_Offset_Cntrl_L_scaleY.o" "momRN1.phl[1508]";
-connectAttr "OuterBrow_Offset_Cntrl_L_scaleZ.o" "momRN1.phl[1509]";
-connectAttr "OuterBrow_Cntrl_L_translateY.o" "momRN1.phl[1510]";
-connectAttr "OuterBrow_Cntrl_L_visibility.o" "momRN1.phl[1511]";
-connectAttr "MidBrow_Offset_Cntrl_L_visibility.o" "momRN1.phl[1512]";
-connectAttr "MidBrow_Offset_Cntrl_L_translateX.o" "momRN1.phl[1513]";
-connectAttr "MidBrow_Offset_Cntrl_L_translateY.o" "momRN1.phl[1514]";
-connectAttr "MidBrow_Offset_Cntrl_L_translateZ.o" "momRN1.phl[1515]";
-connectAttr "MidBrow_Offset_Cntrl_L_rotateX.o" "momRN1.phl[1516]";
-connectAttr "MidBrow_Offset_Cntrl_L_rotateY.o" "momRN1.phl[1517]";
-connectAttr "MidBrow_Offset_Cntrl_L_rotateZ.o" "momRN1.phl[1518]";
-connectAttr "MidBrow_Offset_Cntrl_L_scaleX.o" "momRN1.phl[1519]";
-connectAttr "MidBrow_Offset_Cntrl_L_scaleY.o" "momRN1.phl[1520]";
-connectAttr "MidBrow_Offset_Cntrl_L_scaleZ.o" "momRN1.phl[1521]";
-connectAttr "MidBrow_Cntrl_L_translateY.o" "momRN1.phl[1522]";
-connectAttr "MidBrow_Cntrl_L_visibility.o" "momRN1.phl[1523]";
-connectAttr "InnerBrow_Offset_Cntrl_L_visibility.o" "momRN1.phl[1524]";
-connectAttr "InnerBrow_Offset_Cntrl_L_translateX.o" "momRN1.phl[1525]";
-connectAttr "InnerBrow_Offset_Cntrl_L_translateY.o" "momRN1.phl[1526]";
-connectAttr "InnerBrow_Offset_Cntrl_L_translateZ.o" "momRN1.phl[1527]";
-connectAttr "InnerBrow_Offset_Cntrl_L_rotateX.o" "momRN1.phl[1528]";
-connectAttr "InnerBrow_Offset_Cntrl_L_rotateY.o" "momRN1.phl[1529]";
-connectAttr "InnerBrow_Offset_Cntrl_L_rotateZ.o" "momRN1.phl[1530]";
-connectAttr "InnerBrow_Offset_Cntrl_L_scaleX.o" "momRN1.phl[1531]";
-connectAttr "InnerBrow_Offset_Cntrl_L_scaleY.o" "momRN1.phl[1532]";
-connectAttr "InnerBrow_Offset_Cntrl_L_scaleZ.o" "momRN1.phl[1533]";
-connectAttr "InnerBrow_Cntrl_L_translateY.o" "momRN1.phl[1534]";
-connectAttr "InnerBrow_Cntrl_L_translateX.o" "momRN1.phl[1535]";
-connectAttr "InnerBrow_Cntrl_L_translateZ.o" "momRN1.phl[1536]";
-connectAttr "InnerBrow_Cntrl_L_visibility.o" "momRN1.phl[1537]";
-connectAttr "mom_r_blink_ctrl_translateY1.o" "momRN1.phl[1538]";
-connectAttr "mom_r_blink_ctrl_visibility1.o" "momRN1.phl[1539]";
-connectAttr "mom_l_blink_ctrl_translateY1.o" "momRN1.phl[1540]";
-connectAttr "mom_l_blink_ctrl_visibility1.o" "momRN1.phl[1541]";
-connectAttr "mom_r_low_eyelid_ctrl_translateY.o" "momRN1.phl[1542]";
-connectAttr "mom_r_low_eyelid_ctrl_visibility.o" "momRN1.phl[1543]";
-connectAttr "mom_l_low_eyelid_ctrl_translateY.o" "momRN1.phl[1544]";
-connectAttr "mom_l_low_eyelid_ctrl_visibility.o" "momRN1.phl[1545]";
-connectAttr "mom_l_nose_flare_ctrl_translateY.o" "momRN1.phl[1546]";
-connectAttr "mom_l_nose_flare_ctrl_visibility.o" "momRN1.phl[1547]";
-connectAttr "mom_r_nose_flare_ctrl_translateY.o" "momRN1.phl[1548]";
-connectAttr "mom_r_nose_flare_ctrl_visibility.o" "momRN1.phl[1549]";
-connectAttr "Arm_IK_R_PV_translateX.o" "momRN1.phl[1550]";
-connectAttr "Arm_IK_R_PV_translateY.o" "momRN1.phl[1551]";
-connectAttr "Arm_IK_R_PV_translateZ.o" "momRN1.phl[1552]";
-connectAttr "Arm_IK_R_PV_visibility.o" "momRN1.phl[1553]";
-connectAttr "Arm_IK_R_PV_rotateX.o" "momRN1.phl[1554]";
-connectAttr "Arm_IK_R_PV_rotateY.o" "momRN1.phl[1555]";
-connectAttr "Arm_IK_R_PV_rotateZ.o" "momRN1.phl[1556]";
-connectAttr "Arm_IK_R_PV_scaleX.o" "momRN1.phl[1557]";
-connectAttr "Arm_IK_R_PV_scaleY.o" "momRN1.phl[1558]";
-connectAttr "Arm_IK_R_PV_scaleZ.o" "momRN1.phl[1559]";
-connectAttr "Arm_Cntrl_R_mom_arm_correct.o" "momRN1.phl[1560]";
-connectAttr "pairBlend3.orx" "momRN1.phl[1561]";
-connectAttr "pairBlend3.ory" "momRN1.phl[1562]";
-connectAttr "pairBlend3.orz" "momRN1.phl[1563]";
-connectAttr "momRN1.phl[1564]" "pairBlend3.ro";
-connectAttr "momRN1.phl[1565]" "Arm_Cntrl_R_parentConstraint1.cro";
-connectAttr "pairBlend3.otx" "momRN1.phl[1566]";
-connectAttr "pairBlend3.oty" "momRN1.phl[1567]";
-connectAttr "pairBlend3.otz" "momRN1.phl[1568]";
-connectAttr "momRN1.phl[1569]" "Arm_Cntrl_R_parentConstraint1.crp";
-connectAttr "momRN1.phl[1570]" "Arm_Cntrl_R_parentConstraint1.crt";
-connectAttr "momRN1.phl[1571]" "pairBlend3.w";
-connectAttr "Arm_Cntrl_R_blendParent1.o" "momRN1.phl[1572]";
-connectAttr "Arm_Cntrl_R_visibility.o" "momRN1.phl[1573]";
-connectAttr "momRN1.phl[1574]" "Arm_Cntrl_R_parentConstraint1.cpim";
-connectAttr "Arm_IK_L_PV_translateX.o" "momRN1.phl[1575]";
-connectAttr "Arm_IK_L_PV_translateY.o" "momRN1.phl[1576]";
-connectAttr "Arm_IK_L_PV_translateZ.o" "momRN1.phl[1577]";
-connectAttr "Arm_IK_L_PV_visibility.o" "momRN1.phl[1578]";
-connectAttr "Arm_IK_L_PV_rotateX.o" "momRN1.phl[1579]";
-connectAttr "Arm_IK_L_PV_rotateY.o" "momRN1.phl[1580]";
-connectAttr "Arm_IK_L_PV_rotateZ.o" "momRN1.phl[1581]";
-connectAttr "Arm_IK_L_PV_scaleX.o" "momRN1.phl[1582]";
-connectAttr "Arm_IK_L_PV_scaleY.o" "momRN1.phl[1583]";
-connectAttr "Arm_IK_L_PV_scaleZ.o" "momRN1.phl[1584]";
-connectAttr "Arm_Cntrl_L_mom_arm_correct.o" "momRN1.phl[1585]";
-connectAttr "pairBlend2.orx" "momRN1.phl[1586]";
-connectAttr "pairBlend2.ory" "momRN1.phl[1587]";
-connectAttr "pairBlend2.orz" "momRN1.phl[1588]";
-connectAttr "momRN1.phl[1589]" "pairBlend2.ro";
-connectAttr "momRN1.phl[1590]" "Arm_Cntrl_L_parentConstraint1.cro";
-connectAttr "pairBlend2.otx" "momRN1.phl[1591]";
-connectAttr "pairBlend2.oty" "momRN1.phl[1592]";
-connectAttr "pairBlend2.otz" "momRN1.phl[1593]";
-connectAttr "momRN1.phl[1594]" "Arm_Cntrl_L_parentConstraint1.crp";
-connectAttr "momRN1.phl[1595]" "Arm_Cntrl_L_parentConstraint1.crt";
-connectAttr "momRN1.phl[1596]" "pairBlend2.w";
-connectAttr "Arm_Cntrl_L_blendParent1.o" "momRN1.phl[1597]";
-connectAttr "Arm_Cntrl_L_visibility.o" "momRN1.phl[1598]";
-connectAttr "momRN1.phl[1599]" "Arm_Cntrl_L_parentConstraint1.cpim";
-connectAttr "momRN1.phl[1600]" "nClothShape1.imsh";
-connectAttr "momRN1.phl[1601]" "nRigidShape4.imsh";
-connectAttr "momRN1.phl[1602]" "mom:shapeEditorManager.bspr[5]";
-connectAttr "mom:shapeEditorManager.obsv[5]" "momRN1.phl[1603]";
-connectAttr "outputCloth1.iog" "momRN1.phl[1604]";
-connectAttr "momRN1.phl[1605]" "mom:shapeEditorManager.bspr[6]";
-connectAttr "mom:shapeEditorManager.obsv[6]" "momRN1.phl[1606]";
-connectAttr "momRN1.phl[1607]" "momRN1.phl[1608]";
+connectAttr "MasterCntrl_translateX.o" "momRN1.phl[1602]";
+connectAttr "MasterCntrl_translateY.o" "momRN1.phl[1603]";
+connectAttr "MasterCntrl_translateZ.o" "momRN1.phl[1604]";
+connectAttr "MasterCntrl_rotateX.o" "momRN1.phl[1605]";
+connectAttr "MasterCntrl_rotateY.o" "momRN1.phl[1606]";
+connectAttr "MasterCntrl_rotateZ.o" "momRN1.phl[1607]";
+connectAttr "MasterCntrl_visibility.o" "momRN1.phl[1608]";
+connectAttr "MasterCntrl_scaleX.o" "momRN1.phl[1609]";
+connectAttr "MasterCntrl_scaleY.o" "momRN1.phl[1610]";
+connectAttr "MasterCntrl_scaleZ.o" "momRN1.phl[1611]";
+connectAttr "ThumbCntrl_L_01_rotateX.o" "momRN1.phl[1612]";
+connectAttr "ThumbCntrl_L_01_rotateY.o" "momRN1.phl[1613]";
+connectAttr "ThumbCntrl_L_01_rotateZ.o" "momRN1.phl[1614]";
+connectAttr "ThumbCntrl_L_01_visibility.o" "momRN1.phl[1615]";
+connectAttr "ThumbCntrl_L_02_rotateX.o" "momRN1.phl[1616]";
+connectAttr "ThumbCntrl_L_02_rotateY.o" "momRN1.phl[1617]";
+connectAttr "ThumbCntrl_L_02_rotateZ.o" "momRN1.phl[1618]";
+connectAttr "ThumbCntrl_L_02_visibility.o" "momRN1.phl[1619]";
+connectAttr "IndexCntrl_L_01_rotateX.o" "momRN1.phl[1620]";
+connectAttr "IndexCntrl_L_01_rotateY.o" "momRN1.phl[1621]";
+connectAttr "IndexCntrl_L_01_rotateZ.o" "momRN1.phl[1622]";
+connectAttr "IndexCntrl_L_01_visibility.o" "momRN1.phl[1623]";
+connectAttr "IndexCntrl_L_02_rotateX.o" "momRN1.phl[1624]";
+connectAttr "IndexCntrl_L_02_rotateY.o" "momRN1.phl[1625]";
+connectAttr "IndexCntrl_L_02_rotateZ.o" "momRN1.phl[1626]";
+connectAttr "IndexCntrl_L_02_visibility.o" "momRN1.phl[1627]";
+connectAttr "IndexCntrl_L_03_rotateX.o" "momRN1.phl[1628]";
+connectAttr "IndexCntrl_L_03_rotateY.o" "momRN1.phl[1629]";
+connectAttr "IndexCntrl_L_03_rotateZ.o" "momRN1.phl[1630]";
+connectAttr "IndexCntrl_L_03_visibility.o" "momRN1.phl[1631]";
+connectAttr "MiddleCntrl_L_02_rotateX.o" "momRN1.phl[1632]";
+connectAttr "MiddleCntrl_L_02_rotateY.o" "momRN1.phl[1633]";
+connectAttr "MiddleCntrl_L_02_rotateZ.o" "momRN1.phl[1634]";
+connectAttr "MiddleCntrl_L_02_visibility.o" "momRN1.phl[1635]";
+connectAttr "MiddleCntrl_L_03_rotateX.o" "momRN1.phl[1636]";
+connectAttr "MiddleCntrl_L_03_rotateY.o" "momRN1.phl[1637]";
+connectAttr "MiddleCntrl_L_03_rotateZ.o" "momRN1.phl[1638]";
+connectAttr "MiddleCntrl_L_03_visibility.o" "momRN1.phl[1639]";
+connectAttr "PinkyCntrl_L_02_rotateX.o" "momRN1.phl[1640]";
+connectAttr "PinkyCntrl_L_02_rotateY.o" "momRN1.phl[1641]";
+connectAttr "PinkyCntrl_L_02_rotateZ.o" "momRN1.phl[1642]";
+connectAttr "PinkyCntrl_L_02_visibility.o" "momRN1.phl[1643]";
+connectAttr "PinkyCntrl_L_03_rotateZ.o" "momRN1.phl[1644]";
+connectAttr "PinkyCntrl_L_03_rotateX.o" "momRN1.phl[1645]";
+connectAttr "PinkyCntrl_L_03_rotateY.o" "momRN1.phl[1646]";
+connectAttr "PinkyCntrl_L_03_visibility.o" "momRN1.phl[1647]";
+connectAttr "RingCntrl_L_02_rotateZ.o" "momRN1.phl[1648]";
+connectAttr "RingCntrl_L_02_rotateX.o" "momRN1.phl[1649]";
+connectAttr "RingCntrl_L_02_rotateY.o" "momRN1.phl[1650]";
+connectAttr "RingCntrl_L_02_visibility.o" "momRN1.phl[1651]";
+connectAttr "RingCntrl_L_03_rotateX.o" "momRN1.phl[1652]";
+connectAttr "RingCntrl_L_03_rotateY.o" "momRN1.phl[1653]";
+connectAttr "RingCntrl_L_03_rotateZ.o" "momRN1.phl[1654]";
+connectAttr "RingCntrl_L_03_visibility.o" "momRN1.phl[1655]";
+connectAttr "Cheek_Cntrl_R_translateY1.o" "momRN1.phl[1656]";
+connectAttr "Cheek_Cntrl_R_visibility1.o" "momRN1.phl[1657]";
+connectAttr "Cheek_Cntrl_L_translateY1.o" "momRN1.phl[1658]";
+connectAttr "Cheek_Cntrl_L_visibility1.o" "momRN1.phl[1659]";
+connectAttr "EdgeMouth_Cntrl_R_translateY.o" "momRN1.phl[1660]";
+connectAttr "EdgeMouth_Cntrl_R_translateX.o" "momRN1.phl[1661]";
+connectAttr "EdgeMouth_Cntrl_R_visibility.o" "momRN1.phl[1662]";
+connectAttr "EdgeMouth_Cntrl_L_translateY.o" "momRN1.phl[1663]";
+connectAttr "EdgeMouth_Cntrl_L_translateX.o" "momRN1.phl[1664]";
+connectAttr "EdgeMouth_Cntrl_L_visibility.o" "momRN1.phl[1665]";
+connectAttr "BottomMouth_Cntrl_R_translateY.o" "momRN1.phl[1666]";
+connectAttr "BottomMouth_Cntrl_R_visibility.o" "momRN1.phl[1667]";
+connectAttr "BottomMouth_Cntrl_L_translateY.o" "momRN1.phl[1668]";
+connectAttr "BottomMouth_Cntrl_L_visibility.o" "momRN1.phl[1669]";
+connectAttr "NoseDepress_Cntrl_translateZ.o" "momRN1.phl[1670]";
+connectAttr "NoseDepress_Cntrl_translateX.o" "momRN1.phl[1671]";
+connectAttr "NoseDepress_Cntrl_translateY.o" "momRN1.phl[1672]";
+connectAttr "NoseDepress_Cntrl_visibility.o" "momRN1.phl[1673]";
+connectAttr "TopMouth_Cntrl_R_translateY.o" "momRN1.phl[1674]";
+connectAttr "TopMouth_Cntrl_R_visibility.o" "momRN1.phl[1675]";
+connectAttr "TopMouth_Cntrl_L_translateY.o" "momRN1.phl[1676]";
+connectAttr "TopMouth_Cntrl_L_visibility.o" "momRN1.phl[1677]";
+connectAttr "ThumbCntrl_R_01_rotateX.o" "momRN1.phl[1678]";
+connectAttr "ThumbCntrl_R_01_rotateY.o" "momRN1.phl[1679]";
+connectAttr "ThumbCntrl_R_01_rotateZ.o" "momRN1.phl[1680]";
+connectAttr "ThumbCntrl_R_01_visibility.o" "momRN1.phl[1681]";
+connectAttr "ThumbCntrl_R_02_rotateX.o" "momRN1.phl[1682]";
+connectAttr "ThumbCntrl_R_02_rotateY.o" "momRN1.phl[1683]";
+connectAttr "ThumbCntrl_R_02_rotateZ.o" "momRN1.phl[1684]";
+connectAttr "ThumbCntrl_R_02_visibility.o" "momRN1.phl[1685]";
+connectAttr "IndexCntrl_R_01_rotateX.o" "momRN1.phl[1686]";
+connectAttr "IndexCntrl_R_01_rotateY.o" "momRN1.phl[1687]";
+connectAttr "IndexCntrl_R_01_rotateZ.o" "momRN1.phl[1688]";
+connectAttr "IndexCntrl_R_01_visibility.o" "momRN1.phl[1689]";
+connectAttr "IndexCntrl_R_02_rotateX.o" "momRN1.phl[1690]";
+connectAttr "IndexCntrl_R_02_rotateY.o" "momRN1.phl[1691]";
+connectAttr "IndexCntrl_R_02_rotateZ.o" "momRN1.phl[1692]";
+connectAttr "IndexCntrl_R_02_visibility.o" "momRN1.phl[1693]";
+connectAttr "IndexCntrl_R_03_rotateX.o" "momRN1.phl[1694]";
+connectAttr "IndexCntrl_R_03_rotateY.o" "momRN1.phl[1695]";
+connectAttr "IndexCntrl_R_03_rotateZ.o" "momRN1.phl[1696]";
+connectAttr "IndexCntrl_R_03_visibility.o" "momRN1.phl[1697]";
+connectAttr "MiddleCntrl_R_01_rotateX.o" "momRN1.phl[1698]";
+connectAttr "MiddleCntrl_R_01_rotateY.o" "momRN1.phl[1699]";
+connectAttr "MiddleCntrl_R_01_rotateZ.o" "momRN1.phl[1700]";
+connectAttr "MiddleCntrl_R_01_visibility.o" "momRN1.phl[1701]";
+connectAttr "MiddleCntrl_R_02_rotateX.o" "momRN1.phl[1702]";
+connectAttr "MiddleCntrl_R_02_rotateY.o" "momRN1.phl[1703]";
+connectAttr "MiddleCntrl_R_02_rotateZ.o" "momRN1.phl[1704]";
+connectAttr "MiddleCntrl_R_02_visibility.o" "momRN1.phl[1705]";
+connectAttr "MiddleCntrl_R_03_rotateX.o" "momRN1.phl[1706]";
+connectAttr "MiddleCntrl_R_03_rotateY.o" "momRN1.phl[1707]";
+connectAttr "MiddleCntrl_R_03_rotateZ.o" "momRN1.phl[1708]";
+connectAttr "MiddleCntrl_R_03_visibility.o" "momRN1.phl[1709]";
+connectAttr "PinkyCntrl_R_01_rotateX.o" "momRN1.phl[1710]";
+connectAttr "PinkyCntrl_R_01_rotateY.o" "momRN1.phl[1711]";
+connectAttr "PinkyCntrl_R_01_rotateZ.o" "momRN1.phl[1712]";
+connectAttr "PinkyCntrl_R_01_visibility.o" "momRN1.phl[1713]";
+connectAttr "PinkyCntrl_R_02_rotateX.o" "momRN1.phl[1714]";
+connectAttr "PinkyCntrl_R_02_rotateY.o" "momRN1.phl[1715]";
+connectAttr "PinkyCntrl_R_02_rotateZ.o" "momRN1.phl[1716]";
+connectAttr "PinkyCntrl_R_02_visibility.o" "momRN1.phl[1717]";
+connectAttr "PinkyCntrl_R_03_rotateX.o" "momRN1.phl[1718]";
+connectAttr "PinkyCntrl_R_03_rotateY.o" "momRN1.phl[1719]";
+connectAttr "PinkyCntrl_R_03_rotateZ.o" "momRN1.phl[1720]";
+connectAttr "PinkyCntrl_R_03_visibility.o" "momRN1.phl[1721]";
+connectAttr "RingCntrl_R_01_rotateX.o" "momRN1.phl[1722]";
+connectAttr "RingCntrl_R_01_rotateY.o" "momRN1.phl[1723]";
+connectAttr "RingCntrl_R_01_rotateZ.o" "momRN1.phl[1724]";
+connectAttr "RingCntrl_R_01_visibility.o" "momRN1.phl[1725]";
+connectAttr "RingCntrl_R_02_rotateX.o" "momRN1.phl[1726]";
+connectAttr "RingCntrl_R_02_rotateY.o" "momRN1.phl[1727]";
+connectAttr "RingCntrl_R_02_rotateZ.o" "momRN1.phl[1728]";
+connectAttr "RingCntrl_R_02_visibility.o" "momRN1.phl[1729]";
+connectAttr "RingCntrl_R_03_rotateX.o" "momRN1.phl[1730]";
+connectAttr "RingCntrl_R_03_rotateY.o" "momRN1.phl[1731]";
+connectAttr "RingCntrl_R_03_rotateZ.o" "momRN1.phl[1732]";
+connectAttr "RingCntrl_R_03_visibility.o" "momRN1.phl[1733]";
+connectAttr "mom_l_foot_ctrl_translateX1.o" "momRN1.phl[1734]";
+connectAttr "mom_l_foot_ctrl_translateY1.o" "momRN1.phl[1735]";
+connectAttr "mom_l_foot_ctrl_translateZ1.o" "momRN1.phl[1736]";
+connectAttr "mom_l_foot_ctrl_rotateX1.o" "momRN1.phl[1737]";
+connectAttr "mom_l_foot_ctrl_rotateY1.o" "momRN1.phl[1738]";
+connectAttr "mom_l_foot_ctrl_rotateZ1.o" "momRN1.phl[1739]";
+connectAttr "mom_l_foot_ctrl_visibility1.o" "momRN1.phl[1740]";
+connectAttr "mom_l_foot_ctrl_scaleX1.o" "momRN1.phl[1741]";
+connectAttr "mom_l_foot_ctrl_scaleY1.o" "momRN1.phl[1742]";
+connectAttr "mom_l_foot_ctrl_scaleZ1.o" "momRN1.phl[1743]";
+connectAttr "mom_l_toe_ptr_rotateX.o" "momRN1.phl[1744]";
+connectAttr "mom_r_foot_ctrl_translateX1.o" "momRN1.phl[1745]";
+connectAttr "mom_r_foot_ctrl_translateY1.o" "momRN1.phl[1746]";
+connectAttr "mom_r_foot_ctrl_translateZ1.o" "momRN1.phl[1747]";
+connectAttr "mom_r_foot_ctrl_rotateX1.o" "momRN1.phl[1748]";
+connectAttr "mom_r_foot_ctrl_rotateY1.o" "momRN1.phl[1749]";
+connectAttr "mom_r_foot_ctrl_rotateZ1.o" "momRN1.phl[1750]";
+connectAttr "mom_r_foot_ctrl_visibility1.o" "momRN1.phl[1751]";
+connectAttr "mom_r_foot_ctrl_scaleX1.o" "momRN1.phl[1752]";
+connectAttr "mom_r_foot_ctrl_scaleY1.o" "momRN1.phl[1753]";
+connectAttr "mom_r_foot_ctrl_scaleZ1.o" "momRN1.phl[1754]";
+connectAttr "mom_cog_ctrl_translateX1.o" "momRN1.phl[1755]";
+connectAttr "mom_cog_ctrl_translateY1.o" "momRN1.phl[1756]";
+connectAttr "mom_cog_ctrl_translateZ1.o" "momRN1.phl[1757]";
+connectAttr "mom_cog_ctrl_rotateX1.o" "momRN1.phl[1758]";
+connectAttr "mom_cog_ctrl_rotateY1.o" "momRN1.phl[1759]";
+connectAttr "mom_cog_ctrl_rotateZ1.o" "momRN1.phl[1760]";
+connectAttr "mom_cog_ctrl_visibility1.o" "momRN1.phl[1761]";
+connectAttr "Spine_Cntrl_Offset_01_visibility.o" "momRN1.phl[1762]";
+connectAttr "Spine_Cntrl_Offset_01_translateX.o" "momRN1.phl[1763]";
+connectAttr "Spine_Cntrl_Offset_01_translateY.o" "momRN1.phl[1764]";
+connectAttr "Spine_Cntrl_Offset_01_translateZ.o" "momRN1.phl[1765]";
+connectAttr "Spine_Cntrl_Offset_01_rotateX.o" "momRN1.phl[1766]";
+connectAttr "Spine_Cntrl_Offset_01_rotateY.o" "momRN1.phl[1767]";
+connectAttr "Spine_Cntrl_Offset_01_rotateZ.o" "momRN1.phl[1768]";
+connectAttr "Spine_Cntrl_Offset_01_scaleX.o" "momRN1.phl[1769]";
+connectAttr "Spine_Cntrl_Offset_01_scaleY.o" "momRN1.phl[1770]";
+connectAttr "Spine_Cntrl_Offset_01_scaleZ.o" "momRN1.phl[1771]";
+connectAttr "Spine_Cntrl_01_rotateX1.o" "momRN1.phl[1772]";
+connectAttr "Spine_Cntrl_01_rotateY1.o" "momRN1.phl[1773]";
+connectAttr "Spine_Cntrl_01_rotateZ1.o" "momRN1.phl[1774]";
+connectAttr "Spine_Cntrl_01_visibility.o" "momRN1.phl[1775]";
+connectAttr "Spine_Cntrl_Offset_02_visibility.o" "momRN1.phl[1776]";
+connectAttr "Spine_Cntrl_Offset_02_translateX.o" "momRN1.phl[1777]";
+connectAttr "Spine_Cntrl_Offset_02_translateY.o" "momRN1.phl[1778]";
+connectAttr "Spine_Cntrl_Offset_02_translateZ.o" "momRN1.phl[1779]";
+connectAttr "Spine_Cntrl_Offset_02_rotateX.o" "momRN1.phl[1780]";
+connectAttr "Spine_Cntrl_Offset_02_rotateY.o" "momRN1.phl[1781]";
+connectAttr "Spine_Cntrl_Offset_02_rotateZ.o" "momRN1.phl[1782]";
+connectAttr "Spine_Cntrl_Offset_02_scaleX.o" "momRN1.phl[1783]";
+connectAttr "Spine_Cntrl_Offset_02_scaleY.o" "momRN1.phl[1784]";
+connectAttr "Spine_Cntrl_Offset_02_scaleZ.o" "momRN1.phl[1785]";
+connectAttr "Spine_Cntrl_02_rotateX.o" "momRN1.phl[1786]";
+connectAttr "Spine_Cntrl_02_rotateY.o" "momRN1.phl[1787]";
+connectAttr "Spine_Cntrl_02_rotateZ.o" "momRN1.phl[1788]";
+connectAttr "Spine_Cntrl_02_visibility.o" "momRN1.phl[1789]";
+connectAttr "Spine_Cntrl_Offset_03_visibility.o" "momRN1.phl[1790]";
+connectAttr "Spine_Cntrl_Offset_03_translateX.o" "momRN1.phl[1791]";
+connectAttr "Spine_Cntrl_Offset_03_translateY.o" "momRN1.phl[1792]";
+connectAttr "Spine_Cntrl_Offset_03_translateZ.o" "momRN1.phl[1793]";
+connectAttr "Spine_Cntrl_Offset_03_rotateX.o" "momRN1.phl[1794]";
+connectAttr "Spine_Cntrl_Offset_03_rotateY.o" "momRN1.phl[1795]";
+connectAttr "Spine_Cntrl_Offset_03_rotateZ.o" "momRN1.phl[1796]";
+connectAttr "Spine_Cntrl_Offset_03_scaleX.o" "momRN1.phl[1797]";
+connectAttr "Spine_Cntrl_Offset_03_scaleY.o" "momRN1.phl[1798]";
+connectAttr "Spine_Cntrl_Offset_03_scaleZ.o" "momRN1.phl[1799]";
+connectAttr "Spine_Cntrl_03_rotateX.o" "momRN1.phl[1800]";
+connectAttr "Spine_Cntrl_03_rotateY.o" "momRN1.phl[1801]";
+connectAttr "Spine_Cntrl_03_rotateZ.o" "momRN1.phl[1802]";
+connectAttr "Spine_Cntrl_03_visibility.o" "momRN1.phl[1803]";
+connectAttr "Spine_Cntrl_Offset_04_visibility.o" "momRN1.phl[1804]";
+connectAttr "Spine_Cntrl_Offset_04_translateX.o" "momRN1.phl[1805]";
+connectAttr "Spine_Cntrl_Offset_04_translateY.o" "momRN1.phl[1806]";
+connectAttr "Spine_Cntrl_Offset_04_translateZ.o" "momRN1.phl[1807]";
+connectAttr "Spine_Cntrl_Offset_04_rotateX.o" "momRN1.phl[1808]";
+connectAttr "Spine_Cntrl_Offset_04_rotateY.o" "momRN1.phl[1809]";
+connectAttr "Spine_Cntrl_Offset_04_rotateZ.o" "momRN1.phl[1810]";
+connectAttr "Spine_Cntrl_Offset_04_scaleX.o" "momRN1.phl[1811]";
+connectAttr "Spine_Cntrl_Offset_04_scaleY.o" "momRN1.phl[1812]";
+connectAttr "Spine_Cntrl_Offset_04_scaleZ.o" "momRN1.phl[1813]";
+connectAttr "Spine_Cntrl_04_rotateX1.o" "momRN1.phl[1814]";
+connectAttr "Spine_Cntrl_04_rotateY1.o" "momRN1.phl[1815]";
+connectAttr "Spine_Cntrl_04_rotateZ1.o" "momRN1.phl[1816]";
+connectAttr "Spine_Cntrl_04_visibility.o" "momRN1.phl[1817]";
+connectAttr "group1_visibility.o" "momRN1.phl[1818]";
+connectAttr "group1_translateX.o" "momRN1.phl[1819]";
+connectAttr "group1_translateY.o" "momRN1.phl[1820]";
+connectAttr "group1_translateZ.o" "momRN1.phl[1821]";
+connectAttr "group1_rotateX.o" "momRN1.phl[1822]";
+connectAttr "group1_rotateY.o" "momRN1.phl[1823]";
+connectAttr "group1_rotateZ.o" "momRN1.phl[1824]";
+connectAttr "group1_scaleX.o" "momRN1.phl[1825]";
+connectAttr "group1_scaleY.o" "momRN1.phl[1826]";
+connectAttr "group1_scaleZ.o" "momRN1.phl[1827]";
+connectAttr "mom_shoulder_ctrl_mom_boob_correct_lft.o" "momRN1.phl[1828]";
+connectAttr "mom_shoulder_ctrl_mom_boob_correct_rgt.o" "momRN1.phl[1829]";
+connectAttr "mom_shoulder_ctrl_rotateX1.o" "momRN1.phl[1830]";
+connectAttr "mom_shoulder_ctrl_rotateY1.o" "momRN1.phl[1831]";
+connectAttr "mom_shoulder_ctrl_rotateZ1.o" "momRN1.phl[1832]";
+connectAttr "mom_shoulder_ctrl_visibility1.o" "momRN1.phl[1833]";
+connectAttr "ShouldCntrl_L_visibility.o" "momRN1.phl[1834]";
+connectAttr "ShouldCntrl_L_translateX.o" "momRN1.phl[1835]";
+connectAttr "ShouldCntrl_L_translateY.o" "momRN1.phl[1836]";
+connectAttr "ShouldCntrl_L_translateZ.o" "momRN1.phl[1837]";
+connectAttr "ShouldCntrl_L_rotateX.o" "momRN1.phl[1838]";
+connectAttr "ShouldCntrl_L_rotateY.o" "momRN1.phl[1839]";
+connectAttr "ShouldCntrl_L_rotateZ.o" "momRN1.phl[1840]";
+connectAttr "ShouldCntrl_L_scaleX.o" "momRN1.phl[1841]";
+connectAttr "ShouldCntrl_L_scaleY.o" "momRN1.phl[1842]";
+connectAttr "ShouldCntrl_L_scaleZ.o" "momRN1.phl[1843]";
+connectAttr "ikHandle3_visibility.o" "momRN1.phl[1844]";
+connectAttr "ikHandle3_translateX.o" "momRN1.phl[1845]";
+connectAttr "ikHandle3_translateY.o" "momRN1.phl[1846]";
+connectAttr "ikHandle3_translateZ.o" "momRN1.phl[1847]";
+connectAttr "ikHandle3_rotateX.o" "momRN1.phl[1848]";
+connectAttr "ikHandle3_rotateY.o" "momRN1.phl[1849]";
+connectAttr "ikHandle3_rotateZ.o" "momRN1.phl[1850]";
+connectAttr "ikHandle3_scaleX.o" "momRN1.phl[1851]";
+connectAttr "ikHandle3_scaleY.o" "momRN1.phl[1852]";
+connectAttr "ikHandle3_scaleZ.o" "momRN1.phl[1853]";
+connectAttr "ikHandle3_poleVectorX.o" "momRN1.phl[1854]";
+connectAttr "ikHandle3_poleVectorY.o" "momRN1.phl[1855]";
+connectAttr "ikHandle3_poleVectorZ.o" "momRN1.phl[1856]";
+connectAttr "ikHandle3_offset.o" "momRN1.phl[1857]";
+connectAttr "ikHandle3_roll.o" "momRN1.phl[1858]";
+connectAttr "ikHandle3_twist.o" "momRN1.phl[1859]";
+connectAttr "ikHandle3_ikBlend.o" "momRN1.phl[1860]";
+connectAttr "ShouldCntrl_R_translateX.o" "momRN1.phl[1861]";
+connectAttr "ShouldCntrl_R_translateY.o" "momRN1.phl[1862]";
+connectAttr "ShouldCntrl_R_translateZ.o" "momRN1.phl[1863]";
+connectAttr "ShouldCntrl_R_rotateX.o" "momRN1.phl[1864]";
+connectAttr "ShouldCntrl_R_rotateY.o" "momRN1.phl[1865]";
+connectAttr "ShouldCntrl_R_rotateZ.o" "momRN1.phl[1866]";
+connectAttr "ShouldCntrl_R_visibility.o" "momRN1.phl[1867]";
+connectAttr "ShouldCntrl_R_scaleX.o" "momRN1.phl[1868]";
+connectAttr "ShouldCntrl_R_scaleY.o" "momRN1.phl[1869]";
+connectAttr "ShouldCntrl_R_scaleZ.o" "momRN1.phl[1870]";
+connectAttr "ikHandle4_visibility.o" "momRN1.phl[1871]";
+connectAttr "ikHandle4_translateX.o" "momRN1.phl[1872]";
+connectAttr "ikHandle4_translateY.o" "momRN1.phl[1873]";
+connectAttr "ikHandle4_translateZ.o" "momRN1.phl[1874]";
+connectAttr "ikHandle4_rotateX.o" "momRN1.phl[1875]";
+connectAttr "ikHandle4_rotateY.o" "momRN1.phl[1876]";
+connectAttr "ikHandle4_rotateZ.o" "momRN1.phl[1877]";
+connectAttr "ikHandle4_scaleX.o" "momRN1.phl[1878]";
+connectAttr "ikHandle4_scaleY.o" "momRN1.phl[1879]";
+connectAttr "ikHandle4_scaleZ.o" "momRN1.phl[1880]";
+connectAttr "ikHandle4_poleVectorX.o" "momRN1.phl[1881]";
+connectAttr "ikHandle4_poleVectorY.o" "momRN1.phl[1882]";
+connectAttr "ikHandle4_poleVectorZ.o" "momRN1.phl[1883]";
+connectAttr "ikHandle4_offset.o" "momRN1.phl[1884]";
+connectAttr "ikHandle4_roll.o" "momRN1.phl[1885]";
+connectAttr "ikHandle4_twist.o" "momRN1.phl[1886]";
+connectAttr "ikHandle4_ikBlend.o" "momRN1.phl[1887]";
+connectAttr "NeckCntrl_Offset_01_visibility.o" "momRN1.phl[1888]";
+connectAttr "NeckCntrl_Offset_01_translateX.o" "momRN1.phl[1889]";
+connectAttr "NeckCntrl_Offset_01_translateY.o" "momRN1.phl[1890]";
+connectAttr "NeckCntrl_Offset_01_translateZ.o" "momRN1.phl[1891]";
+connectAttr "NeckCntrl_Offset_01_rotateX.o" "momRN1.phl[1892]";
+connectAttr "NeckCntrl_Offset_01_rotateY.o" "momRN1.phl[1893]";
+connectAttr "NeckCntrl_Offset_01_rotateZ.o" "momRN1.phl[1894]";
+connectAttr "NeckCntrl_Offset_01_scaleX.o" "momRN1.phl[1895]";
+connectAttr "NeckCntrl_Offset_01_scaleY.o" "momRN1.phl[1896]";
+connectAttr "NeckCntrl_Offset_01_scaleZ.o" "momRN1.phl[1897]";
+connectAttr "bot_mid_ctrl_translateX1.o" "momRN1.phl[1898]";
+connectAttr "bot_mid_ctrl_translateY1.o" "momRN1.phl[1899]";
+connectAttr "bot_mid_ctrl_translateZ1.o" "momRN1.phl[1900]";
+connectAttr "bot_mid_ctrl_rotateX1.o" "momRN1.phl[1901]";
+connectAttr "bot_mid_ctrl_rotateY1.o" "momRN1.phl[1902]";
+connectAttr "bot_mid_ctrl_rotateZ1.o" "momRN1.phl[1903]";
+connectAttr "bot_mid_ctrl_visibility1.o" "momRN1.phl[1904]";
+connectAttr "NeckCntrl_01_mom_gulp_top.o" "momRN1.phl[1905]";
+connectAttr "NeckCntrl_01_mom_gulp_mid.o" "momRN1.phl[1906]";
+connectAttr "NeckCntrl_01_mom_gulp_bot.o" "momRN1.phl[1907]";
+connectAttr "NeckCntrl_01_rotateX.o" "momRN1.phl[1908]";
+connectAttr "NeckCntrl_01_rotateY.o" "momRN1.phl[1909]";
+connectAttr "NeckCntrl_01_rotateZ.o" "momRN1.phl[1910]";
+connectAttr "NeckCntrl_01_visibility.o" "momRN1.phl[1911]";
+connectAttr "NeckCntrl_01_translateX.o" "momRN1.phl[1912]";
+connectAttr "NeckCntrl_01_translateY.o" "momRN1.phl[1913]";
+connectAttr "NeckCntrl_01_translateZ.o" "momRN1.phl[1914]";
+connectAttr "NeckCntrl_01_scaleX.o" "momRN1.phl[1915]";
+connectAttr "NeckCntrl_01_scaleY.o" "momRN1.phl[1916]";
+connectAttr "NeckCntrl_01_scaleZ.o" "momRN1.phl[1917]";
+connectAttr "NeckCntrl_Offset_02_visibility.o" "momRN1.phl[1918]";
+connectAttr "NeckCntrl_Offset_02_translateX.o" "momRN1.phl[1919]";
+connectAttr "NeckCntrl_Offset_02_translateY.o" "momRN1.phl[1920]";
+connectAttr "NeckCntrl_Offset_02_translateZ.o" "momRN1.phl[1921]";
+connectAttr "NeckCntrl_Offset_02_rotateX.o" "momRN1.phl[1922]";
+connectAttr "NeckCntrl_Offset_02_rotateY.o" "momRN1.phl[1923]";
+connectAttr "NeckCntrl_Offset_02_rotateZ.o" "momRN1.phl[1924]";
+connectAttr "NeckCntrl_Offset_02_scaleX.o" "momRN1.phl[1925]";
+connectAttr "NeckCntrl_Offset_02_scaleY.o" "momRN1.phl[1926]";
+connectAttr "NeckCntrl_Offset_02_scaleZ.o" "momRN1.phl[1927]";
+connectAttr "NeckCntrl_02_rotateX.o" "momRN1.phl[1928]";
+connectAttr "NeckCntrl_02_rotateY.o" "momRN1.phl[1929]";
+connectAttr "NeckCntrl_02_rotateZ.o" "momRN1.phl[1930]";
+connectAttr "NeckCntrl_02_visibility.o" "momRN1.phl[1931]";
+connectAttr "NeckCntrl_02_translateX.o" "momRN1.phl[1932]";
+connectAttr "NeckCntrl_02_translateY.o" "momRN1.phl[1933]";
+connectAttr "NeckCntrl_02_translateZ.o" "momRN1.phl[1934]";
+connectAttr "NeckCntrl_02_scaleX.o" "momRN1.phl[1935]";
+connectAttr "NeckCntrl_02_scaleY.o" "momRN1.phl[1936]";
+connectAttr "NeckCntrl_02_scaleZ.o" "momRN1.phl[1937]";
+connectAttr "EyeGroup_Offset_visibility.o" "momRN1.phl[1938]";
+connectAttr "EyeGroup_Offset_translateX.o" "momRN1.phl[1939]";
+connectAttr "EyeGroup_Offset_translateY.o" "momRN1.phl[1940]";
+connectAttr "EyeGroup_Offset_translateZ.o" "momRN1.phl[1941]";
+connectAttr "EyeGroup_Offset_rotateX.o" "momRN1.phl[1942]";
+connectAttr "EyeGroup_Offset_rotateY.o" "momRN1.phl[1943]";
+connectAttr "EyeGroup_Offset_rotateZ.o" "momRN1.phl[1944]";
+connectAttr "EyeGroup_Offset_scaleX.o" "momRN1.phl[1945]";
+connectAttr "EyeGroup_Offset_scaleY.o" "momRN1.phl[1946]";
+connectAttr "EyeGroup_Offset_scaleZ.o" "momRN1.phl[1947]";
+connectAttr "mom_eye_ptr_visibility.o" "momRN1.phl[1948]";
+connectAttr "mom_eye_ptr_translateX.o" "momRN1.phl[1949]";
+connectAttr "mom_eye_ptr_translateY.o" "momRN1.phl[1950]";
+connectAttr "mom_eye_ptr_translateZ.o" "momRN1.phl[1951]";
+connectAttr "mom_l_eye_ptr_Blink.o" "momRN1.phl[1952]";
+connectAttr "mom_l_eye_ptr_translateX.o" "momRN1.phl[1953]";
+connectAttr "mom_l_eye_ptr_translateY.o" "momRN1.phl[1954]";
+connectAttr "mom_l_eye_ptr_translateZ.o" "momRN1.phl[1955]";
+connectAttr "mom_l_eye_ptr_visibility.o" "momRN1.phl[1956]";
+connectAttr "mom_r_eye_ptr_Blink.o" "momRN1.phl[1957]";
+connectAttr "mom_r_eye_ptr_translateX.o" "momRN1.phl[1958]";
+connectAttr "mom_r_eye_ptr_translateY.o" "momRN1.phl[1959]";
+connectAttr "mom_r_eye_ptr_translateZ.o" "momRN1.phl[1960]";
+connectAttr "mom_r_eye_ptr_visibility.o" "momRN1.phl[1961]";
+connectAttr "FaceCntrls_Offset_visibility.o" "momRN1.phl[1962]";
+connectAttr "FaceCntrls_Offset_translateX.o" "momRN1.phl[1963]";
+connectAttr "FaceCntrls_Offset_translateY.o" "momRN1.phl[1964]";
+connectAttr "FaceCntrls_Offset_translateZ.o" "momRN1.phl[1965]";
+connectAttr "FaceCntrls_Offset_rotateX.o" "momRN1.phl[1966]";
+connectAttr "FaceCntrls_Offset_rotateY.o" "momRN1.phl[1967]";
+connectAttr "FaceCntrls_Offset_rotateZ.o" "momRN1.phl[1968]";
+connectAttr "FaceCntrls_Offset_scaleX.o" "momRN1.phl[1969]";
+connectAttr "FaceCntrls_Offset_scaleY.o" "momRN1.phl[1970]";
+connectAttr "FaceCntrls_Offset_scaleZ.o" "momRN1.phl[1971]";
+connectAttr "mom_r_brow_ctrl_translateX.o" "momRN1.phl[1972]";
+connectAttr "mom_r_brow_ctrl_translateY.o" "momRN1.phl[1973]";
+connectAttr "mom_r_brow_ctrl_visibility.o" "momRN1.phl[1974]";
+connectAttr "EyeBrowCntrls_R_visibility.o" "momRN1.phl[1975]";
+connectAttr "EyeBrowCntrls_R_translateX.o" "momRN1.phl[1976]";
+connectAttr "EyeBrowCntrls_R_translateY.o" "momRN1.phl[1977]";
+connectAttr "EyeBrowCntrls_R_translateZ.o" "momRN1.phl[1978]";
+connectAttr "EyeBrowCntrls_R_rotateX.o" "momRN1.phl[1979]";
+connectAttr "EyeBrowCntrls_R_rotateY.o" "momRN1.phl[1980]";
+connectAttr "EyeBrowCntrls_R_rotateZ.o" "momRN1.phl[1981]";
+connectAttr "EyeBrowCntrls_R_scaleX.o" "momRN1.phl[1982]";
+connectAttr "EyeBrowCntrls_R_scaleY.o" "momRN1.phl[1983]";
+connectAttr "EyeBrowCntrls_R_scaleZ.o" "momRN1.phl[1984]";
+connectAttr "OuterBrow_Offset_Cntrl_R_visibility.o" "momRN1.phl[1985]";
+connectAttr "OuterBrow_Offset_Cntrl_R_translateX.o" "momRN1.phl[1986]";
+connectAttr "OuterBrow_Offset_Cntrl_R_translateY.o" "momRN1.phl[1987]";
+connectAttr "OuterBrow_Offset_Cntrl_R_translateZ.o" "momRN1.phl[1988]";
+connectAttr "OuterBrow_Offset_Cntrl_R_rotateX.o" "momRN1.phl[1989]";
+connectAttr "OuterBrow_Offset_Cntrl_R_rotateY.o" "momRN1.phl[1990]";
+connectAttr "OuterBrow_Offset_Cntrl_R_rotateZ.o" "momRN1.phl[1991]";
+connectAttr "OuterBrow_Offset_Cntrl_R_scaleX.o" "momRN1.phl[1992]";
+connectAttr "OuterBrow_Offset_Cntrl_R_scaleY.o" "momRN1.phl[1993]";
+connectAttr "OuterBrow_Offset_Cntrl_R_scaleZ.o" "momRN1.phl[1994]";
+connectAttr "OuterBrow_Cntrl_R_translateY.o" "momRN1.phl[1995]";
+connectAttr "OuterBrow_Cntrl_R_visibility.o" "momRN1.phl[1996]";
+connectAttr "MidBrow_Offset_Cntrl_R_visibility.o" "momRN1.phl[1997]";
+connectAttr "MidBrow_Offset_Cntrl_R_translateX.o" "momRN1.phl[1998]";
+connectAttr "MidBrow_Offset_Cntrl_R_translateY.o" "momRN1.phl[1999]";
+connectAttr "MidBrow_Offset_Cntrl_R_translateZ.o" "momRN1.phl[2000]";
+connectAttr "MidBrow_Offset_Cntrl_R_rotateX.o" "momRN1.phl[2001]";
+connectAttr "MidBrow_Offset_Cntrl_R_rotateY.o" "momRN1.phl[2002]";
+connectAttr "MidBrow_Offset_Cntrl_R_rotateZ.o" "momRN1.phl[2003]";
+connectAttr "MidBrow_Offset_Cntrl_R_scaleX.o" "momRN1.phl[2004]";
+connectAttr "MidBrow_Offset_Cntrl_R_scaleY.o" "momRN1.phl[2005]";
+connectAttr "MidBrow_Offset_Cntrl_R_scaleZ.o" "momRN1.phl[2006]";
+connectAttr "MidBrow_Cntrl_R_translateY.o" "momRN1.phl[2007]";
+connectAttr "MidBrow_Cntrl_R_visibility.o" "momRN1.phl[2008]";
+connectAttr "InnerBrow_Offset_Cntrl_R_visibility.o" "momRN1.phl[2009]";
+connectAttr "InnerBrow_Offset_Cntrl_R_translateX.o" "momRN1.phl[2010]";
+connectAttr "InnerBrow_Offset_Cntrl_R_translateY.o" "momRN1.phl[2011]";
+connectAttr "InnerBrow_Offset_Cntrl_R_translateZ.o" "momRN1.phl[2012]";
+connectAttr "InnerBrow_Offset_Cntrl_R_rotateX.o" "momRN1.phl[2013]";
+connectAttr "InnerBrow_Offset_Cntrl_R_rotateY.o" "momRN1.phl[2014]";
+connectAttr "InnerBrow_Offset_Cntrl_R_rotateZ.o" "momRN1.phl[2015]";
+connectAttr "InnerBrow_Offset_Cntrl_R_scaleX.o" "momRN1.phl[2016]";
+connectAttr "InnerBrow_Offset_Cntrl_R_scaleY.o" "momRN1.phl[2017]";
+connectAttr "InnerBrow_Offset_Cntrl_R_scaleZ.o" "momRN1.phl[2018]";
+connectAttr "InnerBrow_Cntrl_R_translateY.o" "momRN1.phl[2019]";
+connectAttr "InnerBrow_Cntrl_R_translateX.o" "momRN1.phl[2020]";
+connectAttr "InnerBrow_Cntrl_R_translateZ.o" "momRN1.phl[2021]";
+connectAttr "InnerBrow_Cntrl_R_visibility.o" "momRN1.phl[2022]";
+connectAttr "mom_l_brow_ctrl_translateX.o" "momRN1.phl[2023]";
+connectAttr "mom_l_brow_ctrl_translateY.o" "momRN1.phl[2024]";
+connectAttr "mom_l_brow_ctrl_visibility.o" "momRN1.phl[2025]";
+connectAttr "EyeBrowCntrls_L_visibility.o" "momRN1.phl[2026]";
+connectAttr "EyeBrowCntrls_L_translateX.o" "momRN1.phl[2027]";
+connectAttr "EyeBrowCntrls_L_translateY.o" "momRN1.phl[2028]";
+connectAttr "EyeBrowCntrls_L_translateZ.o" "momRN1.phl[2029]";
+connectAttr "EyeBrowCntrls_L_rotateX.o" "momRN1.phl[2030]";
+connectAttr "EyeBrowCntrls_L_rotateY.o" "momRN1.phl[2031]";
+connectAttr "EyeBrowCntrls_L_rotateZ.o" "momRN1.phl[2032]";
+connectAttr "EyeBrowCntrls_L_scaleX.o" "momRN1.phl[2033]";
+connectAttr "EyeBrowCntrls_L_scaleY.o" "momRN1.phl[2034]";
+connectAttr "EyeBrowCntrls_L_scaleZ.o" "momRN1.phl[2035]";
+connectAttr "OuterBrow_Offset_Cntrl_L_visibility.o" "momRN1.phl[2036]";
+connectAttr "OuterBrow_Offset_Cntrl_L_translateX.o" "momRN1.phl[2037]";
+connectAttr "OuterBrow_Offset_Cntrl_L_translateY.o" "momRN1.phl[2038]";
+connectAttr "OuterBrow_Offset_Cntrl_L_translateZ.o" "momRN1.phl[2039]";
+connectAttr "OuterBrow_Offset_Cntrl_L_rotateX.o" "momRN1.phl[2040]";
+connectAttr "OuterBrow_Offset_Cntrl_L_rotateY.o" "momRN1.phl[2041]";
+connectAttr "OuterBrow_Offset_Cntrl_L_rotateZ.o" "momRN1.phl[2042]";
+connectAttr "OuterBrow_Offset_Cntrl_L_scaleX.o" "momRN1.phl[2043]";
+connectAttr "OuterBrow_Offset_Cntrl_L_scaleY.o" "momRN1.phl[2044]";
+connectAttr "OuterBrow_Offset_Cntrl_L_scaleZ.o" "momRN1.phl[2045]";
+connectAttr "OuterBrow_Cntrl_L_translateY.o" "momRN1.phl[2046]";
+connectAttr "OuterBrow_Cntrl_L_visibility.o" "momRN1.phl[2047]";
+connectAttr "MidBrow_Offset_Cntrl_L_visibility.o" "momRN1.phl[2048]";
+connectAttr "MidBrow_Offset_Cntrl_L_translateX.o" "momRN1.phl[2049]";
+connectAttr "MidBrow_Offset_Cntrl_L_translateY.o" "momRN1.phl[2050]";
+connectAttr "MidBrow_Offset_Cntrl_L_translateZ.o" "momRN1.phl[2051]";
+connectAttr "MidBrow_Offset_Cntrl_L_rotateX.o" "momRN1.phl[2052]";
+connectAttr "MidBrow_Offset_Cntrl_L_rotateY.o" "momRN1.phl[2053]";
+connectAttr "MidBrow_Offset_Cntrl_L_rotateZ.o" "momRN1.phl[2054]";
+connectAttr "MidBrow_Offset_Cntrl_L_scaleX.o" "momRN1.phl[2055]";
+connectAttr "MidBrow_Offset_Cntrl_L_scaleY.o" "momRN1.phl[2056]";
+connectAttr "MidBrow_Offset_Cntrl_L_scaleZ.o" "momRN1.phl[2057]";
+connectAttr "MidBrow_Cntrl_L_translateY.o" "momRN1.phl[2058]";
+connectAttr "MidBrow_Cntrl_L_visibility.o" "momRN1.phl[2059]";
+connectAttr "InnerBrow_Offset_Cntrl_L_visibility.o" "momRN1.phl[2060]";
+connectAttr "InnerBrow_Offset_Cntrl_L_translateX.o" "momRN1.phl[2061]";
+connectAttr "InnerBrow_Offset_Cntrl_L_translateY.o" "momRN1.phl[2062]";
+connectAttr "InnerBrow_Offset_Cntrl_L_translateZ.o" "momRN1.phl[2063]";
+connectAttr "InnerBrow_Offset_Cntrl_L_rotateX.o" "momRN1.phl[2064]";
+connectAttr "InnerBrow_Offset_Cntrl_L_rotateY.o" "momRN1.phl[2065]";
+connectAttr "InnerBrow_Offset_Cntrl_L_rotateZ.o" "momRN1.phl[2066]";
+connectAttr "InnerBrow_Offset_Cntrl_L_scaleX.o" "momRN1.phl[2067]";
+connectAttr "InnerBrow_Offset_Cntrl_L_scaleY.o" "momRN1.phl[2068]";
+connectAttr "InnerBrow_Offset_Cntrl_L_scaleZ.o" "momRN1.phl[2069]";
+connectAttr "InnerBrow_Cntrl_L_translateY.o" "momRN1.phl[2070]";
+connectAttr "InnerBrow_Cntrl_L_translateX.o" "momRN1.phl[2071]";
+connectAttr "InnerBrow_Cntrl_L_translateZ.o" "momRN1.phl[2072]";
+connectAttr "InnerBrow_Cntrl_L_visibility.o" "momRN1.phl[2073]";
+connectAttr "mom_r_blink_ctrl_translateY1.o" "momRN1.phl[2074]";
+connectAttr "mom_r_blink_ctrl_visibility1.o" "momRN1.phl[2075]";
+connectAttr "mom_l_blink_ctrl_translateY1.o" "momRN1.phl[2076]";
+connectAttr "mom_l_blink_ctrl_visibility1.o" "momRN1.phl[2077]";
+connectAttr "mom_r_low_eyelid_ctrl_translateY.o" "momRN1.phl[2078]";
+connectAttr "mom_r_low_eyelid_ctrl_visibility.o" "momRN1.phl[2079]";
+connectAttr "mom_l_low_eyelid_ctrl_translateY.o" "momRN1.phl[2080]";
+connectAttr "mom_l_low_eyelid_ctrl_visibility.o" "momRN1.phl[2081]";
+connectAttr "mom_l_nose_flare_ctrl_translateY.o" "momRN1.phl[2082]";
+connectAttr "mom_l_nose_flare_ctrl_visibility.o" "momRN1.phl[2083]";
+connectAttr "mom_r_nose_flare_ctrl_translateY.o" "momRN1.phl[2084]";
+connectAttr "mom_r_nose_flare_ctrl_visibility.o" "momRN1.phl[2085]";
+connectAttr "Arm_IK_R_PV_translateX.o" "momRN1.phl[2086]";
+connectAttr "Arm_IK_R_PV_translateY.o" "momRN1.phl[2087]";
+connectAttr "Arm_IK_R_PV_translateZ.o" "momRN1.phl[2088]";
+connectAttr "Arm_IK_R_PV_visibility.o" "momRN1.phl[2089]";
+connectAttr "Arm_IK_R_PV_rotateX.o" "momRN1.phl[2090]";
+connectAttr "Arm_IK_R_PV_rotateY.o" "momRN1.phl[2091]";
+connectAttr "Arm_IK_R_PV_rotateZ.o" "momRN1.phl[2092]";
+connectAttr "Arm_IK_R_PV_scaleX.o" "momRN1.phl[2093]";
+connectAttr "Arm_IK_R_PV_scaleY.o" "momRN1.phl[2094]";
+connectAttr "Arm_IK_R_PV_scaleZ.o" "momRN1.phl[2095]";
+connectAttr "Arm_Cntrl_R_mom_arm_correct.o" "momRN1.phl[2096]";
+connectAttr "pairBlend3.orx" "momRN1.phl[2097]";
+connectAttr "pairBlend3.ory" "momRN1.phl[2098]";
+connectAttr "pairBlend3.orz" "momRN1.phl[2099]";
+connectAttr "momRN1.phl[2100]" "pairBlend3.ro";
+connectAttr "momRN1.phl[2101]" "Arm_Cntrl_R_parentConstraint1.cro";
+connectAttr "pairBlend3.otx" "momRN1.phl[2102]";
+connectAttr "pairBlend3.oty" "momRN1.phl[2103]";
+connectAttr "pairBlend3.otz" "momRN1.phl[2104]";
+connectAttr "momRN1.phl[2105]" "Arm_Cntrl_R_parentConstraint1.crp";
+connectAttr "momRN1.phl[2106]" "Arm_Cntrl_R_parentConstraint1.crt";
+connectAttr "momRN1.phl[2107]" "pairBlend3.w";
+connectAttr "Arm_Cntrl_R_blendParent1.o" "momRN1.phl[2108]";
+connectAttr "Arm_Cntrl_R_visibility.o" "momRN1.phl[2109]";
+connectAttr "momRN1.phl[2110]" "Arm_Cntrl_R_parentConstraint1.cpim";
+connectAttr "Arm_IK_L_PV_translateX.o" "momRN1.phl[2111]";
+connectAttr "Arm_IK_L_PV_translateY.o" "momRN1.phl[2112]";
+connectAttr "Arm_IK_L_PV_translateZ.o" "momRN1.phl[2113]";
+connectAttr "Arm_IK_L_PV_visibility.o" "momRN1.phl[2114]";
+connectAttr "Arm_IK_L_PV_rotateX.o" "momRN1.phl[2115]";
+connectAttr "Arm_IK_L_PV_rotateY.o" "momRN1.phl[2116]";
+connectAttr "Arm_IK_L_PV_rotateZ.o" "momRN1.phl[2117]";
+connectAttr "Arm_IK_L_PV_scaleX.o" "momRN1.phl[2118]";
+connectAttr "Arm_IK_L_PV_scaleY.o" "momRN1.phl[2119]";
+connectAttr "Arm_IK_L_PV_scaleZ.o" "momRN1.phl[2120]";
+connectAttr "Arm_Cntrl_L_mom_arm_correct.o" "momRN1.phl[2121]";
+connectAttr "pairBlend2.orx" "momRN1.phl[2122]";
+connectAttr "pairBlend2.ory" "momRN1.phl[2123]";
+connectAttr "pairBlend2.orz" "momRN1.phl[2124]";
+connectAttr "momRN1.phl[2125]" "pairBlend2.ro";
+connectAttr "momRN1.phl[2126]" "Arm_Cntrl_L_parentConstraint1.cro";
+connectAttr "pairBlend2.otx" "momRN1.phl[2127]";
+connectAttr "pairBlend2.oty" "momRN1.phl[2128]";
+connectAttr "pairBlend2.otz" "momRN1.phl[2129]";
+connectAttr "momRN1.phl[2130]" "Arm_Cntrl_L_parentConstraint1.crp";
+connectAttr "momRN1.phl[2131]" "Arm_Cntrl_L_parentConstraint1.crt";
+connectAttr "momRN1.phl[2132]" "pairBlend2.w";
+connectAttr "Arm_Cntrl_L_blendParent1.o" "momRN1.phl[2133]";
+connectAttr "Arm_Cntrl_L_visibility.o" "momRN1.phl[2134]";
+connectAttr "momRN1.phl[2135]" "Arm_Cntrl_L_parentConstraint1.cpim";
+connectAttr "mom2_nClothShape1Cache1.ocd[0]" "momRN1.phl[2136]";
+connectAttr "mom2_nClothShape1Cache1.ir" "momRN1.phl[2137]";
+connectAttr "momRN1.phl[2138]" "mom:shapeEditorManager.bspr[5]";
+connectAttr "mom:shapeEditorManager.obsv[5]" "momRN1.phl[2139]";
+connectAttr "outputCloth1.iog" "momRN1.phl[2140]";
+connectAttr "momRN1.phl[2141]" "mom:shapeEditorManager.bspr[6]";
+connectAttr "mom:shapeEditorManager.obsv[6]" "momRN1.phl[2142]";
+connectAttr "momRN1.phl[2143]" "momRN1.phl[2144]";
 connectAttr "layer1.di" "pPlane1.do";
 connectAttr "mom_cam:new_mom_camera:persp1_translateX3.o" "mom_cam:new_camera_test.tx"
 		;
@@ -24697,81 +24297,7 @@ connectAttr "mom_cam:new_mom_camera:persp1_scaleZ3.o" "mom_cam:new_camera_test.s
 		;
 connectAttr "mom_cam:new_mom_camera:momBabyShape_focalLength3.o" "mom_cam:new_camera_testShape.fl"
 		;
-connectAttr ":time1.o" "nucleus1.cti";
-connectAttr "nClothShape1.cust" "nucleus1.niao[0]";
-connectAttr "nClothShape1.stst" "nucleus1.nias[0]";
-connectAttr "nRigidShape1.cust" "nucleus1.nipo[0]";
-connectAttr "nRigidShape2.cust" "nucleus1.nipo[1]";
-connectAttr "nRigidShape3.cust" "nucleus1.nipo[2]";
-connectAttr "nRigidShape4.cust" "nucleus1.nipo[3]";
-connectAttr "nRigidShape1.stst" "nucleus1.nips[0]";
-connectAttr "nRigidShape2.stst" "nucleus1.nips[1]";
-connectAttr "nRigidShape3.stst" "nucleus1.nips[2]";
-connectAttr "nRigidShape4.stst" "nucleus1.nips[3]";
-connectAttr "dynamicConstraintShape5.evs" "nucleus1.is[0]";
-connectAttr "dynamicConstraintShape6.evs" "nucleus1.is[1]";
-connectAttr "dynamicConstraintShape3.evs" "nucleus1.is[2]";
-connectAttr "dynamicConstraintShape4.evs" "nucleus1.is[3]";
-connectAttr "dynamicConstraintShape5.evc" "nucleus1.ic[0]";
-connectAttr "dynamicConstraintShape6.evc" "nucleus1.ic[1]";
-connectAttr "dynamicConstraintShape3.evc" "nucleus1.ic[2]";
-connectAttr "dynamicConstraintShape4.evc" "nucleus1.ic[3]";
-connectAttr "nucleus1.stf" "nClothShape1.stf";
-connectAttr ":time1.o" "nClothShape1.cti";
-connectAttr "nucleus1.noao[0]" "nClothShape1.nxst";
-connectAttr "cacheBlend1.ocd[0]" "nClothShape1.poss";
-connectAttr "cacheBlend1.ir" "nClothShape1.pfc";
-connectAttr "nucleus1.stf" "nRigidShape1.stf";
-connectAttr ":time1.o" "nRigidShape1.cti";
-connectAttr "nucleus1.stf" "nRigidShape2.stf";
-connectAttr ":time1.o" "nRigidShape2.cti";
-connectAttr "nucleus1.stf" "nRigidShape3.stf";
-connectAttr ":time1.o" "nRigidShape3.cti";
-connectAttr "nucleus1.stf" "nRigidShape4.stf";
-connectAttr ":time1.o" "nRigidShape4.cti";
-connectAttr "nComponent5.ocp" "dynamicConstraintShape3.cid[0]";
-connectAttr "nComponent6.ocp" "dynamicConstraintShape3.cid[1]";
-connectAttr ":time1.o" "dynamicConstraintShape3.cti";
-connectAttr "nComponent7.ocp" "dynamicConstraintShape4.cid[0]";
-connectAttr "nComponent8.ocp" "dynamicConstraintShape4.cid[1]";
-connectAttr ":time1.o" "dynamicConstraintShape4.cti";
-connectAttr "nComponent9.ocp" "dynamicConstraintShape5.cid[0]";
-connectAttr "nComponent10.ocp" "dynamicConstraintShape5.cid[1]";
-connectAttr ":time1.o" "dynamicConstraintShape5.cti";
-connectAttr "nComponent11.ocp" "dynamicConstraintShape6.cid[0]";
-connectAttr "nComponent12.ocp" "dynamicConstraintShape6.cid[1]";
-connectAttr ":time1.o" "dynamicConstraintShape6.cti";
-connectAttr "BabyGrab_One_translateX.o" "BabyGrab_One.tx";
-connectAttr "BabyGrab_One_translateY.o" "BabyGrab_One.ty";
-connectAttr "BabyGrab_One_translateZ.o" "BabyGrab_One.tz";
-connectAttr "BabyGrab_One_rotateX.o" "BabyGrab_One.rx";
-connectAttr "BabyGrab_One_rotateY.o" "BabyGrab_One.ry";
-connectAttr "BabyGrab_One_rotateZ.o" "BabyGrab_One.rz";
-connectAttr "BabyGrab_One_scaleX.o" "BabyGrab_One.sx";
-connectAttr "BabyGrab_One_scaleY.o" "BabyGrab_One.sy";
-connectAttr "BabyGrab_One_scaleZ.o" "BabyGrab_One.sz";
-connectAttr "BabyGrab_One_visibility.o" "BabyGrab_One.v";
-connectAttr "BabyGrab_Two_translateX.o" "BabyGrab_Two.tx";
-connectAttr "BabyGrab_Two_translateY.o" "BabyGrab_Two.ty";
-connectAttr "BabyGrab_Two_translateZ.o" "BabyGrab_Two.tz";
-connectAttr "BabyGrab_Two_rotateX.o" "BabyGrab_Two.rx";
-connectAttr "BabyGrab_Two_rotateY.o" "BabyGrab_Two.ry";
-connectAttr "BabyGrab_Two_rotateZ.o" "BabyGrab_Two.rz";
-connectAttr "BabyGrab_Two_scaleX.o" "BabyGrab_Two.sx";
-connectAttr "BabyGrab_Two_scaleY.o" "BabyGrab_Two.sy";
-connectAttr "BabyGrab_Two_scaleZ.o" "BabyGrab_Two.sz";
-connectAttr "BabyGrab_Two_visibility.o" "BabyGrab_Two.v";
-connectAttr "battle_grab_loc_translateX.o" "battle_grab_loc.tx";
-connectAttr "battle_grab_loc_translateY.o" "battle_grab_loc.ty";
-connectAttr "battle_grab_loc_translateZ.o" "battle_grab_loc.tz";
-connectAttr "battle_grab_loc_rotateX.o" "battle_grab_loc.rx";
-connectAttr "battle_grab_loc_rotateY.o" "battle_grab_loc.ry";
-connectAttr "battle_grab_loc_rotateZ.o" "battle_grab_loc.rz";
-connectAttr "battle_grab_loc_scaleX.o" "battle_grab_loc.sx";
-connectAttr "battle_grab_loc_scaleY.o" "battle_grab_loc.sy";
-connectAttr "battle_grab_loc_scaleZ.o" "battle_grab_loc.sz";
-connectAttr "battle_grab_loc_visibility.o" "battle_grab_loc.v";
-connectAttr "nClothShape1.omsh" "outputCloth1.i";
+connectAttr "momRN1.phl[1600]" "outputCloth1.i";
 connectAttr "BabyGrab_One.t" "Arm_Cntrl_L_parentConstraint1.tg[0].tt";
 connectAttr "BabyGrab_One.rp" "Arm_Cntrl_L_parentConstraint1.tg[0].trp";
 connectAttr "BabyGrab_One.rpt" "Arm_Cntrl_L_parentConstraint1.tg[0].trt";
@@ -24803,6 +24329,36 @@ connectAttr "Arm_Cntrl_R_parentConstraint1_BabyGrab_TwoW0.o" "Arm_Cntrl_R_parent
 		;
 connectAttr "Arm_Cntrl_R_parentConstraint1_battle_grab_locW1.o" "Arm_Cntrl_R_parentConstraint1.w1"
 		;
+connectAttr "BabyGrab_One_translateX.o" "BabyGrab_One.tx";
+connectAttr "BabyGrab_One_translateY.o" "BabyGrab_One.ty";
+connectAttr "BabyGrab_One_translateZ.o" "BabyGrab_One.tz";
+connectAttr "BabyGrab_One_rotateX.o" "BabyGrab_One.rx";
+connectAttr "BabyGrab_One_rotateY.o" "BabyGrab_One.ry";
+connectAttr "BabyGrab_One_rotateZ.o" "BabyGrab_One.rz";
+connectAttr "BabyGrab_One_scaleX.o" "BabyGrab_One.sx";
+connectAttr "BabyGrab_One_scaleY.o" "BabyGrab_One.sy";
+connectAttr "BabyGrab_One_scaleZ.o" "BabyGrab_One.sz";
+connectAttr "BabyGrab_One_visibility.o" "BabyGrab_One.v";
+connectAttr "BabyGrab_Two_translateX.o" "BabyGrab_Two.tx";
+connectAttr "BabyGrab_Two_translateY.o" "BabyGrab_Two.ty";
+connectAttr "BabyGrab_Two_translateZ.o" "BabyGrab_Two.tz";
+connectAttr "BabyGrab_Two_rotateX.o" "BabyGrab_Two.rx";
+connectAttr "BabyGrab_Two_rotateY.o" "BabyGrab_Two.ry";
+connectAttr "BabyGrab_Two_rotateZ.o" "BabyGrab_Two.rz";
+connectAttr "BabyGrab_Two_scaleX.o" "BabyGrab_Two.sx";
+connectAttr "BabyGrab_Two_scaleY.o" "BabyGrab_Two.sy";
+connectAttr "BabyGrab_Two_scaleZ.o" "BabyGrab_Two.sz";
+connectAttr "BabyGrab_Two_visibility.o" "BabyGrab_Two.v";
+connectAttr "battle_grab_loc_translateX.o" "battle_grab_loc.tx";
+connectAttr "battle_grab_loc_translateY.o" "battle_grab_loc.ty";
+connectAttr "battle_grab_loc_translateZ.o" "battle_grab_loc.tz";
+connectAttr "battle_grab_loc_rotateX.o" "battle_grab_loc.rx";
+connectAttr "battle_grab_loc_rotateY.o" "battle_grab_loc.ry";
+connectAttr "battle_grab_loc_rotateZ.o" "battle_grab_loc.rz";
+connectAttr "battle_grab_loc_scaleX.o" "battle_grab_loc.sx";
+connectAttr "battle_grab_loc_scaleY.o" "battle_grab_loc.sy";
+connectAttr "battle_grab_loc_scaleZ.o" "battle_grab_loc.sz";
+connectAttr "battle_grab_loc_visibility.o" "battle_grab_loc.v";
 connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
@@ -26701,9 +26257,24 @@ connectAttr "mom_spline_ctrl_rotateZ.o" "momRN1.phl[91]";
 connectAttr "mom_spline_ctrl_scaleX.o" "momRN1.phl[92]";
 connectAttr "mom_spline_ctrl_scaleY.o" "momRN1.phl[93]";
 connectAttr "mom_spline_ctrl_scaleZ.o" "momRN1.phl[94]";
-connectAttr "mom2_nClothShape1Cache1.ocd[0]" "momRN1.phl[561]";
-connectAttr "mom2_nClothShape1Cache1.ir" "momRN1.phl[562]";
 connectAttr "momRN1.phl[1047]" "momRN1.phl[1048]";
+connectAttr "necklace1_translateX.o" "momRN1.phl[1352]";
+connectAttr "necklace1_translateY.o" "momRN1.phl[1353]";
+connectAttr "necklace1_translateZ.o" "momRN1.phl[1354]";
+connectAttr "necklace1_visibility.o" "momRN1.phl[1355]";
+connectAttr "necklace1_rotateX.o" "momRN1.phl[1356]";
+connectAttr "necklace1_rotateY.o" "momRN1.phl[1357]";
+connectAttr "necklace1_rotateZ.o" "momRN1.phl[1358]";
+connectAttr "necklace1_scaleX.o" "momRN1.phl[1359]";
+connectAttr "necklace1_scaleY.o" "momRN1.phl[1360]";
+connectAttr "necklace1_scaleZ.o" "momRN1.phl[1361]";
+connectAttr "bot_mid_ctrl_translateX.o" "momRN1.phl[1362]";
+connectAttr "bot_mid_ctrl_translateY.o" "momRN1.phl[1363]";
+connectAttr "bot_mid_ctrl_translateZ.o" "momRN1.phl[1364]";
+connectAttr "bot_mid_ctrl_visibility.o" "momRN1.phl[1365]";
+connectAttr "bot_mid_ctrl_rotateX.o" "momRN1.phl[1366]";
+connectAttr "bot_mid_ctrl_rotateY.o" "momRN1.phl[1367]";
+connectAttr "bot_mid_ctrl_rotateZ.o" "momRN1.phl[1368]";
 connectAttr "momRN1fosterParent1.msg" "momRN1.fp";
 connectAttr "sharedReferenceNode.sr" "momRN1.sr";
 connectAttr ":defaultRenderGlobals.msg" "mtorPartition1.rgcnx";
@@ -26734,6 +26305,10 @@ connectAttr "Arm_Cntrl_R_parentConstraint1.ctz" "pairBlend3.itz2";
 connectAttr "Arm_Cntrl_R_parentConstraint1.crx" "pairBlend3.irx2";
 connectAttr "Arm_Cntrl_R_parentConstraint1.cry" "pairBlend3.iry2";
 connectAttr "Arm_Cntrl_R_parentConstraint1.crz" "pairBlend3.irz2";
+connectAttr "momRN1.phl[1049]" "lambert2SG.dsm" -na;
+connectAttr "momRN1.phl[1051]" "lambert2SG.dsm" -na;
+connectAttr "momRN1.phl[1053]" "lambert2SG.dsm" -na;
+connectAttr "momRN1.phl[1054]" "lambert2SG.dsm" -na;
 connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "lambert2.msg" "materialInfo2.m";
@@ -28541,58 +28116,10 @@ connectAttr "mom_scene:shotglass1:place2dTexture2.ofs" "mom_scene:shotglass1:unw
 		;
 connectAttr ":defaultRenderGlobals.msg" "mom_cam:mtorPartition.rgcnx";
 connectAttr ":time1.o" "mom2_nClothShape1Cache1.tim";
-connectAttr "nRigidShape3.nuid" "nComponent5.obid";
-connectAttr "nClothShape1.nuid" "nComponent6.obid";
-connectAttr "nRigidShape3.nuid" "nComponent7.obid";
-connectAttr "nClothShape1.nuid" "nComponent8.obid";
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr ":time1.o" "nClothShape1Cache1.tim";
-connectAttr "nClothShape1Cache1.st" "cacheBlend1.cd[0].st";
-connectAttr "nClothShape1Cache1.e" "cacheBlend1.cd[0].e";
-connectAttr "nClothShape1Cache1.ir" "cacheBlend1.cd[0].ra";
-connectAttr "nClothShape1Cache2.st" "cacheBlend1.cd[1].st";
-connectAttr "nClothShape1Cache2.e" "cacheBlend1.cd[1].e";
-connectAttr "nClothShape1Cache2.ir" "cacheBlend1.cd[1].ra";
-connectAttr "nClothShape1Cache3.st" "cacheBlend1.cd[2].st";
-connectAttr "nClothShape1Cache3.e" "cacheBlend1.cd[2].e";
-connectAttr "nClothShape1Cache3.ir" "cacheBlend1.cd[2].ra";
-connectAttr "nClothShape1Cache4.st" "cacheBlend1.cd[3].st";
-connectAttr "nClothShape1Cache4.e" "cacheBlend1.cd[3].e";
-connectAttr "nClothShape1Cache4.ir" "cacheBlend1.cd[3].ra";
-connectAttr "nClothShape1Cache5.st" "cacheBlend1.cd[4].st";
-connectAttr "nClothShape1Cache5.e" "cacheBlend1.cd[4].e";
-connectAttr "nClothShape1Cache5.ir" "cacheBlend1.cd[4].ra";
-connectAttr "nClothShape1Cache6.st" "cacheBlend1.cd[5].st";
-connectAttr "nClothShape1Cache6.e" "cacheBlend1.cd[5].e";
-connectAttr "nClothShape1Cache6.ir" "cacheBlend1.cd[5].ra";
-connectAttr "nClothShape1Cache7.st" "cacheBlend1.cd[6].st";
-connectAttr "nClothShape1Cache7.e" "cacheBlend1.cd[6].e";
-connectAttr "nClothShape1Cache7.ir" "cacheBlend1.cd[6].ra";
-connectAttr "nClothShape1Cache8.st" "cacheBlend1.cd[7].st";
-connectAttr "nClothShape1Cache8.e" "cacheBlend1.cd[7].e";
-connectAttr "nClothShape1Cache8.ir" "cacheBlend1.cd[7].ra";
-connectAttr "nClothShape1Cache1.ocd[0]" "cacheBlend1.ic[0].va[0]";
-connectAttr "nClothShape1Cache2.ocd[0]" "cacheBlend1.ic[0].va[1]";
-connectAttr "nClothShape1Cache3.ocd[0]" "cacheBlend1.ic[0].va[2]";
-connectAttr "nClothShape1Cache4.ocd[0]" "cacheBlend1.ic[0].va[3]";
-connectAttr "nClothShape1Cache5.ocd[0]" "cacheBlend1.ic[0].va[4]";
-connectAttr "nClothShape1Cache6.ocd[0]" "cacheBlend1.ic[0].va[5]";
-connectAttr "nClothShape1Cache7.ocd[0]" "cacheBlend1.ic[0].va[6]";
-connectAttr "nClothShape1Cache8.ocd[0]" "cacheBlend1.ic[0].va[7]";
-connectAttr ":time1.o" "nClothShape1Cache2.tim";
-connectAttr "nRigidShape3.nuid" "nComponent9.obid";
-connectAttr "nClothShape1.nuid" "nComponent10.obid";
-connectAttr ":time1.o" "nClothShape1Cache3.tim";
-connectAttr ":time1.o" "nClothShape1Cache4.tim";
-connectAttr "nRigidShape3.nuid" "nComponent11.obid";
-connectAttr "nClothShape1.nuid" "nComponent12.obid";
-connectAttr ":time1.o" "nClothShape1Cache5.tim";
-connectAttr ":time1.o" "nClothShape1Cache6.tim";
-connectAttr ":time1.o" "nClothShape1Cache7.tim";
-connectAttr ":time1.o" "nClothShape1Cache8.tim";
 connectAttr "layerManager.dli[5]" "layer1.id";
 connectAttr "layerManager.dli[6]" "layer2.id";
 connectAttr "mom:mom2:mom:unwrapBaseShaderSG.pa" ":renderPartition.st" -na;
