@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: momscene_tear.ma
-//Last modified: Fri, Apr 07, 2017 04:33:34 PM
+//Last modified: Mon, Apr 10, 2017 01:17:45 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "momscene_anim" -rfn "momscene_animRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/emileechen/Documents/project/Only-Love//scenes/layout/animation/momscene_anim.ma";
@@ -50,17 +50,16 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "BC7B81C5-964E-0C83-F152-EFBB73846B0E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.7284907944585908 3.0658431753129207 -0.085173473820838466 ;
-	setAttr ".r" -type "double3" -50.138352729553496 -418.59999999996427 0 ;
+	setAttr ".t" -type "double3" -0.85675564914113322 4.3461931331986312 0.51334492588598291 ;
+	setAttr ".r" -type "double3" -34.538352729531603 -450.5999999998748 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "28E97A3A-944C-CD3C-9C25-CA8583CDC328";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 0.66754459124384413;
+	setAttr ".coi" 2.1839499828410354;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 3.0710170663415894 2.5852455203435705 -0.29425240313520939 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr -s 150 ".b";
 createNode transform -s -n "top";
@@ -155,7 +154,7 @@ createNode bifrostContainer -n "baby_teardropContainer" -p "baby_teardrop";
 	setAttr ".sc" -type "string" (
 		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostLiquid1_bifrostLiquidContainer1::liquid\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///keepMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createObjectWhenCaching.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObjectToDisk.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///solveLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///foam.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createEmptyItems.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///updateSubStepIterator.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createCacheObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createLiquidData.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///setPullSolidOnly.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///getFieldPropertyObjectList.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///voxelizeFoamMasks.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///saveMeshCacheToObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///keepMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createObjectWhenCaching.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObjectToDisk.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///solveLiquid.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///foam.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createEmptyItems.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///updateSubStepIterator.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createCacheObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createLiquidData.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///cacheObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///setPullSolidOnly.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///getFieldPropertyObjectList.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///voxelizeFoamMasks.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///saveMeshCacheToObject.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostLiquid1_bifrostLiquidContainer1::liquid\\\",\\n            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Emitters\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Colliders\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Accelerators\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Guides\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"EmissionRegions\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"FoamMasks\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamMaskVoxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"killplanes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Liquid\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Solid\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Foam\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"Guide\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"cameraMatrixList\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableFoam\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamCacheProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidCacheProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"solidCacheProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"guideCacheProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"guideProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"fields\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"foamFields\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"liquidmeshCacheProperties\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                }\\n            ],\\n            \\\"compounds\\\": [\\n                {\\n                    \\\"name\\\": \\\"postSimulationStep\\\",\\n                    \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                    \\\"ports\\\": [\\n                        {\\n                            \\\"portName\\\": \\\"liquidObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidsObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"accelerators\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"colliders\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emitters\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guides\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emissionRegions\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMasks\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidsObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        }\\n                    ],\\n                    \\\"compoundNodes\\\": [\\n                        {\\n                            \\\"nodeName\\\": \\\"keepMeshes\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::_private::keepMeshes\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-173 -160\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"setDescriptorFromObject\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"42 -160\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"setDescriptorFromObject1\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"42 -69\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"setDescriptorFromObject2\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"42 113\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"setDescriptorFromObject3\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"42 22\\\"\\n                                }\\n                            ]\\n                        }\\n                    ],\\n                    \\\"connections\\\": [\\n                        {\\n                            \\\"source\\\": \\\".accelerators\\\",\\n                            \\\"target\\\": \\\"keepMeshes.accelerators\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".colliders\\\",\\n                            \\\"target\\\": \\\"keepMeshes.colliders\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".emitters\\\",\\n                            \\\"target\\\": \\\"keepMeshes.emitters\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guides\\\",\\n                            \\\"target\\\": \\\"keepMeshes.guides\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".emissionRegions\\\",\\n                            \\\"target\\\": \\\"keepMeshes.emissionRegions\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamMasks\\\",\\n                            \\\"target\\\": \\\"keepMeshes.foamMasks\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"setDescriptorFromObject.value\\\",\\n                            \\\"target\\\": \\\".liquidObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"setDescriptorFromObject1.value\\\",\\n                            \\\"target\\\": \\\".solidsObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidObject\\\",\\n                            \\\"target\\\": \\\"keepMeshes.inObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamObject\\\",\\n                            \\\"target\\\": \\\"setDescriptorFromObject2.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"setDescriptorFromObject2.value\\\",\\n                            \\\"target\\\": \\\".foamObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guideObject\\\",\\n                            \\\"target\\\": \\\"setDescriptorFromObject3.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"setDescriptorFromObject3.value\\\",\\n                            \\\"target\\\": \\\".guideObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidsObject\\\",\\n                            \\\"target\\\": \\\"setDescriptorFromObject1.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"keepMeshes.outObject\\\",\\n                            \\\"target\\\": \\\"setDescriptorFromObject.object\\\"\\n                        }\\n                    ],\\n                    \\\"values\\\": []\\n                },\\n                {\\n                    \\\"name\\\": \\\"preSimulationStep\\\",\\n                    \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                    \\\"ports\\\": [\\n                        {\\n                            \\\"portName\\\": \\\"liquidObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"forcesObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidsObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMaskObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"accelerators\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"colliders\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emitters\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guides\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emissionRegions\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMasks\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"accelerators2\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"colliders2\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emitters2\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guides2\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emissionRegions2\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMasks2\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMaskVoxelScale\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamCacheDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidCacheDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidCacheDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideCacheDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"fieldPropsList\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::Object>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"fields\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamFieldProps\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::Object>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamFields\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::ObjectDescriptor>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidmeshCacheDescriptorIn\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidmeshCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        }\\n                    ],\\n                    \\\"compounds\\\": [\\n                        {\\n                            \\\"name\\\": \\\"createForcesObject\\\",\\n                            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                            \\\"ports\\\": [\\n                                {\\n                                    \\\"portName\\\": \\\"outObject\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"forceVoxelScale\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"float\\\"\\n                                }\\n                            ],\\n                            \\\"compoundNodes\\\": [\\n                                {\\n                                    \\\"nodeName\\\": \\\"clearPropertyValues\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::clearPropertyValues\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"setPropertyValue_forceVoxelScale\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\"\\n                                }\\n                            ],\\n                            \\\"connections\\\": [\\n                                {\\n                                    \\\"source\\\": \\\"setPropertyValue_forceVoxelScale.outObject\\\",\\n                                    \\\"target\\\": \\\".outObject\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".forceVoxelScale\\\",\\n                                    \\\"target\\\": \\\"setPropertyValue_forceVoxelScale.value\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"clearPropertyValues.outObject\\\",\\n                                    \\\"target\\\": \\\"setPropertyValue_forceVoxelScale.object\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                                    \\\"target\\\": \\\"clearPropertyValues.object\\\"\\n                                }\\n                            ],\\n                            \\\"values\\\": [\\n                                {\\n                                    \\\"valueName\\\": \\\"setPropertyValue_forceVoxelScale.name\\\",\\n                                    \\\"valueType\\\": \\\"string\\\",\\n                                    \\\"value\\\": \\\"voxelScale\\\"\\n                                },\\n                                {\\n                                    \\\"valueName\\\": \\\"fetchObject.name\\\",\\n                                    \\\"valueType\\\": \\\"string\\\",\\n                                    \\\"value\\\": \\\"Forces\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"name\\\": \\\"createFoamMaskObject\\\",\\n                            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                            \\\"ports\\\": [\\n                                {\\n                                    \\\"portName\\\": \\\"outObject\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"foamMaskVoxelScale\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"float\\\"\\n                                }\\n                            ],\\n                            \\\"compoundNodes\\\": [\\n                                {\\n                                    \\\"nodeName\\\": \\\"clearPropertyValues\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::clearPropertyValues\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"setPropertyValue_foamMaskVoxelScale\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\"\\n                                }\\n                            ],\\n                            \\\"connections\\\": [\\n                                {\\n                                    \\\"source\\\": \\\"setPropertyValue_foamMaskVoxelScale.outObject\\\",\\n                                    \\\"target\\\": \\\".outObject\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".foamMaskVoxelScale\\\",\\n                                    \\\"target\\\": \\\"setPropertyValue_foamMaskVoxelScale.value\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"clearPropertyValues.outObject\\\",\\n                                    \\\"target\\\": \\\"setPropertyValue_foamMaskVoxelScale.object\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                                    \\\"target\\\": \\\"clearPropertyValues.object\\\"\\n                                }\\n                            ],\\n                            \\\"values\\\": [\\n                                {\\n                                    \\\"valueName\\\": \\\"setPropertyValue_foamMaskVoxelScale.name\\\",\\n                                    \\\"valueType\\\": \\\"string\\\",\\n                                    \\\"value\\\": \\\"voxelScale\\\"\\n                                },\\n                                {\\n                                    \\\"valueName\\\": \\\"fetchObject.name\\\",\\n                                    \\\"valueType\\\": \\\"string\\\",\\n                                    \\\"value\\\": \\\"FoamMask\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"name\\\": \\\"createSolidsObject\\\",\\n                            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                            \\\"ports\\\": [\\n                                {\\n                                    \\\"portName\\\": \\\"solidVoxelScale\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"float\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"outObject\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                }\\n                            ],\\n                            \\\"compoundNodes\\\": [\\n                                {\\n                                    \\\"nodeName\\\": \\\"clearPropertyValues\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::clearPropertyValues\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"setPropertyValue_solidVoxelScale\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\"\\n                                }\\n                            ],\\n                            \\\"connections\\\": [\\n                                {\\n                                    \\\"source\\\": \\\"setPropertyValue_solidVoxelScale.outObject\\\",\\n                                    \\\"target\\\": \\\".outObject\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".solidVoxelScale\\\",\\n                                    \\\"target\\\": \\\"setPropertyValue_solidVoxelScale.value\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"clearPropertyValues.outObject\\\",\\n                                    \\\"target\\\": \\\"setPropertyValue_solidVoxelScale.object\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                                    \\\"target\\\": \\\"clearPropertyValues.object\\\"\\n                                }\\n                            ],\\n                            \\\"values\\\": [\\n                                {\\n                                    \\\"valueName\\\": \\\"setPropertyValue_solidVoxelScale.name\\\",\\n                                    \\\"valueType\\\": \\\"string\\\",\\n                                    \\\"value\\\": \\\"voxelScale\\\"\\n                                },\\n                                {\\n                                    \\\"valueName\\\": \\\"fetchObject.name\\\",\\n                                    \\\"valueType\\\": \\\"string\\\",\\n                                    \\\"value\\\": \\\"Solids\\\"\\n                                }\\n                            ]\\n                        }\\n                    ],\\n                    \\\"compoundNodes\\\": [\\n                        {\\n                            \\\"nodeName\\\": \\\"createForcesObject\\\",\\n                            \\\"nodeType\\\": \\\"createForcesObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"150 631\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"createFoamMaskObject\\\",\\n                            \\\"nodeType\\\": \\\"createFoamMaskObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"150 542\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"createLiquidData\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::PresetLiquid::createLiquidData\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"1\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"122.533 -610.301\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"createMeshes\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::createMeshes\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"1\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"196.552 -350.272\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"createSolidsObject\\\",\\n                            \\\"nodeType\\\": \\\"createSolidsObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"150 453\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"voxel_liquid\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Misc::valueString\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-280 -604\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getLiquidFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-245.654 -656.947\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getFoamFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"150 364\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getFoamCacheFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"128 186\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getSolidCacheFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"131 275\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getLiquidCacheFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"124 7.16667\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getGuideCacheFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"125 97\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getEmissionRegionsFromDList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getMeshesFromDescriptorList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-80.3843 -573.397\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getFoamMasksFromDList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getMeshesFromDescriptorList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-87.2194 -519.706\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getAcceleratorsFromDList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getMeshesFromDescriptorList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-77.6001 -462.016\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getGuidesFromDList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getMeshesFromDescriptorList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-74.5229 -388.166\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getEmittersFromDList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getMeshesFromDescriptorList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-36.0589 -335.854\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getCollidersFromDList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getMeshesFromDescriptorList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-20.6732 -274.312\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getGuidesObjectFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-69.9357 -216.982\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getFieldPropertyObjectList\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::getFieldPropertyObjectList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-394 -140\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getFieldPropertyObjectList2\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::getFieldPropertyObjectList\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-394 -234\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getLiquidMeshCacheFromDescriptor\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getObjectFromDescriptor\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"2\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-670.611 377.534\\\"\\n                                }\\n                            ]\\n                        }\\n                    ],\\n                    \\\"connections\\\": [\\n                        {\\n                            \\\"source\\\": \\\".solidVoxelScale\\\",\\n                            \\\"target\\\": \\\"createSolidsObject.solidVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".forceVoxelScale\\\",\\n                            \\\"target\\\": \\\"createForcesObject.forceVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamMaskVoxelScale\\\",\\n                            \\\"target\\\": \\\"createFoamMaskObject.foamMaskVoxelScale\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createForcesObject.outObject\\\",\\n                            \\\"target\\\": \\\".forcesObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createFoamMaskObject.outObject\\\",\\n                            \\\"target\\\": \\\".foamMaskObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createMeshes.accelerators1\\\",\\n                            \\\"target\\\": \\\".accelerators2\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createMeshes.colliders1\\\",\\n                            \\\"target\\\": \\\".colliders2\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createMeshes.emitters1\\\",\\n                            \\\"target\\\": \\\".emitters2\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createMeshes.guides1\\\",\\n                            \\\"target\\\": \\\".guides2\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createMeshes.emissionRegions1\\\",\\n                            \\\"target\\\": \\\".emissionRegions2\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createMeshes.foamMasks1\\\",\\n                            \\\"target\\\": \\\".foamMasks2\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createSolidsObject.outObject\\\",\\n                            \\\"target\\\": \\\".solidsObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getLiquidFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"createLiquidData.outObject\\\",\\n                            \\\"target\\\": \\\".liquidObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getFoamFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getFoamFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".foamObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamCacheDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getFoamCacheFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getFoamCacheFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".foamCacheObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidCacheDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getLiquidCacheFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidCacheDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getSolidCacheFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getSolidCacheFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".solidCacheObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getLiquidCacheFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".liquidCacheObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getGuideCacheFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".guideCacheObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guideCacheDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getGuideCacheFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"voxel_liquid.value\\\",\\n                            \\\"target\\\": \\\"createLiquidData.name\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".emissionRegions\\\",\\n                            \\\"target\\\": \\\"getEmissionRegionsFromDList.objectDescriptorList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getEmissionRegionsFromDList.value\\\",\\n                            \\\"target\\\": \\\"createMeshes.emissionRegions\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamMasks\\\",\\n                            \\\"target\\\": \\\"getFoamMasksFromDList.objectDescriptorList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getFoamMasksFromDList.value\\\",\\n                            \\\"target\\\": \\\"createMeshes.foamMasks\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".accelerators\\\",\\n                            \\\"target\\\": \\\"getAcceleratorsFromDList.objectDescriptorList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getAcceleratorsFromDList.value\\\",\\n                            \\\"target\\\": \\\"createMeshes.accelerators\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guides\\\",\\n                            \\\"target\\\": \\\"getGuidesFromDList.objectDescriptorList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getGuidesFromDList.value\\\",\\n                            \\\"target\\\": \\\"createMeshes.guides\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".emitters\\\",\\n                            \\\"target\\\": \\\"getEmittersFromDList.objectDescriptorList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getEmittersFromDList.value\\\",\\n                            \\\"target\\\": \\\"createMeshes.emitters\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".colliders\\\",\\n                            \\\"target\\\": \\\"getCollidersFromDList.objectDescriptorList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getCollidersFromDList.value\\\",\\n                            \\\"target\\\": \\\"createMeshes.colliders\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getLiquidFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\"createLiquidData.inObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guideDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getGuidesObjectFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getGuidesObjectFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".guideObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".fields\\\",\\n                            \\\"target\\\": \\\"getFieldPropertyObjectList.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getFieldPropertyObjectList.value\\\",\\n                            \\\"target\\\": \\\".fieldPropsList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamFields\\\",\\n                            \\\"target\\\": \\\"getFieldPropertyObjectList2.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getFieldPropertyObjectList2.value\\\",\\n                            \\\"target\\\": \\\".foamFieldProps\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidmeshCacheDescriptorIn\\\",\\n                            \\\"target\\\": \\\"getLiquidMeshCacheFromDescriptor.objectDescriptor\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getLiquidMeshCacheFromDescriptor.value\\\",\\n                            \\\"target\\\": \\\".liquidmeshCacheObject\\\"\\n                        }\\n                    ],\\n                    \\\"values\\\": [\\n                        {\\n                            \\\"valueName\\\": \\\"voxel_liquid.str\\\",\\n                            \\\"valueType\\\": \\\"string\\\",\\n                            \\\"value\\\": \\\"voxel_liquid\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"name\\\": \\\"simulationSteps\\\",\\n                    \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                    \\\"ports\\\": [\\n                        {\\n                            \\\"portName\\\": \\\"liquidObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"targetGuideObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidsObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"forcesObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMaskObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"cameraMatrix\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emitters\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guides\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"emissionRegions\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"colliders\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"accelerators\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamMasks\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"bboxTransform\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"killPlanes\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidsObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideObjectOut\\\",\\n                            \\\"portDirection\\\": \\\"output\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"solidCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"guideCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamEnabled\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"bool\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"fieldPropsList\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::Object>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"foamFieldProps\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"list<Bifrost::Types::Object>\\\"\\n                        },\\n                        {\\n                            \\\"portName\\\": \\\"liquidmeshCacheObject\\\",\\n                            \\\"portDirection\\\": \\\"input\\\",\\n                            \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                        }\\n                    ],\\n                    \\\"compounds\\\": [\\n                        {\\n                            \\\"name\\\": \\\"subStepLiquid\\\",\\n                            \\\"uriImported\\\": \\\"file:///liquid.json\\\",\\n                            \\\"ports\\\": [\\n                                {\\n                                    \\\"portName\\\": \\\"Emitters\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"Guides\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"EmissionRegions\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"Colliders\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"Accelerators\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"liquid\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"targetGuideObject\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"solidsObject\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"forcesObject\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"bboxTransform\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"killPlanes\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Mat44FloatArray\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"ittr_input\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"bool\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"ittr_output\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"bool\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"liquidObjectOut\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"solidsObjectOut\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"guideObjectOut\\\",\\n                                    \\\"portDirection\\\": \\\"output\\\",\\n                                    \\\"portType\\\": \\\"Bifrost::Types::Object\\\"\\n                                },\\n                                {\\n                                    \\\"portName\\\": \\\"fieldPropsList\\\",\\n                                    \\\"portDirection\\\": \\\"input\\\",\\n                                    \\\"portType\\\": \\\"list<Bifrost::Types::Object>\\\"\\n                                }\\n                            ],\\n                            \\\"compoundNodes\\\": [\\n                                {\\n                                    \\\"nodeName\\\": \\\"solveLiquid\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::PresetLiquid::solveLiquid\\\",\\n                                    \\\"metadata\\\": [\\n                                        {\\n                                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"261 -64\\\"\\n                                        },\\n                                        {\\n                                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"2\\\"\\n                                        }\\n                                    ]\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"updateSubStepIterator\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::_private::updateSubStepIterator\\\",\\n                                    \\\"metadata\\\": [\\n                                        {\\n                                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"0\\\"\\n                                        },\\n                                        {\\n                                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"46 -44\\\"\\n                                        }\\n                                    ]\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"getLiquidObjectName\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getLiquidObjectName\\\",\\n                                    \\\"metadata\\\": [\\n                                        {\\n                                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"0\\\"\\n                                        },\\n                                        {\\n                                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"-384 54\\\"\\n                                        }\\n                                    ]\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"getSolidsObjectName\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getSolidsObjectName\\\"\\n                                },\\n                                {\\n                                    \\\"nodeName\\\": \\\"valueBool\\\",\\n                                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Math::valueBool\\\",\\n                                    \\\"metadata\\\": [\\n                                        {\\n                                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"0\\\"\\n                                        },\\n                                        {\\n                                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                            \\\"metaType\\\": \\\"string\\\",\\n                                            \\\"metaValue\\\": \\\"151 58\\\"\\n                                        }\\n                                    ]\\n                                }\\n                            ],\\n                            \\\"connections\\\": [\\n                                {\\n                                    \\\"source\\\": \\\".ittr_input\\\",\\n                                    \\\"target\\\": \\\"valueBool.val\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"valueBool.value\\\",\\n                                    \\\"target\\\": \\\".ittr_output\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".Emitters\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.Emitters\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".Colliders\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.Colliders\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".Accelerators\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.Accelerators\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".killPlanes\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.killPlanes\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".Guides\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.Guides\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".EmissionRegions\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.EmissionRegions\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"solveLiquid.Liquid\\\",\\n                                    \\\"target\\\": \\\".liquidObjectOut\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"solveLiquid.Solid\\\",\\n                                    \\\"target\\\": \\\".solidsObjectOut\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"solveLiquid.Guide\\\",\\n                                    \\\"target\\\": \\\".guideObjectOut\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"solveLiquid.outLoopingCondition\\\",\\n                                    \\\"target\\\": \\\".looping_condition\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".bboxTransform\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.bboxTransform\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".liquid\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.liquid\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".solidsObject\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.solidsObject\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".targetGuideObject\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.targetGuideObject\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".forcesObject\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.forcesObject\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"updateSubStepIterator.condition\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.loopingCondition\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"getLiquidObjectName.value\\\",\\n                                    \\\"target\\\": \\\"updateSubStepIterator.objectName\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"getLiquidObjectName.value\\\",\\n                                    \\\"target\\\": \\\"updateSubStepIterator.objectPropertiesName\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\"getSolidsObjectName.value\\\",\\n                                    \\\"target\\\": \\\"updateSubStepIterator.solidsObjectName\\\"\\n                                },\\n                                {\\n                                    \\\"source\\\": \\\".fieldPropsList\\\",\\n                                    \\\"target\\\": \\\"solveLiquid.fieldPropsList\\\"\\n                                }\\n                            ],\\n                            \\\"values\\\": [],\\n                            \\\"whileCompound\\\": {\\n                                \\\"ports\\\": [\\n                                    {\\n                                        \\\"portKind\\\": \\\"state\\\",\\n                                        \\\"inputPortName\\\": \\\"ittr_input\\\",\\n                                        \\\"outputPortName\\\": \\\"ittr_output\\\"\\n                                    }\\n                                ]\\n                            }\\n                        }\\n                    ],\\n                    \\\"compoundNodes\\\": [\\n                        {\\n                            \\\"nodeName\\\": \\\"initTimestepCFL\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::initTimestepCFL\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-750 -90\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"solveFoam\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::PresetFoam::solveFoam\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"141 -55\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"subStepLiquid\\\",\\n                            \\\"nodeType\\\": \\\"subStepLiquid\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-507 -19\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"cacheSolidObject\\\",\\n                            \\\"nodeType\\\": \\\"cacheObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-74 -61\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"cacheFoamObject\\\",\\n                            \\\"nodeType\\\": \\\"cacheObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"356 -55\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"if\\\",\\n                            \\\"nodeType\\\": \\\"Amino::if\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"596 -55\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getPropertyValue_bboxTransform\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getPropertyValue\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-750 52\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"ifGuidingEnabled\\\",\\n                            \\\"nodeType\\\": \\\"Amino::if\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"596 51\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"cacheGuideObject\\\",\\n                            \\\"nodeType\\\": \\\"cacheObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"356 87\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"setPullSolidOnly\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::setPullSolidOnly\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-750 -19\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"getPropertyValue_enableGuiding\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::getPropertyValue\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"356 16\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"valueBool\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Math::valueBool\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"141 16\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"voxelizeFoamMasks\\\",\\n                            \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::PresetFoam::voxelizeFoamMasks\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-74 10\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"cacheLiquidObject\\\",\\n                            \\\"nodeType\\\": \\\"cacheObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"-289 -80\\\"\\n                                }\\n                            ]\\n                        },\\n                        {\\n                            \\\"nodeName\\\": \\\"saveLiquidMeshCacheToObject\\\",\\n                            \\\"nodeType\\\": \\\"saveMeshCacheToObject\\\",\\n                            \\\"metadata\\\": [\\n                                {\\n                                    \\\"metaName\\\": \\\"DisplayMode\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"0\\\"\\n                                },\\n                                {\\n                                    \\\"metaName\\\": \\\"LayoutPos\\\",\\n                                    \\\"metaType\\\": \\\"string\\\",\\n                                    \\\"metaValue\\\": \\\"596 -141\\\"\\n                                }\\n                            ]\\n                        }\\n                    ],\\n                    \\\"connections\\\": [\\n                        {\\n                            \\\"source\\\": \\\".liquidCacheObject\\\",\\n                            \\\"target\\\": \\\"setPullSolidOnly.mainCacheObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidCacheObject\\\",\\n                            \\\"target\\\": \\\"setPullSolidOnly.solidCacheObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidsObject\\\",\\n                            \\\"target\\\": \\\"setPullSolidOnly.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"ifGuidingEnabled.output\\\",\\n                            \\\"target\\\": \\\".guideObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guideCacheObject\\\",\\n                            \\\"target\\\": \\\"cacheGuideObject.objectCacheProperties\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".targetGuideObject\\\",\\n                            \\\"target\\\": \\\"ifGuidingEnabled.falseCase\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".cameraMatrix\\\",\\n                            \\\"target\\\": \\\"solveFoam.cameraMatrix\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamObject\\\",\\n                            \\\"target\\\": \\\"solveFoam.foamObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".emitters\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.Emitters\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".guides\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.Guides\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".emissionRegions\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.EmissionRegions\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".colliders\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.Colliders\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".accelerators\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.Accelerators\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".killPlanes\\\",\\n                            \\\"target\\\": \\\"solveFoam.killPlanes\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".targetGuideObject\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.targetGuideObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".forcesObject\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.forcesObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".killPlanes\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.killPlanes\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".solidCacheObject\\\",\\n                            \\\"target\\\": \\\"cacheSolidObject.objectCacheProperties\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheSolidObject.outObject\\\",\\n                            \\\"target\\\": \\\".solidsObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamCacheObject\\\",\\n                            \\\"target\\\": \\\"cacheFoamObject.objectCacheProperties\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamEnabled\\\",\\n                            \\\"target\\\": \\\"if.condition\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamObject\\\",\\n                            \\\"target\\\": \\\"if.falseCase\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"if.output\\\",\\n                            \\\"target\\\": \\\".foamObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidObject\\\",\\n                            \\\"target\\\": \\\"getPropertyValue_bboxTransform.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".bboxTransform\\\",\\n                            \\\"target\\\": \\\"getPropertyValue_bboxTransform.override\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"initTimestepCFL.value\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.ittr_input\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheSolidObject.outObject\\\",\\n                            \\\"target\\\": \\\"solveFoam.solidsObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"solveFoam.outFoamObject\\\",\\n                            \\\"target\\\": \\\"cacheFoamObject.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"subStepLiquid.guideObjectOut\\\",\\n                            \\\"target\\\": \\\"cacheGuideObject.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"subStepLiquid.solidsObjectOut\\\",\\n                            \\\"target\\\": \\\"cacheSolidObject.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getPropertyValue_bboxTransform.value\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.bboxTransform\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getPropertyValue_bboxTransform.outObject\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.liquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheFoamObject.outObject\\\",\\n                            \\\"target\\\": \\\"if.trueCase\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheGuideObject.outObject\\\",\\n                            \\\"target\\\": \\\"ifGuidingEnabled.trueCase\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".targetGuideObject\\\",\\n                            \\\"target\\\": \\\"getPropertyValue_enableGuiding.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"valueBool.value\\\",\\n                            \\\"target\\\": \\\"getPropertyValue_enableGuiding.override\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"getPropertyValue_enableGuiding.value\\\",\\n                            \\\"target\\\": \\\"ifGuidingEnabled.condition\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"setPullSolidOnly.outObject\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.solidsObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".fieldPropsList\\\",\\n                            \\\"target\\\": \\\"subStepLiquid.fieldPropsList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamFieldProps\\\",\\n                            \\\"target\\\": \\\"solveFoam.fieldPropsList\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"voxelizeFoamMasks.foamMaskObjectOut\\\",\\n                            \\\"target\\\": \\\"solveFoam.foamMaskObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamMasks\\\",\\n                            \\\"target\\\": \\\"voxelizeFoamMasks.meshes\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".foamMaskObject\\\",\\n                            \\\"target\\\": \\\"voxelizeFoamMasks.foamMaskObject\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidCacheObject\\\",\\n                            \\\"target\\\": \\\"cacheLiquidObject.objectCacheProperties\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"subStepLiquid.liquidObjectOut\\\",\\n                            \\\"target\\\": \\\"cacheLiquidObject.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheLiquidObject.outObject\\\",\\n                            \\\"target\\\": \\\"voxelizeFoamMasks.liquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheLiquidObject.outObject\\\",\\n                            \\\"target\\\": \\\"solveFoam.liquid\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"cacheLiquidObject.outObject\\\",\\n                            \\\"target\\\": \\\"saveLiquidMeshCacheToObject.object\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\"saveLiquidMeshCacheToObject.outObject\\\",\\n                            \\\"target\\\": \\\".liquidObjectOut\\\"\\n                        },\\n                        {\\n                            \\\"source\\\": \\\".liquidmeshCacheObject\\\",\\n                            \\\"target\\\": \\\"saveLiquidMeshCacheToObject.meshCacheObject\\\"\\n                        }\\n                    ],\\n                    \\\"values\\\": [\\n                        {\\n                            \\\"valueName\\\": \\\"getPropertyValue_bboxTransform.name\\\",\\n                            \\\"valueType\\\": \\\"string\\\",\\n                            \\\"value\\\": \\\"bboxTransform\\\"\\n                        },\\n                        {\\n                            \\\"valueName\\\": \\\"getPropertyValue_enableGuiding.name\\\",\\n                            \\\"valueType\\\": \\\"string\\\",\\n                            \\\"value\\\": \\\"enableGuiding\\\"\\n                        },\\n                        {\\n                            \\\"valueName\\\": \\\"valueBool.val\\\",\\n                            \\\"value\\\": \\\"false\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"simulationSteps\\\",\\n                    \\\"nodeType\\\": \\\"simulationSteps\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-65 -10\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"postSimulationStep\\\",\\n                    \\\"nodeType\\\": \\\"postSimulationStep\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"150 -30\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"preSimulationStep\\\",\\n                    \\\"nodeType\\\": \\\"preSimulationStep\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-280 -30\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".cameraMatrixList\\\",\\n                    \\\"target\\\": \\\"simulationSteps.cameraMatrix\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".killplanes\\\",\\n                    \\\"target\\\": \\\"simulationSteps.killPlanes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"postSimulationStep.foamObjectOut\\\",\\n                    \\\"target\\\": \\\".Foam\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"postSimulationStep.guideObjectOut\\\",\\n                    \\\"target\\\": \\\".Guide\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"postSimulationStep.liquidObjectOut\\\",\\n                    \\\"target\\\": \\\".Liquid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"postSimulationStep.solidsObjectOut\\\",\\n                    \\\"target\\\": \\\".Solid\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidVoxelScale\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.solidVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".forceVoxelScale\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.forceVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamMaskVoxelScale\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.foamMaskVoxelScale\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.liquidDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.foamDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableFoam\\\",\\n                    \\\"target\\\": \\\"simulationSteps.foamEnabled\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamCacheProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.foamCacheDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".solidCacheProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.solidCacheDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidCacheProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.liquidCacheDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".guideCacheProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.guideCacheDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"simulationSteps.liquidObjectOut\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.liquidObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"simulationSteps.solidsObjectOut\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.solidsObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"simulationSteps.foamObjectOut\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.foamObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"simulationSteps.guideObjectOut\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.guideObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.liquidObjectOut\\\",\\n                    \\\"target\\\": \\\"simulationSteps.liquidObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.foamObjectOut\\\",\\n                    \\\"target\\\": \\\"simulationSteps.foamObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.forcesObjectOut\\\",\\n                    \\\"target\\\": \\\"simulationSteps.forcesObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.foamMaskObjectOut\\\",\\n                    \\\"target\\\": \\\"simulationSteps.foamMaskObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.guideObjectOut\\\",\\n                    \\\"target\\\": \\\"simulationSteps.targetGuideObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.accelerators2\\\",\\n                    \\\"target\\\": \\\"simulationSteps.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.colliders2\\\",\\n                    \\\"target\\\": \\\"simulationSteps.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.emitters2\\\",\\n                    \\\"target\\\": \\\"simulationSteps.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.guides2\\\",\\n                    \\\"target\\\": \\\"simulationSteps.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.emissionRegions2\\\",\\n                    \\\"target\\\": \\\"simulationSteps.emissionRegions\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.foamMasks2\\\",\\n                    \\\"target\\\": \\\"simulationSteps.foamMasks\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.solidsObjectOut\\\",\\n                    \\\"target\\\": \\\"simulationSteps.solidsObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.liquidCacheObject\\\",\\n                    \\\"target\\\": \\\"simulationSteps.liquidCacheObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.solidCacheObject\\\",\\n                    \\\"target\\\": \\\"simulationSteps.solidCacheObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.foamCacheObject\\\",\\n                    \\\"target\\\": \\\"simulationSteps.foamCacheObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.guideCacheObject\\\",\\n                    \\\"target\\\": \\\"simulationSteps.guideCacheObject\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.accelerators2\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.colliders2\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.emitters2\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.guides2\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.emissionRegions2\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.emissionRegions\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.foamMasks2\\\",\\n                    \\\"target\\\": \\\"postSimulationStep.foamMasks\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Emitters\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.emitters\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Colliders\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.colliders\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Accelerators\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.accelerators\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".Guides\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.guides\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".EmissionRegions\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.emissionRegions\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".FoamMasks\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.foamMasks\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".guideProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.guideDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.fieldPropsList\\\",\\n                    \\\"target\\\": \\\"simulationSteps.fieldPropsList\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".fields\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.fields\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.foamFieldProps\\\",\\n                    \\\"target\\\": \\\"simulationSteps.foamFieldProps\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".foamFields\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.foamFields\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".liquidmeshCacheProperties\\\",\\n                    \\\"target\\\": \\\"preSimulationStep.liquidmeshCacheDescriptorIn\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"preSimulationStep.liquidmeshCacheObject\\\",\\n                    \\\"target\\\": \\\"simulationSteps.liquidmeshCacheObject\\\"\\n                }\\n            ],\\n            \\\"values\\\": []\\n        }\\n    ]\\n}\"}");
 	setAttr ".srv" -type "string" "2.0";
-	setAttr -k on ".pfc";
+	setAttr -k on ".pfc" yes;
 	setAttr -k on -cb off ".sfr" 255;
 	setAttr -k on ".evaluationType";
 	setAttr -s 3 ".Colliders";
@@ -163,9 +162,10 @@ createNode bifrostContainer -n "baby_teardropContainer" -p "baby_teardrop";
 	setAttr -k on ".Colliders[1]";
 	setAttr -k on ".Colliders[2]";
 	setAttr -k on ".Colliders";
-	setAttr -s 2 ".Emitters";
+	setAttr -s 3 ".Emitters";
 	setAttr -k on ".Emitters[0]";
 	setAttr -k on ".Emitters[1]";
+	setAttr -k on ".Emitters[2]" -type "string" "{\"QueryVersion\":\"1.0\",\"ActiveGraph\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1__meshProperties5\",\"EvaluationID\":257,\"ResourceID\":\"bifrost_sim\",\"filters\":[{\"operator\":\"&\",\"clauses\":[\"name =emitterProps3\",\"type=objectMeshProperties\"]}]}";
 	setAttr -k on ".Emitters";
 	setAttr -k on ".foamCacheProperties" -type "string" "{}";
 	setAttr -k on ".foamMaskVoxelScale" 2;
@@ -173,6 +173,8 @@ createNode bifrostContainer -n "baby_teardropContainer" -p "baby_teardrop";
 	setAttr -k on ".forceVoxelScale" 1;
 	setAttr -k on ".guideCacheProperties";
 	setAttr -k on ".guideProperties";
+	setAttr -k on ".killplanes[0]";
+	setAttr -k on ".killplanes";
 	setAttr -k on ".liquidCacheProperties";
 	setAttr -k on ".liquidProperties";
 	setAttr -k on ".liquidmeshCacheProperties";
@@ -334,7 +336,6 @@ createNode bifrostContainer -n "bifrostLiquidPropertiesContainer1" -p "bifrostLi
 	setAttr -k on ".deleteExceedingParticles" yes;
 	setAttr -k on ".dropletMergeBackDepth" 2;
 	setAttr -k on ".dropletThreshold" 0.97000002861022949;
-	setAttr -k on ".enableLiquidMeshCache" yes;
 	setAttr -k on ".enableSpatialAdapt" yes;
 	setAttr -k on ".erosionFactor" 0.69999998807907104;
 	setAttr -k on ".erosionFactorNearSolids" 1;
@@ -343,11 +344,10 @@ createNode bifrostContainer -n "bifrostLiquidPropertiesContainer1" -p "bifrostLi
 	setAttr -k on ".interiorParticleDensity" 1;
 	setAttr ".liquidCacheControl" 1;
 	setAttr ".liquidCacheFileName" -type "string" "baby_teardropContainer";
-	setAttr ".liquidCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//cache/bifrost/momscene_tear/";
-	setAttr -k on ".liquidmeshCacheCompressionQuality";
-	setAttr -k on ".liquidmeshCacheControl" 1;
-	setAttr -k on ".liquidmeshCacheFileName" -type "string" "baby_teardropContainer";
-	setAttr -k on ".liquidmeshCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//cache/bifrost/momscene_tear/";
+	setAttr ".liquidCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//scenes/layout/fx/";
+	setAttr ".liquidmeshCacheControl" 1;
+	setAttr ".liquidmeshCacheFileName" -type "string" "baby_teardropContainer";
+	setAttr ".liquidmeshCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//scenes/layout/fx/";
 	setAttr -k on ".masterVoxelSize" 0.0099999997764825821;
 	setAttr -k on ".maxSteps" 1000;
 	setAttr -k on ".maxTimeSteps" 2;
@@ -355,7 +355,7 @@ createNode bifrostContainer -n "bifrostLiquidPropertiesContainer1" -p "bifrostLi
 	setAttr -k on ".minTimeSteps" 1;
 	setAttr ".solidCacheControl" 1;
 	setAttr ".solidCacheFileName" -type "string" "baby_teardropContainer";
-	setAttr ".solidCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//cache/bifrost/momscene_tear/";
+	setAttr ".solidCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//scenes/layout/fx/";
 	setAttr -k on ".surfaceBandWidth" 1;
 	setAttr -k on ".surfaceParticleDensity" 2;
 	setAttr ".surfaceTension" 0.071999996900558472;
@@ -408,7 +408,7 @@ createNode bifrostContainer -n "bifrostGuidePropertiesContainer1" -p "bifrostGui
 	setAttr -k on ".evaluationType" 1;
 	setAttr ".computeGuideFromHighResLiquid" yes;
 	setAttr ".guideCacheFileName" -type "string" "baby_teardropContainer";
-	setAttr ".guideCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//cache/bifrost/momscene_tear/";
+	setAttr ".guideCachePath" -type "string" "/Users/emileechen/Documents/project/Only-Love//scenes/layout/fx/";
 	setAttr ".guideVoxelScale" 2;
 	setAttr ".minReseedAirDistance" 1;
 	setAttr ".minSimulationDepth" 3;
@@ -425,12 +425,15 @@ createNode mesh -n "bifrostLiquid1MeshShape" -p "bifrostLiquid1Mesh";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "bifrostVelocity";
+	setAttr ".clst[1].clsn" -type "string" "bifrostVorticity";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".mvcs" -type "string" "bifrostVelocity";
-createNode transform -n "bifrostEmitterProps1" -p "teardop_droptop";
+createNode transform -n "bifrostEmitter_tear" -p "teardop_droptop";
 	rename -uid "C7C74B07-A746-2370-543B-B08EF9A12081";
-createNode bifrostContainer -n "emitterProps1" -p "bifrostEmitterProps1";
+createNode bifrostContainer -n "emitterProps1" -p "bifrostEmitter_tear";
 	rename -uid "C8485D2B-B44F-BB9B-4763-9580023881B9";
 	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
 	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
@@ -490,10 +493,10 @@ createNode bifrostContainer -n "emitterProps1" -p "bifrostEmitterProps1";
 	setAttr -k on ".bifrostStictionStrength";
 	setAttr -k on ".bifrostStictionBandwidth";
 	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
-createNode transform -n "bifrostEmitterProps2" -p "teardop_droptop";
-	rename -uid "DD3BDA89-B844-76C9-5298-0B9496796925";
-createNode bifrostContainer -n "emitterProps2" -p "bifrostEmitterProps2";
-	rename -uid "1D71C14F-8944-E4B0-726D-868CCD825D55";
+createNode transform -n "bifrostEmitter_fluid" -p "teardop_droptop";
+	rename -uid "CB35C226-2644-ED13-9737-D2849DC2C89B";
+createNode bifrostContainer -n "emitterProps2" -p "bifrostEmitter_fluid";
+	rename -uid "6B2E7E84-F340-1903-7A7B-CCA7DEE12444";
 	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
 	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
 	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
@@ -528,10 +531,10 @@ createNode bifrostContainer -n "emitterProps2" -p "bifrostEmitterProps2";
 	addAttr -ci true -sn "bifrostUVProjCon" -ln "bifrostUVProjCon" -dt "string";
 	setAttr -k off ".v";
 	setAttr ".sc" -type "string" (
-		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties3\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties3\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
+		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties9\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties9\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
 	setAttr ".srv" -type "string" "2.0";
 	setAttr -k on ".pfc";
-	setAttr -k on -cb off ".sfr" 255;
+	setAttr -k on -cb off ".sfr";
 	setAttr -k on ".evaluationType" 2;
 	setAttr -k on ".Meshes[0]";
 	setAttr -k on ".Meshes";
@@ -552,18 +555,173 @@ createNode bifrostContainer -n "emitterProps2" -p "bifrostEmitterProps2";
 	setAttr -k on ".bifrostStictionStrength";
 	setAttr -k on ".bifrostStictionBandwidth";
 	setAttr -k on ".bifrostUVProjCon" -type "string" "bifrostUV";
+createNode transform -n "bifrostCollider_eye" -p "teardop_droptop";
+	rename -uid "779B9075-C54D-E9A0-C216-11B80A056014";
+createNode bifrostContainer -n "colliderProps1" -p "bifrostCollider_eye";
+	rename -uid "B2788617-D04C-24B5-522D-7987508DBBAA";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
+	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
+	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
+		0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "invert" -ln "invert" -min 0 -max 1 -at "bool";
+	addAttr -w false -s false -ci true -sn "outMeshes" -ln "outMeshes" -dt "string";
+	addAttr -r false -ci true -k true -sn "proxyObjectName" -ln "proxyObjectName" -dt "string";
+	addAttr -r false -dcb 1 -ci true -k true -sn "transform" -ln "transform" -at "matrix";
+	addAttr -r false -ci true -k true -sn "voxelScale" -ln "voxelScale" -at "float";
+	addAttr -ci true -sn "boundaryMeshShapeUI" -ln "boundaryMeshShapeUI" -min 0 -max 
+		1 -en "Box:Sphere" -at "enum";
+	addAttr -ci true -sn "enableMeshBoundaryUI" -ln "enableMeshBoundaryUI" -min 0 -max 
+		1 -at "bool";
+	addAttr -ci true -sn "boundaryMeshInvertUI" -ln "boundaryMeshInvertUI" -min 0 -max 
+		1 -at "bool";
+	addAttr -ci true -sn "bifrostEnable" -ln "bifrostEnable" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostThicknessUnits" -ln "bifrostThicknessUnits" -min 0 
+		-max 1 -en "Voxels:World Space" -at "enum";
+	addAttr -ci true -sn "bifrostThickness" -ln "bifrostThickness" -dv 1 -at "double";
+	addAttr -ci true -sn "bifrostMode" -ln "bifrostMode" -min 0 -max 2 -en "Solid:Shell:Solid (Robust)" 
+		-at "enum";
+	addAttr -ci true -sn "bifrostCoarsenInterior" -ln "bifrostCoarsenInterior" -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostOffsetSurfaceDistance" -ln "bifrostOffsetSurfaceDistance" 
+		-at "double";
+	addAttr -ci true -sn "bifrostRefineNearbyFluids" -ln "bifrostRefineNearbyFluids" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	setAttr -k off ".v";
+	setAttr ".sc" -type "string" (
+		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties6\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties6\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
+	setAttr ".srv" -type "string" "2.0";
+	setAttr -k on ".pfc";
+	setAttr -k on -cb off ".sfr";
+	setAttr -k on ".evaluationType" 2;
+	setAttr -k on ".Meshes[0]";
+	setAttr -k on ".Meshes";
+	setAttr -k on ".boundaryShape";
+	setAttr -k on ".enableBoundary";
+	setAttr -k on ".invert";
+	setAttr -k on ".proxyObjectName" -type "string" "colliderProps1";
+	setAttr -k on ".transform";
+	setAttr -k on ".voxelScale" 0.0099999997764825821;
+	setAttr -k on ".enableMeshBoundaryUI";
+	setAttr -k on ".bifrostEnable";
+	setAttr -k on ".bifrostThicknessUnits";
+	setAttr -k on ".bifrostThickness" 2;
+	setAttr -k on ".bifrostMode";
+	setAttr -k on ".bifrostRefineNearbyFluids";
+createNode transform -n "bifrostCollider_body" -p "teardop_droptop";
+	rename -uid "F43426DF-E845-DA2B-99D2-DEB95ABC76D3";
+createNode bifrostContainer -n "colliderProps2" -p "bifrostCollider_body";
+	rename -uid "A5707290-EF42-6E88-0E3C-84A73344892B";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
+	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
+	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
+		0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "invert" -ln "invert" -min 0 -max 1 -at "bool";
+	addAttr -w false -s false -ci true -sn "outMeshes" -ln "outMeshes" -dt "string";
+	addAttr -r false -ci true -k true -sn "proxyObjectName" -ln "proxyObjectName" -dt "string";
+	addAttr -r false -dcb 1 -ci true -k true -sn "transform" -ln "transform" -at "matrix";
+	addAttr -r false -ci true -k true -sn "voxelScale" -ln "voxelScale" -at "float";
+	addAttr -ci true -sn "boundaryMeshShapeUI" -ln "boundaryMeshShapeUI" -min 0 -max 
+		1 -en "Box:Sphere" -at "enum";
+	addAttr -ci true -sn "enableMeshBoundaryUI" -ln "enableMeshBoundaryUI" -min 0 -max 
+		1 -at "bool";
+	addAttr -ci true -sn "boundaryMeshInvertUI" -ln "boundaryMeshInvertUI" -min 0 -max 
+		1 -at "bool";
+	addAttr -ci true -sn "bifrostEnable" -ln "bifrostEnable" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostThicknessUnits" -ln "bifrostThicknessUnits" -min 0 
+		-max 1 -en "Voxels:World Space" -at "enum";
+	addAttr -ci true -sn "bifrostThickness" -ln "bifrostThickness" -dv 1 -at "double";
+	addAttr -ci true -sn "bifrostMode" -ln "bifrostMode" -min 0 -max 2 -en "Solid:Shell:Solid (Robust)" 
+		-at "enum";
+	addAttr -ci true -sn "bifrostCoarsenInterior" -ln "bifrostCoarsenInterior" -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostOffsetSurfaceDistance" -ln "bifrostOffsetSurfaceDistance" 
+		-at "double";
+	addAttr -ci true -sn "bifrostRefineNearbyFluids" -ln "bifrostRefineNearbyFluids" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	setAttr -k off ".v";
+	setAttr ".sc" -type "string" (
+		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties7\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties7\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
+	setAttr ".srv" -type "string" "2.0";
+	setAttr -k on ".pfc";
+	setAttr -k on -cb off ".sfr";
+	setAttr -k on ".evaluationType" 2;
+	setAttr -k on ".Meshes[0]";
+	setAttr -k on ".Meshes";
+	setAttr -k on ".boundaryShape";
+	setAttr -k on ".enableBoundary";
+	setAttr -k on ".invert";
+	setAttr -k on ".proxyObjectName" -type "string" "colliderProps2";
+	setAttr -k on ".transform";
+	setAttr -k on ".voxelScale" 0.0099999997764825821;
+	setAttr -k on ".enableMeshBoundaryUI";
+	setAttr -k on ".bifrostEnable";
+	setAttr -k on ".bifrostThicknessUnits";
+	setAttr -k on ".bifrostThickness" 2;
+	setAttr -k on ".bifrostMode";
+	setAttr -k on ".bifrostRefineNearbyFluids";
+createNode transform -n "bifrostCollider_shotglass" -p "teardop_droptop";
+	rename -uid "B887F29D-3244-D905-964C-399D37A6AC77";
+createNode bifrostContainer -n "colliderProps3" -p "bifrostCollider_shotglass";
+	rename -uid "58DE7440-5D48-0B27-8F4D-1C8F458C80AC";
+	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
+	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
+	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
+		0 -max 1 -at "bool";
+	addAttr -r false -ci true -k true -sn "invert" -ln "invert" -min 0 -max 1 -at "bool";
+	addAttr -w false -s false -ci true -sn "outMeshes" -ln "outMeshes" -dt "string";
+	addAttr -r false -ci true -k true -sn "proxyObjectName" -ln "proxyObjectName" -dt "string";
+	addAttr -r false -dcb 1 -ci true -k true -sn "transform" -ln "transform" -at "matrix";
+	addAttr -r false -ci true -k true -sn "voxelScale" -ln "voxelScale" -at "float";
+	addAttr -ci true -sn "boundaryMeshShapeUI" -ln "boundaryMeshShapeUI" -min 0 -max 
+		1 -en "Box:Sphere" -at "enum";
+	addAttr -ci true -sn "enableMeshBoundaryUI" -ln "enableMeshBoundaryUI" -min 0 -max 
+		1 -at "bool";
+	addAttr -ci true -sn "boundaryMeshInvertUI" -ln "boundaryMeshInvertUI" -min 0 -max 
+		1 -at "bool";
+	addAttr -ci true -sn "bifrostEnable" -ln "bifrostEnable" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostThicknessUnits" -ln "bifrostThicknessUnits" -min 0 
+		-max 1 -en "Voxels:World Space" -at "enum";
+	addAttr -ci true -sn "bifrostThickness" -ln "bifrostThickness" -dv 1 -at "double";
+	addAttr -ci true -sn "bifrostMode" -ln "bifrostMode" -min 0 -max 2 -en "Solid:Shell:Solid (Robust)" 
+		-at "enum";
+	addAttr -ci true -sn "bifrostCoarsenInterior" -ln "bifrostCoarsenInterior" -min 
+		0 -max 1 -at "bool";
+	addAttr -ci true -sn "bifrostOffsetSurfaceDistance" -ln "bifrostOffsetSurfaceDistance" 
+		-at "double";
+	addAttr -ci true -sn "bifrostRefineNearbyFluids" -ln "bifrostRefineNearbyFluids" 
+		-dv 1 -min 0 -max 1 -at "bool";
+	setAttr -k off ".v";
+	setAttr ".sc" -type "string" (
+		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties8\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties8\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
+	setAttr ".srv" -type "string" "2.0";
+	setAttr -k on ".pfc";
+	setAttr -k on -cb off ".sfr";
+	setAttr -k on ".evaluationType" 2;
+	setAttr -k on ".Meshes[0]";
+	setAttr -k on ".Meshes";
+	setAttr -k on ".boundaryShape";
+	setAttr -k on ".enableBoundary";
+	setAttr -k on ".invert";
+	setAttr -k on ".proxyObjectName" -type "string" "colliderProps3";
+	setAttr -k on ".transform";
+	setAttr -k on ".voxelScale" 0.0099999997764825821;
+	setAttr -k on ".enableMeshBoundaryUI";
+	setAttr -k on ".bifrostEnable";
+	setAttr -k on ".bifrostThicknessUnits";
+	setAttr -k on ".bifrostThickness" 2;
+	setAttr -k on ".bifrostMode";
+	setAttr -k on ".bifrostRefineNearbyFluids";
 createNode transform -n "tear_zero_grp" -p "teardop_droptop";
 	rename -uid "CBF547EA-3B42-F557-7649-498E6B97BA0C";
 createNode transform -n "tear_loc" -p "tear_zero_grp";
 	rename -uid "C4B6D35A-FE4A-BAD8-27D4-6A86B79CE81F";
-	setAttr ".t" -type "double3" 0.49652255737498274 -5.0022399291608952 10.610006555912957 ;
+	setAttr ".t" -type "double3" 0.46476494546674396 -4.9545142154349371 10.650732091383832 ;
 	setAttr ".s" -type "double3" 0.50000000000000011 0.49999999999999989 0.50000000000000011 ;
 createNode locator -n "tear_locShape" -p "tear_loc";
 	rename -uid "495703BF-BB48-BF32-EA61-59A038D20FCD";
 	setAttr -k off ".v";
 createNode transform -n "tear_mesh" -p "tear_loc";
 	rename -uid "EA70BB6C-B04B-B51A-334B-E281BD828E27";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 4.4408920985006262e-16 9.9920072216264089e-16 -8.8817841970012523e-16 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1 1 ;
 createNode mesh -n "tear_meshShape" -p "tear_mesh";
@@ -603,171 +761,22 @@ createNode parentConstraint -n "tear_zero_grp_parentConstraint1" -p "tear_zero_g
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -37.218520067488363 14.39749010371283 -1.3534506807311868 ;
 	setAttr ".tg[0].tor" -type "double3" -55.070510727795202 82.846573118056384 -49.506670453120968 ;
-	setAttr ".lr" -type "double3" 5.0159909898409456 109.55941782119139 50.250919217027082 ;
+	setAttr ".lr" -type "double3" -20.252061415210772 114.46926184425413 34.301314946309276 ;
 	setAttr ".rst" -type "double3" 0 8.8817841970012523e-16 0 ;
 	setAttr ".rsrr" -type "double3" 1.6225798492153721e-14 1.9533699601293025e-14 7.9513867036587951e-15 ;
 	setAttr -k on ".w0";
-createNode transform -n "bifrostColliderProps1" -p "teardop_droptop";
-	rename -uid "37BD7EAB-2C47-7091-7493-72B58F21AB6F";
-createNode bifrostContainer -n "colliderProps1" -p "bifrostColliderProps1";
-	rename -uid "AA59FC83-F74F-8A2E-4D27-2A9355051BAE";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
-	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
-	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
-		0 -max 1 -at "bool";
-	addAttr -r false -ci true -k true -sn "invert" -ln "invert" -min 0 -max 1 -at "bool";
-	addAttr -w false -s false -ci true -sn "outMeshes" -ln "outMeshes" -dt "string";
-	addAttr -r false -ci true -k true -sn "proxyObjectName" -ln "proxyObjectName" -dt "string";
-	addAttr -r false -dcb 1 -ci true -k true -sn "transform" -ln "transform" -at "matrix";
-	addAttr -r false -ci true -k true -sn "voxelScale" -ln "voxelScale" -at "float";
-	addAttr -ci true -sn "boundaryMeshShapeUI" -ln "boundaryMeshShapeUI" -min 0 -max 
-		1 -en "Box:Sphere" -at "enum";
-	addAttr -ci true -sn "enableMeshBoundaryUI" -ln "enableMeshBoundaryUI" -min 0 -max 
-		1 -at "bool";
-	addAttr -ci true -sn "boundaryMeshInvertUI" -ln "boundaryMeshInvertUI" -min 0 -max 
-		1 -at "bool";
-	addAttr -ci true -sn "bifrostEnable" -ln "bifrostEnable" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostThicknessUnits" -ln "bifrostThicknessUnits" -min 0 
-		-max 1 -en "Voxels:World Space" -at "enum";
-	addAttr -ci true -sn "bifrostThickness" -ln "bifrostThickness" -dv 1 -at "double";
-	addAttr -ci true -sn "bifrostMode" -ln "bifrostMode" -min 0 -max 2 -en "Solid:Shell:Solid (Robust)" 
-		-at "enum";
-	addAttr -ci true -sn "bifrostCoarsenInterior" -ln "bifrostCoarsenInterior" -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostOffsetSurfaceDistance" -ln "bifrostOffsetSurfaceDistance" 
-		-at "double";
-	addAttr -ci true -sn "bifrostRefineNearbyFluids" -ln "bifrostRefineNearbyFluids" 
-		-dv 1 -min 0 -max 1 -at "bool";
+createNode transform -n "bifrostKillplane1" -p "teardop_droptop";
+	rename -uid "A528AB5E-6547-6BD6-534D-8D8DB46D174A";
+	setAttr ".t" -type "double3" 3.1081616068663145 -22.36550933229617 0 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 10 10 1 ;
+createNode sketchPlane -n "bifrostKillplaneShape1" -p "bifrostKillplane1";
+	rename -uid "FFED48D6-224B-39C3-B8E6-6C9316D98FCA";
 	setAttr -k off ".v";
-	setAttr ".sc" -type "string" (
-		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties1\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties1\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
-	setAttr ".srv" -type "string" "2.0";
-	setAttr -k on ".pfc";
-	setAttr -k on -cb off ".sfr";
-	setAttr -k on ".evaluationType" 2;
-	setAttr -k on ".Meshes[0]";
-	setAttr -k on ".Meshes";
-	setAttr -k on ".boundaryShape";
-	setAttr -k on ".enableBoundary";
-	setAttr -k on ".invert";
-	setAttr -k on ".proxyObjectName" -type "string" "colliderProps1";
-	setAttr -k on ".transform";
-	setAttr -k on ".voxelScale" 1;
-	setAttr -k on ".enableMeshBoundaryUI";
-	setAttr -k on ".bifrostEnable";
-	setAttr -k on ".bifrostThicknessUnits";
-	setAttr -k on ".bifrostThickness";
-	setAttr -k on ".bifrostMode";
-	setAttr -k on ".bifrostRefineNearbyFluids";
-createNode transform -n "bifrostColliderProps2" -p "teardop_droptop";
-	rename -uid "5656DE92-AC45-D3F6-8BB6-ACB12AC90A4B";
-createNode bifrostContainer -n "colliderProps2" -p "bifrostColliderProps2";
-	rename -uid "34B74C00-CF46-234A-7490-889C003174C3";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
-	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
-	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
-		0 -max 1 -at "bool";
-	addAttr -r false -ci true -k true -sn "invert" -ln "invert" -min 0 -max 1 -at "bool";
-	addAttr -w false -s false -ci true -sn "outMeshes" -ln "outMeshes" -dt "string";
-	addAttr -r false -ci true -k true -sn "proxyObjectName" -ln "proxyObjectName" -dt "string";
-	addAttr -r false -dcb 1 -ci true -k true -sn "transform" -ln "transform" -at "matrix";
-	addAttr -r false -ci true -k true -sn "voxelScale" -ln "voxelScale" -at "float";
-	addAttr -ci true -sn "boundaryMeshShapeUI" -ln "boundaryMeshShapeUI" -min 0 -max 
-		1 -en "Box:Sphere" -at "enum";
-	addAttr -ci true -sn "enableMeshBoundaryUI" -ln "enableMeshBoundaryUI" -min 0 -max 
-		1 -at "bool";
-	addAttr -ci true -sn "boundaryMeshInvertUI" -ln "boundaryMeshInvertUI" -min 0 -max 
-		1 -at "bool";
-	addAttr -ci true -sn "bifrostEnable" -ln "bifrostEnable" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostThicknessUnits" -ln "bifrostThicknessUnits" -min 0 
-		-max 1 -en "Voxels:World Space" -at "enum";
-	addAttr -ci true -sn "bifrostThickness" -ln "bifrostThickness" -dv 1 -at "double";
-	addAttr -ci true -sn "bifrostMode" -ln "bifrostMode" -min 0 -max 2 -en "Solid:Shell:Solid (Robust)" 
-		-at "enum";
-	addAttr -ci true -sn "bifrostCoarsenInterior" -ln "bifrostCoarsenInterior" -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostOffsetSurfaceDistance" -ln "bifrostOffsetSurfaceDistance" 
-		-at "double";
-	addAttr -ci true -sn "bifrostRefineNearbyFluids" -ln "bifrostRefineNearbyFluids" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	setAttr -k off ".v";
-	setAttr ".sc" -type "string" (
-		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties2\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties2\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
-	setAttr ".srv" -type "string" "2.0";
-	setAttr -k on ".pfc";
-	setAttr -k on -cb off ".sfr";
-	setAttr -k on ".evaluationType" 2;
-	setAttr -k on ".Meshes[0]";
-	setAttr -k on ".Meshes";
-	setAttr -k on ".boundaryShape";
-	setAttr -k on ".enableBoundary";
-	setAttr -k on ".invert";
-	setAttr -k on ".proxyObjectName" -type "string" "colliderProps2";
-	setAttr -k on ".transform";
-	setAttr -k on ".voxelScale" 1;
-	setAttr -k on ".enableMeshBoundaryUI";
-	setAttr -k on ".bifrostEnable";
-	setAttr -k on ".bifrostThicknessUnits";
-	setAttr -k on ".bifrostThickness";
-	setAttr -k on ".bifrostMode";
-	setAttr -k on ".bifrostRefineNearbyFluids";
-createNode transform -n "bifrostColliderProps3" -p "teardop_droptop";
-	rename -uid "A54B0467-4943-F04D-0574-AB8EE231DF76";
-createNode bifrostContainer -n "colliderProps3" -p "bifrostColliderProps3";
-	rename -uid "DCDC5CB4-594A-9D3B-5A4E-2C944B834A51";
-	addAttr -r false -dcb 0 -ci true -k true -m -sn "Meshes" -ln "Meshes" -dt "mesh";
-	addAttr -r false -ci true -k true -sn "boundaryShape" -ln "boundaryShape" -at "long";
-	addAttr -r false -ci true -k true -sn "enableBoundary" -ln "enableBoundary" -min 
-		0 -max 1 -at "bool";
-	addAttr -r false -ci true -k true -sn "invert" -ln "invert" -min 0 -max 1 -at "bool";
-	addAttr -w false -s false -ci true -sn "outMeshes" -ln "outMeshes" -dt "string";
-	addAttr -r false -ci true -k true -sn "proxyObjectName" -ln "proxyObjectName" -dt "string";
-	addAttr -r false -dcb 1 -ci true -k true -sn "transform" -ln "transform" -at "matrix";
-	addAttr -r false -ci true -k true -sn "voxelScale" -ln "voxelScale" -at "float";
-	addAttr -ci true -sn "boundaryMeshShapeUI" -ln "boundaryMeshShapeUI" -min 0 -max 
-		1 -en "Box:Sphere" -at "enum";
-	addAttr -ci true -sn "enableMeshBoundaryUI" -ln "enableMeshBoundaryUI" -min 0 -max 
-		1 -at "bool";
-	addAttr -ci true -sn "boundaryMeshInvertUI" -ln "boundaryMeshInvertUI" -min 0 -max 
-		1 -at "bool";
-	addAttr -ci true -sn "bifrostEnable" -ln "bifrostEnable" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostThicknessUnits" -ln "bifrostThicknessUnits" -min 0 
-		-max 1 -en "Voxels:World Space" -at "enum";
-	addAttr -ci true -sn "bifrostThickness" -ln "bifrostThickness" -dv 1 -at "double";
-	addAttr -ci true -sn "bifrostMode" -ln "bifrostMode" -min 0 -max 2 -en "Solid:Shell:Solid (Robust)" 
-		-at "enum";
-	addAttr -ci true -sn "bifrostCoarsenInterior" -ln "bifrostCoarsenInterior" -min 
-		0 -max 1 -at "bool";
-	addAttr -ci true -sn "bifrostOffsetSurfaceDistance" -ln "bifrostOffsetSurfaceDistance" 
-		-at "double";
-	addAttr -ci true -sn "bifrostRefineNearbyFluids" -ln "bifrostRefineNearbyFluids" 
-		-dv 1 -min 0 -max 1 -at "bool";
-	setAttr -k off ".v";
-	setAttr ".sc" -type "string" (
-		"{\"version\":5,\"runtimeVersion\":\"2.0\",\"graphName\":\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties4\",\"graphLib\":\"1.0\",\"graphCode\":\"{\\n    \\\"header\\\": {\\n        \\\"metadata\\\": [\\n            {\\n                \\\"metaName\\\": \\\"adskGraphlibVersion\\\",\\n                \\\"metaType\\\": \\\"string\\\",\\n                \\\"metaValue\\\": \\\"1.0\\\"\\n            },\\n            {\\n                \\\"metaName\\\": \\\"adskFileFormatVersion\\\",\\n                \\\"metaValue\\\": \\\"100L\\\"\\n            }\\n        ]\\n    },\\n    \\\"dependencies\\\": [\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///basenodes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///createMeshes.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///fetchObject.json\\\"\\n        },\\n        {\\n            \\\"uri\\\": \\\"file:///addBoundaryProperties.json\\\"\\n        }\\n    ],\\n    \\\"types\\\": [],\\n    \\\"compounds\\\": [\\n        {\\n            \\\"name\\\": \\\"_bifrostMeshProperties1_bifrostMeshPropertiesContainer1::meshProperties4\\\",\\n            \\\"uriImported\\\": \\\"file:///meshProperties.json\\\",\\n            \\\"metadata\\\": [\\n                {\\n                    \\\"metaName\\\": \\\"publishedBy\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"yanick\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishDate\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"20160715_154113\\\"\\n                },\\n                {\\n                    \\\"metaName\\\": \\\"publishVersion\\\",\\n                    \\\"metaType\\\": \\\"string\\\",\\n                    \\\"metaValue\\\": \\\"003\\\"\\n                }\\n            ],\\n            \\\"ports\\\": [\\n                {\\n                    \\\"portName\\\": \\\"Meshes\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::IOMeshArray\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"outMeshes\\\",\\n                    \\\"portDirection\\\": \\\"output\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::ObjectDescriptor\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"proxyObjectName\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"string\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"voxelScale\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"enableBoundary\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"boundaryShape\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"int\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"transform\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"Bifrost::Types::Mat44Float\\\"\\n                },\\n                {\\n                    \\\"portName\\\": \\\"invert\\\",\\n                    \\\"portDirection\\\": \\\"input\\\",\\n                    \\\"portType\\\": \\\"bool\\\"\\n                }\\n            ],\\n            \\\"compoundNodes\\\": [\\n                {\\n                    \\\"nodeName\\\": \\\"createMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Mesh::createMeshArray\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 29\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"fetchObject\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::fetchObject\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-291 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setDescriptorFromMeshes\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setDescriptorFromMeshes\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"354 64\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"setPropertyValue\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::Object::setPropertyValue\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-76 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"getObjectMeshPropertiesType\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::PresetNames::getObjectMeshPropertiesType\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"0\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"-518 100\\\"\\n                        }\\n                    ]\\n                },\\n                {\\n                    \\\"nodeName\\\": \\\"addBoundaryProperties\\\",\\n                    \\\"nodeType\\\": \\\"Bifrost::Nodes::_private::addBoundaryProperties\\\",\\n                    \\\"metadata\\\": [\\n                        {\\n                            \\\"metaName\\\": \\\"LayoutPos\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"139 100\\\"\\n                        },\\n                        {\\n                            \\\"metaName\\\": \\\"DisplayMode\\\",\\n                            \\\"metaType\\\": \\\"string\\\",\\n                            \\\"metaValue\\\": \\\"2\\\"\\n                        }\\n                    ]\\n                }\\n            ],\\n            \\\"connections\\\": [\\n                {\\n                    \\\"source\\\": \\\".Meshes\\\",\\n                    \\\"target\\\": \\\"createMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"createMeshes.value\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.meshArray\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setDescriptorFromMeshes.value\\\",\\n                    \\\"target\\\": \\\".outMeshes\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".voxelScale\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.value\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".proxyObjectName\\\",\\n                    \\\"target\\\": \\\"fetchObject.name\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"fetchObject.object\\\",\\n                    \\\"target\\\": \\\"setPropertyValue.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"getObjectMeshPropertiesType.value\\\",\\n                    \\\"target\\\": \\\"fetchObject.type\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"setPropertyValue.outObject\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\"addBoundaryProperties.outObject\\\",\\n                    \\\"target\\\": \\\"setDescriptorFromMeshes.object\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".enableBoundary\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.enableBoundary\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".boundaryShape\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.boundaryShape\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".transform\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.transform\\\"\\n                },\\n                {\\n                    \\\"source\\\": \\\".invert\\\",\\n                    \\\"target\\\": \\\"addBoundaryProperties.invertFalloff\\\"\\n                }\\n            ],\\n            \\\"values\\\": [\\n                {\\n                    \\\"valueName\\\": \\\"fetchObject.type\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"objectMeshProperties\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"setPropertyValue.name\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"voxelScale\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableMaxDepth\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.fieldMaxDepth\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.boundaryFalloff\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.invertFalloff\\\",\\n                    \\\"value\\\": \\\"false\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.sectionRadius\\\",\\n                    \\\"value\\\": \\\"0f\\\"\\n                },\\n                {\\n                    \\\"valueName\\\": \\\"addBoundaryProperties.enableBoundaryName\\\",\\n                    \\\"valueType\\\": \\\"string\\\",\\n                    \\\"value\\\": \\\"enableBoundaryClipping\\\"\\n                }\\n            ]\\n        }\\n    ]\\n}\"}");
-	setAttr ".srv" -type "string" "2.0";
-	setAttr -k on ".pfc";
-	setAttr -k on -cb off ".sfr";
-	setAttr -k on ".evaluationType" 2;
-	setAttr -k on ".Meshes[0]";
-	setAttr -k on ".Meshes";
-	setAttr -k on ".boundaryShape";
-	setAttr -k on ".enableBoundary";
-	setAttr -k on ".invert";
-	setAttr -k on ".proxyObjectName" -type "string" "colliderProps3";
-	setAttr -k on ".transform";
-	setAttr -k on ".voxelScale" 1;
-	setAttr -k on ".enableMeshBoundaryUI";
-	setAttr -k on ".bifrostEnable";
-	setAttr -k on ".bifrostThicknessUnits";
-	setAttr -k on ".bifrostThickness";
-	setAttr -k on ".bifrostMode";
-	setAttr -k on ".bifrostRefineNearbyFluids";
 createNode transform -n "alc_mesh" -p "teardop_droptop";
 	rename -uid "E8FF1494-644F-0B19-3443-C89F4117BBE8";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.1405710760331624 -21.517565094113063 0 ;
-	setAttr ".s" -type "double3" 0.30927236147654563 0.30927236147654563 0.30927236147654563 ;
+	setAttr ".t" -type "double3" 3.1405710760331624 -18.815386385361471 0 ;
+	setAttr ".s" -type "double3" 0.69139062148521535 0.69139062148521535 0.69139062148521535 ;
 createNode mesh -n "alc_meshShape" -p "alc_mesh";
 	rename -uid "8CF24674-B042-DACC-D263-66B66B20B2B7";
 	setAttr -k off ".v";
@@ -777,11 +786,18 @@ createNode mesh -n "alc_meshShape" -p "alc_mesh";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".ccls" -type "string" "bifrostExpansionRate";
+	setAttr -s 2 ".clst";
+	setAttr ".clst[0].clsn" -type "string" "bifrostDensity";
+	setAttr ".clst[0].rprt" 3;
+	setAttr ".clst[1].clsn" -type "string" "bifrostExpansionRate";
+	setAttr ".clst[1].rprt" 3;
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".bw" 4;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
+	setAttr ".qsp" 0;
 createNode mesh -n "polySurfaceShape1" -p "alc_mesh";
 	rename -uid "48865A95-9742-D09A-7F82-8CA49C419C56";
 	setAttr -k off ".v";
@@ -917,6 +933,25 @@ createNode mesh -n "polySurfaceShape1" -p "alc_mesh";
 	setAttr ".bw" 4;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
+createNode transform -n "momscene_camera:FINAL_MOM_CAMERA";
+	rename -uid "4FB03AB7-4B48-9D4A-2FC6-B99F2932E4FE";
+	setAttr ".t" -type "double3" 4.0623137330945269 89.879961943660192 126.73326231082005 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" -40.594667375246146 1.0541230444573826 0.74374413613483703 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
+createNode camera -n "momscene_camera:FINAL_MOM_CAMERAShape" -p "momscene_camera:FINAL_MOM_CAMERA";
+	rename -uid "784A4FB8-1846-1523-EF93-18A9AF13D796";
+	setAttr -k off ".v";
+	setAttr ".coi" 166.92926819602124;
+	setAttr ".imn" -type "string" "persp1";
+	setAttr ".den" -type "string" "persp1_depth";
+	setAttr ".man" -type "string" "persp1_mask";
+	setAttr ".tp" -type "double3" 3.1405711378483012 -18.762622734488271 4.1210092394106113e-08 ;
+	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "13524FBA-0949-72F6-6F54-55A378545904";
 	setAttr -s 3 ".opt";
@@ -1188,25 +1223,92 @@ createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "E07EB045-A646-FC83-A901-7C8477BDBDAB";
 	setAttr ".ce" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "05420C1A-284D-70EA-2B0C-A9AA4CAC1912";
-	setAttr -s 385 ".lnk";
-	setAttr -s 385 ".slnk";
+	rename -uid "323DF6EA-2B41-F072-E100-1FB454D20483";
+	setAttr -s 397 ".lnk";
+	setAttr -s 397 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "32C65F71-7344-83D1-33B5-40A6B3960738";
+	rename -uid "1FE0FE17-B14B-F0C9-C4B5-06881F920465";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9C7CC45B-C640-8070-0530-B4A550081023";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8B1C6D71-C845-9501-D451-92B82F71A517";
+	rename -uid "E57FEB8D-8E49-B4F2-ECBF-8FAB321ADE96";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "CD9F2A5E-5245-0F37-E8FE-97A9268136AD";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B9287406-944B-31D9-6C92-CABD86082821";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 4 0 1 2 3 ;
+	rename -uid "9255789E-F84A-7520-5F7F-208739AA5510";
+	setAttr -s 25 ".bsdt";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 9 1 2 3 -1 -6
+		 -7 -16 -27 0 ;
+	setAttr ".bsdt[1].bscd" -type "Int32Array" 4 4 5 -2 -4 ;
+	setAttr ".bsdt[1].bsdn" -type "string" "momscene_anim1:baby:baby_diaper";
+	setAttr ".bsdt[2].bscd" -type "Int32Array" 1 -3 ;
+	setAttr ".bsdt[2].bspi" 1;
+	setAttr ".bsdt[2].bsdn" -type "string" "baby_blend1:baby_diaper";
+	setAttr ".bsdt[3].bscd" -type "Int32Array" 0 ;
+	setAttr ".bsdt[3].bspi" 2;
+	setAttr ".bsdt[3].bsdn" -type "string" "baby1:baby_diaper";
+	setAttr ".bsdt[4].bscd" -type "Int32Array" 3 6 7 -5 ;
+	setAttr ".bsdt[4].bspi" 1;
+	setAttr ".bsdt[4].bsdn" -type "string" "baby_blend2:baby_diaper";
+	setAttr ".bsdt[5].bscd" -type "Int32Array" 1 8 ;
+	setAttr ".bsdt[5].bspi" 4;
+	setAttr ".bsdt[5].bsdn" -type "string" "baby1:baby_diaper";
+	setAttr ".bsdt[6].bscd" -type "Int32Array" 4 4 5 6 7 ;
+	setAttr ".bsdt[6].bsdn" -type "string" "pasted_";
+	setAttr ".bsdt[7].bscd" -type "Int32Array" 10 -8 7 8 9 10
+		 11 12 5 6 4 ;
+	setAttr ".bsdt[7].bsdn" -type "string" "momscene_anim1:mom";
+	setAttr ".bsdt[8].bscd" -type "Int32Array" 3 7 8 9 ;
+	setAttr ".bsdt[8].bspi" 7;
+	setAttr ".bsdt[8].bsdn" -type "string" "mom_scene:mom";
+	setAttr ".bsdt[9].bscd" -type "Int32Array" 2 9 10 ;
+	setAttr ".bsdt[15].bscd" -type "Int32Array" 0 ;
+	setAttr ".bsdt[16].bscd" -type "Int32Array" 8 -17 11 12 13 14
+		 -22 15 16 ;
+	setAttr ".bsdt[16].bsdn" -type "string" "momscene_anim1:mom2";
+	setAttr ".bsdt[17].bscd" -type "Int32Array" 4 -18 -19 -20 -21 ;
+	setAttr ".bsdt[17].bspi" 16;
+	setAttr ".bsdt[17].bsdn" -type "string" "mom_shirt";
+	setAttr ".bsdt[18].bscd" -type "Int32Array" 1 11 ;
+	setAttr ".bsdt[18].bspi" 17;
+	setAttr ".bsdt[18].bsdn" -type "string" "mom";
+	setAttr ".bsdt[19].bscd" -type "Int32Array" 1 11 ;
+	setAttr ".bsdt[19].bspi" 17;
+	setAttr ".bsdt[19].bsdn" -type "string" "mom:mom_blendshapes3";
+	setAttr ".bsdt[20].bscd" -type "Int32Array" 1 11 ;
+	setAttr ".bsdt[20].bspi" 17;
+	setAttr ".bsdt[20].bsdn" -type "string" "mom1";
+	setAttr ".bsdt[21].bscd" -type "Int32Array" 1 11 ;
+	setAttr ".bsdt[21].bspi" 17;
+	setAttr ".bsdt[21].bsdn" -type "string" "mom1:mom_blendshapes3";
+	setAttr ".bsdt[22].bscd" -type "Int32Array" 4 -23 -24 -25 -26 ;
+	setAttr ".bsdt[22].bspi" 16;
+	setAttr ".bsdt[22].bsdn" -type "string" "mom_newshirt";
+	setAttr ".bsdt[23].bscd" -type "Int32Array" 1 15 ;
+	setAttr ".bsdt[23].bspi" 22;
+	setAttr ".bsdt[23].bsdn" -type "string" "mom";
+	setAttr ".bsdt[24].bscd" -type "Int32Array" 1 15 ;
+	setAttr ".bsdt[24].bspi" 22;
+	setAttr ".bsdt[24].bsdn" -type "string" "mom:mom_blendshapes3";
+	setAttr ".bsdt[25].bscd" -type "Int32Array" 1 15 ;
+	setAttr ".bsdt[25].bspi" 22;
+	setAttr ".bsdt[25].bsdn" -type "string" "mom1";
+	setAttr ".bsdt[26].bscd" -type "Int32Array" 1 15 ;
+	setAttr ".bsdt[26].bspi" 22;
+	setAttr ".bsdt[26].bsdn" -type "string" "mom1:mom_blendshapes3";
+	setAttr ".bsdt[27].bscd" -type "Int32Array" 2 -28 -29 ;
+	setAttr ".bsdt[27].bsdn" -type "string" "momscene_anim1:mom2:mom_blendshapes_additions";
+	setAttr ".bsdt[28].bscd" -type "Int32Array" 1 11 ;
+	setAttr ".bsdt[28].bspi" 27;
+	setAttr ".bsdt[28].bsdn" -type "string" "mom";
+	setAttr ".bsdt[29].bscd" -type "Int32Array" 1 11 ;
+	setAttr ".bsdt[29].bspi" 27;
+	setAttr ".bsdt[29].bsdn" -type "string" "mom:mom_blendshapes3";
 	setAttr -s 4 ".bspr";
 	setAttr -s 4 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9AD2BD97-4D46-C009-26B2-8DB329D80F2A";
+	rename -uid "6EF11343-AE4D-90A3-FD2F-18B584EC6F80";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "B900C022-2849-B692-6CCF-FCACC3DD35F1";
 	setAttr ".b" -type "string" (
@@ -1220,27 +1322,27 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
-		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 602\n            -height 654\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n"
-		+ "            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
-		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n"
-		+ "            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n"
-		+ "            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
-		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n"
-		+ "                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n"
-		+ "                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n"
-		+ "                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n"
-		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"momscene_camera:FINAL_MOM_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n"
+		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 654\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
+		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n"
+		+ "            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
+		+ "            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
+		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
+		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
+		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n"
+		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n"
+		+ "                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n"
+		+ "                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
@@ -1248,8 +1350,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 602\\n    -height 654\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 602\\n    -height 654\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"momscene_camera:FINAL_MOM_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 656\\n    -height 654\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"momscene_camera:FINAL_MOM_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 656\\n    -height 654\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1273,24 +1375,40 @@ createNode reference -n "momscene_animRN";
 	setAttr ".phl[12]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"momscene_animRN"
-		"momscene_anim:momRN1" 0
 		"momscene_anim:bibleRN" 0
+		"momscene_anim:momRN1" 8
+		2 "|momscene_anim:mom2:nucleus1" "visibility" " 0"
+		2 "|momscene_anim:mom2:nCloth1" "visibility" " 0"
+		2 "|momscene_anim:mom2:nCloth1|momscene_anim:mom2:nClothShape1" "cacheWidth" 
+		" 121"
+		2 "|momscene_anim:mom2:nRigid1" "visibility" " 0"
+		2 "|momscene_anim:mom2:nRigid1|momscene_anim:mom2:nRigidShape1" "cacheWidth" 
+		" 121"
+		2 "|momscene_anim:mom2:dynamicConstraint1" "visibility" " 0"
+		2 "|momscene_anim:mom2:dynamicConstraint2" "visibility" " 0"
+		2 "|momscene_anim:mom2:mom_newshirt:mom:mom2:mom:momBodyshape" "visibility" 
+		" 0"
 		"momscene_animRN" 0
 		"momscene_anim:tableRN" 0
 		"momscene_anim:babyRN" 0
 		"momscene_anim:wineRN" 0
 		"momscene_anim:chairRN" 0
+		"momscene_anim:bibleRN" 1
+		2 "|momscene_anim:bible2:Bible|momscene_anim:bible2:BibleMesh" "visibility" 
+		" 0"
+		"momscene_anim:momRN1" 1
+		2 "|momscene_anim:mom2:MomRig" "visibility" " 0"
 		"momscene_animRN" 18
 		2 "|momscene_anim:TearGrp" "visibility" " 0"
 		2 "|momscene_anim:pPlane1" "visibility" " 0"
 		2 "|momscene_anim:pCube1" "visibility" " 0"
 		2 "|momscene_anim:mom_cam:new_camera_test" "visibility" " -av 1"
-		2 "|momscene_anim:mom_cam:new_camera_test" "translate" " -type \"double3\" -0.95645112213708439 14.11945307056256027 36.90356658569717752"
+		2 "|momscene_anim:mom_cam:new_camera_test" "translate" " -type \"double3\" -0.72787963995155014 -2.5789672333244873 32.65162463036584484"
 		
 		2 "|momscene_anim:mom_cam:new_camera_test" "translateX" " -av"
 		2 "|momscene_anim:mom_cam:new_camera_test" "translateY" " -av"
 		2 "|momscene_anim:mom_cam:new_camera_test" "translateZ" " -av"
-		2 "|momscene_anim:mom_cam:new_camera_test" "rotate" " -type \"double3\" -23.84006575094737812 0.73570697277162056 0.74374413613486168"
+		2 "|momscene_anim:mom_cam:new_camera_test" "rotate" " -type \"double3\" -16.59466737524430258 1.05412304445730842 0.74374413613486168"
 		
 		2 "|momscene_anim:mom_cam:new_camera_test" "rotateX" " -av"
 		2 "|momscene_anim:mom_cam:new_camera_test" "rotateY" " -av"
@@ -1302,22 +1420,14 @@ createNode reference -n "momscene_animRN";
 		2 "|momscene_anim:mom_cam:new_camera_test|momscene_anim:mom_cam:new_camera_testShape" 
 		"renderable" " 1"
 		2 "|momscene_anim:mom_cam:new_camera_test|momscene_anim:mom_cam:new_camera_testShape" 
-		"centerOfInterest" " 2.92287063690789628"
+		"centerOfInterest" " 0.80842918643493067"
 		2 "|momscene_anim:mom_cam:new_camera_test|momscene_anim:mom_cam:new_camera_testShape" 
-		"tumblePivot" " -type \"double3\" 3.07101706634158944 2.58524552034357047 -0.29425240313520939"
+		"tumblePivot" " -type \"double3\" 2.93033380051241465 2.6105933096056182 -0.22028616746477059"
 		
 		2 "|momscene_anim:momRN1fosterParent1" "visibility" " 0"
-		"momscene_anim:momRN1" 8
-		2 "|momscene_anim:mom2:MomRig" "visibility" " 0"
-		2 "|momscene_anim:mom2:nucleus1" "visibility" " 0"
-		2 "|momscene_anim:mom2:nCloth1" "visibility" " 0"
-		2 "|momscene_anim:mom2:nCloth1|momscene_anim:mom2:nClothShape1" "cacheWidth" 
-		" 121"
-		2 "|momscene_anim:mom2:nRigid1" "visibility" " 0"
-		2 "|momscene_anim:mom2:nRigid1|momscene_anim:mom2:nRigidShape1" "cacheWidth" 
-		" 121"
-		2 "|momscene_anim:mom2:dynamicConstraint1" "visibility" " 0"
-		2 "|momscene_anim:mom2:dynamicConstraint2" "visibility" " 0"
+		"momscene_anim:tableRN" 1
+		2 "|momscene_anim:table1:Table|momscene_anim:table1:Table" "visibility" " 0"
+		
 		"momscene_anim:babyRN" 15
 		2 "|momscene_anim:baby:bottom|momscene_anim:baby:bottomShape" "renderable" 
 		" 0"
@@ -1348,7 +1458,11 @@ createNode reference -n "momscene_animRN";
 		5 3 "momscene_animRN" "|momscene_anim:baby:Baby_Rig|momscene_anim:baby:baby_master|momscene_anim:baby:baby_c_pelvis_def|momscene_anim:baby:baby_c_spine1_def|momscene_anim:baby:baby_c_spine2_def|momscene_anim:baby:baby_c_spine3_def|momscene_anim:baby:baby_c_cspine_def|momscene_anim:baby:baby_c_neck1_def|momscene_anim:baby:baby_c_neck2_def|momscene_anim:baby:baby_c_head_def|momscene_anim:baby:baby_c_head_top_def.segmentScaleCompensate" 
 		"momscene_animRN.placeHolderList[11]" ""
 		5 3 "momscene_animRN" "|momscene_anim:baby:Baby_Rig|momscene_anim:baby:baby_master|momscene_anim:baby:baby_c_pelvis_def|momscene_anim:baby:baby_c_spine1_def|momscene_anim:baby:baby_c_spine2_def|momscene_anim:baby:baby_c_spine3_def|momscene_anim:baby:baby_c_cspine_def|momscene_anim:baby:baby_c_neck1_def|momscene_anim:baby:baby_c_neck2_def|momscene_anim:baby:baby_c_head_def|momscene_anim:baby:baby:lEyeball|momscene_anim:baby:baby:lEyeballShape.worldMesh" 
-		"momscene_animRN.placeHolderList[12]" "";
+		"momscene_animRN.placeHolderList[12]" ""
+		"momscene_anim:wineRN" 1
+		2 "|momscene_anim:wine:wine_bottle" "visibility" " -av 0"
+		"momscene_anim:chairRN" 1
+		2 "|momscene_anim:chair:chair" "visibility" " 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode RenderMan -s -n "renderManGlobals";
@@ -5275,8 +5389,8 @@ createNode reference -n "momscene_lightingRN";
 		"cacheWidth" " 111"
 		"momscene_lighting:momscene_lighting:momscene_animRN" 0
 		"momscene_lighting:momscene_lighting:momscene_anim:chairRN" 0
-		"momscene_lighting:momscene_lighting:momscene_anim:bibleRN" 0
-		"momscene_lighting:momscene_lighting:teardrop_real:shotglassRN" 0;
+		"momscene_lighting:momscene_lighting:teardrop_real:shotglassRN" 0
+		"momscene_lighting:momscene_lighting:momscene_anim:bibleRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode objectSet -s -n "lightEditorRoot";
@@ -5769,19 +5883,18 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "shotglassRN";
 	rename -uid "61B12DF9-5641-C75A-92FC-649829744017";
-	setAttr -s 3 ".phl";
+	setAttr -s 2 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"shotglassRN"
 		"shotglassRN" 0
-		"shotglassRN" 18
+		"shotglassRN" 17
 		0 "|shotglass:Cup" "|teardop_droptop" "-s -r "
 		2 "|teardop_droptop|shotglass:Cup" "visibility" " 1"
-		2 "|teardop_droptop|shotglass:Cup" "translate" " -type \"double3\" 3.14057107603316243 -21.5175650941130634 0"
+		2 "|teardop_droptop|shotglass:Cup" "translate" " -type \"double3\" 3.14057107603316243 -18.8153863853614709 0"
 		
-		2 "|teardop_droptop|shotglass:Cup" "scale" " -type \"double3\" 0.36194362570633437 0.36194362570633437 0.36194362570633437"
+		2 "|teardop_droptop|shotglass:Cup" "scale" " -type \"double3\" 0.80913932019331913 0.80913932019331913 0.80913932019331913"
 		
 		2 "|teardop_droptop|shotglass:Cup|shotglass:CupShape" "uvPivot" " -type \"double2\" 0.37661972641944885 0.5"
 		
@@ -5806,9 +5919,7 @@ createNode reference -n "shotglassRN";
 		5 3 "shotglassRN" "|teardop_droptop|shotglass:Cup|shotglass:CupShape.instObjGroups" 
 		"shotglassRN.placeHolderList[1]" ":initialShadingGroup.dsm"
 		5 3 "shotglassRN" "|teardop_droptop|shotglass:Cup|shotglass:CupShape.worldMesh" 
-		"shotglassRN.placeHolderList[2]" ""
-		5 3 "shotglassRN" "|teardop_droptop|shotglass:Cup|shotglass:CupShape.worldMesh" 
-		"shotglassRN.placeHolderList[3]" "";
+		"shotglassRN.placeHolderList[2]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyNormal -n "polyNormal1";
@@ -5896,15 +6007,492 @@ createNode materialInfo -n "materialInfo1";
 createNode animCurveTU -n "emitterProps1_bifrostContinuousEmission";
 	rename -uid "94330CAA-3643-CDAC-BFEF-B1AAF3E8AD9C";
 	setAttr ".tan" 9;
-	setAttr -s 7 ".ktv[0:6]"  255 1 256 1 257 0 305 1 307 0 355 1 357 0;
-	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  255 1 256 1 257 0 268 1 270 0 305 1 307 0
+		 355 1 357 0;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTU -n "emitterProps1_startFrame";
 	rename -uid "736470AF-7441-A5AF-F173-19A3F6C25A2E";
 	setAttr ".tan" 18;
 	setAttr ".ktv[0]"  255 255;
+createNode createColorSet -n "createColorSet3";
+	rename -uid "C59F7633-5F49-FDD6-B98E-A2B6A1AE1806";
+	setAttr ".colos" -type "string" "bifrostDensity";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode createColorSet -n "createColorSet4";
+	rename -uid "F803CE60-8247-538D-AFEB-C19B3F247333";
+	setAttr ".colos" -type "string" "bifrostExpansionRate";
+	setAttr ".clam" no;
+	setAttr ".rprt" 3;
+createNode materialInfo -n "momscene_anim1:baby:reggie_naked2:materialInfo5";
+	rename -uid "E2FEC509-6A46-A131-216C-CBB6C884FB1D";
+createNode shadingEngine -n "momscene_anim1:baby:reggie_naked2:lambert4SG";
+	rename -uid "2759478D-1640-7D66-6419-E89E795519AE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:baby:baby:lEyeShader";
+	rename -uid "DEC64932-E243-B365-EF72-2880A69ECF9C";
+createNode file -n "momscene_anim1:baby:reggie_naked2:file3";
+	rename -uid "110FA6D5-7440-524C-8B3D-869BB972438C";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Reggie/reggieLEye-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:baby:reggie_naked2:place2dTexture3";
+	rename -uid "489658B4-CB47-FBCF-4F58-DBA75FA16C00";
+createNode materialInfo -n "momscene_anim1:baby:reggie_naked2:materialInfo6";
+	rename -uid "F1A55DA4-3847-D27A-952B-CDBBEFA3DAFC";
+createNode shadingEngine -n "momscene_anim1:baby:reggie_naked2:lambert5SG";
+	rename -uid "CC55B0DA-0F4D-AA98-2811-F9B479321242";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:baby:baby:rEyeShader";
+	rename -uid "FB0C3F89-F746-9DD3-B5C0-14BFE519A36C";
+createNode file -n "momscene_anim1:baby:reggie_naked2:file4";
+	rename -uid "C131A3A1-E742-C8E3-6A95-C99ED60EA9E9";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Reggie/reggieEye-rEyetexture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:baby:reggie_naked2:place2dTexture4";
+	rename -uid "32EE39DC-7242-06BF-0B2C-DDB43463A875";
+createNode materialInfo -n "momscene_anim1:baby:materialInfo2";
+	rename -uid "75B70ED6-E945-1E39-7E74-FEBD48BA4B61";
+createNode shadingEngine -n "momscene_anim1:baby:lambert3SG";
+	rename -uid "9CAC7310-F244-BCBD-154E-FB8AE88CBED0";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:baby:babyDiaperShader";
+	rename -uid "8E5A0DB9-9C41-A830-D6E8-6EAB7643C268";
+	setAttr ".c" -type "float3" 1 1 1 ;
+createNode materialInfo -n "pasted__materialInfo1";
+	rename -uid "C6962485-3843-7176-F962-F5BE5B80DB97";
+createNode shadingEngine -n "pasted__lambert2SG";
+	rename -uid "63A43074-0A4B-79D8-E22C-5889E38799AB";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "pasted__lambert2";
+	rename -uid "FFC62113-D945-D84D-E010-7A8BD7574E41";
+	setAttr ".it" -type "float3" 0.62337661 0.62337661 0.62337661 ;
+createNode materialInfo -n "momscene_anim1:baby:baby_blend2:materialInfo6";
+	rename -uid "B69033DE-6441-01BC-AB0D-748BDDABABC0";
+createNode shadingEngine -n "momscene_anim1:baby:baby_blend2:lambert4SG";
+	rename -uid "77F5FBDF-5B4A-4C9F-06CB-8D84EF2EF18D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:baby:baby_blend2:baby_texture";
+	rename -uid "FDECEEF2-0743-ABC9-C471-3FA2084E8825";
+createNode rampShader -n "momscene_anim1:baby:baby_blend2:rampShader2";
+	rename -uid "ACBDD304-274E-DF6A-EF39-DD9EDDB46F0D";
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.38260868191719055;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 0;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 0;
+	setAttr ".trsd" 0;
+	setAttr ".ec" 0;
+	setAttr ".spl" 0;
+	setAttr ".sro[1]"  0 0 0;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 0;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "momscene_anim1:baby:baby_blend2:file7";
+	rename -uid "37CADE6E-3C4E-0367-321B-F298A7DD33AA";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Baby/Babytexture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:baby:baby_blend2:place2dTexture9";
+	rename -uid "6E66F92C-0A45-6A03-C725-DDA583B4F99E";
+createNode file -n "momscene_anim1:baby:baby_blend2:file8";
+	rename -uid "63232709-764C-8B75-F493-0A9893EEE63D";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Baby/Babytexture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:baby:baby_blend2:place2dTexture10";
+	rename -uid "72E38F7E-1A43-5235-8550-638AE43212FC";
+createNode materialInfo -n "momscene_anim1:mom2:mom_eyes:materialInfo1";
+	rename -uid "99CF6320-6543-4347-6A84-618119705683";
+createNode shadingEngine -n "momscene_anim1:mom2:mom_eyes:lambert1SG";
+	rename -uid "AA06CF5D-FD46-CC1B-A419-929053135AF8";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:mom2:mom_eyes:lambert1";
+	rename -uid "6D7347B4-BB42-DCFB-6723-3FAC4A49B34D";
+createNode file -n "momscene_anim1:mom2:mom_eyes:file1";
+	rename -uid "0896B84B-5446-BBD6-C729-60A68C4CC0ED";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Reggie/reggieEye-rEyetexture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:mom_eyes:place2dTexture1";
+	rename -uid "0BDF9C4B-0645-356A-54B3-859F89739260";
+createNode shadingEngine -n "momscene_anim1:mom2:necklace1:necklace:rampShader1SG";
+	rename -uid "3E04C580-2644-9BC3-F7DF-EFAC453E9E29";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "momscene_anim1:mom2:necklace1:necklace:materialInfo1";
+	rename -uid "16A57F97-BD4A-3DD8-832E-4B9A016E1C61";
+createNode rampShader -n "momscene_anim1:mom2:necklace1:necklace:crossBrightnessRamp";
+	rename -uid "0AAB319A-3249-DDE4-F83C-0EA1063D71CB";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clrc" -type "float3" 0.5 0.19446865 0.0099999905 ;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.5;
+	setAttr ".clr[1].clrc" -type "float3" 1 0.52798522 0.24299997 ;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode materialInfo -n "momscene_anim1:mom2:necklace1:chain:materialInfo3";
+	rename -uid "6229508B-0D4F-3CF2-B609-1084E4A5F145";
+createNode shadingEngine -n "momscene_anim1:mom2:necklace1:chain:lambert4SG";
+	rename -uid "FFF0B2B6-1643-A4FF-DA6D-C181F853C7EE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:mom2:necklace1:chain:chainToon";
+	rename -uid "0AFC4C2D-374B-08DF-55F2-E398BFF8E8E7";
+createNode file -n "momscene_anim1:mom2:necklace1:chain:file6";
+	rename -uid "9E2CE395-2C47-0984-E785-C9962FECC113";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/necklace/chain.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:necklace1:chain:place2dTexture6";
+	rename -uid "964A73BB-614D-37AA-A05E-90A04FC3F21D";
+createNode materialInfo -n "momscene_anim1:mom2:materialInfo11";
+	rename -uid "9AC5673E-384E-74B4-A000-DAA193C220FE";
+createNode shadingEngine -n "momscene_anim1:mom2:lambert4SG";
+	rename -uid "F042D1A7-904F-39A1-47C5-C295FAA36C8A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:mom2:momHairLambert";
+	rename -uid "463C4647-C64A-EDA5-6A77-00BB227165A3";
+createNode rampShader -n "momscene_anim1:mom2:momHairBrightnessRamp";
+	rename -uid "376E483B-F548-BE7C-2FEB-87922AAB3BA6";
+	setAttr ".dc" 1;
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.50800001621246338;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".trsd" 1000;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "momscene_anim1:mom2:mom2:mom:file7";
+	rename -uid "D3AD6DED-484D-0622-A60C-4795ADCBE0C3";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Mom/hairmom-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:mom2:mom:place2dTexture9";
+	rename -uid "873BBBF6-C443-6176-B357-9BA2BFFAC8DB";
+createNode file -n "momscene_anim1:mom2:mom2:mom:file8";
+	rename -uid "1D31B439-D341-8408-6A82-F988E1FF8767";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Mom/hairmom.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:mom2:mom:place2dTexture10";
+	rename -uid "58A30B76-1445-6D5D-E10E-3AA5398E4BD3";
+createNode materialInfo -n "momscene_anim1:mom2:materialInfo9";
+	rename -uid "B532607A-6944-4D95-BE35-9BA9B53095BC";
+createNode shadingEngine -n "momscene_anim1:mom2:lambert2SG";
+	rename -uid "268E0BB8-0744-BD36-64C2-16B9355C07F7";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:mom2:momBodyLambert";
+	rename -uid "EEE25B71-AB44-B3B4-69DD-D8B6E3E52F97";
+createNode rampShader -n "momscene_anim1:mom2:momBodyrampShader";
+	rename -uid "212B21B9-2A4F-1BCE-3CA5-E3AA18477C4A";
+	setAttr -s 4 ".clr";
+	setAttr ".clr[1].clrp" 0.47826087474822998;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".clr[2].clrp" 0;
+	setAttr ".clr[2].clri" 0;
+	setAttr ".clr[3].clrp" 0.27826085686683655;
+	setAttr ".clr[3].clri" 0;
+	setAttr ".clr[4].clrp" 0.85217392444610596;
+	setAttr ".clr[4].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 1;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 1;
+	setAttr ".spl" 0;
+	setAttr -s 2 ".sro[0:1]"  0 1 2 0.5 0.5 2;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 1;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "momscene_anim1:mom2:file2";
+	rename -uid "4FDADF58-C74D-5E57-44F2-08A32A6507D3";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:place2dTexture3";
+	rename -uid "6D86DF76-4E41-6AE7-2E6F-B19EC81AF69E";
+createNode file -n "momscene_anim1:mom2:mom2:mom:file15";
+	rename -uid "8132DBF7-6A46-52BB-ADFF-A78EDC77656B";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Mom/mom-texture-darkest.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:mom2:mom:place2dTexture17";
+	rename -uid "CDEAFAAE-954E-0BA1-7A8B-9D8E1299E5B0";
+createNode file -n "momscene_anim1:mom2:mom2:mom:file16";
+	rename -uid "40887345-F647-BB3B-7D6F-44910DA2C5AF";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Mom/mom-texture-darker.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:mom2:mom:place2dTexture18";
+	rename -uid "903BEB2E-1F49-1540-EC0C-59AD58CEAF07";
+createNode file -n "momscene_anim1:mom2:mom2:mom:file17";
+	rename -uid "663D2EDE-7547-8968-EBF6-E9B3D6071E18";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Mom/mom-texture-light.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:mom2:mom2:mom:place2dTexture19";
+	rename -uid "6888C905-9643-1187-8446-A5B1273C7F69";
+createNode materialInfo -n "momscene_anim1:baby:materialInfo6";
+	rename -uid "C369EB66-4F4A-6587-A316-3FA570B54915";
+createNode shadingEngine -n "momscene_anim1:baby:lambert4SG";
+	rename -uid "14D364FE-D446-7FFF-25A4-78BBD2733EAE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "momscene_anim1:baby:baby_texture";
+	rename -uid "2802092E-CF4C-94D5-B0F4-78A858F24DF7";
+createNode rampShader -n "momscene_anim1:baby:rampShader2";
+	rename -uid "14C8D6EB-DE49-6141-CD93-568F88580061";
+	setAttr -s 2 ".clr";
+	setAttr ".clr[0].clrp" 0;
+	setAttr ".clr[0].clri" 0;
+	setAttr ".clr[1].clrp" 0.38260868191719055;
+	setAttr ".clr[1].clri" 0;
+	setAttr ".cin" 2;
+	setAttr ".it[0].itp" 0;
+	setAttr ".it[0].itc" -type "float3" 0 0 0 ;
+	setAttr ".it[0].iti" 0;
+	setAttr ".ic[0].icp" 0;
+	setAttr ".ic[0].icc" -type "float3" 0 0 0 ;
+	setAttr ".ic[0].ici" 0;
+	setAttr ".trsd" 0;
+	setAttr ".ec" 0;
+	setAttr ".spl" 0;
+	setAttr ".sro[1]"  0 0 0;
+	setAttr ".sc[0].scp" 0;
+	setAttr ".sc[0].scc" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".sc[0].sci" 1;
+	setAttr ".rfl[0]"  0 0 0;
+	setAttr ".env[0].envp" 0;
+	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
+	setAttr ".env[0].envi" 1;
+createNode file -n "momscene_anim1:baby:file7";
+	rename -uid "9DEC3B14-3243-B117-86E0-A98A3C2BE9F3";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Baby/Babytexture-dark.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:baby:place2dTexture9";
+	rename -uid "EFFEDBF7-A54A-CE3B-B7BA-AB8C551C6092";
+createNode file -n "momscene_anim1:baby:file8";
+	rename -uid "1C7388DB-214E-FEDA-009D-FF9B1C57F91E";
+	setAttr ".ftn" -type "string" "/Users/emileechen/Documents/project/Only-Love//sourceimages/Baby/Babytexture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "momscene_anim1:baby:place2dTexture10";
+	rename -uid "6E9C489B-FC4E-B3F8-3661-3F86FF166F43";
+createNode bifrostLiquidMaterial -n "pasted__bifrostLiquidMaterial1";
+	rename -uid "594492FB-DA44-F66E-44C8-758F03FC0B89";
+	setAttr -s 2 ".dcrm";
+	setAttr ".dcrm[0].dcrmp" 0;
+	setAttr ".dcrm[0].dcrmcv" -type "float3" 0 0.36500001 1 ;
+	setAttr ".dcrm[0].dcrmi" 1;
+	setAttr ".dcrm[1].dcrmp" 1;
+	setAttr ".dcrm[1].dcrmcv" -type "float3" 0 1 0.64499998 ;
+	setAttr ".dcrm[1].dcrmi" 1;
+	setAttr -s 2 ".dcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".fcrm[0].fcrmp" 1;
+	setAttr ".fcrm[0].fcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".fcrm[0].fcrmi" 1;
+	setAttr -s 2 ".fcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".fwrm[0:1]"  0 0 1 1 0.2 1;
+	setAttr -s 2 ".rlcrm";
+	setAttr ".rlcrm[0].rlcrmp" 0;
+	setAttr ".rlcrm[0].rlcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rlcrm[0].rlcrmi" 1;
+	setAttr ".rlcrm[1].rlcrmp" 1;
+	setAttr ".rlcrm[1].rlcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rlcrm[1].rlcrmi" 1;
+	setAttr -s 2 ".rlcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr ".rlwrm[0]"  0 1 1;
+	setAttr -s 2 ".rrcrm";
+	setAttr ".rrcrm[0].rrcrmp" 0;
+	setAttr ".rrcrm[0].rrcrmcv" -type "float3" 1 1 1 ;
+	setAttr ".rrcrm[0].rrcrmi" 1;
+	setAttr ".rrcrm[1].rrcrmp" 1;
+	setAttr ".rrcrm[1].rrcrmcv" -type "float3" 0 0 0 ;
+	setAttr ".rrcrm[1].rrcrmi" 1;
+	setAttr -s 2 ".rrcvrm[0:1]"  0 0 1 1 1 1;
+	setAttr -s 2 ".trm[0:1]"  0 1 1 1 0.5 1;
+createNode shadingEngine -n "pasted__bifrostLiquidMaterial1SG";
+	rename -uid "677D4302-2D49-F4B4-211F-F9ABD89CD5F2";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode animCurveTL -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateX3";
+	rename -uid "50448E9A-6E4B-BFBD-1C87-B9A8DFD04F3E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  14 1.7709148427768691 48 -4.3340829744940628
+		 143 -2.7404974086005836 286 -0.72787963995155014 356 -0.72787963995155014;
+	setAttr -s 5 ".kit[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kot[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kix[1:4]"  0.99888372421264648 0.9397890567779541 
+		1 1;
+	setAttr -s 5 ".kiy[1:4]"  0.047236636281013489 0.34175500273704529 
+		0 0;
+	setAttr -s 5 ".kox[1:4]"  0.99888372421264648 0.9397890567779541 
+		1 1;
+	setAttr -s 5 ".koy[1:4]"  0.047236643731594086 0.34175500273704529 
+		0 0;
+createNode animCurveTL -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateY3";
+	rename -uid "2AA533B3-204B-F5B7-FD28-56B351E8919C";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  14 10.778188823505422 65 13.494912202121196
+		 184 16.212413492396067 286 11.628550906098766 356 -2.5789672333244873;
+	setAttr -s 5 ".kit[1:4]"  18 3 1 3;
+	setAttr -s 5 ".kot[1:4]"  18 3 1 3;
+	setAttr -s 5 ".kix[3:4]"  0.38535726070404053 1;
+	setAttr -s 5 ".kiy[3:4]"  -0.92276746034622192 0;
+	setAttr -s 5 ".kox[3:4]"  0.38535723090171814 1;
+	setAttr -s 5 ".koy[3:4]"  -0.92276746034622192 0;
+createNode animCurveTL -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateZ3";
+	rename -uid "6D227A3E-8C4D-C5BD-24BC-1395401B939C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  14 13.180505975386327 62 27.803288823928519
+		 143 31.005733760014991 286 37.375127276840374 356 32.651624630365845;
+	setAttr -s 5 ".kit[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kot[0:4]"  3 1 18 18 3;
+	setAttr -s 5 ".kix[1:4]"  0.47472995519638062 0.69813048839569092 
+		1 1;
+	setAttr -s 5 ".kiy[1:4]"  0.88013148307800293 0.71597057580947876 
+		0 0;
+	setAttr -s 5 ".kox[1:4]"  0.47472983598709106 0.69813048839569092 
+		1 1;
+	setAttr -s 5 ".koy[1:4]"  0.88013160228729248 0.71597057580947876 
+		0 0;
+createNode animCurveTA -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_rotateX3";
+	rename -uid "C868CA48-7C41-6DE8-E5A9-7E84CB702F3F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  14 -80.174704251391049 42 -40.136663312722952
+		 65 -24.365155853534127 106 -20.626919221417094 179 -19.163886226446206 356 -16.594667375244303;
+	setAttr -s 6 ".kit[0:5]"  3 1 18 18 18 3;
+	setAttr -s 6 ".kot[0:5]"  3 1 18 18 18 3;
+	setAttr -s 6 ".kix[1:5]"  0.84046256542205811 0.99350011348724365 
+		0.99981743097305298 0.99997717142105103 1;
+	setAttr -s 6 ".kiy[1:5]"  0.5418696403503418 0.1138310432434082 0.019107937812805176 
+		0.0067559485323727131 0;
+	setAttr -s 6 ".kox[1:5]"  0.84046250581741333 0.99350011348724365 
+		0.99981743097305298 0.99997717142105103 1;
+	setAttr -s 6 ".koy[1:5]"  0.54186969995498657 0.1138310432434082 
+		0.019107937812805176 0.0067559485323727131 0;
+createNode animCurveTA -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_rotateY3";
+	rename -uid "404B4C37-C243-6895-17A3-4F8B6A10AB45";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  14 2.1819024658339417 42 -10.229676513868746
+		 143 -4.5150232729938065 286 1.0541230444573084 356 1.0541230444573084;
+	setAttr -s 5 ".kit[0:4]"  3 1 1 18 3;
+	setAttr -s 5 ".kot[0:4]"  3 1 1 18 3;
+	setAttr -s 5 ".kix[1:4]"  0.99995923042297363 0.99965029954910278 
+		1 1;
+	setAttr -s 5 ".kiy[1:4]"  0.0090272538363933563 0.026442969217896461 
+		0 0;
+	setAttr -s 5 ".kox[1:4]"  0.99995923042297363 0.99965029954910278 
+		1 1;
+	setAttr -s 5 ".koy[1:4]"  0.0090272529050707817 0.026443023234605789 
+		0 0;
+createNode animCurveTA -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_rotateZ3";
+	rename -uid "C0696724-9E40-1FB2-C0BE-41A7D34DD37C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  14 -2.2756725322093683 65 4.0943550745839499
+		 132 2.1154667855289664 164 1.6737916446285304 184 1.3416635776815604 243 0.74374413613486168
+		 286 0.74374413613486168 356 0.74374413613486168;
+	setAttr -s 8 ".kit[0:7]"  3 18 18 18 1 18 18 3;
+	setAttr -s 8 ".kot[0:7]"  3 18 18 18 1 18 18 3;
+	setAttr -s 8 ".kix[4:7]"  0.99998027086257935 1 1 1;
+	setAttr -s 8 ".kiy[4:7]"  -0.0062789702787995338 0 0 0;
+	setAttr -s 8 ".kox[4:7]"  0.99998027086257935 1 1 1;
+	setAttr -s 8 ".koy[4:7]"  -0.0062789702787995338 0 0 0;
+createNode animCurveTU -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_visibility3";
+	rename -uid "202ECA38-CE4F-033F-AE9B-52A3303F86E0";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  14 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTU -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleX3";
+	rename -uid "3248F566-1741-689A-BCB3-7CB6D6E6D289";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  14 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kit[0:6]"  3 18 18 3 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 18 18 3 18 18 3;
+createNode animCurveTU -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleY3";
+	rename -uid "CDD39CC5-C846-97D0-55EA-E2ACAEB50908";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  14 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kit[0:6]"  3 18 18 3 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 18 18 3 18 18 3;
+createNode animCurveTU -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleZ3";
+	rename -uid "1BA32CA3-2A42-CDA9-EFAC-A1A360880871";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  14 1 65 1 132 1 184 1 243 1 286 1 356 1;
+	setAttr -s 7 ".kit[0:6]"  3 18 18 3 18 18 3;
+	setAttr -s 7 ".kot[0:6]"  3 18 18 3 18 18 3;
+createNode animCurveTU -n "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:momBabyShape_focalLength3";
+	rename -uid "86D0C616-CA40-AE94-53CE-A9AA1E90A32A";
+	setAttr ".tan" 3;
+	setAttr -s 3 ".ktv[0:2]"  0 80.47965670774343 65 51.715776183713963
+		 184 50.126717435251358;
+	setAttr -s 3 ".kit[1:2]"  1 3;
+	setAttr -s 3 ".kot[1:2]"  1 3;
+	setAttr -s 3 ".kix[1:2]"  3.6695573329925537 4.9583330154418945;
+	setAttr -s 3 ".kiy[1:2]"  -4.5319643020629883 0;
+	setAttr -s 3 ".kox[1:2]"  4.1503963470458984 4.9583330154418945;
+	setAttr -s 3 ".koy[1:2]"  -5.1258058547973633 0;
 select -ne :time1;
-	setAttr ".o" 256;
-	setAttr ".unw" 256;
+	setAttr ".o" 366;
+	setAttr ".unw" 366;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -5912,22 +6500,22 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 385 ".st";
+	setAttr -s 397 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 396 ".s";
+	setAttr -s 416 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 681 ".u";
+	setAttr -s 696 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 37 ".r";
+	setAttr -s 46 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 481 ".tx";
+	setAttr -s 495 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 5 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 625 ".gn";
+	setAttr -s 633 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -5959,8 +6547,7 @@ connectAttr "momscene_animRN.phl[11]" "tear_zero_grp_parentConstraint1.tg[0].tsc
 		;
 connectAttr "momscene_animRN.phl[12]" "colliderProps1.Meshes[0]";
 connectAttr "shotglassRN.phl[1]" "lambert2SG.dsm" -na;
-connectAttr "shotglassRN.phl[2]" "emitterProps2.Meshes[0]";
-connectAttr "shotglassRN.phl[3]" "colliderProps3.Meshes[0]";
+connectAttr "shotglassRN.phl[2]" "colliderProps3.Meshes[0]";
 connectAttr ":time1.o" "baby_teardropContainer.ctm";
 connectAttr "bifrostLiquidPropertiesContainer1.Liquid" "baby_teardropContainer.liquidProperties"
 		;
@@ -5979,6 +6566,7 @@ connectAttr "emitterProps2.outMeshes" "baby_teardropContainer.Emitters[1]";
 connectAttr "colliderProps1.outMeshes" "baby_teardropContainer.Colliders[0]";
 connectAttr "colliderProps2.outMeshes" "baby_teardropContainer.Colliders[1]";
 connectAttr "colliderProps3.outMeshes" "baby_teardropContainer.Colliders[2]";
+connectAttr "bifrostKillplane1.wm" "baby_teardropContainer.killplanes[0]";
 connectAttr "baby_teardropContainer.Liquid" "liquidShape1.obj";
 connectAttr ":time1.o" "bifrostLiquidPropertiesContainer1.ctm";
 connectAttr ":time1.o" "bifrostGuidePropertiesContainer1.ctm";
@@ -5997,19 +6585,7 @@ connectAttr "emitterProps2.boundaryMeshShapeUI" "emitterProps2.boundaryShape";
 connectAttr "emitterProps2.enableMeshBoundaryUI" "emitterProps2.enableBoundary";
 connectAttr "emitterProps2.boundaryMeshInvertUI" "emitterProps2.invert";
 connectAttr "emitterProps2.wm" "emitterProps2.transform";
-connectAttr "tear_zero_grp_parentConstraint1.ctx" "tear_zero_grp.tx";
-connectAttr "tear_zero_grp_parentConstraint1.cty" "tear_zero_grp.ty";
-connectAttr "tear_zero_grp_parentConstraint1.ctz" "tear_zero_grp.tz";
-connectAttr "tear_zero_grp_parentConstraint1.crx" "tear_zero_grp.rx";
-connectAttr "tear_zero_grp_parentConstraint1.cry" "tear_zero_grp.ry";
-connectAttr "tear_zero_grp_parentConstraint1.crz" "tear_zero_grp.rz";
-connectAttr "createColorSet2.og" "tear_meshShape.i";
-connectAttr "tear_zero_grp_parentConstraint1.w0" "tear_zero_grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "tear_zero_grp.ro" "tear_zero_grp_parentConstraint1.cro";
-connectAttr "tear_zero_grp.pim" "tear_zero_grp_parentConstraint1.cpim";
-connectAttr "tear_zero_grp.rp" "tear_zero_grp_parentConstraint1.crp";
-connectAttr "tear_zero_grp.rpt" "tear_zero_grp_parentConstraint1.crt";
+connectAttr "alc_meshShape.w" "emitterProps2.Meshes[0]";
 connectAttr ":time1.o" "colliderProps1.ctm";
 connectAttr "colliderProps1.boundaryMeshShapeUI" "colliderProps1.boundaryShape";
 connectAttr "colliderProps1.enableMeshBoundaryUI" "colliderProps1.enableBoundary"
@@ -6028,7 +6604,42 @@ connectAttr "colliderProps3.enableMeshBoundaryUI" "colliderProps3.enableBoundary
 		;
 connectAttr "colliderProps3.boundaryMeshInvertUI" "colliderProps3.invert";
 connectAttr "colliderProps3.wm" "colliderProps3.transform";
-connectAttr "polySplitRing4.out" "alc_meshShape.i";
+connectAttr "tear_zero_grp_parentConstraint1.ctx" "tear_zero_grp.tx";
+connectAttr "tear_zero_grp_parentConstraint1.cty" "tear_zero_grp.ty";
+connectAttr "tear_zero_grp_parentConstraint1.ctz" "tear_zero_grp.tz";
+connectAttr "tear_zero_grp_parentConstraint1.crx" "tear_zero_grp.rx";
+connectAttr "tear_zero_grp_parentConstraint1.cry" "tear_zero_grp.ry";
+connectAttr "tear_zero_grp_parentConstraint1.crz" "tear_zero_grp.rz";
+connectAttr "createColorSet2.og" "tear_meshShape.i";
+connectAttr "tear_zero_grp_parentConstraint1.w0" "tear_zero_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "tear_zero_grp.ro" "tear_zero_grp_parentConstraint1.cro";
+connectAttr "tear_zero_grp.pim" "tear_zero_grp_parentConstraint1.cpim";
+connectAttr "tear_zero_grp.rp" "tear_zero_grp_parentConstraint1.crp";
+connectAttr "tear_zero_grp.rpt" "tear_zero_grp_parentConstraint1.crt";
+connectAttr "createColorSet4.og" "alc_meshShape.i";
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateX3.o" "momscene_camera:FINAL_MOM_CAMERA.tx"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateY3.o" "momscene_camera:FINAL_MOM_CAMERA.ty"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateZ3.o" "momscene_camera:FINAL_MOM_CAMERA.tz"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_rotateX3.o" "momscene_camera:FINAL_MOM_CAMERA.rx"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_rotateY3.o" "momscene_camera:FINAL_MOM_CAMERA.ry"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_rotateZ3.o" "momscene_camera:FINAL_MOM_CAMERA.rz"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_visibility3.o" "momscene_camera:FINAL_MOM_CAMERA.v"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleX3.o" "momscene_camera:FINAL_MOM_CAMERA.sx"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleY3.o" "momscene_camera:FINAL_MOM_CAMERA.sy"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleZ3.o" "momscene_camera:FINAL_MOM_CAMERA.sz"
+		;
+connectAttr "momscene_camera:mom_cam_3_8:mom_scene:new_mom_camera:momBabyShape_focalLength3.o" "momscene_camera:FINAL_MOM_CAMERAShape.fl"
+		;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -6038,10 +6649,34 @@ relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLigh
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "pasted__bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "pasted__lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:baby:lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:baby:reggie_naked2:lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:baby:reggie_naked2:lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:baby:lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:baby:baby_blend2:lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:mom2:lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:mom2:mom_eyes:lambert1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:mom2:lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:mom2:necklace1:necklace:rampShader1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "momscene_anim1:mom2:necklace1:chain:lambert4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "pasted__bifrostLiquidMaterial1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "pasted__lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:baby:lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:baby:reggie_naked2:lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:baby:reggie_naked2:lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:baby:lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:baby:baby_blend2:lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:mom2:lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:mom2:mom_eyes:lambert1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:mom2:lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:mom2:necklace1:necklace:rampShader1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "momscene_anim1:mom2:necklace1:chain:lambert4SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "bifrostLiquidMaterial1.oc" "bifrostLiquidMaterial1SG.ss";
@@ -6068,11 +6703,835 @@ connectAttr "polyMergeVert1.out" "polyTweak2.ip";
 connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
+connectAttr "polySplitRing4.out" "createColorSet3.ig";
+connectAttr "createColorSet3.og" "createColorSet4.ig";
+connectAttr "momscene_anim1:baby:reggie_naked2:lambert4SG.msg" "momscene_anim1:baby:reggie_naked2:materialInfo5.sg"
+		;
+connectAttr "momscene_anim1:baby:baby:lEyeShader.msg" "momscene_anim1:baby:reggie_naked2:materialInfo5.m"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:file3.msg" "momscene_anim1:baby:reggie_naked2:materialInfo5.t"
+		 -na;
+connectAttr "momscene_anim1:baby:baby:lEyeShader.oc" "momscene_anim1:baby:reggie_naked2:lambert4SG.ss"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:file3.oc" "momscene_anim1:baby:baby:lEyeShader.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:baby:reggie_naked2:file3.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:baby:reggie_naked2:file3.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:baby:reggie_naked2:file3.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:baby:reggie_naked2:file3.ws"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.c" "momscene_anim1:baby:reggie_naked2:file3.c"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.tf" "momscene_anim1:baby:reggie_naked2:file3.tf"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.rf" "momscene_anim1:baby:reggie_naked2:file3.rf"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.mu" "momscene_anim1:baby:reggie_naked2:file3.mu"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.mv" "momscene_anim1:baby:reggie_naked2:file3.mv"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.s" "momscene_anim1:baby:reggie_naked2:file3.s"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.wu" "momscene_anim1:baby:reggie_naked2:file3.wu"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.wv" "momscene_anim1:baby:reggie_naked2:file3.wv"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.re" "momscene_anim1:baby:reggie_naked2:file3.re"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.of" "momscene_anim1:baby:reggie_naked2:file3.of"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.r" "momscene_anim1:baby:reggie_naked2:file3.ro"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.n" "momscene_anim1:baby:reggie_naked2:file3.n"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.vt1" "momscene_anim1:baby:reggie_naked2:file3.vt1"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.vt2" "momscene_anim1:baby:reggie_naked2:file3.vt2"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.vt3" "momscene_anim1:baby:reggie_naked2:file3.vt3"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.vc1" "momscene_anim1:baby:reggie_naked2:file3.vc1"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.o" "momscene_anim1:baby:reggie_naked2:file3.uv"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.ofs" "momscene_anim1:baby:reggie_naked2:file3.fs"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:lambert5SG.msg" "momscene_anim1:baby:reggie_naked2:materialInfo6.sg"
+		;
+connectAttr "momscene_anim1:baby:baby:rEyeShader.msg" "momscene_anim1:baby:reggie_naked2:materialInfo6.m"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:file4.msg" "momscene_anim1:baby:reggie_naked2:materialInfo6.t"
+		 -na;
+connectAttr "momscene_anim1:baby:baby:rEyeShader.oc" "momscene_anim1:baby:reggie_naked2:lambert5SG.ss"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:file4.oc" "momscene_anim1:baby:baby:rEyeShader.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:baby:reggie_naked2:file4.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:baby:reggie_naked2:file4.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:baby:reggie_naked2:file4.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:baby:reggie_naked2:file4.ws"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.c" "momscene_anim1:baby:reggie_naked2:file4.c"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.tf" "momscene_anim1:baby:reggie_naked2:file4.tf"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.rf" "momscene_anim1:baby:reggie_naked2:file4.rf"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.mu" "momscene_anim1:baby:reggie_naked2:file4.mu"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.mv" "momscene_anim1:baby:reggie_naked2:file4.mv"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.s" "momscene_anim1:baby:reggie_naked2:file4.s"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.wu" "momscene_anim1:baby:reggie_naked2:file4.wu"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.wv" "momscene_anim1:baby:reggie_naked2:file4.wv"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.re" "momscene_anim1:baby:reggie_naked2:file4.re"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.of" "momscene_anim1:baby:reggie_naked2:file4.of"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.r" "momscene_anim1:baby:reggie_naked2:file4.ro"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.n" "momscene_anim1:baby:reggie_naked2:file4.n"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.vt1" "momscene_anim1:baby:reggie_naked2:file4.vt1"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.vt2" "momscene_anim1:baby:reggie_naked2:file4.vt2"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.vt3" "momscene_anim1:baby:reggie_naked2:file4.vt3"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.vc1" "momscene_anim1:baby:reggie_naked2:file4.vc1"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.o" "momscene_anim1:baby:reggie_naked2:file4.uv"
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.ofs" "momscene_anim1:baby:reggie_naked2:file4.fs"
+		;
+connectAttr "momscene_anim1:baby:lambert3SG.msg" "momscene_anim1:baby:materialInfo2.sg"
+		;
+connectAttr "momscene_anim1:baby:babyDiaperShader.msg" "momscene_anim1:baby:materialInfo2.m"
+		;
+connectAttr "momscene_anim1:baby:babyDiaperShader.oc" "momscene_anim1:baby:lambert3SG.ss"
+		;
+connectAttr "pasted__lambert2SG.msg" "pasted__materialInfo1.sg";
+connectAttr "pasted__lambert2.msg" "pasted__materialInfo1.m";
+connectAttr "pasted__lambert2.oc" "pasted__lambert2SG.ss";
+connectAttr "momscene_anim1:baby:baby_blend2:lambert4SG.msg" "momscene_anim1:baby:baby_blend2:materialInfo6.sg"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:baby_texture.msg" "momscene_anim1:baby:baby_blend2:materialInfo6.m"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:file7.msg" "momscene_anim1:baby:baby_blend2:materialInfo6.t"
+		 -na;
+connectAttr "momscene_anim1:baby:baby_blend2:baby_texture.oc" "momscene_anim1:baby:baby_blend2:lambert4SG.ss"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:rampShader2.oc" "momscene_anim1:baby:baby_blend2:baby_texture.c"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:file7.oc" "momscene_anim1:baby:baby_blend2:rampShader2.clr[0].clrc"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:file8.oc" "momscene_anim1:baby:baby_blend2:rampShader2.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:baby:baby_blend2:file7.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:baby:baby_blend2:file7.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:baby:baby_blend2:file7.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:baby:baby_blend2:file7.ws"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.c" "momscene_anim1:baby:baby_blend2:file7.c"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.tf" "momscene_anim1:baby:baby_blend2:file7.tf"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.rf" "momscene_anim1:baby:baby_blend2:file7.rf"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.mu" "momscene_anim1:baby:baby_blend2:file7.mu"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.mv" "momscene_anim1:baby:baby_blend2:file7.mv"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.s" "momscene_anim1:baby:baby_blend2:file7.s"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.wu" "momscene_anim1:baby:baby_blend2:file7.wu"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.wv" "momscene_anim1:baby:baby_blend2:file7.wv"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.re" "momscene_anim1:baby:baby_blend2:file7.re"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.of" "momscene_anim1:baby:baby_blend2:file7.of"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.r" "momscene_anim1:baby:baby_blend2:file7.ro"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.n" "momscene_anim1:baby:baby_blend2:file7.n"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.vt1" "momscene_anim1:baby:baby_blend2:file7.vt1"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.vt2" "momscene_anim1:baby:baby_blend2:file7.vt2"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.vt3" "momscene_anim1:baby:baby_blend2:file7.vt3"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.vc1" "momscene_anim1:baby:baby_blend2:file7.vc1"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.o" "momscene_anim1:baby:baby_blend2:file7.uv"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.ofs" "momscene_anim1:baby:baby_blend2:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:baby:baby_blend2:file8.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:baby:baby_blend2:file8.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:baby:baby_blend2:file8.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:baby:baby_blend2:file8.ws"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.c" "momscene_anim1:baby:baby_blend2:file8.c"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.tf" "momscene_anim1:baby:baby_blend2:file8.tf"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.rf" "momscene_anim1:baby:baby_blend2:file8.rf"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.mu" "momscene_anim1:baby:baby_blend2:file8.mu"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.mv" "momscene_anim1:baby:baby_blend2:file8.mv"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.s" "momscene_anim1:baby:baby_blend2:file8.s"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.wu" "momscene_anim1:baby:baby_blend2:file8.wu"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.wv" "momscene_anim1:baby:baby_blend2:file8.wv"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.re" "momscene_anim1:baby:baby_blend2:file8.re"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.of" "momscene_anim1:baby:baby_blend2:file8.of"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.r" "momscene_anim1:baby:baby_blend2:file8.ro"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.n" "momscene_anim1:baby:baby_blend2:file8.n"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.vt1" "momscene_anim1:baby:baby_blend2:file8.vt1"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.vt2" "momscene_anim1:baby:baby_blend2:file8.vt2"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.vt3" "momscene_anim1:baby:baby_blend2:file8.vt3"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.vc1" "momscene_anim1:baby:baby_blend2:file8.vc1"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.o" "momscene_anim1:baby:baby_blend2:file8.uv"
+		;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.ofs" "momscene_anim1:baby:baby_blend2:file8.fs"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:lambert1SG.msg" "momscene_anim1:mom2:mom_eyes:materialInfo1.sg"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:lambert1.msg" "momscene_anim1:mom2:mom_eyes:materialInfo1.m"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:file1.msg" "momscene_anim1:mom2:mom_eyes:materialInfo1.t"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom_eyes:lambert1.oc" "momscene_anim1:mom2:mom_eyes:lambert1SG.ss"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:file1.oc" "momscene_anim1:mom2:mom_eyes:lambert1.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:mom_eyes:file1.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:mom_eyes:file1.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:mom_eyes:file1.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:mom_eyes:file1.ws"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.c" "momscene_anim1:mom2:mom_eyes:file1.c"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.tf" "momscene_anim1:mom2:mom_eyes:file1.tf"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.rf" "momscene_anim1:mom2:mom_eyes:file1.rf"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.mu" "momscene_anim1:mom2:mom_eyes:file1.mu"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.mv" "momscene_anim1:mom2:mom_eyes:file1.mv"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.s" "momscene_anim1:mom2:mom_eyes:file1.s"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.wu" "momscene_anim1:mom2:mom_eyes:file1.wu"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.wv" "momscene_anim1:mom2:mom_eyes:file1.wv"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.re" "momscene_anim1:mom2:mom_eyes:file1.re"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.of" "momscene_anim1:mom2:mom_eyes:file1.of"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.r" "momscene_anim1:mom2:mom_eyes:file1.ro"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.n" "momscene_anim1:mom2:mom_eyes:file1.n"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.vt1" "momscene_anim1:mom2:mom_eyes:file1.vt1"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.vt2" "momscene_anim1:mom2:mom_eyes:file1.vt2"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.vt3" "momscene_anim1:mom2:mom_eyes:file1.vt3"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.vc1" "momscene_anim1:mom2:mom_eyes:file1.vc1"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.o" "momscene_anim1:mom2:mom_eyes:file1.uv"
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.ofs" "momscene_anim1:mom2:mom_eyes:file1.fs"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:necklace:crossBrightnessRamp.oc" "momscene_anim1:mom2:necklace1:necklace:rampShader1SG.ss"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:necklace:rampShader1SG.msg" "momscene_anim1:mom2:necklace1:necklace:materialInfo1.sg"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:necklace:crossBrightnessRamp.msg" "momscene_anim1:mom2:necklace1:necklace:materialInfo1.m"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:necklace:crossBrightnessRamp.msg" "momscene_anim1:mom2:necklace1:necklace:materialInfo1.t"
+		 -na;
+connectAttr "momscene_anim1:mom2:necklace1:chain:lambert4SG.msg" "momscene_anim1:mom2:necklace1:chain:materialInfo3.sg"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:chainToon.msg" "momscene_anim1:mom2:necklace1:chain:materialInfo3.m"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:file6.msg" "momscene_anim1:mom2:necklace1:chain:materialInfo3.t"
+		 -na;
+connectAttr "momscene_anim1:mom2:necklace1:chain:chainToon.oc" "momscene_anim1:mom2:necklace1:chain:lambert4SG.ss"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:file6.oc" "momscene_anim1:mom2:necklace1:chain:chainToon.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:necklace1:chain:file6.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:necklace1:chain:file6.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:necklace1:chain:file6.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:necklace1:chain:file6.ws"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.c" "momscene_anim1:mom2:necklace1:chain:file6.c"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.tf" "momscene_anim1:mom2:necklace1:chain:file6.tf"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.rf" "momscene_anim1:mom2:necklace1:chain:file6.rf"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.mu" "momscene_anim1:mom2:necklace1:chain:file6.mu"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.mv" "momscene_anim1:mom2:necklace1:chain:file6.mv"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.s" "momscene_anim1:mom2:necklace1:chain:file6.s"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.wu" "momscene_anim1:mom2:necklace1:chain:file6.wu"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.wv" "momscene_anim1:mom2:necklace1:chain:file6.wv"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.re" "momscene_anim1:mom2:necklace1:chain:file6.re"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.of" "momscene_anim1:mom2:necklace1:chain:file6.of"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.r" "momscene_anim1:mom2:necklace1:chain:file6.ro"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.n" "momscene_anim1:mom2:necklace1:chain:file6.n"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.vt1" "momscene_anim1:mom2:necklace1:chain:file6.vt1"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.vt2" "momscene_anim1:mom2:necklace1:chain:file6.vt2"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.vt3" "momscene_anim1:mom2:necklace1:chain:file6.vt3"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.vc1" "momscene_anim1:mom2:necklace1:chain:file6.vc1"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.o" "momscene_anim1:mom2:necklace1:chain:file6.uv"
+		;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.ofs" "momscene_anim1:mom2:necklace1:chain:file6.fs"
+		;
+connectAttr "momscene_anim1:mom2:lambert4SG.msg" "momscene_anim1:mom2:materialInfo11.sg"
+		;
+connectAttr "momscene_anim1:mom2:momHairLambert.msg" "momscene_anim1:mom2:materialInfo11.m"
+		;
+connectAttr "momscene_anim1:mom2:momHairBrightnessRamp.msg" "momscene_anim1:mom2:materialInfo11.t"
+		 -na;
+connectAttr "momscene_anim1:mom2:momHairLambert.oc" "momscene_anim1:mom2:lambert4SG.ss"
+		;
+connectAttr "momscene_anim1:mom2:momHairBrightnessRamp.oc" "momscene_anim1:mom2:momHairLambert.c"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:file7.oc" "momscene_anim1:mom2:momHairBrightnessRamp.clr[0].clrc"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:file8.oc" "momscene_anim1:mom2:momHairBrightnessRamp.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:mom2:mom:file7.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:mom2:mom:file7.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:mom2:mom:file7.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:mom2:mom:file7.ws"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.c" "momscene_anim1:mom2:mom2:mom:file7.c"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.tf" "momscene_anim1:mom2:mom2:mom:file7.tf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.rf" "momscene_anim1:mom2:mom2:mom:file7.rf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.mu" "momscene_anim1:mom2:mom2:mom:file7.mu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.mv" "momscene_anim1:mom2:mom2:mom:file7.mv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.s" "momscene_anim1:mom2:mom2:mom:file7.s"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.wu" "momscene_anim1:mom2:mom2:mom:file7.wu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.wv" "momscene_anim1:mom2:mom2:mom:file7.wv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.re" "momscene_anim1:mom2:mom2:mom:file7.re"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.of" "momscene_anim1:mom2:mom2:mom:file7.of"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.r" "momscene_anim1:mom2:mom2:mom:file7.ro"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.n" "momscene_anim1:mom2:mom2:mom:file7.n"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.vt1" "momscene_anim1:mom2:mom2:mom:file7.vt1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.vt2" "momscene_anim1:mom2:mom2:mom:file7.vt2"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.vt3" "momscene_anim1:mom2:mom2:mom:file7.vt3"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.vc1" "momscene_anim1:mom2:mom2:mom:file7.vc1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.o" "momscene_anim1:mom2:mom2:mom:file7.uv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.ofs" "momscene_anim1:mom2:mom2:mom:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:mom2:mom:file8.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:mom2:mom:file8.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:mom2:mom:file8.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:mom2:mom:file8.ws"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.c" "momscene_anim1:mom2:mom2:mom:file8.c"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.tf" "momscene_anim1:mom2:mom2:mom:file8.tf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.rf" "momscene_anim1:mom2:mom2:mom:file8.rf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.mu" "momscene_anim1:mom2:mom2:mom:file8.mu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.mv" "momscene_anim1:mom2:mom2:mom:file8.mv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.s" "momscene_anim1:mom2:mom2:mom:file8.s"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.wu" "momscene_anim1:mom2:mom2:mom:file8.wu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.wv" "momscene_anim1:mom2:mom2:mom:file8.wv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.re" "momscene_anim1:mom2:mom2:mom:file8.re"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.of" "momscene_anim1:mom2:mom2:mom:file8.of"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.r" "momscene_anim1:mom2:mom2:mom:file8.ro"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.n" "momscene_anim1:mom2:mom2:mom:file8.n"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.vt1" "momscene_anim1:mom2:mom2:mom:file8.vt1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.vt2" "momscene_anim1:mom2:mom2:mom:file8.vt2"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.vt3" "momscene_anim1:mom2:mom2:mom:file8.vt3"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.vc1" "momscene_anim1:mom2:mom2:mom:file8.vc1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.o" "momscene_anim1:mom2:mom2:mom:file8.uv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.ofs" "momscene_anim1:mom2:mom2:mom:file8.fs"
+		;
+connectAttr "momscene_anim1:mom2:lambert2SG.msg" "momscene_anim1:mom2:materialInfo9.sg"
+		;
+connectAttr "momscene_anim1:mom2:momBodyLambert.msg" "momscene_anim1:mom2:materialInfo9.m"
+		;
+connectAttr "momscene_anim1:mom2:file2.msg" "momscene_anim1:mom2:materialInfo9.t"
+		 -na;
+connectAttr "momscene_anim1:mom2:momBodyLambert.oc" "momscene_anim1:mom2:lambert2SG.ss"
+		;
+connectAttr "momscene_anim1:mom2:momBodyrampShader.oc" "momscene_anim1:mom2:momBodyLambert.c"
+		;
+connectAttr "momscene_anim1:mom2:file2.oc" "momscene_anim1:mom2:momBodyrampShader.clr[1].clrc"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:file15.oc" "momscene_anim1:mom2:momBodyrampShader.clr[2].clrc"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:file16.oc" "momscene_anim1:mom2:momBodyrampShader.clr[3].clrc"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:file17.oc" "momscene_anim1:mom2:momBodyrampShader.clr[4].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:file2.ws";
+connectAttr "momscene_anim1:mom2:place2dTexture3.c" "momscene_anim1:mom2:file2.c"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.tf" "momscene_anim1:mom2:file2.tf"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.rf" "momscene_anim1:mom2:file2.rf"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.mu" "momscene_anim1:mom2:file2.mu"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.mv" "momscene_anim1:mom2:file2.mv"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.s" "momscene_anim1:mom2:file2.s"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.wu" "momscene_anim1:mom2:file2.wu"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.wv" "momscene_anim1:mom2:file2.wv"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.re" "momscene_anim1:mom2:file2.re"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.of" "momscene_anim1:mom2:file2.of"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.r" "momscene_anim1:mom2:file2.ro"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.n" "momscene_anim1:mom2:file2.n"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.vt1" "momscene_anim1:mom2:file2.vt1"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.vt2" "momscene_anim1:mom2:file2.vt2"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.vt3" "momscene_anim1:mom2:file2.vt3"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.vc1" "momscene_anim1:mom2:file2.vc1"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.o" "momscene_anim1:mom2:file2.uv"
+		;
+connectAttr "momscene_anim1:mom2:place2dTexture3.ofs" "momscene_anim1:mom2:file2.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:mom2:mom:file15.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:mom2:mom:file15.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:mom2:mom:file15.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:mom2:mom:file15.ws"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.c" "momscene_anim1:mom2:mom2:mom:file15.c"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.tf" "momscene_anim1:mom2:mom2:mom:file15.tf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.rf" "momscene_anim1:mom2:mom2:mom:file15.rf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.mu" "momscene_anim1:mom2:mom2:mom:file15.mu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.mv" "momscene_anim1:mom2:mom2:mom:file15.mv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.s" "momscene_anim1:mom2:mom2:mom:file15.s"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.wu" "momscene_anim1:mom2:mom2:mom:file15.wu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.wv" "momscene_anim1:mom2:mom2:mom:file15.wv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.re" "momscene_anim1:mom2:mom2:mom:file15.re"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.of" "momscene_anim1:mom2:mom2:mom:file15.of"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.r" "momscene_anim1:mom2:mom2:mom:file15.ro"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.n" "momscene_anim1:mom2:mom2:mom:file15.n"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.vt1" "momscene_anim1:mom2:mom2:mom:file15.vt1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.vt2" "momscene_anim1:mom2:mom2:mom:file15.vt2"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.vt3" "momscene_anim1:mom2:mom2:mom:file15.vt3"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.vc1" "momscene_anim1:mom2:mom2:mom:file15.vc1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.o" "momscene_anim1:mom2:mom2:mom:file15.uv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.ofs" "momscene_anim1:mom2:mom2:mom:file15.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:mom2:mom:file16.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:mom2:mom:file16.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:mom2:mom:file16.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:mom2:mom:file16.ws"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.c" "momscene_anim1:mom2:mom2:mom:file16.c"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.tf" "momscene_anim1:mom2:mom2:mom:file16.tf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.rf" "momscene_anim1:mom2:mom2:mom:file16.rf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.mu" "momscene_anim1:mom2:mom2:mom:file16.mu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.mv" "momscene_anim1:mom2:mom2:mom:file16.mv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.s" "momscene_anim1:mom2:mom2:mom:file16.s"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.wu" "momscene_anim1:mom2:mom2:mom:file16.wu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.wv" "momscene_anim1:mom2:mom2:mom:file16.wv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.re" "momscene_anim1:mom2:mom2:mom:file16.re"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.of" "momscene_anim1:mom2:mom2:mom:file16.of"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.r" "momscene_anim1:mom2:mom2:mom:file16.ro"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.n" "momscene_anim1:mom2:mom2:mom:file16.n"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.vt1" "momscene_anim1:mom2:mom2:mom:file16.vt1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.vt2" "momscene_anim1:mom2:mom2:mom:file16.vt2"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.vt3" "momscene_anim1:mom2:mom2:mom:file16.vt3"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.vc1" "momscene_anim1:mom2:mom2:mom:file16.vc1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.o" "momscene_anim1:mom2:mom2:mom:file16.uv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.ofs" "momscene_anim1:mom2:mom2:mom:file16.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:mom2:mom2:mom:file17.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:mom2:mom2:mom:file17.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:mom2:mom2:mom:file17.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:mom2:mom2:mom:file17.ws"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.c" "momscene_anim1:mom2:mom2:mom:file17.c"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.tf" "momscene_anim1:mom2:mom2:mom:file17.tf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.rf" "momscene_anim1:mom2:mom2:mom:file17.rf"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.mu" "momscene_anim1:mom2:mom2:mom:file17.mu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.mv" "momscene_anim1:mom2:mom2:mom:file17.mv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.s" "momscene_anim1:mom2:mom2:mom:file17.s"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.wu" "momscene_anim1:mom2:mom2:mom:file17.wu"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.wv" "momscene_anim1:mom2:mom2:mom:file17.wv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.re" "momscene_anim1:mom2:mom2:mom:file17.re"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.of" "momscene_anim1:mom2:mom2:mom:file17.of"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.r" "momscene_anim1:mom2:mom2:mom:file17.ro"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.n" "momscene_anim1:mom2:mom2:mom:file17.n"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.vt1" "momscene_anim1:mom2:mom2:mom:file17.vt1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.vt2" "momscene_anim1:mom2:mom2:mom:file17.vt2"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.vt3" "momscene_anim1:mom2:mom2:mom:file17.vt3"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.vc1" "momscene_anim1:mom2:mom2:mom:file17.vc1"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.o" "momscene_anim1:mom2:mom2:mom:file17.uv"
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.ofs" "momscene_anim1:mom2:mom2:mom:file17.fs"
+		;
+connectAttr "momscene_anim1:baby:lambert4SG.msg" "momscene_anim1:baby:materialInfo6.sg"
+		;
+connectAttr "momscene_anim1:baby:baby_texture.msg" "momscene_anim1:baby:materialInfo6.m"
+		;
+connectAttr "momscene_anim1:baby:file7.msg" "momscene_anim1:baby:materialInfo6.t"
+		 -na;
+connectAttr "momscene_anim1:baby:baby_texture.oc" "momscene_anim1:baby:lambert4SG.ss"
+		;
+connectAttr "momscene_anim1:baby:rampShader2.oc" "momscene_anim1:baby:baby_texture.c"
+		;
+connectAttr "momscene_anim1:baby:file7.oc" "momscene_anim1:baby:rampShader2.clr[0].clrc"
+		;
+connectAttr "momscene_anim1:baby:file8.oc" "momscene_anim1:baby:rampShader2.clr[1].clrc"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:baby:file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:baby:file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:baby:file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:baby:file7.ws";
+connectAttr "momscene_anim1:baby:place2dTexture9.c" "momscene_anim1:baby:file7.c"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.tf" "momscene_anim1:baby:file7.tf"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.rf" "momscene_anim1:baby:file7.rf"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.mu" "momscene_anim1:baby:file7.mu"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.mv" "momscene_anim1:baby:file7.mv"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.s" "momscene_anim1:baby:file7.s"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.wu" "momscene_anim1:baby:file7.wu"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.wv" "momscene_anim1:baby:file7.wv"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.re" "momscene_anim1:baby:file7.re"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.of" "momscene_anim1:baby:file7.of"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.r" "momscene_anim1:baby:file7.ro"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.n" "momscene_anim1:baby:file7.n"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.vt1" "momscene_anim1:baby:file7.vt1"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.vt2" "momscene_anim1:baby:file7.vt2"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.vt3" "momscene_anim1:baby:file7.vt3"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.vc1" "momscene_anim1:baby:file7.vc1"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.o" "momscene_anim1:baby:file7.uv"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture9.ofs" "momscene_anim1:baby:file7.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "momscene_anim1:baby:file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "momscene_anim1:baby:file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "momscene_anim1:baby:file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "momscene_anim1:baby:file8.ws";
+connectAttr "momscene_anim1:baby:place2dTexture10.c" "momscene_anim1:baby:file8.c"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.tf" "momscene_anim1:baby:file8.tf"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.rf" "momscene_anim1:baby:file8.rf"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.mu" "momscene_anim1:baby:file8.mu"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.mv" "momscene_anim1:baby:file8.mv"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.s" "momscene_anim1:baby:file8.s"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.wu" "momscene_anim1:baby:file8.wu"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.wv" "momscene_anim1:baby:file8.wv"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.re" "momscene_anim1:baby:file8.re"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.of" "momscene_anim1:baby:file8.of"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.r" "momscene_anim1:baby:file8.ro"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.n" "momscene_anim1:baby:file8.n"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.vt1" "momscene_anim1:baby:file8.vt1"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.vt2" "momscene_anim1:baby:file8.vt2"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.vt3" "momscene_anim1:baby:file8.vt3"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.vc1" "momscene_anim1:baby:file8.vc1"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.o" "momscene_anim1:baby:file8.uv"
+		;
+connectAttr "momscene_anim1:baby:place2dTexture10.ofs" "momscene_anim1:baby:file8.fs"
+		;
+connectAttr "pasted__bifrostLiquidMaterial1.oc" "pasted__bifrostLiquidMaterial1SG.ss"
+		;
 connectAttr "bifrostLiquidMaterial1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "pasted__bifrostLiquidMaterial1SG.pa" ":renderPartition.st" -na;
+connectAttr "pasted__lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "momscene_anim1:baby:lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "momscene_anim1:baby:reggie_naked2:lambert4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "momscene_anim1:baby:reggie_naked2:lambert5SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "momscene_anim1:baby:lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "momscene_anim1:baby:baby_blend2:lambert4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom_eyes:lambert1SG.pa" ":renderPartition.st" -na
+		;
+connectAttr "momscene_anim1:mom2:necklace1:necklace:rampShader1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "momscene_anim1:mom2:necklace1:chain:lambert4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "momscene_anim1:mom2:lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "momscene_anim1:mom2:lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "bifrostLiquidMaterial1.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "pasted__bifrostLiquidMaterial1.msg" ":defaultShaderList1.s" -na;
+connectAttr "pasted__lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "momscene_anim1:baby:babyDiaperShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "momscene_anim1:baby:baby:lEyeShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "momscene_anim1:baby:baby:rEyeShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "momscene_anim1:baby:baby_texture.msg" ":defaultShaderList1.s" -na;
+connectAttr "momscene_anim1:baby:rampShader2.msg" ":defaultShaderList1.s" -na;
+connectAttr "momscene_anim1:baby:baby_blend2:baby_texture.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "momscene_anim1:baby:baby_blend2:rampShader2.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "momscene_anim1:mom2:momHairBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom_eyes:lambert1.msg" ":defaultShaderList1.s" 
+		-na;
+connectAttr "momscene_anim1:mom2:momBodyrampShader.msg" ":defaultShaderList1.s" 
+		-na;
+connectAttr "momscene_anim1:mom2:necklace1:necklace:crossBrightnessRamp.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "momscene_anim1:mom2:necklace1:chain:chainToon.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "momscene_anim1:mom2:momBodyLambert.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "momscene_anim1:mom2:momHairLambert.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:baby:reggie_naked2:place2dTexture4.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:baby:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:baby:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:baby:baby_blend2:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture9.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture10.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom_eyes:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:place2dTexture3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture17.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture18.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:place2dTexture19.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "momscene_anim1:mom2:necklace1:chain:place2dTexture6.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "momscene_anim1:baby:reggie_naked2:file3.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "momscene_anim1:baby:reggie_naked2:file4.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "momscene_anim1:baby:file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "momscene_anim1:baby:file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "momscene_anim1:baby:baby_blend2:file7.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "momscene_anim1:baby:baby_blend2:file8.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:file7.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "momscene_anim1:mom2:mom2:mom:file8.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "momscene_anim1:mom2:mom_eyes:file1.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "momscene_anim1:mom2:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "momscene_anim1:mom2:mom2:mom:file15.msg" ":defaultTextureList1.tx" 
+		-na;
+connectAttr "momscene_anim1:mom2:mom2:mom:file16.msg" ":defaultTextureList1.tx" 
+		-na;
+connectAttr "momscene_anim1:mom2:mom2:mom:file17.msg" ":defaultTextureList1.tx" 
+		-na;
+connectAttr "momscene_anim1:mom2:necklace1:chain:file6.msg" ":defaultTextureList1.tx"
+		 -na;
 connectAttr "tear_meshShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "alc_meshShape.iog" ":initialShadingGroup.dsm" -na;
 // End of momscene_tear.ma
