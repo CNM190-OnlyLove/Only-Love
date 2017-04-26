@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: church.ma
-//Last modified: Wed, Apr 26, 2017 10:23:02 AM
+//Last modified: Wed, Apr 26, 2017 10:27:32 AM
 //Codeset: UTF-8
 requires maya "2017ff04";
 requires -nodeType "hairPhysicalShader" "hairPhysicalShader" "1.0";
@@ -23,14 +23,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4F238126-2D47-48AD-35C1-A6A571A99452";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.49608577890400518 4.9993771250067649 18.833660668862088 ;
-	setAttr ".r" -type "double3" 349.46164725868289 720.59999999995648 -4.348653042968882e-17 ;
+	setAttr ".t" -type "double3" -2.7658214489165633 6.8581720438719476 24.935580205573487 ;
+	setAttr ".r" -type "double3" 347.66164725868225 711.39999999995518 -2.010451425668655e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "643CB328-3945-9A6D-F3C9-73ADA0DA049F";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 14.713792195313951;
+	setAttr ".coi" 21.292406693183942;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -11086,7 +11086,7 @@ createNode rampShader -n "bigChurchRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "file13";
 	rename -uid "EB45E561-AC46-E703-6930-E4B3D1C138F2";
-	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/ChurchTextures/church-big.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/ChurchTextures/church-big-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture13";
 	rename -uid "9B7BA266-0644-B094-223F-E6946D7B6663";
