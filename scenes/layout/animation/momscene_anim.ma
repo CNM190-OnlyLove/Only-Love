@@ -1,6 +1,6 @@
-//Maya ASCII 2017 scene
+//Maya ASCII 2017ff04 scene
 //Name: momscene_anim.ma
-//Last modified: Wed, Apr 19, 2017 04:03:59 PM
+//Last modified: Wed, Apr 26, 2017 11:30:40 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "mom1" -dr 1 -rfn "momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -rdi 1 -ns "baby" -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
@@ -19,31 +19,30 @@ file -r -ns "chair" -dr 1 -rfn "chairRN" -op "v=0;" -typ "mayaAscii" "/Users/ver
 file -r -ns "table1" -dr 1 -rfn "tableRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//assets/table/table.ma";
 file -r -ns "mom2" -dr 1 -rfn "momRN1" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -r -ns "mom1" -dr 1 -rfn "mom_scene:momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
-requires maya "2017";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.3.0.0";
-requires -nodeType "renderSetup" "renderSetup.py" "1.0";
-requires "stereoCamera" "10.0";
-requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "OmnidirectionalStereo"
-		 -nodeType "PxrOcclusion" -nodeType "PxrDefault" -nodeType "PxrVisualizer" -nodeType "PxrPathTracer"
-		 -nodeType "PxrDirectLighting" -nodeType "PxrVCM" -nodeType "PxrCamera" -nodeType "PxrValidateBxdf"
-		 "RenderMan_for_Maya" "21.3";
+requires maya "2017ff04";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -nodeType "mia_material_x" -nodeType "contour_store_function"
 		 -nodeType "contour_contrast_function_levels" -nodeType "contour_shader_simple" -dataType "byteArray"
 		 "Mayatomr" "268000.13910 - 3.14.3.31 ";
+requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "OmnidirectionalStereo"
+		 -nodeType "PxrOcclusion" -nodeType "PxrDefault" -nodeType "PxrVisualizer" -nodeType "PxrPathTracer"
+		 -nodeType "PxrDirectLighting" -nodeType "PxrVCM" -nodeType "PxrCamera" -nodeType "PxrValidateBxdf"
+		 "RenderMan_for_Maya" "21.3";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.4.2.0";
+requires -nodeType "renderSetup" "renderSetup.py" "1.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
 fileInfo "version" "2017";
-fileInfo "cutIdentifier" "201606150345-997974";
-fileInfo "osv" "Mac OS X 10.11.6";
+fileInfo "cutIdentifier" "201702071345-1015190";
+fileInfo "osv" "Mac OS X 10.10.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "17733B9D-464D-8275-C5F8-31998A43294B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6508895227227436 3.528754983732096 6.7089300069368374 ;
-	setAttr ".r" -type "double3" -37.538352984322806 -6477.7999999982494 -8.9519083463623662e-16 ;
+	setAttr ".t" -type "double3" 6.136683928537451 10.788722250065259 41.558127597016906 ;
+	setAttr ".r" -type "double3" -15.938352879045079 -6479.4000000000688 -1.0809508992522594e-15 ;
 	setAttr ".rp" -type "double3" -6.6613381477509392e-16 -8.8817841970012523e-16 -3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" 3.0423021090415793e-16 -2.6571173952804654e-15 3.3957699011225747e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -51,7 +50,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 5.3377820569283312;
+	setAttr ".coi" 47.725526492888861;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1945,11 +1944,11 @@ createNode transform -n "mom_cam:new_camera_test";
 createNode camera -n "mom_cam:new_camera_testShape" -p "mom_cam:new_camera_test";
 	rename -uid "3A27BF67-4EEF-DDFA-587F-3A8B9A008F7E";
 	setAttr -k off ".v";
-	setAttr ".coi" 9.9999997473787533e-06;
+	setAttr ".coi" 67.425244279447426;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
-	setAttr ".tp" -type "double3" -10.661535892858701 -2.3165686061525452 0.78106321321506833 ;
+	setAttr ".tp" -type "double3" 1.1852132748237709 0.27481989702150322 -0.78637871264782011 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode fosterParent -n "momRN1fosterParent1";
@@ -2351,7 +2350,7 @@ createNode parentConstraint -n "Arm_Cntrl_L_parentConstraint1" -p "momRN1fosterP
 	setAttr ".tg[0].tot" -type "double3" -1.6737109476139267e-09 -1.4068140252732064e-07 
 		3.9553126751634693e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 19.09576146996509 -15.475442673954277 -121.32841567964314 ;
-	setAttr ".lr" -type "double3" 103.56150918170279 169.32136450418068 -258.13591024411141 ;
+	setAttr ".lr" -type "double3" 113.23666447467414 171.23752668618175 -244.62586551681338 ;
 	setAttr ".rst" -type "double3" -7.6341341092173316 -1.890499146204244 15.155008364450964 ;
 	setAttr ".rsrr" -type "double3" 19.095761469965069 -15.475442673954266 -121.32841567964314 ;
 	setAttr -k on ".w0";
@@ -2382,7 +2381,7 @@ createNode parentConstraint -n "Arm_Cntrl_R_parentConstraint1" -p "momRN1fosterP
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode fosterParent -n "babyRNfosterParent1";
-	rename -uid "8D7D1C95-9747-987C-9B4F-72B084B9DFFF";
+	rename -uid "984D05F5-6A47-20B7-9B2E-6D9ABC186454";
 createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
 	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
 createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
@@ -2396,13 +2395,489 @@ createNode locator -n "BabyGrab_OneShape" -p "BabyGrab_One";
 	setAttr -k off ".v";
 	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
 createNode fosterParent -n "wineRNfosterParent1";
-	rename -uid "40B8B303-D74E-7686-DFAD-B68C86F68BC9";
+	rename -uid "35C668BE-B946-BF20-A81E-6FBE8BAC4D78";
 createNode transform -n "battle_grab_loc" -p "wineRNfosterParent1";
 	rename -uid "13CA559F-47AD-A738-C358-AEA7771E6926";
 createNode locator -n "battle_grab_locShape" -p "battle_grab_loc";
 	rename -uid "5AD7CC5A-4535-0744-9457-6C9EB02EF115";
 	setAttr -k off ".v";
 	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+createNode RenderMan -s -n "renderManGlobals";
+	rename -uid "46F48DD2-004C-0C12-3976-5B9CFE26B322";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".nt" -type "string" "settings:job";
+	setAttr -s 2 ".p";
+createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
+	rename -uid "6BBFD43A-1B42-6B56-F004-13BB3ABF6583";
+lockNode -l 1 ;
+createNode PxrCamera -s -n "PxrCamera";
+	rename -uid "AD46E17C-EB4C-4967-99A3-C7BD0D677A86";
+lockNode -l 1 ;
+createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
+	rename -uid "92E28046-F142-8CA5-D231-0FB3F539EE8D";
+lockNode -l 1 ;
+createNode PxrDefault -s -n "PxrDefault";
+	rename -uid "140C46B2-0D4D-E1B0-E889-33827B32162D";
+lockNode -l 1 ;
+createNode PxrDirectLighting -s -n "PxrDirectLighting";
+	rename -uid "5143A273-914F-29A2-A60C-9B8CA0452E78";
+lockNode -l 1 ;
+createNode PxrOcclusion -s -n "PxrOcclusion";
+	rename -uid "893C2D4B-2D4E-2448-CE41-27B4C46CBBFC";
+lockNode -l 1 ;
+createNode PxrPathTracer -s -n "PxrPathTracer";
+	rename -uid "B140DE26-7E4B-6CA6-368D-C69BB03E84E9";
+lockNode -l 1 ;
+createNode PxrVCM -s -n "PxrVCM";
+	rename -uid "46B77BF1-C34F-3824-1BCB-C196EEA76657";
+lockNode -l 1 ;
+createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
+	rename -uid "64D1CC85-D14D-7B7F-51BA-FF8525D76CD1";
+lockNode -l 1 ;
+createNode PxrVisualizer -s -n "PxrVisualizer";
+	rename -uid "F6D6D908-9741-59C1-C219-9BA0AE9836E9";
+lockNode -l 1 ;
+createNode RenderMan -s -n "rmanFinalGlobals";
+	rename -uid "3B27B1BB-7248-4484-DB24-67A71E5447A4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Final";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanFinalOutputGlobals0";
+	rename -uid "83D653E1-1E45-A0BC-3FA9-C9BD7AFF56F1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	rename -uid "BD1B2406-744C-D8E2-F073-32959AFFFD28";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
+		-dv -1 -at "long";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
+	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
+	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
+	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	rename -uid "009BA027-ED40-12FE-B1D1-6E9451394298";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "13524FBA-0949-72F6-6F54-55A378545904";
 	setAttr -s 3 ".opt";
@@ -2410,7 +2885,7 @@ createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	rename -uid "FDCD18D0-4142-6DEC-ADAD-DA9384B8E080";
 	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
-	setAttr ".ivb" 0;
+	setAttr ".ivb" no;
 createNode mentalrayOptions -s -n "miDefaultOptions";
 	rename -uid "190C88BF-FE4E-80F6-F0FB-7792BE400EB4";
 	addAttr -ci true -m -sn "stringOptions" -ln "stringOptions" -at "compound" -nc 
@@ -2418,6 +2893,11 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
+	setAttr ".minsp" 0;
+	setAttr ".maxsp" 2;
+	setAttr ".mru" 2;
+	setAttr ".miUnifiedSampling" no;
+	setAttr ".miSamplesMax" 50;
 	setAttr -s 82 ".stringOptions";
 	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
 	setAttr ".stringOptions[0].value" -type "string" "1.0";
@@ -2665,55 +3145,9 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[81].name" -type "string" "environment lighting global illum photons";
 	setAttr ".stringOptions[81].value" -type "string" "0";
 	setAttr ".stringOptions[81].type" -type "string" "integer";
-	setAttr ".minsp" 0;
-	setAttr ".maxsp" 2;
-	setAttr ".mru" 2;
-	setAttr ".miUnifiedSampling" 0;
-	setAttr ".miSamplesMax" 50;
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "E07EB045-A646-FC83-A901-7C8477BDBDAB";
-	setAttr ".ce" 1;
-createNode RenderMan -s -n "renderManGlobals";
-	rename -uid "46F48DD2-004C-0C12-3976-5B9CFE26B322";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr -s 2 ".p";
-	setAttr ".nt" -type "string" "settings:job";
-createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
-	rename -uid "FFFB2615-5B40-0AA7-50F3-0691A54262BC";
-lockNode -l 1 ;
-createNode PxrCamera -s -n "PxrCamera";
-	rename -uid "8CEF67BF-7942-A11B-A039-3F9F914EC0B4";
-lockNode -l 1 ;
-createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
-	rename -uid "D19134EA-724A-C9D5-5A33-3F9A514B98D0";
-lockNode -l 1 ;
-createNode PxrDefault -s -n "PxrDefault";
-	rename -uid "6CD61112-D449-3D44-1E1A-9CBBEB2B8E09";
-lockNode -l 1 ;
-createNode PxrDirectLighting -s -n "PxrDirectLighting";
-	rename -uid "11BC7104-D548-D4B1-B5CD-699FEDD21255";
-lockNode -l 1 ;
-createNode PxrOcclusion -s -n "PxrOcclusion";
-	rename -uid "47EC507B-0A4B-AD42-A7D0-71B87D90B397";
-lockNode -l 1 ;
-createNode PxrPathTracer -s -n "PxrPathTracer";
-	rename -uid "A0A8A3FC-B544-A5F9-FAEE-7D94EB50E31F";
-lockNode -l 1 ;
-createNode PxrVCM -s -n "PxrVCM";
-	rename -uid "703398CE-CB4A-88F0-3F6B-738B1BDCA0D5";
-lockNode -l 1 ;
-createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
-	rename -uid "A54730A5-1B4F-42FA-EF95-81BC9891188E";
-lockNode -l 1 ;
-createNode PxrVisualizer -s -n "PxrVisualizer";
-	rename -uid "FD719754-E246-6BE6-CAD2-E498EC827B53";
-lockNode -l 1 ;
+	setAttr ".ce" yes;
 createNode RenderMan -s -n "renderManRISGlobals";
 	rename -uid "F4E8A911-2942-1FA9-CFF4-45A9B93BBE4C";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3167,6 +3601,7 @@ createNode RenderMan -s -n "renderManRISGlobals";
 		-dv -1 -at "float";
 	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
 		-dt "string";
+	setAttr ".nt" -type "string" "settings:job";
 	setAttr ".rman__torattr___class" -type "string" "RISJob";
 	setAttr ".rman__torattr___task" -type "string" "job";
 	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
@@ -3369,442 +3804,6 @@ createNode RenderMan -s -n "renderManRISGlobals";
 	setAttr -k on ".rman__riopt__Projection_duration" 1;
 	setAttr -k on ".rman__riopt__Projection2_angle" 90;
 	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr ".nt" -type "string" "settings:job";
-createNode RenderMan -s -n "rmanFinalGlobals";
-	rename -uid "3B27B1BB-7248-4484-DB24-67A71E5447A4";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
-		-dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Final";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
-	setAttr -k on ".rman__riopt__photon_emit" 0;
-	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
-	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".nt" -type "string" "pass:render";
-createNode RenderMan -s -n "rmanFinalOutputGlobals0";
-	rename -uid "83D653E1-1E45-A0BC-3FA9-C9BD7AFF56F1";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Primary";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
-createNode RenderMan -s -n "rmanRerenderRISGlobals";
-	rename -uid "BD1B2406-744C-D8E2-F073-32959AFFFD28";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
-		-dv -1 -at "float";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
-		-dv -1 -at "long";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
-	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
-	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
-	setAttr -k on ".rman__torattr___previewPass" 1;
-	setAttr -k on ".rman__torattr___motionBlur" 0;
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr ".rman__torattr___passNameFormat" -type "string" "";
-	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
-	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
-	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
-	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
-	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
-	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
-	setAttr -k on ".rman__riopt__photon_emit" 0;
-	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
-	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
-	setAttr -k on ".rman__riattr__trace_displacements" 1;
-	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
-	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
-	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
-	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
-	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
-	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
-	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
-	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
-	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
-	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
-	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
-	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
-	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
-	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
-	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
-	setAttr ".nt" -type "string" "pass:render";
-createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
-	rename -uid "009BA027-ED40-12FE-B1D1-6E9451394298";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeGlobals";
 	rename -uid "71B4FF5E-1A4E-10B5-E398-42A59D6F6B5E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -3844,6 +3843,7 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 		-dt "string";
 	addAttr -ci true -h true -sn "rman__param__ptrender___outputfile" -ln "rman__param__ptrender___outputfile" 
 		-dt "string";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Bake";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3858,7 +3858,6 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanPreviewGlobals";
 	rename -uid "0D07CB12-6C4C-4840-F037-4C96A15F04C0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -3937,6 +3936,7 @@ createNode RenderMan -s -n "rmanPreviewGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Preview";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -3967,7 +3967,6 @@ createNode RenderMan -s -n "rmanPreviewGlobals";
 	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	rename -uid "E6FF9B27-344B-16A3-083A-DFB406124135";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4031,6 +4030,7 @@ createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4048,7 +4048,6 @@ createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanRerenderGlobals";
 	rename -uid "5E441969-084E-B14B-B58C-208C93B2560E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4141,6 +4140,7 @@ createNode RenderMan -s -n "rmanRerenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Rerender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4176,7 +4176,6 @@ createNode RenderMan -s -n "rmanRerenderGlobals";
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
 	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	rename -uid "48293F8B-CC4E-5E54-AFC3-4CBC7BA0C578";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4240,6 +4239,7 @@ createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4257,7 +4257,6 @@ createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	rename -uid "7997858C-EB48-248D-35E9-3B92BB759AFE";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4336,6 +4335,7 @@ createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "ReyesRerender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4366,7 +4366,6 @@ createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	setAttr -k on ".rman__riattr__trace_displacements" 1;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	rename -uid "44ECEEEF-4440-D51F-4D71-D6B548AEF42A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4430,6 +4429,7 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4447,7 +4447,6 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	rename -uid "319EB3D0-C246-A526-BDC8-D3B75211C9F1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4514,6 +4513,7 @@ createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4542,7 +4542,6 @@ createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -s 2 ".d";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	rename -uid "E0E1FF93-7542-FFB5-9EB0-B886EDD6F4E9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4564,6 +4563,7 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Null";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4572,7 +4572,6 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "null";
 	setAttr ".rman__riopt__Display_type" -type "string" "null";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	rename -uid "555D96DA-2E40-96CA-7EF4-87B4770C5394";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4606,6 +4605,7 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4618,7 +4618,6 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
 	setAttr ".rman__riopt__Display_mode" -type "string" "deepopacity";
 	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	rename -uid "7C7CFA34-274A-F601-ACAA-B09946C31D9E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4689,6 +4688,7 @@ createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4719,7 +4719,6 @@ createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	setAttr -k on ".rman__riattr__cull_backfacing" 0;
 	setAttr -k on ".rman__riattr__cull_hidden" 0;
 	setAttr -s 2 ".d";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	rename -uid "0185A94B-C84A-7E79-C290-E09965021F72";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4741,6 +4740,7 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Null";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4749,7 +4749,6 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "null";
 	setAttr ".rman__riopt__Display_type" -type "string" "null";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	rename -uid "6FE97A07-874B-DAC7-3A58-83B48FA83EDE";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4797,6 +4796,7 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4813,7 +4813,6 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	setAttr ".rman__riopt__Display_mode" -type "string" "areashadow";
 	setAttr -k on ".rman__riopt__Hider_sigma" 0;
 	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanShadowGlobals";
 	rename -uid "24FEB9DA-E04E-5813-A2E3-2B98CE73E422";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4894,6 +4893,7 @@ createNode RenderMan -s -n "rmanShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Shadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4923,7 +4923,6 @@ createNode RenderMan -s -n "rmanShadowGlobals";
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -k on ".rman__riopt__Hider_jitter" 0;
 	setAttr ".rman__riopt__Hider_depthfilter" -type "string" "midpoint";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	rename -uid "A5AF6247-2642-16CB-972A-33ACD83985CD";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4947,6 +4946,7 @@ createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "ShadowZ";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4956,7 +4956,6 @@ createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
 	setAttr ".rman__riopt__Display_type" -type "string" "shadow";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	rename -uid "A98D090C-4947-91D9-0867-9E8CA7D00147";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4993,6 +4992,7 @@ createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "BakeRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -5010,7 +5010,6 @@ createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	setAttr -k on ".rman__riattr__cull_hidden" 0;
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -s 32 ".c";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	rename -uid "377244B2-4741-1A46-5F30-FC82878D0D2D";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5056,6 +5055,7 @@ createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -5069,7 +5069,6 @@ createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
 	rename -uid "9B76A920-F54B-5906-8486-E6B6DFB49775";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5083,11 +5082,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Rim";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Rim";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
 	rename -uid "7E6E78B4-6949-3A15-ABB1-2A9C49C0469B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5101,11 +5100,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularEnvironment";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularEnvironment";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
 	rename -uid "80D7C57C-7845-B635-F2C5-308ED2B0EC8E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5119,11 +5118,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Translucence";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Translucence";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
 	rename -uid "B1B37D7C-F943-E320-B609-ADA0C6AEFFDA";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5137,11 +5136,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Z";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Z";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
 	rename -uid "CAE1E708-3F48-9FF1-97AE-DBA37BD5D777";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5155,11 +5154,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 	rename -uid "860EC622-2043-5176-3315-CA96F53155AF";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5197,6 +5196,7 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 		-dv -1 -at "float" -p "rman__riopt__DisplayChannel_filterwidth";
 	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_filterwidth1" -ln "rman__riopt__DisplayChannel_filterwidth1" 
 		-dv -1 -at "float" -p "rman__riopt__DisplayChannel_filterwidth";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Diffuse";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
@@ -5206,7 +5206,6 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 	setAttr -k on ".rman__riopt__DisplayChannel_dither" 0;
 	setAttr ".rman__riopt__DisplayChannel_filter" -type "string" "zmin";
 	setAttr -k on ".rman__riopt__DisplayChannel_filterwidth" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
 	rename -uid "BDB12513-174F-8709-1B62-45BBC2AD2204";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5220,11 +5219,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseEnvironment";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseEnvironment";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
 	rename -uid "03674044-A34C-2323-87FB-258A28187CCC";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5238,11 +5237,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	rename -uid "350E9CD2-3547-70AA-8149-E9B019DF3A86";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5280,6 +5279,7 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "id";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
@@ -5289,7 +5289,6 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	setAttr -k on ".rman__riopt__DisplayChannel_dither" 0;
 	setAttr ".rman__riopt__DisplayChannel_filter" -type "string" "zmin";
 	setAttr -k on ".rman__riopt__DisplayChannel_filterwidth" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
 	rename -uid "B752136C-5941-7701-67EA-A3889C6CDDCE";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5303,11 +5302,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Ci";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ci";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
 	rename -uid "A42DD1CE-E345-19C1-75CE-13A11CA86056";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5321,11 +5320,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "wP";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "point wP";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
 	rename -uid "275A6EC6-B64B-B2D4-7CD5-C1B04E14F3AD";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5339,11 +5338,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularDirectShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirectShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
 	rename -uid "E7BD032E-7947-6757-0D5B-BBB84BE5E946";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5357,11 +5356,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseColor";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
 	rename -uid "24B96953-8643-15D0-7C91-39B3E635D4F6";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5375,11 +5374,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Occlusion";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Occlusion";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
 	rename -uid "DDBCDBC4-9C40-C2B4-E5F0-8F9064DF1A6A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5393,11 +5392,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
 	rename -uid "4AC36A29-0D40-7322-5A0F-E3A2BDE16AE4";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5411,11 +5410,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "N";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal N";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
 	rename -uid "A549A323-F24D-A039-862B-C6AA24B41F2C";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5429,11 +5428,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Incandescence";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Incandescence";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
 	rename -uid "9D82C24B-2E45-5651-B43D-97B65512A349";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5447,11 +5446,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
 	rename -uid "F7071A17-E64A-FFA4-1C69-179694D45F0F";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5465,11 +5464,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularColor";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
 	rename -uid "487CB362-CD46-B3AC-5F77-44A9130B2CCF";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5483,11 +5482,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Oi";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Oi";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
 	rename -uid "08B3B3EE-0147-16FE-FB74-66B08640AAA9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5501,11 +5500,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "OcclusionDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionDirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
 	rename -uid "F22C7510-FC44-E72A-BF7E-C680F2BC3D5E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5519,11 +5518,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "GlowColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color GlowColor";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
 	rename -uid "E4E3995C-BE47-4B5E-8C7C-B08B7F64EA2E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5537,11 +5536,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseDirectShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirectShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
 	rename -uid "9963743E-8643-A9D4-FB85-67A2E55F573B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5555,11 +5554,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Subsurface";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Subsurface";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
 	rename -uid "22E8BDBD-2E45-8E3B-A14A-A6BE7CDEF347";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5573,11 +5572,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Specular";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Specular";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
 	rename -uid "8D264385-C149-EE78-2D75-A3972D130A31";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5591,11 +5590,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Refraction";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Refraction";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
 	rename -uid "016ECE97-BC44-3AC9-4905-02B08529CA3F";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5609,11 +5608,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseIndirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
 	rename -uid "EE936139-AD4A-51D2-4D03-D6A10AC15D50";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5627,11 +5626,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Backscattering";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Backscattering";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
 	rename -uid "9A0462CD-A148-9F51-C5EC-71A15153E44F";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5645,11 +5644,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularIndirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
 	rename -uid "343DD56A-F74E-4A00-79C8-CB82E0070AB3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5663,11 +5662,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Ambient";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ambient";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
 	rename -uid "D67FCBC2-5242-156B-7CFA-F3835D986251";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5681,11 +5680,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "wN";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal wN";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
 	rename -uid "01B47DA5-CC44-F834-583C-C1AF4E833AC1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5699,11 +5698,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "OcclusionIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionIndirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	rename -uid "42BB3C72-CC4A-D19F-E6CA-A4895CE38DBB";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5733,6 +5732,7 @@ createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSMakeBrickmap";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -5745,7 +5745,6 @@ createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	setAttr -k on ".rman__param__brickmake_omitgeometry" 1;
 	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	rename -uid "DAD577D9-EF48-8863-95C8-B5AF6507F474";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5791,6 +5790,7 @@ createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSDiffuse";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -5811,7 +5811,6 @@ createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSSRenderGlobals";
 	rename -uid "5190772F-1545-8DA5-3097-698CD6386E9B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5858,6 +5857,7 @@ createNode RenderMan -s -n "rmanSSRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -5878,7 +5878,6 @@ createNode RenderMan -s -n "rmanSSRenderGlobals";
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -k on ".rman__riattr___ShadingRate" 5;
 	setAttr -s 4 ".c";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	rename -uid "5A11883A-E74A-5DBE-A007-23BF4FF6C388";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5924,6 +5923,7 @@ createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -5937,7 +5937,6 @@ createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
 	rename -uid "AA6E2B03-2D41-3761-DD15-E09A8F9411AB";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5953,12 +5952,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
 	rename -uid "11EEBFF0-0C46-C0AE-4088-3596EC752E63";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5974,12 +5973,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "area";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
 	rename -uid "5C45D28A-7D4A-9765-A222-87A385731B66";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5995,12 +5994,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "albedo";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
 	rename -uid "3F86503C-4246-DA02-4BC4-46A4DC090B1B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6016,12 +6015,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "radiance_t";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	rename -uid "550962BE-4445-6538-CE2E-989C0EA63619";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6055,6 +6054,7 @@ createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSOrganize";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6069,7 +6069,6 @@ createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	rename -uid "D63DEBFF-1946-A5F4-F252-1A9A99039E6A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6097,6 +6096,7 @@ createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakeBrickmap";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6108,7 +6108,6 @@ createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	setAttr -k on ".rman__param__brickmake_progress" 2;
 	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBRenderGlobals";
 	rename -uid "9F457527-0542-612E-B815-F4A3F3231747";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6153,6 +6152,7 @@ createNode RenderMan -s -n "rmanSBRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -6172,7 +6172,6 @@ createNode RenderMan -s -n "rmanSBRenderGlobals";
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -s 6 ".c";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	rename -uid "8E7D86DD-A544-555A-ECEE-5EA8A8F6BD15";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6218,6 +6217,7 @@ createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -6231,7 +6231,6 @@ createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
 	rename -uid "E0025092-0A48-78EB-F44F-61998FDC9FF9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6247,12 +6246,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "color";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _color";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
 	rename -uid "60630A7E-0F47-E1F9-E73B-5CBD3D0427DA";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6268,12 +6267,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
 	rename -uid "00653CA2-A54F-F237-05B5-FEAAD29AA724";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6289,12 +6288,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "area";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
 	rename -uid "DB338394-A74D-5788-8796-0EA32BC238A3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6310,12 +6309,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "float";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _float";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
 	rename -uid "7965EC47-6E42-5E14-F94C-768C236EA5C8";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6331,12 +6330,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "albedo";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
 	rename -uid "4E68E8B5-0B49-9AC2-9AE8-1ABF03CA1C4A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6352,12 +6351,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "radiance_t";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	rename -uid "25631D4B-0B4C-2664-AC6D-FE8A009A9D7B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6389,6 +6388,7 @@ createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakePtCloud";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6402,7 +6402,6 @@ createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	rename -uid "841F2B5D-D54B-AC86-12CC-3381111E15AB";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6438,6 +6437,7 @@ createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBPtRender";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6451,7 +6451,6 @@ createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	rename -uid "C936F9F9-2C4F-438B-7A4A-448DE67A1DEA";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6483,6 +6482,7 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakePtex";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6496,20 +6496,19 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "76B59659-B44B-1E86-D9E2-158F9F046AE4";
+	rename -uid "BCB957F8-0E40-5412-7044-0798A65F0317";
 	setAttr -s 371 ".lnk";
 	setAttr -s 371 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "61B56FAC-9744-1628-650B-7C9582E29863";
+	rename -uid "42C168C9-F243-A083-6A73-0FADDA2F5A1B";
 	setAttr ".cdl" 3;
 	setAttr -s 8 ".dli[1:7]"  1 2 3 4 5 6 0;
 	setAttr -s 7 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8FE7AEEF-A64E-0BCA-8F16-3E847524724C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2970A238-9A46-E48A-17A3-ABBCC485A0D6";
+	rename -uid "E6933114-9C4F-4606-730C-BE8D0B91DAE8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3364DFD3-5743-413F-CAFD-25A163300DC5";
 	setAttr ".g" yes;
@@ -6523,97 +6522,59 @@ createNode partition -n "mtorPartition";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "AA54CAA8-7043-4B7D-253D-DB94FB4989BB";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 0\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
-		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n"
-		+ "                -hulls 0\n                -grid 0\n                -imagePlane 1\n                -joints 0\n                -ikHandles 0\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 0\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
-		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 0\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n"
-		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 1\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
-		+ "                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 0\n                -controlVertices 0\n                -hulls 0\n                -grid 0\n                -imagePlane 0\n                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n"
-		+ "                -nRigids 0\n                -dynamicConstraints 0\n                -locators 1\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n"
-		+ "            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 0\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 1\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
-		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n"
-		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 0\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n                -hulls 1\n                -grid 1\n                -imagePlane 0\n                -joints 0\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
-		+ "                -width 450\n                -height 475\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n"
-		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
-		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 0\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 450\n            -height 475\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"mom_cam:new_camera_test\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n"
-		+ "                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 1\n                -maximumNumHardwareLights 0\n                -occlusionCulling 1\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 0\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 0\n                -cameras 1\n                -controlVertices 0\n                -hulls 0\n                -grid 0\n                -imagePlane 0\n"
-		+ "                -joints 0\n                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 1\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 906\n                -height 475\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 0 \n                $editorName;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_cam:new_camera_test\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
-		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 1\n            -maximumNumHardwareLights 0\n            -occlusionCulling 1\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n"
-		+ "            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 906\n            -height 475\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
-		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n"
-		+ "                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
-		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -renderFilterIndex 0\n                -selectionOrder \"chronological\" \n                -expandAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n"
-		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n"
-		+ "                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
-		+ "                -renderFilterVisible 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
-		+ "            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n"
-		+ "                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
-		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n"
-		+ "                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n"
-		+ "                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
-		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n"
-		+ "                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
-		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"timeEditorPanel\" -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
-		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n"
-		+ "                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
-		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tshapePanel -unParent -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tposePanel -unParent -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels ;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"profilerPanel\" -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"contentBrowserPanel\" -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
-		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
-		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n"
-		+ "                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n"
-		+ "                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n"
-		+ "                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n"
-		+ "                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -showShapes 0\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n"
-		+ "                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n"
-		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -renderFilterIndex 0\n                -selectionOrder \"chronological\" \n                -expandAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"0\" \n            -showSetMembers 1\n"
-		+ "            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -showShapes 0\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n"
-		+ "                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n"
-		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n"
-		+ "            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"0\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
-		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 906\\n    -height 475\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 906\\n    -height 475\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -rendererOverrideName \"mentalrayVP2\" \n            -objectFilterShowInHUD 1\n"
+		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 0\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 365\n            -height 203\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n"
+		+ "            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 364\n            -height 203\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
+		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 0\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 365\n            -height 203\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_cam:new_camera_test\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n"
+		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -rendererOverrideName \"mentalrayVP2\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 1\n            -maximumNumHardwareLights 0\n            -occlusionCulling 1\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n"
+		+ "            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 736\n            -height 450\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
+		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n"
+		+ "            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n"
+		+ "                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n"
+		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n"
+		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n"
+		+ "                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n"
+		+ "                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n"
+		+ "                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n"
+		+ "                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n"
+		+ "            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n"
+		+ "            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
+		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
+		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n"
+		+ "            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -rendererOverrideName \\\"mentalrayVP2\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 736\\n    -height 450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam:new_camera_test\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -rendererOverrideName \\\"mentalrayVP2\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 1\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 1\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 736\\n    -height 450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "01062556-A348-669A-7B1D-C28162489BFC";
-	setAttr ".b" -type "string" "playbackOptions -min -3 -max 336 -ast -40 -aet 420 ";
+	setAttr ".b" -type "string" "playbackOptions -min -1 -max 344 -ast -40 -aet 420 ";
 	setAttr ".st" 6;
 createNode shapeEditorManager -n "mom:shapeEditorManager";
-	rename -uid "23F5726D-D740-EB77-69BE-128082DD08D2";
+	rename -uid "0CD877AA-654F-30B2-AAC8-D1AAB8A10A6B";
 	setAttr -s 2 ".bsdt";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 10 -1 3 4 5 6
 		 7 8 1 2 0 ;
@@ -6622,7 +6583,7 @@ createNode shapeEditorManager -n "mom:shapeEditorManager";
 	setAttr -s 7 ".bspr";
 	setAttr -s 7 ".obsv";
 createNode poseInterpolatorManager -n "mom:poseInterpolatorManager";
-	rename -uid "8AE24344-D74C-EC31-B89D-5997E48FBDD9";
+	rename -uid "623A6BED-B946-0B14-BF55-CE961DB8C979";
 createNode partition -n "mom:mom2:mom:mtorPartition";
 	rename -uid "372F30A3-9D44-512C-928F-6192B73536B1";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -6737,13 +6698,13 @@ createNode materialInfo -n "mom:mom2:mom:materialInfo11";
 	rename -uid "E71FDAF9-FE4D-2598-ED8B-C0A5C8D3162C";
 createNode file -n "mom:mom2:mom:file5";
 	rename -uid "0C052DAD-3A49-E5FB-B51C-03B7D0C295D8";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom2:mom:place2dTexture7";
 	rename -uid "04571FC2-CA4A-BBAD-50E8-BF8E1A0BF58B";
 createNode file -n "mom:mom2:mom:file6";
 	rename -uid "8360D6BA-2A46-FA98-E204-F2BE140E4092";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom2:mom:place2dTexture8";
 	rename -uid "1501EC19-EF4E-F9E5-4B32-8C89A0756BB0";
@@ -6903,7 +6864,7 @@ createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
 	setAttr ".minsp" 0;
 	setAttr ".fil" 1;
 	setAttr ".scan" 1;
-	setAttr ".ray" 0;
+	setAttr ".ray" no;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
 	rename -uid "47DEB9AF-0A46-2893-3A28-CEBB9BFB7C32";
 	setAttr ".minsp" 0;
@@ -7057,13 +7018,13 @@ createNode materialInfo -n "mom:mom_skeleton:materialInfo11";
 	rename -uid "5F7F3546-804F-E53D-34A6-0FA1DAA676F9";
 createNode file -n "mom:mom_skeleton:file5";
 	rename -uid "4A725DF6-F94C-9AAB-17B4-1A842770D476";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_skeleton:place2dTexture7";
 	rename -uid "E69120B8-374D-E47C-782F-66A6A8E02E32";
 createNode file -n "mom:mom_skeleton:file6";
 	rename -uid "46C1DFDD-EA4D-5DA8-10BA-269A95ADF136";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_skeleton:place2dTexture8";
 	rename -uid "E0A200D7-264C-EBDF-15B8-74A574B68F3C";
@@ -7300,13 +7261,13 @@ createNode rampShader -n "mom:mom_blendshapes_to_import:mom2:mom:momBrightnessRa
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom:mom_blendshapes_to_import:mom2:mom:file5";
 	rename -uid "8E74FBA8-094E-30FE-3441-1B9473038124";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7";
 	rename -uid "70565D44-0D45-7AA6-B81C-F8A41F6277B5";
 createNode file -n "mom:mom_blendshapes_to_import:mom2:mom:file6";
 	rename -uid "D502F3EF-4A4A-CA5B-8C01-D28895F2B237";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8";
 	rename -uid "2810E4E2-2945-8AA8-B99D-62B3A35BC2EE";
@@ -7457,13 +7418,13 @@ createNode rampShader -n "mom:mom:momBrightnessRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom:mom:file5";
 	rename -uid "CF0E209B-5442-0DD9-FB47-63B77932C1AC";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom:place2dTexture7";
 	rename -uid "471E1BD0-A840-4394-8CF7-E7AF08543BED";
 createNode file -n "mom:mom:file6";
 	rename -uid "DCBDACD6-084A-2B9C-EB90-3EBB8C6F30EA";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom:place2dTexture8";
 	rename -uid "71188093-2B41-B399-DEF6-ED99EEEB0C27";
@@ -7623,13 +7584,13 @@ createNode rampShader -n "mom:mom_mesh:momBrightnessRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom:mom_mesh:file5";
 	rename -uid "D530D901-7440-A4B7-BA2E-CD9364CDB121";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_mesh:place2dTexture7";
 	rename -uid "6A5A5ED3-A643-5F7F-7DA2-0DAEAED1366F";
 createNode file -n "mom:mom_mesh:file6";
 	rename -uid "4FBFE73B-B747-1D83-A095-42ACE0855443";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_mesh:place2dTexture8";
 	rename -uid "79946C39-CB4E-6E99-5070-539F8F512CC7";
@@ -7741,7 +7702,7 @@ createNode renderSetup -n "mom:renderSetup";
 	rename -uid "A4D032D4-BA46-B510-113D-64A278FAC027";
 createNode file -n "table:file1";
 	rename -uid "4CBF0443-794B-BE21-AF54-A0A302E59AA0";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/table/wood-table.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "table:place2dTexture1";
 	rename -uid "CA707DC6-1C40-5EF4-F628-208DA36083FC";
@@ -7778,7 +7739,7 @@ createNode materialInfo -n "table:materialInfo1";
 	rename -uid "A5C8D58B-7D4F-E8BD-D3D5-E5AA6C6B3454";
 createNode file -n "table:file2";
 	rename -uid "67BD608B-7E41-ED77-0447-3F9796908C50";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "table:place2dTexture2";
 	rename -uid "559BE0BC-1E42-0207-5BB1-F1A0A96D4693";
@@ -7831,13 +7792,13 @@ createNode partition -n "bible:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "bible:file1";
 	rename -uid "DFB422F1-4C47-6200-D3BA-5591CF3C83DB";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible:place2dTexture1";
 	rename -uid "FB8777B7-A642-DBE5-F1E3-8882E7BC19DF";
 createNode file -n "bible:file2";
 	rename -uid "8D5649FD-304E-A788-4244-F386CC123E07";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible:place2dTexture2";
 	rename -uid "EB9046FF-3045-CB9C-D78E-D3A5B37B1CD9";
@@ -8081,7 +8042,7 @@ createNode partition -n "bible1:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "bible1:file1";
 	rename -uid "034F3EE4-7343-7291-D916-1893E2EDF6A5";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible1:place2dTexture1";
 	rename -uid "E2688551-4641-6164-577A-44BF1274ADC3";
@@ -8118,7 +8079,7 @@ createNode materialInfo -n "bible1:materialInfo1";
 	rename -uid "A5CD9784-824E-D9BF-469F-F08FBD5EA832";
 createNode file -n "bible1:file2";
 	rename -uid "A9D318CA-B549-6A84-B9AF-02B488709664";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible1:place2dTexture2";
 	rename -uid "49F5D6B6-F049-8D41-085B-FCBAA1357944";
@@ -8270,7 +8231,7 @@ createNode reference -n "momRN";
 	setAttr -s 3 ".fn";
 	setAttr ".fn[0]" -type "string" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma{1}";
 	setAttr ".fn[1]" -type "string" "C:/Users/mikha/Desktop/Only-Love//scenes/char/mom/mom_shirt_nclothrig.ma";
-	setAttr ".fn[2]" -type "string" "/Users/jswu/Desktop/Only-Love//scenes/char/mom/mom.ma";
+	setAttr ".fn[2]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/mom/mom.ma";
 	setAttr -s 122 ".phl";
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[12]" 0;
@@ -8798,7 +8759,7 @@ createNode reference -n "momRN";
 lockNode -l 1 ;
 createNode reference -n "babyRN";
 	rename -uid "9556886D-844A-8EE4-CAC3-4C9AF3E2DBA6";
-	setAttr ".fn[0]" -type "string" "/Users/jswu/Desktop/Only-Love//scenes/char/baby/baby.ma";
+	setAttr ".fn[0]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
 	setAttr -s 188 ".phl";
 	setAttr ".phl[465]" 0;
 	setAttr ".phl[466]" 0;
@@ -8983,7 +8944,7 @@ createNode reference -n "babyRN";
 	setAttr ".phl[645]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"babyRN"
-		"babyRN" 31
+		"babyRN" 46
 		0 "|babyRNfosterParent1|BabyGrab_One" "|baby:Baby_Rig|baby:baby_master" "-s -r "
 		
 		0 "|babyRNfosterParent1|BabyGrab_Two" "|baby:Baby_Rig|baby:baby_master" "-s -r "
@@ -9022,6 +8983,31 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" 0 -7.16089489296311843 -1.97926972318501448"
 		2 "|baby:baby_master|baby:baby_COG|baby:baby_spine|baby:Spine_IK_Handle" 
 		"rotate" " -type \"double3\" 90 3.44599548997511107 90"
+		2 "|baby:baby_blend2:baby_super_frown" "visibility" " 0"
+		2 "|baby:baby_blend2:baby_super_frown|baby:baby_blend2:baby_super_frownShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_super_frown|baby:baby_blend2:baby_super_frownShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_cheeks_up" "visibility" " 0"
+		2 "|baby:baby_blend2:baby_cheeks_up|baby:baby_blend2:baby_cheeks_upShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_cheeks_up|baby:baby_blend2:baby_cheeks_upShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_mouth_open2" "visibility" " 0"
+		2 "|baby:baby_blend2:baby_mouth_open2|baby:baby_blend2:baby_mouth_open2Shape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_mouth_open2|baby:baby_blend2:baby_mouth_open2ShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_extreme_scrunch" "visibility" " 0"
+		2 "|baby:baby_blend2:baby_extreme_scrunch|baby:baby_blend2:baby_extreme_scrunchShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_extreme_scrunch|baby:baby_blend2:baby_extreme_scrunchShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_top_lid_down" "visibility" " 0"
+		2 "|baby:baby_blend2:baby_top_lid_down|baby:baby_blend2:baby_top_lid_downShape" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
+		2 "|baby:baby_blend2:baby_top_lid_down|baby:baby_blend2:baby_top_lid_downShapeOrig" 
+		"aiTranslator" " -type \"string\" \"polymesh\""
 		5 4 "babyRN" "|baby:baby_master|baby:baby_COG|baby:Head_Controller.rotateX" 
 		"babyRN.placeHolderList[113]" ""
 		5 4 "babyRN" "|baby:baby_master|baby:baby_COG|baby:Head_Controller.rotateY" 
@@ -9040,7 +9026,7 @@ createNode reference -n "babyRN";
 		""
 		5 3 "babyRN" "baby:blendShape2.midLayerParent" "babyRN.placeHolderList[464]" 
 		""
-		"babyRN" 1073
+		"babyRN" 1065
 		0 "|babyRNfosterParent1|BabyGrab_One" "|baby:Baby_Rig|baby:baby_master" "-s -r "
 		
 		0 "|babyRNfosterParent1|BabyGrab_Two" "|baby:Baby_Rig|baby:baby_master" "-s -r "
@@ -9057,19 +9043,20 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShapeOrig" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
 		2 "|baby:Baby_Rig|baby:baby_master" "visibility" " -av 1"
-		2 "|baby:Baby_Rig|baby:baby_master" "translate" " -type \"double3\" -0.57926116420037754 19.22161430179486175 1.67395492646591393"
+		2 "|baby:Baby_Rig|baby:baby_master" "translate" " -type \"double3\" -1.42584011305476888 19.02269970482223727 3.94646387791817155"
 		
 		2 "|baby:Baby_Rig|baby:baby_master" "translateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "translateY" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "translateZ" " -av"
-		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -127.52477634010142538 291.61001388090568298 78.26220628557140913"
+		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -82.96805733077418665 282.84974114318310967 28.81360988436960824"
 		
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateY" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateOrder" " 0"
 		2 "|baby:Baby_Rig|baby:baby_master" "Scale" " -av -k 1 1"
-		2 "|baby:Baby_Rig|baby:baby_master" "baby_blink_new" " -av -k 1 3.5"
+		2 "|baby:Baby_Rig|baby:baby_master" "baby_blink_new" " -av -k 1 4.43343320944393149"
+		
 		2 "|baby:Baby_Rig|baby:baby_master" "baby_extreme_scrunch" " -av -k 1 0"
 		2 "|baby:Baby_Rig|baby:baby_master" "baby_mouth_open_2" " -av -k 1 0"
 		2 "|baby:Baby_Rig|baby:baby_master" "baby_cheeks_up" " -av -k 1 0"
@@ -9096,7 +9083,7 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" -0.38329520451244115 -0.51699498951345824 1.8530563527518471"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
-		"rotate" " -type \"double3\" -12.98883534066771261 -52.83716141367619201 52.15370647106190205"
+		"rotate" " -type \"double3\" -12.14824817514456612 -2.16122544775826331 65.91402445809039534"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
 		"rotateX" " -av"
@@ -9222,7 +9209,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_lf_collar_def|baby:baby_lf_shoulder_def|baby:baby_lf_elbow_def|baby:baby_lf_wrist_def|baby:FingerCntrls_L|baby:Thumb_Cntrl_Offset_01_L|baby:Thumb_Cntrl_01_L|baby:Thumb_Cntrl_Offset_02_L|baby:Thumb_Cntrl_02_L|baby:Thumb_Cntrl_Offset_03_L|baby:Thumb_Cntrl_03_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball" 
-		"rotate" " -type \"double3\" 363.72168702017648911 -18.86318148138369466 -10.86403692364722673"
+		"rotate" " -type \"double3\" 141.81943363235674838 182.16664472541489772 -140.43508588282284677"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball" 
 		"rotateX" " -av"
@@ -9857,7 +9844,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball|baby:baby:rEyeballShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
-		"rotate" " -type \"double3\" -188.3726266873522377 212.48130923903417511 537.03623983721706736"
+		"rotate" " -type \"double3\" -49.11279978231737431 334.70836808720895306 393.92332147779904972"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
 		"rotateX" " -av"
@@ -10571,7 +10558,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
-		"rotate" " -type \"double3\" -15.10664877555972474 -50.25399432717016168 55.4870699829558589"
+		"rotate" " -type \"double3\" -12.85376454594214302 0.65089043984347961 67.59772869132802953"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
 		"rotateX" " -av"
@@ -10582,7 +10569,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
-		"rotate" " -type \"double3\" 3.51280073191960351 10.0840008816638349 -42.13561977194610364"
+		"rotate" " -type \"double3\" -11.91878369913687763 24.02656428659333443 -85.57707601003092179"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"rotateX" " -av"
@@ -10593,9 +10580,13 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
 		"rotate" " -type \"double3\" 0 0 -12.54294350862792662"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
+		"rotateX" " -av"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
+		"rotateY" " -av"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
-		"rotate" " -type \"double3\" 21.03765675854824835 2.18067630621610009 144.86140565382933687"
+		"rotate" " -type \"double3\" -15.90459652083006681 12.11880320158951108 74.60787914824180689"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
 		"rotateX" " -av"
@@ -10604,7 +10595,10 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
-		"rotate" " -type \"double3\" 0 -6.66403694063718355 -134.29828567599841449"
+		"visibility" " -av 1"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
+		"rotate" " -type \"double3\" -9.32873009340915793 -3.0928302518312849 -60.21291220585120385"
+		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
 		"rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
@@ -10626,7 +10620,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"translate" " -type \"double3\" -2.02781905660942785 -7.54521736320029035 1.49160638022662262"
+		"translate" " -type \"double3\" -1.81061694123464889 -6.48456414478640042 1.6365508720846087"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateX" " -av -k 0"
@@ -10635,7 +10629,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateZ" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"rotate" " -type \"double3\" 67.54411874505535707 -22.57268401503697319 -76.49554279091114495"
+		"rotate" " -type \"double3\" 56.24860770457833326 -38.62981241722496861 -80.15893893664778602"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"rotateX" " -av"
@@ -10646,7 +10640,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
-		"rotate" " -type \"double3\" -14.11759638911707171 -45.89612965884781204 -3.49853716544340854"
+		"rotate" " -type \"double3\" -7.01290146208309295 -37.58648180559123375 -9.1269777075422116"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
 		"rotateX" " -av"
@@ -10668,7 +10662,16 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
-		"rotate" " -type \"double3\" -68.08925903740616548 -11.37260231109464748 79.52734670585950028"
+		"translate" " -type \"double3\" -1.59826462402579494 -0.20127798171434119 -1.83988225333337319"
+		
+		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
+		"translateX" " -av -k 0"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
+		"translateY" " -av -k 0"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
+		"translateZ" " -av -k 0"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
+		"rotate" " -type \"double3\" 3.17469201374847865 -15.73024590986214299 -12.82280161109225958"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"rotateX" " -av"
@@ -10699,7 +10702,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
-		"translate" " -type \"double3\" 0.0088478237763354173 -0.06621485959979978 0"
+		"translate" " -type \"double3\" 0.0088478237763416345 -0.066214859599806886 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"translateX" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
@@ -10718,7 +10721,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
-		"rotate" " -type \"double3\" 18.98252017328825403 -1.7945982074611766 9.8319093529048871"
+		"rotate" " -type \"double3\" 24.61782915688684881 -2.38116481248586709 9.28968119800216208"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
 		"rotateX" " -av"
@@ -10729,7 +10732,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
-		"rotate" " -type \"double3\" -34.73218960413894507 -1.10984080627266368 -3.5561115286671785"
+		"rotate" " -type \"double3\" -34.73112916288041419 -1.55905977924121375 -6.91251082448453058"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"rotateX" " -av"
@@ -10740,7 +10743,8 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" 1.75879509978441884 0 13.70929496315895513"
+		"rotate" " -type \"double3\" 1.68903242717139701 -0.11207403149391354 13.82150873398279245"
+		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
@@ -10750,7 +10754,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
-		"rotate" " -type \"double3\" 83.52928568996296121 -38.00771988606778962 -31.16631155708227752"
+		"rotate" " -type \"double3\" 48.45989654607413399 -38.00771988606778962 -31.16631155708227752"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
 		"rotateX" " -av"
@@ -10761,7 +10765,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
-		"rotate" " -type \"double3\" -33.84221096248328564 -13.00145407963731969 -11.59527203924722549"
+		"rotate" " -type \"double3\" -21.55339570593305254 -8.39651514980678471 -13.23362493929302275"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
 		"rotateX" " -av"
@@ -10772,8 +10776,9 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:ShoulderCntrls|baby:Shoulder_Cntrl_L" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:ShoulderCntrls|baby:Shoulder_Cntrl_R" 
-		"translate" " -type \"double3\" 0 0.0099495381265342075 0"
-		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translate" " -type \"double3\" 1.24026820308528229 -1.70902143085077518 1.38454532359786864"
+		"translate" " -type \"double3\" 0.093888117606531193 0.2279370660097971 0.04536187605921068"
+		
+		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translate" " -type \"double3\" -0.3882593148280617 -1.45665636360945294 -0.48832094813150367"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translateY" " -av"
@@ -10782,31 +10787,6 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker|baby:EyeCntrl_Offset_R|baby:EyeCntrl_R" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|baby:baby_blend2:baby_super_frown" "visibility" " 0"
-		2 "|baby:baby_blend2:baby_super_frown|baby:baby_blend2:baby_super_frownShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_super_frown|baby:baby_blend2:baby_super_frownShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_cheeks_up" "visibility" " 0"
-		2 "|baby:baby_blend2:baby_cheeks_up|baby:baby_blend2:baby_cheeks_upShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_cheeks_up|baby:baby_blend2:baby_cheeks_upShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_mouth_open2" "visibility" " 0"
-		2 "|baby:baby_blend2:baby_mouth_open2|baby:baby_blend2:baby_mouth_open2Shape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_mouth_open2|baby:baby_blend2:baby_mouth_open2ShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_extreme_scrunch" "visibility" " 0"
-		2 "|baby:baby_blend2:baby_extreme_scrunch|baby:baby_blend2:baby_extreme_scrunchShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_extreme_scrunch|baby:baby_blend2:baby_extreme_scrunchShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_top_lid_down" "visibility" " 0"
-		2 "|baby:baby_blend2:baby_top_lid_down|baby:baby_blend2:baby_top_lid_downShape" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
-		2 "|baby:baby_blend2:baby_top_lid_down|baby:baby_blend2:baby_top_lid_downShapeOrig" 
-		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "baby:blendShape1" "midLayerId" " 3"
 		2 "baby:blendShape1" "midLayerParent" " 0"
 		2 "baby:blendShape1" "parentDirectory" " -s 40"
@@ -11280,9 +11260,9 @@ createNode reference -n "bibleRN";
 		2 "|bible2:Bible" "translate" " -type \"double3\" 0 -0.17297340820487817 0"
 		
 		2 "|bible2:Bible" "scale" " -type \"double3\" 1 1 1"
-		2 "|bible2:Bible|bible2:BibleMesh" "translate" " -type \"double3\" -6.15765195581688118 -6.31721008120336869 7.4726676791523845"
+		2 "|bible2:Bible|bible2:BibleMesh" "translate" " -type \"double3\" -5.72938525087255268 -6.10251393208695525 8.87929104130607705"
 		
-		2 "|bible2:Bible|bible2:BibleMesh" "rotate" " -type \"double3\" 0 93.34029211918300462 0"
+		2 "|bible2:Bible|bible2:BibleMesh" "rotate" " -type \"double3\" 0 50.65645072043171382 0"
 		
 		2 "|bible2:Bible|bible2:BibleMesh" "scale" " -type \"double3\" 3.82723163296677038 0.72125014710696744 2.52997567525055223"
 		
@@ -11346,7 +11326,7 @@ createNode reference -n "wineRN";
 		"wineRN" 32
 		0 "|wineRNfosterParent1|battle_grab_loc" "|wine:wine_bottle" "-s -r "
 		2 "|wine:wine_bottle" "visibility" " -av 1"
-		2 "|wine:wine_bottle" "translate" " -type \"double3\" -5.66472216880707435 -2.72916379116837815 8.48251599379891807"
+		2 "|wine:wine_bottle" "translate" " -type \"double3\" -5.66472216880707435 -2.42792184590481908 8.48251599379891807"
 		
 		2 "|wine:wine_bottle" "translateX" " -av"
 		2 "|wine:wine_bottle" "translateY" " -av"
@@ -11453,22 +11433,24 @@ createNode reference -n "tableRN";
 		
 		2 "|table1:Table|table1:TablePfxToonOutlineMesh|table1:Main" "scale" " -type \"double3\" 1 1 1"
 		
-		"tableRN" 11
+		"tableRN" 13
 		2 "|table1:Table" "visibility" " 1"
 		2 "|table1:Table" "translate" " -type \"double3\" 0 0 0"
 		2 "|table1:Table" "rotate" " -type \"double3\" 0 0 0"
 		2 "|table1:Table" "scale" " -type \"double3\" 1 1 1"
 		2 "|table1:Table|table1:Table" "visibility" " 1"
-		2 "|table1:Table|table1:Table" "translate" " -type \"double3\" -0.30769049323336123 -17.64983317269928165 9.77311325585064417"
+		2 "|table1:Table|table1:Table" "translate" " -type \"double3\" -0.30769049323336123 -15.81144496504251862 9.77414018213751312"
 		
 		2 "|table1:Table|table1:Table" "rotate" " -type \"double3\" 0 -87.47281739063808459 0"
 		
-		2 "|table1:Table|table1:Table" "scale" " -type \"double3\" 1.2081417501731071 1.2081417501731071 1.2081417501731071"
+		2 "|table1:Table|table1:Table" "scale" " -type \"double3\" 1.2081417501731071 0.91531960596545536 1.2081417501731071"
 		
 		2 "|table1:Table|table1:Table|table1:TableShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
+		2 "|table1:left1|table1:leftShape2" "renderable" " 0"
 		2 "|table1:left1|table1:leftShape2" "aiTranslator" " -type \"string\" \"orthographic\""
 		
+		2 "|table1:right1|table1:rightShape2" "renderable" " 0"
 		2 "|table1:right1|table1:rightShape2" "aiTranslator" " -type \"string\" \"orthographic\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -12270,7 +12252,7 @@ createNode audio -n "mom_scene_audio";
 	rename -uid "9EE69A08-4F1D-21DA-940D-00B5CA59131F";
 	setAttr ".ef" 613.192;
 	setAttr ".se" 613.192;
-	setAttr ".f" -type "string" "/Users/jswu/Desktop/Only-Love//sound/mom_scene_audio.wav";
+	setAttr ".f" -type "string" "/Users/veronicachen/Desktop/Only-Love//sound/mom_scene_audio.wav";
 createNode animCurveTU -n "wine_bottle_blendParent1";
 	rename -uid "7D9233C1-7D4E-5E03-1A14-90BBCED7C8BE";
 	setAttr ".tan" 18;
@@ -12338,7 +12320,7 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" 0.04163171723484993;
+	setAttr ".d" -0.08121199905872345;
 createNode shadingEngine -n "oceanShader1SG";
 	rename -uid "C24C89DE-4C1E-A7AD-E016-F0AFD29A9F35";
 	setAttr ".ihi" 0;
@@ -13241,7 +13223,7 @@ createNode reference -n "momRN1";
 		""
 		5 4 "momRN1" "|mom2:nCloth1|mom2:nClothShape1.playFromCache" "momRN1.placeHolderList[2676]" 
 		""
-		"momRN1" 946
+		"momRN1" 4068
 		0 "|momRN1fosterParent1|Arm_Cntrl_R_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" 
 		"-s -r "
 		0 "|momRN1fosterParent1|Arm_Cntrl_L_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" 
@@ -13301,7 +13283,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
-		"rotate" " -type \"double3\" -17.28463596884389375 -18.80278351616906463 -15.41389282125957649"
+		"rotate" " -type \"double3\" -10.91494960434831718 -8.49103692558653833 -30.68944184407907727"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
 		"rotateX" " -av"
@@ -13310,7 +13292,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01" 
-		"rotate" " -type \"double3\" 0.79254468996558536 -7.73605067582559425 -30.40437656214758277"
+		"rotate" " -type \"double3\" -0.032183726194006501 -7.77513640033232889 -24.29863478902571572"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01" 
 		"rotateX" " -av"
@@ -13379,23 +13361,23 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
-		"translateX" " -av -3.49"
+		"translateX" " -av -2.73616000000000392"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
-		"translateX" " -av -3.49"
+		"translateX" " -av -2.73616000000000392"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R" 
-		"translateY" " -av -0.68509874398278248"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
-		"translateY" " -av -0.68509874398278248"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
@@ -13431,7 +13413,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
-		"rotate" " -type \"double3\" -10.3110369660317609 -8.11613551380638754 14.36112110776320705"
+		"rotate" " -type \"double3\" 9.47489504676271999 -6.00261489365842937 12.30927998273967106"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"rotateX" " -av"
@@ -13452,7 +13434,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -61.44466769746725987"
+		"rotate" " -type \"double3\" 0 0 -14.6976110996755871"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
@@ -13478,7 +13460,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -61.44466769746725987"
+		"rotate" " -type \"double3\" 0 0 -14.6976110996755871"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
@@ -13504,8 +13486,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
-		"rotate" " -type \"double3\" 3.16121359409335279 4.82328289845675684 -48.53426947019089255"
-		
+		"rotate" " -type \"double3\" 0 0 -14.6976110996755871"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
@@ -13531,7 +13512,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -61.44466769746725987"
+		"rotate" " -type \"double3\" 0 0 -14.6976110996755871"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
@@ -13587,7 +13568,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotate" 
-		" -type \"double3\" 0 -2.28869429886280562 -2.39810135310943817"
+		" -type \"double3\" 0 -6.61330250135542386 -2.39810135310943462"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateY" 
@@ -13595,18 +13576,18 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
-		"rotateX" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
-		"rotateY" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
-		"rotateZ" " -av"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
-		"visibility" " -av 1"
-		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
-		"rotate" " -type \"double3\" 3.84096975210560032 -0.047005132810715562 0.70020911727015511"
+		"rotate" " -type \"double3\" -4.05049705533122761 1.08903596846520245 9.27366998577302049"
 		
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
+		"rotateX" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
+		"rotateY" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
+		"rotateZ" " -av"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
+		"visibility" " -av 1"
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
+		"rotate" " -type \"double3\" 2.80397604580143023 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
@@ -13616,7 +13597,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
-		"rotate" " -type \"double3\" 9.93351162298323054 1.90822655230458627 -17.29882440494384355"
+		"rotate" " -type \"double3\" 9.29397420435826405 0.6260833166651083 -8.88109748392968079"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
 		"rotateX" " -av"
@@ -13627,7 +13608,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" 10.39340661035690694 2.8668588591779316 0.13220498250550305"
+		"rotate" " -type \"double3\" 10.39340661035690694 2.7506129060762623 0.11652193439608216"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"rotateX" " -av"
@@ -13638,7 +13619,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
-		"rotate" " -type \"double3\" 26.43897685131183906 8.49532116119507741 13.66454924232881751"
+		"rotate" " -type \"double3\" 26.26487641909105974 8.33362648157097219 13.66454924232881751"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"rotateX" " -av"
@@ -13653,7 +13634,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
-		"translate" " -type \"double3\" 0.023335889360462214 0.90197470198171459 -0.32329491113223457"
+		"translate" " -type \"double3\" -0.10269636341895971 -0.35449344398907101 0.071433797716973668"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"translateX" " -av"
@@ -13678,7 +13659,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"scaleZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
-		"translate" " -type \"double3\" 0.30538073039182312 0.49334751121201581 -0.40338199405818681"
+		"translate" " -type \"double3\" 0.28931169784860772 0.6093064092656062 -0.17528926985383991"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
 		"translateX" " -av"
@@ -13697,6 +13678,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_lf_ctrl" 
 		"translate" " -type \"double3\" 0.44635773836484416 0.075433331783826871 -0.033117629806499821"
 		
+		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:top_mid_ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
@@ -13732,7 +13715,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
-		"rotate" " -type \"double3\" -15.78327473645020262 -35.08740914126510546 32.19418087595646938"
+		"rotate" " -type \"double3\" -15.78327473645020262 -33.89513508136857922 31.1757489148801632"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"rotateX" " -av"
@@ -13765,7 +13748,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
-		"rotate" " -type \"double3\" 22.747808618430156 -3.07570288282789583 0.39672467108192888"
+		"rotate" " -type \"double3\" 23.40959497302137393 -0.11612946648544629 -1.5238290494348794"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"rotateX" " -av"
@@ -13784,7 +13767,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
-		"translate" " -type \"double3\" 0.20380965959151115 -0.15560124294945221 0.26382194321725366"
+		"translate" " -type \"double3\" 0.20380965959151115 -0.88557877118727546 0.26382194321725366"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
 		"translateX" " -av"
@@ -13803,7 +13786,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr" 
-		"Blink" " -av -k 1 5.56424716881487935"
+		"Blink" " -av -k 1 4.12188506181051917"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
@@ -13815,7 +13798,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
-		"Blink" " -av -k 1 5.56424716881487935"
+		"Blink" " -av -k 1 3.96634650262585442"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl" 
 		"translateX" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl" 
@@ -13902,8 +13885,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translate" 
-		" -type \"double3\" 14.20035625585552808 4.90292550689022288 5.24443088281080616"
-		
+		" -type \"double3\" 11.07071250378482929 2.26402926709928298 9.347186021006479"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateY" 
@@ -13911,7 +13893,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotate" 
-		" -type \"double3\" -122.84512752571167482 188.02281733734031377 -14.61048119360295949"
+		" -type \"double3\" -154.03889898302657002 184.33092309262707431 -68.56352974583202808"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotateX" 
 		" -av"
@@ -13932,7 +13914,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translate" 
-		" -type \"double3\" -1.32591438571701126 -1.89525999326786865 12.45878918548448411"
+		" -type \"double3\" -1.32591438571701126 -2.32559533760903792 12.45878918548448411"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translateX" 
 		" -av"
@@ -13959,7 +13941,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translate" 
-		" -type \"double3\" -9.72435591379811193 -4.52965201277706164 -2.27876547927713791"
+		" -type \"double3\" -9.16069452582001453 -4.69193580809298894 -2.18228866173816538"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateX" 
 		" -av"
@@ -13968,7 +13950,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotate" 
-		" -type \"double3\" 103.56150918170278885 169.32136450418067852 -258.13591024411141461"
+		" -type \"double3\" 113.23666447467414287 171.23752668618175221 -244.6258655168133771"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotateX" 
 		" -av"
@@ -14054,6 +14036,3347 @@ createNode reference -n "momRN1";
 		
 		2 "mom2:blendShape2" "targetDirectory[0].directoryVisibility" " 1"
 		2 "mom2:blendShape2" "targetDirectory[0].directoryWeight" " 1"
+		2 "mom2:skinCluster1" "weightList" " -s 4261"
+		2 "mom2:skinCluster1" "weightList[4].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[4].weights[0]" " 0.28478699452546924"
+		2 "mom2:skinCluster1" "weightList[4].weights[1]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[2]" " 0.19806454653129962"
+		2 "mom2:skinCluster1" "weightList[4].weights[3]" " 0.19604428244150093"
+		2 "mom2:skinCluster1" "weightList[4].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[58]" " 0.15528664753864121"
+		2 "mom2:skinCluster1" "weightList[4].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[62]" " 0.16581752896308899"
+		2 "mom2:skinCluster1" "weightList[4].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[4].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[20].weights[0]" " 0.3641520216412828"
+		2 "mom2:skinCluster1" "weightList[20].weights[1]" " 0.11856761050947418"
+		2 "mom2:skinCluster1" "weightList[20].weights[2]" " 0.27024258461198258"
+		2 "mom2:skinCluster1" "weightList[20].weights[3]" " 0.073577120872300728"
+		
+		2 "mom2:skinCluster1" "weightList[20].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[62]" " 0.17346066236495972"
+		
+		2 "mom2:skinCluster1" "weightList[20].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[20].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[87].weights[0]" " 0.43936801915692919"
+		2 "mom2:skinCluster1" "weightList[87].weights[1]" " 0.023208148939545963"
+		
+		2 "mom2:skinCluster1" "weightList[87].weights[2]" " 0.016963436763156536"
+		
+		2 "mom2:skinCluster1" "weightList[87].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[58]" " 0.37063540331812561"
+		
+		2 "mom2:skinCluster1" "weightList[87].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[62]" " 0.14982499182224274"
+		
+		2 "mom2:skinCluster1" "weightList[87].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[87].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[88].weights[0]" " 0.4281443284579623"
+		2 "mom2:skinCluster1" "weightList[88].weights[1]" " 0.10734182343148987"
+		2 "mom2:skinCluster1" "weightList[88].weights[2]" " 0.19087876782501431"
+		2 "mom2:skinCluster1" "weightList[88].weights[3]" " 0.09014155549572328"
+		2 "mom2:skinCluster1" "weightList[88].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[62]" " 0.18349352478981018"
+		
+		2 "mom2:skinCluster1" "weightList[88].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[88].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[89].weights[0]" " 0.36309018530819281"
+		2 "mom2:skinCluster1" "weightList[89].weights[1]" " 0.12293587612430909"
+		2 "mom2:skinCluster1" "weightList[89].weights[2]" " 0.28463109703687051"
+		2 "mom2:skinCluster1" "weightList[89].weights[3]" " 0.19314916523773132"
+		2 "mom2:skinCluster1" "weightList[89].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[62]" " 0.036193676292896271"
+		
+		2 "mom2:skinCluster1" "weightList[89].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[89].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[116].weights[0]" " 0.29205848372160376"
+		
+		2 "mom2:skinCluster1" "weightList[116].weights[1]" " 0.10856987907216852"
+		
+		2 "mom2:skinCluster1" "weightList[116].weights[2]" " 0.26756163924533077"
+		
+		2 "mom2:skinCluster1" "weightList[116].weights[3]" " 0.15673361758884954"
+		
+		2 "mom2:skinCluster1" "weightList[116].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[62]" " 0.17507638037204742"
+		
+		2 "mom2:skinCluster1" "weightList[116].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[116].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[117].weights[0]" " 0.5298409722979297"
+		2 "mom2:skinCluster1" "weightList[117].weights[1]" " 0.13538771601154695"
+		
+		2 "mom2:skinCluster1" "weightList[117].weights[2]" " 0.20565143393500301"
+		
+		2 "mom2:skinCluster1" "weightList[117].weights[3]" " 0.0062234523295139482"
+		
+		2 "mom2:skinCluster1" "weightList[117].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[62]" " 0.12289642542600632"
+		
+		2 "mom2:skinCluster1" "weightList[117].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[117].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[197].weights[0]" " 0.29365583770604825"
+		
+		2 "mom2:skinCluster1" "weightList[197].weights[1]" " 0.082252852213994324"
+		
+		2 "mom2:skinCluster1" "weightList[197].weights[2]" " 0.27054617095452627"
+		
+		2 "mom2:skinCluster1" "weightList[197].weights[3]" " 0.28368292241438686"
+		
+		2 "mom2:skinCluster1" "weightList[197].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[62]" " 0.069862216711044312"
+		
+		2 "mom2:skinCluster1" "weightList[197].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[197].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[198].weights[0]" " 0.37323217288325611"
+		
+		2 "mom2:skinCluster1" "weightList[198].weights[1]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[2]" " 0.18615370111970123"
+		
+		2 "mom2:skinCluster1" "weightList[198].weights[3]" " 0.1616607594163261"
+		2 "mom2:skinCluster1" "weightList[198].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[58]" " 0.076100431981793878"
+		
+		2 "mom2:skinCluster1" "weightList[198].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[62]" " 0.20285293459892273"
+		
+		2 "mom2:skinCluster1" "weightList[198].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[198].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[222].weights[0]" " 0.36540106852844395"
+		
+		2 "mom2:skinCluster1" "weightList[222].weights[1]" " 0.059548864501846842"
+		
+		2 "mom2:skinCluster1" "weightList[222].weights[2]" " 0.23102266600631038"
+		
+		2 "mom2:skinCluster1" "weightList[222].weights[3]" " 0.24133836572656328"
+		
+		2 "mom2:skinCluster1" "weightList[222].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[62]" " 0.10268903523683548"
+		
+		2 "mom2:skinCluster1" "weightList[222].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[222].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[223].weights[0]" " 0.36634092526458034"
+		
+		2 "mom2:skinCluster1" "weightList[223].weights[1]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[2]" " 0.16826974575085901"
+		
+		2 "mom2:skinCluster1" "weightList[223].weights[3]" " 0.14719163118034465"
+		
+		2 "mom2:skinCluster1" "weightList[223].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[58]" " 0.10692764858985292"
+		
+		2 "mom2:skinCluster1" "weightList[223].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[62]" " 0.2112700492143631"
+		
+		2 "mom2:skinCluster1" "weightList[223].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[223].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[294].weights[0]" " 0.32448592232866602"
+		
+		2 "mom2:skinCluster1" "weightList[294].weights[1]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[2]" " 0.090693926562779345"
+		
+		2 "mom2:skinCluster1" "weightList[294].weights[3]" " 0.065358759736593511"
+		
+		2 "mom2:skinCluster1" "weightList[294].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[58]" " 0.33512614468979407"
+		
+		2 "mom2:skinCluster1" "weightList[294].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[62]" " 0.18433524668216705"
+		
+		2 "mom2:skinCluster1" "weightList[294].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[294].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[295].weights[0]" " 0.37268580410975199"
+		
+		2 "mom2:skinCluster1" "weightList[295].weights[1]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[2]" " 0.07716374353103217"
+		
+		2 "mom2:skinCluster1" "weightList[295].weights[3]" " 0.06049853726885656"
+		
+		2 "mom2:skinCluster1" "weightList[295].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[58]" " 0.41726456250456684"
+		
+		2 "mom2:skinCluster1" "weightList[295].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[62]" " 0.072387352585792542"
+		
+		2 "mom2:skinCluster1" "weightList[295].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[295].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[304].weights[0]" " 0.22785564536700356"
+		
+		2 "mom2:skinCluster1" "weightList[304].weights[1]" " 0.006664681214951485"
+		
+		2 "mom2:skinCluster1" "weightList[304].weights[2]" " 0.00062356906050018053"
+		
+		2 "mom2:skinCluster1" "weightList[304].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[58]" " 0.55442776213437739"
+		
+		2 "mom2:skinCluster1" "weightList[304].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[62]" " 0.21042834222316742"
+		
+		2 "mom2:skinCluster1" "weightList[304].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[304].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[305].weights[0]" " 0.12111567832672047"
+		
+		2 "mom2:skinCluster1" "weightList[305].weights[1]" " 0.0021622777720894815"
+		
+		2 "mom2:skinCluster1" "weightList[305].weights[2]" " 0.00030326897127721646"
+		
+		2 "mom2:skinCluster1" "weightList[305].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[58]" " 0.78972229173508479"
+		
+		2 "mom2:skinCluster1" "weightList[305].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[62]" " 0.086696483194828033"
+		
+		2 "mom2:skinCluster1" "weightList[305].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[305].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1740].weights[0]" " 0.29619703085609839"
+		
+		2 "mom2:skinCluster1" "weightList[1740].weights[1]" " 0.056388244096422263"
+		
+		2 "mom2:skinCluster1" "weightList[1740].weights[2]" " 0.20599572883707204"
+		
+		2 "mom2:skinCluster1" "weightList[1740].weights[3]" " 0.20388895844967264"
+		
+		2 "mom2:skinCluster1" "weightList[1740].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[62]" " 0.23753003776073456"
+		
+		2 "mom2:skinCluster1" "weightList[1740].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1740].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1800].weights[0]" " 0.55725974301113124"
+		
+		2 "mom2:skinCluster1" "weightList[1800].weights[1]" " 0.029428441101401762"
+		
+		2 "mom2:skinCluster1" "weightList[1800].weights[2]" " 0.021547167862401625"
+		
+		2 "mom2:skinCluster1" "weightList[1800].weights[3]" " 0.0079529655623731127"
+		
+		2 "mom2:skinCluster1" "weightList[1800].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[62]" " 0.38381168246269226"
+		
+		2 "mom2:skinCluster1" "weightList[1800].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1800].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1801].weights[0]" " 0.38834824222420283"
+		
+		2 "mom2:skinCluster1" "weightList[1801].weights[1]" " 0.097543543593868881"
+		
+		2 "mom2:skinCluster1" "weightList[1801].weights[2]" " 0.17378641865147204"
+		
+		2 "mom2:skinCluster1" "weightList[1801].weights[3]" " 0.082716391868728353"
+		
+		2 "mom2:skinCluster1" "weightList[1801].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[62]" " 0.25760540366172791"
+		
+		2 "mom2:skinCluster1" "weightList[1801].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1801].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1802].weights[0]" " 0.34836142121660912"
+		
+		2 "mom2:skinCluster1" "weightList[1802].weights[1]" " 0.1180381086228957"
+		
+		2 "mom2:skinCluster1" "weightList[1802].weights[2]" " 0.27342807188144613"
+		
+		2 "mom2:skinCluster1" "weightList[1802].weights[3]" " 0.18563931573424539"
+		
+		2 "mom2:skinCluster1" "weightList[1802].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[62]" " 0.074533082544803619"
+		
+		2 "mom2:skinCluster1" "weightList[1802].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1802].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1822].weights[0]" " 0.30601094158316833"
+		
+		2 "mom2:skinCluster1" "weightList[1822].weights[1]" " 0.11377219503295358"
+		
+		2 "mom2:skinCluster1" "weightList[1822].weights[2]" " 0.28040871467465539"
+		
+		2 "mom2:skinCluster1" "weightList[1822].weights[3]" " 0.16429147538273037"
+		
+		2 "mom2:skinCluster1" "weightList[1822].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[62]" " 0.13551667332649231"
+		
+		2 "mom2:skinCluster1" "weightList[1822].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1822].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1823].weights[0]" " 0.50960377416806579"
+		
+		2 "mom2:skinCluster1" "weightList[1823].weights[1]" " 0.12969784539785523"
+		
+		2 "mom2:skinCluster1" "weightList[1823].weights[2]" " 0.19869231410303334"
+		
+		2 "mom2:skinCluster1" "weightList[1823].weights[3]" " 0.0061157952634262906"
+		
+		2 "mom2:skinCluster1" "weightList[1823].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[62]" " 0.15589027106761932"
+		
+		2 "mom2:skinCluster1" "weightList[1823].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1823].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1883].weights[0]" " 0.54536926764806182"
+		
+		2 "mom2:skinCluster1" "weightList[1883].weights[1]" " 0.019291259564084399"
+		
+		2 "mom2:skinCluster1" "weightList[1883].weights[2]" " 0.018878486544681976"
+		
+		2 "mom2:skinCluster1" "weightList[1883].weights[3]" " 0.0070245815381242398"
+		
+		2 "mom2:skinCluster1" "weightList[1883].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[62]" " 0.40943640470504761"
+		
+		2 "mom2:skinCluster1" "weightList[1883].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1883].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1884].weights[0]" " 0.35140414440697432"
+		
+		2 "mom2:skinCluster1" "weightList[1884].weights[1]" " 0.10701619780335125"
+		
+		2 "mom2:skinCluster1" "weightList[1884].weights[2]" " 0.18236314711304397"
+		
+		2 "mom2:skinCluster1" "weightList[1884].weights[3]" " 0.1080635184280954"
+		
+		2 "mom2:skinCluster1" "weightList[1884].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[62]" " 0.25115299224853516"
+		
+		2 "mom2:skinCluster1" "weightList[1884].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1884].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1903].weights[0]" " 0.30600683290925096"
+		
+		2 "mom2:skinCluster1" "weightList[1903].weights[1]" " 0.085717342735836324"
+		
+		2 "mom2:skinCluster1" "weightList[1903].weights[2]" " 0.28195397562251728"
+		
+		2 "mom2:skinCluster1" "weightList[1903].weights[3]" " 0.29565119470374135"
+		
+		2 "mom2:skinCluster1" "weightList[1903].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[62]" " 0.030670654028654099"
+		
+		2 "mom2:skinCluster1" "weightList[1903].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1903].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1904].weights[0]" " 0.35876831347703098"
+		
+		2 "mom2:skinCluster1" "weightList[1904].weights[1]" " 0.071351133068961306"
+		
+		2 "mom2:skinCluster1" "weightList[1904].weights[2]" " 0.1789989642422859"
+		
+		2 "mom2:skinCluster1" "weightList[1904].weights[3]" " 0.15518762782980969"
+		
+		2 "mom2:skinCluster1" "weightList[1904].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[62]" " 0.23569396138191223"
+		
+		2 "mom2:skinCluster1" "weightList[1904].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1904].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1905].weights[0]" " 0.45745200654456664"
+		
+		2 "mom2:skinCluster1" "weightList[1905].weights[1]" " 0.016092301096685014"
+		
+		2 "mom2:skinCluster1" "weightList[1905].weights[2]" " 0.022575688939781995"
+		
+		2 "mom2:skinCluster1" "weightList[1905].weights[3]" " 0.011863181319280627"
+		
+		2 "mom2:skinCluster1" "weightList[1905].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[62]" " 0.49201682209968567"
+		
+		2 "mom2:skinCluster1" "weightList[1905].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1905].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1928].weights[0]" " 0.37932652490870694"
+		
+		2 "mom2:skinCluster1" "weightList[1928].weights[1]" " 0.06015178867598011"
+		
+		2 "mom2:skinCluster1" "weightList[1928].weights[2]" " 0.17423436340574291"
+		
+		2 "mom2:skinCluster1" "weightList[1928].weights[3]" " 0.15240909792145049"
+		
+		2 "mom2:skinCluster1" "weightList[1928].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[62]" " 0.23387822508811951"
+		
+		2 "mom2:skinCluster1" "weightList[1928].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1928].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1991].weights[0]" " 0.61831309557863223"
+		
+		2 "mom2:skinCluster1" "weightList[1991].weights[1]" " 0.061262322674225315"
+		
+		2 "mom2:skinCluster1" "weightList[1991].weights[2]" " 0.061544950385685394"
+		
+		2 "mom2:skinCluster1" "weightList[1991].weights[3]" " 0.025066628655883046"
+		
+		2 "mom2:skinCluster1" "weightList[1991].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[62]" " 0.23381300270557404"
+		
+		2 "mom2:skinCluster1" "weightList[1991].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1991].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1992].weights[0]" " 0.47119500589895352"
+		
+		2 "mom2:skinCluster1" "weightList[1992].weights[1]" " 0.066502858409152779"
+		
+		2 "mom2:skinCluster1" "weightList[1992].weights[2]" " 0.085583970826919403"
+		
+		2 "mom2:skinCluster1" "weightList[1992].weights[3]" " 0.038121224824385971"
+		
+		2 "mom2:skinCluster1" "weightList[1992].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[62]" " 0.33859694004058838"
+		
+		2 "mom2:skinCluster1" "weightList[1992].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1992].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1993].weights[0]" " 0.40093546779824729"
+		
+		2 "mom2:skinCluster1" "weightList[1993].weights[1]" " 0.059615881467987672"
+		
+		2 "mom2:skinCluster1" "weightList[1993].weights[2]" " 0.11224044456355139"
+		
+		2 "mom2:skinCluster1" "weightList[1993].weights[3]" " 0.080741694682252757"
+		
+		2 "mom2:skinCluster1" "weightList[1993].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[62]" " 0.34646651148796082"
+		
+		2 "mom2:skinCluster1" "weightList[1993].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1993].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[1994].weights[0]" " 0.41889910913111633"
+		
+		2 "mom2:skinCluster1" "weightList[1994].weights[1]" " 0.036042514952938032"
+		
+		2 "mom2:skinCluster1" "weightList[1994].weights[2]" " 0.086731771909664468"
+		
+		2 "mom2:skinCluster1" "weightList[1994].weights[3]" " 0.068009253380289375"
+		
+		2 "mom2:skinCluster1" "weightList[1994].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[62]" " 0.39031735062599182"
+		
+		2 "mom2:skinCluster1" "weightList[1994].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[1994].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[2002].weights[0]" " 0.35467031996795384"
+		
+		2 "mom2:skinCluster1" "weightList[2002].weights[1]" " 0.010373957009539777"
+		
+		2 "mom2:skinCluster1" "weightList[2002].weights[2]" " 0.00097062084584008249"
+		
+		2 "mom2:skinCluster1" "weightList[2002].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[62]" " 0.63398510217666626"
+		
+		2 "mom2:skinCluster1" "weightList[2002].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[2002].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[2003].weights[0]" " 0.46611273340572051"
+		
+		2 "mom2:skinCluster1" "weightList[2003].weights[1]" " 0.0083238285896684791"
+		
+		2 "mom2:skinCluster1" "weightList[2003].weights[2]" " 0.0011675577278275223"
+		
+		2 "mom2:skinCluster1" "weightList[2003].weights[3]" " 2.2646958454677962e-05"
+		
+		2 "mom2:skinCluster1" "weightList[2003].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[62]" " 0.52437323331832886"
+		
+		2 "mom2:skinCluster1" "weightList[2003].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[2003].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[2004].weights[0]" " 0.49725536766110079"
+		
+		2 "mom2:skinCluster1" "weightList[2004].weights[1]" " 0.0050308491496025816"
+		
+		2 "mom2:skinCluster1" "weightList[2004].weights[2]" " 0.0031790181878187298"
+		
+		2 "mom2:skinCluster1" "weightList[2004].weights[3]" " 0.00084525775546038465"
+		
+		2 "mom2:skinCluster1" "weightList[2004].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[62]" " 0.49368950724601746"
+		
+		2 "mom2:skinCluster1" "weightList[2004].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[2004].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[2005].weights[0]" " 0.30420823273534392"
+		
+		2 "mom2:skinCluster1" "weightList[2005].weights[1]" " 0.0036387757832642537"
+		
+		2 "mom2:skinCluster1" "weightList[2005].weights[2]" " 0.0047945528077717632"
+		
+		2 "mom2:skinCluster1" "weightList[2005].weights[3]" " 0.0022655126482294297"
+		
+		2 "mom2:skinCluster1" "weightList[2005].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[62]" " 0.68509292602539062"
+		
+		2 "mom2:skinCluster1" "weightList[2005].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[2005].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3448].weights[0]" " 0.38899610188498068"
+		
+		2 "mom2:skinCluster1" "weightList[3448].weights[1]" " 0.01412289170262848"
+		
+		2 "mom2:skinCluster1" "weightList[3448].weights[2]" " 0.016612062668914362"
+		
+		2 "mom2:skinCluster1" "weightList[3448].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[58]" " 0.55922610877610168"
+		
+		2 "mom2:skinCluster1" "weightList[3448].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[62]" " 0.021042834967374802"
+		
+		2 "mom2:skinCluster1" "weightList[3448].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3448].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3449].weights[0]" " 0.36556059681532188"
+		
+		2 "mom2:skinCluster1" "weightList[3449].weights[1]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[2]" " 0.088050692409765138"
+		
+		2 "mom2:skinCluster1" "weightList[3449].weights[3]" " 0.056584640337004888"
+		
+		2 "mom2:skinCluster1" "weightList[3449].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[58]" " 0.38795674964284882"
+		
+		2 "mom2:skinCluster1" "weightList[3449].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[62]" " 0.1018473207950592"
+		
+		2 "mom2:skinCluster1" "weightList[3449].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3449].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3450].weights[0]" " 0.4138396120651176"
+		
+		2 "mom2:skinCluster1" "weightList[3450].weights[1]" " 0.10675578112406443"
+		
+		2 "mom2:skinCluster1" "weightList[3450].weights[2]" " 0.22221115306774331"
+		
+		2 "mom2:skinCluster1" "weightList[3450].weights[3]" " 0.18480610115728216"
+		
+		2 "mom2:skinCluster1" "weightList[3450].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[62]" " 0.072387352585792542"
+		
+		2 "mom2:skinCluster1" "weightList[3450].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3450].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3530].weights[0]" " 0.44321529157495876"
+		
+		2 "mom2:skinCluster1" "weightList[3530].weights[1]" " 0.11452643322321264"
+		
+		2 "mom2:skinCluster1" "weightList[3530].weights[2]" " 0.27143546766934701"
+		
+		2 "mom2:skinCluster1" "weightList[3530].weights[3]" " 0.0075304144441408474"
+		
+		2 "mom2:skinCluster1" "weightList[3530].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[62]" " 0.16329239308834076"
+		
+		2 "mom2:skinCluster1" "weightList[3530].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3530].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3601].weights[0]" " 0.43086148667624746"
+		
+		2 "mom2:skinCluster1" "weightList[3601].weights[1]" " 0.11197060856671601"
+		
+		2 "mom2:skinCluster1" "weightList[3601].weights[2]" " 0.26358670409684126"
+		
+		2 "mom2:skinCluster1" "weightList[3601].weights[3]" " 0.0092440764317177678"
+		
+		2 "mom2:skinCluster1" "weightList[3601].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[62]" " 0.18433712422847748"
+		
+		2 "mom2:skinCluster1" "weightList[3601].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3601].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3626].weights[0]" " 0.25216928673214134"
+		
+		2 "mom2:skinCluster1" "weightList[3626].weights[1]" " 0.10102141923868187"
+		
+		2 "mom2:skinCluster1" "weightList[3626].weights[2]" " 0.28721675491836807"
+		
+		2 "mom2:skinCluster1" "weightList[3626].weights[3]" " 0.31128170792165316"
+		
+		2 "mom2:skinCluster1" "weightList[3626].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[62]" " 0.048310831189155579"
+		
+		2 "mom2:skinCluster1" "weightList[3626].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3626].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3627].weights[0]" " 0.34222262782023039"
+		
+		2 "mom2:skinCluster1" "weightList[3627].weights[1]" " 0.087584947537980296"
+		
+		2 "mom2:skinCluster1" "weightList[3627].weights[2]" " 0.1806612882882275"
+		
+		2 "mom2:skinCluster1" "weightList[3627].weights[3]" " 0.14874795158679238"
+		
+		2 "mom2:skinCluster1" "weightList[3627].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[62]" " 0.24078318476676941"
+		
+		2 "mom2:skinCluster1" "weightList[3627].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3627].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3628].weights[0]" " 0.41267677677126119"
+		
+		2 "mom2:skinCluster1" "weightList[3628].weights[1]" " 0.066375532746525953"
+		
+		2 "mom2:skinCluster1" "weightList[3628].weights[2]" " 0.10401928695788917"
+		
+		2 "mom2:skinCluster1" "weightList[3628].weights[3]" " 0.066866182235642627"
+		
+		2 "mom2:skinCluster1" "weightList[3628].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[62]" " 0.35006222128868103"
+		
+		2 "mom2:skinCluster1" "weightList[3628].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3628].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3629].weights[0]" " 0.51434740207559937"
+		
+		2 "mom2:skinCluster1" "weightList[3629].weights[1]" " 0.017341721217830473"
+		
+		2 "mom2:skinCluster1" "weightList[3629].weights[2]" " 0.019699550054790169"
+		
+		2 "mom2:skinCluster1" "weightList[3629].weights[3]" " 0.0080364124347846698"
+		
+		2 "mom2:skinCluster1" "weightList[3629].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[62]" " 0.44057491421699524"
+		
+		2 "mom2:skinCluster1" "weightList[3629].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3629].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[3630].weights[0]" " 0.44240605145470446"
+		
+		2 "mom2:skinCluster1" "weightList[3630].weights[1]" " 0.0010758361113068721"
+		
+		2 "mom2:skinCluster1" "weightList[3630].weights[2]" " 0.00085216259424576203"
+		
+		2 "mom2:skinCluster1" "weightList[3630].weights[3]" " 0.00010297681728201816"
+		
+		2 "mom2:skinCluster1" "weightList[3630].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[62]" " 0.55556297302246094"
+		
+		2 "mom2:skinCluster1" "weightList[3630].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[3630].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[4031].weights[0]" " 0.12945103036153069"
+		
+		2 "mom2:skinCluster1" "weightList[4031].weights[1]" " 0.001079590989832208"
+		
+		2 "mom2:skinCluster1" "weightList[4031].weights[2]" " 9.6109866217031681e-05"
+		
+		2 "mom2:skinCluster1" "weightList[4031].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[58]" " 0.84917214639417637"
+		
+		2 "mom2:skinCluster1" "weightList[4031].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[62]" " 0.020201122388243675"
+		
+		2 "mom2:skinCluster1" "weightList[4031].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[4031].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[4038].weights[0]" " 0.11548208950096676"
+		
+		2 "mom2:skinCluster1" "weightList[4038].weights[1]" " 0.001250449885902832"
+		
+		2 "mom2:skinCluster1" "weightList[4038].weights[2]" " 0.00010094123183269652"
+		
+		2 "mom2:skinCluster1" "weightList[4038].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[58]" " 0.75354264435936313"
+		
+		2 "mom2:skinCluster1" "weightList[4038].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[62]" " 0.12962387502193451"
+		
+		2 "mom2:skinCluster1" "weightList[4038].weights[63]" " 0"
+		2 "mom2:skinCluster1" "weightList[4038].weights[64]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights" " -s 64"
+		2 "mom2:skinCluster1" "weightList[4042].weights[0]" " 0.26580510914389321"
+		
+		2 "mom2:skinCluster1" "weightList[4042].weights[1]" " 0.0021928998243047866"
+		
+		2 "mom2:skinCluster1" "weightList[4042].weights[2]" " 0.0001929633750943411"
+		
+		2 "mom2:skinCluster1" "weightList[4042].weights[3]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[4]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[5]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[6]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[7]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[8]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[9]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[10]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[11]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[12]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[13]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[14]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[15]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[16]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[17]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[18]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[19]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[20]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[21]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[22]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[23]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[24]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[25]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[26]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[27]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[28]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[29]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[30]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[31]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[32]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[33]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[34]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[35]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[36]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[37]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[38]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[39]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[40]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[41]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[42]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[43]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[44]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[45]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[46]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[47]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[48]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[49]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[50]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[51]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[52]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[53]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[54]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[55]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[56]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[57]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[58]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[59]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[60]" " 0"
+		2 "mom2:skinCluster1" "weightList[4042].weights[62]" " 0.73179107904434204"
+		
+		2 "mom2:skinCluster1" "weightList[4042].weights[63]" " 1.7948612365620537e-05"
+		
+		2 "mom2:skinCluster1" "weightList[4042].weights[64]" " 0"
 		3 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest.message" 
 		"mom2:skinCluster1.paintTrans" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MasterCntrl.translateX" "momRN1.placeHolderList[2677]" 
@@ -15132,7 +18455,7 @@ createNode reference -n "momRN1";
 		""
 		5 4 "momRN1" "mom2:blendShape2.targetDirectory[0].directoryParentVisibility" 
 		"momRN1.placeHolderList[3214]" ""
-		5 0 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG.message" 
+		5 0 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_l_hip.message" 
 		"mom2:skinCluster1.paintTrans" "momRN1.placeHolderList[3215]" "momRN1.placeHolderList[3216]" 
 		""
 		5 4 "momRN1" "mom2:lambert2SG.dagSetMembers" "momRN1.placeHolderList[3217]" 
@@ -15142,88 +18465,84 @@ lockNode -l 1 ;
 createNode animCurveTA -n "Arm_Cntrl_R_rotateX";
 	rename -uid "24231833-5944-1751-0E75-89A63E78B7EE";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  -10 0 1 -52.786624646010914 20 64.231267437102588
+	setAttr -s 15 ".ktv[0:14]"  -10 0 1 -52.786624646010914 20 64.231267437102588
 		 21 64.231267437102588 114 -81.836439150852655 115 -82.238322591974466 150 -109.16618633308875
 		 154 -109.38089250134583 183 60.823909463871551 203 -109.31201275083183 213 -53.414514295666471
-		 219 -114.45472370221347 225 -126.11521616724664 232 -139.62857071522237 237 -129.86285155823998
-		 257 -122.84512752571167;
-	setAttr -s 16 ".kit[0:15]"  16 3 18 1 3 1 18 18 
-		18 18 18 18 3 18 3 18;
-	setAttr -s 16 ".kot[1:15]"  3 1 3 3 3 18 18 18 
-		18 18 18 3 18 3 18;
-	setAttr -s 16 ".ktl[5:15]" no yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 16 ".kix[3:15]"  0.041666667908430099 3.875 1.3017070293426514 
+		 219 -114.45472370221347 225 -126.11521616724664 232 -154.60559145907288 285 -119.68527864601553;
+	setAttr -s 15 ".kit[0:14]"  16 3 18 1 3 1 18 18 
+		18 18 18 18 3 18 18;
+	setAttr -s 15 ".kot[1:14]"  3 1 3 3 3 18 18 18 
+		18 18 18 3 18 18;
+	setAttr -s 15 ".ktl[5:14]" no yes yes yes yes yes yes yes yes yes;
+	setAttr -s 15 ".kix[3:14]"  0.041666667908430099 3.875 1.3017070293426514 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.4166666567325592 
-		0.25 0.25 0.2916666567325592 0.2083333283662796 0.83333331346511841;
-	setAttr -s 16 ".kiy[3:15]"  0 0 0 -0.098367400467395782 0 0 0 0 -0.6105419397354126 
-		0 0 0 0;
-	setAttr -s 16 ".kox[2:15]"  0.041666667908430099 3.875 0.041666667908430099 
+		0.25 0.25 0.29166698455810547 2.2083330154418945;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 -0.098367400467395782 0 0 0 0 -0.6105419397354126 
+		0 0 0;
+	setAttr -s 15 ".kox[2:14]"  0.041666667908430099 3.875 0.041666667908430099 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.4166666567325592 
-		0.25 0.25 0.2916666567325592 0.2083333283662796 0.83333331346511841 0.83333331346511841;
-	setAttr -s 16 ".koy[2:15]"  0 0 0 0 -0.011241988278925419 0 0 0 0 -0.6105419397354126 
-		0 0 0 0;
+		0.25 0.25 0.29166698455810547 2.2083330154418945 2.2083330154418945;
+	setAttr -s 15 ".koy[2:14]"  0 0 0 0 -0.011241988278925419 0 0 0 0 -0.6105419397354126 
+		0 0 0;
 createNode animCurveTA -n "Arm_Cntrl_R_rotateY";
 	rename -uid "FAA39F1A-FC44-6B07-AFB8-58ACDAC1276D";
 	setAttr ".tan" 18;
 	setAttr -s 13 ".ktv[0:12]"  -10 0 1 29.555292040407551 20 5.9687147719925102
 		 21 5.5562865158221353 114 0.1828636104548638 115 0.11545932672583985 150 21.47261227507154
 		 154 18.553982041000086 183 -183.65441465359496 203 32.299451676221814 219 152.73734963662588
-		 237 201.56564844288022 257 188.02281733734031;
+		 232 184.92393389253797 285 148.38185241143978;
 	setAttr -s 13 ".kit[0:12]"  16 3 3 1 3 1 18 18 
-		18 18 18 3 18;
+		18 18 18 18 18;
 	setAttr -s 13 ".kot[1:12]"  3 1 3 3 3 18 18 18 
-		18 18 3 18;
+		18 18 18 18;
 	setAttr -s 13 ".ktl[5:12]" no yes yes yes yes yes yes yes;
 	setAttr -s 13 ".kix[3:12]"  0.041666667908430099 3.875 1.3017070293426514 
-		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.66666668653488159 
-		0.75 0.83333331346511841;
+		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.66666698455810547 
+		0.54166698455810547 2.2083330154418945;
 	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 -0.15281912684440613 0 3.2617466449737549 
-		1.390236496925354 0 0;
+		1.4696825742721558 0 0;
 	setAttr -s 13 ".kox[2:12]"  0.041666667908430099 3.875 0.041666667908430099 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.66666668653488159 
-		0.75 0.83333331346511841 0.83333331346511841;
+		0.54166698455810547 2.2083330154418945 2.2083330154418945;
 	setAttr -s 13 ".koy[2:12]"  0 0 0 0 0 -1.1079386472702026 0 2.6093971729278564 
-		1.5640159845352173 0 0;
+		1.1941171884536743 0 0;
 createNode animCurveTA -n "Arm_Cntrl_R_rotateZ";
 	rename -uid "808181E2-9B49-8E94-DB86-26BF58139CFB";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  -10 0 1 -284.76841757022447 20 -179.23316799087763
+	setAttr -s 15 ".ktv[0:14]"  -10 0 1 -284.76841757022447 20 -179.23316799087763
 		 21 -182.31429053872938 114 -343.77281800413283 115 -344.06442338588448 150 -35.959690479862424
 		 154 -37.668961054345559 183 120.46111156625076 203 -30.819658005753332 213 35.132526928033762
-		 219 -28.576839999770467 225 -28.410183088759407 232 -25.937532200791548 237 -24.182480330671897
-		 257 -14.610481193602959;
-	setAttr -s 16 ".kit[0:15]"  16 3 3 1 3 1 18 18 
-		18 18 18 18 3 18 3 18;
-	setAttr -s 16 ".kot[1:15]"  3 1 3 3 3 18 18 18 
-		18 18 18 3 18 3 18;
-	setAttr -s 16 ".ktl[5:15]" no yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 16 ".kix[3:15]"  0.041666667908430099 3.875 1.3670433759689331 
+		 219 -28.576839999770467 225 -28.410183088759407 232 -69.123297457769809 285 -34.629697437007941;
+	setAttr -s 15 ".kit[0:14]"  16 3 3 1 3 1 18 18 
+		18 18 18 18 3 18 18;
+	setAttr -s 15 ".kot[1:14]"  3 1 3 3 3 18 18 18 
+		18 18 18 3 18 18;
+	setAttr -s 15 ".ktl[5:14]" no yes yes yes yes yes yes yes yes yes;
+	setAttr -s 15 ".kix[3:14]"  0.041666667908430099 3.875 1.3670433759689331 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.4166666567325592 
-		0.25 0.25 0.2916666567325592 0.2083333283662796 0.83333331346511841;
-	setAttr -s 16 ".kiy[3:15]"  0 0 0 0 0 0 0 0 0 0 0.043042611330747604 
-		0 0;
-	setAttr -s 16 ".kox[2:15]"  0.041666667908430099 3.875 0.041666667908430099 
+		0.25 0.25 0.29166698455810547 2.2083330154418945;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[2:14]"  0.041666667908430099 3.875 0.041666667908430099 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.83333331346511841 0.4166666567325592 
-		0.25 0.25 0.2916666567325592 0.2083333283662796 0.83333331346511841 0.83333331346511841;
-	setAttr -s 16 ".koy[2:15]"  0 0 0 0 0 0 0 0 0 0 0 0.030744722113013268 
-		0 0;
+		0.25 0.25 0.29166698455810547 2.2083330154418945 2.2083330154418945;
+	setAttr -s 15 ".koy[2:14]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Arm_Cntrl_R_visibility";
 	rename -uid "DA50741D-7643-9F9D-E722-E684519F59B1";
 	setAttr ".tan" 5;
-	setAttr -s 17 ".ktv[0:16]"  -10 1 1 1 20 1 21 1 109 1 112 1 114 1 150 1
-		 154 1 183 1 203 1 213 1 219 1 225 1 232 1 237 1 257 1;
-	setAttr -s 17 ".kit[0:16]"  9 9 9 1 9 9 9 9 
-		9 9 9 9 9 9 9 9 9;
-	setAttr -s 17 ".kix[3:16]"  0.041666667908430099 3.6666667461395264 
+	setAttr -s 16 ".ktv[0:15]"  -10 1 1 1 20 1 21 1 109 1 112 1 114 1 150 1
+		 154 1 183 1 203 1 213 1 219 1 225 1 232 1 285 1;
+	setAttr -s 16 ".kit[0:15]"  9 9 9 1 9 9 9 9 
+		9 9 9 9 9 9 9 9;
+	setAttr -s 16 ".kix[3:15]"  0.041666667908430099 3.6666667461395264 
 		0.125 0.083333335816860199 1.5 0.1666666716337204 1.2083333730697632 0.83333331346511841 
-		0.4166666567325592 0.25 0.25 0.2916666567325592 0.2083333283662796 0.83333331346511841;
-	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0.4166666567325592 0.25 0.25 0.29166698455810547 2.2083330154418945;
+	setAttr -s 16 ".kiy[3:15]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Arm_Cntrl_R_translateX";
 	rename -uid "1016E29D-8F49-C668-DE1F-EFB8235857F7";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  -10 0 1 6.9410577333881154 114 1.6226351489836608
 		 115 1.623 150 6.2781641938240043 154 6.3999182634372929 183 8.113138085490716 197 5.871
-		 203 7.2308486065801834 213 9.5745426041245949 232 13.609020832642248 257 14.200356255855528;
+		 203 7.2308486065801834 213 9.5745426041245949 232 10.876467947233001 285 12.954820513561334;
 	setAttr -s 12 ".kit[0:11]"  16 3 1 3 18 18 18 1 
 		18 18 18 18;
 	setAttr -s 12 ".kot[1:11]"  3 3 3 18 18 18 1 18 
@@ -15231,40 +18550,40 @@ createNode animCurveTL -n "Arm_Cntrl_R_translateX";
 	setAttr -s 12 ".ktl[7:11]" no yes yes yes yes;
 	setAttr -s 12 ".kix[2:11]"  0.82755583524703979 0.041666667908430099 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 2.9583334922790527 0.25 
-		0.4166666567325592 0.79166668653488159 1.0416666269302368;
+		0.41666698455810547 0.79166698455810547 2.2083330154418945;
 	setAttr -s 12 ".kiy[2:11]"  0 0 3.1960444450378418 0.2224210798740387 
-		0 0 1.3888285160064697 2.1993696689605713 1.3482447862625122 0;
+		0 0 1.3888285160064697 1.2571103572845459 0.89201813936233521 0;
 	setAttr -s 12 ".kox[7:11]"  0.76941096782684326 0.4166666567325592 
-		0.79166668653488159 1.0416666269302368 1.0416666269302368;
-	setAttr -s 12 ".koy[7:11]"  0 2.3147141933441162 4.178802490234375 
-		1.7740062475204468 0;
+		0.79166698455810547 2.2083330154418945 2.2083330154418945;
+	setAttr -s 12 ".koy[7:11]"  0 2.3147141933441162 2.3885090351104736 
+		2.4882597923278809 0;
 createNode animCurveTL -n "Arm_Cntrl_R_translateY";
 	rename -uid "5398D673-5940-FB18-9531-FCA2E9BEDAE1";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  -10 0 1 -1.7302878535345267 20 -6.7684155133308037
+	setAttr -s 12 ".ktv[0:11]"  -10 0 1 -1.7302878535345267 20 -6.7684155133308037
 		 21 -6.7684155133308037 114 0.15238690315677877 115 0.152 150 6.698609455474088 154 7.7167772544650202
-		 183 8.2901923639929898 197 3.712 257 4.9029255068902229;
-	setAttr -s 11 ".kit[0:10]"  16 3 18 1 1 3 18 18 
+		 183 8.2901923639929898 197 3.712 232 2.3499860274129172 285 1.7501503533545413;
+	setAttr -s 12 ".kit[0:11]"  16 3 18 1 1 3 18 18 
+		18 18 18 18;
+	setAttr -s 12 ".kot[1:11]"  3 1 3 3 3 18 18 18 
 		18 18 18;
-	setAttr -s 11 ".kot[1:10]"  3 1 3 3 3 18 18 18 
-		18 18;
-	setAttr -s 11 ".ktl[9:10]" no yes;
-	setAttr -s 11 ".kix[3:10]"  0.041666667908430099 0.82755583524703979 
-		0.041666667908430099 1.4583333730697632 0.1666666716337204 1.2083333730697632 0.58333331346511841 
-		2.5;
-	setAttr -s 11 ".kiy[3:10]"  0 0 0 6.788902759552002 0.19291913509368896 
-		0 0 0;
-	setAttr -s 11 ".kox[2:10]"  0.041666667908430099 3.875 0.041666667908430099 
-		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.58333331346511841 2.5 
-		2.5;
-	setAttr -s 11 ".koy[2:10]"  0 0 0 0 0.77587461471557617 1.3986637592315674 
-		0 0 0;
+	setAttr -s 12 ".ktl[9:11]" no yes yes;
+	setAttr -s 12 ".kix[3:11]"  0.041666667908430099 0.82755583524703979 
+		0.041666667908430099 1.4583333730697632 0.1666666716337204 1.2083334922790527 0.58333301544189453 
+		1.4583339691162109 2.2083330154418945;
+	setAttr -s 12 ".kiy[3:11]"  0 0 0 6.788902759552002 0.19291913509368896 
+		0 -1.6344151496887207 -0.78028136491775513 0;
+	setAttr -s 12 ".kox[2:11]"  0.041666667908430099 3.875 0.041666667908430099 
+		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.58333301544189453 1.4583339691162109 
+		2.2083330154418945 2.2083330154418945;
+	setAttr -s 12 ".koy[2:11]"  0 0 0 0 0.77587461471557617 1.3986637592315674 
+		0 -4.0860419273376465 -1.1815682649612427 0;
 createNode animCurveTL -n "Arm_Cntrl_R_translateZ";
 	rename -uid "1F0ABF24-804E-370A-5A9D-53A42437B2BC";
 	setAttr ".tan" 18;
 	setAttr -s 13 ".ktv[0:12]"  -10 0 1 12.835108871458795 20 2.0386113619064474
 		 21 2.0386113619064474 114 5.6582699740009907 115 5.658 150 6.8050946657683866 154 2.4092097939647861
-		 183 2.7960326060798035 197 10.671 225 9.3303040717118257 232 7.0316481445926744 257 5.2444308828108062;
+		 183 2.7960326060798035 197 10.671 225 9.3303040717118257 232 9.3829681975550994 285 7.1780248622782308;
 	setAttr -s 13 ".kit[0:12]"  16 3 18 1 1 3 18 18 
 		18 1 18 18 18;
 	setAttr -s 13 ".kot[1:12]"  3 1 3 1 3 18 18 18 
@@ -15272,14 +18591,12 @@ createNode animCurveTL -n "Arm_Cntrl_R_translateZ";
 	setAttr -s 13 ".ktl[9:12]" no yes yes yes;
 	setAttr -s 13 ".kix[3:12]"  0.041666667908430099 0.12816798686981201 
 		0.041666667908430099 1.4583333730697632 0.1666666716337204 1.2083333730697632 2.9583334922790527 
-		1.1666666269302368 0.2916666567325592 1.0416666269302368;
-	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 1.1604684591293335 0 -2.9114813804626465 
-		-0.89378476142883301 0;
+		1.1666669845581055 0.29166698455810547 2.2083330154418945;
+	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 1.1604684591293335 0 0 0 0;
 	setAttr -s 13 ".kox[2:12]"  0.041666667908430099 3.875 0.58333349227905273 
 		1.4583333730697632 0.1666666716337204 1.2083333730697632 0.58333331346511841 1.6057608127593994 
-		0.2916666567325592 1.0416666269302368 1.0416666269302368;
-	setAttr -s 13 ".koy[2:12]"  0 0 0 0 0 0 0.56022614240646362 0 -0.72787034511566162 
-		-3.1920883655548096 0;
+		0.29166698455810547 2.2083330154418945 2.2083330154418945;
+	setAttr -s 13 ".koy[2:12]"  0 0 0 0 0 0 0.56022614240646362 0 0 0 0;
 createNode animCurveTA -n "MasterCntrl_rotateX";
 	rename -uid "30F3C614-7E4C-6923-4E5D-A287E29B6617";
 	setAttr ".tan" 16;
@@ -15591,49 +18908,51 @@ createNode animCurveTU -n "mom_cog_ctrl_scaleZ1";
 	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Arm_Cntrl_L_rotateX";
 	rename -uid "5C0C90B7-8843-6BE2-AE27-0AAD56D5ED79";
-	setAttr ".tan" 3;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 0 20 26.368159283128406 60 37.212583512413168;
-	setAttr -s 5 ".kit[0:4]"  16 16 3 3 18;
-	setAttr -s 5 ".kot[0:4]"  18 18 3 3 18;
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 1 0 20 -29.699524727964608 60 37.212583512413168
+		 255 5.7871714515996322 285 10.624382806564894;
+	setAttr -s 7 ".kit[0:6]"  16 16 3 3 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  3 3 18 18 18;
 createNode animCurveTA -n "Arm_Cntrl_L_rotateY";
 	rename -uid "1F756628-A844-0597-C4CE-A0B8AEBC372B";
-	setAttr ".tan" 3;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 -86.349639218297369 20 -23.88861249435227
-		 60 -35.063267680617756;
-	setAttr -s 5 ".kit[0:4]"  16 16 3 3 18;
-	setAttr -s 5 ".kot[0:4]"  18 18 3 3 18;
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 1 -86.349639218297369 20 -75.093896231811812
+		 60 -35.063267680617756 255 -46.374730378002972 285 -27.837993477749425;
+	setAttr -s 7 ".kit[0:6]"  16 16 3 3 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  3 3 18 18 18;
 createNode animCurveTA -n "Arm_Cntrl_L_rotateZ";
 	rename -uid "195CB4F1-4E4E-29FB-7D38-DD97EBE6FB00";
-	setAttr ".tan" 3;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 0 20 -118.50508168892242 60 -137.73220641134412;
-	setAttr -s 5 ".kit[0:4]"  16 16 3 3 18;
-	setAttr -s 5 ".kot[0:4]"  18 18 3 3 18;
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 1 0 20 -54.33312847931991 60 -137.73220641134412
+		 255 -111.96907387423008 285 -111.88952300403025;
+	setAttr -s 7 ".kit[0:6]"  16 16 3 3 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  3 3 18 18 18;
 createNode animCurveTU -n "Arm_Cntrl_L_visibility";
 	rename -uid "69A6635D-8146-6762-04BF-C2BB9AC85CCD";
 	setAttr ".tan" 9;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 1 1 1 20 1 60 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 1 1 1 20 1 60 1 255 1 285 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "Arm_Cntrl_L_translateX";
 	rename -uid "57FCDEB0-6848-E41A-818E-57980A39B08A";
-	setAttr ".tan" 3;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 -6.0376941268606146 20 -8.2362025905128711
-		 60 -7.7479198257637982;
-	setAttr -s 5 ".kit[0:4]"  16 16 3 3 18;
-	setAttr -s 5 ".kot[0:4]"  18 18 3 3 18;
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 1 -6.0376941268606146 20 -2.3518533113203031
+		 60 -7.7479198257637982 255 -6.3785886490289077 285 -6.4686451271606256;
+	setAttr -s 7 ".kit[0:6]"  16 16 3 3 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  3 3 18 18 18;
 createNode animCurveTL -n "Arm_Cntrl_L_translateY";
 	rename -uid "6F8AE378-AA48-7CE9-B708-E2B78C46DB63";
-	setAttr ".tan" 3;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 1.3322676295501878e-15 20 -2.4799899239101886
-		 60 1.4622729130927619;
-	setAttr -s 5 ".kit[0:4]"  16 16 3 3 18;
-	setAttr -s 5 ".kot[0:4]"  18 18 3 3 18;
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 1 1.3322676295501878e-15 20 -0.66117480852253019
+		 60 1.4622729130927619 255 1.6496301476352802 285 0.60754257882666396;
+	setAttr -s 7 ".kit[0:6]"  16 16 3 3 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  3 3 18 18 18;
 createNode animCurveTL -n "Arm_Cntrl_L_translateZ";
 	rename -uid "FDA51D83-5A40-7095-F105-86AC00754F63";
-	setAttr ".tan" 3;
-	setAttr -s 5 ".ktv[0:4]"  -20 0 -10 0 1 2.3186220686465471 20 11.007631894461257
-		 60 7.5496641513719718;
-	setAttr -s 5 ".kit[0:4]"  16 16 3 3 18;
-	setAttr -s 5 ".kot[0:4]"  18 18 3 3 18;
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  -20 0 -10 0 1 2.3186220686465471 20 10.700100165735925
+		 60 7.5496641513719718 255 5.7903145412696526 285 5.4874972270445044;
+	setAttr -s 7 ".kit[0:6]"  16 16 3 3 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  3 3 18 18 18;
 createNode animCurveTL -n "mom_shoulder_ctrl_translateX1";
 	rename -uid "4B767334-D04C-2BFF-8C86-AF9104687F52";
 	setAttr ".tan" 3;
@@ -16037,11 +19356,13 @@ createNode animCurveTA -n "ThumbCntrl_R_01_rotateZ";
 		3 18 18 18 18 18;
 createNode animCurveTU -n "IndexCntrl_R_01_visibility";
 	rename -uid "023BEADD-C948-39AC-B2D9-C2B208A3DFE5";
-	setAttr ".tan" 9;
+	setAttr ".tan" 5;
 	setAttr -s 19 ".ktv[0:18]"  -10 1 0 1 10 1 14 1 27 1 32 1 42 1 51 1
 		 54 1 63 1 77 1 111 1 113 1 205 1 209 1 216 1 232 1 238 1 274 1;
-	setAttr -s 19 ".kot[0:18]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 19 ".kit[0:18]"  9 9 9 9 9 9 9 9 
+		9 9 9 9 9 9 9 9 9 9 1;
+	setAttr -s 19 ".kix[18]"  0.75;
+	setAttr -s 19 ".kiy[18]"  0;
 createNode animCurveTA -n "IndexCntrl_R_01_rotateX";
 	rename -uid "BC63A688-7B4F-7C02-0E36-48B2829CE226";
 	setAttr ".tan" 18;
@@ -16049,9 +19370,13 @@ createNode animCurveTA -n "IndexCntrl_R_01_rotateX";
 		 27 1.0016690735753617 32 -0.40623191551837612 42 0 51 0 54 0 63 0 77 -0.93153444408658415
 		 111 0 113 0 205 0 209 0 216 0 232 0 238 0 274 0;
 	setAttr -s 19 ".kit[0:18]"  16 3 18 18 18 18 18 18 
-		18 18 18 3 3 3 3 3 18 3 3;
+		18 18 18 3 3 3 3 3 18 3 1;
 	setAttr -s 19 ".kot[1:18]"  3 18 18 18 18 18 18 18 
-		18 18 3 3 3 3 3 18 3 3;
+		18 18 3 3 3 3 3 18 3 1;
+	setAttr -s 19 ".kix[18]"  0.75;
+	setAttr -s 19 ".kiy[18]"  0;
+	setAttr -s 19 ".kox[18]"  0.75;
+	setAttr -s 19 ".koy[18]"  0;
 createNode animCurveTA -n "IndexCntrl_R_01_rotateY";
 	rename -uid "8FC00780-3941-5499-4B94-24BFAF847E78";
 	setAttr ".tan" 18;
@@ -16059,9 +19384,13 @@ createNode animCurveTA -n "IndexCntrl_R_01_rotateY";
 		 27 -5.7959011774515741 32 -2.9379040510448133 42 0 51 0 54 0 63 0 77 -6.0628497082484909
 		 111 0 113 0 205 0 209 0 216 0 232 0 238 0 274 0;
 	setAttr -s 19 ".kit[0:18]"  16 3 18 18 18 18 18 18 
-		18 18 18 3 3 3 3 3 18 3 3;
+		18 18 18 3 3 3 3 3 18 3 1;
 	setAttr -s 19 ".kot[1:18]"  3 18 18 18 18 18 18 18 
-		18 18 3 3 3 3 3 18 3 3;
+		18 18 3 3 3 3 3 18 3 1;
+	setAttr -s 19 ".kix[18]"  0.75;
+	setAttr -s 19 ".kiy[18]"  0;
+	setAttr -s 19 ".kox[18]"  0.75;
+	setAttr -s 19 ".koy[18]"  0;
 createNode animCurveTA -n "IndexCntrl_R_01_rotateZ";
 	rename -uid "C40BAFE1-C243-67F6-C90B-839ACDFD44D1";
 	setAttr ".tan" 18;
@@ -16069,11 +19398,15 @@ createNode animCurveTA -n "IndexCntrl_R_01_rotateZ";
 		 27 4.5489614773524609 32 15.929740661401617 42 0 51 -4.9795320790139694 54 -18.455822341576607
 		 63 -50.048842425095337 77 -11.100287907186329 111 0 113 -20.541298187093837 205 -20.541298187093837
 		 209 -18.034584166696177 216 -18.034584166696177 232 -18.034584166696177 238 -13.529670526218418
-		 274 -61.44466769746726;
+		 274 -37.487169111842839;
 	setAttr -s 19 ".kit[0:18]"  16 3 18 18 18 18 18 18 
-		18 18 18 3 3 3 3 3 18 3 3;
+		18 18 18 3 3 3 3 3 18 3 1;
 	setAttr -s 19 ".kot[1:18]"  3 18 18 18 18 18 18 18 
-		18 18 3 3 3 3 3 18 3 3;
+		18 18 3 3 3 3 3 18 3 1;
+	setAttr -s 19 ".kix[18]"  0.75;
+	setAttr -s 19 ".kiy[18]"  -0.41813722252845764;
+	setAttr -s 19 ".kox[18]"  0.75;
+	setAttr -s 19 ".koy[18]"  -0.41813722252845764;
 createNode animCurveTU -n "MiddleCntrl_R_01_visibility";
 	rename -uid "4818B205-9143-FEE6-5F47-4EB8B61E484E";
 	setAttr ".tan" 9;
@@ -16107,7 +19440,7 @@ createNode animCurveTA -n "MiddleCntrl_R_01_rotateZ";
 	setAttr -s 15 ".ktv[0:14]"  -10 0 0 0 10 -15.575419520112797 14 15.103680193094934
 		 33 1.3610959057308227 42 -7.5761110810547443 64 -30.120001869376907 111 0 113 -43.022787995562545
 		 205 -43.022787995562545 209 -18.034584166696177 216 -18.034584166696177 232 -18.034584166696177
-		 238 -13.529670526218418 274 -61.44466769746726;
+		 238 -13.529670526218418 274 -47.274699277517463;
 	setAttr -s 15 ".kit[0:14]"  16 3 18 18 18 18 3 3 
 		3 3 3 3 18 3 3;
 	setAttr -s 15 ".kot[0:14]"  18 3 18 18 18 18 3 3 
@@ -16211,70 +19544,74 @@ createNode animCurveTA -n "Wrist_Cntrl_L_rotateZ";
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateX";
 	rename -uid "2774A3F3-3C49-DE16-8781-1990EA9E0B2A";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  -10.46 62.293927038392894 0 62.293927038392894
+	setAttr -s 17 ".ktv[0:16]"  -10.46 62.293927038392894 0 62.293927038392894
 		 28 65.501787890996908 34 36.568532255485692 37 58.361234022290553 50 77.11169591785999
 		 63 85.659722665613486 85 48.595584884389766 105 30.717387948649183 116 71.15770247939642
 		 132 70.544589523567723 153 55.915169970011569 194 65.825425727022335 211 65.825425727022335
-		 241 55.049850986630631 263 67.544118745055357;
-	setAttr -s 16 ".kit[8:15]"  1 18 1 18 18 1 18 18;
-	setAttr -s 16 ".kot[4:15]"  1 18 18 18 1 18 1 18 
-		18 1 18 18;
-	setAttr -s 16 ".ktl[4:15]" no yes yes yes yes yes yes yes yes yes yes 
-		yes;
-	setAttr -s 16 ".kix[8:15]"  0.79166674613952637 0.45833349227905273 
-		0.45833349227905273 0.875 1.7083330154418945 1.7083330154418945 1.25 0.91666603088378906;
-	setAttr -s 16 ".kiy[8:15]"  0.24226772785186768 0 0.30690175294876099 
-		0 0 0.14474382996559143 0 0;
-	setAttr -s 16 ".kox[4:15]"  2.434598445892334 0.54166674613952637 0.91666674613952637 
+		 241 55.049850986630638 254 98.144231228180004 285 63.699693638991121;
+	setAttr -s 17 ".kit[8:16]"  1 18 1 18 18 1 18 18 
+		18;
+	setAttr -s 17 ".kot[4:16]"  1 18 18 18 1 18 1 18 
+		18 1 18 18 18;
+	setAttr -s 17 ".ktl[4:16]" no yes yes yes yes yes yes yes yes yes yes 
+		yes yes;
+	setAttr -s 17 ".kix[8:16]"  0.79166674613952637 0.45833349227905273 
+		0.45833349227905273 0.875 1.7083330154418945 1.7083330154418945 1.25 0.54166603088378906 
+		1.2916669845581055;
+	setAttr -s 17 ".kiy[8:16]"  0.24226772785186768 0 0.30690175294876099 
+		0 0 0.14474382996559143 0 0 0;
+	setAttr -s 17 ".kox[4:16]"  2.434598445892334 0.54166674613952637 0.91666674613952637 
 		0.83333325386047363 1.625 0.66666650772094727 1.125 1.7083330154418945 0.70833396911621094 
-		1.9583339691162109 0.91666603088378906 0.91666603088378906;
-	setAttr -s 16 ".koy[4:15]"  0.073448307812213898 0.23822428286075592 
+		1.9583339691162109 0.54166603088378906 1.2916669845581055 1.2916669845581055;
+	setAttr -s 17 ".koy[4:16]"  0.073448307812213898 0.23822428286075592 
 		0 -0.45663073658943176 0.49728631973266602 0 0.75330400466918945 0 0 0.16592593491077423 
-		0 0;
+		0 0 0;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateY";
 	rename -uid "DFDE8055-F246-B515-90A3-E39F7015E8C9";
 	setAttr ".tan" 18;
-	setAttr -s 21 ".ktv[0:20]"  -10.46 -21.985617610547671 -1 -36.502853215936412
+	setAttr -s 22 ".ktv[0:21]"  -10.46 -21.985617610547671 -1 -36.502853215936412
 		 0 -38.074360042273547 6 -45.73548836769092 24 -7.7475899542777675 30 20.328849929959194
 		 33 13.195715942879589 37 23.344059223070509 45 21.683125403676108 50 20.059324865894677
 		 63 -2.3087068208139119 85 -19.555442993375447 105 -10.152060009473077 116 2.5991162396313561
 		 132 -7.0089109469247077 153 -3.3783874442990487 194 23.157968089929987 211 23.157968089929987
-		 224 -23.943086792002429 241 -40.629927832662844 263 -22.572684015036973;
-	setAttr -s 21 ".kit[12:20]"  1 18 1 18 18 1 1 18 
-		18;
-	setAttr -s 21 ".kot[12:20]"  1 18 1 18 18 1 1 18 
-		18;
-	setAttr -s 21 ".kix[12:20]"  0.79166674613952637 0.45833349227905273 
+		 224 -23.943086792002429 241 -40.629927832662844 254 8.7945883497981754 285 0.81750693678951825;
+	setAttr -s 22 ".kit[12:21]"  1 18 1 18 18 1 1 18 
+		18 18;
+	setAttr -s 22 ".kot[12:21]"  1 18 1 18 18 1 1 18 
+		18 18;
+	setAttr -s 22 ".kix[12:21]"  0.79166674613952637 0.45833349227905273 
 		0.45833349227905273 0.875 1.7083330154418945 1.7083330154418945 0.83333301544189453 
-		0.70833396911621094 0.91666603088378906;
-	setAttr -s 21 ".kiy[12:20]"  0 0 0 0.17833451926708221 0 0 -0.66833704710006714 
-		0 0;
-	setAttr -s 21 ".kox[12:20]"  0.5 0.66666650772094727 1.125 1.7083330154418945 
-		0.70833396911621094 1.5416669845581055 0.41666698455810547 0.91666603088378906 0.91666603088378906;
-	setAttr -s 21 ".koy[12:20]"  0 0 0 0.34817683696746826 0 0 -0.33416891098022461 
-		0 0;
+		0.70833396911621094 0.54166603088378906 1.2916669845581055;
+	setAttr -s 22 ".kiy[12:21]"  0 0 0 0.17833451926708221 0 0 -0.66833704710006714 
+		0 0 0;
+	setAttr -s 22 ".kox[12:21]"  0.5 0.66666650772094727 1.125 1.7083330154418945 
+		0.70833396911621094 1.5416669845581055 0.41666698455810547 0.54166603088378906 1.2916669845581055 
+		1.2916669845581055;
+	setAttr -s 22 ".koy[12:21]"  0 0 0 0.34817683696746826 0 0 -0.33416891098022461 
+		0 0 0;
 createNode animCurveTA -n "UpperArm_Cntrl_L_rotateZ";
 	rename -uid "6F53C000-CA41-C460-0FC9-26B533E9A774";
 	setAttr ".tan" 18;
-	setAttr -s 21 ".ktv[0:20]"  -10.46 -33.634919993719592 -1 -54.898821183719214
+	setAttr -s 22 ".ktv[0:21]"  -10.46 -33.634919993719592 -1 -54.898821183719214
 		 0 -57.66231895825603 6 -74.874404599712747 24 -92.414505674240658 30 -93.566250486750121
 		 33 -87.006508772100815 37 -87.94037003900074 45 -102.94423660818855 50 -69.28576494274202
 		 63 -90.381291286624759 85 -86.420745904506688 105 -56.975405866190485 116 -70.022634855058328
 		 132 -73.84292467228218 153 -85.497333612463891 194 -65.50320133602213 211 -65.50320133602213
-		 224 -97.890682864069049 241 -69.132755107122009 263 -76.495542790911145;
-	setAttr -s 21 ".kit[12:20]"  1 18 1 18 18 1 1 18 
-		18;
-	setAttr -s 21 ".kot[12:20]"  1 18 1 18 18 1 1 18 
-		18;
-	setAttr -s 21 ".kix[12:20]"  0.79166674613952637 0.45833349227905273 
+		 224 -97.890682864069049 241 -69.132755107122009 254 -26.854327415668834 285 8.8560151162516547;
+	setAttr -s 22 ".kit[12:21]"  1 18 1 18 18 1 1 18 
+		18 18;
+	setAttr -s 22 ".kot[12:21]"  1 18 1 18 18 1 1 18 
+		18 18;
+	setAttr -s 22 ".kix[12:21]"  0.79166674613952637 0.45833349227905273 
 		0.45833349227905273 0.875 1.7083330154418945 1.7083330154418945 0.83333301544189453 
-		0.70833396911621094 0.91666603088378906;
-	setAttr -s 21 ".kiy[12:20]"  0.062625594437122345 -0.11993823200464249 
-		-0.20634971559047699 0 0 0 0 0 0;
-	setAttr -s 21 ".kox[12:20]"  0.5 0.66666650772094727 1.125 1.7083330154418945 
-		0.70833396911621094 1.5416669845581055 0.41666698455810547 0.91666603088378906 0.91666603088378906;
-	setAttr -s 21 ".koy[12:20]"  0.039553001523017883 -0.17445550858974457 
-		-0.50649458169937134 0 0 0 0 0 0;
+		0.70833396911621094 0.54166603088378906 1.2916669845581055;
+	setAttr -s 22 ".kiy[12:21]"  0.062625594437122345 -0.11993823200464249 
+		-0.20634971559047699 0 0 0 0 0.70256435871124268 0.40216076374053955 0;
+	setAttr -s 22 ".kox[12:21]"  0.5 0.66666650772094727 1.125 1.7083330154418945 
+		0.70833396911621094 1.5416669845581055 0.41666698455810547 0.54166603088378906 1.2916669845581055 
+		1.2916669845581055;
+	setAttr -s 22 ".koy[12:21]"  0.039553001523017883 -0.17445550858974457 
+		-0.50649458169937134 0 0 0 0 0.5372539758682251 0.95900005102157593 0;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateX";
 	rename -uid "E91A9B3D-3346-0635-AE1E-D890DF48E076";
 	setAttr ".tan" 18;
@@ -16290,7 +19627,7 @@ createNode animCurveTA -n "LowerArm_Cntrl_L_rotateY";
 	setAttr -s 20 ".ktv[0:19]"  -6 -63.837160958703024 7 -20.784189057276027
 		 13 -8.1171705069444169 24 5.6399090672319119 28 26.019583177997497 37 17.399397153080436
 		 50 -57.080125092630475 56 -27.804917713436399 58 -15.397980760052945 69 -18.602966312911761
-		 82 -15.358080310845299 101 -14.179339084147626 105 -18.002952875382256 116 -11.266001372570376
+		 82 -15.358080310845299 101 -14.179339084147626 105 -18.00295287538226 116 -11.266001372570376
 		 126 -20.570474661460853 206 -40.900774421374635 218 -51.804757073022337 224 -17.624370656537835
 		 238 -39.403858782854194 285 -45.917649360669181;
 createNode animCurveTA -n "LowerArm_Cntrl_L_rotateZ";
@@ -16305,36 +19642,39 @@ createNode animCurveTA -n "LowerArm_Cntrl_L_rotateZ";
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateX";
 	rename -uid "78D6ED10-C347-CB81-E332-FFA32111D533";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  -8.12 -20.413701609543374 -1 -28.718843416900548
+	setAttr -s 15 ".ktv[0:14]"  -8.12 -20.413701609543374 -1 -28.718843416900548
 		 0 -29.548175748790214 5.2 -31.909498623519998 20 39.360980532150911 33 96.636176059270497
 		 44 60.728163992054903 51 -3.1360932570905771 60 -28.650116289451226 72 1.171458393352961
-		 105 -35.786472825842736 135 -69.792678746298506 156 -27.318289170742492 176 -68.089259037406165;
-	setAttr -s 14 ".kit[4:13]"  3 18 18 18 18 18 18 18 
-		18 3;
-	setAttr -s 14 ".kot[4:13]"  3 18 18 18 18 18 18 18 
-		18 3;
+		 105 -35.786472825842736 135 -69.792678746298506 156 -27.318289170742492 176 -68.089259037406165
+		 285 55.75518978952045;
+	setAttr -s 15 ".kit[4:14]"  3 18 18 18 18 18 18 18 
+		18 3 18;
+	setAttr -s 15 ".kot[4:14]"  3 18 18 18 18 18 18 18 
+		18 3 18;
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateY";
 	rename -uid "517B47CF-CA4B-68AA-970A-EABCF4A9E80C";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  -8.12 6.5717678467954181 -1 -19.85332514149685
+	setAttr -s 15 ".ktv[0:14]"  -8.12 6.5717678467954181 -1 -19.85332514149685
 		 0 -24.246255513426537 5.2 -45.905736448385959 20 -52.945132507825889 33 -58.525026098009405
 		 44 -50.79877073964272 51 -72.392570515572402 60 -48.682305933483804 72 -63.898680288810375
-		 105 -43.8647613243173 135 -58.382159481161331 156 -17.884163990514391 176 -11.372602311094647;
-	setAttr -s 14 ".kit[4:13]"  3 18 18 18 18 18 18 18 
-		18 3;
-	setAttr -s 14 ".kot[4:13]"  3 18 18 18 18 18 18 18 
-		18 3;
+		 105 -43.8647613243173 135 -58.382159481161331 156 -17.884163990514391 176 -11.372602311094647
+		 285 -18.945434882308103;
+	setAttr -s 15 ".kit[4:14]"  3 18 18 18 18 18 18 18 
+		18 3 18;
+	setAttr -s 15 ".kot[4:14]"  3 18 18 18 18 18 18 18 
+		18 3 18;
 createNode animCurveTA -n "UpperArm_Cntrl_R_rotateZ";
 	rename -uid "0B151863-7841-0643-0828-9EAD00F19879";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  -8.12 -11.683192559308974 -1 -1.9338406909988066
+	setAttr -s 15 ".ktv[0:14]"  -8.12 -11.683192559308974 -1 -1.9338406909988066
 		 0 -0.4488898083249005 5.2 5.9876534803308967 20 -32.664321997433227 33 -63.558259749870068
 		 44 26.016570546570332 51 71.206652508845593 60 95.801526422813424 72 71.371822061693905
-		 105 101.55420253199316 135 117.14740398101377 156 80.177771188988899 176 79.5273467058595;
-	setAttr -s 14 ".kit[4:13]"  3 18 18 18 18 18 18 18 
-		18 3;
-	setAttr -s 14 ".kot[4:13]"  3 18 18 18 18 18 18 18 
-		18 3;
+		 105 101.55420253199316 135 117.14740398101377 156 80.177771188988899 176 79.5273467058595
+		 285 -80.961274100304877;
+	setAttr -s 15 ".kit[4:14]"  3 18 18 18 18 18 18 18 
+		18 3 18;
+	setAttr -s 15 ".kot[4:14]"  3 18 18 18 18 18 18 18 
+		18 3 18;
 createNode animCurveTA -n "LowerArm_Cntrl_R_rotateX";
 	rename -uid "A1556166-C040-B53C-BB70-DEB5E3E85101";
 	setAttr ".tan" 18;
@@ -16553,46 +19893,51 @@ createNode animCurveTA -n "Thumb_Cntrl_01_L_rotateZ";
 createNode animCurveTA -n "Thigh_Cntrl_R_rotateX";
 	rename -uid "99E1C1B8-224C-22D0-6B85-459FA1F7ACFA";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 -9.8663587513398134 24 -6.515752459976782
-		 34 4.5498727147935503 39 -4.5368833643296647 53 10.705412626789123 58 21.037656758548248;
+	setAttr -s 9 ".ktv[0:8]"  1 -9.8663587513398134 24 -6.515752459976782
+		 34 4.5498727147935503 39 -4.5368833643296647 53 10.705412626789123 58 21.037656758548248
+		 237 -15.908042864507104 243 4.6716958999367861 271 1.0203775203179259;
 createNode animCurveTA -n "Thigh_Cntrl_R_rotateY";
 	rename -uid "9732F8EC-A746-EC65-3A87-EA8057B69D87";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 4.2225228813098976 24 4.8113132341951186
-		 34 20.6719095192258 39 20.674644961184452 53 18.343071558621176 58 2.1806763062161001;
+	setAttr -s 9 ".ktv[0:8]"  1 4.2225228813098976 24 4.8113132341951186
+		 34 20.6719095192258 39 20.674644961184452 53 18.343071558621176 58 2.1806763062161001
+		 237 12.11973032968125 243 -22.351986352627062 271 -44.461710521512302;
 createNode animCurveTA -n "Thigh_Cntrl_R_rotateZ";
 	rename -uid "C85A5200-7E43-290D-2194-61991A451000";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 6.7561367824113781 24 45.621129468948745
-		 34 73.214760683599209 39 47.844766986395946 53 91.505388772427551 58 144.86140565382934;
+	setAttr -s 9 ".ktv[0:8]"  1 6.7561367824113781 24 45.621129468948745
+		 34 73.214760683599209 39 47.844766986395946 53 91.505388772427551 58 144.86140565382934
+		 237 74.032878449340103 243 38.523756034577104 271 61.151325899497436;
 createNode animCurveTA -n "Knee_Cntrl_R_rotateX";
 	rename -uid "EFDFEF9B-0145-4EC7-42D9-FF87C37FF6B8";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  1 0 24 0 28 2.0738395181025697 37 0 45 0
-		 60 0 63 0 91 0;
-	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
-	setAttr -s 8 ".ktl[2:7]" no yes yes yes yes yes;
-	setAttr -s 8 ".kox[2:7]"  0.69879692792892456 0.3333333432674408 
-		0.625 0.125 1.1666666269302368 1.1666666269302368;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 24 0 28 2.0738395181025697 37 0 45 0
+		 60 0 63 0 91 0 237 -9.3963584770967028 244 -10.286157387836365;
+	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
+	setAttr -s 10 ".ktl[2:9]" no yes yes yes yes yes yes yes;
+	setAttr -s 10 ".kox[2:9]"  0.69879692792892456 0.3333333432674408 
+		0.625 0.125 1.1666666269302368 6.0833330154418945 0.29166698455810547 0.29166698455810547;
+	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 -0.0082136765122413635 0;
 createNode animCurveTA -n "Knee_Cntrl_R_rotateY";
 	rename -uid "99E6EFD0-DB48-E8DB-3FA2-9DBC65883F99";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  1 0 24 0 28 12.283255274664633 37 0 45 0
-		 60 -6.6640369406371835 63 -6.6640369406371835 91 -6.6640369406371835;
+	setAttr -s 10 ".ktv[0:9]"  1 0 24 0 28 12.283255274664633 37 0 45 0
+		 60 -6.6640369406371835 63 -6.6640369406371835 91 -6.6640369406371835 237 -3.0923298674380848
+		 244 -22.89639078941148;
 createNode animCurveTA -n "Knee_Cntrl_R_rotateZ";
 	rename -uid "347F79FA-2C46-60B2-D513-508B14E3D689";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  1 -42.107879586680369 24 -107.24109268893433
-		 34 -86.912799931132994 60 -125.1420817606036 76 -114.37007715425683 91 -134.29828567599841;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  0.88075250387191772 1.0833333730697632 
-		0.66666668653488159 0.625;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1.7140858173370361 0.66666668653488159 
-		0.625 0.625;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  1 -42.107879586680369 24 -107.24109268893433
+		 34 -86.912799931132994 60 -125.1420817606036 76 -114.37007715425683 91 -134.29828567599841
+		 237 -59.468542061952512 244 -20.459510653362905;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  0.88075250387191772 1.0833333730697632 
+		0.66666668653488159 0.625 6.0833330154418945 0.29166698455810547;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 1.8959591388702393 0;
+	setAttr -s 8 ".kox[2:7]"  1.7140858173370361 0.66666668653488159 
+		0.625 6.0833330154418945 0.29166698455810547 0.29166698455810547;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0.090902253985404968 0;
 createNode animCurveTA -n "Ankle_Cntrl_R_rotateX";
 	rename -uid "06418279-CD48-344E-25AC-418A942E29EE";
 	setAttr ".tan" 18;
@@ -16631,7 +19976,7 @@ createNode animCurveTA -n "NeckCntrl_02_rotateX";
 	setAttr -s 18 ".ktl[5:17]" no no yes no yes no no no yes yes yes yes 
 		yes;
 	setAttr -s 18 ".kix[4:17]"  0.30859404802322388 1.1752959489822388 
-		1.7916666269302368 0.2916666567325592 0.5 0.4583333432674408 0.5 0.1666666716337204 
+		1.7916666269302368 0.2916666567325592 0.5 0.4583333432674408 0.5 0.16666603088378906 
 		1.4969015121459961 0.67855310440063477 0.4583333432674408 1.2083333730697632 0.66666668653488159 
 		0.593372642993927;
 	setAttr -s 18 ".kiy[4:17]"  -0.068209417164325714 0 0 -0.13690872490406036 
@@ -16644,48 +19989,50 @@ createNode animCurveTA -n "NeckCntrl_02_rotateX";
 createNode animCurveTA -n "Spine_Cntrl_04_rotateX";
 	rename -uid "7CF5559E-CD40-90B3-BC8B-87828BF382A0";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  -4 0 4 3.8661530574357932 32.972 -5.4828217240756763
+	setAttr -s 12 ".ktv[0:11]"  -4 0 4 3.8661530574357932 32.972 -5.4828217240756763
 		 38 -31.225960115570242 44.352 -25.057883275011463 85 -48.37294683476653 150 0 168 -4.9383998231029995
-		 188 -10.403179499047857 200 -9.5606731650519894 238 1.7587950997844188;
-	setAttr -s 11 ".kit[6:10]"  3 18 18 18 3;
-	setAttr -s 11 ".kot[6:10]"  3 18 18 18 3;
+		 188 -10.403179499047857 200 -9.5606731650519894 238 1.7587950997844188 285 60.984665785179281;
+	setAttr -s 12 ".kit[6:11]"  3 18 18 18 3 18;
+	setAttr -s 12 ".kot[6:11]"  3 18 18 18 3 18;
 createNode animCurveTA -n "Spine_Cntrl_04_rotateY";
 	rename -uid "FC1DCB96-BE49-CC67-F4FC-FC8C8E5DB030";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  -4 0 0 0 4 -0.19974600601796752 38 3.975693351829395e-16
+	setAttr -s 12 ".ktv[0:11]"  -4 0 0 0 4 -0.19974600601796752 38 3.975693351829395e-16
 		 50.676 0 85 8.5218768277072492 150 0 168 7.1146418668967737 188 -5.678788207052798
-		 200 -13.97665058212316 238 0;
-	setAttr -s 11 ".kit[4:10]"  1 18 3 18 18 18 3;
-	setAttr -s 11 ".kot[4:10]"  1 18 3 18 18 18 3;
-	setAttr -s 11 ".kix[4:10]"  0.52696079015731812 1.4301470518112183 
-		2.7083332538604736 0.75 0.83333331346511841 0.5 1.5833333730697632;
-	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 -0.23007030785083771 0 0;
-	setAttr -s 11 ".kox[4:10]"  0.63235294818878174 2.7083332538604736 
-		0.75 0.83333331346511841 0.5 1.5833333730697632 1.5833333730697632;
-	setAttr -s 11 ".koy[4:10]"  0 0 0 0 -0.13804218173027039 0 0;
+		 200 -13.97665058212316 238 0 285 -36.564656807483793;
+	setAttr -s 12 ".kit[4:11]"  1 18 3 18 18 18 3 18;
+	setAttr -s 12 ".kot[4:11]"  1 18 3 18 18 18 3 18;
+	setAttr -s 12 ".kix[4:11]"  0.52696079015731812 1.4301470518112183 
+		2.7083332538604736 0.75 0.83333331346511841 0.4999995231628418 1.5833339691162109 
+		1.9583330154418945;
+	setAttr -s 12 ".kiy[4:11]"  0 0 0 0 -0.23007030785083771 0 0 0;
+	setAttr -s 12 ".kox[4:11]"  0.63235294818878174 2.7083332538604736 
+		0.75 0.83333331346511841 0.5 1.5833339691162109 1.9583330154418945 1.9583330154418945;
+	setAttr -s 12 ".koy[4:11]"  0 0 0 0 -0.13804218173027039 0 0 0;
 createNode animCurveTA -n "Spine_Cntrl_04_rotateZ";
 	rename -uid "DBC8F9F4-5D42-72DC-F2F7-488AC746BF31";
 	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  -4 0 0 0 4 2.9530865202999483 16 0 25.852 18.015379429677367
+	setAttr -s 18 ".ktv[0:17]"  -4 0 0 0 4 2.9530865202999483 16 0 25.852 18.015379429677367
 		 29.648 17.342553731783891 32.972 14.869988512776072 38 13.709338523894035 38.028 13.709294963158964
 		 44.352 23.398038946082739 50.676 13.709294963158955 85 8.6976181320256227 150 23.854842687160652
-		 168 4.1196676018311109 188 17.253650489477224 200 27.703372310081225 238 13.709294963158955;
-	setAttr -s 17 ".kit[3:16]"  1 18 18 18 18 18 18 1 
-		18 3 18 18 18 3;
-	setAttr -s 17 ".kot[3:16]"  1 18 18 18 18 18 18 1 
-		18 3 18 18 18 3;
-	setAttr -s 17 ".kix[3:16]"  0.2916666567325592 0.41053923964500427 
+		 168 4.1196676018311109 188 17.253650489477224 200 27.703372310081225 238 13.709294963158955
+		 285 24.430376309794255;
+	setAttr -s 18 ".kit[3:17]"  1 18 18 18 18 18 18 1 
+		18 3 18 18 18 3 18;
+	setAttr -s 18 ".kot[3:17]"  1 18 18 18 18 18 18 1 
+		18 3 18 18 18 3 18;
+	setAttr -s 18 ".kix[3:17]"  0.2916666567325592 0.41053923964500427 
 		0.15808823704719543 0.13848039507865906 0.20955879986286163 0.0012255243491381407 
 		0.26348042488098145 0.52696079015731812 1.4301470518112183 2.7083332538604736 0.75 
-		0.83333331346511841 0.5 1.5833333730697632;
-	setAttr -s 17 ".kiy[3:16]"  0 0 -0.029263503849506378 -0.025230662897229195 
-		-0.00039001181721687317 0 0 0 0 0 0 0.25725829601287842 0 0;
-	setAttr -s 17 ".kox[3:16]"  0.28308823704719543 0.15808823704719543 
+		0.83333331346511841 0.4999995231628418 1.5833339691162109 1.9583330154418945;
+	setAttr -s 18 ".kiy[3:17]"  0 0 -0.029263503849506378 -0.025230662897229195 
+		-0.00039001181721687317 0 0 0 0 0 0 0.25725829601287842 0 0 0;
+	setAttr -s 18 ".kox[3:17]"  0.28308823704719543 0.15808823704719543 
 		0.13848039507865906 0.20955879986286163 0.0012255243491381407 0.26348042488098145 
 		0.26348039507865906 0.63235294818878174 2.7083332538604736 0.75 0.83333331346511841 
-		0.5 1.5833333730697632 1.5833333730697632;
-	setAttr -s 17 ".koy[3:16]"  0 0 -0.025633923709392548 -0.03818090632557869 
-		0 0 0 0 0 0 0 0.15435498952865601 0 0;
+		0.5 1.5833339691162109 1.9583330154418945 1.9583330154418945;
+	setAttr -s 18 ".koy[3:17]"  0 0 -0.025633923709392548 -0.03818090632557869 
+		0 0 0 0 0 0 0 0.15435498952865601 0 0 0;
 createNode animCurveTA -n "Spine_Cntrl_01_rotateX";
 	rename -uid "0A01F728-D94C-210C-0042-DCB6E7C6E832";
 	setAttr ".tan" 18;
@@ -16768,20 +20115,26 @@ createNode animCurveTU -n "Spine_Cntrl_Offset_01_scaleZ";
 createNode animCurveTU -n "Spine_Cntrl_01_visibility";
 	rename -uid "8AF6943F-48CD-C105-2295-67BA958B8FDC";
 	setAttr ".tan" 9;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 295 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "Spine_Cntrl_01_rotateX1";
 	rename -uid "369E854F-4FB0-66C3-30C6-D6B7218D3006";
 	setAttr ".tan" 3;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 295 -4.5239455739993639;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTA -n "Spine_Cntrl_01_rotateY1";
 	rename -uid "6BB95B06-489F-14F2-4333-88B043FC01AF";
 	setAttr ".tan" 3;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 295 1.2163295966305501;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTA -n "Spine_Cntrl_01_rotateZ1";
 	rename -uid "154CA5D3-4392-E92A-4E18-72BEE9A71D60";
 	setAttr ".tan" 3;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 295 10.357637029176376;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
 createNode animCurveTU -n "Spine_Cntrl_Offset_02_visibility";
 	rename -uid "27C60A7C-42F2-EEEB-BE7A-C9885AD466F0";
 	setAttr ".tan" 9;
@@ -17622,7 +20975,7 @@ createNode animCurveTU -n "NeckCntrl_02_visibility";
 	setAttr -s 17 ".kit[0:16]"  9 9 9 1 9 9 9 9 
 		9 9 9 9 9 9 9 9 9;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "NeckCntrl_02_translateX";
@@ -17635,7 +20988,7 @@ createNode animCurveTL -n "NeckCntrl_02_translateX";
 	setAttr -s 17 ".kot[2:16]"  18 3 3 3 18 18 3 3 
 		3 3 3 3 18 18 3;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "NeckCntrl_02_translateY";
@@ -17648,7 +21001,7 @@ createNode animCurveTL -n "NeckCntrl_02_translateY";
 	setAttr -s 17 ".kot[2:16]"  18 3 3 3 18 18 3 3 
 		3 3 3 3 18 18 3;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "NeckCntrl_02_translateZ";
@@ -17661,7 +21014,7 @@ createNode animCurveTL -n "NeckCntrl_02_translateZ";
 	setAttr -s 17 ".kot[2:16]"  18 3 3 3 18 18 3 3 
 		3 3 3 3 18 18 3;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "NeckCntrl_02_rotateY";
@@ -17677,13 +21030,13 @@ createNode animCurveTA -n "NeckCntrl_02_rotateY";
 		18 18 18 18 18 1 3 18 18 1;
 	setAttr -s 18 ".ktl[6:17]" no no yes no yes no no no yes yes yes yes;
 	setAttr -s 18 ".kix[3:17]"  1.25 3.0644533634185791 1.375 0.4166666567325592 
-		0.4166666567325592 0.5 0.875 0.083333335816860199 0.54166668653488159 0.75 1.2229222059249878 
+		0.4166666567325592 0.5 0.875 0.083333335816860199 0.54166650772094727 0.75 1.2229222059249878 
 		0.625 1.0833333730697632 0.66666668653488159 0.593372642993927;
 	setAttr -s 18 ".kiy[3:17]"  0 0 0 0 0 0 0 0 0 0 0 0 -0.042635552585124969 
 		-0.021500708535313606 0;
 	setAttr -s 18 ".kox[4:17]"  0.85612034797668457 0.4166666567325592 
 		0.74262648820877075 0.74262648820877075 0.875 0.083333335816860199 0.54166668653488159 
-		0.75 0.79166668653488159 0.69072574377059937 1.0833333730697632 0.66666668653488159 
+		0.75 0.79166698455810547 0.69072574377059937 1.0833333730697632 0.66666668653488159 
 		0.875 0.593372642993927;
 	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 -0.026237264275550842 
 		-0.028219679370522499 0;
@@ -17703,13 +21056,13 @@ createNode animCurveTA -n "NeckCntrl_02_rotateZ";
 		yes;
 	setAttr -s 17 ".kix[3:16]"  1.25 0.68963223695755005 0.4999995231628418 
 		0.4166666567325592 1.1666666269302368 0.58333331346511841 0.58333331346511841 0.083333335816860199 
-		0.54166668653488159 0.66666668653488159 0.83333331346511841 0.55598360300064087 0.875 
+		0.54166650772094727 0.66666698455810547 0.83333301544189453 0.55598360300064087 0.875 
 		0.66666668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 -0.2193681001663208 0 -0.42536824941635132 
-		0 0 0.080813579261302948 0 0 -0.0075863981619477272 0 0.031296294182538986 0;
+		0 0 0.080813579261302948 0 0 -0.007586394902318716 0 0.031296294182538986 0;
 	setAttr -s 17 ".kox[4:16]"  0.4999995231628418 0.45833301544189453 
 		1.1666666269302368 0.58333331346511841 0.58333331346511841 0.083333335816860199 0.54166668653488159 
-		0.66666668653488159 0.83333331346511841 0.875 0.55598360300064087 0.66666668653488159 
+		0.66666698455810547 0.83333301544189453 0.875 0.55598360300064087 0.66666668653488159 
 		0.66666668653488159;
 	setAttr -s 17 ".koy[4:16]"  0 -0.20108731091022491 0 -0.21268412470817566 
 		0 0 0.52528828382492065 0 0 -0.0079657174646854401 0 0.023844795301556587 0;
@@ -17723,7 +21076,7 @@ createNode animCurveTU -n "NeckCntrl_02_scaleX";
 	setAttr -s 17 ".kot[2:16]"  18 3 3 3 18 18 3 3 
 		3 3 3 3 18 18 3;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "NeckCntrl_02_scaleY";
@@ -17736,7 +21089,7 @@ createNode animCurveTU -n "NeckCntrl_02_scaleY";
 	setAttr -s 17 ".kot[2:16]"  18 3 3 3 18 18 3 3 
 		3 3 3 3 18 18 3;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "NeckCntrl_02_scaleZ";
@@ -17749,7 +21102,7 @@ createNode animCurveTU -n "NeckCntrl_02_scaleZ";
 	setAttr -s 17 ".kot[2:16]"  18 3 3 3 18 18 3 3 
 		3 3 3 3 18 18 3;
 	setAttr -s 17 ".kix[3:16]"  1.25 1.5833333730697632 0.54166668653488159 
-		2.375 0.95833331346511841 0.25 0.2083333283662796 0.91666668653488159 0.875 0.25 
+		2.375 0.95833331346511841 0.25 0.20833349227905273 0.91666698455810547 0.875 0.25 
 		0.2083333283662796 1.0833333730697632 0.66666668653488159 0.79166668653488159;
 	setAttr -s 17 ".kiy[3:16]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "EyeGroup_Offset_visibility";
@@ -17995,85 +21348,84 @@ createNode animCurveTU -n "mom_l_eye_ptr_Blink";
 createNode animCurveTU -n "mom_r_eye_ptr_visibility";
 	rename -uid "175D54A4-4D17-B746-3AA2-7F8F594BFAF2";
 	setAttr ".tan" 5;
-	setAttr -s 14 ".ktv[0:13]"  1 1 147 1 164 1 169 1 183 1 191 1 194 1
-		 197 1 201 1 217 1 231 1 255 1 262 1 280 1;
-	setAttr -s 14 ".kit[0:13]"  9 9 9 1 9 9 9 9 
-		9 9 9 9 9 9;
-	setAttr -s 14 ".kix[3:13]"  0.83333331346511841 0.58333331346511841 
-		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 
-		1 0.2916666567325592 0.75;
-	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".ktv[0:12]"  1 1 147 1 164 1 169 1 183 1 191 1 194 1
+		 197 1 201 1 217 1 231 1 262 1 280 1;
+	setAttr -s 13 ".kit[0:12]"  9 9 9 1 9 9 9 9 
+		9 9 9 9 9;
+	setAttr -s 13 ".kix[3:12]"  0.83333331346511841 0.58333331346511841 
+		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666698455810547 0.58333301544189453 
+		1.2916669845581055 0.75;
+	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "mom_r_eye_ptr_translateX";
 	rename -uid "8648DF65-4747-EB54-55D8-5AB39684DEB1";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  1 0 147 0 164 0 169 0 183 0 191 0 194 0
-		 197 0 201 0 217 0 231 0 255 0 262 0 280 0;
-	setAttr -s 14 ".kit[0:13]"  3 3 18 1 3 3 18 18 
-		18 3 18 18 18 18;
-	setAttr -s 14 ".kot[0:13]"  3 3 18 1 3 3 18 18 
-		18 3 18 18 18 18;
-	setAttr -s 14 ".kix[3:13]"  0.83333331346511841 0.58333331346511841 
-		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 
-		1 0.2916666567325592 0.75;
-	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[3:13]"  0.66666668653488159 0.3333333432674408 
-		0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 1 0.2916666567325592 
+	setAttr -s 13 ".ktv[0:12]"  1 0 147 0 164 0 169 0 183 0 191 0 194 0
+		 197 0 201 0 217 0 231 0 262 0 280 0;
+	setAttr -s 13 ".kit[0:12]"  3 3 18 1 3 3 18 18 
+		18 3 18 18 18;
+	setAttr -s 13 ".kot[0:12]"  3 3 18 1 3 3 18 18 
+		18 3 18 18 18;
+	setAttr -s 13 ".kix[3:12]"  0.83333331346511841 0.58333331346511841 
+		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666698455810547 0.58333301544189453 
+		1.2916669845581055 0.75;
+	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".kox[3:12]"  0.66666668653488159 0.3333333432674408 
+		0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333301544189453 1.2916669845581055 
 		0.75 0.75;
-	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".koy[3:12]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "mom_r_eye_ptr_translateY";
 	rename -uid "ABEC93FE-44CB-F3C4-9E87-0DA9D6288E46";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  1 0 147 0 164 0 169 0 183 0 191 0 194 0
-		 197 0 201 0 217 0 231 0 255 0 262 0 280 0;
-	setAttr -s 14 ".kit[0:13]"  3 3 18 1 3 3 18 18 
-		18 3 18 18 18 18;
-	setAttr -s 14 ".kot[0:13]"  3 3 18 1 3 3 18 18 
-		18 3 18 18 18 18;
-	setAttr -s 14 ".kix[3:13]"  0.83333331346511841 0.58333331346511841 
-		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 
-		1 0.2916666567325592 0.75;
-	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[3:13]"  0.66666668653488159 0.3333333432674408 
-		0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 1 0.2916666567325592 
+	setAttr -s 13 ".ktv[0:12]"  1 0 147 0 164 0 169 0 183 0 191 0 194 0
+		 197 0 201 0 217 0 231 0 262 0 280 0;
+	setAttr -s 13 ".kit[0:12]"  3 3 18 1 3 3 18 18 
+		18 3 18 18 18;
+	setAttr -s 13 ".kot[0:12]"  3 3 18 1 3 3 18 18 
+		18 3 18 18 18;
+	setAttr -s 13 ".kix[3:12]"  0.83333331346511841 0.58333331346511841 
+		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666698455810547 0.58333301544189453 
+		1.2916669845581055 0.75;
+	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".kox[3:12]"  0.66666668653488159 0.3333333432674408 
+		0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333301544189453 1.2916669845581055 
 		0.75 0.75;
-	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".koy[3:12]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "mom_r_eye_ptr_translateZ";
 	rename -uid "91283373-48BE-D0CA-1C15-2E801F52CA5A";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  1 0 147 0 164 0 169 0 183 0 191 0 194 0
-		 197 0 201 0 217 0 231 0 255 0 262 0 280 0;
-	setAttr -s 14 ".kit[0:13]"  3 3 18 1 3 3 18 18 
-		18 3 18 18 18 18;
-	setAttr -s 14 ".kot[0:13]"  3 3 18 1 3 3 18 18 
-		18 3 18 18 18 18;
-	setAttr -s 14 ".kix[3:13]"  0.83333331346511841 0.58333331346511841 
-		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 
-		1 0.2916666567325592 0.75;
-	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[3:13]"  0.66666668653488159 0.3333333432674408 
-		0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333331346511841 1 0.2916666567325592 
+	setAttr -s 13 ".ktv[0:12]"  1 0 147 0 164 0 169 0 183 0 191 0 194 0
+		 197 0 201 0 217 0 231 0 262 0 280 0;
+	setAttr -s 13 ".kit[0:12]"  3 3 18 1 3 3 18 18 
+		18 3 18 18 18;
+	setAttr -s 13 ".kot[0:12]"  3 3 18 1 3 3 18 18 
+		18 3 18 18 18;
+	setAttr -s 13 ".kix[3:12]"  0.83333331346511841 0.58333331346511841 
+		0.3333333432674408 0.125 0.125 0.1666666716337204 0.66666698455810547 0.58333301544189453 
+		1.2916669845581055 0.75;
+	setAttr -s 13 ".kiy[3:12]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".kox[3:12]"  0.66666668653488159 0.3333333432674408 
+		0.125 0.125 0.1666666716337204 0.66666668653488159 0.58333301544189453 1.2916669845581055 
 		0.75 0.75;
-	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 13 ".koy[3:12]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "mom_r_eye_ptr_Blink";
 	rename -uid "BAC5FF1B-499C-1B40-6D4D-46A502C3D2D4";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  1 3.9320585415119176 154 3.9320585415119176
+	setAttr -s 11 ".ktv[0:10]"  1 3.9320585415119176 154 3.9320585415119176
 		 164 10 173 10 178 2.9769581358651465 194 4.2769581358651463 197 6.1307369890624326
-		 201 4.0312575065220146 231 3.711270824072276 255 7.373419999874498 262 7.373419999874498
-		 280 5.5;
-	setAttr -s 12 ".kit[0:11]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".ktl[1:11]" no yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 12 ".kix[0:11]"  6.875 6.375 0.4166666567325592 0.375 0.2083333283662796 
-		0.66666668653488159 0.125 0.1666666716337204 1.25 1 0.2916666567325592 0.75;
-	setAttr -s 12 ".kiy[0:11]"  0 0 0 0 0 2.6558136940002441 0 -0.12799467146396637 
-		0 0 0 0;
-	setAttr -s 12 ".kox[0:11]"  5.5 0.4166666567325592 0.375 0.2083333283662796 
-		0.66666668653488159 0.125 0.1666666716337204 1.25 1 0.2916666567325592 0.75 0.75;
-	setAttr -s 12 ".koy[0:11]"  0 0 0 0 0 0.49796506762504578 0 -0.95996004343032837 
-		0 0 0 0;
+		 201 4.0312575065220146 231 3.711270824072276 262 7.373419999874498 280 5.5;
+	setAttr -s 11 ".kit[0:10]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 11 ".kot[0:10]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 11 ".ktl[1:10]" no yes yes yes yes yes yes yes yes yes;
+	setAttr -s 11 ".kix[0:10]"  6.875 6.375 0.4166666567325592 0.375 0.2083333283662796 
+		0.66666668653488159 0.125 0.16666698455810547 1.25 1.2916669845581055 0.75;
+	setAttr -s 11 ".kiy[0:10]"  0 0 0 0 0 2.6558136940002441 0 -0.12799490988254547 
+		0 0 0;
+	setAttr -s 11 ".kox[0:10]"  5.5 0.4166666567325592 0.375 0.2083333283662796 
+		0.66666668653488159 0.125 0.1666666716337204 1.25 1.2916669845581055 0.75 0.75;
+	setAttr -s 11 ".koy[0:10]"  0 0 0 0 0 0.49796506762504578 0 -0.95996004343032837 
+		0 0 0;
 createNode animCurveTU -n "FaceCntrls_Offset_visibility";
 	rename -uid "BA510488-433F-5680-DDEB-8DB714B76A11";
 	setAttr ".tan" 9;
@@ -18811,10 +22163,10 @@ createNode animCurveTU -n "Arm_IK_R_PV_scaleZ";
 createNode animCurveTU -n "UpperArm_Cntrl_R_visibility";
 	rename -uid "6B757EAC-4631-D27F-5E65-BE97D6D59024";
 	setAttr ".tan" 9;
-	setAttr -s 14 ".ktv[0:13]"  -8.12 1 -1 1 0 1 5.2 1 20 1 33 1 44 1 51 1
-		 60 1 72 1 105 1 135 1 156 1 176 1;
-	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5;
+	setAttr -s 15 ".ktv[0:14]"  -8.12 1 -1 1 0 1 5.2 1 20 1 33 1 44 1 51 1
+		 60 1 72 1 105 1 135 1 156 1 176 1 285 1;
+	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5;
 createNode animCurveTA -n "ThumbCntrl_L_01_rotateX";
 	rename -uid "9ACA415A-4799-256D-5133-1D8084D4C476";
 	setAttr ".tan" 18;
@@ -18917,176 +22269,167 @@ createNode animCurveTU -n "Arm_IK_L_PV_scaleZ";
 createNode animCurveTL -n "baby_master_translateX";
 	rename -uid "22609CCC-484E-3ED3-4228-73919F044E7F";
 	setAttr ".tan" 18;
-	setAttr -s 25 ".ktv[0:24]"  -19 1.0594516882398486 -17 1.0594516882398486
+	setAttr -s 21 ".ktv[0:20]"  -19 1.0594516882398486 -17 1.0594516882398486
 		 -13 1.0594516882398486 1 1.0594516882398486 3 1.0406072673180518 8 0.91263252364258696
 		 9 0.85830501301484952 12 0.60747843860238304 22 -0.25986784546022867 26 -0.59232134188992269
 		 27 -0.66970268921530329 30 -0.87497912246903931 52 -1.9836947094872668 73 -1.8174275921267595
-		 113 -1.3767653168173948 176 -2.4289886806683443 198 -1.1655989640569204 208 -1.2981923514270006
-		 232 -0.8323249421041492 248 -0.57926116420037754 253 -0.57926116420037754 259 -0.57926116420037754
-		 264 -0.57926116420037754 266 -0.57926116420037754 271 -0.57926116420037754;
-	setAttr -s 25 ".kit[3:24]"  3 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 3 18 18 18 18 18;
-	setAttr -s 25 ".kot[3:24]"  3 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 3 18 18 18 18 18;
-	setAttr -s 25 ".ktl[19:24]" no yes yes yes yes yes;
+		 113 -1.3767653168173948 176 -3.1057538890970617 198 -1.1655989640569204 208 -1.2981923514270006
+		 232 -1.4937165681221973 239 -1.2953870948243222 264 0.21779832309972091;
+	setAttr -s 21 ".kit[3:20]"  3 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 1;
+	setAttr -s 21 ".kot[3:20]"  3 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 1;
+	setAttr -s 21 ".kix[20]"  1.0833330154418945;
+	setAttr -s 21 ".kiy[20]"  0;
+	setAttr -s 21 ".kox[20]"  1.0833330154418945;
+	setAttr -s 21 ".koy[20]"  0;
 createNode animCurveTL -n "baby_master_translateY";
 	rename -uid "FB7EA899-44AB-B845-F01D-00B9942B0C65";
 	setAttr ".tan" 18;
-	setAttr -s 18 ".ktv[0:17]"  -19 15.863382972067974 -17 15.863387709881653
+	setAttr -s 14 ".ktv[0:13]"  -19 15.863382972067974 -17 15.863387709881653
 		 -13 15.863467852784067 9 15.875627059289824 12 15.879913309917175 22 15.90149741193602
 		 30 17.433032947140816 73 19.252707502384734 113 19.840253008676701 176 19.054550264402298
-		 208 18.865156549998812 232 19.038690421842297 250 19.221614301794862 253 19.221614301794862
-		 259 19.221614301794862 264 19.221614301794862 266 19.221614301794862 271 19.221614301794862;
-	setAttr -s 18 ".kit[12:17]"  1 18 18 18 18 18;
-	setAttr -s 18 ".kot[12:17]"  1 18 18 18 18 18;
-	setAttr -s 18 ".ktl[12:17]" no yes yes yes yes yes;
-	setAttr -s 18 ".kix[12:17]"  0.60662728548049927 0.125 0.25 0.2083333283662796 
-		0.083333335816860199 0.2083333283662796;
-	setAttr -s 18 ".kiy[12:17]"  0 0 0 0 0 0;
-	setAttr -s 18 ".kox[12:17]"  3.8180534839630127 0.25 0.2083333283662796 
-		0.083333335816860199 0.2083333283662796 0.2083333283662796;
-	setAttr -s 18 ".koy[12:17]"  0 0 0 0 0 0;
+		 208 18.865156549998812 232 19.038690421842297 239 18.991966849123404 264 18.635482118256629;
+	setAttr -s 14 ".kit[13]"  1;
+	setAttr -s 14 ".kot[13]"  1;
+	setAttr -s 14 ".kix[13]"  1.0833330154418945;
+	setAttr -s 14 ".kiy[13]"  0;
+	setAttr -s 14 ".kox[13]"  1.0833330154418945;
+	setAttr -s 14 ".koy[13]"  0;
 createNode animCurveTL -n "baby_master_translateZ";
 	rename -uid "D5DBA301-4F63-497B-B9D5-B1A3D7BB0860";
 	setAttr ".tan" 18;
-	setAttr -s 25 ".ktv[0:24]"  -19 3.6644007114750123 -17 3.6644007114750123
+	setAttr -s 22 ".ktv[0:21]"  -19 3.6644007114750123 -17 3.6644007114750123
 		 -13 3.6644007114750123 1 3.6644007114750123 3 3.6644007114750123 8 3.6644007114750123
 		 9 3.6644007114750123 12 3.6644007114750123 20 3.6644007114750123 22 3.6639855823832499
 		 26 3.6535450937097864 27 3.6499495250256446 30 3.6384377461301547 63 3.5427845356634036
-		 73 3.5906668925087084 113 4.003191813022104 198 3.0443270453722779 208 3.1978327792293264
-		 232 2.2636162707725336 250 1.6739549264659139 253 1.6739549264659139 259 1.6739549264659139
-		 264 1.6739549264659139 266 1.6739549264659139 271 1.6739549264659139;
-	setAttr -s 25 ".kit[3:24]"  3 18 18 18 18 1 18 18 
-		18 18 18 18 18 18 18 18 1 18 18 18 18 18;
-	setAttr -s 25 ".kot[3:24]"  3 18 18 18 18 1 18 18 
-		18 18 18 18 18 18 18 18 1 18 18 18 18 18;
-	setAttr -s 25 ".kix[8:24]"  0.53494858741760254 0.083333335816860199 
-		0.1666666716337204 0.041666667908430099 0.125 1.375 0.4166666567325592 1.6666666269302368 
-		3.5416667461395264 0.4166666567325592 1 1.8062785863876343 0.125 0.25 0.2083333283662796 
-		0.083333335816860199 0.2083333283662796;
-	setAttr -s 25 ".kiy[8:24]"  0 -0.0012453872477635741 -0.011228845454752445 
-		-0.0037768369074910879 -0.0089304158464074135 0 0.092081457376480103 0 0 0 -0.87078732252120972 
-		0 0 0 0 0 0;
-	setAttr -s 25 ".kox[8:24]"  0.99328196048736572 0.1666666716337204 
-		0.041666667908430099 0.125 1.375 0.4166666567325592 1.6666666269302368 3.5416667461395264 
-		0.4166666567325592 1 0.75 7.875 0.25 0.2083333283662796 0.083333335816860199 0.2083333283662796 
-		0.2083333283662796;
-	setAttr -s 25 ".koy[8:24]"  0 -0.0024907744955271482 -0.0028072113636881113 
-		-0.01133051048964262 -0.098234571516513824 0 0.36832582950592041 0 0 0 -0.65309053659439087 
-		0 0 0 0 0 0;
+		 73 3.5906668925087084 113 4.003191813022104 176 4.5683152428641618 198 3.0443270453722779
+		 208 3.1978327792293264 232 3.6381376342335718 239 4.1108953239303645 264 1.36585208392437;
+	setAttr -s 22 ".kit[3:21]"  3 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 18 18 1;
+	setAttr -s 22 ".kot[3:21]"  3 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 18 18 1;
+	setAttr -s 22 ".kix[8:21]"  0.53494858741760254 0.083333335816860199 
+		0.1666666716337204 0.041666667908430099 0.125 1.375 0.4166666567325592 1.6666667461395264 
+		2.625 0.91666650772094727 0.41666698455810547 1 0.29166603088378906 1.0833330154418945;
+	setAttr -s 22 ".kiy[8:21]"  0 -0.0012453872477635741 -0.011228845454752445 
+		-0.0037768369074910879 -0.0089304158464074135 0 0.092081457376480103 0.37966924905776978 
+		0 0 0.17465026676654816 0.70688748359680176 0 0;
+	setAttr -s 22 ".kox[8:21]"  0.99328196048736572 0.1666666716337204 
+		0.041666667908430099 0.125 1.375 0.4166666567325592 1.6666666269302368 2.625 0.91666650772094727 
+		0.41666698455810547 1 0.29166603088378906 1.0416669845581055 1.0833330154418945;
+	setAttr -s 22 ".koy[8:21]"  0 -0.0024907744955271482 -0.0028072113636881113 
+		-0.01133051048964262 -0.098234571516513824 0 0.36832582950592041 0.59797906875610352 
+		0 0 0.41916033625602722 0.2061750590801239 0 0;
 createNode animCurveTU -n "baby_master_visibility1";
 	rename -uid "74737B83-4B52-BC54-A4E7-F58B11C5B11E";
-	setAttr ".tan" 9;
-	setAttr -s 20 ".ktv[0:19]"  -19 1 -17 1 -13 1 1 1 3 1 8 1 9 1 12 1 22 1
-		 26 1 27 1 30 1 73 1 232 1 248 1 253 1 259 1 264 1 266 1 271 1;
-	setAttr -s 20 ".kot[0:19]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr ".tan" 5;
+	setAttr -s 17 ".ktv[0:16]"  -19 1 -17 1 -13 1 1 1 3 1 8 1 9 1 12 1 22 1
+		 26 1 27 1 30 1 73 1 176 1 232 1 239 1 264 1;
+	setAttr -s 17 ".kit[0:16]"  9 9 9 9 9 9 9 9 
+		9 9 9 9 9 9 9 9 1;
+	setAttr -s 17 ".kix[16]"  1.0833330154418945;
+	setAttr -s 17 ".kiy[16]"  0;
 createNode animCurveTA -n "baby_master_rotateX";
 	rename -uid "0B0C10C7-4E12-E5CB-B724-A48332D668D2";
 	setAttr ".tan" 18;
-	setAttr -s 28 ".ktv[0:27]"  -19 -90 -17 -90 -13 -90 1 -90 3 -90.010110139464743
+	setAttr -s 24 ".ktv[0:23]"  -19 -90 -17 -90 -13 -90 1 -90 3 -90.010110139464743
 		 8 -90.570130970213754 9 -90.827432907034336 12 -91.434992832179219 22 -93.40465029254824
 		 26 -95.639840167063227 27 -95.557971615010246 30 -95.115881433924187 52 -100.82526858721201
 		 63 -109.52996987863406 73 -118.84389511499297 83 -127.61782660278949 113 -147.3438356439415
 		 147.8 -156.83370208617421 176 -99.918155118111514 198 -103.58028078518909 208 -114.08853544622296
-		 232 -130.62966651522359 249 -127.52477634010143 253 -127.52477634010143 259 -127.52477634010143
-		 264 -127.52477634010143 266 -127.52477634010143 271 -127.52477634010143;
-	setAttr -s 28 ".kit[3:27]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 28 ".kot[3:27]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 1 18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 28 ".ktl[15:27]" no yes yes yes yes yes yes no yes yes yes 
-		yes yes;
-	setAttr -s 28 ".kix[3:27]"  0.93033480644226074 0.083333335816860199 
+		 232 -80.336764401913413 239 -88.025176606445427 264 -146.68510768695484;
+	setAttr -s 24 ".kit[3:23]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 1;
+	setAttr -s 24 ".kot[3:23]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 1 18 18 18 18 18 18 18 1;
+	setAttr -s 24 ".ktl[15:23]" no yes yes yes yes yes yes yes yes;
+	setAttr -s 24 ".kix[3:23]"  0.93033480644226074 0.083333335816860199 
 		0.2083333283662796 0.041666667908430099 0.125 0.4166666567325592 0.1666666716337204 
 		0.041666667908430099 0.125 0.91666668653488159 0.4583333432674408 0.4166666567325592 
-		0.4166666567325592 1.25 1.4500001668930054 1.1749998331069946 0.91666668653488159 
-		0.4166666567325592 1 0.70833331346511841 0.1666666716337204 0.25 0.2083333283662796 
-		0.083333335816860199 0.2083333283662796;
-	setAttr -s 28 ".kiy[3:27]"  0 -0.00052936567226424813 -0.011887477710843086 
+		0.4166666567325592 1.25 1.4499998092651367 1.1750001907348633 0.91666650772094727 
+		0.41666698455810547 1 0.29166603088378906 1.0833330154418945;
+	setAttr -s 24 ".kiy[3:23]"  0 -0.00052936567226424813 -0.011887477710843086 
 		-0.0037736718077212572 -0.0103802140802145 -0.052420306950807571 0 0.0022862013429403305 
 		0 -0.16771553456783295 -0.16472990810871124 -0.15784633159637451 -0.12435445189476013 
-		-0.236070916056633 0 0 -0.17003235220909119 -0.13885319232940674 0 0 0 0 0 0 0;
-	setAttr -s 28 ".kox[3:27]"  0.93033480644226074 0.2083333283662796 
+		-0.236070916056633 0 0 -0.1700323075056076 0 0 -0.25331136584281921 0;
+	setAttr -s 24 ".kox[3:23]"  0.93033480644226074 0.2083333283662796 
 		0.041666667908430099 0.125 0.4166666567325592 0.1666666716337204 0.041666667908430099 
 		0.125 0.91666668653488159 0.4583333432674408 0.4166666567325592 0.4166666567325592 
-		2.3687362670898438 1.4500001668930054 1.1749998331069946 0.91666668653488159 0.4166666567325592 
-		1 0.70833331346511841 0.1666666716337204 0.25 0.2083333283662796 0.083333335816860199 
-		0.2083333283662796 0.2083333283662796;
-	setAttr -s 28 ".koy[3:27]"  0 -0.0013234141515567899 -0.0023774956353008747 
+		2.3687362670898438 1.4500001668930054 1.1750001907348633 0.91666650772094727 0.41666698455810547 
+		1 0.29166603088378906 1.0416669845581055 1.0833330154418945;
+	setAttr -s 24 ".koy[3:23]"  0 -0.0013234141515567899 -0.0023774956353008747 
 		-0.011321015655994415 -0.034600716084241867 -0.020968122407793999 0 0.0068586035631597042 
 		0 -0.083857767283916473 -0.14975444972515106 -0.15784633159637451 -0.81085687875747681 
-		-0.27384230494499207 0 0 -0.077287435531616211 -0.33324766159057617 0 0 0 0 0 0 0;
+		-0.27384230494499207 0 0 -0.077287487685680389 0 0 -0.90468567609786987 0;
 createNode animCurveTA -n "baby_master_rotateY";
 	rename -uid "6F5CE820-4281-C775-4E71-84B9837A5141";
 	setAttr ".tan" 18;
-	setAttr -s 23 ".ktv[0:22]"  -19 180 -17 180 -13 180 20 180 22 180.12247604563458
+	setAttr -s 19 ".ktv[0:18]"  -19 180 -17 180 -13 180 20 180 22 180.12247604563458
 		 26 187.42248050447256 27 189.57667774971006 30 197.88042040149796 43 253.46964074609528
 		 63 279.21029071352854 73 283.61117661347936 113 296.20935741240822 147.8 299.46165904422975
-		 176 281.32806674434858 198 281.2568210269186 208 278.19818711331925 232 286.30407515844774
-		 250 291.61001388090568 253 291.61001388090568 259 291.61001388090568 264 291.61001388090568
-		 266 291.61001388090568 271 291.61001388090568;
-	setAttr -s 23 ".kit[3:22]"  1 18 18 18 18 18 1 18 
-		18 3 18 18 18 18 1 18 18 18 18 18;
-	setAttr -s 23 ".kot[3:22]"  1 18 18 18 18 18 1 18 
-		18 3 18 18 18 18 1 18 18 18 18 18;
-	setAttr -s 23 ".ktl[3:22]" no yes yes yes yes yes yes yes yes yes yes 
-		yes yes yes no yes yes yes yes yes;
-	setAttr -s 23 ".kix[3:22]"  0.34668409824371338 0.083333335816860199 
+		 176 281.32806674434858 198 281.2568210269186 208 278.19818711331925 232 282.48159066950461
+		 239 283.36193986679939 264 292.30383842721102;
+	setAttr -s 19 ".kit[3:18]"  1 18 18 18 18 18 1 18 
+		18 3 18 18 18 1 18 1;
+	setAttr -s 19 ".kot[3:18]"  1 18 18 18 18 18 1 18 
+		18 3 18 18 18 1 18 1;
+	setAttr -s 19 ".ktl[3:18]" no yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes;
+	setAttr -s 19 ".kix[3:18]"  0.34668409824371338 0.083333335816860199 
 		0.1666666716337204 0.041666667908430099 0.125 0.54166668653488159 0.81695687770843506 
-		0.4166666567325592 1.6666666269302368 1.4500001668930054 1.1749998331069946 0.91666668653488159 
-		0.4166666567325592 1 1.7326991558074951 0.125 0.25 0.2083333283662796 0.083333335816860199 
-		0.2083333283662796;
-	setAttr -s 23 ".kiy[3:22]"  0 0.0064128306694328785 0.13200555741786957 
+		0.4166666567325592 1.6666666269302368 1.4499998092651367 1.1750001907348633 0.91666650772094727 
+		0.41666698455810547 3.0801994800567627 0.29166603088378906 1.0833330154418945;
+	setAttr -s 19 ".kiy[3:18]"  0 0.0064128306694328785 0.13200555741786957 
 		0.045631371438503265 0.20908923447132111 0.55918675661087036 0.25468704104423523 
-		0.059337936341762543 0.14793747663497925 0 -0.0047817155718803406 -0.0037304169964045286 
-		0 0.13376030325889587 0 0 0 0 0 0;
-	setAttr -s 23 ".kox[3:22]"  1.4076364040374756 0.1666666716337204 0.041666667908430099 
+		0.059337936341762543 0.14793747663497925 0 -0.0047817179001867771 -0.0037304169964045286 
+		0 0.12693332135677338 0.03750036284327507 0;
+	setAttr -s 19 ".kox[3:18]"  1.4076364040374756 0.1666666716337204 0.041666667908430099 
 		0.125 0.54166668653488159 0.83333331346511841 4.2285175323486328 1.6666666269302368 
-		1.4500001668930054 1.1749998331069946 0.91666668653488159 0.4166666567325592 1 0.75 
-		0.53287076950073242 0.25 0.2083333283662796 0.083333335816860199 0.2083333283662796 
-		0.2083333283662796;
-	setAttr -s 23 ".koy[3:22]"  0.0098346052691340446 0.012825661338865757 
+		1.4500001668930054 1.1750001907348633 0.91666650772094727 0.41666698455810547 1 3.4137816429138184 
+		1.0416669845581055 1.0833330154418945;
+	setAttr -s 19 ".koy[3:18]"  0.0098346052691340446 0.012825661338865757 
 		0.033001389354467392 0.1368941068649292 0.90605336427688599 0.86028730869293213 0.79154258966445923 
-		0.23735174536705017 0.12870562076568604 0 -0.0037304169964045286 -0.0016956441104412079 
-		0 0.10032022744417191 0 0 0 0 0 0;
+		0.23735174536705017 0.12870562076568604 0 -0.0037304169964045286 -0.0016956457402557135 
+		0 0.14068001508712769 0.13393020629882812 0;
 createNode animCurveTA -n "baby_master_rotateZ";
 	rename -uid "387C35B0-49DD-BECF-C77E-578ED9F7D0A4";
 	setAttr ".tan" 18;
-	setAttr -s 28 ".ktv[0:27]"  -19 0 -17 0 -13 0 1 0 3 0 8 0 9 0 12 0 20 0
+	setAttr -s 25 ".ktv[0:24]"  -19 0 -17 0 -13 0 1 0 3 0 8 0 9 0 12 0 20 0
 		 22 0.0025538563882483664 26 -14.543164316074673 27 -12.26233649753866 30 3.4445334501711118
 		 37 16.535499853732606 43 36.492859301547909 63 27.844962047104122 73 30.357593700380125
 		 113 61.711309124666982 147.8 81.346792841269846 176 21.891863614587589 198 19.531227839365386
-		 208 37.422176343727877 232 78.262206285571409 253 78.262206285571409 259 78.262206285571409
-		 264 78.262206285571409 266 78.262206285571409 271 78.262206285571409;
-	setAttr -s 28 ".kit[3:27]"  3 18 18 18 18 3 18 18 
-		18 18 18 18 18 18 18 3 18 18 18 18 18 18 18 18 18;
-	setAttr -s 28 ".kot[3:27]"  3 18 18 18 18 1 18 18 
-		18 18 18 18 18 18 18 3 18 18 18 18 18 18 18 18 18;
-	setAttr -s 28 ".ktl[8:27]" no yes yes yes yes yes yes yes yes yes yes 
-		yes yes yes yes yes yes yes yes yes;
-	setAttr -s 28 ".kox[8:27]"  1.5769932270050049 0.1666666716337204 0.041666667908430099 
+		 208 37.422176343727877 232 26.57443257220876 239 33.117126301577059 264 83.035620918631338;
+	setAttr -s 25 ".kit[3:24]"  3 18 18 18 18 3 18 18 
+		18 18 18 18 18 18 18 3 18 18 18 18 18 1;
+	setAttr -s 25 ".kot[3:24]"  3 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 3 18 18 18 18 18 1;
+	setAttr -s 25 ".ktl[8:24]" no yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes;
+	setAttr -s 25 ".kix[24]"  1.0833330154418945;
+	setAttr -s 25 ".kiy[24]"  0;
+	setAttr -s 25 ".kox[8:24]"  1.5769932270050049 0.1666666716337204 0.041666667908430099 
 		0.125 0.2916666567325592 0.25 0.83333331346511841 0.4166666567325592 1.6666666269302368 
-		1.4500001668930054 1.1749998331069946 0.91666668653488159 0.4166666567325592 1 0.875 
-		0.25 0.2083333283662796 0.083333335816860199 0.2083333283662796 0.2083333283662796;
-	setAttr -s 28 ".koy[8:27]"  0 0 0 0.23545841872692108 0.35183194279670715 
+		1.4500001668930054 1.1750001907348633 0.91666650772094727 0.41666698455810547 1 0.29166603088378906 
+		1.0416669845581055 1.0833330154418945;
+	setAttr -s 25 ".koy[8:24]"  0 0 0 0.23545841872692108 0.35183194279670715 
 		0.26621636748313904 0 0 0.47286340594291687 0.41403135657310486 0 -0.12360259890556335 
-		0 0.72356396913528442 0 0 0 0 0 0;
+		0 0 0 0.76987046003341675 0;
 createNode animCurveTA -n "Head_Cntrl_rotateX";
 	rename -uid "CD3F4AD1-4547-39F7-AB42-E6A74696B5BD";
 	setAttr ".tan" 18;
 	setAttr -s 13 ".ktv[0:12]"  -15.268 -0.91647930532077215 -3.944 -0.89870099311920826
 		 34 -16.050145632573447 77 -19.722233957984553 98 -19.849555880758629 114 -21.781386846875762
 		 132 -15.024527827362009 175 -39.084969186032659 197 -36.681161234897615 220 -51.854992564060915
-		 244 -31.883287147053522 251 -34.371385767893521 257 -33.842210962483286;
+		 244 -10.947836805588377 251 -32.577592452567039 292 -113.87740689279141;
 createNode animCurveTA -n "Head_Cntrl_rotateY";
 	rename -uid "CF59F846-42C6-AA0C-603C-E1A5C7F26036";
 	setAttr ".tan" 18;
 	setAttr -s 16 ".ktv[0:15]"  -15.268 -0.91647930532077215 -3.944 -0.78056262242799423
 		 11.74 0.58093991273080758 27.52 1.9135274346487658 50 7.9513867036587939e-16 70 0
 		 77 6.5623261336036389 98 6.2917933380003914 114 -4.615252244345605 132 -4.0999719616779142
-		 175 15.14682515637884 197 23.497332435050239 220 -10.57148634004372 244 -17.621562840551206
-		 251 -11.030981204099067 257 -13.00145407963732;
+		 175 15.14682515637884 197 23.497332435050239 220 -10.57148634004372 244 -7.6352752332238651
+		 251 -10.305019429353806 292 -21.573530772545126;
 	setAttr -s 16 ".kit[0:15]"  3 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18;
 	setAttr -s 16 ".kot[0:15]"  3 18 18 18 18 18 18 18 
@@ -19098,46 +22441,46 @@ createNode animCurveTA -n "Head_Cntrl_rotateZ";
 		 11.74 -2.7699697881238756 16.74 -2.7699697881238756 27.52 -7.5694451557557212 38 -8.9016722936011501
 		 50 -9.2411997869934872 70 -9.2411997869934925 77 9.4190520251433281 98 9.8161665347530533
 		 114 11.085491124820596 132 2.349400259053847 175 32.934825051281457 197 26.959008199857831
-		 220 -17.582911751298059 244 -18.997940025298217 251 -8.6926325160342994 257 -11.595272039247225;
+		 220 -17.582911751298059 244 -8.1523257652446688 251 5.4026116831279838 292 13.464441302178482;
 createNode animCurveTU -n "Head_Cntrl_visibility";
 	rename -uid "154E5DE7-4D0C-2BAE-949D-6E92E4D2FE5B";
 	setAttr ".tan" 5;
 	setAttr -s 17 ".ktv[0:16]"  -10.2 0.5535004627318183 -1.62 0.5535004627318183
 		 10.26 0.5535004627318183 20.16 0.5535004627318183 38 1 50 1 70 1 77 1 98 1 114 1
-		 132 1 175 1 197 1 220 1 244 1 251 1 257 1;
+		 132 1 175 1 197 1 220 1 244 1 251 1 292 1;
 	setAttr -s 17 ".kit[0:16]"  9 9 9 9 9 9 9 9 
 		1 9 9 9 9 9 9 9 9;
 	setAttr -s 17 ".kix[8:16]"  0.4166666567325592 0.66666650772094727 
-		0.75 1.7916665077209473 0.91666650772094727 0.95833396911621094 1 0.2916666567325592 
-		0.25;
+		0.75 1.7916665077209473 0.91666650772094727 0.95833396911621094 1 0.29166603088378906 
+		1.7083339691162109;
 	setAttr -s 17 ".kiy[8:16]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Arm_Cntrl_L_blendParent1";
 	rename -uid "2F83776B-4611-777D-AECE-84A84761B724";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  -20 0 20 1 60 1;
-	setAttr -s 3 ".kit[1:2]"  3 18;
-	setAttr -s 3 ".kot[1:2]"  3 18;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 20 1 60 1 255 1 285 1;
+	setAttr -s 5 ".kit[1:4]"  3 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  3 18 18 18;
 createNode pairBlend -n "pairBlend3";
 	rename -uid "694FA7C5-4950-CD2B-B177-61928653B47E";
 createNode animCurveTU -n "Arm_Cntrl_R_blendParent1";
 	rename -uid "59299304-4054-645F-D79C-8683C8132C02";
-	setAttr ".tan" 3;
-	setAttr -s 19 ".ktv[0:18]"  -20 0 0 0 1 1 100 1 109 0 112 0 114 0 115 1
-		 150 1 154 1 183 1 197 1 203 0 213 0 219 0 225 0 232 0 237 0 257 0;
-	setAttr -s 19 ".kit[0:18]"  1 1 1 3 18 3 3 3 
-		18 18 18 3 3 18 18 3 18 3 18;
-	setAttr -s 19 ".kot[0:18]"  1 1 1 3 18 3 3 3 
-		18 18 18 3 3 18 18 3 18 3 18;
-	setAttr -s 19 ".kix[0:18]"  0.875 0.83333331346511841 0.041666667908430099 
+	setAttr ".tan" 18;
+	setAttr -s 18 ".ktv[0:17]"  -20 0 0 0 1 1 100 1 109 0 112 0 114 0 115 1
+		 150 1 154 1 183 1 197 1 203 0 213 0 219 0 225 0 232 0 285 0;
+	setAttr -s 18 ".kit[0:17]"  1 1 1 3 18 3 3 3 
+		18 18 18 3 3 18 18 3 18 18;
+	setAttr -s 18 ".kot[0:17]"  1 1 1 3 18 3 3 3 
+		18 18 18 3 3 18 18 3 18 18;
+	setAttr -s 18 ".kix[0:17]"  0.875 0.83333331346511841 0.041666667908430099 
 		4.125 0.375 0.125 0.083333335816860199 0.041666667908430099 1.4583333730697632 0.1666666716337204 
-		1.2083333730697632 0.58333331346511841 0.25 0.4166666567325592 0.25 0.25 0.2916666567325592 
-		0.2083333283662796 0.83333331346511841;
-	setAttr -s 19 ".kiy[0:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[0:18]"  0.83333331346511841 0.041666667908430099 
+		1.2083333730697632 0.58333331346511841 0.25 0.4166666567325592 0.25 0.25 0.29166698455810547 
+		2.2083330154418945;
+	setAttr -s 18 ".kiy[0:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[0:17]"  0.83333331346511841 0.041666667908430099 
 		3.9583332538604736 0.375 0.125 0.083333335816860199 0.041666667908430099 1.4583333730697632 
 		0.1666666716337204 1.2083333730697632 0.58333331346511841 0.25 0.4166666567325592 
-		0.25 0.25 0.2916666567325592 0.2083333283662796 0.83333331346511841 0.83333331346511841;
-	setAttr -s 19 ".koy[0:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+		0.25 0.25 0.29166698455810547 2.2083330154418945 2.2083330154418945;
+	setAttr -s 18 ".koy[0:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "BabyGrab_Two_rotateX";
 	rename -uid "A0DC10C6-461E-AE1F-2928-4CBD06A4FCF9";
 	setAttr ".tan" 18;
@@ -19542,69 +22885,73 @@ createNode animCurveTA -n "IndexCntrl_R_02_rotateZ";
 createNode animCurveTU -n "baby_master_Scale";
 	rename -uid "594305CC-4ED4-D12E-C4A0-07B08227641A";
 	setAttr ".tan" 18;
-	setAttr -s 31 ".ktv[0:30]"  -19 1 -17 1 -13 1 1 1 3 1 8 1 9 1 12 1 22 1
+	setAttr -s 27 ".ktv[0:26]"  -19 1 -17 1 -13 1 1 1 3 1 8 1 9 1 12 1 22 1
 		 26 1 27 1 30 1 37 1 43 1 52 1 55 1 59 1 63 1 73 1 113 1 147.8 1 176 1 198 1 208 1
-		 232 1 248 1 253 1 259 1 264 1 266 1 271 1;
-	setAttr -s 31 ".kit[20:30]"  3 18 18 18 18 3 18 18 
-		18 18 18;
-	setAttr -s 31 ".kot[20:30]"  3 18 18 18 18 3 18 18 
-		18 18 18;
+		 232 1 239 1 264 1;
+	setAttr -s 27 ".kit[20:26]"  3 18 18 18 18 18 1;
+	setAttr -s 27 ".kot[20:26]"  3 18 18 18 18 18 1;
+	setAttr -s 27 ".kix[26]"  1.0833330154418945;
+	setAttr -s 27 ".kiy[26]"  0;
+	setAttr -s 27 ".kox[26]"  1.0833330154418945;
+	setAttr -s 27 ".koy[26]"  0;
 createNode animCurveTA -n "Spine_Cntrl_02_rotateX1";
 	rename -uid "8ACD87CD-48F6-FD2E-1F91-04B1DE1A58CF";
 	setAttr ".tan" 18;
-	setAttr -s 10 ".ktv[0:9]"  0 0 6 1.1820241470578945 16 -4.0382296470868626
+	setAttr -s 11 ".ktv[0:10]"  0 0 6 1.1820241470578945 16 -4.0382296470868626
 		 24 1.1745794394426081 43 -14.248962495092012 74 0 91 0 127 -2.3207793697613579 163 18.262696819324216
-		 176 18.982520173288254;
-	setAttr -s 10 ".kit[4:9]"  3 3 1 18 18 18;
-	setAttr -s 10 ".kot[4:9]"  3 3 1 18 18 18;
-	setAttr -s 10 ".kix[6:9]"  1.2916666269302368 1.4999997615814209 1.5 
-		0.54166668653488159;
-	setAttr -s 10 ".kiy[6:9]"  0 0 0.10437186807394028 0;
-	setAttr -s 10 ".kox[6:9]"  4.5416665077209473 1.5 0.54166698455810547 
-		0.54166668653488159;
-	setAttr -s 10 ".koy[6:9]"  0 0 0.037689860910177231 0;
+		 176 18.982520173288254 285 27.227357858224785;
+	setAttr -s 11 ".kit[4:10]"  3 3 1 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  3 3 1 18 18 18 18;
+	setAttr -s 11 ".kix[6:10]"  1.2916666269302368 1.4999997615814209 1.5 
+		0.54166698455810547 4.5416665077209473;
+	setAttr -s 11 ".kiy[6:10]"  0 0 0.10437186807394028 0.016672279685735703 
+		0;
+	setAttr -s 11 ".kox[6:10]"  4.5416665077209473 1.5 0.54166698455810547 
+		4.5416665077209473 4.5416665077209473;
+	setAttr -s 11 ".koy[6:10]"  0 0 0.037689860910177231 0.13979056477546692 
+		0;
 createNode animCurveTA -n "Spine_Cntrl_02_rotateY1";
 	rename -uid "459FF393-41F5-02F4-5EEB-9D9AF1A5D5DE";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  0 0 6 -0.22881332387182091 10 -9.9392333795734899e-17
+	setAttr -s 12 ".ktv[0:11]"  0 0 6 -0.22881332387182091 10 -9.9392333795734899e-17
 		 16 -0.260772735016228 24 -0.32079588984702501 43 -2.981770013872046e-16 74 0 91 0
-		 112 -0.70414038327432005 163 -5.5649295794666376 176 -1.7945982074611766;
-	setAttr -s 11 ".kit[5:10]"  3 3 1 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  3 3 1 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1.2916666269302368 0.8749997615814209 2.125 
-		0.54166668653488159;
-	setAttr -s 11 ".kiy[7:10]"  0 -0.028328511863946915 0 0;
-	setAttr -s 11 ".kox[7:10]"  4.5416665077209473 2.125 0.54166698455810547 
-		0.54166668653488159;
-	setAttr -s 11 ".koy[7:10]"  0 -0.06879783421754837 0 0;
+		 112 -0.70414038327432005 163 -5.5649295794666376 176 -1.7945982074611766 285 -2.8139497425370217;
+	setAttr -s 12 ".kit[5:11]"  3 3 1 18 18 18 18;
+	setAttr -s 12 ".kot[5:11]"  3 3 1 18 18 18 18;
+	setAttr -s 12 ".kix[7:11]"  1.2916666269302368 0.8749997615814209 2.125 
+		0.54166698455810547 4.5416665077209473;
+	setAttr -s 12 ".kiy[7:11]"  0 -0.028328511863946915 0 0 0;
+	setAttr -s 12 ".kox[7:11]"  4.5416665077209473 2.125 0.54166698455810547 
+		4.5416665077209473 4.5416665077209473;
+	setAttr -s 12 ".koy[7:11]"  0 -0.06879783421754837 0 0 0;
 createNode animCurveTA -n "Spine_Cntrl_02_rotateZ1";
 	rename -uid "A56A6B54-461E-37D3-BA95-558C7D98E920";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  0 6.8251196139674493 6 8.6880028670640339
+	setAttr -s 12 ".ktv[0:11]"  0 6.8251196139674493 6 8.6880028670640339
 		 10 6.8251196139674475 16 5.1396911119814579 24 7.1480569446148383 43 6.8251196139674457
 		 68 24.943841639522365 112 24.723263609568832 127 24.443095086948194 163 21.006154232818187
-		 176 9.8319093529048871;
-	setAttr -s 11 ".kit[5:10]"  3 1 18 18 18 18;
-	setAttr -s 11 ".kot[5:10]"  3 1 18 18 18 18;
-	setAttr -s 11 ".ktl[6:10]" no yes yes yes yes;
-	setAttr -s 11 ".kix[6:10]"  1.8049526214599609 1.8333332538604736 0.625 
-		1.5 0.54166668653488159;
-	setAttr -s 11 ".kiy[6:10]"  0 -0.0065177245996892452 -0.014669589698314667 
-		-0.1799578070640564 0;
-	setAttr -s 11 ".kox[6:10]"  1.6042734384536743 0.625 1.5 0.54166698455810547 
-		0.54166668653488159;
-	setAttr -s 11 ".koy[6:10]"  0 -0.0022219517268240452 -0.035207014530897141 
-		-0.064984798431396484 0;
+		 176 9.8319093529048871 285 9.2354993711854352;
+	setAttr -s 12 ".kit[5:11]"  3 1 18 18 18 18 18;
+	setAttr -s 12 ".kot[5:11]"  3 1 18 18 18 18 18;
+	setAttr -s 12 ".ktl[6:11]" no yes yes yes yes yes;
+	setAttr -s 12 ".kix[6:11]"  1.8049526214599609 1.8333332538604736 0.625 
+		1.5 0.54166698455810547 4.5416665077209473;
+	setAttr -s 12 ".kiy[6:11]"  0 -0.0065177245996892452 -0.014669589698314667 
+		-0.1799578070640564 -0.0037244372069835663 0;
+	setAttr -s 12 ".kox[6:11]"  1.6042734384536743 0.625 1.5 0.54166698455810547 
+		4.5416665077209473 4.5416665077209473;
+	setAttr -s 12 ".koy[6:11]"  0 -0.0022219517268240452 -0.035207014530897141 
+		-0.064984798431396484 -0.031227953732013702 0;
 createNode animCurveTU -n "Spine_Cntrl_02_visibility1";
 	rename -uid "733A2F86-4901-F3EB-9904-21940FBB0C1A";
 	setAttr ".tan" 5;
-	setAttr -s 12 ".ktv[0:11]"  0 1 6 1 10 1 16 1 24 1 43 1 74 1 91 1 112 1
-		 127 1 163 1 176 1;
-	setAttr -s 12 ".kit[0:11]"  9 9 9 9 9 9 9 1 
-		9 9 9 9;
-	setAttr -s 12 ".kix[7:11]"  1.2916666269302368 0.8749997615814209 0.625 
-		1.5 0.54166668653488159;
-	setAttr -s 12 ".kiy[7:11]"  0 0 0 0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 1 6 1 10 1 16 1 24 1 43 1 74 1 91 1 112 1
+		 127 1 163 1 176 1 285 1;
+	setAttr -s 13 ".kit[0:12]"  9 9 9 9 9 9 9 1 
+		9 9 9 9 9;
+	setAttr -s 13 ".kix[7:12]"  1.2916666269302368 0.8749997615814209 0.625 
+		1.5 0.54166698455810547 4.5416665077209473;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ThumbCntrl_R_02_visibility";
 	rename -uid "86CC26FF-4E4F-A319-809C-BD999E725F3F";
 	setAttr ".tan" 9;
@@ -19681,146 +23028,159 @@ createNode animCurveTU -n "battle_grab_loc_scaleZ";
 createNode animCurveTL -n "wine_bottle_translateX1";
 	rename -uid "94CAE8A0-401F-8350-E4DF-93B2B893CE55";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  113 -10.848717455721358 125 -6.8474446501085309
+	setAttr -s 13 ".ktv[0:12]"  113 -10.848717455721358 125 -6.8474446501085309
 		 155 -6.8474446501085309 161 -5.8118371344728343 166 -5.5501348033924502 173 -4.7345442389793391
 		 179 -4.5053054635174332 183 -5.1047478925475245 190 -6.0861112757987152 197 -5.6647221688070744
-		 202 -5.6647221688070744;
-	setAttr -s 11 ".ktl[0:10]" no yes yes yes yes yes yes yes yes no yes;
-	setAttr -s 11 ".kwl[10]" yes;
+		 199 -5.6647221688070744 202 -5.6647221688070744 206 -5.6647221688070744;
+	setAttr -s 13 ".ktl[0:12]" no yes yes yes yes yes yes yes yes no yes 
+		yes yes;
 createNode animCurveTL -n "wine_bottle_translateY1";
 	rename -uid "57BFB3BE-4239-209F-42BF-F48F09CC71DF";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  113 -6.0737050868616995 124 -2.5891178378070525
+	setAttr -s 16 ".ktv[0:15]"  113 -6.0737050868616995 124 -2.5891178378070525
 		 132 1.060666344653983 135 1.8243051776762316 140 1.4945144516746556 152 3.0664980814717788
 		 161 6.8970476083900918 168 7.7507547837808293 179 8.4549751301689717 180 8.2827501282360974
-		 183 5.8620694207303083 188 4.0331940648021449 194 -2.7291637911683782 199 -2.7291637911683782;
-	setAttr -s 14 ".ktl[0:13]" no yes yes yes yes yes yes yes yes yes yes 
-		yes no yes;
+		 183 5.8620694207303083 188 4.0331940648021449 194 -2.7291637911683782 199 -2.5569540022490838
+		 202 -2.4564415487710209 206 -2.4279218459048191;
+	setAttr -s 16 ".ktl[0:15]" no yes yes yes yes yes yes yes yes yes yes 
+		yes no yes yes yes;
 createNode animCurveTL -n "wine_bottle_translateZ1";
 	rename -uid "2F5DB1FF-4457-12AC-282A-08AD29DED693";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  113 3.2304622755098213 114 2.7643012151203745
+	setAttr -s 18 ".ktv[0:17]"  113 3.2304622755098213 114 2.7643012151203745
 		 124 6.7927001926015453 126 6.2243712827091562 147 7.9548550738772654 152 3.1324265830653548
 		 155 0.31605540889154593 161 -1.4799930644404324 166 -1.9240257637874754 173 -1.2569047949885264
 		 179 -0.84818274029909035 180 -0.49133604018375221 183 1.2208844918794175 190 3.9271743836132469
-		 197 8.4825159937989181 202 8.4825159937989181;
-	setAttr -s 16 ".kit[8:15]"  1 18 18 18 18 18 18 18;
-	setAttr -s 16 ".kot[8:15]"  1 18 18 18 18 18 18 18;
-	setAttr -s 16 ".ktl[0:15]" no yes yes yes yes yes yes yes yes yes yes 
-		yes yes yes no yes;
-	setAttr -s 16 ".kwl[15]" yes;
-	setAttr -s 16 ".kix[8:15]"  0.28015986084938049 0.2916666567325592 
-		0.25 0.041666667908430099 0.125 0.2916666567325592 0.2916666567325592 0.2083333283662796;
-	setAttr -s 16 ".kiy[8:15]"  0 0.57930010557174683 0.65620177984237671 
-		0.51726680994033813 1.3255531787872314 3.6308157444000244 0 0;
-	setAttr -s 16 ".kox[8:15]"  0.3634931743144989 0.25 0.041666667908430099 
-		0.125 0.2916666567325592 0.2916666567325592 0.2083333283662796 0.2083333283662796;
-	setAttr -s 16 ".koy[8:15]"  0 0.49654293060302734 0.10936696827411652 
-		1.5518003702163696 3.0929572582244873 3.6308157444000244 0 0;
+		 197 8.4825159937989181 199 8.4825159937989181 202 8.4825159937989181 206 8.4825159937989181;
+	setAttr -s 18 ".kit[8:17]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 18 ".kot[8:17]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 18 ".ktl[0:17]" no yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes no yes yes yes;
+	setAttr -s 18 ".kix[8:17]"  0.28015986084938049 0.2916666567325592 
+		0.25 0.041666667908430099 0.125 0.2916666567325592 0.29166666666666696 0.083333333333332149 
+		0.125 0.16666666666666785;
+	setAttr -s 18 ".kiy[8:17]"  0 0.57930010557174683 0.65620177984237671 
+		0.51726680994033813 1.3255531787872314 3.6308157444000244 0 0 0 0;
+	setAttr -s 18 ".kox[8:17]"  0.3634931743144989 0.25 0.041666667908430099 
+		0.125 0.2916666567325592 0.2916666567325592 0.083333333333332149 0.125 0.16666666666666785 
+		0.16666666666666785;
+	setAttr -s 18 ".koy[8:17]"  0 0.49654293060302734 0.10936696827411652 
+		1.5518003702163696 3.0929572582244873 3.6308157444000244 0 0 0 0;
 createNode animCurveTU -n "wine_bottle_visibility2";
 	rename -uid "02F8DBE3-45F8-6AF1-C280-37972053CD39";
 	setAttr ".tan" 18;
-	setAttr -s 20 ".ktv[0:19]"  113 1 114 1 124 1 126 1 132 1 135 1 140 1
-		 147 1 152 1 155 1 161 1 166 1 168 1 169 1 173 1 179 1 180 1 183 1 188 1 190 1;
-	setAttr -s 20 ".kit[1:19]"  9 18 18 18 18 18 18 18 
-		18 18 9 9 9 9 9 9 9 18 18;
-	setAttr -s 20 ".kot[1:19]"  5 18 18 18 18 18 18 18 
-		18 18 5 5 5 5 5 5 5 18 18;
-	setAttr -s 20 ".kwl[0:19]" yes no no no no no no no no no no no no 
-		no no no no no no no;
+	setAttr -s 23 ".ktv[0:22]"  113 1 114 1 124 1 126 1 132 1 135 1 140 1
+		 147 1 152 1 155 1 161 1 166 1 168 1 169 1 173 1 179 1 180 1 183 1 188 1 190 1 199 1
+		 202 1 206 1;
+	setAttr -s 23 ".kit[1:22]"  9 18 18 18 18 18 18 18 
+		18 18 9 9 9 9 9 9 9 18 18 9 9 9;
+	setAttr -s 23 ".kot[1:22]"  5 18 18 18 18 18 18 18 
+		18 18 5 5 5 5 5 5 5 18 18 5 5 5;
+	setAttr -s 23 ".kwl[0:22]" yes no no no no no no no no no no no no 
+		no no no no no no no no no no;
 createNode animCurveTA -n "wine_bottle_rotateX1";
 	rename -uid "ECDBFDE1-4E47-110A-541C-C8B2C92910B4";
 	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  113 -65.880963125957138 115 -52.383824654335925
+	setAttr -s 18 ".ktv[0:17]"  113 -65.880963125957138 115 -52.383824654335925
 		 132 42.912160127407802 140 36.210093021732348 147 53.405059173299691 155 67.815405731493058
 		 161 106.94031477872267 166 115.71143810834192 168 116.57669973751504 169 116.60997903094479
 		 173 115.49826615935531 179 121.26879250767163 180 117.96861611364993 183 91.053131910284421
-		 190 37.902252147559778 202 -1.5687694818714735 206 -1.5687694818714735;
-	setAttr -s 17 ".kit[5:16]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 17 ".kot[4:16]"  1 1 18 18 18 18 18 18 
+		 190 37.902252147559778 199 1.8564818828278189 202 -1.5687694818714735 206 -1.5687694818714735;
+	setAttr -s 18 ".kit[5:17]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18;
-	setAttr -s 17 ".ktl[0:16]" no yes yes yes yes yes yes yes yes yes yes 
-		yes yes yes yes no yes;
-	setAttr -s 17 ".kwl[0:16]" yes no no no no no no no no no no no no 
-		no no no yes;
-	setAttr -s 17 ".kix[5:16]"  0.29854393005371094 0.25 0.2083333283662796 
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".ktl[0:17]" no yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes;
+	setAttr -s 18 ".kwl[0:17]" yes no no no no no no no no no no no no 
+		no no no no no;
+	setAttr -s 18 ".kix[5:17]"  0.29854393005371094 0.25 0.2083333283662796 
 		0.083333335816860199 0.041666667908430099 0.1666666716337204 0.25 0.041666667908430099 
-		0.125 0.2916666567325592 0.5 0.1666666716337204;
-	setAttr -s 17 ".kiy[5:16]"  1.452114462852478 0.45596915483474731 0.11326248198747635 
-		0.0034849995281547308 0 0 0 -0.13184069097042084 -0.41922649741172791 -0.59557366371154785 
-		0 0;
-	setAttr -s 17 ".kox[4:16]"  0.7555275559425354 0.065680786967277527 
+		0.125 0.29166666666666696 0.37499999999999911 0.125 0.16666666666666785;
+	setAttr -s 18 ".kiy[5:17]"  1.452114462852478 0.45596915483474731 0.11326248198747635 
+		0.0034849995281547308 0 0 0 -0.13184069097042084 -0.41922649741172791 -0.68108916081859228 
+		-0.51667446491960412 0 0;
+	setAttr -s 18 ".kox[4:17]"  0.7555275559425354 0.065680786967277527 
 		0.2083333283662796 0.083333335816860199 0.041666667908430099 0.1666666716337204 0.25 
-		0.041666667908430099 0.125 0.2916666567325592 0.5 0.1666666716337204 0.1666666716337204;
-	setAttr -s 17 ".koy[4:16]"  0.20254792273044586 0.31947067379951477 
+		0.041666667908430099 0.125 0.2916666567325592 0.37499999999999911 0.125 0.16666666666666785 
+		0.16666666666666785;
+	setAttr -s 18 ".koy[4:17]"  0.20254792273044586 0.31947067379951477 
 		0.37997430562973022 0.04530499130487442 0.0017424997640773654 0 0 0 -0.39552205801010132 
-		-0.9781951904296875 -1.0209834575653076 0 0;
+		-0.9781951904296875 -0.87568606390961568 -0.17222482163986844 0 0;
 createNode animCurveTA -n "wine_bottle_rotateY1";
 	rename -uid "4E947088-46C5-39CE-45B4-07B55A595914";
 	setAttr ".tan" 18;
-	setAttr -s 10 ".ktv[0:9]"  113 89.372405451153753 114 -275.92532005664384
+	setAttr -s 13 ".ktv[0:12]"  113 89.372405451153753 114 -275.92532005664384
 		 135 -230.78051267791332 161 -241.06960520688421 166 -242.16868201322569 173 -237.861184770438
-		 183 -237.861184770438 192 -209.40708869808046 197 -226.98838921565215 204 -226.9883032611356;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".ktl[2:9]" no yes yes yes yes no no yes;
-	setAttr -s 10 ".kwl[0:9]" yes no no no no no no no no yes;
-	setAttr -s 10 ".kix[2:9]"  1.6085011959075928 1.0833333730697632 0.2083333283662796 
-		0.2916666567325592 0.4166666567325592 0.375 0.2083333283662796 0.2916666567325592;
-	setAttr -s 10 ".kiy[2:9]"  0 -0.16670282185077667 0 0 0 0 0 0;
+		 183 -237.861184770438 192 -209.40708869808046 197 -226.98838921565215 199 -226.98837085195836
+		 202 -226.98832030168117 204 -226.9883032611356 206 -226.9883032611356;
+	setAttr -s 13 ".kit[2:12]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 13 ".ktl[2:12]" no yes yes yes yes no no yes yes yes yes;
+	setAttr -s 13 ".kwl[0:12]" yes no no no no no no no no no no yes no;
+	setAttr -s 13 ".kix[2:12]"  1.6085011959075928 1.0833333730697632 0.2083333283662796 
+		0.2916666567325592 0.4166666567325592 0.375 0.20833333333333393 0.083333333333332149 
+		0.125 0.083333333333333925 0.083333333333333925;
+	setAttr -s 13 ".kiy[2:12]"  0 -0.16670282185077667 0 0 0 0 0 4.8111027783903224e-07 
+		7.0780944065873336e-07 0 0;
 createNode animCurveTA -n "wine_bottle_rotateZ1";
 	rename -uid "91BB4405-4702-D5F7-A8C3-FEB5F7A28E19";
 	setAttr ".tan" 18;
-	setAttr -s 20 ".ktv[0:19]"  113 -65.87716733757955 114 -65.546635968032092
+	setAttr -s 21 ".ktv[0:20]"  113 -65.87716733757955 114 -65.546635968032092
 		 117 -61.378864678864012 132 4.7348567251963214 140 -6.1831325801426287 147 5.9567155188987675
 		 152 0.73614086330157935 155 6.1214133390253131 161 14.402153965915179 166 18.007764594258386
 		 168 16.943451068001458 169 16.125429220090727 173 12.810123267515737 179 12.810123267515635
 		 180 12.810123267515626 183 12.810123267515584 188 -18.771769025077173 190 -2.3995560550017934
-		 202 -0.27548825937616211 206 -0.27548825937616211;
-	setAttr -s 20 ".ktl[0:19]" no yes yes yes yes yes yes yes yes yes yes 
-		yes yes yes yes yes yes yes no yes;
-	setAttr -s 20 ".kwl[0:19]" yes no yes no no no no no no no no no no 
-		no no no no no no yes;
+		 199 -0.30867681868281294 202 -0.27548825937616211 206 -0.27548825937616211;
+	setAttr -s 21 ".ktl[0:20]" no yes yes yes yes yes yes yes yes yes yes 
+		yes yes yes yes yes yes yes yes yes yes;
+	setAttr -s 21 ".kwl[0:20]" yes no yes no no no no no no no no no no 
+		no no no no no no no no;
 createNode animCurveTU -n "wine_bottle_scaleX1";
 	rename -uid "9763EEDB-40C5-6646-D3A4-4FADAF0AE6C8";
 	setAttr ".tan" 18;
-	setAttr -s 20 ".ktv[0:19]"  113 0.74435670947324362 114 0.74435670947324362
+	setAttr -s 23 ".ktv[0:22]"  113 0.74435670947324362 114 0.74435670947324362
 		 124 0.74435670947324362 126 0.74435670947324362 132 0.74435670947324362 135 0.74435670947324362
 		 140 0.74435670947324362 147 0.74435670947324362 152 0.74435670947324362 155 0.74435670947324362
 		 161 0.74435670947324362 166 0.74435670947324362 168 0.74435670947324362 169 0.74435670947324362
 		 173 0.74435670947324362 179 0.74435670947324362 180 0.74435670947324362 183 0.74435670947324362
-		 188 0.74435670947324362 190 0.74435670947324362;
-	setAttr -s 20 ".kwl[0:19]" yes no no no no no no no no no no no no 
-		no no no no no no no;
+		 188 0.74435670947324362 190 0.74435670947324362 199 0.74435670947324362 202 0.74435670947324362
+		 206 0.74435670947324362;
+	setAttr -s 23 ".kwl[0:22]" yes no no no no no no no no no no no no 
+		no no no no no no no no no no;
 createNode animCurveTU -n "wine_bottle_scaleY1";
 	rename -uid "A9CDE788-45F3-E94A-0C24-C89B37F84603";
 	setAttr ".tan" 18;
-	setAttr -s 20 ".ktv[0:19]"  113 0.87954174293886356 114 0.87954174293886356
+	setAttr -s 23 ".ktv[0:22]"  113 0.87954174293886356 114 0.87954174293886356
 		 124 0.87954174293886356 126 0.87954174293886356 132 0.87954174293886356 135 0.87954174293886356
 		 140 0.87954174293886356 147 0.87954174293886356 152 0.87954174293886356 155 0.87954174293886356
 		 161 0.87954174293886356 166 0.87954174293886356 168 0.87954174293886356 169 0.87954174293886356
 		 173 0.87954174293886356 179 0.87954174293886356 180 0.87954174293886356 183 0.87954174293886356
-		 188 0.87954174293886356 190 0.87954174293886356;
-	setAttr -s 20 ".kwl[0:19]" yes no no no no no no no no no no no no 
-		no no no no no no no;
+		 188 0.87954174293886356 190 0.87954174293886356 199 0.87954174293886356 202 0.87954174293886356
+		 206 0.87954174293886356;
+	setAttr -s 23 ".kwl[0:22]" yes no no no no no no no no no no no no 
+		no no no no no no no no no no;
 createNode animCurveTU -n "wine_bottle_scaleZ1";
 	rename -uid "C7E429D3-49E0-C174-161E-909CFEB41981";
 	setAttr ".tan" 18;
-	setAttr -s 20 ".ktv[0:19]"  113 0.74435670947324362 114 0.74435670947324362
+	setAttr -s 23 ".ktv[0:22]"  113 0.74435670947324362 114 0.74435670947324362
 		 124 0.74435670947324362 126 0.74435670947324362 132 0.74435670947324362 135 0.74435670947324362
 		 140 0.74435670947324362 147 0.74435670947324362 152 0.74435670947324362 155 0.74435670947324362
 		 161 0.74435670947324362 166 0.74435670947324362 168 0.74435670947324362 169 0.74435670947324362
 		 173 0.74435670947324362 179 0.74435670947324362 180 0.74435670947324362 183 0.74435670947324362
-		 188 0.74435670947324362 190 0.74435670947324362;
-	setAttr -s 20 ".kwl[0:19]" yes no no no no no no no no no no no no 
-		no no no no no no no;
+		 188 0.74435670947324362 190 0.74435670947324362 199 0.74435670947324362 202 0.74435670947324362
+		 206 0.74435670947324362;
+	setAttr -s 23 ".kwl[0:22]" yes no no no no no no no no no no no no 
+		no no no no no no no no no no;
 createNode animCurveTU -n "Spine_Cntrl_04_visibility1";
 	rename -uid "B356B8F3-4A16-1CB1-C753-2295D9AFA26A";
 	setAttr ".tan" 9;
-	setAttr -s 16 ".ktv[0:15]"  -4 1 0 1 4 1 17.796 1 25.852 1 29.648 1
-		 32.972 1 38 1 38.028 1 44.352 1 85 1 150 1 168 1 188 1 200 1 238 1;
-	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5;
+	setAttr -s 17 ".ktv[0:16]"  -4 1 0 1 4 1 17.796 1 25.852 1 29.648 1
+		 32.972 1 38 1 38.028 1 44.352 1 85 1 150 1 168 1 188 1 200 1 238 1 285 1;
+	setAttr -s 17 ".kot[0:16]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5;
 createNode lambert -n "lambert2";
 	rename -uid "35C5A840-41F8-DCDB-65A4-9FA9AA76CFD8";
 createNode shadingEngine -n "lambert2SG";
@@ -19937,13 +23297,13 @@ createNode materialInfo -n "mom_scene:mom3:materialInfo11";
 	rename -uid "E033B1DF-47C5-A676-5443-139B3D1FEC4D";
 createNode file -n "mom_scene:mom3:file5";
 	rename -uid "DBCC3CB5-4D3E-1CF4-BA70-CE85B4DF35A3";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom3:place2dTexture7";
 	rename -uid "683BDA68-4E4D-0E53-863C-E7A0A62B015E";
 createNode file -n "mom_scene:mom3:file6";
 	rename -uid "828F3D91-4DD8-D193-6C2F-BC88A362DEF1";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom3:place2dTexture8";
 	rename -uid "AB858E04-41B7-431D-0F02-948A5A5A82B9";
@@ -20181,13 +23541,13 @@ createNode materialInfo -n "mom_scene:mom:mom_skeleton:materialInfo11";
 	rename -uid "E1CACE15-4497-096F-63D2-889607B0B820";
 createNode file -n "mom_scene:mom:mom_skeleton:file5";
 	rename -uid "E914C42B-436A-8A7D-370B-CD94B1F50371";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture7";
 	rename -uid "B03F9E7C-41A1-FA03-8D0E-ECB0078B06B5";
 createNode file -n "mom_scene:mom:mom_skeleton:file6";
 	rename -uid "0B16A165-4953-38F0-22F7-1F9F08FEDBBF";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture8";
 	rename -uid "63D10159-4CA2-4141-F53F-15B1E597F32B";
@@ -20394,13 +23754,13 @@ createNode rampShader -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:momBr
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file5";
 	rename -uid "CA818201-4695-70D7-9049-5CB1608EDE8C";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture7";
 	rename -uid "73080A6C-4D0E-454E-26DB-D583ED69D5B7";
 createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6";
 	rename -uid "8BEBD05E-4262-B46E-B301-9EBD9E1C515D";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8";
 	rename -uid "B03C26F7-46E3-4E81-8F6C-AE9CAEDEE2E7";
@@ -20524,13 +23884,13 @@ createNode rampShader -n "mom_scene:mom:mom:momBrightnessRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:mom:mom:file5";
 	rename -uid "C8BDFA9A-4A16-27C7-B975-2F9482D6BDAE";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture7";
 	rename -uid "AF5B632F-4A5B-4183-7F32-5291F727CEFE";
 createNode file -n "mom_scene:mom:mom:file6";
 	rename -uid "63169CAD-4B02-6CEB-1B00-278B762FEDBF";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture8";
 	rename -uid "0AFFB111-489B-36B6-01FF-A48916FDB96A";
@@ -20657,13 +24017,13 @@ createNode rampShader -n "mom_scene:mom:mom_mesh:momBrightnessRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:mom:mom_mesh:file5";
 	rename -uid "D6FE8B9F-4C96-DB2C-C9BD-0D8CE9FF7855";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture7";
 	rename -uid "44D8D512-42B6-F155-642E-6B89D816E3FE";
 createNode file -n "mom_scene:mom:mom_mesh:file6";
 	rename -uid "98B1761F-4DB1-089F-9292-3C924C1D0641";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture8";
 	rename -uid "C2D265E1-4772-04E1-E78E-C6AD31E5EC91";
@@ -20757,7 +24117,7 @@ createNode renderSetup -n "mom_scene:mom:renderSetup";
 	rename -uid "F14DBD1C-4592-5B01-A218-0FB5ADCF911F";
 createNode file -n "mom_scene:table:file1";
 	rename -uid "94F3A250-4A77-9ADE-6161-D8997B1FFFBC";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/table/wood-table.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:table:place2dTexture1";
 	rename -uid "56ED5B86-476F-0F17-4B2B-8FBBC489C093";
@@ -20788,7 +24148,7 @@ createNode rampShader -n "mom_scene:table:tableBrightnessShader";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:table:file2";
 	rename -uid "B87DE795-466C-1E95-CF62-81AEBB08E983";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:table:place2dTexture2";
 	rename -uid "95628B38-46D4-CF38-CF66-19A0F6D378D8";
@@ -20836,13 +24196,13 @@ createNode partition -n "mom_scene:bible:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "mom_scene:bible:file1";
 	rename -uid "CE178130-4E89-00B7-BF7D-628938E0CA6E";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible:place2dTexture1";
 	rename -uid "0742DE28-4B64-AF86-84D1-7797D983651C";
 createNode file -n "mom_scene:bible:file2";
 	rename -uid "D1FD3A84-4934-BF03-59DC-2A9C2CF95878";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible:place2dTexture2";
 	rename -uid "911580C0-4E12-AF96-FCA7-50A7E51E2A50";
@@ -20987,7 +24347,7 @@ createNode partition -n "mom_scene:bible1:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "mom_scene:bible1:file1";
 	rename -uid "56EC779B-4A8D-5DCD-B7BB-508AA50F7B61";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible1:place2dTexture1";
 	rename -uid "7677CC7B-4891-BDEB-159D-9EA04C79610F";
@@ -21018,7 +24378,7 @@ createNode rampShader -n "mom_scene:bible1:BibleBrightnessRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:bible1:file2";
 	rename -uid "94B7419C-4573-2335-360E-479B4CAEB0E2";
-	setAttr ".ftn" -type "string" "/Users/jswu/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible1:place2dTexture2";
 	rename -uid "5372A348-4BAE-D084-1D1B-8DB56CBF4718";
@@ -21125,7 +24485,7 @@ createNode reference -n "mom_scene:momRN";
 	setAttr -s 3 ".fn";
 	setAttr ".fn[0]" -type "string" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma{1}";
 	setAttr ".fn[1]" -type "string" "C:/Users/mikha/Desktop/Only-Love//scenes/char/mom/mom_shirt_nclothrig.ma";
-	setAttr ".fn[2]" -type "string" "/Users/jswu/Desktop/Only-Love//scenes/char/mom/mom.ma";
+	setAttr ".fn[2]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/mom/mom.ma";
 	setAttr -s 122 ".phl";
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[12]" 0;
@@ -22374,7 +25734,7 @@ createNode audio -n "mom_scene:mom_scene_audio";
 	rename -uid "F514776A-4771-BA3F-DFCB-F2BFE2CB1A63";
 	setAttr ".ef" 613.192;
 	setAttr ".se" 613.192;
-	setAttr ".f" -type "string" "/Users/jswu/Desktop/Only-Love//sound/mom_scene_audio.wav";
+	setAttr ".f" -type "string" "/Users/veronicachen/Desktop/Only-Love//sound/mom_scene_audio.wav";
 createNode animCurveTU -n "mom_scene:wine_bottle_blendParent1";
 	rename -uid "B601C9F3-4F75-125F-D37D-49833B5F9ED9";
 	setAttr ".tan" 18;
@@ -22442,7 +25802,7 @@ createNode oceanShader -n "mom_scene:oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" 0.04163171723484993;
+	setAttr ".d" -0.08121199905872345;
 createNode reference -n "mom_scene:sharedReferenceNode";
 	rename -uid "A3BD9126-4746-2ED1-43E2-FE8A628D59A2";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -22784,7 +26144,7 @@ createNode animCurveTA -n "Neck_Cntrl_rotateX";
 createNode cacheFile -n "mom2_nClothShape1Cache1";
 	rename -uid "8887E77D-7443-5F78-EF97-8A9FA6B412F6";
 	setAttr ".cn" -type "string" "mom2_nClothShape1";
-	setAttr ".cp" -type "string" "/Users/jswu/Desktop/Only-Love//scenes/layout/animation/";
+	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
 	setAttr ".ch[0]" -type "string" "mom2:nClothShape1";
 	setAttr ".os" -20;
 	setAttr ".oe" 81;
@@ -22794,8 +26154,8 @@ createNode cacheFile -n "mom2_nClothShape1Cache1";
 createNode animCurveTU -n "Arm_Cntrl_R_mom_arm_correct";
 	rename -uid "2CDCC52B-B449-D830-22DE-1BBBB9FAC5DC";
 	setAttr ".tan" 18;
-	setAttr -s 13 ".ktv[0:12]"  0 0 1 0 109 0 150 0 154 10 183 10 203 0
-		 213 0 219 0 225 0 232 0 237 0 257 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 1 0 109 0 150 0 154 10 183 10 203 0
+		 213 0 219 0 225 0 232 0 285 0;
 createNode animCurveTU -n "mom_shoulder_ctrl_mom_boob_correct_rgt";
 	rename -uid "48ECB741-B64C-548B-AA32-E68F4A816834";
 	setAttr ".tan" 18;
@@ -22860,7 +26220,7 @@ createNode animCurveTU -n "EdgeMouth_Cntrl_L_visibility";
 createNode animCurveTU -n "Arm_Cntrl_L_mom_arm_correct";
 	rename -uid "EE074D57-7241-267F-B873-0893FD8DF093";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  -20 0 20 0 60 0;
+	setAttr -s 5 ".ktv[0:4]"  -20 0 20 0 60 0 255 0 285 0;
 createNode animCurveTU -n "NeckCntrl_01_mom_gulp_top";
 	rename -uid "24CD1F55-6243-4F73-B65D-839DE089F00B";
 	setAttr ".tan" 18;
@@ -22901,100 +26261,109 @@ createNode animCurveTU -n "Spine_Cntrl_01_visibility1";
 createNode animCurveTA -n "Thigh_Cntrl_L_rotateX";
 	rename -uid "8CE80802-B946-FBD5-3E78-E49E019B4AC5";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  5 0 14 3.4401593702515342e-15 29 0 34 0
+	setAttr -s 16 ".ktv[0:15]"  5 0 14 3.4401593702515342e-15 29 0 34 0
 		 39 0 47 33.406987071563051 58 34.275362113381981 68 59.552592631988993 84 27.611376730316856
 		 113 0.43521288583083806 127 -18.527720465650543 141 -15.264493948718249 154 -24.822005808274643
-		 166 -15.106648775559725;
+		 166 -15.106648775559725 242 -12.852655458984358 265 -13.60141582051558;
 createNode animCurveTA -n "Thigh_Cntrl_L_rotateY";
 	rename -uid "5555725F-4E45-1F7A-4392-0B8ABE442205";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  5 0 14 4.3068728431951788 29 -10.520974678534222
+	setAttr -s 14 ".ktv[0:13]"  5 0 14 4.3068728431951788 29 -10.520974678534222
 		 34 -4.2056412494893092 39 -4.2056412494893092 58 -45.275222122984665 68 -60.723603811138105
 		 95 -44.220563209383002 107 -44.220563209383002 113 -49.413159908227989 122 -48.128984464424832
-		 134 -50.253994327170162;
-	setAttr -s 12 ".kit[8:11]"  1 18 18 18;
-	setAttr -s 12 ".kot[8:11]"  1 18 18 18;
-	setAttr -s 12 ".kix[8:11]"  1.125 0.25 0.375 0.5;
-	setAttr -s 12 ".kiy[8:11]"  0 0 0 0;
-	setAttr -s 12 ".kox[8:11]"  0.58333331346511841 0.375 0.5 0.5;
-	setAttr -s 12 ".koy[8:11]"  0 0 0 0;
+		 134 -50.253994327170162 242 5.0304267411652726 265 44.880365886932289;
+	setAttr -s 14 ".kit[8:13]"  1 18 18 18 18 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 18 18 18;
+	setAttr -s 14 ".kix[8:13]"  1.125 0.25 0.375 0.5 4.4999995231628418 
+		0.95833396911621094;
+	setAttr -s 14 ".kiy[8:13]"  0 0 0 0 1.3688856363296509 0;
+	setAttr -s 14 ".kox[8:13]"  0.58333331346511841 0.375 0.5 4.4999995231628418 
+		0.95833396911621094 0.95833396911621094;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0.29152217507362366 0;
 createNode animCurveTA -n "Thigh_Cntrl_L_rotateZ";
 	rename -uid "2048DABE-9648-FFF2-FB71-A3ADE0C10CEE";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  5 68.723929081477323 14 59.046365168118442
+	setAttr -s 13 ".ktv[0:12]"  5 68.723929081477323 14 59.046365168118442
 		 29 64.982667678190694 58 23.449322426327321 68 -20.286076291873929 84 -28.728576058155877
 		 113 30.845746967608356 127 61.826354851961206 141 53.784277763785454 154 62.226662599328222
-		 166 55.487069982955859;
+		 166 55.487069982955859 242 67.816124985660821 265 34.072825379340451;
 createNode animCurveTU -n "Thigh_Cntrl_R_visibility";
 	rename -uid "A5AD48C6-C147-410E-6AF2-FC90F4A9037B";
 	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  34 1 39 1 53 1 58 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  34 1 39 1 53 1 58 1 237 1 243 1 271 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTU -n "Thigh_Cntrl_L_visibility";
 	rename -uid "59979352-BD47-377E-0CCF-EE991527E953";
 	setAttr ".tan" 9;
-	setAttr -s 14 ".ktv[0:13]"  5 1 14 1 29 1 34 1 39 1 47 1 58 1 68 1 84 1
-		 113 1 127 1 141 1 154 1 166 1;
-	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5;
+	setAttr -s 16 ".ktv[0:15]"  5 1 14 1 29 1 34 1 39 1 47 1 58 1 68 1 84 1
+		 113 1 127 1 141 1 154 1 166 1 242 1 265 1;
+	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "Spine_Cntrl_03_rotateX1";
 	rename -uid "8CD441D0-6E4B-C603-DCA3-B19CFD1C65DB";
 	setAttr ".tan" 18;
-	setAttr -s 7 ".ktv[0:6]"  22 6.9003612528514502 29 0 43 -26.850887159844483
-		 59 0 105 15.056520471672325 181 -6.918073760738114 198 -34.732189604138945;
-	setAttr -s 7 ".kit[3:6]"  1 18 18 18;
-	setAttr -s 7 ".kot[3:6]"  1 18 18 18;
-	setAttr -s 7 ".kix[3:6]"  0.25 1.9166666269302368 3.1666667461395264 
-		0.70833331346511841;
-	setAttr -s 7 ".kiy[3:6]"  0 0 -0.71013170480728149 0;
-	setAttr -s 7 ".kox[3:6]"  0.25 3.1666667461395264 0.70833331346511841 
-		0.70833331346511841;
-	setAttr -s 7 ".koy[3:6]"  0 0 -0.15884524583816528 0;
+	setAttr -s 10 ".ktv[0:9]"  22 6.9003612528514502 29 0 43 -26.850887159844483
+		 59 0 105 15.056520471672325 181 -6.918073760738114 198 -34.732189604138945 254 -34.73078777308347
+		 259 -36.139658832964138 292 -35.559105534399464;
+	setAttr -s 10 ".kit[3:9]"  1 18 18 18 18 18 18;
+	setAttr -s 10 ".kot[3:9]"  1 18 18 18 18 18 18;
+	setAttr -s 10 ".kix[3:9]"  0.25 1.9166666269302368 3.1666665077209473 
+		0.70833349227905273 2.3333330154418945 0.20833396911621094 1.375;
+	setAttr -s 10 ".kiy[3:9]"  0 0 -0.71013164520263672 0 0 0 0;
+	setAttr -s 10 ".kox[3:9]"  0.25 3.1666667461395264 0.70833349227905273 
+		2.3333330154418945 0.20833396911621094 1.375 1.375;
+	setAttr -s 10 ".koy[3:9]"  0 0 -0.15884527564048767 0 0 0 0;
 createNode animCurveTA -n "Spine_Cntrl_03_rotateY1";
 	rename -uid "4EB60134-7D4C-1856-EAF7-6281054F36FC";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  22 0 29 0 42 24.207051325143315 53 1.0640558340810558
-		 59 0 105 -6.128946684825884 181 -1.5516568055502993 198 -1.1098408062726637;
-	setAttr -s 8 ".kit[4:7]"  1 18 18 18;
-	setAttr -s 8 ".kot[4:7]"  1 18 18 18;
-	setAttr -s 8 ".kix[4:7]"  0.25 1.9166666269302368 3.1666667461395264 
-		0.70833331346511841;
-	setAttr -s 8 ".kiy[4:7]"  0 0 0.071587033569812775 0;
-	setAttr -s 8 ".kox[4:7]"  0.25 3.1666667461395264 0.70833331346511841 
-		0.70833331346511841;
-	setAttr -s 8 ".koy[4:7]"  0 0 0.01601288840174675 0;
+	setAttr -s 11 ".ktv[0:10]"  22 0 29 0 42 24.207051325143315 53 1.0640558340810558
+		 59 0 105 -6.128946684825884 181 -1.5516568055502993 198 -1.1098408062726637 254 -1.7036776661188404
+		 259 0.82619248480589091 292 -0.3620730675704123;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  0.25 1.9166666269302368 3.1666665077209473 
+		0.70833349227905273 2.3333330154418945 0.20833396911621094 1.375;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0.071587033569812775 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  0.25 3.1666667461395264 0.70833349227905273 
+		2.3333330154418945 0.20833396911621094 1.375 1.375;
+	setAttr -s 11 ".koy[4:10]"  0 0 0.016012892127037048 0 0 0 0;
 createNode animCurveTA -n "Spine_Cntrl_03_rotateZ1";
 	rename -uid "3E8279C9-5242-6278-67B2-3DA3948674BA";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  22 0 29 0 42 -9.1810945192732074 53 3.6553089329811508
-		 59 0 105 8.9221067935237102 181 -2.4576934775993928 198 -3.5561115286671785;
-	setAttr -s 8 ".kit[4:7]"  1 18 18 18;
-	setAttr -s 8 ".kot[4:7]"  1 18 18 18;
-	setAttr -s 8 ".kix[4:7]"  0.25 1.9166666269302368 3.1666667461395264 
-		0.70833331346511841;
-	setAttr -s 8 ".kiy[4:7]"  0 0 -0.17797565460205078 0;
-	setAttr -s 8 ".kox[4:7]"  0.25 3.1666667461395264 0.70833331346511841 
-		0.70833331346511841;
-	setAttr -s 8 ".koy[4:7]"  0 0 -0.039810344576835632 0;
+	setAttr -s 11 ".ktv[0:10]"  22 0 29 0 42 -9.1810945192732074 53 3.6553089329811508
+		 59 0 105 8.9221067935237102 181 -2.4576934775993928 198 -3.5561115286671785 254 -7.6256285576547773
+		 259 4.3898701462722007 292 -0.73256550920442742;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  0.25 1.9166666269302368 3.1666665077209473 
+		0.70833349227905273 2.3333330154418945 0.20833396911621094 1.375;
+	setAttr -s 11 ".kiy[4:10]"  0 0 -0.17797563970088959 -0.021004898473620415 
+		0 0 0;
+	setAttr -s 11 ".kox[4:10]"  0.25 3.1666667461395264 0.70833349227905273 
+		2.3333330154418945 0.20833396911621094 1.375 1.375;
+	setAttr -s 11 ".koy[4:10]"  0 0 -0.039810352027416229 -0.069192580878734589 
+		0 0 0;
 createNode animCurveTU -n "Spine_Cntrl_03_visibility1";
 	rename -uid "D92D948B-1245-5853-947A-46A260FDCCEB";
 	setAttr ".tan" 5;
-	setAttr -s 8 ".ktv[0:7]"  22 1 29 1 42 1 53 1 59 1 105 1 181 1 198 1;
-	setAttr -s 8 ".kit[0:7]"  9 9 9 9 1 9 9 9;
-	setAttr -s 8 ".kix[4:7]"  0.25 1.9166666269302368 3.1666667461395264 
-		0.70833331346511841;
-	setAttr -s 8 ".kiy[4:7]"  0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  22 1 29 1 42 1 53 1 59 1 105 1 181 1 198 1
+		 254 1 259 1 292 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  0.25 1.9166666269302368 3.1666665077209473 
+		0.70833349227905273 2.3333330154418945 0.20833396911621094 1.375;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "UpperArm_Cntrl_L_visibility";
 	rename -uid "322DA731-0D4D-39CC-3DC0-AD83E99E20F6";
 	setAttr ".tan" 5;
-	setAttr -s 21 ".ktv[0:20]"  -5 1 -1 1 0 1 6 1 24 1 30 1 33 1 37 1 45 1
-		 50 1 63 1 85 1 105 1 116 1 132 1 153 1 194 1 211 1 224 1 241 1 263 1;
-	setAttr -s 21 ".kit[0:20]"  9 9 9 9 9 9 9 9 
-		9 9 9 9 1 9 1 9 9 1 1 9 9;
-	setAttr -s 21 ".kix[12:20]"  0.79166674613952637 0.45833349227905273 
+	setAttr -s 22 ".ktv[0:21]"  -5 1 -1 1 0 1 6 1 24 1 30 1 33 1 37 1 45 1
+		 50 1 63 1 85 1 105 1 116 1 132 1 153 1 194 1 211 1 224 1 241 1 254 1 285 1;
+	setAttr -s 22 ".kit[0:21]"  9 9 9 9 9 9 9 9 
+		9 9 9 9 1 9 1 9 9 1 1 9 9 9;
+	setAttr -s 22 ".kix[12:21]"  0.79166674613952637 0.45833349227905273 
 		0.45833349227905273 0.875 1.7083330154418945 1.7083330154418945 0.83333301544189453 
-		0.70833396911621094 0.91666603088378906;
-	setAttr -s 21 ".kiy[12:20]"  0 0 0 0 0 0 0 0 0;
+		0.70833396911621094 0.54166603088378906 1.2916669845581055;
+	setAttr -s 22 ".kiy[12:21]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "LowerArm_Cntrl_L_visibility";
 	rename -uid "18F8FD50-3349-9894-0B00-AC9EC9D6B5D6";
 	setAttr ".tan" 9;
@@ -23005,8 +26374,10 @@ createNode animCurveTU -n "LowerArm_Cntrl_L_visibility";
 createNode animCurveTU -n "Knee_Cntrl_R_visibility";
 	rename -uid "3B91AE10-0D41-6B7E-1FF1-ADA6B32E1D7B";
 	setAttr ".tan" 9;
-	setAttr -s 7 ".ktv[0:6]"  28 1 34 1 37 1 45 1 60 1 63 1 91 1;
-	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  28 1 34 1 37 1 45 1 60 1 63 1 91 1 237 1
+		 244 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTU -n "Ankle_Cntrl_R_visibility";
 	rename -uid "22C79682-664E-C97F-35A2-FE9181407FAC";
 	setAttr ".tan" 9;
@@ -23015,32 +26386,32 @@ createNode animCurveTU -n "Ankle_Cntrl_R_visibility";
 createNode animCurveTA -n "Knee_Cntrl_L_rotateX";
 	rename -uid "065F0682-5446-82E9-0C34-E8A957172158";
 	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  7 0 18 0 28 0 34 0 40 0 45 -1.6825558339639649e-15
+	setAttr -s 18 ".ktv[0:17]"  7 0 18 0 28 0 34 0 40 0 45 -1.6825558339639649e-15
 		 49 13.472697400889047 71 13.741424741295258 99 13.472697400889047 115 1.4662776822924426
 		 126 2.2488600868271158 135 2.6852525878009246 145 1.4346866213241172 157 0.34058233459020926
-		 165 3.0076246561629816 178 1.2942042514390852 191 3.5128007319196035;
+		 165 3.0076246561629816 178 1.2942042514390852 191 3.5128007319196035 242 -12.532781132584205;
 createNode animCurveTA -n "Knee_Cntrl_L_rotateY";
 	rename -uid "ABF9DFBB-F742-7576-AFA6-8C88C1C57994";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  7 0 18 0 28 0 34 0 40 0 49 -2.6515993136261322
+	setAttr -s 17 ".ktv[0:16]"  7 0 18 0 28 0 34 0 40 0 49 -2.6515993136261322
 		 71 0.37268594829533097 99 -2.6515993136261322 115 -2.9359205251453075 126 -2.5102886180928659
 		 135 -2.1301668016340107 145 -2.9479913133812694 157 -3.1747292704540375 165 3.062050351329145
-		 178 3.8908307291845392 191 10.084000881663835;
+		 178 3.8908307291845392 191 10.084000881663835 242 24.374045391164934;
 createNode animCurveTA -n "Knee_Cntrl_L_rotateZ";
 	rename -uid "340E9471-654F-7184-F205-B18A85DFF9BF";
 	setAttr ".tan" 18;
-	setAttr -s 17 ".ktv[0:16]"  7 -64.876544071710924 18 -87.481343135963627
+	setAttr -s 18 ".ktv[0:17]"  7 -64.876544071710924 18 -87.481343135963627
 		 28 -30.07479446298937 34 -44.796479539454808 40 -54.653062051517864 45 -54.653062051517878
 		 49 -47.458002453697439 71 -54.463475865618605 99 -47.458002453697439 115 -41.50139387307113
 		 126 -49.838973530168531 135 -55.32857635019873 145 -41.188300642177197 157 -30.868456664344965
-		 165 -34.748693759172525 178 -48.488888970742089 191 -42.135619771946104;
+		 165 -34.748693759172525 178 -48.488888970742089 191 -42.135619771946104 242 -87.305540300562129;
 createNode animCurveTU -n "Knee_Cntrl_L_visibility";
 	rename -uid "924FC911-634A-7D32-8F0C-69B33E08B3A4";
 	setAttr ".tan" 9;
-	setAttr -s 17 ".ktv[0:16]"  7 1 18 1 28 1 34 1 40 1 45 1 49 1 71 1 99 1
-		 115 1 126 1 135 1 145 1 157 1 165 1 178 1 191 1;
-	setAttr -s 17 ".kot[0:16]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5;
+	setAttr -s 18 ".ktv[0:17]"  7 1 18 1 28 1 34 1 40 1 45 1 49 1 71 1 99 1
+		 115 1 126 1 135 1 145 1 157 1 165 1 178 1 191 1 242 1;
+	setAttr -s 18 ".kot[0:17]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "Ankle_Cntrl_L_rotateX";
 	rename -uid "9FB30A26-BE47-36BA-8A26-7385D950E3D1";
 	setAttr ".tan" 18;
@@ -23708,53 +27079,77 @@ createNode animCurveTA -n "bot_mid_ctrl_rotateZ1";
 createNode animCurveTU -n "baby_master_baby_blink_new";
 	rename -uid "01C18401-0E44-7F33-2CEC-1B84948B19E0";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  -19 0.059459459459460406 -13 4.6000000000000005
+	setAttr -s 14 ".ktv[0:13]"  -19 0.059459459459460406 -13 4.6000000000000005
 		 1 6.0000000000000009 9 4.239161097215959 12 4.9591492580115766 22 0 26 2.2999999999999989
-		 27 2.9828125000000005 30 4.6000000000000005 73 4.6000000000000005 253 4.6000000000000005
-		 259 0.40000000000000036 264 1.5660879629629685 266 6.6130928760393157 271 3.5;
-	setAttr -s 15 ".kit[0:14]"  1 1 1 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 15 ".kot[0:14]"  1 1 1 18 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 15 ".kix[0:14]"  0.39273089170455933 0.18175286054611206 
+		 27 2.9828125000000005 30 4.6000000000000005 73 4.6000000000000005 176 4.6000000000000005
+		 232 4.6000000000000005 239 4.1133061405873166 264 0.40000000000000036;
+	setAttr -s 14 ".kit[0:13]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 1;
+	setAttr -s 14 ".kot[0:13]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 1;
+	setAttr -s 14 ".kix[0:13]"  0.39273089170455933 0.18175286054611206 
 		0.60706555843353271 0.3333333432674408 0.125 0.4166666567325592 0.1666666716337204 
-		0.041666667908430099 0.125 1.7916666269302368 7.5 0.25 0.2083333283662796 0.083333335816860199 
-		0.2083333283662796;
-	setAttr -s 15 ".kiy[0:14]"  0 2.0417678356170654 -0.39639276266098022 
-		0 0 0 2.3862500190734863 0.57499998807907104 0 0 0 0 3.4982638359069824 0 0;
-	setAttr -s 15 ".kox[0:14]"  0.39273089170455933 0.42764249444007874 
+		0.041666667908430099 0.125 1.7916667461395264 4.2916669845581055 2.3333334922790527 
+		0.29166603088378906 1.0833330154418945;
+	setAttr -s 14 ".kiy[0:13]"  0 2.0417678356170654 -0.39639276266098022 
+		0 0 0 2.3862500190734863 0.57499998807907104 0 0 0 0 -0.91874819993972778 0;
+	setAttr -s 14 ".kox[0:13]"  0.39273089170455933 0.42764249444007874 
 		0.35841536521911621 0.125 0.4166666567325592 0.1666666716337204 0.041666667908430099 
-		0.125 1.7916666269302368 7.5 0.25 0.2083333283662796 0.083333335816860199 0.2083333283662796 
-		0.2083333283662796;
-	setAttr -s 15 ".koy[0:14]"  0 4.8040328025817871 -0.23403279483318329 
-		0 0 0 0.59656250476837158 1.7250000238418579 0 0 0 0 1.3993055820465088 0 0;
+		0.125 1.7916666269302368 4.2916669845581055 2.3333334922790527 0.29166603088378906 
+		1.0416669845581055 1.0833330154418945;
+	setAttr -s 14 ".koy[0:13]"  0 4.8040328025817871 -0.23403279483318329 
+		0 0 0 0.59656250476837158 1.7250000238418579 0 0 0 0 -3.2812516689300537 0;
 createNode animCurveTU -n "baby_master_baby_extreme_scrunch";
 	rename -uid "BD59D4DA-3E49-F57F-95ED-4981D113680D";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  -19 0 -17 0 -13 0 9 4.3 27 0.238192419825074
-		 30 0 73 0 253 0 259 0 264 0 266 0 271 0;
+	setAttr -s 11 ".ktv[0:10]"  -19 0 -17 0 -13 0 9 4.3 27 0.238192419825074
+		 30 0 73 0 176 0 232 0 239 0 264 0;
+	setAttr -s 11 ".kit[10]"  1;
+	setAttr -s 11 ".kot[10]"  1;
+	setAttr -s 11 ".kix[10]"  1.0833330154418945;
+	setAttr -s 11 ".kiy[10]"  0;
+	setAttr -s 11 ".kox[10]"  1.0833330154418945;
+	setAttr -s 11 ".koy[10]"  0;
 createNode animCurveTU -n "baby_master_baby_mouth_open_2";
 	rename -uid "57CDA484-184F-1804-AF65-43977657D1CB";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  -19 0 -17 0 -13 0 8 10 27 10 31 10 53 0
-		 253 0 259 0 264 0 266 0 271 0;
+	setAttr -s 11 ".ktv[0:10]"  -19 0 -17 0 -13 0 8 10 27 10 31 10 53 0
+		 176 0 232 0 239 0 264 0;
+	setAttr -s 11 ".kit[10]"  1;
+	setAttr -s 11 ".kot[10]"  1;
+	setAttr -s 11 ".kix[10]"  1.0833330154418945;
+	setAttr -s 11 ".kiy[10]"  0;
+	setAttr -s 11 ".kox[10]"  1.0833330154418945;
+	setAttr -s 11 ".koy[10]"  0;
 createNode animCurveTU -n "baby_master_baby_cheeks_up";
 	rename -uid "3B5A64D1-7A45-6EA4-7F43-5FA0FCB6E286";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  -19 0 -17 0 -13 0 24 3.7543243243243243
-		 27 3.7138289731732939 73 0 253 0 259 0 264 0 266 0 271 0;
+	setAttr -s 10 ".ktv[0:9]"  -19 0 -17 0 -13 0 24 3.7543243243243243
+		 27 3.7138289731732939 73 0 176 0 232 0 239 0 264 0;
+	setAttr -s 10 ".kit[9]"  1;
+	setAttr -s 10 ".kot[9]"  1;
+	setAttr -s 10 ".kix[9]"  1.0833330154418945;
+	setAttr -s 10 ".kiy[9]"  0;
+	setAttr -s 10 ".kox[9]"  1.0833330154418945;
+	setAttr -s 10 ".koy[9]"  0;
 createNode animCurveTU -n "baby_master_baby_super_frown";
 	rename -uid "B4F6BC59-B748-FC4F-7245-32AB8F2F6996";
 	setAttr ".tan" 18;
-	setAttr -s 18 ".ktv[0:17]"  -19 0 -17 0 -13 4.4 1 0 3 0 8 0 9 0 12 0
-		 22 0 26 0 27 0 30 0 73 0 253 0 259 0 264 0 266 0 271 0;
+	setAttr -s 17 ".ktv[0:16]"  -19 0 -17 0 -13 4.4 1 0 3 0 8 0 9 0 12 0
+		 22 0 26 0 27 0 30 0 73 0 176 0 232 0 239 0 264 0;
+	setAttr -s 17 ".kit[16]"  1;
+	setAttr -s 17 ".kot[16]"  1;
+	setAttr -s 17 ".kix[16]"  1.0833330154418945;
+	setAttr -s 17 ".kiy[16]"  0;
+	setAttr -s 17 ".kox[16]"  1.0833330154418945;
+	setAttr -s 17 ".koy[16]"  0;
 createNode pairBlend -n "pairBlend2";
 	rename -uid "9C3B2F0E-410A-052C-3CAE-458D44563460";
 createNode animCurveTU -n "BabyGrab_One_scaleZ";
 	rename -uid "C9BD142B-4F7D-1DA6-D0EB-3AB73AFD7928";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  13 3.0196747194076088 22 3.0196747194076088
-		 25 3.0196747194076088 30 3.0196747194076088 34 3.0196747194076088 42 3.0196747194076088
+	setAttr -s 16 ".ktv[0:15]"  13 3.0196747194076088 25 3.0196747194076088
+		 27 3.0196747194076088 30 3.0196747194076088 34 3.0196747194076088 42 3.0196747194076088
 		 45 3.0196747194076088 49 3.0196747194076088 66 3.0196747194076088 80 3.0196747194076088
 		 80.06 3.0196747194076088 127 3.0196747194076088 191 3.0196747194076088 215 3.0196747194076088
 		 237 3.0196747194076088 287 3.0196747194076088;
@@ -23763,8 +27158,8 @@ createNode animCurveTU -n "BabyGrab_One_scaleZ";
 createNode animCurveTU -n "BabyGrab_One_scaleY";
 	rename -uid "FCF5EB7D-4539-A929-4F87-E6BB74C036D0";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  13 3.0196747194076079 22 3.0196747194076079
-		 25 3.0196747194076079 30 3.0196747194076079 34 3.0196747194076079 42 3.0196747194076079
+	setAttr -s 16 ".ktv[0:15]"  13 3.0196747194076079 25 3.0196747194076079
+		 27 3.0196747194076079 30 3.0196747194076079 34 3.0196747194076079 42 3.0196747194076079
 		 45 3.0196747194076079 49 3.0196747194076079 66 3.0196747194076079 80 3.0196747194076079
 		 80.06 3.0196747194076079 127 3.0196747194076079 191 3.0196747194076079 215 3.0196747194076079
 		 237 3.0196747194076079 287 3.0196747194076079;
@@ -23773,8 +27168,8 @@ createNode animCurveTU -n "BabyGrab_One_scaleY";
 createNode animCurveTU -n "BabyGrab_One_scaleX";
 	rename -uid "A58BFE7B-42E8-E779-3D72-C7AFDB717442";
 	setAttr ".tan" 18;
-	setAttr -s 16 ".ktv[0:15]"  13 3.0196747194076079 22 3.0196747194076079
-		 25 3.0196747194076079 30 3.0196747194076079 34 3.0196747194076079 42 3.0196747194076079
+	setAttr -s 16 ".ktv[0:15]"  13 3.0196747194076079 25 3.0196747194076079
+		 27 3.0196747194076079 30 3.0196747194076079 34 3.0196747194076079 42 3.0196747194076079
 		 45 3.0196747194076079 49 3.0196747194076079 66 3.0196747194076079 80 3.0196747194076079
 		 80.06 3.0196747194076079 127 3.0196747194076079 191 3.0196747194076079 215 3.0196747194076079
 		 237 3.0196747194076079 287 3.0196747194076079;
@@ -23783,75 +27178,79 @@ createNode animCurveTU -n "BabyGrab_One_scaleX";
 createNode animCurveTA -n "BabyGrab_One_rotateZ";
 	rename -uid "1B349D70-496B-68BC-ADD6-F2BC411EFBBE";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  13 -138.47331514315641 30 -219.75211104032226
-		 42 -256.08579495200769 45 -255.93947959411994 49 -256.32436813729322 66 -289.39425908665754
-		 80 -285.73706939179459 127 -285.48511183793727 191 -265.84878160419049 215 -261.3724726731287
-		 237 -262.42112317336154 287 -263.07183360461698;
-	setAttr -s 12 ".kit[0:11]"  1 18 1 18 18 18 18 18 
-		18 18 3 18;
-	setAttr -s 12 ".kot[0:11]"  1 18 1 18 18 18 18 18 
-		18 18 3 18;
-	setAttr -s 12 ".kix[0:11]"  1.5041825771331787 0.70833331346511841 
-		1.1599560976028442 0.125 0.1666666716337204 0.70833331346511841 0.58333331346511841 
-		1.9583333730697632 2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
-	setAttr -s 12 ".kiy[0:11]"  0 -1.2033215761184692 -0.16017977893352509 
-		0 -0.02015271782875061 0 0.0039296709001064301 0.013192466460168362 0.30606904625892639 
-		0 0 0;
-	setAttr -s 12 ".kox[0:11]"  1.5041825771331787 0.5 0.0795932337641716 
-		0.1666666716337204 0.70833331346511841 0.58333331346511841 1.9583333730697632 2.6666667461395264 
-		1 0.91666668653488159 2.0833332538604736 2.0833332538604736;
-	setAttr -s 12 ".koy[0:11]"  0 -0.84940344095230103 -0.010991128161549568 
-		0 -0.085649050772190094 0 0.013192466460168362 0.017964210361242294 0.1147758960723877 
-		0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  13 -138.47331514315641 25 -179.06750264118278
+		 27 -196.84989928062183 30 -219.75211104032226 42 -256.08579495200769 45 -255.93947959411994
+		 49 -256.32436813729322 66 -289.39425908665754 80 -285.73706939179459 127 -285.48511183793727
+		 191 -265.84878160419049 215 -261.3724726731287 237 -262.42112317336154 287 -263.07183360461698;
+	setAttr -s 14 ".kit[0:13]"  1 18 18 18 1 18 18 18 
+		18 18 18 18 3 18;
+	setAttr -s 14 ".kot[0:13]"  1 18 18 18 1 18 18 18 
+		18 18 18 18 3 18;
+	setAttr -s 14 ".kix[0:13]"  1.5041825771331787 0.50000000000000011 
+		0.083333333333333259 0.125 1.1599560976028442 0.125 0.1666666716337204 0.70833331346511841 
+		0.58333331346511841 1.9583333730697632 2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
+	setAttr -s 14 ".kiy[0:13]"  0 -0.87331165651394171 -0.28403214857980913 
+		-0.20677228296670816 -0.16017977893352509 0 -0.02015271782875061 0 0.0039296709001064301 
+		0.013192466460168362 0.30606904625892639 0 0 0;
+	setAttr -s 14 ".kox[0:13]"  1.5041825771331787 0.083333333333333259 
+		0.125 0.5 0.0795932337641716 0.1666666716337204 0.70833331346511841 0.58333331346511841 
+		1.9583333730697632 2.6666667461395264 1 0.91666668653488159 2.0833332538604736 2.0833332538604736;
+	setAttr -s 14 ".koy[0:13]"  0 -0.14555194275232344 -0.42604822286971405 
+		-0.82708913186683264 -0.010991128161549568 0 -0.085649050772190094 0 0.013192466460168362 
+		0.017964210361242294 0.1147758960723877 0 0 0;
 createNode animCurveTA -n "BabyGrab_One_rotateY";
 	rename -uid "AAD71CB4-46B8-4BC9-F6F2-6597D817C285";
 	setAttr ".tan" 18;
-	setAttr -s 13 ".ktv[0:12]"  13 -1.7510839860353009 30 9.9608041285732511
-		 42 27.219284237260151 45 20.922748136395224 49 9.4572945394550061 57 9.4572945394550061
-		 66 -3.505841835362582 80 11.277929046910401 127 34.317609857847152 191 47.763677243209031
-		 215 49.053191411944944 237 49.094505280580307 287 49.094505280580293;
-	setAttr -s 13 ".kit[0:12]"  1 1 18 18 1 1 1 18 
-		18 18 18 3 18;
-	setAttr -s 13 ".kot[0:12]"  1 1 18 18 1 1 1 18 
-		18 18 18 3 18;
-	setAttr -s 13 ".ktl[4:12]" no no yes yes yes yes yes yes yes;
-	setAttr -s 13 ".kix[0:12]"  1.8267778158187866 0.59380048513412476 
-		0.5 0.125 0.1666666716337204 9.0540175733622164e-05 0.375 0.58333331346511841 1.9583333730697632 
-		2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
-	setAttr -s 13 ".kiy[0:12]"  0 0.39424660801887512 0 -0.13285937905311584 
-		-0.081211298704147339 -3.3611915569053963e-05 0 0.15150840580463409 0.26963451504707336 
-		0.18005014955997467 0.002359842648729682 0 0;
-	setAttr -s 13 ".kox[0:12]"  1.8267778158187866 0.43284735083580017 
-		0.125 0.1666666716337204 0.015537523664534092 0.375 0.58333331346511841 1.9583333730697632 
-		2.6666667461395264 1 0.91666668653488159 2.0833332538604736 2.0833332538604736;
-	setAttr -s 13 ".koy[0:12]"  0 0.28738376498222351 0 -0.1771458238363266 
-		-0.0075709349475800991 -0.13921408355236053 0 0.50863534212112427 0.36716189980506897 
-		0.067518800497055054 0.0021631889976561069 0 0;
+	setAttr -s 15 ".ktv[0:14]"  13 -1.7510839860353009 25 1.8156826540238349
+		 27 5.0614219283637745 30 9.9608041285732511 42 27.219284237260151 45 20.922748136395224
+		 49 9.4572945394550061 57 9.4572945394550061 66 -3.505841835362582 80 11.277929046910401
+		 127 34.317609857847152 191 47.763677243209031 215 49.053191411944944 237 49.094505280580307
+		 287 49.094505280580293;
+	setAttr -s 15 ".kit[0:14]"  1 18 18 1 18 18 1 1 
+		1 18 18 18 18 3 18;
+	setAttr -s 15 ".kot[0:14]"  1 18 18 1 18 18 1 1 
+		1 18 18 18 18 3 18;
+	setAttr -s 15 ".ktl[6:14]" no no yes yes yes yes yes yes yes;
+	setAttr -s 15 ".kix[0:14]"  1.8267778158187866 0.50000000000000011 
+		0.083333333333333259 0.59380048513412476 0.5 0.125 0.1666666716337204 9.0540175733622164e-05 
+		0.375 0.58333331346511841 1.9583333730697632 2.6666667461395264 1 0.91666668653488159 
+		2.0833332538604736;
+	setAttr -s 15 ".kiy[0:14]"  0 0.10191485015815789 0.05686367508231311 
+		0.39424660801887512 0 -0.13285937905311584 -0.081211298704147339 -3.3611915569053963e-05 
+		0 0.15150840580463409 0.26963451504707336 0.18005014955997467 0.002359842648729682 
+		0 0;
+	setAttr -s 15 ".kox[0:14]"  1.8267778158187866 0.083333333333333259 
+		0.125 0.43284735083580017 0.125 0.1666666716337204 0.015537523664534092 0.375 0.58333331346511841 
+		1.9583333730697632 2.6666667461395264 1 0.91666668653488159 2.0833332538604736 2.0833332538604736;
+	setAttr -s 15 ".koy[0:14]"  0 0.016985808359692961 0.085295512623469738 
+		0.28738376498222351 0 -0.1771458238363266 -0.0075709349475800991 -0.13921408355236053 
+		0 0.50863534212112427 0.36716189980506897 0.067518800497055054 0.0021631889976561069 
+		0 0;
 createNode animCurveTA -n "BabyGrab_One_rotateX";
 	rename -uid "78C26660-4BEC-2D27-41F3-FE9B03F2EF00";
 	setAttr ".tan" 18;
-	setAttr -s 11 ".ktv[0:10]"  13 34.034007915111935 30 104.67778474089279
-		 34 119.8611908526087 42 97.487420588348385 49 111.01762491309974 66 93.891117820224821
-		 127 99.89144797905189 191 111.62100225089657 215 111.64560659100668 237 87.391975885365923
-		 287 103.82006140189824;
-	setAttr -s 11 ".kit[0:10]"  1 18 18 18 18 18 18 18 
-		18 3 18;
-	setAttr -s 11 ".kot[0:10]"  1 18 18 18 18 18 18 18 
-		18 3 18;
-	setAttr -s 11 ".kix[0:10]"  1.9752781391143799 0.70833331346511841 
-		0.1666666716337204 0.3333333432674408 0.2916666567325592 0.70833331346511841 2.5416667461395264 
-		2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
-	setAttr -s 11 ".kiy[0:10]"  0 1.2126399278640747 0 0 0 0 0.15100909769535065 
-		0.0034354140516370535 0 0 0;
-	setAttr -s 11 ".kox[0:10]"  1.9752781391143799 0.1666666716337204 0.3333333432674408 
-		0.2916666567325592 0.70833331346511841 2.5416667461395264 2.6666667461395264 1 0.91666668653488159 
-		2.0833332538604736 2.0833332538604736;
-	setAttr -s 11 ".koy[0:10]"  0 0.28532704710960388 0 0 0 0 0.15843576192855835 
-		0.0012882802402600646 0 0 0;
+	setAttr -s 13 ".ktv[0:12]"  13 34.034007915111935 25 61.635043329282524
+		 27 79.22207706574612 30 104.67778474089279 34 119.8611908526087 42 97.487420588348385
+		 49 111.01762491309974 66 93.891117820224821 127 99.89144797905189 191 111.62100225089657
+		 215 111.64560659100668 237 87.391975885365923 287 103.82006140189824;
+	setAttr -s 13 ".kit[0:12]"  1 18 18 18 18 18 18 18 
+		18 18 18 3 18;
+	setAttr -s 13 ".kot[0:12]"  1 18 18 18 18 18 18 18 
+		18 18 18 3 18;
+	setAttr -s 13 ".kix[0:12]"  1.9752781391143799 0.50000000000000011 
+		0.083333333333333259 0.125 0.1666666716337204 0.3333333432674408 0.2916666567325592 
+		0.70833331346511841 2.5416667461395264 2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
+	setAttr -s 13 ".kiy[0:12]"  0 0.67601193368352341 0.30049502268684425 
+		0.30397986028858842 0 0 0 0 0.15100909769535065 0.0034354140516370535 0 0 0;
+	setAttr -s 13 ".kox[0:12]"  1.9752781391143799 0.083333333333333259 
+		0.125 0.16666666666666674 0.3333333432674408 0.2916666567325592 0.70833331346511841 
+		2.5416667461395264 2.6666667461395264 1 0.91666668653488159 2.0833332538604736 2.0833332538604736;
+	setAttr -s 13 ".koy[0:12]"  0 0.11266865561392045 0.45074253403026676 
+		0.40530648038478473 0 0 0 0 0.15843576192855835 0.0012882802402600646 0 0 0;
 createNode animCurveTU -n "BabyGrab_One_visibility";
 	rename -uid "09CBDD67-4A3C-65AC-EBC8-14AF3985486E";
 	setAttr ".tan" 9;
-	setAttr -s 16 ".ktv[0:15]"  13 1 22 1 25 1 30 1 34 1 42 1 45 1 49 1
+	setAttr -s 16 ".ktv[0:15]"  13 1 25 1 27 1 30 1 34 1 42 1 45 1 49 1
 		 66 1 80 1 80.06 1 127 1 191 1 215 1 237 1 287 1;
 	setAttr -s 16 ".kit[0:15]"  18 9 9 9 9 9 9 9 
 		9 9 9 9 9 9 9 9;
@@ -23860,8 +27259,8 @@ createNode animCurveTU -n "BabyGrab_One_visibility";
 createNode animCurveTL -n "BabyGrab_One_translateZ";
 	rename -uid "EA4B48C2-45CD-6536-E011-6CA3AA7B3BFD";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  13 -0.89506342569149944 22 -2.2075830193794288
-		 25 -2.1512207219616846 30 -2.9555753743089821 34 -3.2891765677930542 42 -3.2305041762701974
+	setAttr -s 14 ".ktv[0:13]"  13 -0.89506342569149944 25 -0.19278727228623593
+		 27 -0.37629193030885077 30 -2.9555753743089821 34 -3.2891765677930542 42 -3.2305041762701974
 		 49 -1.5229468600793781 66 -0.83574528386450897 80 -2.9356343342793823 127 -4.8926934131248929
 		 191 -4.2697569904221941 215 -5.534450549710435 237 -6.3565954962508995 287 -6.4588449768933343;
 	setAttr -s 14 ".kit[12:13]"  3 18;
@@ -23869,50 +27268,51 @@ createNode animCurveTL -n "BabyGrab_One_translateZ";
 createNode animCurveTL -n "BabyGrab_One_translateY";
 	rename -uid "4331CDA9-4E7D-A4CA-E758-F0B1F0C4B32D";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  13 -25.561847216322349 30 -5.9926794378992323
-		 34 -4.5865597171213546 42 -5.2840600204347812 45 -5.3805690807385815 49 -5.4757212304345098
-		 66 -6.1396404367395245 80 -7.6753024187253045 127 -9.43178681416952 191 -9.9706921358515039
-		 215 -8.5840312260303921 287 -8.124879614972583;
-	setAttr -s 12 ".kit[0:11]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kot[0:11]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 12 ".kix[0:11]"  0.27666580677032471 0.70833331346511841 
-		0.1666666716337204 0.3333333432674408 0.125 0.1666666716337204 0.70833331346511841 
-		0.58333331346511841 1.9583333730697632 2.6666667461395264 1 3;
-	setAttr -s 12 ".kiy[0:11]"  0 16.97999382019043 0 -0.5774613618850708 
-		-0.082140520215034485 -0.1445850133895874 -1.2062219381332397 -0.75557458400726318 
-		-0.97192180156707764 0 0.45915162563323975 0;
-	setAttr -s 12 ".kox[0:11]"  0.27666580677032471 0.1666666716337204 
-		0.3333333432674408 0.125 0.1666666716337204 0.70833331346511841 0.58333331346511841 
-		1.9583333730697632 2.6666667461395264 1 3 3;
-	setAttr -s 12 ".koy[0:11]"  0 3.9952929019927979 0 -0.21654801070690155 
-		-0.10952068865299225 -0.61448633670806885 -0.9933592677116394 -2.536571741104126 
-		-1.3234679698944092 0 1.3774548768997192 0;
+	setAttr -s 14 ".ktv[0:13]"  13 -25.561847216322349 25 -12.447846219889158
+		 27 -9.8866925167141453 30 -5.9926794378992323 34 -4.5865597171213546 42 -5.2840600204347812
+		 45 -5.3805690807385815 49 -5.4757212304345098 66 -6.1396404367395245 80 -7.6753024187253045
+		 127 -9.43178681416952 191 -9.9706921358515039 215 -8.5840312260303921 287 -8.124879614972583;
+	setAttr -s 14 ".kit[0:13]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 14 ".kot[0:13]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 14 ".kix[0:13]"  0.27666580677032471 0.50000000000000011 
+		0.083333333333333259 0.125 0.1666666716337204 0.3333333432674408 0.125 0.1666666716337204 
+		0.70833331346511841 0.58333331346511841 1.9583333730697632 2.6666667461395264 1 3;
+	setAttr -s 14 ".kiy[0:13]"  0 13.435846885378464 2.5820667127959691 
+		2.2714854855397668 0 -0.5774613618850708 -0.082140520215034485 -0.1445850133895874 
+		-1.2062219381332397 -0.75557458400726318 -0.97192180156707764 0 0.45915162563323975 
+		0;
+	setAttr -s 14 ".kox[0:13]"  0.27666580677032471 0.083333333333333259 
+		0.125 0.16666666666666674 0.3333333432674408 0.125 0.1666666716337204 0.70833331346511841 
+		0.58333331346511841 1.9583333730697632 2.6666667461395264 1 3 3;
+	setAttr -s 14 ".koy[0:13]"  0 2.2393078142297416 3.8731000691939568 
+		3.0286473140530239 0 -0.21654801070690155 -0.10952068865299225 -0.61448633670806885 
+		-0.9933592677116394 -2.536571741104126 -1.3234679698944092 0 1.3774548768997192 0;
 createNode animCurveTL -n "BabyGrab_One_translateX";
 	rename -uid "4B2D62AD-4CDB-431D-8B04-439D086092D6";
 	setAttr ".tan" 18;
-	setAttr -s 13 ".ktv[0:12]"  13 -10.509896378887174 22 -10.464911738203256
-		 30 -5.3633219371444367 42 0.46307307568479539 45 0.31645397305776474 49 0.95897671225424819
-		 66 3.9081260318228406 80 3.7567773762435897 127 2.9256359188520382 191 2.3230417174573481
-		 215 1.4781645557520253 237 2.1455418776433395 287 1.5247710463819275;
-	setAttr -s 13 ".kit[0:12]"  1 18 18 1 18 18 18 18 
-		18 18 18 3 18;
-	setAttr -s 13 ".kot[0:12]"  1 18 18 18 18 18 18 18 
-		18 18 18 3 18;
-	setAttr -s 13 ".ktl[3:12]" no yes yes yes yes yes yes yes yes yes;
-	setAttr -s 13 ".kix[0:12]"  2.3441600799560547 0.375 0.3333333432674408 
-		1.3637497425079346 0.125 0.1666666716337204 0.70833331346511841 0.58333331346511841 
-		1.9583333730697632 2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
-	setAttr -s 13 ".kiy[0:12]"  0 0.13495391607284546 4.3711938858032227 
-		0 0 0.68412798643112183 0 -0.22548952698707581 -0.60707724094390869 -1.0527064800262451 
-		0 0 0;
-	setAttr -s 13 ".kox[0:12]"  2.3441600799560547 0.3333333432674408 0.5 
-		0.125 0.1666666716337204 0.70833331346511841 0.58333331346511841 1.9583333730697632 
+	setAttr -s 14 ".ktv[0:13]"  13 -10.509896378887174 25 -8.7909650538428643
+		 27 -7.0620198467860318 30 -5.3633219371444367 42 0.46307307568479539 45 0.31645397305776474
+		 49 0.95897671225424819 66 3.9081260318228406 80 3.7567773762435897 127 2.9256359188520382
+		 191 2.3230417174573481 215 1.4781645557520253 237 2.1455418776433395 287 1.5247710463819275;
+	setAttr -s 14 ".kit[0:13]"  1 18 18 18 1 18 18 18 
+		18 18 18 18 3 18;
+	setAttr -s 14 ".kot[0:13]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 3 18;
+	setAttr -s 14 ".ktl[4:13]" no yes yes yes yes yes yes yes yes yes;
+	setAttr -s 14 ".kix[0:13]"  2.3441600799560547 0.50000000000000011 
+		0.083333333333333259 0.125 1.3637497425079346 0.125 0.1666666716337204 0.70833331346511841 
+		0.58333331346511841 1.9583333730697632 2.6666667461395264 1 0.91666668653488159 2.0833332538604736;
+	setAttr -s 14 ".kiy[0:13]"  0 2.9553227418009791 1.3710572466793705 
+		1.5050185844941655 0 0 0.68412798643112183 0 -0.22548952698707581 -0.60707724094390869 
+		-1.0527064800262451 0 0 0;
+	setAttr -s 14 ".kox[0:13]"  2.3441600799560547 0.083333333333333259 
+		0.125 0.5 0.125 0.1666666716337204 0.70833331346511841 0.58333331346511841 1.9583333730697632 
 		2.6666667461395264 1 0.91666668653488159 2.0833332538604736 2.0833332538604736;
-	setAttr -s 13 ".koy[0:12]"  0 0.11995904147624969 6.556790828704834 
-		0 0 2.9075441360473633 0 -0.75700056552886963 -0.82665836811065674 -0.39476493000984192 
-		0 0 0;
+	setAttr -s 14 ".koy[0:13]"  0 0.49255379030016266 2.0565858700190573 
+		6.0200743379766619 0 0 2.9075441360473633 0 -0.75700056552886963 -0.82665836811065674 
+		-0.39476493000984192 0 0 0;
 createNode cameraView -n "cameraView1";
 	rename -uid "78359BA5-0B41-0599-7D84-1AA24FA4EE09";
 	setAttr ".e" -type "double3" -0.98512408851837929 14.24048626393245 36.842446944817247 ;
@@ -23965,8 +27365,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 278;
-	setAttr ".unw" 278;
+	setAttr ".o" 236;
+	setAttr ".unw" 236;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -24029,6 +27429,14 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
 	setAttr -s 632 ".gn";
+	setAttr -cb on ".mimt";
+	setAttr -cb on ".miop";
+	setAttr -cb on ".mise";
+	setAttr -cb on ".mism";
+	setAttr -cb on ".mice";
+	setAttr -av -cb on ".micc";
+	setAttr -cb on ".mica";
+	setAttr -cb on ".micw";
 select -ne :initialParticleSE;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -24042,13 +27450,62 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
+	setAttr -cb on ".mimt";
+	setAttr -cb on ".miop";
+	setAttr -cb on ".mise";
+	setAttr -cb on ".mism";
+	setAttr -cb on ".mice";
+	setAttr -cb on ".micc";
+	setAttr -cb on ".mica";
+	setAttr -cb on ".micw";
 select -ne :defaultRenderGlobals;
-	setAttr ".ren" -type "string" "arnold";
+	setAttr -k on ".cch";
+	setAttr -k on ".nds";
+	setAttr -k on ".clip";
+	setAttr -k on ".edm";
+	setAttr ".ren" -type "string" "mentalRay";
+	setAttr -av -k on ".esr";
+	setAttr -k on ".ors";
 	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
+	setAttr -k on ".gama";
 	setAttr ".an" yes;
 	setAttr ".ef" 360;
+	setAttr -k on ".be";
+	setAttr -k on ".fec";
+	setAttr -k on ".ofc";
 	setAttr ".pff" yes;
+	setAttr -k on ".comp";
+	setAttr -k on ".cth";
+	setAttr -k on ".soll";
+	setAttr -k on ".rd";
+	setAttr -k on ".lp";
+	setAttr -k on ".sp";
+	setAttr -k on ".shs";
+	setAttr -k on ".lpr";
+	setAttr -k on ".mm";
+	setAttr -k on ".npu";
+	setAttr -k on ".itf";
+	setAttr -k on ".shp";
+	setAttr -k on ".uf";
+	setAttr -k on ".oi";
+	setAttr -k on ".rut";
+	setAttr -k on ".mbf";
+	setAttr -k on ".afp";
+	setAttr -k on ".pfb";
+	setAttr -k on ".bll";
+	setAttr -k on ".bls";
+	setAttr -k on ".smv";
+	setAttr -k on ".ubc";
+	setAttr -k on ".mbc";
+	setAttr -k on ".udbx";
+	setAttr -k on ".smc";
+	setAttr -k on ".kmv";
+	setAttr -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -k on ".tlwd";
+	setAttr -k on ".tlht";
+	setAttr -k on ".jfc";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
@@ -24099,7 +27556,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
 select -ne :ikSystem;
-	setAttr -s 5 ".sol";
+	setAttr -s 3 ".sol";
 connectAttr "baby_master_scaleX.o" "babyRN.phl[465]";
 connectAttr "baby_master_scaleY.o" "babyRN.phl[466]";
 connectAttr "baby_master_scaleZ.o" "babyRN.phl[467]";
@@ -24917,6 +28374,11 @@ connectAttr "battle_grab_loc_scaleX.o" "battle_grab_loc.sx";
 connectAttr "battle_grab_loc_scaleY.o" "battle_grab_loc.sy";
 connectAttr "battle_grab_loc_scaleZ.o" "battle_grab_loc.sz";
 connectAttr "battle_grab_loc_visibility.o" "battle_grab_loc.v";
+connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
+connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
+connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
+connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+		;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":PreviewImrRayTracyOff.msg" ":mentalrayItemsList.opt" -na;
@@ -24927,8 +28389,6 @@ connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 connectAttr "mom:mom2:mom:ContourContrastLevelFunction.msg" ":miDefaultOptions.coc"
 		;
 connectAttr "mom:mom2:mom:ContourContrastStore.msg" ":miDefaultOptions.cos";
-connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
-connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanBakeGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -24948,9 +28408,6 @@ connectAttr ":rmanSBMakePtCloudGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBPtRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBMakePtexGlobals.msg" ":renderManRISGlobals.p" -na;
-connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
-connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
-		;
 connectAttr ":rmanBakeRenderGlobals.msg" ":rmanBakeGlobals.p" -na;
 connectAttr ":rmanPreviewOutputGlobals0.msg" ":rmanPreviewGlobals.d" -na;
 connectAttr ":rmanRerenderOutputGlobals0.msg" ":rmanRerenderGlobals.d" -na;
