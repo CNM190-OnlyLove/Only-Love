@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: liquor_store.ma
-//Last modified: Fri, Apr 28, 2017 12:07:35 PM
+//Last modified: Fri, Apr 28, 2017 12:58:26 PM
 //Codeset: UTF-8
 requires maya "2017ff04";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -74162,7 +74162,7 @@ createNode transform -n "FlyersMeshGroup" -p "LiquorStore";
 createNode transform -s -n "persp";
 	rename -uid "A5EF914D-1343-9652-8763-4D9E8CD44E3D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 13.327145683330059 4.5412355657859171 -5.2418248111186454 ;
+	setAttr ".t" -type "double3" 13.100228527432336 4.5279952475112601 -5.247370546954965 ;
 	setAttr ".r" -type "double3" -3.3383527284107934 -271.39999999967603 -6.5089462395189197e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "993EEF98-C04E-42E3-3DE5-D0A73706DC86";
@@ -74170,7 +74170,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999986;
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
-	setAttr ".coi" 21.032000102137442;
+	setAttr ".coi" 20.804629354558298;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
