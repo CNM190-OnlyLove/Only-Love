@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: church.ma
-//Last modified: Wed, May 03, 2017 07:13:19 PM
+//Last modified: Wed, May 03, 2017 09:12:13 PM
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -23,14 +23,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4F238126-2D47-48AD-35C1-A6A571A99452";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.13590234376445248 2.5807390020676357 5.352889746042452 ;
+	setAttr ".t" -type "double3" -1.224173855803447 2.7269988491316561 14.216149947746914 ;
 	setAttr ".r" -type "double3" 359.061647258638 712.99999999997124 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "643CB328-3945-9A6D-F3C9-73ADA0DA049F";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 1.0784011484843257;
+	setAttr ".coi" 10.009420588049807;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
