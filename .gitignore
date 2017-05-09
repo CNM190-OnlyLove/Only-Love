@@ -7,4 +7,6 @@ autosave/**
 *.swp
 .DS_Store
 images/*
+movies/*
+clips/*
 workspace.mel
