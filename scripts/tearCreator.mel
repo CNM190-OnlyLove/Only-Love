@@ -1,0 +1,35 @@
+int $startFrame = 1;
+int $endFrame = 51;
+float $trailRadius = .25; 
+float $tearRadius = $trailRadius * 4; 
+
+//create tear trail 
+
+string $tearPath[] = `ls -sl`;
+string $circ[] = `circle -nr 0 0 1 -c 0 0 0 -r $trailRadius`;
+
+string $extrudedSurface[] = `extrude -ch true -rn true -po 1 -et 2 -ucp 1 -fpt 1 -upn 1 -rotation 0 -scale 1 -rsp 1 $circ[0] $tearPath[0] `;
+
+setKeyframe -v 0 -t $startFrame "subCurve2.max" ;
+setKeyframe -v 1 -t $endFrame "subCurve2.max" ;
+
+//create tear
+
+string $sphere[] = `polyCube -w $tearRadius -h $tearRadius -d $tearRadius -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+polySmooth  -mth 0 -sdt 2 -ovb 1 -ofb 3 -ofc 0 -ost 1 -ocr 0 -dv 1 -bnr 1 -c 1 -kb 1 -ksb 1 -khe 0 -kt 1 -kmb 1 -suv 1 -peh 0 -sl 1 -dpe 1 -ps 0.1 -ro 1 -ch 1 $sphere; 
+setAttr "polySmoothFace1.divisions" 3;
+
+pathAnimation -fractionMode false -follow true -followAxis y -upAxis z -worldUpType "vector" -worldUpVector 0 1 0 -inverseUp false -inverseFront false -bank false -startTimeU 1 -endTimeU 51 $tearPath $sphere;
+
+//make tear nCloth
+
+string $nclothTear[] = `createNCloth 0`; 
+setAttr "nClothShape1.inputMeshAttract" 0.75;
+setAttr "nClothShape1.damp" 0.5;
+setAttr "nClothShape1.stretchDamp" 0.5;
+
+
+
+
+
+

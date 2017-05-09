@@ -1,0 +1,14 @@
+//Select the joint around which you want the controller created 
+
+string $jointSelectionArr[] = `ls -sl`;
+
+string $newCircle[] = `circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1`;
+string $newCirGrp = `group $newCircle` ;
+
+scale .5 .5 .5 $newCirGrp; 
+
+string $constraintNode[] = `parentConstraint $jointSelectionArr $newCirGrp`; 
+
+delete $constraintNode;
+
+orientConstraint $newCircle $jointSelectionArr; 
