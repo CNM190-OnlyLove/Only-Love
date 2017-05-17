@@ -4,7 +4,7 @@
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
-		 -nodeType "mentalrayItemsList" -nodeType "contour_store_function" -nodeType "contour_contrast_function_levels"
+		 -nodeType "mentalrayItemsList"
 		 -dataType "byteArray" "Mayatomr" "2017.11  (3.14.3.41 - 268000.18294) ";
 requires -nodeType "RenderMan" -nodeType "PxrPathTracer" "RenderMan_for_Maya" "21.3";
 requires -nodeType "renderSetup" "renderSetup.py" "1.0";
@@ -79370,12 +79370,6 @@ createNode groupId -n "jack_daniels:celshadingreggie:groupId3";
 createNode groupId -n "jack_daniels:celshadingreggie:groupId11";
 	rename -uid "30A0D699-AB49-474D-F7BA-61B731B784DE";
 	setAttr ".ihi" 0;
-createNode contour_contrast_function_levels -n "jack_daniels:ContourContrastLevelFunction";
-	rename -uid "A117EC61-6140-DBAB-3893-8BA9C7112303";
-	setAttr ".S00" 0.10000000149011612;
-	setAttr ".S01" 30;
-createNode contour_store_function -n "jack_daniels:ContourContrastStore";
-	rename -uid "A7C8D099-D343-5017-B7BF-03B4836141FD";
 createNode partition -n "jack_daniels:celshadingreggie:mtorPartition";
 	rename -uid "D4DDE540-E24E-A690-D542-B5851DE9FCA0";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -79950,9 +79944,6 @@ connectAttr ":PreviewImrRayTracyOn.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
 connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
-connectAttr "jack_daniels:ContourContrastLevelFunction.msg" ":miDefaultOptions.coc"
-		;
-connectAttr "jack_daniels:ContourContrastStore.msg" ":miDefaultOptions.cos";
 connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
 connectAttr "lambert9SG.msg" "materialInfo34.sg";
 connectAttr "awningLammbert.msg" "materialInfo34.m";
@@ -80342,10 +80333,6 @@ connectAttr "jack_daniels:renderLayerManager.rlmi[0]" "jack_daniels:defaultRende
 connectAttr ":defaultRenderGlobals.msg" "jack_daniels:mtorPartition.rgcnx";
 connectAttr ":defaultRenderGlobals.msg" "jack_daniels:celshadingreggie:mtorPartition.rgcnx"
 		;
-connectAttr "jack_daniels:ContourContrastStore.msg" "jack_daniels:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "jack_daniels:ContourContrastLevelFunction.msg" "jack_daniels:celshadingreggie:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
 connectAttr "silhouetteRamp.oc" "rampShader7SG.ss";
 connectAttr "wine_bottle4Shape.iog" "rampShader7SG.dsm" -na;
 connectAttr "liqbox7Shape.iog" "rampShader7SG.dsm" -na;
@@ -80528,10 +80515,6 @@ connectAttr "LIGHTLambert.msg" ":defaultShaderList1.s" -na;
 connectAttr "handleLambert.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture36.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture39.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "jack_daniels:ContourContrastLevelFunction.msg" ":defaultRenderUtilityList1.u"
-		 -na;
-connectAttr "jack_daniels:ContourContrastStore.msg" ":defaultRenderUtilityList1.u"
-		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "wine:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "jack_daniels:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na
