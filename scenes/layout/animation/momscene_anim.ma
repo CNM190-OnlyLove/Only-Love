@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: momscene_anim.ma
-//Last modified: Tue, May 16, 2017 02:20:08 PM
+//Last modified: Wed, May 17, 2017 12:20:53 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "mom1" -dr 1 -rfn "momRN" -op "v=0;" -typ "mayaAscii" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma";
 file -rdi 1 -ns "baby" -rfn "babyRN" -op "v=0;" -typ "mayaAscii" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
@@ -24,20 +24,20 @@ requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType
 		 -nodeType "mentalrayItemsList" -nodeType "mia_material_x" -nodeType "contour_store_function"
 		 -nodeType "contour_contrast_function_levels" -nodeType "contour_shader_simple" -dataType "byteArray"
 		 "Mayatomr" "268000.13910 - 3.14.3.31 ";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.4.2.0";
-requires -nodeType "renderSetup" "renderSetup.py" "1.0";
-requires "stereoCamera" "10.0";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "OmnidirectionalStereo"
 		 -nodeType "PxrOcclusion" -nodeType "PxrDefault" -nodeType "PxrVisualizer" -nodeType "PxrPathTracer"
 		 -nodeType "PxrDirectLighting" -nodeType "PxrVCM" -nodeType "PxrCamera" -nodeType "PxrValidateBxdf"
 		 "RenderMan_for_Maya" "21.3";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "1.4.2.0";
+requires -nodeType "renderSetup" "renderSetup.py" "1.0";
+requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
 fileInfo "version" "2017";
 fileInfo "cutIdentifier" "201702071345-1015190";
-fileInfo "osv" "Mac OS X 10.12.4";
+fileInfo "osv" "Mac OS X 10.10.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "17733B9D-464D-8275-C5F8-31998A43294B";
@@ -2353,7 +2353,7 @@ createNode parentConstraint -n "Arm_Cntrl_L_parentConstraint1" -p "momRN1fosterP
 	setAttr ".tg[0].tot" -type "double3" -1.6737109476139267e-09 -1.4068140252732064e-07 
 		3.9553126751634693e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 19.09576146996509 -15.475442673954277 -121.32841567964314 ;
-	setAttr ".lr" -type "double3" 102.87960916599039 166.77958900634411 -242.13180296419819 ;
+	setAttr ".lr" -type "double3" 61.144746346324389 130.00848692026898 -296.27916144922369 ;
 	setAttr ".rst" -type "double3" -7.6341341092173316 -1.890499146204244 15.155008364450964 ;
 	setAttr ".rsrr" -type "double3" 19.095761469965069 -15.475442673954266 -121.32841567964314 ;
 	setAttr -k on ".w0";
@@ -2379,7 +2379,7 @@ createNode parentConstraint -n "Arm_Cntrl_R_parentConstraint1" -p "momRN1fosterP
 	setAttr ".tg[0].tor" -type "double3" -10.419999252125995 6.0647477123701137 105.10908759052232 ;
 	setAttr ".tg[1].tot" -type "double3" 1.1715694971807125 3.0673612389425724 -2.0087095886490371 ;
 	setAttr ".tg[1].tor" -type "double3" -85.981943536290245 1.6898698977965971 17.920789365010236 ;
-	setAttr ".lr" -type "double3" -60.349640593356 -126.2293637888782 -31.35927803423959 ;
+	setAttr ".lr" -type "double3" 27.009317388830816 -32.315253589916701 -222.29738215569139 ;
 	setAttr ".rst" -type "double3" 0.89170921733452246 -0.076094303266758256 1.8656905100542547 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -2388,513 +2388,35 @@ createNode transform -n "mom_cam_tear:FINAL_MOM_CAMERA";
 createNode camera -n "mom_cam_tear:FINAL_MOM_CAMERAShape" -p "mom_cam_tear:FINAL_MOM_CAMERA";
 	rename -uid "803EEDB2-DC4E-A6A9-FF3B-8298E2D3B786";
 	setAttr -k off ".v";
-	setAttr ".ovr" 1.3;
-	setAttr ".coi" 318.17480020805698;
+	setAttr ".coi" 22.780447171698068;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
-	setAttr ".tp" -type "double3" 0 2.6376871974469012 0 ;
+	setAttr ".tp" -type "double3" 0.0033180132185850475 -0.26518703507914942 -0.80988154991531669 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-	setAttr ".dr" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode fosterParent -n "babyRNfosterParent1";
-	rename -uid "C89C695C-FB40-F550-2508-D7800F00C0D0";
-createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
-	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
-createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
-	rename -uid "DE09F5E1-4E65-C1D9-9C53-D5AD0315365A";
-	setAttr -k off ".v";
-	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+	rename -uid "D46F8839-364D-E28A-542C-B998F1497817";
 createNode transform -n "BabyGrab_One" -p "babyRNfosterParent1";
 	rename -uid "852E98AC-471B-65FD-5F51-1EAD293B521F";
 createNode locator -n "BabyGrab_OneShape" -p "BabyGrab_One";
 	rename -uid "29531E57-4C35-2473-32EE-0BB5385EEE1C";
 	setAttr -k off ".v";
 	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
+createNode transform -n "BabyGrab_Two" -p "babyRNfosterParent1";
+	rename -uid "51DBC592-4EE3-E87D-63F3-D38518E38E20";
+createNode locator -n "BabyGrab_TwoShape" -p "BabyGrab_Two";
+	rename -uid "DE09F5E1-4E65-C1D9-9C53-D5AD0315365A";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
 createNode fosterParent -n "wineRNfosterParent1";
-	rename -uid "94CB2561-4244-73A5-667F-8C98C44C9D1C";
+	rename -uid "237FC6C6-4A41-35BB-7C66-0A9179AEE515";
 createNode transform -n "battle_grab_loc" -p "wineRNfosterParent1";
 	rename -uid "13CA559F-47AD-A738-C358-AEA7771E6926";
 createNode locator -n "battle_grab_locShape" -p "battle_grab_loc";
 	rename -uid "5AD7CC5A-4535-0744-9457-6C9EB02EF115";
 	setAttr -k off ".v";
 	setAttr ".los" -type "double3" 2.5 2.5 2.5 ;
-createNode RenderMan -s -n "renderManGlobals";
-	rename -uid "46F48DD2-004C-0C12-3976-5B9CFE26B322";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr -s 2 ".p";
-	setAttr ".nt" -type "string" "settings:job";
-createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
-	rename -uid "6BBFD43A-1B42-6B56-F004-13BB3ABF6583";
-lockNode -l 1 ;
-createNode PxrCamera -s -n "PxrCamera";
-	rename -uid "AD46E17C-EB4C-4967-99A3-C7BD0D677A86";
-lockNode -l 1 ;
-createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
-	rename -uid "92E28046-F142-8CA5-D231-0FB3F539EE8D";
-lockNode -l 1 ;
-createNode PxrDefault -s -n "PxrDefault";
-	rename -uid "140C46B2-0D4D-E1B0-E889-33827B32162D";
-lockNode -l 1 ;
-createNode PxrDirectLighting -s -n "PxrDirectLighting";
-	rename -uid "5143A273-914F-29A2-A60C-9B8CA0452E78";
-lockNode -l 1 ;
-createNode PxrOcclusion -s -n "PxrOcclusion";
-	rename -uid "893C2D4B-2D4E-2448-CE41-27B4C46CBBFC";
-lockNode -l 1 ;
-createNode PxrPathTracer -s -n "PxrPathTracer";
-	rename -uid "B140DE26-7E4B-6CA6-368D-C69BB03E84E9";
-lockNode -l 1 ;
-createNode PxrVCM -s -n "PxrVCM";
-	rename -uid "46B77BF1-C34F-3824-1BCB-C196EEA76657";
-lockNode -l 1 ;
-createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
-	rename -uid "64D1CC85-D14D-7B7F-51BA-FF8525D76CD1";
-lockNode -l 1 ;
-createNode PxrVisualizer -s -n "PxrVisualizer";
-	rename -uid "F6D6D908-9741-59C1-C219-9BA0AE9836E9";
-lockNode -l 1 ;
-createNode RenderMan -s -n "rmanFinalGlobals";
-	rename -uid "3B27B1BB-7248-4484-DB24-67A71E5447A4";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
-		-dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Final";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
-	setAttr -k on ".rman__riopt__photon_emit" 0;
-	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
-	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".nt" -type "string" "pass:render";
-createNode RenderMan -s -n "rmanFinalOutputGlobals0";
-	rename -uid "83D653E1-1E45-A0BC-3FA9-C9BD7AFF56F1";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Primary";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
-createNode RenderMan -s -n "rmanRerenderRISGlobals";
-	rename -uid "BD1B2406-744C-D8E2-F073-32959AFFFD28";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
-		-dv -1 -at "float";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
-		-dv -1 -at "long";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
-	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
-	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
-	setAttr -k on ".rman__torattr___previewPass" 1;
-	setAttr -k on ".rman__torattr___motionBlur" 0;
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr ".rman__torattr___passNameFormat" -type "string" "";
-	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
-	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
-	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
-	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
-	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
-	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
-	setAttr -k on ".rman__riopt__photon_emit" 0;
-	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
-	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
-	setAttr -k on ".rman__riattr__trace_displacements" 1;
-	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
-	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
-	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
-	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
-	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
-	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
-	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
-	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
-	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
-	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
-	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
-	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
-	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
-	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
-	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
-	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
-	setAttr ".nt" -type "string" "pass:render";
-createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
-	rename -uid "009BA027-ED40-12FE-B1D1-6E9451394298";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "13524FBA-0949-72F6-6F54-55A378545904";
 	setAttr -s 3 ".opt";
@@ -3165,6 +2687,47 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "E07EB045-A646-FC83-A901-7C8477BDBDAB";
 	setAttr ".ce" yes;
+createNode RenderMan -s -n "renderManGlobals";
+	rename -uid "46F48DD2-004C-0C12-3976-5B9CFE26B322";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".nt" -type "string" "settings:job";
+	setAttr -s 2 ".p";
+createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
+	rename -uid "06DE5D55-7C40-5D72-4371-58A217B86158";
+lockNode -l 1 ;
+createNode PxrCamera -s -n "PxrCamera";
+	rename -uid "CCC447EB-8443-21D5-345D-ED9FFC3A365A";
+lockNode -l 1 ;
+createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
+	rename -uid "B9F5F138-6346-54D7-E551-D0AB74FB5041";
+lockNode -l 1 ;
+createNode PxrDefault -s -n "PxrDefault";
+	rename -uid "788ED5E4-BE4D-4ED5-F54C-21A528E8B5D6";
+lockNode -l 1 ;
+createNode PxrDirectLighting -s -n "PxrDirectLighting";
+	rename -uid "9E425BAE-4648-3B04-E5CE-D1B659055FB4";
+lockNode -l 1 ;
+createNode PxrOcclusion -s -n "PxrOcclusion";
+	rename -uid "AF8F7021-BB48-B4DB-1733-C89BA2174019";
+lockNode -l 1 ;
+createNode PxrPathTracer -s -n "PxrPathTracer";
+	rename -uid "F0B9D1A6-A44B-50DC-DB0E-A7AA74C925D7";
+lockNode -l 1 ;
+createNode PxrVCM -s -n "PxrVCM";
+	rename -uid "FE13DE8C-D543-5DD6-528E-FFB9516A2157";
+lockNode -l 1 ;
+createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
+	rename -uid "21CC05BD-324F-6691-5F7B-1BBA96821F8C";
+lockNode -l 1 ;
+createNode PxrVisualizer -s -n "PxrVisualizer";
+	rename -uid "C0304634-DF46-3A6F-8A98-0992242690EE";
+lockNode -l 1 ;
 createNode RenderMan -s -n "renderManRISGlobals";
 	rename -uid "F4E8A911-2942-1FA9-CFF4-45A9B93BBE4C";
 	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
@@ -3618,6 +3181,7 @@ createNode RenderMan -s -n "renderManRISGlobals";
 		-dv -1 -at "float";
 	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
 		-dt "string";
+	setAttr ".nt" -type "string" "settings:job";
 	setAttr ".rman__torattr___class" -type "string" "RISJob";
 	setAttr ".rman__torattr___task" -type "string" "job";
 	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
@@ -3820,7 +3384,441 @@ createNode RenderMan -s -n "renderManRISGlobals";
 	setAttr -k on ".rman__riopt__Projection_duration" 1;
 	setAttr -k on ".rman__riopt__Projection2_angle" 90;
 	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr ".nt" -type "string" "settings:job";
+createNode RenderMan -s -n "rmanFinalGlobals";
+	rename -uid "3B27B1BB-7248-4484-DB24-67A71E5447A4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Final";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanFinalOutputGlobals0";
+	rename -uid "83D653E1-1E45-A0BC-3FA9-C9BD7AFF56F1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	rename -uid "BD1B2406-744C-D8E2-F073-32959AFFFD28";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
+		-dv -1 -at "long";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
+	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
+	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
+	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	rename -uid "009BA027-ED40-12FE-B1D1-6E9451394298";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
 createNode RenderMan -s -n "rmanBakeGlobals";
 	rename -uid "71B4FF5E-1A4E-10B5-E398-42A59D6F6B5E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -3860,6 +3858,7 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 		-dt "string";
 	addAttr -ci true -h true -sn "rman__param__ptrender___outputfile" -ln "rman__param__ptrender___outputfile" 
 		-dt "string";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Bake";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -3874,7 +3873,6 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanPreviewGlobals";
 	rename -uid "0D07CB12-6C4C-4840-F037-4C96A15F04C0";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -3953,6 +3951,7 @@ createNode RenderMan -s -n "rmanPreviewGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Preview";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -3983,7 +3982,6 @@ createNode RenderMan -s -n "rmanPreviewGlobals";
 	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	rename -uid "E6FF9B27-344B-16A3-083A-DFB406124135";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4047,6 +4045,7 @@ createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4064,7 +4063,6 @@ createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanRerenderGlobals";
 	rename -uid "5E441969-084E-B14B-B58C-208C93B2560E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4157,6 +4155,7 @@ createNode RenderMan -s -n "rmanRerenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Rerender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4192,7 +4191,6 @@ createNode RenderMan -s -n "rmanRerenderGlobals";
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
 	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	rename -uid "48293F8B-CC4E-5E54-AFC3-4CBC7BA0C578";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4256,6 +4254,7 @@ createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4273,7 +4272,6 @@ createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	rename -uid "7997858C-EB48-248D-35E9-3B92BB759AFE";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4352,6 +4350,7 @@ createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "ReyesRerender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4382,7 +4381,6 @@ createNode RenderMan -s -n "rmanReyesRerenderGlobals";
 	setAttr -k on ".rman__riattr__trace_displacements" 1;
 	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
 	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	rename -uid "44ECEEEF-4440-D51F-4D71-D6B548AEF42A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4446,6 +4444,7 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Primary";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4463,7 +4462,6 @@ createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
 	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	rename -uid "319EB3D0-C246-A526-BDC8-D3B75211C9F1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4530,6 +4528,7 @@ createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4558,7 +4557,6 @@ createNode RenderMan -s -n "rmanDeepShadowGlobals";
 	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -s 2 ".d";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	rename -uid "E0E1FF93-7542-FFB5-9EB0-B886EDD6F4E9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4580,6 +4578,7 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Null";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4588,7 +4587,6 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "null";
 	setAttr ".rman__riopt__Display_type" -type "string" "null";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	rename -uid "555D96DA-2E40-96CA-7EF4-87B4770C5394";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4622,6 +4620,7 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4634,7 +4633,6 @@ createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
 	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
 	setAttr ".rman__riopt__Display_mode" -type "string" "deepopacity";
 	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	rename -uid "7C7CFA34-274A-F601-ACAA-B09946C31D9E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4705,6 +4703,7 @@ createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4735,7 +4734,6 @@ createNode RenderMan -s -n "rmanAreaShadowGlobals";
 	setAttr -k on ".rman__riattr__cull_backfacing" 0;
 	setAttr -k on ".rman__riattr__cull_hidden" 0;
 	setAttr -s 2 ".d";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	rename -uid "0185A94B-C84A-7E79-C290-E09965021F72";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4757,6 +4755,7 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Null";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4765,7 +4764,6 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "null";
 	setAttr ".rman__riopt__Display_type" -type "string" "null";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	rename -uid "6FE97A07-874B-DAC7-3A58-83B48FA83EDE";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4813,6 +4811,7 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4829,7 +4828,6 @@ createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
 	setAttr ".rman__riopt__Display_mode" -type "string" "areashadow";
 	setAttr -k on ".rman__riopt__Hider_sigma" 0;
 	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanShadowGlobals";
 	rename -uid "24FEB9DA-E04E-5813-A2E3-2B98CE73E422";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4910,6 +4908,7 @@ createNode RenderMan -s -n "rmanShadowGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Shadow";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -4939,7 +4938,6 @@ createNode RenderMan -s -n "rmanShadowGlobals";
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -k on ".rman__riopt__Hider_jitter" 0;
 	setAttr ".rman__riopt__Hider_depthfilter" -type "string" "midpoint";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	rename -uid "A5AF6247-2642-16CB-972A-33ACD83985CD";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -4963,6 +4961,7 @@ createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "ShadowZ";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -4972,7 +4971,6 @@ createNode RenderMan -s -n "rmanShadowOutputGlobals0";
 	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
 	setAttr ".rman__riopt__Display_type" -type "string" "shadow";
 	setAttr ".rman__riopt__Display_mode" -type "string" "z";
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	rename -uid "A98D090C-4947-91D9-0867-9E8CA7D00147";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5009,6 +5007,7 @@ createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "BakeRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -5026,7 +5025,6 @@ createNode RenderMan -s -n "rmanBakeRenderGlobals";
 	setAttr -k on ".rman__riattr__cull_hidden" 0;
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -s 32 ".c";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	rename -uid "377244B2-4741-1A46-5F30-FC82878D0D2D";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5072,6 +5070,7 @@ createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -5085,7 +5084,6 @@ createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
 	rename -uid "9B76A920-F54B-5906-8486-E6B6DFB49775";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5099,11 +5097,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Rim";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Rim";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
 	rename -uid "7E6E78B4-6949-3A15-ABB1-2A9C49C0469B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5117,11 +5115,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularEnvironment";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularEnvironment";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
 	rename -uid "80D7C57C-7845-B635-F2C5-308ED2B0EC8E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5135,11 +5133,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Translucence";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Translucence";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
 	rename -uid "B1B37D7C-F943-E320-B609-ADA0C6AEFFDA";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5153,11 +5151,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Z";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Z";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
 	rename -uid "CAE1E708-3F48-9FF1-97AE-DBA37BD5D777";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5171,11 +5169,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 	rename -uid "860EC622-2043-5176-3315-CA96F53155AF";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5213,6 +5211,7 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 		-dv -1 -at "float" -p "rman__riopt__DisplayChannel_filterwidth";
 	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_filterwidth1" -ln "rman__riopt__DisplayChannel_filterwidth1" 
 		-dv -1 -at "float" -p "rman__riopt__DisplayChannel_filterwidth";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Diffuse";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
@@ -5222,7 +5221,6 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
 	setAttr -k on ".rman__riopt__DisplayChannel_dither" 0;
 	setAttr ".rman__riopt__DisplayChannel_filter" -type "string" "zmin";
 	setAttr -k on ".rman__riopt__DisplayChannel_filterwidth" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
 	rename -uid "BDB12513-174F-8709-1B62-45BBC2AD2204";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5236,11 +5234,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseEnvironment";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseEnvironment";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
 	rename -uid "03674044-A34C-2323-87FB-258A28187CCC";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5254,11 +5252,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	rename -uid "350E9CD2-3547-70AA-8149-E9B019DF3A86";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5296,6 +5294,7 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "id";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
@@ -5305,7 +5304,6 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
 	setAttr -k on ".rman__riopt__DisplayChannel_dither" 0;
 	setAttr ".rman__riopt__DisplayChannel_filter" -type "string" "zmin";
 	setAttr -k on ".rman__riopt__DisplayChannel_filterwidth" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
 	rename -uid "B752136C-5941-7701-67EA-A3889C6CDDCE";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5319,11 +5317,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Ci";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ci";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
 	rename -uid "A42DD1CE-E345-19C1-75CE-13A11CA86056";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5337,11 +5335,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "wP";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "point wP";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
 	rename -uid "275A6EC6-B64B-B2D4-7CD5-C1B04E14F3AD";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5355,11 +5353,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularDirectShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirectShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
 	rename -uid "E7BD032E-7947-6757-0D5B-BBB84BE5E946";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5373,11 +5371,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseColor";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
 	rename -uid "24B96953-8643-15D0-7C91-39B3E635D4F6";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5391,11 +5389,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Occlusion";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Occlusion";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
 	rename -uid "DDBCDBC4-9C40-C2B4-E5F0-8F9064DF1A6A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5409,11 +5407,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
 	rename -uid "4AC36A29-0D40-7322-5A0F-E3A2BDE16AE4";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5427,11 +5425,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "N";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal N";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
 	rename -uid "A549A323-F24D-A039-862B-C6AA24B41F2C";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5445,11 +5443,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Incandescence";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Incandescence";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
 	rename -uid "9D82C24B-2E45-5651-B43D-97B65512A349";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5463,11 +5461,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
 	rename -uid "F7071A17-E64A-FFA4-1C69-179694D45F0F";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5481,11 +5479,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularColor";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
 	rename -uid "487CB362-CD46-B3AC-5F77-44A9130B2CCF";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5499,11 +5497,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Oi";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Oi";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
 	rename -uid "08B3B3EE-0147-16FE-FB74-66B08640AAA9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5517,11 +5515,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "OcclusionDirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionDirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
 	rename -uid "F22C7510-FC44-E72A-BF7E-C680F2BC3D5E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5535,11 +5533,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "GlowColor";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color GlowColor";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
 	rename -uid "E4E3995C-BE47-4B5E-8C7C-B08B7F64EA2E";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5553,11 +5551,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseDirectShadow";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirectShadow";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
 	rename -uid "9963743E-8643-A9D4-FB85-67A2E55F573B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5571,11 +5569,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Subsurface";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Subsurface";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
 	rename -uid "22E8BDBD-2E45-8E3B-A14A-A6BE7CDEF347";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5589,11 +5587,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Specular";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Specular";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
 	rename -uid "8D264385-C149-EE78-2D75-A3972D130A31";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5607,11 +5605,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Refraction";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Refraction";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
 	rename -uid "016ECE97-BC44-3AC9-4905-02B08529CA3F";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5625,11 +5623,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "DiffuseIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseIndirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
 	rename -uid "EE936139-AD4A-51D2-4D03-D6A10AC15D50";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5643,11 +5641,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Backscattering";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Backscattering";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
 	rename -uid "9A0462CD-A148-9F51-C5EC-71A15153E44F";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5661,11 +5659,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SpecularIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularIndirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
 	rename -uid "343DD56A-F74E-4A00-79C8-CB82E0070AB3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5679,11 +5677,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "Ambient";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ambient";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
 	rename -uid "D67FCBC2-5242-156B-7CFA-F3835D986251";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5697,11 +5695,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "wN";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal wN";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
 	rename -uid "01B47DA5-CC44-F834-583C-C1AF4E833AC1";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5715,11 +5713,11 @@ createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "OcclusionIndirect";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionIndirect";
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	rename -uid "42BB3C72-CC4A-D19F-E6CA-A4895CE38DBB";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5749,6 +5747,7 @@ createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSMakeBrickmap";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -5761,7 +5760,6 @@ createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
 	setAttr -k on ".rman__param__brickmake_omitgeometry" 1;
 	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	rename -uid "DAD577D9-EF48-8863-95C8-B5AF6507F474";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5807,6 +5805,7 @@ createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSDiffuse";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -5827,7 +5826,6 @@ createNode RenderMan -s -n "rmanSSDiffuseGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSSRenderGlobals";
 	rename -uid "5190772F-1545-8DA5-3097-698CD6386E9B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5874,6 +5872,7 @@ createNode RenderMan -s -n "rmanSSRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -5894,7 +5893,6 @@ createNode RenderMan -s -n "rmanSSRenderGlobals";
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -k on ".rman__riattr___ShadingRate" 5;
 	setAttr -s 4 ".c";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	rename -uid "5A11883A-E74A-5DBE-A007-23BF4FF6C388";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5940,6 +5938,7 @@ createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -5953,7 +5952,6 @@ createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
 	rename -uid "AA6E2B03-2D41-3761-DD15-E09A8F9411AB";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5969,12 +5967,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
 	rename -uid "11EEBFF0-0C46-C0AE-4088-3596EC752E63";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -5990,12 +5988,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "area";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
 	rename -uid "5C45D28A-7D4A-9765-A222-87A385731B66";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6011,12 +6009,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "albedo";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
 	rename -uid "3F86503C-4246-DA02-4BC4-46A4DC090B1B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6032,12 +6030,12 @@ createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "radiance_t";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	rename -uid "550962BE-4445-6538-CE2E-989C0EA63619";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6071,6 +6069,7 @@ createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SSOrganize";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6085,7 +6084,6 @@ createNode RenderMan -s -n "rmanSSOrganizeGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	rename -uid "D63DEBFF-1946-A5F4-F252-1A9A99039E6A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6113,6 +6111,7 @@ createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakeBrickmap";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6124,7 +6123,6 @@ createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
 	setAttr -k on ".rman__param__brickmake_progress" 2;
 	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBRenderGlobals";
 	rename -uid "9F457527-0542-612E-B815-F4A3F3231747";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6169,6 +6167,7 @@ createNode RenderMan -s -n "rmanSBRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBRender";
 	setAttr ".rman__torattr___task" -type "string" "render";
@@ -6188,7 +6187,6 @@ createNode RenderMan -s -n "rmanSBRenderGlobals";
 	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
 	setAttr -k on ".rman__riattr___ShadingRate" 1;
 	setAttr -s 6 ".c";
-	setAttr ".nt" -type "string" "pass:render";
 createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	rename -uid "8E7D86DD-A544-555A-ECEE-5EA8A8F6BD15";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6234,6 +6232,7 @@ createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
 	setAttr ".rman__torattr___task" -type "string" "display";
@@ -6247,7 +6246,6 @@ createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
 	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
 	setAttr -k on ".rman__riopt__Display_dither" 0;
 	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr ".nt" -type "string" "settings:display";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
 	rename -uid "E0025092-0A48-78EB-F44F-61998FDC9FF9";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6263,12 +6261,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "color";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _color";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
 	rename -uid "60630A7E-0F47-E1F9-E73B-5CBD3D0427DA";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6284,12 +6282,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
 	rename -uid "00653CA2-A54F-F237-05B5-FEAAD29AA724";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6305,12 +6303,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "area";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
 	rename -uid "DB338394-A74D-5788-8796-0EA32BC238A3";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6326,12 +6324,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "float";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _float";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
 	rename -uid "7965EC47-6E42-5E14-F94C-768C236EA5C8";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6347,12 +6345,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "albedo";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
 	rename -uid "4E68E8B5-0B49-9AC2-9AE8-1ABF03CA1C4A";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6368,12 +6366,12 @@ createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "radiance_t";
 	setAttr ".rman__torattr___task" -type "string" "displaychannel";
 	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
 	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
-	setAttr ".nt" -type "string" "settings:displaychannel";
 createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	rename -uid "25631D4B-0B4C-2664-AC6D-FE8A009A9D7B";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6405,6 +6403,7 @@ createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakePtCloud";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6418,7 +6417,6 @@ createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
 	setAttr -k on ".rman__param__ptfilter_threads" 0;
 	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	rename -uid "841F2B5D-D54B-AC86-12CC-3381111E15AB";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6454,6 +6452,7 @@ createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBPtRender";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6467,7 +6466,6 @@ createNode RenderMan -s -n "rmanSBPtRenderGlobals";
 	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	rename -uid "C936F9F9-2C4F-438B-7A4A-448DE67A1DEA";
 	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
@@ -6499,6 +6497,7 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
 	setAttr ".t" 1;
 	setAttr ".rman__torattr___class" -type "string" "SBMakePtex";
 	setAttr ".rman__torattr___task" -type "string" "command";
@@ -6512,20 +6511,19 @@ createNode RenderMan -s -n "rmanSBMakePtexGlobals";
 	setAttr ".rman__param__ptxmake___inputfile" -type "string" "[passinfo this/0 filename]";
 	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
 	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
-	setAttr ".nt" -type "string" "pass:command";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "08F73E7A-D34F-79C4-62F0-38ABA1C450BE";
+	rename -uid "65F2BAE6-DE40-64C5-EEB2-D6A20F8770E1";
 	setAttr -s 371 ".lnk";
 	setAttr -s 371 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "77A10268-4949-100D-DA36-878C45AA11B0";
+	rename -uid "D3FDD5C2-2744-6C52-3D89-EC8E1667127D";
 	setAttr ".cdl" 3;
 	setAttr -s 8 ".dli[1:7]"  1 2 3 4 5 6 0;
 	setAttr -s 7 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8FE7AEEF-A64E-0BCA-8F16-3E847524724C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A1BD4477-F843-198B-AEB1-9EA3C395E996";
+	rename -uid "CB52DB02-B34A-0C4D-C0C9-CBBB895E4430";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3364DFD3-5743-413F-CAFD-25A163300DC5";
 	setAttr ".g" yes;
@@ -6546,50 +6544,51 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n"
 		+ "            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_cam_tear:FINAL_MOM_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n"
-		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
-		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 0\n            -lights 1\n            -cameras 0\n            -controlVertices 0\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1592\n            -height 840\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_cam_tear:FINAL_MOM_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n"
+		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 0\n            -lights 1\n            -cameras 0\n            -controlVertices 0\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 704\n            -height 418\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mom_cam:new_camera_test\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 1\n            -maximumNumHardwareLights 0\n            -occlusionCulling 1\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n"
-		+ "            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1592\n            -height 840\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
+		+ "            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 500\n            -height 418\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
 		+ "            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n"
 		+ "            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
 		+ "            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
 		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n"
-		+ "                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
-		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n"
-		+ "                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n"
-		+ "                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
-		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
-		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
-		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
-		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n"
-		+ "            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"0\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n"
-		+ "\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam_tear:FINAL_MOM_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 0\\n    -lights 1\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1592\\n    -height 840\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam_tear:FINAL_MOM_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 0\\n    -lights 1\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1592\\n    -height 840\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n"
+		+ "                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n"
+		+ "                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n"
+		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n"
+		+ "                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n"
+		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
+		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n"
+		+ "                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManControlsType\" (localizedPanelLabel(\"RenderMan Controls\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManLightingType\" (localizedPanelLabel(\"RenderMan Light Lister\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Light Lister\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
+		+ "                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
+		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"0\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n"
+		+ "            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n"
+		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam_tear:FINAL_MOM_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 0\\n    -lights 1\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 704\\n    -height 418\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"mom_cam_tear:FINAL_MOM_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 0\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 0\\n    -lights 1\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 704\\n    -height 418\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "01062556-A348-669A-7B1D-C28162489BFC";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 332 -ast -40 -aet 420 ";
+	setAttr ".b" -type "string" "playbackOptions -min 44 -max 246 -ast -40 -aet 420 ";
 	setAttr ".st" 6;
 createNode shapeEditorManager -n "mom:shapeEditorManager";
-	rename -uid "15FF7663-3E42-20A8-FA67-22AF50EFFF27";
+	rename -uid "05F4033C-5743-6DB8-4B34-3C91D2D9D27F";
 	setAttr -s 2 ".bsdt";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 10 -1 3 4 5 6
 		 7 8 1 2 0 ;
@@ -6598,7 +6597,7 @@ createNode shapeEditorManager -n "mom:shapeEditorManager";
 	setAttr -s 7 ".bspr";
 	setAttr -s 7 ".obsv";
 createNode poseInterpolatorManager -n "mom:poseInterpolatorManager";
-	rename -uid "7D319C94-6245-2421-D4FC-2AB4B1685829";
+	rename -uid "E06CE8F0-A74C-E8D1-35FC-B2A7AEF24061";
 createNode partition -n "mom:mom2:mom:mtorPartition";
 	rename -uid "372F30A3-9D44-512C-928F-6192B73536B1";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -6719,7 +6718,7 @@ createNode place2dTexture -n "mom:mom2:mom:place2dTexture7";
 	rename -uid "04571FC2-CA4A-BBAD-50E8-BF8E1A0BF58B";
 createNode file -n "mom:mom2:mom:file6";
 	rename -uid "8360D6BA-2A46-FA98-E204-F2BE140E4092";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom2:mom:place2dTexture8";
 	rename -uid "1501EC19-EF4E-F9E5-4B32-8C89A0756BB0";
@@ -7039,7 +7038,7 @@ createNode place2dTexture -n "mom:mom_skeleton:place2dTexture7";
 	rename -uid "E69120B8-374D-E47C-782F-66A6A8E02E32";
 createNode file -n "mom:mom_skeleton:file6";
 	rename -uid "46C1DFDD-EA4D-5DA8-10BA-269A95ADF136";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_skeleton:place2dTexture8";
 	rename -uid "E0A200D7-264C-EBDF-15B8-74A574B68F3C";
@@ -7282,7 +7281,7 @@ createNode place2dTexture -n "mom:mom_blendshapes_to_import:mom2:mom:place2dText
 	rename -uid "70565D44-0D45-7AA6-B81C-F8A41F6277B5";
 createNode file -n "mom:mom_blendshapes_to_import:mom2:mom:file6";
 	rename -uid "D502F3EF-4A4A-CA5B-8C01-D28895F2B237";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8";
 	rename -uid "2810E4E2-2945-8AA8-B99D-62B3A35BC2EE";
@@ -7439,7 +7438,7 @@ createNode place2dTexture -n "mom:mom:place2dTexture7";
 	rename -uid "471E1BD0-A840-4394-8CF7-E7AF08543BED";
 createNode file -n "mom:mom:file6";
 	rename -uid "DCBDACD6-084A-2B9C-EB90-3EBB8C6F30EA";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom:place2dTexture8";
 	rename -uid "71188093-2B41-B399-DEF6-ED99EEEB0C27";
@@ -7605,7 +7604,7 @@ createNode place2dTexture -n "mom:mom_mesh:place2dTexture7";
 	rename -uid "6A5A5ED3-A643-5F7F-7DA2-0DAEAED1366F";
 createNode file -n "mom:mom_mesh:file6";
 	rename -uid "4FBFE73B-B747-1D83-A095-42ACE0855443";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom:mom_mesh:place2dTexture8";
 	rename -uid "79946C39-CB4E-6E99-5070-539F8F512CC7";
@@ -7717,7 +7716,7 @@ createNode renderSetup -n "mom:renderSetup";
 	rename -uid "A4D032D4-BA46-B510-113D-64A278FAC027";
 createNode file -n "table:file1";
 	rename -uid "4CBF0443-794B-BE21-AF54-A0A302E59AA0";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/table/wood-table.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "table:place2dTexture1";
 	rename -uid "CA707DC6-1C40-5EF4-F628-208DA36083FC";
@@ -7754,7 +7753,7 @@ createNode materialInfo -n "table:materialInfo1";
 	rename -uid "A5C8D58B-7D4F-E8BD-D3D5-E5AA6C6B3454";
 createNode file -n "table:file2";
 	rename -uid "67BD608B-7E41-ED77-0447-3F9796908C50";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/table/wood-table-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "table:place2dTexture2";
 	rename -uid "559BE0BC-1E42-0207-5BB1-F1A0A96D4693";
@@ -7807,13 +7806,13 @@ createNode partition -n "bible:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "bible:file1";
 	rename -uid "DFB422F1-4C47-6200-D3BA-5591CF3C83DB";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible:place2dTexture1";
 	rename -uid "FB8777B7-A642-DBE5-F1E3-8882E7BC19DF";
 createNode file -n "bible:file2";
 	rename -uid "8D5649FD-304E-A788-4244-F386CC123E07";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible:place2dTexture2";
 	rename -uid "EB9046FF-3045-CB9C-D78E-D3A5B37B1CD9";
@@ -8057,7 +8056,7 @@ createNode partition -n "bible1:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "bible1:file1";
 	rename -uid "034F3EE4-7343-7291-D916-1893E2EDF6A5";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible1:place2dTexture1";
 	rename -uid "E2688551-4641-6164-577A-44BF1274ADC3";
@@ -8094,7 +8093,7 @@ createNode materialInfo -n "bible1:materialInfo1";
 	rename -uid "A5CD9784-824E-D9BF-469F-F08FBD5EA832";
 createNode file -n "bible1:file2";
 	rename -uid "A9D318CA-B549-6A84-B9AF-02B488709664";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "bible1:place2dTexture2";
 	rename -uid "49F5D6B6-F049-8D41-085B-FCBAA1357944";
@@ -8246,7 +8245,7 @@ createNode reference -n "momRN";
 	setAttr -s 3 ".fn";
 	setAttr ".fn[0]" -type "string" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma{1}";
 	setAttr ".fn[1]" -type "string" "C:/Users/mikha/Desktop/Only-Love//scenes/char/mom/mom_shirt_nclothrig.ma";
-	setAttr ".fn[2]" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//scenes/char/mom/mom.ma";
+	setAttr ".fn[2]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/mom/mom.ma";
 	setAttr -s 122 ".phl";
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[12]" 0;
@@ -8774,7 +8773,7 @@ createNode reference -n "momRN";
 lockNode -l 1 ;
 createNode reference -n "babyRN";
 	rename -uid "9556886D-844A-8EE4-CAC3-4C9AF3E2DBA6";
-	setAttr ".fn[0]" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//scenes/char/baby/baby.ma";
+	setAttr ".fn[0]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/baby/baby.ma";
 	setAttr -s 194 ".phl";
 	setAttr ".phl[465]" 0;
 	setAttr ".phl[466]" 0;
@@ -9048,9 +9047,9 @@ createNode reference -n "babyRN";
 		5 3 "babyRN" "baby:blendShape2.midLayerParent" "babyRN.placeHolderList[464]" 
 		""
 		"babyRN" 5611
-		0 "|babyRNfosterParent1|BabyGrab_One" "|baby:Baby_Rig|baby:baby_master" "-s -r "
-		
 		0 "|babyRNfosterParent1|BabyGrab_Two" "|baby:Baby_Rig|baby:baby_master" "-s -r "
+		
+		0 "|babyRNfosterParent1|BabyGrab_One" "|baby:Baby_Rig|baby:baby_master" "-s -r "
 		
 		2 "|baby:bottom" "visibility" " 0"
 		2 "|baby:bottom|baby:bottomShape" "renderable" " 0"
@@ -9066,12 +9065,12 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:babyMesh|baby:baby_body|baby:baby_bodyShapeOrig" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
 		2 "|baby:Baby_Rig|baby:baby_master" "visibility" " -av 1"
-		2 "|baby:Baby_Rig|baby:baby_master" "translate" " -type \"double3\" -0.66660293051971697 19.76710828385427376 4.31609553700995185"
+		2 "|baby:Baby_Rig|baby:baby_master" "translate" " -type \"double3\" -1.79969134747079207 20.40835372763755728 3.58583132565364027"
 		
 		2 "|baby:Baby_Rig|baby:baby_master" "translateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "translateY" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "translateZ" " -av"
-		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -80.33676440191341328 282.48159066950461238 26.57443257220876021"
+		2 "|baby:Baby_Rig|baby:baby_master" "rotate" " -type \"double3\" -140.19675226661803435 294.51805756972180461 57.11010704413565975"
 		
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master" "rotateY" " -av"
@@ -9116,7 +9115,7 @@ createNode reference -n "babyRN";
 		"translate" " -type \"double3\" -0.38329520451244115 -0.51699498951345824 1.8530563527518471"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
-		"rotate" " -type \"double3\" -10.8926613792180973 3.14043341517055685 83.47588415360411318"
+		"rotate" " -type \"double3\" 28.68273157861106171 -28.00685299574569598 -16.32394968240877375"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_lf_hip_def" 
 		"rotateX" " -av"
@@ -9261,7 +9260,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby_c_head_top_def" 
 		"lockInfluenceWeights" " 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball" 
-		"rotate" " -type \"double3\" 376.7066538655181489 -11.78263611873028971 -344.86804416558919684"
+		"rotate" " -type \"double3\" 378.48171437017168728 -36.28635564042123463 2.3728492378785293"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball" 
 		"rotateX" " -av"
@@ -9896,7 +9895,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:rEyeball|baby:baby:rEyeballShape" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
-		"rotate" " -type \"double3\" 189.57102656721070844 203.66107282134225898 194.31622993093532159"
+		"rotate" " -type \"double3\" 195.18033060714370208 227.1943529581999428 531.56405962343785632"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:baby:lEyeball" 
 		"rotateX" " -av"
@@ -10563,11 +10562,11 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:MouthCntrls|baby:BottomLip_Cntrl_Offset_R|baby:BottomLip_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:MouthCntrls|baby:BottomLip_Cntrl_Offset_R|baby:BottomLip_Cntrl_R" 
-		"translateY" " -av -0.58277377576031397"
+		"translateY" " -av -0.75412284090476223"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:MouthCntrls|baby:BottomLip_Cntrl_Offset_L|baby:BottomLip_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:MouthCntrls|baby:BottomLip_Cntrl_Offset_L|baby:BottomLip_Cntrl_L" 
-		"translateY" " -av -0.58277377576031419"
+		"translateY" " -av -0.75412284090476223"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:MouthCntrls|baby:TopLip_Cntrl_Offset_L|baby:TopLip_Cntrl_L" 
 		"translateY" " 1.47"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:baby_c_pelvis_def|baby:baby_c_spine1_def|baby:baby_c_spine2_def|baby:baby_c_spine3_def|baby:baby_c_cspine_def|baby:baby_c_neck1_def|baby:baby_c_neck2_def|baby:baby_c_head_def|baby:Facial_Cntrls|baby:MouthCntrls|baby:TopLip_Cntrl_Offset_R|baby:TopLip_Cntrl_R" 
@@ -10614,7 +10613,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
-		"rotate" " -type \"double3\" -10.71613143479119934 6.03432455327139206 85.16441018510001015"
+		"rotate" " -type \"double3\" 25.40998698286193758 -28.28757747208628004 -13.10533574649222466"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L" 
 		"rotateX" " -av"
@@ -10625,7 +10624,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
-		"rotate" " -type \"double3\" 17.42085196384779522 19.13726125554338608 -15.40617114262151865"
+		"rotate" " -type \"double3\" 12.30766099901830302 -2.78341718000184368 -46.32486412008748289"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"rotateX" " -av"
@@ -10634,7 +10633,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
-		"rotate" " -type \"double3\" 0 0 -13.87949681753166509"
+		"rotate" " -type \"double3\" 0 0 -0.45568050912994101"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
 		"rotateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_L|baby:Thigh_Cntrl_L|baby:Knee_Cntrl_Offset_L|baby:Knee_Cntrl_L|baby:Ankle_Cntrl_Offset_L|baby:Ankle_Cntrl_L" 
@@ -10644,7 +10643,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
-		"rotate" " -type \"double3\" -19.75565629195136808 -3.07444791058245359 25.57986314897122071"
+		"rotate" " -type \"double3\" -18.85768465465051946 0.98244802199674841 -69.21387233391487825"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R" 
 		"rotateX" " -av"
@@ -10655,7 +10654,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
-		"rotate" " -type \"double3\" -2.82686826380137601 9.39812498594748114 -51.97587312035636131"
+		"rotate" " -type \"double3\" 7.34388050139222592 8.98380688883553269 2.10584716724961352"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
 		"rotateX" " -av"
@@ -10664,7 +10663,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R|baby:Ankle_Cntrl_Offset_R|baby:Ankle_Cntrl_R" 
-		"rotate" " -type \"double3\" -11.73268965577162959 -7.38894286546802803 -14.98652785663324849"
+		"rotate" " -type \"double3\" -0.92666284306855384 -11.38724331174105409 -40.26837523941469499"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Thigh_Cntrl_Offset_R|baby:Thigh_Cntrl_R|baby:Knee_Cntrl_Offset_R|baby:Knee_Cntrl_R|baby:Ankle_Cntrl_Offset_R|baby:Ankle_Cntrl_R" 
 		"rotateX" " -av"
@@ -10678,7 +10677,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"translate" " -type \"double3\" -2.55620087476841285 3.75399181482207922 -5.13121482926788275"
+		"translate" " -type \"double3\" -0.24851933872197041 -1.31145431291845682 -0.43328913557184201"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateX" " -av -k 0"
@@ -10687,7 +10686,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"translateZ" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
-		"rotate" " -type \"double3\" 97.95248846966929079 -60.67187620710470952 -39.50101901016194006"
+		"rotate" " -type \"double3\" 29.80627221791901249 -10.76381535503967157 -59.0683444741479633"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L" 
 		"rotateX" " -av"
@@ -10698,7 +10697,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
-		"rotate" " -type \"double3\" -34.69353275963153749 -52.21972268021210795 -1.84470913053098706"
+		"rotate" " -type \"double3\" -2.63114930291177362 -14.77677873902804428 -20.93574104478074815"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L" 
 		"rotateX" " -av"
@@ -10709,7 +10708,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L" 
 		"translate" " -type \"double3\" 6.42208273165459431 0 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L|baby:Wrist_Cntrl_L" 
-		"rotate" " -type \"double3\" -30.18093865324534875 -1.10010458900215102 12.69563907906490563"
+		"rotate" " -type \"double3\" -12.75367261470452362 0.99594393103266976 1.35973891727204399"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_L|baby:UpperArm_Cntrl_L|baby:LowerArm_Cntrl_Offset_L|baby:LowerArm_Cntrl_L|baby:Wrist_Cntrl_Offset_L|baby:Wrist_Cntrl_L" 
 		"rotateX" " -av"
@@ -10720,7 +10719,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
-		"translate" " -type \"double3\" -4.03472489207445228 0.11951355975780853 3.07377436255555558"
+		"translate" " -type \"double3\" -0.52556464548117177 1.24426676075853138 -4.41435608925774048"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"translateX" " -av -k 0"
@@ -10729,7 +10728,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"translateZ" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
-		"rotate" " -type \"double3\" 108.99673594617652839 -67.8648068412106511 -64.3107835809848325"
+		"rotate" " -type \"double3\" 28.86205336687848799 0.36731636152915642 -43.10075196910165829"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R" 
 		"rotateX" " -av"
@@ -10740,7 +10739,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R|baby:LowerArm_Cntrl_Offset_R|baby:LowerArm_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R|baby:LowerArm_Cntrl_Offset_R|baby:LowerArm_Cntrl_R" 
-		"rotate" " -type \"double3\" -90.77180787862857869 -43.2501322835375035 71.9491602202086824"
+		"rotate" " -type \"double3\" -58.0571170503928613 -8.34040621557325323 -7.93751460686665933"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R|baby:LowerArm_Cntrl_Offset_R|baby:LowerArm_Cntrl_R" 
 		"rotateX" " -av"
@@ -10749,7 +10748,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R|baby:LowerArm_Cntrl_Offset_R|baby:LowerArm_Cntrl_R" 
 		"rotateZ" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R|baby:LowerArm_Cntrl_Offset_R|baby:LowerArm_Cntrl_R|baby:Wrist_Cntrl_Offset_R|baby:Wrist_Cntrl_R" 
-		"rotate" " -type \"double3\" 0.015214203170029099 -12.6441112241731819 -5.38635684094984057"
+		"rotate" " -type \"double3\" -2.57706085385384531 -12.55025523830572887 6.38729189150441456"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:UpperArm_Cntrl_Offset_R|baby:UpperArm_Cntrl_R|baby:LowerArm_Cntrl_Offset_R|baby:LowerArm_Cntrl_R|baby:Wrist_Cntrl_Offset_R|baby:Wrist_Cntrl_R" 
 		"rotateX" " -av"
@@ -10760,7 +10759,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
-		"translate" " -type \"double3\" 0.0088478237763318646 -0.066214859599801557 0"
+		"translate" " -type \"double3\" 0.0088478237763363055 -0.066214859599805109 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"translateX" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
@@ -10768,7 +10767,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"translateZ" " -av -k 0"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
-		"rotate" " -type \"double3\" 2.75787129044434698 21.43361303554697983 -20.11033427028417009"
+		"rotate" " -type \"double3\" 15.25103871090083452 17.88998218978400701 2.7365359150772175"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01" 
 		"rotateX" " -av"
@@ -10779,7 +10778,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
-		"rotate" " -type \"double3\" 5.6841838774853235 -4.64839363552792761 -4.95238420385188149"
+		"rotate" " -type \"double3\" -6.51863698809145031 -7.43943988377774001 -0.18772970415925841"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02" 
 		"rotateX" " -av"
@@ -10790,7 +10789,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
-		"rotate" " -type \"double3\" -15.55921311918271854 -9.05791979428109961 7.642584755626741"
+		"rotate" " -type \"double3\" 2.82587456027281503 -7.31143768728877053 24.33182719948334949"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03" 
 		"rotateX" " -av"
@@ -10801,7 +10800,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" 10.13051619607706932 14.69832368074225393 -7.84575634574419567"
+		"rotate" " -type \"double3\" 0.71397917736945438 1.36220275847037264 0.7889758725776953"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04" 
 		"rotateX" " -av"
@@ -10812,7 +10811,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
-		"rotate" " -type \"double3\" 4.95872013100729703 -7.62370560461261348 15.05268762756852574"
+		"rotate" " -type \"double3\" -22.34029604679148662 -2.63335858351147989 -8.58661659617542838"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl" 
 		"rotateX" " -av"
@@ -10828,7 +10827,7 @@ createNode reference -n "babyRN";
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
 		"visibility" " -av 1"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
-		"rotate" " -type \"double3\" -22.85866670635437714 7.12280121352585915 9.13916360633416325"
+		"rotate" " -type \"double3\" -34.8771078968221957 0.13592728723514572 20.79425590541432811"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Spine_Cntrl_Offset_01|baby:Spine_Cntrl_01|baby:Spine_Cntrl_Offset_02|baby:Spine_Cntrl_02|baby:Spine_Cntrl_Offset_03|baby:Spine_Cntrl_03|baby:Spine_Cntrl_Offset_04|baby:Spine_Cntrl_04|baby:Neck_Cntrl_Offset|baby:Neck_Cntrl|baby:Head_Cntrl_Offset|baby:Head_Cntrl" 
 		"rotateX" " -av"
@@ -10849,7 +10848,7 @@ createNode reference -n "babyRN";
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "visibility" " -av 1"
 		
-		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translate" " -type \"double3\" -0.57653717237441438 -1.63301301954493416 -0.26807880767219722"
+		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translate" " -type \"double3\" -4.87543971785442753 -6.76380088724278039 4.65954454706576016"
 		
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translateX" " -av"
 		2 "|baby:Baby_Rig|baby:baby_master|baby:Eye_Tracker" "translateY" " -av"
@@ -20434,12 +20433,12 @@ createNode reference -n "wineRN";
 		"wineRN" 33
 		0 "|wineRNfosterParent1|battle_grab_loc" "|wine:wine_bottle" "-s -r "
 		2 "|wine:wine_bottle" "visibility" " -av 1"
-		2 "|wine:wine_bottle" "translate" " -type \"double3\" -7.56331767580332581 2.24719489860567068 11.1668860686187692"
+		2 "|wine:wine_bottle" "translate" " -type \"double3\" -13.82730472673823741 -0.99183024199875458 2.87709638648984889"
 		
 		2 "|wine:wine_bottle" "translateX" " -av"
 		2 "|wine:wine_bottle" "translateY" " -av"
 		2 "|wine:wine_bottle" "translateZ" " -av"
-		2 "|wine:wine_bottle" "rotate" " -type \"double3\" 1.27421675879806107 -186.399914686665511 -1.52432895875181895"
+		2 "|wine:wine_bottle" "rotate" " -type \"double3\" 30.15583898574464428 -232.68962643771365606 24.96059879804116477"
 		
 		2 "|wine:wine_bottle" "rotateX" " -av"
 		2 "|wine:wine_bottle" "rotateY" " -av"
@@ -21362,7 +21361,7 @@ createNode audio -n "mom_scene_audio";
 	rename -uid "9EE69A08-4F1D-21DA-940D-00B5CA59131F";
 	setAttr ".ef" 613.192;
 	setAttr ".se" 613.192;
-	setAttr ".f" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sound/mom_scene_audio.wav";
+	setAttr ".f" -type "string" "/Users/veronicachen/Desktop/Only-Love//sound/mom_scene_audio.wav";
 createNode animCurveTU -n "wine_bottle_blendParent1";
 	rename -uid "7D9233C1-7D4E-5E03-1A14-90BBCED7C8BE";
 	setAttr ".tan" 18;
@@ -21430,7 +21429,7 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" -0.091931842267513275;
+	setAttr ".d" -0.053414873778820038;
 createNode shadingEngine -n "oceanShader1SG";
 	rename -uid "C24C89DE-4C1E-A7AD-E016-F0AFD29A9F35";
 	setAttr ".ihi" 0;
@@ -21443,7 +21442,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "momRN1";
 	rename -uid "888DDD94-4242-7823-C276-798D9AFBE8BF";
-	setAttr -s 624 ".phl";
+	setAttr -s 626 ".phl";
 	setAttr ".phl[1047]" 0;
 	setAttr ".phl[1049]" 0;
 	setAttr ".phl[1050]" 0;
@@ -22027,6 +22026,8 @@ createNode reference -n "momRN1";
 	setAttr ".phl[3247]" 0;
 	setAttr ".phl[3248]" 0;
 	setAttr ".phl[3249]" 0;
+	setAttr ".phl[3250]" 0;
+	setAttr ".phl[3251]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"momRN1"
 		"momRN1" 172
@@ -22365,7 +22366,7 @@ createNode reference -n "momRN1";
 		""
 		5 4 "momRN1" "|mom2:nCloth1|mom2:nClothShape1.playFromCache" "momRN1.placeHolderList[2676]" 
 		""
-		"momRN1" 1496
+		"momRN1" 8805
 		0 "|momRN1fosterParent1|Arm_Cntrl_R_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" 
 		"-s -r "
 		0 "|momRN1fosterParent1|Arm_Cntrl_L_parentConstraint1" "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" 
@@ -22394,7 +22395,11 @@ createNode reference -n "momRN1";
 		" -type \"string\" \"polymesh\""
 		2 "|mom2:MomRig|mom2:momClothes|mom2:momShirt" "visibility" " 1"
 		2 "|mom2:MomRig|mom2:momClothes|mom2:momShirt|mom2:momShirtoutputCloth1" 
-		"uvPivot" " -type \"double2\" 0.43762169033288956 0.53954999148845673"
+		"uvPivot" " -type \"double2\" 0.70196932554244995 0.47304853796958923"
+		2 "|mom2:MomRig|mom2:momClothes|mom2:momShirt|mom2:momShirtoutputCloth1" 
+		"dispResolution" " 3"
+		2 "|mom2:MomRig|mom2:momClothes|mom2:momShirt|mom2:momShirtoutputCloth1" 
+		"displaySmoothMesh" " 2"
 		2 "|mom2:MomRig|mom2:momClothes|mom2:momShirt|mom2:momShirtoutputCloth1" 
 		"aiTranslator" " -type \"string\" \"polymesh\""
 		2 "|mom2:MomRig|mom2:momClothes|mom2:momShirt|mom2:momShirtShapeOrig" "aiTranslator" 
@@ -22424,7 +22429,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01" 
-		"rotate" " -type \"double3\" -14.29571787489374124 31.2381060605180636 23.57882825040410424"
+		"rotate" " -type \"double3\" 11.10405338152013677 31.23810606051803873 23.5788282504041149"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01" 
 		"rotateX" " -av"
@@ -22435,7 +22440,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
-		"rotate" " -type \"double3\" -9.62452372570511017 -5.45736043600051524 -33.83522892953102001"
+		"rotate" " -type \"double3\" -10.68886952653732614 5.51527404398119891 -15.49591349894921599"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
 		"rotateX" " -av"
@@ -22444,7 +22449,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:ThumbCntrl_Offset_L_01|mom2:ThumbCntrl_L_01|mom2:ThumbCntrl_Offset_L_02|mom2:ThumbCntrl_L_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01" 
-		"rotate" " -type \"double3\" -0.086928390091717253 -7.77529828556780522 -23.89421625280883887"
+		"rotate" " -type \"double3\" 6.52946727007457195 -6.25331133765121638 -34.78585699938244602"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:IndexCntrl_Offset_L_01|mom2:IndexCntrl_L_01" 
 		"rotateX" " -av"
@@ -22475,7 +22480,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02" 
-		"rotate" " -type \"double3\" 0.90089212617146919 -6.74228778338400581 -40.31370153864806127"
+		"rotate" " -type \"double3\" 1.32316564490151301 -6.67957761564713248 -43.93071997647597726"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02" 
 		"rotateX" " -av"
@@ -22484,7 +22489,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03" 
-		"rotate" " -type \"double3\" 0 0 -46.85578011733458936"
+		"rotate" " -type \"double3\" 0 0 -54.05803230896459866"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest|mom2:mom_skeleton:mom_l_shoulder|mom2:mom_l_elbow|mom2:mom_l_wrist|mom2:FingerCntrls|mom2:MiddleCntrl_Offset_L_01|mom2:MiddleCntrl_L_01|mom2:MiddleCntrl_Offset_L_02|mom2:MiddleCntrl_L_02|mom2:MiddleCntrl_Offset_L_03|mom2:MiddleCntrl_L_03" 
@@ -22535,7 +22540,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_R|mom2:Cheek_Cntrl_R" 
-		"translateY" " -av 1.11927210269474053"
+		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:Cheek_Offset_Cntrl_L|mom2:Cheek_Cntrl_L" 
@@ -22543,23 +22548,23 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
-		"translateX" " -av -0.050509446884700118"
+		"translateX" " -av -0.076229965914701159"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_R|mom2:EdgeMouth_Cntrl_R" 
-		"translateY" " -av -0.76668229634087304"
+		"translateY" " -av -0.88120323926584576"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
-		"translateX" " -av -0.77955541717699395"
+		"translateX" " -av -0.098909891839844791"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:EdgeMouth_Offset_Cntrl_L|mom2:EdgeMouth_Cntrl_L" 
-		"translateY" " -av -0.67983130274239811"
+		"translateY" " -av -0.57359454072322791"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_R|mom2:BottomMouth_Cntrl_R" 
-		"translateY" " -av -0.62291827845030179"
+		"translateY" " -av -0.3893527165750657"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:BottomMouth_Offset_Cntrl_L|mom2:BottomMouth_Cntrl_L" 
-		"translateY" " -av -0.033712210781449592"
+		"translateY" " -av -0.45021469385022073"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:NoseDepress_Offset_Cntrl|mom2:NoseDepress_Cntrl" 
@@ -22571,7 +22576,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_R|mom2:TopMouth_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_R|mom2:TopMouth_Cntrl_R" 
-		"translateY" " -av -1.01777153854015756"
+		"translateY" " -av -0.62606576653770585"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:CheekAndMouthCntrls|mom2:TopMouth_Offset_Cntrl_L|mom2:TopMouth_Cntrl_L" 
 		"translateY" " -av -0.77903771453878023"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_spine5|mom2:mom_skeleton:mom_neck0|mom2:mom_skeleton:mom_neck1|mom2:HairGroup|mom2:momHair|mom2:momHairShapeOrig" 
@@ -22597,7 +22602,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
-		"rotate" " -type \"double3\" -2.39960189935001278 -0.23214289205324359 31.57946444118816842"
+		"rotate" " -type \"double3\" -23.04532475551135917 39.12130312041701075 36.05762856039098807"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01" 
 		"rotateX" " -av"
@@ -22608,7 +22613,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02" 
-		"rotate" " -type \"double3\" 7.69856142543093647 28.41219277693702594 -6.01245649982729979"
+		"rotate" " -type \"double3\" -5.22408200548316337 37.18868415655865078 -16.77728033136947161"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:ThumbCntrl_Offset_R_01|mom2:ThumbCntrl_R_01|mom2:ThumbCntrl_Offset_R_02|mom2:ThumbCntrl_R_02" 
 		"rotateX" " -av"
@@ -22619,7 +22624,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -32.25700803281578999"
+		"rotate" " -type \"double3\" -1.9766814961735566 0.89411219426589827 0.76293586291166415"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
@@ -22627,7 +22633,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02" 
-		"rotate" " -type \"double3\" 0 0 -2.29398438901487989"
+		"rotate" " -type \"double3\" 0 0 -5.38058942411896801"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02" 
@@ -22635,7 +22641,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0.37721126512433129 -6.96947058245590334 -35.97321096345863367"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:IndexCntrl_Offset_R_01|mom2:IndexCntrl_R_01|mom2:IndexCntrl_Offset_R_02|mom2:IndexCntrl_R_02|mom2:IndexCntrl_Offset_R_03|mom2:IndexCntrl_R_03" 
@@ -22645,7 +22652,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -32.25700803281578999"
+		"rotate" " -type \"double3\" -0.35728565713801697 0.93353016071594064 -1.8052890049710193"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
@@ -22653,7 +22661,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -1.53275910765721513"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02" 
@@ -22661,7 +22669,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03" 
-		"rotate" " -type \"double3\" 0 0 -12.1474338499169594"
+		"rotate" " -type \"double3\" 0 0 -3.73368668200061338"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:MiddleCntrl_Offset_R_01|mom2:MiddleCntrl_R_01|mom2:MiddleCntrl_Offset_R_02|mom2:MiddleCntrl_R_02|mom2:MiddleCntrl_Offset_R_03|mom2:MiddleCntrl_R_03" 
@@ -22671,7 +22679,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -32.25700803281578999"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
@@ -22679,7 +22687,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02" 
-		"rotate" " -type \"double3\" 0 0 -18.53953842819093367"
+		"rotate" " -type \"double3\" 0 0 -1.96124176730522426"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02" 
@@ -22687,7 +22695,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03" 
-		"rotate" " -type \"double3\" 0 0 -59.3818139774274556"
+		"rotate" " -type \"double3\" 0 0 -4.73354256865827594"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:PinkyCntrl_Offset_R_01|mom2:PinkyCntrl_R_01|mom2:PinkyCntrl_Offset_R_02|mom2:PinkyCntrl_R_02|mom2:PinkyCntrl_Offset_R_03|mom2:PinkyCntrl_R_03" 
@@ -22697,7 +22705,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
-		"rotate" " -type \"double3\" 0 0 -32.25700803281578999"
+		"rotate" " -type \"double3\" 0 0 -0.9267571727807028"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
@@ -22705,7 +22713,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02" 
-		"rotate" " -type \"double3\" 0 -0.696589924634474 -1.6275429844080207"
+		"rotate" " -type \"double3\" 0 0 -2.90334757000904276"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02" 
@@ -22713,8 +22721,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03" 
-		"rotate" " -type \"double3\" 0.65168974305067373 1.32961941016689367 -35.29678385846440847"
-		
+		"rotate" " -type \"double3\" 0 0 -6.21579213649584172"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest|mom2:mom_skeleton:mom_r_shoulder|mom2:mom_r_elbow|mom2:mom_r_wrist|mom2:FingerCntrls_R|mom2:RingCntrl_Offset_R_01|mom2:RingCntrl_R_01|mom2:RingCntrl_Offset_R_02|mom2:RingCntrl_R_02|mom2:RingCntrl_Offset_R_03|mom2:RingCntrl_R_03" 
@@ -22767,7 +22774,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotate" 
-		" -type \"double3\" 0 -6.74020583634160353 -2.39810135310943462"
+		" -type \"double3\" 0 -4.10872238792041333 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateY" 
@@ -22775,7 +22782,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl" "rotateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
-		"rotate" " -type \"double3\" -3.98977707327932318 1.07271050431703063 9.13465073272843675"
+		"rotate" " -type \"double3\" -1.23488649319751143 0.33201747580433094 2.82728999709537732"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01" 
 		"rotateX" " -av"
@@ -22786,7 +22793,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
-		"rotate" " -type \"double3\" 2.40449881807339461 0 0"
+		"rotate" " -type \"double3\" 3.96892344292038546 0.15362035929012352 -0.12709164311630206"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
 		"rotateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02" 
@@ -22796,7 +22804,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
-		"rotate" " -type \"double3\" 7.48888662285834172 0.6260833166651083 -8.95315072403649559"
+		"rotate" " -type \"double3\" 8.5190769611402235 0.86937228295965796 -3.70566613015703394"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03" 
 		"rotateX" " -av"
@@ -22807,7 +22815,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
-		"rotate" " -type \"double3\" 22.88237307573664125 0.65959812725753908 4.22408376564543797"
+		"rotate" " -type \"double3\" 22.77916103795540081 4.54581057537355981 -5.42713248498782885"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04" 
 		"rotateX" " -av"
@@ -22818,7 +22826,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
-		"rotate" " -type \"double3\" 22.96495431315289082 7.82549749216663226 13.66454924232881751"
+		"rotate" " -type \"double3\" -2.52727017916374264 -3.7112687375612663 3.57903892840067872"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl" 
 		"rotateX" " -av"
@@ -22835,7 +22843,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
-		"translate" " -type \"double3\" -0.043771230734124117 -0.085211052244508242 0.030446504023988009"
+		"translate" " -type \"double3\" 1.84428973723489764 -0.34079132228218223 0.26601553470652328"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"translateX" " -av"
@@ -22860,7 +22868,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_L" 
 		"scaleZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
-		"translate" " -type \"double3\" -1.29957638509008322 0.61260697319388802 -0.63999017361139443"
+		"translate" " -type \"double3\" -0.023712219944050261 -0.31372478473344101 0.56231097724645607"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
 		"translateX" " -av"
@@ -22877,7 +22885,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:ShouldCntrl_R" 
 		"rotateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:top_lf_ctrl" 
-		"translate" " -type \"double3\" 0.16215860846267569 -0.14183484678086178 0.12706426956547756"
+		"translate" " -type \"double3\" 0.15973064869163972 -0.094993509232322235 0.10425451166281766"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:top_lf_ctrl" 
 		"translateX" " -av"
@@ -22888,7 +22896,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_lf_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_lf_ctrl" 
-		"translate" " -type \"double3\" 0.97706273790701526 -0.10076270382170587 -0.33000120267078692"
+		"translate" " -type \"double3\" 0.54430338046538229 -0.038483197108122993 -0.13152707495187849"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_lf_ctrl" 
 		"translateX" " -av"
@@ -22897,7 +22905,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_lf_ctrl" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_rt_ctrl" 
-		"translate" " -type \"double3\" -0.62108514692409633 0 0"
+		"translate" " -type \"double3\" -0.37904209807069611 -0.0022060572074845686 0.085905596442072796"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_rt_ctrl" 
 		"translateX" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_rt_ctrl" 
@@ -22914,7 +22923,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:mid_rt_ctrl" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:mid_lf_ctrl" 
-		"translate" " -type \"double3\" 0.41105466057851836 0.20852430484535509 -0.15770746100774813"
+		"translate" " -type \"double3\" 0.50924212625549448 0.19521189410614326 -0.14198073566629876"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:mid_lf_ctrl" 
 		"translateX" " -av"
@@ -22923,7 +22932,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:mid_lf_ctrl" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:top_mid_ctrl" 
-		"translate" " -type \"double3\" 0.29284348389369186 0.025754640307577441 0.083781322866195329"
+		"translate" " -type \"double3\" 0.12295150835182524 0.010813188775014467 0.035175923606514108"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:top_mid_ctrl" 
 		"translateX" " -av"
@@ -22934,7 +22943,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
-		"translate" " -type \"double3\" -0.12685330741631864 -0.22520385488979577 0.77285755435704084"
+		"translate" " -type \"double3\" 0.16310951294274756 -0.23728546142879398 0.60040890017418358"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"translateX" " -av"
@@ -22943,7 +22952,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
-		"rotate" " -type \"double3\" 28.96941571245242386 -21.14257985102866755 -6.89890072132320142"
+		"rotate" " -type \"double3\" 35.24606334738349034 6.9445970137711921 4.8489387231853609"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:necklace1:necklace1|mom2:necklace1:master_ctrl|mom2:necklace1:bot_mid_ctrl" 
 		"rotateX" " -av"
@@ -22976,7 +22985,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
-		"rotate" " -type \"double3\" -9.99741985138932776 -22.68978106606556366 7.29171801417997578"
+		"rotate" " -type \"double3\" -19.79645623881174998 0.28833441262911008 8.34713273129847266"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01" 
 		"rotateX" " -av"
@@ -23009,7 +23018,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
-		"rotate" " -type \"double3\" 23.45392216757444359 0.0068946030627875651 -1.30402747725585999"
+		"rotate" " -type \"double3\" -1.23059149853214 9.26289862840189038 12.52330383731004559"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02" 
 		"rotateX" " -av"
@@ -23028,7 +23037,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
-		"translate" " -type \"double3\" 0.20380965959151115 -0.88557877118727546 0.26382194321725366"
+		"translate" " -type \"double3\" -1.03212387673707751 -0.58678064072752167 -0.38994761654668436"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr" 
 		"translateX" " -av"
@@ -23047,7 +23056,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_l_eye_ptr" 
-		"Blink" " -av -k 1 3.72981469287335754"
+		"Blink" " -av -k 1 2"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
@@ -23059,7 +23068,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
 		"translateZ" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:EyeGroup_Offset|mom2:mom_eye_ptr|mom2:mom_r_eye_ptr" 
-		"Blink" " -av -k 1 3.72245727551727601"
+		"Blink" " -av -k 1 2"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl" 
 		"translateX" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl" 
@@ -23067,11 +23076,11 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:OuterBrow_Offset_Cntrl_R|mom2:OuterBrow_Cntrl_R" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:MidBrow_Offset_Cntrl_R|mom2:MidBrow_Cntrl_R" 
-		"translateY" " -av 0"
+		"translateY" " -av 0.21779119336074537"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
-		"translate" " -type \"double3\" -0.47065751849757209 0.58848536170978605 0"
+		"translate" " -type \"double3\" -0.00014105815661133344 -0.30479966383613583 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
 		"translateY" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_brow_ctrl|mom2:EyeBrowCntrls_R|mom2:InnerBrow_Offset_Cntrl_R|mom2:InnerBrow_Cntrl_R" 
@@ -23085,12 +23094,11 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:OuterBrow_Offset_Cntrl_L|mom2:OuterBrow_Cntrl_L" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:MidBrow_Offset_Cntrl_L|mom2:MidBrow_Cntrl_L" 
-		"translateY" " -av -0.18316241192202479"
+		"translateY" " -av 0.21757414490098315"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
 		"visibility" " -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
-		"translate" " -type \"double3\" -0.316638960125533 0.61168457152333933 0.078090130115859233"
-		
+		"translate" " -type \"double3\" 0 -0.30479966383613499 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
 		"translateY" " -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_brow_ctrl|mom2:EyeBrowCntrls_L|mom2:InnerBrow_Offset_Cntrl_L|mom2:InnerBrow_Cntrl_L" 
@@ -23102,11 +23110,11 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_blink_ctrl" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_low_eyelid_ctrl" 
-		"translateY" " -av 0.05255060296917597"
+		"translateY" " -av 0.017115615411464658"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_low_eyelid_ctrl" 
-		"translateY" " -av 0.08798417801082925"
+		"translateY" " -av 0.017115615411464658"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_l_nose_flare_ctrl" 
-		"translateY" " -av 0"
+		"translateY" " -av 0.0025558622125956276"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_cog_ctrl|mom2:Spine_Cntrl_Offset_01|mom2:Spine_Cntrl_01|mom2:Spine_Cntrl_Offset_02|mom2:Spine_Cntrl_02|mom2:Spine_Cntrl_Offset_03|mom2:Spine_Cntrl_03|mom2:Spine_Cntrl_Offset_04|mom2:Spine_Cntrl_04|mom2:group1|mom2:mom_skeleton:mom_shoulder_ctrl|mom2:NeckCntrl_Offset_01|mom2:NeckCntrl_01|mom2:NeckCntrl_Offset_02|mom2:NeckCntrl_02|mom2:FaceCntrls_Offset|mom2:mom_r_nose_flare_ctrl" 
 		"translateY" " -av 0"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_l_knee_vec" "visibility" 
@@ -23122,7 +23130,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translate" 
-		" -type \"double3\" -10.87638185925035295 -4.35490920865810693 2.56467066006675548"
+		" -type \"double3\" -4.58643163421434785 -6.67353825157737113 2.5371752630808464"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R_PV" "translateX" 
 		" -av"
@@ -23149,7 +23157,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translate" 
-		" -type \"double3\" 17.90704523138696658 5.95857207703518021 5.79013962810147653"
+		" -type \"double3\" 4.66885420580050159 -30.54477012023402693 2.13276212140493815"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateX" 
 		" -av"
@@ -23158,7 +23166,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotate" 
-		" -type \"double3\" -246.71488833500782789 -115.84103975845118839 -209.02973793436504479"
+		" -type \"double3\" 27.00931738883081579 -32.31525358991670061 -222.2973821556913947"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "rotateX" 
 		" -av"
@@ -23173,11 +23181,12 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "scalePivot" 
 		" -type \"double3\" -11.29970000000000141 0.083230299999997204 -2.18237"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "mom_arm_correct" 
-		" -av -k 1 0"
+		" -av -k 1 0.0058721974835981997"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_Cntrl_R" "blendParent1" 
-		" -av -k 1 0.9588156356588432"
+		" -av -k 1 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R" "translate" 
-		" -type \"double3\" 6.60734523138696517 6.04180237703517697 3.60776962810147639"
+		" -type \"double3\" -6.63084579419949982 -30.46153982023403017 -0.049607878595061994"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R" "translateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_R_GRP|mom2:Arm_IK_R" "translateY" 
@@ -23189,7 +23198,8 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translate" 
-		" -type \"double3\" 1.94854408169553728 0.45078404072828726 3.67598023144737773"
+		" -type \"double3\" 2.46650845506358829 -0.78492941799549687 3.66459921071162231"
+		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translateX" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L_PV" "translateY" 
@@ -23215,7 +23225,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "visibility" 
 		" -av 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translate" 
-		" -type \"double3\" -11.57265922745056841 -3.89198153778892353 -2.45965167236477456"
+		" -type \"double3\" -10.04696433074729001 -1.95332195218307669 2.45192697036004814"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateX" 
 		" -av"
@@ -23224,7 +23234,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "translateZ" 
 		" -av"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotate" 
-		" -type \"double3\" 102.87960916599038796 166.77958900634411066 -242.1318029641981866"
+		" -type \"double3\" 61.14474634632438921 130.00848692026897879 -296.27916144922369313"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "rotateX" 
 		" -av"
@@ -23237,7 +23247,7 @@ createNode reference -n "momRN1";
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_Cntrl_L" "blendParent1" 
 		" -av -k 1 1"
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L" "translate" 
-		" -type \"double3\" -0.27043286908297404 -3.80876807339509416 -4.64201775480929424"
+		" -type \"double3\" 1.25526202762030437 -1.87010848778924732 0.26956088791552846"
 		
 		2 "|mom2:MomRig|mom2:MasterCntrl|mom2:ARM_IK_L_GRP|mom2:Arm_IK_L" "translateX" 
 		" -av"
@@ -23513,22 +23523,8379 @@ createNode reference -n "momRN1";
 		
 		2 "mom2:skinCluster1" "wl[4042].w[62:64]" " 0.73179107904434204 1.7948612365620537e-05 0"
 		
-		2 "mom2:tweak16" "vlist[0].vertex" " -s 347"
+		2 "mom2:skinCluster5" "weightList" " -s 875"
+		2 "mom2:skinCluster5" "weightList[4].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[4].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[5]" " 0.33963718397088233"
+		2 "mom2:skinCluster5" "weightList[4].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[29]" " 3.2917536475949723e-07"
+		
+		2 "mom2:skinCluster5" "weightList[4].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[35]" " 0.63651478290557861"
+		2 "mom2:skinCluster5" "weightList[4].weights[36]" " 4.7375363220866218e-07"
+		
+		2 "mom2:skinCluster5" "weightList[4].weights[37]" " 0.023847230194542098"
+		
+		2 "mom2:skinCluster5" "weightList[4].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[4].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[5].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[5]" " 0.25411616680453919"
+		2 "mom2:skinCluster5" "weightList[5].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[29]" " 4.2926098598000778e-05"
+		
+		2 "mom2:skinCluster5" "weightList[5].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[35]" " 0.74584090709686279"
+		2 "mom2:skinCluster5" "weightList[5].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[5].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[12].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[4]" " 0.14973298700519699"
+		2 "mom2:skinCluster5" "weightList[12].weights[5]" " 0.83447549287014222"
+		2 "mom2:skinCluster5" "weightList[12].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[29]" " 0.0099163256794084168"
+		
+		2 "mom2:skinCluster5" "weightList[12].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[35]" " 0.0058751944452524185"
+		
+		2 "mom2:skinCluster5" "weightList[12].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[12].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[13].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[4]" " 0.00039008060056940015"
+		
+		2 "mom2:skinCluster5" "weightList[13].weights[5]" " 0.58297984028726857"
+		2 "mom2:skinCluster5" "weightList[13].weights[6]" " 0.014319696463644505"
+		
+		2 "mom2:skinCluster5" "weightList[13].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[29]" " 6.6829039968428686e-06"
+		
+		2 "mom2:skinCluster5" "weightList[13].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[35]" " 0.40230369974452063"
+		
+		2 "mom2:skinCluster5" "weightList[13].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[13].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[14].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[5]" " 0.20946405889516592"
+		2 "mom2:skinCluster5" "weightList[14].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[35]" " 0.72393104656365281"
+		
+		2 "mom2:skinCluster5" "weightList[14].weights[36]" " 0.065076261758804321"
+		
+		2 "mom2:skinCluster5" "weightList[14].weights[37]" " 0.0015286327823769267"
+		
+		2 "mom2:skinCluster5" "weightList[14].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[14].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[15].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[5]" " 0.92083369611840005"
+		2 "mom2:skinCluster5" "weightList[15].weights[6]" " 0.079160608351230621"
+		
+		2 "mom2:skinCluster5" "weightList[15].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[29]" " 4.9133336619032912e-06"
+		
+		2 "mom2:skinCluster5" "weightList[15].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[33]" " 7.8219670740509173e-07"
+		
+		2 "mom2:skinCluster5" "weightList[15].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[15].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[16].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[5]" " 0.26446139438775113"
+		2 "mom2:skinCluster5" "weightList[16].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[29]" " 1.8255087804877638e-07"
+		
+		2 "mom2:skinCluster5" "weightList[16].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[35]" " 0.73553842306137085"
+		
+		2 "mom2:skinCluster5" "weightList[16].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[16].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[17].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[2]" " 4.1600197905402185e-05"
+		
+		2 "mom2:skinCluster5" "weightList[17].weights[3]" " 1.3733565294741175e-05"
+		
+		2 "mom2:skinCluster5" "weightList[17].weights[4]" " 0.89416180966248049"
+		2 "mom2:skinCluster5" "weightList[17].weights[5]" " 0.028622073462270293"
+		
+		2 "mom2:skinCluster5" "weightList[17].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[36]" " 0.077160783112049103"
+		
+		2 "mom2:skinCluster5" "weightList[17].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[17].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[18].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[2]" " 2.1238947546871453e-05"
+		
+		2 "mom2:skinCluster5" "weightList[18].weights[3]" " 0.012845966722362122"
+		
+		2 "mom2:skinCluster5" "weightList[18].weights[4]" " 0.95705509561400692"
+		2 "mom2:skinCluster5" "weightList[18].weights[5]" " 0.026736543123731988"
+		
+		2 "mom2:skinCluster5" "weightList[18].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[37]" " 0.0033411555923521519"
+		
+		2 "mom2:skinCluster5" "weightList[18].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[18].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[20].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[5]" " 0.10195994324165178"
+		2 "mom2:skinCluster5" "weightList[20].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[29]" " 0.00044567163296462133"
+		
+		2 "mom2:skinCluster5" "weightList[20].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[35]" " 0.42376962304115295"
+		
+		2 "mom2:skinCluster5" "weightList[20].weights[36]" " 0.47382476208423069"
+		
+		2 "mom2:skinCluster5" "weightList[20].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[20].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[21].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[5]" " 0.088587919480332553"
+		
+		2 "mom2:skinCluster5" "weightList[21].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[35]" " 0.61455778253644922"
+		
+		2 "mom2:skinCluster5" "weightList[21].weights[36]" " 0.27177208662033081"
+		
+		2 "mom2:skinCluster5" "weightList[21].weights[37]" " 0.025082211362887418"
+		
+		2 "mom2:skinCluster5" "weightList[21].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[21].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[25].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[4]" " 0.77013725275207756"
+		2 "mom2:skinCluster5" "weightList[25].weights[5]" " 0.17366149416159396"
+		2 "mom2:skinCluster5" "weightList[25].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[35]" " 0.056201253086328506"
+		
+		2 "mom2:skinCluster5" "weightList[25].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[25].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[26].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[4]" " 0.37342300525813077"
+		2 "mom2:skinCluster5" "weightList[26].weights[5]" " 0.62051869692343753"
+		2 "mom2:skinCluster5" "weightList[26].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[29]" " 0.0041443758970997682"
+		
+		2 "mom2:skinCluster5" "weightList[26].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[35]" " 0.0019139203941449523"
+		
+		2 "mom2:skinCluster5" "weightList[26].weights[36]" " 1.527186902890752e-09"
+		
+		2 "mom2:skinCluster5" "weightList[26].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[26].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[27].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[4]" " 0.23081289565699509"
+		2 "mom2:skinCluster5" "weightList[27].weights[5]" " 0.67197400716674949"
+		2 "mom2:skinCluster5" "weightList[27].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[35]" " 0.09362366795539856"
+		
+		2 "mom2:skinCluster5" "weightList[27].weights[36]" " 0.0035894292208568418"
+		
+		2 "mom2:skinCluster5" "weightList[27].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[27].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[28].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[4]" " 0.12569761978330332"
+		2 "mom2:skinCluster5" "weightList[28].weights[5]" " 0.31814977761756602"
+		2 "mom2:skinCluster5" "weightList[28].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[35]" " 0.25616893172264099"
+		
+		2 "mom2:skinCluster5" "weightList[28].weights[36]" " 0.29998367087648964"
+		
+		2 "mom2:skinCluster5" "weightList[28].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[28].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[29].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[5]" " 0.42927179403864696"
+		2 "mom2:skinCluster5" "weightList[29].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[29]" " 2.2792142993682401e-05"
+		
+		2 "mom2:skinCluster5" "weightList[29].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[35]" " 0.57070541381835938"
+		
+		2 "mom2:skinCluster5" "weightList[29].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[29].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[30].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[5]" " 0.3487427830696106"
+		2 "mom2:skinCluster5" "weightList[30].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[35]" " 0.6512572169303894"
+		2 "mom2:skinCluster5" "weightList[30].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[30].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[31].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[5]" " 0.25326191111856655"
+		2 "mom2:skinCluster5" "weightList[31].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[29]" " 1.2671411449847932e-08"
+		
+		2 "mom2:skinCluster5" "weightList[31].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[35]" " 0.74673807621002197"
+		
+		2 "mom2:skinCluster5" "weightList[31].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[31].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[32].weights[0]" " 0.22377115583632184"
+		2 "mom2:skinCluster5" "weightList[32].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[4]" " 0.013880511207666604"
+		
+		2 "mom2:skinCluster5" "weightList[32].weights[5]" " 0.35229564686313097"
+		2 "mom2:skinCluster5" "weightList[32].weights[6]" " 0.268658846616745"
+		2 "mom2:skinCluster5" "weightList[32].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[35]" " 0.14139383947613557"
+		
+		2 "mom2:skinCluster5" "weightList[32].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[32].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[33].weights[0]" " 0.09021514046310164"
+		2 "mom2:skinCluster5" "weightList[33].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[2]" " 0.00029832761263920345"
+		
+		2 "mom2:skinCluster5" "weightList[33].weights[3]" " 4.8602208271561903e-05"
+		
+		2 "mom2:skinCluster5" "weightList[33].weights[4]" " 0.055015122022506163"
+		
+		2 "mom2:skinCluster5" "weightList[33].weights[5]" " 0.85442280769348145"
+		2 "mom2:skinCluster5" "weightList[33].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[33].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[34].weights[0]" " 0.00016933809574886538"
+		
+		2 "mom2:skinCluster5" "weightList[34].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[2]" " 0.0011241863897114199"
+		
+		2 "mom2:skinCluster5" "weightList[34].weights[3]" " 0.045990001106831151"
+		
+		2 "mom2:skinCluster5" "weightList[34].weights[4]" " 0.12062037455419294"
+		2 "mom2:skinCluster5" "weightList[34].weights[5]" " 0.83209609985351562"
+		2 "mom2:skinCluster5" "weightList[34].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[34].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[35].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[1]" " 0.058076186516360227"
+		
+		2 "mom2:skinCluster5" "weightList[35].weights[2]" " 0.12920269056983519"
+		2 "mom2:skinCluster5" "weightList[35].weights[3]" " 0.5828583367563126"
+		2 "mom2:skinCluster5" "weightList[35].weights[4]" " 0.076876512987974516"
+		
+		2 "mom2:skinCluster5" "weightList[35].weights[5]" " 0.15298627316951752"
+		2 "mom2:skinCluster5" "weightList[35].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[35].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[44].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[2]" " 0.0016801322280841466"
+		
+		2 "mom2:skinCluster5" "weightList[44].weights[3]" " 0.029694389248593512"
+		
+		2 "mom2:skinCluster5" "weightList[44].weights[4]" " 0.42806773640448692"
+		2 "mom2:skinCluster5" "weightList[44].weights[5]" " 0.54055774211883545"
+		2 "mom2:skinCluster5" "weightList[44].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[44].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[46].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[2]" " 0.01721171550763112"
+		2 "mom2:skinCluster5" "weightList[46].weights[3]" " 0.00046318632524047115"
+		
+		2 "mom2:skinCluster5" "weightList[46].weights[4]" " 0.91964103699076005"
+		2 "mom2:skinCluster5" "weightList[46].weights[5]" " 0.0031684880920139413"
+		
+		2 "mom2:skinCluster5" "weightList[46].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[36]" " 0.059515573084354401"
+		
+		2 "mom2:skinCluster5" "weightList[46].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[46].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[47].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[2]" " 4.7528936966013492e-06"
+		
+		2 "mom2:skinCluster5" "weightList[47].weights[3]" " 0.012652417144968328"
+		
+		2 "mom2:skinCluster5" "weightList[47].weights[4]" " 0.90893959114211365"
+		2 "mom2:skinCluster5" "weightList[47].weights[5]" " 0.040328343079665992"
+		
+		2 "mom2:skinCluster5" "weightList[47].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[35]" " 0.038074895739555359"
+		
+		2 "mom2:skinCluster5" "weightList[47].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[47].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[48].weights[0]" " 0.85296684490666752"
+		2 "mom2:skinCluster5" "weightList[48].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[4]" " 0.0028899851058352172"
+		
+		2 "mom2:skinCluster5" "weightList[48].weights[5]" " 0.071669863716469287"
+		
+		2 "mom2:skinCluster5" "weightList[48].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[29]" " 0.00027545920271809652"
+		
+		2 "mom2:skinCluster5" "weightList[48].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[35]" " 0.072197847068309784"
+		
+		2 "mom2:skinCluster5" "weightList[48].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[48].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[50].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[3]" " 0.0089673812754680737"
+		
+		2 "mom2:skinCluster5" "weightList[50].weights[4]" " 0.94689498164204466"
+		2 "mom2:skinCluster5" "weightList[50].weights[5]" " 0.012021934026807053"
+		
+		2 "mom2:skinCluster5" "weightList[50].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[36]" " 0.031372550874948502"
+		
+		2 "mom2:skinCluster5" "weightList[50].weights[37]" " 0.00074315218073172957"
+		
+		2 "mom2:skinCluster5" "weightList[50].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[50].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[60].weights[0]" " 0.00038650905096621329"
+		
+		2 "mom2:skinCluster5" "weightList[60].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[2]" " 0.0053641010123149559"
+		
+		2 "mom2:skinCluster5" "weightList[60].weights[3]" " 0.16684731729078134"
+		2 "mom2:skinCluster5" "weightList[60].weights[4]" " 0.52889226625136043"
+		2 "mom2:skinCluster5" "weightList[60].weights[5]" " 0.29850980639457703"
+		2 "mom2:skinCluster5" "weightList[60].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[60].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[61].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[2]" " 0.0002887808507353914"
+		
+		2 "mom2:skinCluster5" "weightList[61].weights[3]" " 0.0075581375778684731"
+		
+		2 "mom2:skinCluster5" "weightList[61].weights[4]" " 0.15913305011921719"
+		2 "mom2:skinCluster5" "weightList[61].weights[5]" " 0.83302003145217896"
+		2 "mom2:skinCluster5" "weightList[61].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[61].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[62].weights[0]" " 0.090281537178320992"
+		
+		2 "mom2:skinCluster5" "weightList[62].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[3]" " 0.0047808069909948672"
+		
+		2 "mom2:skinCluster5" "weightList[62].weights[4]" " 0.25667077256667292"
+		2 "mom2:skinCluster5" "weightList[62].weights[5]" " 0.64252670311806204"
+		2 "mom2:skinCluster5" "weightList[62].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[35]" " 0.0057401801459491253"
+		
+		2 "mom2:skinCluster5" "weightList[62].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[62].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[64].weights[0]" " 0.0040290108990518299"
+		
+		2 "mom2:skinCluster5" "weightList[64].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[4]" " 0.012038699381817302"
+		
+		2 "mom2:skinCluster5" "weightList[64].weights[5]" " 0.051987103230142814"
+		
+		2 "mom2:skinCluster5" "weightList[64].weights[6]" " 0.9253804087638855"
+		2 "mom2:skinCluster5" "weightList[64].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[35]" " 0.0065647777251025552"
+		
+		2 "mom2:skinCluster5" "weightList[64].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[64].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[65].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[5]" " 0.25612248302251189"
+		2 "mom2:skinCluster5" "weightList[65].weights[6]" " 1.8149192726468755e-07"
+		
+		2 "mom2:skinCluster5" "weightList[65].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[35]" " 0.7438773354855609"
+		2 "mom2:skinCluster5" "weightList[65].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[65].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[66].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[5]" " 0.51555156611313968"
+		2 "mom2:skinCluster5" "weightList[66].weights[6]" " 0.00020153312652837485"
+		
+		2 "mom2:skinCluster5" "weightList[66].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[35]" " 0.48424690076033194"
+		
+		2 "mom2:skinCluster5" "weightList[66].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[66].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[67].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[5]" " 0.76686527172147734"
+		2 "mom2:skinCluster5" "weightList[67].weights[6]" " 5.0082609959645197e-05"
+		
+		2 "mom2:skinCluster5" "weightList[67].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[33]" " 3.4599725040607154e-07"
+		
+		2 "mom2:skinCluster5" "weightList[67].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[35]" " 0.23308429967131261"
+		
+		2 "mom2:skinCluster5" "weightList[67].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[67].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[68].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[4]" " 0.094742278472117955"
+		
+		2 "mom2:skinCluster5" "weightList[68].weights[5]" " 0.35194409130248233"
+		2 "mom2:skinCluster5" "weightList[68].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[35]" " 0.27272588014602661"
+		
+		2 "mom2:skinCluster5" "weightList[68].weights[36]" " 0.28058775007937309"
+		
+		2 "mom2:skinCluster5" "weightList[68].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[68].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[69].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[4]" " 0.21786681052850518"
+		2 "mom2:skinCluster5" "weightList[69].weights[5]" " 0.65335906150804679"
+		2 "mom2:skinCluster5" "weightList[69].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[29]" " 2.1778338664720931e-08"
+		
+		2 "mom2:skinCluster5" "weightList[69].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[35]" " 0.10649413615465164"
+		
+		2 "mom2:skinCluster5" "weightList[69].weights[36]" " 0.022279970030457619"
+		
+		2 "mom2:skinCluster5" "weightList[69].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[69].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[70].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[4]" " 0.33089559474954933"
+		2 "mom2:skinCluster5" "weightList[70].weights[5]" " 0.65766524102681645"
+		2 "mom2:skinCluster5" "weightList[70].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[29]" " 0.0035882168027427325"
+		
+		2 "mom2:skinCluster5" "weightList[70].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[35]" " 0.0078508639708161354"
+		
+		2 "mom2:skinCluster5" "weightList[70].weights[36]" " 8.345007535526292e-08"
+		
+		2 "mom2:skinCluster5" "weightList[70].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[70].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[71].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[4]" " 0.72060509108857129"
+		2 "mom2:skinCluster5" "weightList[71].weights[5]" " 0.21055255747481369"
+		2 "mom2:skinCluster5" "weightList[71].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[35]" " 0.06884235143661499"
+		
+		2 "mom2:skinCluster5" "weightList[71].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[71].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[72].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[2]" " 0.0085601765362440952"
+		
+		2 "mom2:skinCluster5" "weightList[72].weights[3]" " 0.016475582974367908"
+		
+		2 "mom2:skinCluster5" "weightList[72].weights[4]" " 0.91606169272346127"
+		2 "mom2:skinCluster5" "weightList[72].weights[5]" " 0.026719180006937432"
+		
+		2 "mom2:skinCluster5" "weightList[72].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[35]" " 0.032183367758989334"
+		
+		2 "mom2:skinCluster5" "weightList[72].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[72].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[75].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[2]" " 1.3693967953843011e-08"
+		
+		2 "mom2:skinCluster5" "weightList[75].weights[3]" " 0.01061346126030153"
+		2 "mom2:skinCluster5" "weightList[75].weights[4]" " 0.91892038197354431"
+		2 "mom2:skinCluster5" "weightList[75].weights[5]" " 0.041216135949431215"
+		
+		2 "mom2:skinCluster5" "weightList[75].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[35]" " 0.029250007122755051"
+		
+		2 "mom2:skinCluster5" "weightList[75].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[75].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[76].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[3]" " 2.3571976626856756e-06"
+		
+		2 "mom2:skinCluster5" "weightList[76].weights[4]" " 0.78966858123175343"
+		2 "mom2:skinCluster5" "weightList[76].weights[5]" " 0.13883682173770573"
+		2 "mom2:skinCluster5" "weightList[76].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[35]" " 0.071492239832878113"
+		
+		2 "mom2:skinCluster5" "weightList[76].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[76].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[77].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[4]" " 0.37111670878075714"
+		2 "mom2:skinCluster5" "weightList[77].weights[5]" " 0.61553812852881273"
+		2 "mom2:skinCluster5" "weightList[77].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[29]" " 0.0024519519916084763"
+		
+		2 "mom2:skinCluster5" "weightList[77].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[35]" " 0.01089151669293642"
+		
+		2 "mom2:skinCluster5" "weightList[77].weights[36]" " 1.694005885106359e-06"
+		
+		2 "mom2:skinCluster5" "weightList[77].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[77].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[78].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[4]" " 0.26184504221683597"
+		2 "mom2:skinCluster5" "weightList[78].weights[5]" " 0.70633887143549268"
+		2 "mom2:skinCluster5" "weightList[78].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[35]" " 0.028244888409972191"
+		
+		2 "mom2:skinCluster5" "weightList[78].weights[36]" " 0.0035711979376990598"
+		
+		2 "mom2:skinCluster5" "weightList[78].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[78].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[79].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[5]" " 0.033066642513965967"
+		
+		2 "mom2:skinCluster5" "weightList[79].weights[6]" " 1.9955962216045009e-06"
+		
+		2 "mom2:skinCluster5" "weightList[79].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[29]" " 0.034852710760531265"
+		
+		2 "mom2:skinCluster5" "weightList[79].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[35]" " 0.90763465651626463"
+		
+		2 "mom2:skinCluster5" "weightList[79].weights[36]" " 0.024443994582163796"
+		
+		2 "mom2:skinCluster5" "weightList[79].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[79].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[80].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[5]" " 0.3245858189056206"
+		2 "mom2:skinCluster5" "weightList[80].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[29]" " 8.8575889777811412e-06"
+		
+		2 "mom2:skinCluster5" "weightList[80].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[35]" " 0.67540532350540161"
+		
+		2 "mom2:skinCluster5" "weightList[80].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[80].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[81].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[5]" " 0.23525355624886063"
+		2 "mom2:skinCluster5" "weightList[81].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[35]" " 0.76012936057571034"
+		
+		2 "mom2:skinCluster5" "weightList[81].weights[36]" " 0.0030847059097141027"
+		
+		2 "mom2:skinCluster5" "weightList[81].weights[37]" " 0.0015323772657150226"
+		
+		2 "mom2:skinCluster5" "weightList[81].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[81].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[82].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[5]" " 0.26814622732190047"
+		2 "mom2:skinCluster5" "weightList[82].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[35]" " 0.66786408124180885"
+		
+		2 "mom2:skinCluster5" "weightList[82].weights[36]" " 0.063989691436290741"
+		
+		2 "mom2:skinCluster5" "weightList[82].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[82].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[83].weights[0]" " 0.075024308446801913"
+		
+		2 "mom2:skinCluster5" "weightList[83].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[4]" " 0.014853251606904096"
+		
+		2 "mom2:skinCluster5" "weightList[83].weights[5]" " 0.63250767118261952"
+		2 "mom2:skinCluster5" "weightList[83].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[35]" " 0.26991361379623413"
+		
+		2 "mom2:skinCluster5" "weightList[83].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[37]" " 0.0077011549674404073"
+		
+		2 "mom2:skinCluster5" "weightList[83].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[83].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[84].weights[0]" " 0.22035365775931171"
+		2 "mom2:skinCluster5" "weightList[84].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[4]" " 0.0021356918549305091"
+		
+		2 "mom2:skinCluster5" "weightList[84].weights[5]" " 0.73379972267552318"
+		2 "mom2:skinCluster5" "weightList[84].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[35]" " 0.040764596313238144"
+		
+		2 "mom2:skinCluster5" "weightList[84].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[37]" " 0.0029463313969963589"
+		
+		2 "mom2:skinCluster5" "weightList[84].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[84].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[97].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[5]" " 0.26247996091842651"
+		2 "mom2:skinCluster5" "weightList[97].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[35]" " 0.73752003908157349"
+		
+		2 "mom2:skinCluster5" "weightList[97].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[97].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[98].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[5]" " 0.54014261841578048"
+		2 "mom2:skinCluster5" "weightList[98].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[29]" " 4.2518407568587176e-08"
+		
+		2 "mom2:skinCluster5" "weightList[98].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[35]" " 0.45901504158973694"
+		
+		2 "mom2:skinCluster5" "weightList[98].weights[36]" " 0.00084229747607497837"
+		
+		2 "mom2:skinCluster5" "weightList[98].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[98].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[99].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[4]" " 0.06628930687292954"
+		2 "mom2:skinCluster5" "weightList[99].weights[5]" " 0.30279413346013512"
+		2 "mom2:skinCluster5" "weightList[99].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[29]" " 0.01050878828817629"
+		
+		2 "mom2:skinCluster5" "weightList[99].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[35]" " 0.40725344052911144"
+		
+		2 "mom2:skinCluster5" "weightList[99].weights[36]" " 0.21315433084964752"
+		
+		2 "mom2:skinCluster5" "weightList[99].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[99].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[100].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[4]" " 0.91765805361860187"
+		
+		2 "mom2:skinCluster5" "weightList[100].weights[5]" " 0.023234599227177018"
+		
+		2 "mom2:skinCluster5" "weightList[100].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[35]" " 0.032440175102148396"
+		
+		2 "mom2:skinCluster5" "weightList[100].weights[36]" " 0.021335294470191002"
+		
+		2 "mom2:skinCluster5" "weightList[100].weights[37]" " 0.0053318775818817525"
+		
+		2 "mom2:skinCluster5" "weightList[100].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[100].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[101].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[3]" " 0.0051348887864950494"
+		
+		2 "mom2:skinCluster5" "weightList[101].weights[4]" " 0.9789630627964212"
+		2 "mom2:skinCluster5" "weightList[101].weights[5]" " 0.0077193983407479547"
+		
+		2 "mom2:skinCluster5" "weightList[101].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[35]" " 0.0010384047572673698"
+		
+		2 "mom2:skinCluster5" "weightList[101].weights[36]" " 0.0071442453190684319"
+		
+		2 "mom2:skinCluster5" "weightList[101].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[101].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[102].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[3]" " 0.0028904688218811835"
+		
+		2 "mom2:skinCluster5" "weightList[102].weights[4]" " 0.99565279713140242"
+		
+		2 "mom2:skinCluster5" "weightList[102].weights[5]" " 0.00070634861244626686"
+		
+		2 "mom2:skinCluster5" "weightList[102].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[36]" " 0.00066642987076193094"
+		
+		2 "mom2:skinCluster5" "weightList[102].weights[37]" " 8.3955563508282576e-05"
+		
+		2 "mom2:skinCluster5" "weightList[102].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[102].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[109].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[5]" " 0.25814195380905103"
+		
+		2 "mom2:skinCluster5" "weightList[109].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[29]" " 9.2964308472157783e-05"
+		
+		2 "mom2:skinCluster5" "weightList[109].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[35]" " 0.74176508188247681"
+		
+		2 "mom2:skinCluster5" "weightList[109].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[109].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[110].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[5]" " 0.37131580294034022"
+		
+		2 "mom2:skinCluster5" "weightList[110].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[29]" " 8.4978256509638361e-06"
+		
+		2 "mom2:skinCluster5" "weightList[110].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[35]" " 0.62867569923400879"
+		
+		2 "mom2:skinCluster5" "weightList[110].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[110].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[111].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[5]" " 0.1049332260076922"
+		2 "mom2:skinCluster5" "weightList[111].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[29]" " 0.00051057858731931994"
+		
+		2 "mom2:skinCluster5" "weightList[111].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[35]" " 0.64745648596733529"
+		
+		2 "mom2:skinCluster5" "weightList[111].weights[36]" " 0.22570608556270599"
+		
+		2 "mom2:skinCluster5" "weightList[111].weights[37]" " 0.021393623874947233"
+		
+		2 "mom2:skinCluster5" "weightList[111].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[111].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[112].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[3]" " 0.016992255126501401"
+		
+		2 "mom2:skinCluster5" "weightList[112].weights[4]" " 0.94274309100853904"
+		
+		2 "mom2:skinCluster5" "weightList[112].weights[5]" " 0.021798399394948483"
+		
+		2 "mom2:skinCluster5" "weightList[112].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[36]" " 0.018352840095758438"
+		
+		2 "mom2:skinCluster5" "weightList[112].weights[37]" " 0.00011341437425269197"
+		
+		2 "mom2:skinCluster5" "weightList[112].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[112].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[113].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[3]" " 0.015501952321071637"
+		
+		2 "mom2:skinCluster5" "weightList[113].weights[4]" " 0.93246396344674165"
+		
+		2 "mom2:skinCluster5" "weightList[113].weights[5]" " 0.025243326136779855"
+		
+		2 "mom2:skinCluster5" "weightList[113].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[36]" " 0.026475859805941582"
+		
+		2 "mom2:skinCluster5" "weightList[113].weights[37]" " 0.00031489828946524461"
+		
+		2 "mom2:skinCluster5" "weightList[113].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[113].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[114].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[3]" " 0.013131630475389296"
+		
+		2 "mom2:skinCluster5" "weightList[114].weights[4]" " 0.94892816058284746"
+		
+		2 "mom2:skinCluster5" "weightList[114].weights[5]" " 0.030928183633579777"
+		
+		2 "mom2:skinCluster5" "weightList[114].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[36]" " 0.0069761769846081734"
+		
+		2 "mom2:skinCluster5" "weightList[114].weights[37]" " 3.5848323575263188e-05"
+		
+		2 "mom2:skinCluster5" "weightList[114].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[114].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[115].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[2]" " 0.0036511229099141602"
+		
+		2 "mom2:skinCluster5" "weightList[115].weights[3]" " 0.0043650592090309481"
+		
+		2 "mom2:skinCluster5" "weightList[115].weights[4]" " 0.96984697221507932"
+		
+		2 "mom2:skinCluster5" "weightList[115].weights[5]" " 1.1014792128577822e-05"
+		
+		2 "mom2:skinCluster5" "weightList[115].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[36]" " 0.022125830873847008"
+		
+		2 "mom2:skinCluster5" "weightList[115].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[115].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[126].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[2]" " 0.011520666549007148"
+		
+		2 "mom2:skinCluster5" "weightList[126].weights[3]" " 0.0025844938518953071"
+		
+		2 "mom2:skinCluster5" "weightList[126].weights[4]" " 0.8787171160990952"
+		2 "mom2:skinCluster5" "weightList[126].weights[5]" " 0.10711889732448403"
+		
+		2 "mom2:skinCluster5" "weightList[126].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[37]" " 5.8826175518333912e-05"
+		
+		2 "mom2:skinCluster5" "weightList[126].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[126].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[127].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[2]" " 0.00080507448274284681"
+		
+		2 "mom2:skinCluster5" "weightList[127].weights[3]" " 0.00022374165978009919"
+		
+		2 "mom2:skinCluster5" "weightList[127].weights[4]" " 0.055708627926767118"
+		
+		2 "mom2:skinCluster5" "weightList[127].weights[5]" " 0.94294863724237543"
+		
+		2 "mom2:skinCluster5" "weightList[127].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[37]" " 0.00031391868833452463"
+		
+		2 "mom2:skinCluster5" "weightList[127].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[127].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[128].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[2]" " 8.8225516881247808e-05"
+		
+		2 "mom2:skinCluster5" "weightList[128].weights[3]" " 0.0001659497769451978"
+		
+		2 "mom2:skinCluster5" "weightList[128].weights[4]" " 0.37555779936729733"
+		
+		2 "mom2:skinCluster5" "weightList[128].weights[5]" " 0.61398812834762329"
+		
+		2 "mom2:skinCluster5" "weightList[128].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[37]" " 0.010199896991252899"
+		
+		2 "mom2:skinCluster5" "weightList[128].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[128].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[129].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[4]" " 0.27264680668045027"
+		
+		2 "mom2:skinCluster5" "weightList[129].weights[5]" " 0.090766336111640922"
+		
+		2 "mom2:skinCluster5" "weightList[129].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[34]" " 2.8217014826162566e-05"
+		
+		2 "mom2:skinCluster5" "weightList[129].weights[35]" " 0.60762009714160137"
+		
+		2 "mom2:skinCluster5" "weightList[129].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[37]" " 0.028938543051481247"
+		
+		2 "mom2:skinCluster5" "weightList[129].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[129].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[130].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[5]" " 0.081276515146291167"
+		
+		2 "mom2:skinCluster5" "weightList[130].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[29]" " 8.290776543184521e-05"
+		
+		2 "mom2:skinCluster5" "weightList[130].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[35]" " 0.53437724042979917"
+		
+		2 "mom2:skinCluster5" "weightList[130].weights[36]" " 0.38426333665847778"
+		
+		2 "mom2:skinCluster5" "weightList[130].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[130].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[131].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[5]" " 0.24056829391764054"
+		
+		2 "mom2:skinCluster5" "weightList[131].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[29]" " 4.653228344326e-07"
+		
+		2 "mom2:skinCluster5" "weightList[131].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[35]" " 0.67530906200408936"
+		
+		2 "mom2:skinCluster5" "weightList[131].weights[36]" " 0.070896478060307036"
+		
+		2 "mom2:skinCluster5" "weightList[131].weights[37]" " 0.013225700695128654"
+		
+		2 "mom2:skinCluster5" "weightList[131].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[131].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[132].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[5]" " 0.28012238508701903"
+		
+		2 "mom2:skinCluster5" "weightList[132].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[29]" " 3.122663440038251e-07"
+		
+		2 "mom2:skinCluster5" "weightList[132].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[35]" " 0.71987730264663696"
+		
+		2 "mom2:skinCluster5" "weightList[132].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[132].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[138].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[1]" " 0.00081593232172414419"
+		
+		2 "mom2:skinCluster5" "weightList[138].weights[2]" " 0.0011244278673285995"
+		
+		2 "mom2:skinCluster5" "weightList[138].weights[3]" " 0.0339929731669249"
+		2 "mom2:skinCluster5" "weightList[138].weights[4]" " 0.012566668074533834"
+		
+		2 "mom2:skinCluster5" "weightList[138].weights[5]" " 0.95149999856948853"
+		
+		2 "mom2:skinCluster5" "weightList[138].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[138].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[145].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[5]" " 0.95892285255002818"
+		
+		2 "mom2:skinCluster5" "weightList[145].weights[6]" " 0.0077490168623626232"
+		
+		2 "mom2:skinCluster5" "weightList[145].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[29]" " 8.264499966431124e-05"
+		
+		2 "mom2:skinCluster5" "weightList[145].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[33]" " 4.083486544459447e-07"
+		
+		2 "mom2:skinCluster5" "weightList[145].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[35]" " 0.033245077239290481"
+		
+		2 "mom2:skinCluster5" "weightList[145].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[145].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[146].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[5]" " 0.69547057232433918"
+		
+		2 "mom2:skinCluster5" "weightList[146].weights[6]" " 0.0085991853848099709"
+		
+		2 "mom2:skinCluster5" "weightList[146].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[29]" " 2.8868304921128555e-07"
+		
+		2 "mom2:skinCluster5" "weightList[146].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[35]" " 0.29592995360780167"
+		
+		2 "mom2:skinCluster5" "weightList[146].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[146].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[147].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[5]" " 0.35921873838980745"
+		
+		2 "mom2:skinCluster5" "weightList[147].weights[6]" " 0.00085736339678987861"
+		
+		2 "mom2:skinCluster5" "weightList[147].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[29]" " 6.7724946613803148e-08"
+		
+		2 "mom2:skinCluster5" "weightList[147].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[35]" " 0.63992383048845602"
+		
+		2 "mom2:skinCluster5" "weightList[147].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[147].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[148].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[4]" " 0.14148309897506919"
+		
+		2 "mom2:skinCluster5" "weightList[148].weights[5]" " 0.64448053199360633"
+		
+		2 "mom2:skinCluster5" "weightList[148].weights[6]" " 0.18283726274967194"
+		
+		2 "mom2:skinCluster5" "weightList[148].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[29]" " 0.011969490131189683"
+		
+		2 "mom2:skinCluster5" "weightList[148].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[35]" " 0.019229616150462925"
+		
+		2 "mom2:skinCluster5" "weightList[148].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[148].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[149].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[3]" " 0.0013168495148541117"
+		
+		2 "mom2:skinCluster5" "weightList[149].weights[4]" " 0.21908213367936114"
+		
+		2 "mom2:skinCluster5" "weightList[149].weights[5]" " 0.7656678195311678"
+		2 "mom2:skinCluster5" "weightList[149].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[29]" " 0.0053901175556695232"
+		
+		2 "mom2:skinCluster5" "weightList[149].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[35]" " 0.0085430797189474106"
+		
+		2 "mom2:skinCluster5" "weightList[149].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[149].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[157].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[4]" " 0.62908427243309106"
+		
+		2 "mom2:skinCluster5" "weightList[157].weights[5]" " 0.29759885544700543"
+		
+		2 "mom2:skinCluster5" "weightList[157].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[35]" " 0.073316872119903564"
+		
+		2 "mom2:skinCluster5" "weightList[157].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[157].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[158].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[4]" " 0.71101270146902429"
+		
+		2 "mom2:skinCluster5" "weightList[158].weights[5]" " 0.2813140577985741"
+		2 "mom2:skinCluster5" "weightList[158].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[35]" " 0.0076732407324016094"
+		
+		2 "mom2:skinCluster5" "weightList[158].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[158].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[159].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[3]" " 5.5032568481345078e-07"
+		
+		2 "mom2:skinCluster5" "weightList[159].weights[4]" " 0.74509758544474547"
+		
+		2 "mom2:skinCluster5" "weightList[159].weights[5]" " 0.24929873658237844"
+		
+		2 "mom2:skinCluster5" "weightList[159].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[35]" " 0.0056031276471912861"
+		
+		2 "mom2:skinCluster5" "weightList[159].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[159].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[160].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[4]" " 0.70034563215220436"
+		
+		2 "mom2:skinCluster5" "weightList[160].weights[5]" " 0.055669583524820085"
+		
+		2 "mom2:skinCluster5" "weightList[160].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[35]" " 0.11494255274303203"
+		
+		2 "mom2:skinCluster5" "weightList[160].weights[36]" " 0.12539893119566051"
+		
+		2 "mom2:skinCluster5" "weightList[160].weights[37]" " 0.0036433003842830658"
+		
+		2 "mom2:skinCluster5" "weightList[160].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[160].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[161].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[5]" " 0.31114206278671136"
+		
+		2 "mom2:skinCluster5" "weightList[161].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[29]" " 0.002994291106147975"
+		
+		2 "mom2:skinCluster5" "weightList[161].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[35]" " 0.49253478646278381"
+		
+		2 "mom2:skinCluster5" "weightList[161].weights[36]" " 0.1609359298793544"
+		
+		2 "mom2:skinCluster5" "weightList[161].weights[37]" " 0.032392929765002507"
+		
+		2 "mom2:skinCluster5" "weightList[161].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[161].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[162].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[4]" " 0.018413908247642222"
+		
+		2 "mom2:skinCluster5" "weightList[162].weights[5]" " 0.53685368063667871"
+		
+		2 "mom2:skinCluster5" "weightList[162].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[29]" " 0.01064465781978066"
+		
+		2 "mom2:skinCluster5" "weightList[162].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[35]" " 0.43408775329589844"
+		
+		2 "mom2:skinCluster5" "weightList[162].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[162].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[163].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[4]" " 0.0087100556845343159"
+		
+		2 "mom2:skinCluster5" "weightList[163].weights[5]" " 0.40491152991981688"
+		
+		2 "mom2:skinCluster5" "weightList[163].weights[6]" " 0.35821178555488586"
+		
+		2 "mom2:skinCluster5" "weightList[163].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[29]" " 0.0033705675283708845"
+		
+		2 "mom2:skinCluster5" "weightList[163].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[35]" " 0.22479606131239205"
+		
+		2 "mom2:skinCluster5" "weightList[163].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[163].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[164].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[4]" " 0.10751655632355457"
+		
+		2 "mom2:skinCluster5" "weightList[164].weights[5]" " 0.58225618002165713"
+		
+		2 "mom2:skinCluster5" "weightList[164].weights[6]" " 0.078358829021453857"
+		
+		2 "mom2:skinCluster5" "weightList[164].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[29]" " 0.00077498148817082223"
+		
+		2 "mom2:skinCluster5" "weightList[164].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[35]" " 0.23109345314516358"
+		
+		2 "mom2:skinCluster5" "weightList[164].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[164].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[165].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[4]" " 0.12021226906899339"
+		
+		2 "mom2:skinCluster5" "weightList[165].weights[5]" " 0.7194907176823484"
+		2 "mom2:skinCluster5" "weightList[165].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[29]" " 0.00023782941267488404"
+		
+		2 "mom2:skinCluster5" "weightList[165].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[35]" " 0.16005918383598328"
+		
+		2 "mom2:skinCluster5" "weightList[165].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[165].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[166].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[4]" " 0.46278646229417925"
+		
+		2 "mom2:skinCluster5" "weightList[166].weights[5]" " 0.44509778827546981"
+		
+		2 "mom2:skinCluster5" "weightList[166].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[29]" " 8.5517122092925721e-09"
+		
+		2 "mom2:skinCluster5" "weightList[166].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[35]" " 0.092115737497806549"
+		
+		2 "mom2:skinCluster5" "weightList[166].weights[36]" " 3.3808322091509937e-09"
+		
+		2 "mom2:skinCluster5" "weightList[166].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[166].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[167].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[4]" " 0.51453889244559836"
+		
+		2 "mom2:skinCluster5" "weightList[167].weights[5]" " 0.4274161624884264"
+		2 "mom2:skinCluster5" "weightList[167].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[29]" " 9.9189429748534516e-07"
+		
+		2 "mom2:skinCluster5" "weightList[167].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[35]" " 0.058043953031301498"
+		
+		2 "mom2:skinCluster5" "weightList[167].weights[36]" " 1.4037624307217047e-10"
+		
+		2 "mom2:skinCluster5" "weightList[167].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[167].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[168].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[4]" " 0.55990160199942407"
+		
+		2 "mom2:skinCluster5" "weightList[168].weights[5]" " 0.43409230575324526"
+		
+		2 "mom2:skinCluster5" "weightList[168].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[29]" " 1.5125148266333577e-05"
+		
+		2 "mom2:skinCluster5" "weightList[168].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[35]" " 0.0059909666888415813"
+		
+		2 "mom2:skinCluster5" "weightList[168].weights[36]" " 4.1022286286287032e-10"
+		
+		2 "mom2:skinCluster5" "weightList[168].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[168].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[169].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[4]" " 0.42039407525549616"
+		
+		2 "mom2:skinCluster5" "weightList[169].weights[5]" " 0.22398903451801006"
+		
+		2 "mom2:skinCluster5" "weightList[169].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[35]" " 0.26448976987097839"
+		
+		2 "mom2:skinCluster5" "weightList[169].weights[36]" " 0.088869329939036304"
+		
+		2 "mom2:skinCluster5" "weightList[169].weights[37]" " 0.0022577904164791107"
+		
+		2 "mom2:skinCluster5" "weightList[169].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[169].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[170].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[5]" " 0.089944508925772174"
+		
+		2 "mom2:skinCluster5" "weightList[170].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[35]" " 0.3961176872253418"
+		
+		2 "mom2:skinCluster5" "weightList[170].weights[36]" " 0.49501585086400723"
+		
+		2 "mom2:skinCluster5" "weightList[170].weights[37]" " 0.018921952984878785"
+		
+		2 "mom2:skinCluster5" "weightList[170].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[170].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[171].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[5]" " 0.43375381801040858"
+		
+		2 "mom2:skinCluster5" "weightList[171].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[29]" " 0.0091414752253702238"
+		
+		2 "mom2:skinCluster5" "weightList[171].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[35]" " 0.55710470676422119"
+		
+		2 "mom2:skinCluster5" "weightList[171].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[171].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[172].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[5]" " 0.41998557617506388"
+		
+		2 "mom2:skinCluster5" "weightList[172].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[29]" " 0.00014706084886190537"
+		
+		2 "mom2:skinCluster5" "weightList[172].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[35]" " 0.57986736297607422"
+		
+		2 "mom2:skinCluster5" "weightList[172].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[172].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[173].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[5]" " 0.41089081764221191"
+		
+		2 "mom2:skinCluster5" "weightList[173].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[35]" " 0.58910918235778809"
+		
+		2 "mom2:skinCluster5" "weightList[173].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[173].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[174].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[5]" " 0.439306487901999"
+		2 "mom2:skinCluster5" "weightList[174].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[29]" " 7.8178803190970069e-06"
+		
+		2 "mom2:skinCluster5" "weightList[174].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[35]" " 0.56068569421768188"
+		
+		2 "mom2:skinCluster5" "weightList[174].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[174].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[175].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[5]" " 0.516352445138752"
+		2 "mom2:skinCluster5" "weightList[175].weights[6]" " 0.0045806593261659145"
+		
+		2 "mom2:skinCluster5" "weightList[175].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[29]" " 1.0898352174193838e-07"
+		
+		2 "mom2:skinCluster5" "weightList[175].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[35]" " 0.47906678655156032"
+		
+		2 "mom2:skinCluster5" "weightList[175].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[175].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[176].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[5]" " 0.33087561719067227"
+		
+		2 "mom2:skinCluster5" "weightList[176].weights[6]" " 1.1628944207586756e-07"
+		
+		2 "mom2:skinCluster5" "weightList[176].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[29]" " 3.7582892514723498e-08"
+		
+		2 "mom2:skinCluster5" "weightList[176].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[35]" " 0.6691241678315305"
+		
+		2 "mom2:skinCluster5" "weightList[176].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[37]" " 6.1105462574315799e-08"
+		
+		2 "mom2:skinCluster5" "weightList[176].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[176].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[177].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[5]" " 0.22744756532398525"
+		
+		2 "mom2:skinCluster5" "weightList[177].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[29]" " 1.1553931384214501e-07"
+		
+		2 "mom2:skinCluster5" "weightList[177].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[35]" " 0.76981121301651001"
+		
+		2 "mom2:skinCluster5" "weightList[177].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[37]" " 0.0027411061201909111"
+		
+		2 "mom2:skinCluster5" "weightList[177].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[177].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[178].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[5]" " 0.26803865778405828"
+		
+		2 "mom2:skinCluster5" "weightList[178].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[35]" " 0.7077897617823059"
+		
+		2 "mom2:skinCluster5" "weightList[178].weights[36]" " 0.013024313375353813"
+		
+		2 "mom2:skinCluster5" "weightList[178].weights[37]" " 0.011147267058281925"
+		
+		2 "mom2:skinCluster5" "weightList[178].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[178].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[179].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[5]" " 0.30270609522475578"
+		
+		2 "mom2:skinCluster5" "weightList[179].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[29]" " 7.3989931533156973e-09"
+		
+		2 "mom2:skinCluster5" "weightList[179].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[35]" " 0.61348641885169286"
+		
+		2 "mom2:skinCluster5" "weightList[179].weights[36]" " 0.06713569164276123"
+		
+		2 "mom2:skinCluster5" "weightList[179].weights[37]" " 0.016671786881796991"
+		
+		2 "mom2:skinCluster5" "weightList[179].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[179].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[180].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[5]" " 0.2406212568535788"
+		2 "mom2:skinCluster5" "weightList[180].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[29]" " 1.565156400627105e-07"
+		
+		2 "mom2:skinCluster5" "weightList[180].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[35]" " 0.62366610765457153"
+		
+		2 "mom2:skinCluster5" "weightList[180].weights[36]" " 0.13571247897620961"
+		
+		2 "mom2:skinCluster5" "weightList[180].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[180].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[181].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[5]" " 0.3765730458005962"
+		2 "mom2:skinCluster5" "weightList[181].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[29]" " 1.2207263171457842e-06"
+		
+		2 "mom2:skinCluster5" "weightList[181].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[35]" " 0.62308681011199951"
+		
+		2 "mom2:skinCluster5" "weightList[181].weights[36]" " 0.00033892336108715376"
+		
+		2 "mom2:skinCluster5" "weightList[181].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[181].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[182].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[5]" " 0.3718501881262577"
+		2 "mom2:skinCluster5" "weightList[182].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[29]" " 5.3919881310265946e-05"
+		
+		2 "mom2:skinCluster5" "weightList[182].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[35]" " 0.62809085845947266"
+		
+		2 "mom2:skinCluster5" "weightList[182].weights[36]" " 5.0335329593709504e-06"
+		
+		2 "mom2:skinCluster5" "weightList[182].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[182].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[183].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[4]" " 0.015640975732052125"
+		
+		2 "mom2:skinCluster5" "weightList[183].weights[5]" " 0.52918450108789461"
+		
+		2 "mom2:skinCluster5" "weightList[183].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[29]" " 1.6546815927178111e-07"
+		
+		2 "mom2:skinCluster5" "weightList[183].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[35]" " 0.41888886690139771"
+		
+		2 "mom2:skinCluster5" "weightList[183].weights[36]" " 0.036285490810496292"
+		
+		2 "mom2:skinCluster5" "weightList[183].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[183].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[184].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[4]" " 0.28563608562573956"
+		
+		2 "mom2:skinCluster5" "weightList[184].weights[5]" " 0.69033821752221469"
+		
+		2 "mom2:skinCluster5" "weightList[184].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[35]" " 0.023266160860657692"
+		
+		2 "mom2:skinCluster5" "weightList[184].weights[36]" " 0.00075953599138799534"
+		
+		2 "mom2:skinCluster5" "weightList[184].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[184].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[185].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[4]" " 0.25892168071313892"
+		
+		2 "mom2:skinCluster5" "weightList[185].weights[5]" " 0.66353882927921515"
+		
+		2 "mom2:skinCluster5" "weightList[185].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[29]" " 1.4676838843456902e-06"
+		
+		2 "mom2:skinCluster5" "weightList[185].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[35]" " 0.076774105429649353"
+		
+		2 "mom2:skinCluster5" "weightList[185].weights[36]" " 0.00076391689411227013"
+		
+		2 "mom2:skinCluster5" "weightList[185].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[185].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[186].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[4]" " 0.27183425533224953"
+		
+		2 "mom2:skinCluster5" "weightList[186].weights[5]" " 0.72304564710657782"
+		
+		2 "mom2:skinCluster5" "weightList[186].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[29]" " 3.1298612283863446e-05"
+		
+		2 "mom2:skinCluster5" "weightList[186].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[35]" " 0.0021143343765288591"
+		
+		2 "mom2:skinCluster5" "weightList[186].weights[36]" " 0.0029744645723599836"
+		
+		2 "mom2:skinCluster5" "weightList[186].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[186].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[187].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[5]" " 0.92293467458644329"
+		
+		2 "mom2:skinCluster5" "weightList[187].weights[6]" " 0.07706528902053833"
+		
+		2 "mom2:skinCluster5" "weightList[187].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[33]" " 3.6393018376656983e-08"
+		
+		2 "mom2:skinCluster5" "weightList[187].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[187].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[188].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[5]" " 0.87031203755167785"
+		
+		2 "mom2:skinCluster5" "weightList[188].weights[6]" " 0.012367686256766319"
+		
+		2 "mom2:skinCluster5" "weightList[188].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[33]" " 6.9413244041527378e-09"
+		
+		2 "mom2:skinCluster5" "weightList[188].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[35]" " 0.1173202692502314"
+		
+		2 "mom2:skinCluster5" "weightList[188].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[188].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[189].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[5]" " 0.66463895117661054"
+		
+		2 "mom2:skinCluster5" "weightList[189].weights[6]" " 0.00044185874867253006"
+		
+		2 "mom2:skinCluster5" "weightList[189].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[29]" " 5.9877031490729284e-06"
+		
+		2 "mom2:skinCluster5" "weightList[189].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[35]" " 0.33491320237156785"
+		
+		2 "mom2:skinCluster5" "weightList[189].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[189].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[190].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[5]" " 0.50349512696266174"
+		
+		2 "mom2:skinCluster5" "weightList[190].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[35]" " 0.49650487303733826"
+		
+		2 "mom2:skinCluster5" "weightList[190].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[190].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[191].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[5]" " 0.29067714789925203"
+		
+		2 "mom2:skinCluster5" "weightList[191].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[29]" " 2.8034629237904898e-07"
+		
+		2 "mom2:skinCluster5" "weightList[191].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[35]" " 0.70932257175445557"
+		
+		2 "mom2:skinCluster5" "weightList[191].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[191].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[192].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[5]" " 0.24958541168016632"
+		
+		2 "mom2:skinCluster5" "weightList[192].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[35]" " 0.75025022029876709"
+		
+		2 "mom2:skinCluster5" "weightList[192].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[37]" " 0.00016436802106657811"
+		
+		2 "mom2:skinCluster5" "weightList[192].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[192].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[193].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[5]" " 0.22945472607185563"
+		
+		2 "mom2:skinCluster5" "weightList[193].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[35]" " 0.73001887640188023"
+		
+		2 "mom2:skinCluster5" "weightList[193].weights[36]" " 0.040526397526264191"
+		
+		2 "mom2:skinCluster5" "weightList[193].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[193].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[194].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[5]" " 0.34968491389723189"
+		
+		2 "mom2:skinCluster5" "weightList[194].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[35]" " 0.64257353544235229"
+		
+		2 "mom2:skinCluster5" "weightList[194].weights[36]" " 3.5466220474757006e-10"
+		
+		2 "mom2:skinCluster5" "weightList[194].weights[37]" " 0.0077415503057536089"
+		
+		2 "mom2:skinCluster5" "weightList[194].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[194].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[195].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[5]" " 0.37112043612736795"
+		
+		2 "mom2:skinCluster5" "weightList[195].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[29]" " 2.551720705263311e-07"
+		
+		2 "mom2:skinCluster5" "weightList[195].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[35]" " 0.62887930870056152"
+		
+		2 "mom2:skinCluster5" "weightList[195].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[195].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[196].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[5]" " 0.34259623289108276"
+		
+		2 "mom2:skinCluster5" "weightList[196].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[35]" " 0.65740376710891724"
+		
+		2 "mom2:skinCluster5" "weightList[196].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[196].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[197].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[4]" " 0.23749599617897876"
+		
+		2 "mom2:skinCluster5" "weightList[197].weights[5]" " 0.61746173339903943"
+		
+		2 "mom2:skinCluster5" "weightList[197].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[35]" " 0.14504227042198181"
+		
+		2 "mom2:skinCluster5" "weightList[197].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[197].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[198].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[4]" " 0.21048199745398172"
+		
+		2 "mom2:skinCluster5" "weightList[198].weights[5]" " 0.60185439106382832"
+		
+		2 "mom2:skinCluster5" "weightList[198].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[29]" " 1.8942114232141721e-07"
+		
+		2 "mom2:skinCluster5" "weightList[198].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[35]" " 0.15767356753349304"
+		
+		2 "mom2:skinCluster5" "weightList[198].weights[36]" " 0.029989854527554677"
+		
+		2 "mom2:skinCluster5" "weightList[198].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[198].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[199].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[4]" " 0.17695254729633411"
+		
+		2 "mom2:skinCluster5" "weightList[199].weights[5]" " 0.52985185463290629"
+		
+		2 "mom2:skinCluster5" "weightList[199].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[29]" " 1.6360048420337402e-06"
+		
+		2 "mom2:skinCluster5" "weightList[199].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[35]" " 0.021921496838331223"
+		
+		2 "mom2:skinCluster5" "weightList[199].weights[36]" " 0.27127246522758636"
+		
+		2 "mom2:skinCluster5" "weightList[199].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[199].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[256].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[35]" " 0.013028975576162338"
+		
+		2 "mom2:skinCluster5" "weightList[256].weights[36]" " 0.98697102442383766"
+		
+		2 "mom2:skinCluster5" "weightList[256].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[256].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[257].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[35]" " 0.022156842052936554"
+		
+		2 "mom2:skinCluster5" "weightList[257].weights[36]" " 0.97784315794706345"
+		
+		2 "mom2:skinCluster5" "weightList[257].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[257].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[258].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[35]" " 0.021886235103011131"
+		
+		2 "mom2:skinCluster5" "weightList[258].weights[36]" " 0.97811376489698887"
+		
+		2 "mom2:skinCluster5" "weightList[258].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[258].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[259].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[35]" " 0.017026778310537338"
+		
+		2 "mom2:skinCluster5" "weightList[259].weights[36]" " 0.98297322168946266"
+		
+		2 "mom2:skinCluster5" "weightList[259].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[259].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[260].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[35]" " 0.000797271728515625"
+		
+		2 "mom2:skinCluster5" "weightList[260].weights[36]" " 0.99920272827148438"
+		
+		2 "mom2:skinCluster5" "weightList[260].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[260].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[269].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[35]" " 0.0038571397308260202"
+		
+		2 "mom2:skinCluster5" "weightList[269].weights[36]" " 0.99614286026917398"
+		
+		2 "mom2:skinCluster5" "weightList[269].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[269].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[270].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[5]" " 0.007222956038025358"
+		
+		2 "mom2:skinCluster5" "weightList[270].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[29]" " 6.1808279111853924e-05"
+		
+		2 "mom2:skinCluster5" "weightList[270].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[35]" " 0.13670028746128082"
+		
+		2 "mom2:skinCluster5" "weightList[270].weights[36]" " 0.85248620715470802"
+		
+		2 "mom2:skinCluster5" "weightList[270].weights[37]" " 0.0035287410668739935"
+		
+		2 "mom2:skinCluster5" "weightList[270].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[270].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[271].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[5]" " 0.0057679755400790534"
+		
+		2 "mom2:skinCluster5" "weightList[271].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[29]" " 0.00033958698611469257"
+		
+		2 "mom2:skinCluster5" "weightList[271].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[35]" " 0.2463435741951113"
+		
+		2 "mom2:skinCluster5" "weightList[271].weights[36]" " 0.74459987878799438"
+		
+		2 "mom2:skinCluster5" "weightList[271].weights[37]" " 0.0029489844907005891"
+		
+		2 "mom2:skinCluster5" "weightList[271].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[271].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[272].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[5]" " 0.0071761011136326569"
+		
+		2 "mom2:skinCluster5" "weightList[272].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[29]" " 0.0024645742677381018"
+		
+		2 "mom2:skinCluster5" "weightList[272].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[35]" " 0.2075002198366161"
+		
+		2 "mom2:skinCluster5" "weightList[272].weights[36]" " 0.7822756471961233"
+		
+		2 "mom2:skinCluster5" "weightList[272].weights[37]" " 0.00058345758588984609"
+		
+		2 "mom2:skinCluster5" "weightList[272].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[272].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[273].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[4]" " 0.0079784703189430817"
+		
+		2 "mom2:skinCluster5" "weightList[273].weights[5]" " 0.0077076678975327778"
+		
+		2 "mom2:skinCluster5" "weightList[273].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[35]" " 0.093278847634792328"
+		
+		2 "mom2:skinCluster5" "weightList[273].weights[36]" " 0.88743355375901511"
+		
+		2 "mom2:skinCluster5" "weightList[273].weights[37]" " 0.003601460389716659"
+		
+		2 "mom2:skinCluster5" "weightList[273].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[273].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[274].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[35]" " 0.042788200080394745"
+		
+		2 "mom2:skinCluster5" "weightList[274].weights[36]" " 0.95721179991960526"
+		
+		2 "mom2:skinCluster5" "weightList[274].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[274].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[275].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[3]" " 0.0044649312424227296"
+		
+		2 "mom2:skinCluster5" "weightList[275].weights[4]" " 0.3012017542153459"
+		2 "mom2:skinCluster5" "weightList[275].weights[5]" " 0.014574353511450321"
+		
+		2 "mom2:skinCluster5" "weightList[275].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[35]" " 0.0055301140039561046"
+		
+		2 "mom2:skinCluster5" "weightList[275].weights[36]" " 0.67422884702682495"
+		
+		2 "mom2:skinCluster5" "weightList[275].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[275].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[277].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[3]" " 0.030742546810987235"
+		
+		2 "mom2:skinCluster5" "weightList[277].weights[4]" " 0.036601974273773839"
+		
+		2 "mom2:skinCluster5" "weightList[277].weights[5]" " 0.045462667879628153"
+		
+		2 "mom2:skinCluster5" "weightList[277].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[35]" " 0.048761452698208439"
+		
+		2 "mom2:skinCluster5" "weightList[277].weights[36]" " 0.83843135833740234"
+		
+		2 "mom2:skinCluster5" "weightList[277].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[277].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[278].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[4]" " 0.040502490323052559"
+		
+		2 "mom2:skinCluster5" "weightList[278].weights[5]" " 0.051485074957433485"
+		
+		2 "mom2:skinCluster5" "weightList[278].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[35]" " 0.057222766504606129"
+		
+		2 "mom2:skinCluster5" "weightList[278].weights[36]" " 0.81568628549575806"
+		
+		2 "mom2:skinCluster5" "weightList[278].weights[37]" " 0.035103382719149791"
+		
+		2 "mom2:skinCluster5" "weightList[278].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[278].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[279].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[4]" " 0.0055207367325299734"
+		
+		2 "mom2:skinCluster5" "weightList[279].weights[5]" " 0.0075226392592159649"
+		
+		2 "mom2:skinCluster5" "weightList[279].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[35]" " 0.0087315133307329842"
+		
+		2 "mom2:skinCluster5" "weightList[279].weights[36]" " 0.97360026836395264"
+		
+		2 "mom2:skinCluster5" "weightList[279].weights[37]" " 0.0046248423135684382"
+		
+		2 "mom2:skinCluster5" "weightList[279].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[279].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[282].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[35]" " 0.071291692554950714"
+		
+		2 "mom2:skinCluster5" "weightList[282].weights[36]" " 0.92870830744504929"
+		
+		2 "mom2:skinCluster5" "weightList[282].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[282].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[283].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[5]" " 0.00034772739052257791"
+		
+		2 "mom2:skinCluster5" "weightList[283].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[29]" " 4.4817395312474203e-05"
+		
+		2 "mom2:skinCluster5" "weightList[283].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[35]" " 0.11085499078035355"
+		
+		2 "mom2:skinCluster5" "weightList[283].weights[36]" " 0.88865305571858932"
+		
+		2 "mom2:skinCluster5" "weightList[283].weights[37]" " 9.9408715222116647e-05"
+		
+		2 "mom2:skinCluster5" "weightList[283].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[283].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[293].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[3]" " 1.0238177905842193e-07"
+		
+		2 "mom2:skinCluster5" "weightList[293].weights[4]" " 0.97347915324869927"
+		
+		2 "mom2:skinCluster5" "weightList[293].weights[5]" " 0.014989610333278587"
+		
+		2 "mom2:skinCluster5" "weightList[293].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[35]" " 0.011529473587870598"
+		
+		2 "mom2:skinCluster5" "weightList[293].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[37]" " 1.6604483725040443e-06"
+		
+		2 "mom2:skinCluster5" "weightList[293].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[293].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[294].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[3]" " 3.0021987114381322e-09"
+		
+		2 "mom2:skinCluster5" "weightList[294].weights[4]" " 0.93391688424584174"
+		
+		2 "mom2:skinCluster5" "weightList[294].weights[5]" " 0.05327478404126984"
+		
+		2 "mom2:skinCluster5" "weightList[294].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[35]" " 0.01280825212597847"
+		
+		2 "mom2:skinCluster5" "weightList[294].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[37]" " 7.6584711287158719e-08"
+		
+		2 "mom2:skinCluster5" "weightList[294].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[294].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[295].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[4]" " 0.86937668343025132"
+		
+		2 "mom2:skinCluster5" "weightList[295].weights[5]" " 0.12835405301248329"
+		
+		2 "mom2:skinCluster5" "weightList[295].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[35]" " 0.0022687043529003859"
+		
+		2 "mom2:skinCluster5" "weightList[295].weights[36]" " 1.8445119727255082e-09"
+		
+		2 "mom2:skinCluster5" "weightList[295].weights[37]" " 5.5735985309111968e-07"
+		
+		2 "mom2:skinCluster5" "weightList[295].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[295].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[296].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[4]" " 0.59987365370837498"
+		
+		2 "mom2:skinCluster5" "weightList[296].weights[5]" " 0.33676698738450428"
+		
+		2 "mom2:skinCluster5" "weightList[296].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[35]" " 0.06332734227180481"
+		
+		2 "mom2:skinCluster5" "weightList[296].weights[36]" " 3.1423334113945102e-05"
+		
+		2 "mom2:skinCluster5" "weightList[296].weights[37]" " 5.9330120193804157e-07"
+		
+		2 "mom2:skinCluster5" "weightList[296].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[296].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[297].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[4]" " 0.26378501638104485"
+		
+		2 "mom2:skinCluster5" "weightList[297].weights[5]" " 0.54107727392518867"
+		
+		2 "mom2:skinCluster5" "weightList[297].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[35]" " 0.18833997845649719"
+		
+		2 "mom2:skinCluster5" "weightList[297].weights[36]" " 0.0067977312372693895"
+		
+		2 "mom2:skinCluster5" "weightList[297].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[297].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[298].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[4]" " 0.14992470989678189"
+		
+		2 "mom2:skinCluster5" "weightList[298].weights[5]" " 0.53692174949975535"
+		
+		2 "mom2:skinCluster5" "weightList[298].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[29]" " 3.839623110686428e-09"
+		
+		2 "mom2:skinCluster5" "weightList[298].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[35]" " 0.30524307489395142"
+		
+		2 "mom2:skinCluster5" "weightList[298].weights[36]" " 0.0079104618698883303"
+		
+		2 "mom2:skinCluster5" "weightList[298].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[298].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[299].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[4]" " 0.18656926036733237"
+		
+		2 "mom2:skinCluster5" "weightList[299].weights[5]" " 0.49637328567355893"
+		
+		2 "mom2:skinCluster5" "weightList[299].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[35]" " 0.28942844271659851"
+		
+		2 "mom2:skinCluster5" "weightList[299].weights[36]" " 0.027629011242510198"
+		
+		2 "mom2:skinCluster5" "weightList[299].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[299].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[300].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[4]" " 0.075467959581952807"
+		
+		2 "mom2:skinCluster5" "weightList[300].weights[5]" " 0.12523947602595734"
+		
+		2 "mom2:skinCluster5" "weightList[300].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[35]" " 0.79929256439208984"
+		
+		2 "mom2:skinCluster5" "weightList[300].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[300].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[301].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[5]" " 0.26249164342880249"
+		
+		2 "mom2:skinCluster5" "weightList[301].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[35]" " 0.73750835657119751"
+		
+		2 "mom2:skinCluster5" "weightList[301].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[301].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[302].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[5]" " 0.14917728002979089"
+		
+		2 "mom2:skinCluster5" "weightList[302].weights[6]" " 0.012046200739741874"
+		
+		2 "mom2:skinCluster5" "weightList[302].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[29]" " 0.1520545669889031"
+		
+		2 "mom2:skinCluster5" "weightList[302].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[35]" " 0.26561471819877625"
+		
+		2 "mom2:skinCluster5" "weightList[302].weights[36]" " 0.42110723404278788"
+		
+		2 "mom2:skinCluster5" "weightList[302].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[302].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[303].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[4]" " 0.18376339474062339"
+		
+		2 "mom2:skinCluster5" "weightList[303].weights[5]" " 0.55024568453316303"
+		
+		2 "mom2:skinCluster5" "weightList[303].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[29]" " 3.5178909046059886e-08"
+		
+		2 "mom2:skinCluster5" "weightList[303].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[35]" " 0.035299122333526611"
+		
+		2 "mom2:skinCluster5" "weightList[303].weights[36]" " 0.23069176321377791"
+		
+		2 "mom2:skinCluster5" "weightList[303].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[303].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[304].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[4]" " 0.16700383624945711"
+		
+		2 "mom2:skinCluster5" "weightList[304].weights[5]" " 0.50246730010002894"
+		
+		2 "mom2:skinCluster5" "weightList[304].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[29]" " 3.3533512237436678e-07"
+		
+		2 "mom2:skinCluster5" "weightList[304].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[35]" " 0.22921079397201538"
+		
+		2 "mom2:skinCluster5" "weightList[304].weights[36]" " 0.1013177343433762"
+		
+		2 "mom2:skinCluster5" "weightList[304].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[304].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[305].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[4]" " 0.18891764967113178"
+		
+		2 "mom2:skinCluster5" "weightList[305].weights[5]" " 0.52829538392534847"
+		
+		2 "mom2:skinCluster5" "weightList[305].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[29]" " 7.0538894168873867e-05"
+		
+		2 "mom2:skinCluster5" "weightList[305].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[35]" " 0.26032602787017822"
+		
+		2 "mom2:skinCluster5" "weightList[305].weights[36]" " 0.022390399639172609"
+		
+		2 "mom2:skinCluster5" "weightList[305].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[305].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[306].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[4]" " 0.29638250528880572"
+		
+		2 "mom2:skinCluster5" "weightList[306].weights[5]" " 0.69836698786994078"
+		
+		2 "mom2:skinCluster5" "weightList[306].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[29]" " 0.0030734945134310038"
+		
+		2 "mom2:skinCluster5" "weightList[306].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[35]" " 0.0021445448510348797"
+		
+		2 "mom2:skinCluster5" "weightList[306].weights[36]" " 3.2467476787698514e-05"
+		
+		2 "mom2:skinCluster5" "weightList[306].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[306].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[307].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[4]" " 0.4604726991861755"
+		2 "mom2:skinCluster5" "weightList[307].weights[5]" " 0.48731832681447318"
+		
+		2 "mom2:skinCluster5" "weightList[307].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[29]" " 1.4184473348929704e-08"
+		
+		2 "mom2:skinCluster5" "weightList[307].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[35]" " 0.052030976861715317"
+		
+		2 "mom2:skinCluster5" "weightList[307].weights[36]" " 0.00017798295316261018"
+		
+		2 "mom2:skinCluster5" "weightList[307].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[307].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[308].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[4]" " 0.64090574795618205"
+		
+		2 "mom2:skinCluster5" "weightList[308].weights[5]" " 0.34553734602168651"
+		
+		2 "mom2:skinCluster5" "weightList[308].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[35]" " 0.013556906022131443"
+		
+		2 "mom2:skinCluster5" "weightList[308].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[308].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[309].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[2]" " 0.00021505846159869903"
+		
+		2 "mom2:skinCluster5" "weightList[309].weights[3]" " 0.00021221299201757101"
+		
+		2 "mom2:skinCluster5" "weightList[309].weights[4]" " 0.69694794208039568"
+		
+		2 "mom2:skinCluster5" "weightList[309].weights[5]" " 0.23835904356800058"
+		
+		2 "mom2:skinCluster5" "weightList[309].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[35]" " 0.064265742897987366"
+		
+		2 "mom2:skinCluster5" "weightList[309].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[309].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[310].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[2]" " 0.01827276037980027"
+		
+		2 "mom2:skinCluster5" "weightList[310].weights[3]" " 0.021184074760396729"
+		
+		2 "mom2:skinCluster5" "weightList[310].weights[4]" " 0.94596722163852032"
+		
+		2 "mom2:skinCluster5" "weightList[310].weights[5]" " 0.00037010094238483201"
+		
+		2 "mom2:skinCluster5" "weightList[310].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[35]" " 0.014205842278897762"
+		
+		2 "mom2:skinCluster5" "weightList[310].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[310].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[350].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[3]" " 0.0069580643096718419"
+		
+		2 "mom2:skinCluster5" "weightList[350].weights[4]" " 0.41015747052619339"
+		
+		2 "mom2:skinCluster5" "weightList[350].weights[5]" " 0.58230938127413634"
+		
+		2 "mom2:skinCluster5" "weightList[350].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[35]" " 0.00057508388999849558"
+		
+		2 "mom2:skinCluster5" "weightList[350].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[350].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[351].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[4]" " 0.076353442109631617"
+		
+		2 "mom2:skinCluster5" "weightList[351].weights[5]" " 0.9167593219004333"
+		2 "mom2:skinCluster5" "weightList[351].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[29]" " 0.00095527743375986064"
+		
+		2 "mom2:skinCluster5" "weightList[351].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[35]" " 0.0059319585561752319"
+		
+		2 "mom2:skinCluster5" "weightList[351].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[351].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[352].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[4]" " 2.5501009423213276e-05"
+		
+		2 "mom2:skinCluster5" "weightList[352].weights[5]" " 0.66752343090177879"
+		
+		2 "mom2:skinCluster5" "weightList[352].weights[6]" " 0.00968918576836586"
+		
+		2 "mom2:skinCluster5" "weightList[352].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[29]" " 8.1966406901569023e-06"
+		
+		2 "mom2:skinCluster5" "weightList[352].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[35]" " 0.32275368567974194"
+		
+		2 "mom2:skinCluster5" "weightList[352].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[352].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[353].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[5]" " 0.86001461589960948"
+		
+		2 "mom2:skinCluster5" "weightList[353].weights[6]" " 0.062921114265918732"
+		
+		2 "mom2:skinCluster5" "weightList[353].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[33]" " 5.075420528299901e-09"
+		
+		2 "mom2:skinCluster5" "weightList[353].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[35]" " 0.077064264759051301"
+		
+		2 "mom2:skinCluster5" "weightList[353].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[353].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[354].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[5]" " 0.95945936463630654"
+		
+		2 "mom2:skinCluster5" "weightList[354].weights[6]" " 0.040540017187595367"
+		
+		2 "mom2:skinCluster5" "weightList[354].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[29]" " 6.1250534447872457e-07"
+		
+		2 "mom2:skinCluster5" "weightList[354].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[33]" " 5.6707536444378093e-09"
+		
+		2 "mom2:skinCluster5" "weightList[354].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[354].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[356].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[3]" " 0.00084363371362301549"
+		
+		2 "mom2:skinCluster5" "weightList[356].weights[4]" " 0.20777736498637131"
+		
+		2 "mom2:skinCluster5" "weightList[356].weights[5]" " 0.77464341323667685"
+		
+		2 "mom2:skinCluster5" "weightList[356].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[29]" " 0.0070793618008786622"
+		
+		2 "mom2:skinCluster5" "weightList[356].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[35]" " 0.0096562262624502182"
+		
+		2 "mom2:skinCluster5" "weightList[356].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[356].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[357].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[4]" " 0.2780880082462468"
+		2 "mom2:skinCluster5" "weightList[357].weights[5]" " 0.71550074423847876"
+		
+		2 "mom2:skinCluster5" "weightList[357].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[29]" " 0.002855653037471961"
+		
+		2 "mom2:skinCluster5" "weightList[357].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[35]" " 0.003555594477802515"
+		
+		2 "mom2:skinCluster5" "weightList[357].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[357].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[358].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[4]" " 0.071206201246129031"
+		
+		2 "mom2:skinCluster5" "weightList[358].weights[5]" " 0.85543124349064958"
+		
+		2 "mom2:skinCluster5" "weightList[358].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[29]" " 0.00097041940468570176"
+		
+		2 "mom2:skinCluster5" "weightList[358].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[35]" " 0.072392135858535767"
+		
+		2 "mom2:skinCluster5" "weightList[358].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[358].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[359].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[4]" " 0.0035250708366222155"
+		
+		2 "mom2:skinCluster5" "weightList[359].weights[5]" " 0.51442104565014968"
+		
+		2 "mom2:skinCluster5" "weightList[359].weights[6]" " 0.001550710410811007"
+		
+		2 "mom2:skinCluster5" "weightList[359].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[35]" " 0.48050317310241702"
+		
+		2 "mom2:skinCluster5" "weightList[359].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[359].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[360].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[4]" " 0.016596356873762881"
+		
+		2 "mom2:skinCluster5" "weightList[360].weights[5]" " 0.62397442147617954"
+		
+		2 "mom2:skinCluster5" "weightList[360].weights[6]" " 0.0085486873394770204"
+		
+		2 "mom2:skinCluster5" "weightList[360].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[29]" " 1.5319247485415811e-05"
+		
+		2 "mom2:skinCluster5" "weightList[360].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[35]" " 0.35086521506309509"
+		
+		2 "mom2:skinCluster5" "weightList[360].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[360].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[361].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[5]" " 0.74188539973513468"
+		
+		2 "mom2:skinCluster5" "weightList[361].weights[6]" " 0.038459010422229767"
+		
+		2 "mom2:skinCluster5" "weightList[361].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[35]" " 0.21965558984263558"
+		
+		2 "mom2:skinCluster5" "weightList[361].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[361].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[366].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[5]" " 0.38521975669110375"
+		
+		2 "mom2:skinCluster5" "weightList[366].weights[6]" " 0.61330962181091309"
+		
+		2 "mom2:skinCluster5" "weightList[366].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[29]" " 0.0014706214979831754"
+		
+		2 "mom2:skinCluster5" "weightList[366].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[366].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[367].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[5]" " 0.68005511164665222"
+		
+		2 "mom2:skinCluster5" "weightList[367].weights[6]" " 0.31994488835334778"
+		
+		2 "mom2:skinCluster5" "weightList[367].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[367].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[372].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[5]" " 0.54661436598609081"
+		
+		2 "mom2:skinCluster5" "weightList[372].weights[6]" " 0.45338559150695801"
+		
+		2 "mom2:skinCluster5" "weightList[372].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[29]" " 4.2506951233839663e-08"
+		
+		2 "mom2:skinCluster5" "weightList[372].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[372].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[373].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[5]" " 0.75098867901202015"
+		
+		2 "mom2:skinCluster5" "weightList[373].weights[6]" " 0.24885961413383484"
+		
+		2 "mom2:skinCluster5" "weightList[373].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[29]" " 0.00015170685414502813"
+		
+		2 "mom2:skinCluster5" "weightList[373].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[373].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[377].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[5]" " 0.21684713135441372"
+		
+		2 "mom2:skinCluster5" "weightList[377].weights[6]" " 0.45520728826522827"
+		
+		2 "mom2:skinCluster5" "weightList[377].weights[7]" " 0.32772965521354575"
+		
+		2 "mom2:skinCluster5" "weightList[377].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[29]" " 0.00021592516681220278"
+		
+		2 "mom2:skinCluster5" "weightList[377].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[377].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[378].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[5]" " 0.10146604925770582"
+		
+		2 "mom2:skinCluster5" "weightList[378].weights[6]" " 0.47395673394203186"
+		
+		2 "mom2:skinCluster5" "weightList[378].weights[7]" " 0.42451982457624726"
+		
+		2 "mom2:skinCluster5" "weightList[378].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[29]" " 5.7392224015035107e-05"
+		
+		2 "mom2:skinCluster5" "weightList[378].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[378].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[383].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[5]" " 0.32531233026769113"
+		
+		2 "mom2:skinCluster5" "weightList[383].weights[6]" " 0.67377561330795288"
+		
+		2 "mom2:skinCluster5" "weightList[383].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[29]" " 0.00091205642435596515"
+		
+		2 "mom2:skinCluster5" "weightList[383].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[383].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[384].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[5]" " 0.22460991140619513"
+		
+		2 "mom2:skinCluster5" "weightList[384].weights[6]" " 0.77539008855819702"
+		
+		2 "mom2:skinCluster5" "weightList[384].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[384].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[385].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[4]" " 0.084963765712495976"
+		
+		2 "mom2:skinCluster5" "weightList[385].weights[5]" " 0.14008048477578527"
+		
+		2 "mom2:skinCluster5" "weightList[385].weights[6]" " 0.77495574951171875"
+		
+		2 "mom2:skinCluster5" "weightList[385].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[385].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[386].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[5]" " 0.75612309719352533"
+		
+		2 "mom2:skinCluster5" "weightList[386].weights[6]" " 0.24386069178581238"
+		
+		2 "mom2:skinCluster5" "weightList[386].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[29]" " 1.6211020662248779e-05"
+		
+		2 "mom2:skinCluster5" "weightList[386].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[386].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[387].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[5]" " 0.74968767166137695"
+		
+		2 "mom2:skinCluster5" "weightList[387].weights[6]" " 0.25031232833862305"
+		
+		2 "mom2:skinCluster5" "weightList[387].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[387].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[388].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[5]" " 0.64318522607248252"
+		
+		2 "mom2:skinCluster5" "weightList[388].weights[6]" " 0.35681477189064026"
+		
+		2 "mom2:skinCluster5" "weightList[388].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[29]" " 2.0368772677776409e-09"
+		
+		2 "mom2:skinCluster5" "weightList[388].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[388].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[421].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[5]" " 0.79606494307518005"
+		
+		2 "mom2:skinCluster5" "weightList[421].weights[6]" " 0.20393505692481995"
+		
+		2 "mom2:skinCluster5" "weightList[421].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[421].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[422].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[5]" " 0.74867293714439465"
+		
+		2 "mom2:skinCluster5" "weightList[422].weights[6]" " 0.25132700800895691"
+		
+		2 "mom2:skinCluster5" "weightList[422].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[29]" " 5.4846648459737344e-08"
+		
+		2 "mom2:skinCluster5" "weightList[422].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[422].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[423].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[5]" " 0.76118089954608092"
+		
+		2 "mom2:skinCluster5" "weightList[423].weights[6]" " 0.23881833255290985"
+		
+		2 "mom2:skinCluster5" "weightList[423].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[29]" " 7.1083401146735065e-08"
+		
+		2 "mom2:skinCluster5" "weightList[423].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[33]" " 6.9681760805906379e-07"
+		
+		2 "mom2:skinCluster5" "weightList[423].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[423].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[424].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[4]" " 0.066375721787164541"
+		
+		2 "mom2:skinCluster5" "weightList[424].weights[5]" " 0.16909432008344563"
+		
+		2 "mom2:skinCluster5" "weightList[424].weights[6]" " 0.76452994346618652"
+		
+		2 "mom2:skinCluster5" "weightList[424].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[29]" " 1.4663203281649962e-08"
+		
+		2 "mom2:skinCluster5" "weightList[424].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[424].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[425].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[4]" " 0.038065395954443193"
+		
+		2 "mom2:skinCluster5" "weightList[425].weights[5]" " 0.19819942891280534"
+		
+		2 "mom2:skinCluster5" "weightList[425].weights[6]" " 0.76373517513275146"
+		
+		2 "mom2:skinCluster5" "weightList[425].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[425].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[426].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[5]" " 0.381300422381666"
+		2 "mom2:skinCluster5" "weightList[426].weights[6]" " 0.61828631162643433"
+		
+		2 "mom2:skinCluster5" "weightList[426].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[29]" " 0.00041326599189964272"
+		
+		2 "mom2:skinCluster5" "weightList[426].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[426].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[433].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[4]" " 0.0089933302741090054"
+		
+		2 "mom2:skinCluster5" "weightList[433].weights[5]" " 0.28279530021755872"
+		
+		2 "mom2:skinCluster5" "weightList[433].weights[6]" " 0.67500346899032593"
+		
+		2 "mom2:skinCluster5" "weightList[433].weights[7]" " 0.031921871223481557"
+		
+		2 "mom2:skinCluster5" "weightList[433].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[29]" " 0.0012860292945248049"
+		
+		2 "mom2:skinCluster5" "weightList[433].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[433].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[434].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[5]" " 0.22221422194024121"
+		
+		2 "mom2:skinCluster5" "weightList[434].weights[6]" " 0.7777857780456543"
+		2 "mom2:skinCluster5" "weightList[434].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[434].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[435].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[5]" " 0.070438093877057295"
+		
+		2 "mom2:skinCluster5" "weightList[435].weights[6]" " 0.75945484638214111"
+		
+		2 "mom2:skinCluster5" "weightList[435].weights[7]" " 0.057524360196505642"
+		
+		2 "mom2:skinCluster5" "weightList[435].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[29]" " 0.073795294238143003"
+		
+		2 "mom2:skinCluster5" "weightList[435].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[35]" " 0.038787405306152954"
+		
+		2 "mom2:skinCluster5" "weightList[435].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[435].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[436].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[5]" " 0.75526764441900962"
+		
+		2 "mom2:skinCluster5" "weightList[436].weights[6]" " 0.24459560215473175"
+		
+		2 "mom2:skinCluster5" "weightList[436].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[29]" " 0.00013675342625864051"
+		
+		2 "mom2:skinCluster5" "weightList[436].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[436].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[437].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[5]" " 0.70423147082328796"
+		
+		2 "mom2:skinCluster5" "weightList[437].weights[6]" " 0.29576852917671204"
+		
+		2 "mom2:skinCluster5" "weightList[437].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[437].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[438].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[5]" " 0.51530990065395299"
+		
+		2 "mom2:skinCluster5" "weightList[438].weights[6]" " 0.47765514254570007"
+		
+		2 "mom2:skinCluster5" "weightList[438].weights[7]" " 0.0070349568003468871"
+		
+		2 "mom2:skinCluster5" "weightList[438].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[438].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[453].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[5]" " 0.42606252431869507"
+		
+		2 "mom2:skinCluster5" "weightList[453].weights[6]" " 0.57393747568130493"
+		
+		2 "mom2:skinCluster5" "weightList[453].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[453].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[454].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[5]" " 0.24970747812615493"
+		
+		2 "mom2:skinCluster5" "weightList[454].weights[6]" " 0.75029236078262329"
+		
+		2 "mom2:skinCluster5" "weightList[454].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[29]" " 1.6109122177780373e-07"
+		
+		2 "mom2:skinCluster5" "weightList[454].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[454].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[465].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[5]" " 0.57856267690658569"
+		
+		2 "mom2:skinCluster5" "weightList[465].weights[6]" " 0.42143732309341431"
+		
+		2 "mom2:skinCluster5" "weightList[465].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[465].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[466].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[5]" " 0.27490979559235856"
+		
+		2 "mom2:skinCluster5" "weightList[466].weights[6]" " 0.72473901510238647"
+		
+		2 "mom2:skinCluster5" "weightList[466].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[29]" " 0.00035118930525494558"
+		
+		2 "mom2:skinCluster5" "weightList[466].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[466].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[467].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[5]" " 0.092733114592500235"
+		
+		2 "mom2:skinCluster5" "weightList[467].weights[6]" " 0.53297805786132812"
+		
+		2 "mom2:skinCluster5" "weightList[467].weights[7]" " 0.37332494626157853"
+		
+		2 "mom2:skinCluster5" "weightList[467].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[29]" " 0.00096388128459313973"
+		
+		2 "mom2:skinCluster5" "weightList[467].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[467].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[486].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[5]" " 0.095215203976876536"
+		
+		2 "mom2:skinCluster5" "weightList[486].weights[6]" " 0.42157506942749023"
+		
+		2 "mom2:skinCluster5" "weightList[486].weights[7]" " 0.48314980637355598"
+		
+		2 "mom2:skinCluster5" "weightList[486].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[29]" " 5.9920222077280077e-05"
+		
+		2 "mom2:skinCluster5" "weightList[486].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[486].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[487].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[5]" " 0.48066759771361872"
+		
+		2 "mom2:skinCluster5" "weightList[487].weights[6]" " 0.51856040954589844"
+		
+		2 "mom2:skinCluster5" "weightList[487].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[29]" " 0.00077199274048285005"
+		
+		2 "mom2:skinCluster5" "weightList[487].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[487].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[488].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[5]" " 0.73429378571501314"
+		
+		2 "mom2:skinCluster5" "weightList[488].weights[6]" " 0.26564118266105652"
+		
+		2 "mom2:skinCluster5" "weightList[488].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[29]" " 6.5031623930309282e-05"
+		
+		2 "mom2:skinCluster5" "weightList[488].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[488].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[500].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[5]" " 0.81311138128834193"
+		
+		2 "mom2:skinCluster5" "weightList[500].weights[6]" " 0.1868879646062851"
+		2 "mom2:skinCluster5" "weightList[500].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[29]" " 7.7110281227585399e-08"
+		
+		2 "mom2:skinCluster5" "weightList[500].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[33]" " 5.7699509170561214e-07"
+		
+		2 "mom2:skinCluster5" "weightList[500].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[500].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[501].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[5]" " 0.81910785447108436"
+		
+		2 "mom2:skinCluster5" "weightList[501].weights[6]" " 0.18089194595813751"
+		
+		2 "mom2:skinCluster5" "weightList[501].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[29]" " 1.9957077810856069e-07"
+		
+		2 "mom2:skinCluster5" "weightList[501].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[501].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[502].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[4]" " 0.0034532239815076031"
+		
+		2 "mom2:skinCluster5" "weightList[502].weights[5]" " 0.81224473638578509"
+		
+		2 "mom2:skinCluster5" "weightList[502].weights[6]" " 0.0850997194647789"
+		2 "mom2:skinCluster5" "weightList[502].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[29]" " 5.9131989166381179e-07"
+		
+		2 "mom2:skinCluster5" "weightList[502].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[35]" " 0.099201728848036699"
+		
+		2 "mom2:skinCluster5" "weightList[502].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[502].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[503].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[3]" " 7.5629378331292229e-05"
+		
+		2 "mom2:skinCluster5" "weightList[503].weights[4]" " 0.17630367404167654"
+		
+		2 "mom2:skinCluster5" "weightList[503].weights[5]" " 0.80448237580214277"
+		
+		2 "mom2:skinCluster5" "weightList[503].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[29]" " 0.015366701139421251"
+		
+		2 "mom2:skinCluster5" "weightList[503].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[35]" " 0.003771619638428092"
+		
+		2 "mom2:skinCluster5" "weightList[503].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[503].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[504].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[3]" " 0.0013329764272527887"
+		
+		2 "mom2:skinCluster5" "weightList[504].weights[4]" " 0.22038355125727946"
+		
+		2 "mom2:skinCluster5" "weightList[504].weights[5]" " 0.77121892447543661"
+		
+		2 "mom2:skinCluster5" "weightList[504].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[29]" " 0.0053454384752459616"
+		
+		2 "mom2:skinCluster5" "weightList[504].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[35]" " 0.001719109364785254"
+		
+		2 "mom2:skinCluster5" "weightList[504].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[504].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[518].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[4]" " 0.012631985002945613"
+		
+		2 "mom2:skinCluster5" "weightList[518].weights[5]" " 0.58892825599150767"
+		
+		2 "mom2:skinCluster5" "weightList[518].weights[6]" " 0.39736157655715942"
+		
+		2 "mom2:skinCluster5" "weightList[518].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[29]" " 0.0010781824483873145"
+		
+		2 "mom2:skinCluster5" "weightList[518].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[518].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[519].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[4]" " 0.12726090655031666"
+		
+		2 "mom2:skinCluster5" "weightList[519].weights[5]" " 0.7019532620776977"
+		2 "mom2:skinCluster5" "weightList[519].weights[6]" " 0.1681383486168172"
+		2 "mom2:skinCluster5" "weightList[519].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[29]" " 0.0026353919189606848"
+		
+		2 "mom2:skinCluster5" "weightList[519].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[35]" " 1.2090836207789835e-05"
+		
+		2 "mom2:skinCluster5" "weightList[519].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[519].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[520].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[4]" " 0.13912186866139936"
+		
+		2 "mom2:skinCluster5" "weightList[520].weights[5]" " 0.83427624932129008"
+		
+		2 "mom2:skinCluster5" "weightList[520].weights[6]" " 0.022453761537946124"
+		
+		2 "mom2:skinCluster5" "weightList[520].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[29]" " 0.0023045571983648732"
+		
+		2 "mom2:skinCluster5" "weightList[520].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[35]" " 0.0018435632809996605"
+		
+		2 "mom2:skinCluster5" "weightList[520].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[520].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[525].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[5]" " 0.16894954172843549"
+		
+		2 "mom2:skinCluster5" "weightList[525].weights[6]" " 0.59822660684585571"
+		
+		2 "mom2:skinCluster5" "weightList[525].weights[7]" " 0.22942035818332043"
+		
+		2 "mom2:skinCluster5" "weightList[525].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[29]" " 0.0034034932423883451"
+		
+		2 "mom2:skinCluster5" "weightList[525].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[525].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[526].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[4]" " 0.00086973896819375976"
+		
+		2 "mom2:skinCluster5" "weightList[526].weights[5]" " 0.48469008260918767"
+		
+		2 "mom2:skinCluster5" "weightList[526].weights[6]" " 0.51407533884048462"
+		
+		2 "mom2:skinCluster5" "weightList[526].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[29]" " 0.00036483958213393654"
+		
+		2 "mom2:skinCluster5" "weightList[526].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[526].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[527].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[4]" " 0.0012170952624961733"
+		
+		2 "mom2:skinCluster5" "weightList[527].weights[5]" " 0.65918806783650863"
+		
+		2 "mom2:skinCluster5" "weightList[527].weights[6]" " 0.33959457278251648"
+		
+		2 "mom2:skinCluster5" "weightList[527].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[29]" " 2.6411847870172757e-07"
+		
+		2 "mom2:skinCluster5" "weightList[527].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[527].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[528].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[4]" " 0.023839664213263643"
+		
+		2 "mom2:skinCluster5" "weightList[528].weights[5]" " 0.79483743334571155"
+		
+		2 "mom2:skinCluster5" "weightList[528].weights[6]" " 0.18132290244102478"
+		
+		2 "mom2:skinCluster5" "weightList[528].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[528].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[529].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[4]" " 0.040424806064716608"
+		
+		2 "mom2:skinCluster5" "weightList[529].weights[5]" " 0.89754859627274874"
+		
+		2 "mom2:skinCluster5" "weightList[529].weights[6]" " 0.051105857000014437"
+		
+		2 "mom2:skinCluster5" "weightList[529].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[29]" " 9.0896934769352631e-07"
+		
+		2 "mom2:skinCluster5" "weightList[529].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[35]" " 0.010919831693172455"
+		
+		2 "mom2:skinCluster5" "weightList[529].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[529].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[530].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[5]" " 0.85698676109313965"
+		
+		2 "mom2:skinCluster5" "weightList[530].weights[6]" " 0.14301323890686035"
+		
+		2 "mom2:skinCluster5" "weightList[530].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[530].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[531].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[5]" " 0.72868213057518005"
+		
+		2 "mom2:skinCluster5" "weightList[531].weights[6]" " 0.27131786942481995"
+		
+		2 "mom2:skinCluster5" "weightList[531].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[531].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[532].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[5]" " 0.51745516061782837"
+		
+		2 "mom2:skinCluster5" "weightList[532].weights[6]" " 0.48254483938217163"
+		
+		2 "mom2:skinCluster5" "weightList[532].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[532].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[533].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[5]" " 0.39030420780181885"
+		
+		2 "mom2:skinCluster5" "weightList[533].weights[6]" " 0.60969579219818115"
+		
+		2 "mom2:skinCluster5" "weightList[533].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[533].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[534].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[5]" " 0.38846950249499312"
+		
+		2 "mom2:skinCluster5" "weightList[534].weights[6]" " 0.61153048276901245"
+		
+		2 "mom2:skinCluster5" "weightList[534].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[29]" " 1.4735994422910791e-08"
+		
+		2 "mom2:skinCluster5" "weightList[534].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[534].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[535].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[5]" " 0.41526382961040387"
+		
+		2 "mom2:skinCluster5" "weightList[535].weights[6]" " 0.58470219373703003"
+		
+		2 "mom2:skinCluster5" "weightList[535].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[29]" " 3.3976652566081488e-05"
+		
+		2 "mom2:skinCluster5" "weightList[535].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[535].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[536].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[5]" " 0.36745531002693455"
+		
+		2 "mom2:skinCluster5" "weightList[536].weights[6]" " 0.6325107216835022"
+		2 "mom2:skinCluster5" "weightList[536].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[29]" " 3.3968289563272066e-05"
+		
+		2 "mom2:skinCluster5" "weightList[536].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[536].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[537].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[5]" " 0.28299129009246826"
+		
+		2 "mom2:skinCluster5" "weightList[537].weights[6]" " 0.71700870990753174"
+		
+		2 "mom2:skinCluster5" "weightList[537].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[537].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[538].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[5]" " 0.1958669917601786"
+		2 "mom2:skinCluster5" "weightList[538].weights[6]" " 0.78263914585113525"
+		
+		2 "mom2:skinCluster5" "weightList[538].weights[7]" " 0.021493847926889274"
+		
+		2 "mom2:skinCluster5" "weightList[538].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[29]" " 1.4400394551982465e-08"
+		
+		2 "mom2:skinCluster5" "weightList[538].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[538].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[539].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[5]" " 0.24058460569275836"
+		
+		2 "mom2:skinCluster5" "weightList[539].weights[6]" " 0.75941526889801025"
+		
+		2 "mom2:skinCluster5" "weightList[539].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[29]" " 1.253752795450476e-07"
+		
+		2 "mom2:skinCluster5" "weightList[539].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[539].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[540].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[5]" " 0.26126280273071106"
+		
+		2 "mom2:skinCluster5" "weightList[540].weights[6]" " 0.73873716592788696"
+		
+		2 "mom2:skinCluster5" "weightList[540].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[29]" " 3.1316276626696618e-08"
+		
+		2 "mom2:skinCluster5" "weightList[540].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[540].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[541].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[4]" " 0.018192971248684887"
+		
+		2 "mom2:skinCluster5" "weightList[541].weights[5]" " 0.25752202222818277"
+		
+		2 "mom2:skinCluster5" "weightList[541].weights[6]" " 0.72428500652313232"
+		
+		2 "mom2:skinCluster5" "weightList[541].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[541].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[542].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[5]" " 0.79499383183587469"
+		
+		2 "mom2:skinCluster5" "weightList[542].weights[6]" " 0.20500615239143372"
+		
+		2 "mom2:skinCluster5" "weightList[542].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[33]" " 1.5772691597248922e-08"
+		
+		2 "mom2:skinCluster5" "weightList[542].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[542].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[543].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[5]" " 0.75348180866320624"
+		
+		2 "mom2:skinCluster5" "weightList[543].weights[6]" " 0.24651817977428436"
+		
+		2 "mom2:skinCluster5" "weightList[543].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[29]" " 1.1562509400083806e-08"
+		
+		2 "mom2:skinCluster5" "weightList[543].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[543].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[544].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[5]" " 0.7564445286989212"
+		2 "mom2:skinCluster5" "weightList[544].weights[6]" " 0.2435554713010788"
+		2 "mom2:skinCluster5" "weightList[544].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[544].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[545].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[5]" " 0.74969209878482401"
+		
+		2 "mom2:skinCluster5" "weightList[545].weights[6]" " 0.25030788779258728"
+		
+		2 "mom2:skinCluster5" "weightList[545].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[29]" " 1.342258871716821e-08"
+		
+		2 "mom2:skinCluster5" "weightList[545].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[545].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[546].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[5]" " 0.68846528917518546"
+		
+		2 "mom2:skinCluster5" "weightList[546].weights[6]" " 0.31153470277786255"
+		
+		2 "mom2:skinCluster5" "weightList[546].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[29]" " 8.0469519993562025e-09"
+		
+		2 "mom2:skinCluster5" "weightList[546].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[546].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[547].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[5]" " 0.61730084051911127"
+		
+		2 "mom2:skinCluster5" "weightList[547].weights[6]" " 0.38269907236099243"
+		
+		2 "mom2:skinCluster5" "weightList[547].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[29]" " 8.7119896268707354e-08"
+		
+		2 "mom2:skinCluster5" "weightList[547].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[547].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[548].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[5]" " 0.50336294170305473"
+		
+		2 "mom2:skinCluster5" "weightList[548].weights[6]" " 0.49662205576896667"
+		
+		2 "mom2:skinCluster5" "weightList[548].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[29]" " 1.5002527978554499e-05"
+		
+		2 "mom2:skinCluster5" "weightList[548].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[548].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[549].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[5]" " 0.34799009303491624"
+		
+		2 "mom2:skinCluster5" "weightList[549].weights[6]" " 0.65195232629776001"
+		
+		2 "mom2:skinCluster5" "weightList[549].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[29]" " 5.7580667323771275e-05"
+		
+		2 "mom2:skinCluster5" "weightList[549].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[549].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[550].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[5]" " 0.25839595569208695"
+		
+		2 "mom2:skinCluster5" "weightList[550].weights[6]" " 0.7416040301322937"
+		2 "mom2:skinCluster5" "weightList[550].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[29]" " 1.4175619332481043e-08"
+		
+		2 "mom2:skinCluster5" "weightList[550].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[550].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[551].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[5]" " 0.21607524153276736"
+		
+		2 "mom2:skinCluster5" "weightList[551].weights[6]" " 0.78392475843429565"
+		
+		2 "mom2:skinCluster5" "weightList[551].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[551].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[552].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[5]" " 0.21948856115341187"
+		
+		2 "mom2:skinCluster5" "weightList[552].weights[6]" " 0.78051143884658813"
+		
+		2 "mom2:skinCluster5" "weightList[552].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[552].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[553].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[4]" " 0.045851915160831334"
+		
+		2 "mom2:skinCluster5" "weightList[553].weights[5]" " 0.18969437571364986"
+		
+		2 "mom2:skinCluster5" "weightList[553].weights[6]" " 0.7644537091255188"
+		2 "mom2:skinCluster5" "weightList[553].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[553].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[624].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[5]" " 0.015055001782772233"
+		
+		2 "mom2:skinCluster5" "weightList[624].weights[6]" " 0.12835709750652313"
+		
+		2 "mom2:skinCluster5" "weightList[624].weights[7]" " 0.85335122524409424"
+		
+		2 "mom2:skinCluster5" "weightList[624].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[29]" " 0.0032366754666104526"
+		
+		2 "mom2:skinCluster5" "weightList[624].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[624].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[625].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[5]" " 0.0056513505508762989"
+		
+		2 "mom2:skinCluster5" "weightList[625].weights[6]" " 0.10262607783079147"
+		
+		2 "mom2:skinCluster5" "weightList[625].weights[7]" " 0.88898166651632482"
+		
+		2 "mom2:skinCluster5" "weightList[625].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[29]" " 0.0027409051020074048"
+		
+		2 "mom2:skinCluster5" "weightList[625].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[625].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[637].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[5]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[6]" " 0.015411969274282455"
+		
+		2 "mom2:skinCluster5" "weightList[637].weights[7]" " 0.98458803072571754"
+		
+		2 "mom2:skinCluster5" "weightList[637].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[637].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[651].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[4]" " 0.014179315437517472"
+		
+		2 "mom2:skinCluster5" "weightList[651].weights[5]" " 0.24521730575799119"
+		
+		2 "mom2:skinCluster5" "weightList[651].weights[6]" " 0.68532770872116089"
+		
+		2 "mom2:skinCluster5" "weightList[651].weights[7]" " 0.05409945680476741"
+		
+		2 "mom2:skinCluster5" "weightList[651].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[29]" " 0.0011762132785630207"
+		
+		2 "mom2:skinCluster5" "weightList[651].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[651].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[652].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[5]" " 0.22919581060824437"
+		
+		2 "mom2:skinCluster5" "weightList[652].weights[6]" " 0.77080410718917847"
+		
+		2 "mom2:skinCluster5" "weightList[652].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[29]" " 8.2116792124109921e-08"
+		
+		2 "mom2:skinCluster5" "weightList[652].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[652].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[653].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[5]" " 0.21564394188030064"
+		
+		2 "mom2:skinCluster5" "weightList[653].weights[6]" " 0.78435605764389038"
+		
+		2 "mom2:skinCluster5" "weightList[653].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[29]" " 4.7580896734627783e-10"
+		
+		2 "mom2:skinCluster5" "weightList[653].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[653].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[654].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[5]" " 0.22199672440852675"
+		
+		2 "mom2:skinCluster5" "weightList[654].weights[6]" " 0.7780032753944397"
+		2 "mom2:skinCluster5" "weightList[654].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[29]" " 1.9703356248399019e-10"
+		
+		2 "mom2:skinCluster5" "weightList[654].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[654].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[655].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[5]" " 0.31062233258278688"
+		
+		2 "mom2:skinCluster5" "weightList[655].weights[6]" " 0.68937766551971436"
+		
+		2 "mom2:skinCluster5" "weightList[655].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[29]" " 1.8974987781470576e-09"
+		
+		2 "mom2:skinCluster5" "weightList[655].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[655].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[656].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[4]" " 0.10955378978441037"
+		
+		2 "mom2:skinCluster5" "weightList[656].weights[5]" " 0.24080630571653569"
+		
+		2 "mom2:skinCluster5" "weightList[656].weights[6]" " 0.64963990449905396"
+		
+		2 "mom2:skinCluster5" "weightList[656].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[656].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[657].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[4]" " 0.090474725138672135"
+		
+		2 "mom2:skinCluster5" "weightList[657].weights[5]" " 0.2304873185577741"
+		2 "mom2:skinCluster5" "weightList[657].weights[6]" " 0.67903780937194824"
+		
+		2 "mom2:skinCluster5" "weightList[657].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[29]" " 1.4693160549544612e-07"
+		
+		2 "mom2:skinCluster5" "weightList[657].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[657].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[658].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[4]" " 0.087377191795509276"
+		
+		2 "mom2:skinCluster5" "weightList[658].weights[5]" " 0.22259625115398113"
+		
+		2 "mom2:skinCluster5" "weightList[658].weights[6]" " 0.69002652168273926"
+		
+		2 "mom2:skinCluster5" "weightList[658].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[29]" " 3.5367770318543147e-08"
+		
+		2 "mom2:skinCluster5" "weightList[658].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[658].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[659].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[4]" " 0.087417038552561083"
+		
+		2 "mom2:skinCluster5" "weightList[659].weights[5]" " 0.28760638607283562"
+		
+		2 "mom2:skinCluster5" "weightList[659].weights[6]" " 0.62497657537460327"
+		
+		2 "mom2:skinCluster5" "weightList[659].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[659].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[660].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[4]" " 0.20440101067473629"
+		
+		2 "mom2:skinCluster5" "weightList[660].weights[5]" " 0.41508366721433126"
+		
+		2 "mom2:skinCluster5" "weightList[660].weights[6]" " 0.379322350025177"
+		2 "mom2:skinCluster5" "weightList[660].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[29]" " 0.0011929720857554312"
+		
+		2 "mom2:skinCluster5" "weightList[660].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[660].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[661].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[4]" " 0.42881635706654936"
+		
+		2 "mom2:skinCluster5" "weightList[661].weights[5]" " 0.45480574403314966"
+		
+		2 "mom2:skinCluster5" "weightList[661].weights[6]" " 0.11637086421251297"
+		
+		2 "mom2:skinCluster5" "weightList[661].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[29]" " 7.0346877880825916e-06"
+		
+		2 "mom2:skinCluster5" "weightList[661].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[661].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[717].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[2]" " 0.012400922341640598"
+		
+		2 "mom2:skinCluster5" "weightList[717].weights[3]" " 0.01828273214092509"
+		
+		2 "mom2:skinCluster5" "weightList[717].weights[4]" " 0.92723556759498149"
+		
+		2 "mom2:skinCluster5" "weightList[717].weights[5]" " 0.018323227057041057"
+		
+		2 "mom2:skinCluster5" "weightList[717].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[35]" " 0.023757550865411758"
+		
+		2 "mom2:skinCluster5" "weightList[717].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[717].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[718].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[2]" " 0.015523300130396885"
+		
+		2 "mom2:skinCluster5" "weightList[718].weights[3]" " 0.019900996933415366"
+		
+		2 "mom2:skinCluster5" "weightList[718].weights[4]" " 0.93973259949263588"
+		
+		2 "mom2:skinCluster5" "weightList[718].weights[5]" " 0.0086992040325888"
+		2 "mom2:skinCluster5" "weightList[718].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[35]" " 0.016143899410963058"
+		
+		2 "mom2:skinCluster5" "weightList[718].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[718].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[719].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[4]" " 0.709755042827386"
+		2 "mom2:skinCluster5" "weightList[719].weights[5]" " 0.22152660574887359"
+		
+		2 "mom2:skinCluster5" "weightList[719].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[35]" " 0.068718351423740387"
+		
+		2 "mom2:skinCluster5" "weightList[719].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[719].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[720].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[4]" " 0.70401153837185815"
+		
+		2 "mom2:skinCluster5" "weightList[720].weights[5]" " 0.23304372157115022"
+		
+		2 "mom2:skinCluster5" "weightList[720].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[35]" " 0.062944740056991577"
+		
+		2 "mom2:skinCluster5" "weightList[720].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[720].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[721].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[4]" " 0.32630646208124447"
+		
+		2 "mom2:skinCluster5" "weightList[721].weights[5]" " 0.67143860482579243"
+		
+		2 "mom2:skinCluster5" "weightList[721].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[29]" " 0.0022548512889125818"
+		
+		2 "mom2:skinCluster5" "weightList[721].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[36]" " 8.1804050568759733e-08"
+		
+		2 "mom2:skinCluster5" "weightList[721].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[721].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[722].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[4]" " 0.47357691595593887"
+		
+		2 "mom2:skinCluster5" "weightList[722].weights[5]" " 0.48668067143156846"
+		
+		2 "mom2:skinCluster5" "weightList[722].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[29]" " 1.2005305991896736e-08"
+		
+		2 "mom2:skinCluster5" "weightList[722].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[35]" " 0.039742358028888702"
+		
+		2 "mom2:skinCluster5" "weightList[722].weights[36]" " 4.2578297968652867e-08"
+		
+		2 "mom2:skinCluster5" "weightList[722].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[722].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[723].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[4]" " 0.47806150556320415"
+		
+		2 "mom2:skinCluster5" "weightList[723].weights[5]" " 0.51001632662111163"
+		
+		2 "mom2:skinCluster5" "weightList[723].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[29]" " 1.4611561128599096e-08"
+		
+		2 "mom2:skinCluster5" "weightList[723].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[35]" " 0.011915972456336021"
+		
+		2 "mom2:skinCluster5" "weightList[723].weights[36]" " 6.1807477870596792e-06"
+		
+		2 "mom2:skinCluster5" "weightList[723].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[723].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[724].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[4]" " 0.30796178315050965"
+		
+		2 "mom2:skinCluster5" "weightList[724].weights[5]" " 0.68454312251902472"
+		
+		2 "mom2:skinCluster5" "weightList[724].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[29]" " 0.0020398988923487934"
+		
+		2 "mom2:skinCluster5" "weightList[724].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[35]" " 0.0054551954381167889"
+		
+		2 "mom2:skinCluster5" "weightList[724].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[724].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[725].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[4]" " 0.28151912658632178"
+		
+		2 "mom2:skinCluster5" "weightList[725].weights[5]" " 0.6986827767326651"
+		2 "mom2:skinCluster5" "weightList[725].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[29]" " 3.4374317297279707e-06"
+		
+		2 "mom2:skinCluster5" "weightList[725].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[35]" " 0.018624106422066689"
+		
+		2 "mom2:skinCluster5" "weightList[725].weights[36]" " 0.0011705528272166403"
+		
+		2 "mom2:skinCluster5" "weightList[725].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[725].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[726].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[4]" " 0.26869680148128561"
+		
+		2 "mom2:skinCluster5" "weightList[726].weights[5]" " 0.69369301120176674"
+		
+		2 "mom2:skinCluster5" "weightList[726].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[29]" " 1.1457806138540374e-05"
+		
+		2 "mom2:skinCluster5" "weightList[726].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[35]" " 0.03075798973441124"
+		
+		2 "mom2:skinCluster5" "weightList[726].weights[36]" " 0.0068407397763979201"
+		
+		2 "mom2:skinCluster5" "weightList[726].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[726].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[727].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[4]" " 0.19614064997435962"
+		
+		2 "mom2:skinCluster5" "weightList[727].weights[5]" " 0.58356681700410518"
+		
+		2 "mom2:skinCluster5" "weightList[727].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[29]" " 3.5364543548891864e-08"
+		
+		2 "mom2:skinCluster5" "weightList[727].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[35]" " 0.21033702790737152"
+		
+		2 "mom2:skinCluster5" "weightList[727].weights[36]" " 0.0099554697496201383"
+		
+		2 "mom2:skinCluster5" "weightList[727].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[727].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[728].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[4]" " 0.23343998202574098"
+		
+		2 "mom2:skinCluster5" "weightList[728].weights[5]" " 0.63881362352968329"
+		
+		2 "mom2:skinCluster5" "weightList[728].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[29]" " 8.0635505874584122e-08"
+		
+		2 "mom2:skinCluster5" "weightList[728].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[35]" " 0.12159131467342377"
+		
+		2 "mom2:skinCluster5" "weightList[728].weights[36]" " 0.0061549991356460608"
+		
+		2 "mom2:skinCluster5" "weightList[728].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[728].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[729].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[4]" " 0.2417077619685441"
+		2 "mom2:skinCluster5" "weightList[729].weights[5]" " 0.70314213886151389"
+		
+		2 "mom2:skinCluster5" "weightList[729].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[29]" " 3.9736344726880153e-07"
+		
+		2 "mom2:skinCluster5" "weightList[729].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[35]" " 0.031741995364427567"
+		
+		2 "mom2:skinCluster5" "weightList[729].weights[36]" " 0.023407706442067199"
+		
+		2 "mom2:skinCluster5" "weightList[729].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[729].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[730].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[4]" " 0.22916678604959051"
+		
+		2 "mom2:skinCluster5" "weightList[730].weights[5]" " 0.68619778841213364"
+		
+		2 "mom2:skinCluster5" "weightList[730].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[29]" " 1.0071066241275387e-07"
+		
+		2 "mom2:skinCluster5" "weightList[730].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[35]" " 0.045177564024925232"
+		
+		2 "mom2:skinCluster5" "weightList[730].weights[36]" " 0.039457760802688209"
+		
+		2 "mom2:skinCluster5" "weightList[730].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[730].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[731].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[4]" " 0.62966100569338879"
+		
+		2 "mom2:skinCluster5" "weightList[731].weights[5]" " 0.31350145418672482"
+		
+		2 "mom2:skinCluster5" "weightList[731].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[35]" " 0.056837540119886398"
+		
+		2 "mom2:skinCluster5" "weightList[731].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[731].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[732].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[4]" " 0.63611404828891194"
+		
+		2 "mom2:skinCluster5" "weightList[732].weights[5]" " 0.33214493237271869"
+		
+		2 "mom2:skinCluster5" "weightList[732].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[35]" " 0.03174101933836937"
+		
+		2 "mom2:skinCluster5" "weightList[732].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[732].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[733].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[5]" " 0.92879315333675549"
+		
+		2 "mom2:skinCluster5" "weightList[733].weights[6]" " 0.071206569671630859"
+		
+		2 "mom2:skinCluster5" "weightList[733].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[33]" " 2.7699161364580505e-07"
+		
+		2 "mom2:skinCluster5" "weightList[733].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[733].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[734].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[5]" " 0.91532925020116596"
+		
+		2 "mom2:skinCluster5" "weightList[734].weights[6]" " 0.0059488322585821152"
+		
+		2 "mom2:skinCluster5" "weightList[734].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[33]" " 7.924571576722883e-08"
+		
+		2 "mom2:skinCluster5" "weightList[734].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[35]" " 0.078721838294536148"
+		
+		2 "mom2:skinCluster5" "weightList[734].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[734].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[735].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[5]" " 0.99873883539292652"
+		
+		2 "mom2:skinCluster5" "weightList[735].weights[6]" " 0.0011824837420135736"
+		
+		2 "mom2:skinCluster5" "weightList[735].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[29]" " 7.7859769946221215e-05"
+		
+		2 "mom2:skinCluster5" "weightList[735].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[33]" " 8.2109511367889354e-07"
+		
+		2 "mom2:skinCluster5" "weightList[735].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[735].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[736].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[5]" " 0.9410455971389865"
+		2 "mom2:skinCluster5" "weightList[736].weights[6]" " 0.058952029794454575"
+		
+		2 "mom2:skinCluster5" "weightList[736].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[29]" " 7.0796570531193422e-07"
+		
+		2 "mom2:skinCluster5" "weightList[736].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[33]" " 1.665100853642798e-06"
+		
+		2 "mom2:skinCluster5" "weightList[736].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[736].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[737].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[5]" " 0.69229759388858847"
+		
+		2 "mom2:skinCluster5" "weightList[737].weights[6]" " 4.5081931602908298e-05"
+		
+		2 "mom2:skinCluster5" "weightList[737].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[29]" " 3.695270384569737e-05"
+		
+		2 "mom2:skinCluster5" "weightList[737].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[33]" " 9.5197329130769504e-08"
+		
+		2 "mom2:skinCluster5" "weightList[737].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[35]" " 0.30762027627863375"
+		
+		2 "mom2:skinCluster5" "weightList[737].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[737].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[738].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[5]" " 0.78002278339557718"
+		
+		2 "mom2:skinCluster5" "weightList[738].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[29]" " 0.00067302486495476638"
+		
+		2 "mom2:skinCluster5" "weightList[738].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[33]" " 6.434034389712906e-07"
+		
+		2 "mom2:skinCluster5" "weightList[738].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[35]" " 0.21930354833602905"
+		
+		2 "mom2:skinCluster5" "weightList[738].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[738].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[739].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[5]" " 0.48217236413721526"
+		
+		2 "mom2:skinCluster5" "weightList[739].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[29]" " 0.00010336027379548181"
+		
+		2 "mom2:skinCluster5" "weightList[739].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[35]" " 0.51772427558898926"
+		
+		2 "mom2:skinCluster5" "weightList[739].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[739].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[740].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[5]" " 0.41910329064690088"
+		
+		2 "mom2:skinCluster5" "weightList[740].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[29]" " 2.8947893479199966e-06"
+		
+		2 "mom2:skinCluster5" "weightList[740].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[35]" " 0.58089381456375122"
+		
+		2 "mom2:skinCluster5" "weightList[740].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[740].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[741].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[5]" " 0.33648406163074479"
+		
+		2 "mom2:skinCluster5" "weightList[741].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[29]" " 1.4198867302089298e-05"
+		
+		2 "mom2:skinCluster5" "weightList[741].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[35]" " 0.66350173950195312"
+		
+		2 "mom2:skinCluster5" "weightList[741].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[741].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[742].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[5]" " 0.29800024577852319"
+		
+		2 "mom2:skinCluster5" "weightList[742].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[29]" " 6.2635663915474211e-07"
+		
+		2 "mom2:skinCluster5" "weightList[742].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[35]" " 0.70199912786483765"
+		
+		2 "mom2:skinCluster5" "weightList[742].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[742].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[743].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[5]" " 0.24977332991276002"
+		
+		2 "mom2:skinCluster5" "weightList[743].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[29]" " 5.3227803948881901e-08"
+		
+		2 "mom2:skinCluster5" "weightList[743].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[35]" " 0.75022661685943604"
+		
+		2 "mom2:skinCluster5" "weightList[743].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[743].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[744].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[5]" " 0.26279377937316895"
+		
+		2 "mom2:skinCluster5" "weightList[744].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[35]" " 0.73720622062683105"
+		
+		2 "mom2:skinCluster5" "weightList[744].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[744].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[745].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[5]" " 0.25290042161941528"
+		
+		2 "mom2:skinCluster5" "weightList[745].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[35]" " 0.74709957838058472"
+		
+		2 "mom2:skinCluster5" "weightList[745].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[745].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[746].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[5]" " 0.2390453650657792"
+		2 "mom2:skinCluster5" "weightList[746].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[29]" " 1.9529417564114253e-07"
+		
+		2 "mom2:skinCluster5" "weightList[746].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[35]" " 0.76095443964004517"
+		
+		2 "mom2:skinCluster5" "weightList[746].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[746].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[747].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[5]" " 0.24928528070449829"
+		
+		2 "mom2:skinCluster5" "weightList[747].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[35]" " 0.75071471929550171"
+		
+		2 "mom2:skinCluster5" "weightList[747].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[747].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[748].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[5]" " 0.38334062592153745"
+		
+		2 "mom2:skinCluster5" "weightList[748].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[29]" " 3.0835817305502024e-08"
+		
+		2 "mom2:skinCluster5" "weightList[748].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[35]" " 0.61665934324264526"
+		
+		2 "mom2:skinCluster5" "weightList[748].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[748].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[749].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[5]" " 0.25472027063369751"
+		
+		2 "mom2:skinCluster5" "weightList[749].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[35]" " 0.74527972936630249"
+		
+		2 "mom2:skinCluster5" "weightList[749].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[749].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[750].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[5]" " 0.32059857225101712"
+		
+		2 "mom2:skinCluster5" "weightList[750].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[29]" " 1.0396484721798171e-07"
+		
+		2 "mom2:skinCluster5" "weightList[750].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[35]" " 0.67598444223403931"
+		
+		2 "mom2:skinCluster5" "weightList[750].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[37]" " 0.0034168815500963266"
+		
+		2 "mom2:skinCluster5" "weightList[750].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[750].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[751].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[5]" " 0.25249689817428589"
+		
+		2 "mom2:skinCluster5" "weightList[751].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[35]" " 0.74750310182571411"
+		
+		2 "mom2:skinCluster5" "weightList[751].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[751].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[752].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[5]" " 0.25860184403112907"
+		
+		2 "mom2:skinCluster5" "weightList[752].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[29]" " 2.7963145392447047e-10"
+		
+		2 "mom2:skinCluster5" "weightList[752].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[35]" " 0.7413981556892395"
+		
+		2 "mom2:skinCluster5" "weightList[752].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[752].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[753].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[5]" " 0.041973160464088083"
+		
+		2 "mom2:skinCluster5" "weightList[753].weights[6]" " 0.0021142504468970322"
+		
+		2 "mom2:skinCluster5" "weightList[753].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[29]" " 0.046061841794418183"
+		
+		2 "mom2:skinCluster5" "weightList[753].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[35]" " 0.89108590313034441"
+		
+		2 "mom2:skinCluster5" "weightList[753].weights[36]" " 0.018764844164252281"
+		
+		2 "mom2:skinCluster5" "weightList[753].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[753].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[754].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[5]" " 0.23562043903177432"
+		
+		2 "mom2:skinCluster5" "weightList[754].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[35]" " 0.76437956094741821"
+		
+		2 "mom2:skinCluster5" "weightList[754].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[754].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[755].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[4]" " 0.24223105035802062"
+		
+		2 "mom2:skinCluster5" "weightList[755].weights[5]" " 0.6469951962973709"
+		2 "mom2:skinCluster5" "weightList[755].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[35]" " 0.019427768886089325"
+		
+		2 "mom2:skinCluster5" "weightList[755].weights[36]" " 0.091345984458519158"
+		
+		2 "mom2:skinCluster5" "weightList[755].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[755].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[756].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[5]" " 0.19004583358710581"
+		
+		2 "mom2:skinCluster5" "weightList[756].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[35]" " 0.80995416641235352"
+		
+		2 "mom2:skinCluster5" "weightList[756].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[756].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[757].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[4]" " 0.17637691179671847"
+		
+		2 "mom2:skinCluster5" "weightList[757].weights[5]" " 0.44932594594516023"
+		
+		2 "mom2:skinCluster5" "weightList[757].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[35]" " 0.27802190184593201"
+		
+		2 "mom2:skinCluster5" "weightList[757].weights[36]" " 0.096275240412189267"
+		
+		2 "mom2:skinCluster5" "weightList[757].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[757].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[758].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[4]" " 0.22912544986269179"
+		
+		2 "mom2:skinCluster5" "weightList[758].weights[5]" " 0.63217799760457138"
+		
+		2 "mom2:skinCluster5" "weightList[758].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[29]" " 8.4749360110804789e-09"
+		
+		2 "mom2:skinCluster5" "weightList[758].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[35]" " 0.13018809258937836"
+		
+		2 "mom2:skinCluster5" "weightList[758].weights[36]" " 0.0085084514684224469"
+		
+		2 "mom2:skinCluster5" "weightList[758].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[758].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[759].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[4]" " 0.2177662780838408"
+		2 "mom2:skinCluster5" "weightList[759].weights[5]" " 0.62898303834671654"
+		
+		2 "mom2:skinCluster5" "weightList[759].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[35]" " 0.061948761343955994"
+		
+		2 "mom2:skinCluster5" "weightList[759].weights[36]" " 0.091301922225486581"
+		
+		2 "mom2:skinCluster5" "weightList[759].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[759].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[760].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[4]" " 0.15907004743083122"
+		
+		2 "mom2:skinCluster5" "weightList[760].weights[5]" " 0.47316972286027453"
+		
+		2 "mom2:skinCluster5" "weightList[760].weights[6]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[35]" " 0.25920632481575012"
+		
+		2 "mom2:skinCluster5" "weightList[760].weights[36]" " 0.10855390489314415"
+		
+		2 "mom2:skinCluster5" "weightList[760].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[760].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[781].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[4]" " 0.17563017311759069"
+		
+		2 "mom2:skinCluster5" "weightList[781].weights[5]" " 0.36449499923487821"
+		
+		2 "mom2:skinCluster5" "weightList[781].weights[6]" " 0.45950433611869812"
+		
+		2 "mom2:skinCluster5" "weightList[781].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[29]" " 0.00037049152883294084"
+		
+		2 "mom2:skinCluster5" "weightList[781].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[781].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[782].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[5]" " 0.42980631742563069"
+		
+		2 "mom2:skinCluster5" "weightList[782].weights[6]" " 0.57000088691711426"
+		
+		2 "mom2:skinCluster5" "weightList[782].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[29]" " 0.00019279565725506756"
+		
+		2 "mom2:skinCluster5" "weightList[782].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[782].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[783].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[4]" " 0.38327249904059313"
+		
+		2 "mom2:skinCluster5" "weightList[783].weights[5]" " 0.39351214440213478"
+		
+		2 "mom2:skinCluster5" "weightList[783].weights[6]" " 0.2232062816619873"
+		2 "mom2:skinCluster5" "weightList[783].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[29]" " 9.0748952847860055e-06"
+		
+		2 "mom2:skinCluster5" "weightList[783].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[783].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[784].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[4]" " 0.25509253638378676"
+		
+		2 "mom2:skinCluster5" "weightList[784].weights[5]" " 0.39182803038040526"
+		
+		2 "mom2:skinCluster5" "weightList[784].weights[6]" " 0.3530724048614502"
+		2 "mom2:skinCluster5" "weightList[784].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[29]" " 7.0283743578258761e-06"
+		
+		2 "mom2:skinCluster5" "weightList[784].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[784].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[785].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[4]" " 0.040090856498820458"
+		
+		2 "mom2:skinCluster5" "weightList[785].weights[5]" " 0.2266692543562821"
+		2 "mom2:skinCluster5" "weightList[785].weights[6]" " 0.73323988914489746"
+		
+		2 "mom2:skinCluster5" "weightList[785].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[785].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[786].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[4]" " 0.070803267678501897"
+		
+		2 "mom2:skinCluster5" "weightList[786].weights[5]" " 0.22084908633177613"
+		
+		2 "mom2:skinCluster5" "weightList[786].weights[6]" " 0.70834708213806152"
+		
+		2 "mom2:skinCluster5" "weightList[786].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[29]" " 5.6385166048641174e-07"
+		
+		2 "mom2:skinCluster5" "weightList[786].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[786].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[787].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[4]" " 0.048119166314182164"
+		
+		2 "mom2:skinCluster5" "weightList[787].weights[5]" " 0.1792174788121606"
+		2 "mom2:skinCluster5" "weightList[787].weights[6]" " 0.77266335487365723"
+		
+		2 "mom2:skinCluster5" "weightList[787].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[787].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[788].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[4]" " 0.077445218810067287"
+		
+		2 "mom2:skinCluster5" "weightList[788].weights[5]" " 0.19729422544576156"
+		
+		2 "mom2:skinCluster5" "weightList[788].weights[6]" " 0.72526055574417114"
+		
+		2 "mom2:skinCluster5" "weightList[788].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[788].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[789].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[4]" " 0.078584955739984197"
+		
+		2 "mom2:skinCluster5" "weightList[789].weights[5]" " 0.20019774251569677"
+		
+		2 "mom2:skinCluster5" "weightList[789].weights[6]" " 0.72121727466583252"
+		
+		2 "mom2:skinCluster5" "weightList[789].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[29]" " 2.7078486529473743e-08"
+		
+		2 "mom2:skinCluster5" "weightList[789].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[789].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[790].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[4]" " 0.047603441767092247"
+		
+		2 "mom2:skinCluster5" "weightList[790].weights[5]" " 0.19283412358037075"
+		
+		2 "mom2:skinCluster5" "weightList[790].weights[6]" " 0.75956243276596069"
+		
+		2 "mom2:skinCluster5" "weightList[790].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[29]" " 1.8865763205140424e-09"
+		
+		2 "mom2:skinCluster5" "weightList[790].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[790].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[793].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[5]" " 0.80992010772411049"
+		
+		2 "mom2:skinCluster5" "weightList[793].weights[6]" " 0.19007863104343414"
+		
+		2 "mom2:skinCluster5" "weightList[793].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[33]" " 1.2612324553629151e-06"
+		
+		2 "mom2:skinCluster5" "weightList[793].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[793].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[794].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[5]" " 0.80107190560387664"
+		
+		2 "mom2:skinCluster5" "weightList[794].weights[6]" " 0.19892790913581848"
+		
+		2 "mom2:skinCluster5" "weightList[794].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[33]" " 1.8526030487464595e-07"
+		
+		2 "mom2:skinCluster5" "weightList[794].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[794].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[795].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[5]" " 0.7566012909105666"
+		2 "mom2:skinCluster5" "weightList[795].weights[6]" " 0.24339842796325684"
+		
+		2 "mom2:skinCluster5" "weightList[795].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[33]" " 2.8112617656006478e-07"
+		
+		2 "mom2:skinCluster5" "weightList[795].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[795].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[796].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[5]" " 0.76094496577983939"
+		
+		2 "mom2:skinCluster5" "weightList[796].weights[6]" " 0.23905327916145325"
+		
+		2 "mom2:skinCluster5" "weightList[796].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[29]" " 3.3732847546523972e-07"
+		
+		2 "mom2:skinCluster5" "weightList[796].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[33]" " 1.4177302318785223e-06"
+		
+		2 "mom2:skinCluster5" "weightList[796].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[796].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[797].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[5]" " 0.75687943398952484"
+		
+		2 "mom2:skinCluster5" "weightList[797].weights[6]" " 0.24312056601047516"
+		
+		2 "mom2:skinCluster5" "weightList[797].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[797].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[798].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[5]" " 0.75654716090504059"
+		
+		2 "mom2:skinCluster5" "weightList[798].weights[6]" " 0.24345216155052185"
+		
+		2 "mom2:skinCluster5" "weightList[798].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[29]" " 6.7754443751425183e-07"
+		
+		2 "mom2:skinCluster5" "weightList[798].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[798].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[799].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[5]" " 0.75578389428160231"
+		
+		2 "mom2:skinCluster5" "weightList[799].weights[6]" " 0.24421600997447968"
+		
+		2 "mom2:skinCluster5" "weightList[799].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[29]" " 9.5743918005315549e-08"
+		
+		2 "mom2:skinCluster5" "weightList[799].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[799].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[800].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[5]" " 0.75511176922857792"
+		
+		2 "mom2:skinCluster5" "weightList[800].weights[6]" " 0.2448003888130188"
+		2 "mom2:skinCluster5" "weightList[800].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[29]" " 8.7841958403260116e-05"
+		
+		2 "mom2:skinCluster5" "weightList[800].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[800].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[801].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[5]" " 0.74012105875140766"
+		
+		2 "mom2:skinCluster5" "weightList[801].weights[6]" " 0.25987815856933594"
+		
+		2 "mom2:skinCluster5" "weightList[801].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[29]" " 7.8267925637169539e-07"
+		
+		2 "mom2:skinCluster5" "weightList[801].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[801].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[802].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[5]" " 0.74814653330162584"
+		
+		2 "mom2:skinCluster5" "weightList[802].weights[6]" " 0.25165897607803345"
+		
+		2 "mom2:skinCluster5" "weightList[802].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[29]" " 0.00019449062034070157"
+		
+		2 "mom2:skinCluster5" "weightList[802].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[802].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[803].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[5]" " 0.68803590536117554"
+		
+		2 "mom2:skinCluster5" "weightList[803].weights[6]" " 0.31196409463882446"
+		
+		2 "mom2:skinCluster5" "weightList[803].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[803].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[804].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[5]" " 0.72629743251428469"
+		
+		2 "mom2:skinCluster5" "weightList[804].weights[6]" " 0.27358141541481018"
+		
+		2 "mom2:skinCluster5" "weightList[804].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[29]" " 0.00012115207090516457"
+		
+		2 "mom2:skinCluster5" "weightList[804].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[804].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[805].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[5]" " 0.60137507334476692"
+		
+		2 "mom2:skinCluster5" "weightList[805].weights[6]" " 0.39857247471809387"
+		
+		2 "mom2:skinCluster5" "weightList[805].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[29]" " 5.2451937139215401e-05"
+		
+		2 "mom2:skinCluster5" "weightList[805].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[805].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[806].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[5]" " 0.66153999381208017"
+		
+		2 "mom2:skinCluster5" "weightList[806].weights[6]" " 0.3383277952671051"
+		2 "mom2:skinCluster5" "weightList[806].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[29]" " 0.00013221092081469192"
+		
+		2 "mom2:skinCluster5" "weightList[806].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[806].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[807].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[5]" " 0.4492547852591211"
+		2 "mom2:skinCluster5" "weightList[807].weights[6]" " 0.55074518918991089"
+		
+		2 "mom2:skinCluster5" "weightList[807].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[29]" " 2.555096800507987e-08"
+		
+		2 "mom2:skinCluster5" "weightList[807].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[807].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[808].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[5]" " 0.53353255987167358"
+		
+		2 "mom2:skinCluster5" "weightList[808].weights[6]" " 0.46646744012832642"
+		
+		2 "mom2:skinCluster5" "weightList[808].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[808].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[809].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[5]" " 0.30145484209060669"
+		
+		2 "mom2:skinCluster5" "weightList[809].weights[6]" " 0.69854515790939331"
+		
+		2 "mom2:skinCluster5" "weightList[809].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[809].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[810].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[5]" " 0.37879341840744019"
+		
+		2 "mom2:skinCluster5" "weightList[810].weights[6]" " 0.62120658159255981"
+		
+		2 "mom2:skinCluster5" "weightList[810].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[810].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[811].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[5]" " 0.059216711163850078"
+		
+		2 "mom2:skinCluster5" "weightList[811].weights[6]" " 0.78669357299804688"
+		
+		2 "mom2:skinCluster5" "weightList[811].weights[7]" " 0.058638232927164698"
+		
+		2 "mom2:skinCluster5" "weightList[811].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[29]" " 0.061274517756926342"
+		
+		2 "mom2:skinCluster5" "weightList[811].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[35]" " 0.034176965154012022"
+		
+		2 "mom2:skinCluster5" "weightList[811].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[811].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[812].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[5]" " 0.27288579940795898"
+		
+		2 "mom2:skinCluster5" "weightList[812].weights[6]" " 0.72711420059204102"
+		
+		2 "mom2:skinCluster5" "weightList[812].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[812].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[813].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[5]" " 0.22129601229661586"
+		
+		2 "mom2:skinCluster5" "weightList[813].weights[6]" " 0.77870398759841919"
+		
+		2 "mom2:skinCluster5" "weightList[813].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[29]" " 1.0496494028111095e-10"
+		
+		2 "mom2:skinCluster5" "weightList[813].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[813].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[814].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[4]" " 0.03463472814690606"
+		
+		2 "mom2:skinCluster5" "weightList[814].weights[5]" " 0.18366299180853826"
+		
+		2 "mom2:skinCluster5" "weightList[814].weights[6]" " 0.78170228004455566"
+		
+		2 "mom2:skinCluster5" "weightList[814].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[814].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[815].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[5]" " 0.21512412921654461"
+		
+		2 "mom2:skinCluster5" "weightList[815].weights[6]" " 0.78487586975097656"
+		
+		2 "mom2:skinCluster5" "weightList[815].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[29]" " 1.0324788316654139e-09"
+		
+		2 "mom2:skinCluster5" "weightList[815].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[815].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[816].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[4]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[5]" " 0.22836071252822876"
+		
+		2 "mom2:skinCluster5" "weightList[816].weights[6]" " 0.77163928747177124"
+		
+		2 "mom2:skinCluster5" "weightList[816].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[816].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[817].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[4]" " 0.062969681580512457"
+		
+		2 "mom2:skinCluster5" "weightList[817].weights[5]" " 0.16041732136443385"
+		
+		2 "mom2:skinCluster5" "weightList[817].weights[6]" " 0.77661299705505371"
+		
+		2 "mom2:skinCluster5" "weightList[817].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[29]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[817].weights[62]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights" " -s 21"
+		2 "mom2:skinCluster5" "weightList[818].weights[0]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[1]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[2]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[3]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[4]" " 0.081030347820032322"
+		
+		2 "mom2:skinCluster5" "weightList[818].weights[5]" " 0.2064274587429504"
+		2 "mom2:skinCluster5" "weightList[818].weights[6]" " 0.71254211664199829"
+		
+		2 "mom2:skinCluster5" "weightList[818].weights[7]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[8]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[9]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[29]" " 7.6795018943748208e-08"
+		
+		2 "mom2:skinCluster5" "weightList[818].weights[30]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[31]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[33]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[34]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[35]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[36]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[37]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[38]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[58]" " 0"
+		2 "mom2:skinCluster5" "weightList[818].weights[62]" " 0"
+		2 "mom2:tweak16" "vlist[0].vertex" " -s 415"
 		2 "mom2:tweak16" "vlist[0].vertex[0]" " -type \"float3\" 0 0 0"
+		2 "mom2:tweak16" "vlist[0].vertex[1]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		
 		2 "mom2:tweak16" "vlist[0].vertex[3]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[4]" " -type \"float3\" 0 0 0"
+		2 "mom2:tweak16" "vlist[0].vertex[8]" " -type \"float3\" 1.4901161000000001e-08 0 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[17]" " -type \"float3\" -1.1641532000000001e-10 1.0477379000000001e-09 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[18]" " -type \"float3\" 0 -1.1641532000000001e-10 0"
 		
+		2 "mom2:tweak16" "vlist[0].vertex[19]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[20]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[26]" " -type \"float3\" 0 0 0.052922979000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[27]" " -type \"float3\" 0 0 0.052417989999999998"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[28]" " -type \"float3\" 0 0 0.038750920000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[33]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[45]" " -type \"float3\" 2.9802322000000001e-08 0 0"
+		
 		2 "mom2:tweak16" "vlist[0].vertex[46]" " -type \"float3\" 0 -1.9790604999999997e-09 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[50]" " -type \"float3\" 0 1.0477379000000001e-09 0"
 		
+		2 "mom2:tweak16" "vlist[0].vertex[60]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[64]" " -type \"float3\" 2.3283064000000002e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[68]" " -type \"float3\" 0 0 0.039164013999999997"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[69]" " -type \"float3\" 0 0 0.050160903"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[70]" " -type \"float3\" 0 0 0.048781298000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[75]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		
 		2 "mom2:tweak16" "vlist[0].vertex[76]" " -type \"float3\" 0 0 0"
+		2 "mom2:tweak16" "vlist[0].vertex[77]" " -type \"float3\" 0 0 0.052922979000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[78]" " -type \"float3\" 0 0 0.051809798999999997"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[79]" " -type \"float3\" 0 0 0.029297980000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[82]" " -type \"float3\" 4.6566128999999998e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[85]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[87]" " -type \"float3\" -1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[97]" " -type \"float3\" 0 0 0.0020399895"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[98]" " -type \"float3\" 0 0 0.031895421"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[99]" " -type \"float3\" 0 0 0.0015041328000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[101]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[105]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[106]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[107]" " -type \"float3\" 4.6566128999999998e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[110]" " -type \"float3\" 0 0 0.016076440000000001"
+		
 		2 "mom2:tweak16" "vlist[0].vertex[112]" " -type \"float3\" 0 9.3132257000000002e-10 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[113]" " -type \"float3\" 0 -4.6566128999999998e-10 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[114]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[118]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[121]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[123]" " -type \"float3\" 1.4901161000000001e-08 0 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[125]" " -type \"float3\" 0 1.1641532000000001e-10 0"
 		
@@ -23539,6 +31906,63 @@ createNode reference -n "momRN1";
 		2 "mom2:tweak16" "vlist[0].vertex[128]" " -type \"float3\" 0 -4.6566128999999998e-10 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[129]" " -type \"float3\" 0 5.8207661000000002e-10 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[133]" " -type \"float3\" 2.3283064000000002e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[140]" " -type \"float3\" -1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[142]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[144]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[150]" " -type \"float3\" -2.3283064000000002e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[151]" " -type \"float3\" 4.6566128999999998e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[157]" " -type \"float3\" 0 0 0.0015930221"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[158]" " -type \"float3\" 0 0 0.003206094"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[159]" " -type \"float3\" 2.3283064000000002e-10 0 0.0035533174"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[160]" " -type \"float3\" 1.4901161000000001e-08 0 0.0029636928999999998"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[161]" " -type \"float3\" 1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[162]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[166]" " -type \"float3\" 0 0 0.033939830999999997"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[167]" " -type \"float3\" 0 0 0.037054430999999999"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[168]" " -type \"float3\" 1.1641532000000001e-10 0 0.03241786"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[169]" " -type \"float3\" 0 0 0.0036393394999999999"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[172]" " -type \"float3\" 2.3283064000000002e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[182]" " -type \"float3\" 0 0 0.0061118021"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[183]" " -type \"float3\" 4.6566128999999998e-10 0 0.01954991"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[184]" " -type \"float3\" 0 0 0.052922979000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[185]" " -type \"float3\" 0 0 0.052922979000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[186]" " -type \"float3\" 0 0 0.05024489"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[194]" " -type \"float3\" 0 0 0"
+		2 "mom2:tweak16" "vlist[0].vertex[195]" " -type \"float3\" 0 0 0.0098092276999999992"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[196]" " -type \"float3\" 0 0 0.021775696000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[197]" " -type \"float3\" 0 0 0.046438854000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[198]" " -type \"float3\" 0 0 0.05114001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[199]" " -type \"float3\" 0 0 0.049468324000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[200]" " -type \"float3\" 4.6566128999999998e-10 -4.6566128999999998e-10 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[201]" " -type \"float3\" 0 7.2177499999999994e-09 0"
 		
@@ -23676,17 +32100,59 @@ createNode reference -n "momRN1";
 		
 		2 "mom2:tweak16" "vlist[0].vertex[269]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
 		
+		2 "mom2:tweak16" "vlist[0].vertex[271]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[272]" " -type \"float3\" -1.4901161000000001e-08 0 0"
+		
 		2 "mom2:tweak16" "vlist[0].vertex[274]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[275]" " -type \"float3\" 0 -1.3969838999999999e-09 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[276]" " -type \"float3\" 0 4.4237821999999997e-09 0"
 		
+		2 "mom2:tweak16" "vlist[0].vertex[277]" " -type \"float3\" 1.1641532000000001e-10 2.3283064000000002e-10 0"
+		
 		2 "mom2:tweak16" "vlist[0].vertex[278]" " -type \"float3\" 9.3132257000000002e-10 -3.7252903000000002e-09 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[279]" " -type \"float3\" 0 9.3132257000000002e-10 0"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[280]" " -type \"float3\" 0 6.9849192999999995e-10 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[281]" " -type \"float3\" -1.4901161000000001e-08 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[287]" " -type \"float3\" 2.3283064000000002e-10 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[290]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[292]" " -type \"float3\" 7.4505806000000003e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[295]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[296]" " -type \"float3\" 0 0 0.026576011"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[297]" " -type \"float3\" 0 0 0.036996982999999997"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[298]" " -type \"float3\" 0 0 0.043884777"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[299]" " -type \"float3\" 0 0 0.046773117000000003"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[300]" " -type \"float3\" 0 0 0.037457310000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[301]" " -type \"float3\" 0 0 0.0098092276999999992"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[302]" " -type \"float3\" 0 0 0.037380724999999997"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[303]" " -type \"float3\" 0 0 0.043039024000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[304]" " -type \"float3\" 0 0 0.046872380999999998"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[305]" " -type \"float3\" 0 0 0.046322804000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[306]" " -type \"float3\" 0 0 0.038750920000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[307]" " -type \"float3\" 0 0 0.032628465000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[308]" " -type \"float3\" 0 0 0.00018401200999999999"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[319]" " -type \"float3\" 0.51433432000000001 0.58468783000000002 -2.9802322000000001e-08"
 		
@@ -23950,6 +32416,11 @@ createNode reference -n "momRN1";
 		
 		2 "mom2:tweak16" "vlist[0].vertex[648]" " -type \"float3\" 0 6.9849192999999995e-10 0"
 		
+		2 "mom2:tweak16" "vlist[0].vertex[656]" " -type \"float3\" 0 0 0.00040887421000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[657]" " -type \"float3\" 0 0 0.00021838926"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[658]" " -type \"float3\" 0 0 0"
 		2 "mom2:tweak16" "vlist[0].vertex[673]" " -type \"float3\" -0.34911492 0.60635077999999998 -0.080918267000000002"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[674]" " -type \"float3\" -0.33661708000000001 0.60950530000000003 -0.065916068999999994"
@@ -24005,6 +32476,52 @@ createNode reference -n "momRN1";
 		2 "mom2:tweak16" "vlist[0].vertex[699]" " -type \"float3\" -0.24127218 0.30028415000000003 -0.0044836714"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[700]" " -type \"float3\" -0.23568098000000001 0.31489927000000001 -0.01330012"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[721]" " -type \"float3\" 0 0 0.045220218999999999"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[722]" " -type \"float3\" 0 0 0.033646020999999998"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[723]" " -type \"float3\" 0 0 0.033646020999999998"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[724]" " -type \"float3\" 0 0 0.041108366"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[725]" " -type \"float3\" 0 0 0.048739333000000003"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[726]" " -type \"float3\" 0 0 0.046983179"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[727]" " -type \"float3\" 0 0 0.044295727999999999"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[728]" " -type \"float3\" 0 0 0.046732879999999997"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[729]" " -type \"float3\" 0 0 0.045051977"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[730]" " -type \"float3\" 0 0 0.042603333"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[731]" " -type \"float3\" 0 0 0.00094060814999999995"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[732]" " -type \"float3\" 0 0 0.00040887421000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[750]" " -type \"float3\" 0 0 0.00049899704999999996"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[751]" " -type \"float3\" 0 0 0.00087704584999999998"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[752]" " -type \"float3\" 0 0 0.0057886531999999996"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[753]" " -type \"float3\" 0 0 0.0078270677000000007"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[754]" " -type \"float3\" 0 0 0.015951608999999999"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[755]" " -type \"float3\" 0 0 0.036388613"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[756]" " -type \"float3\" 0 0 0.026987581"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[757]" " -type \"float3\" 0 0 0.037394240000000002"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[758]" " -type \"float3\" 0 0 0.043426774000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[759]" " -type \"float3\" 0 0 0.039023437000000001"
+		
+		2 "mom2:tweak16" "vlist[0].vertex[760]" " -type \"float3\" 0 0 0.037676632000000002"
 		
 		2 "mom2:tweak16" "vlist[0].vertex[819]" " -type \"float3\" 0.52110338 0.58497321999999996 -2.2351741999999998e-08"
 		
@@ -24120,6 +32637,8 @@ createNode reference -n "momRN1";
 		
 		3 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest.message" 
 		"mom2:skinCluster1.paintTrans" ""
+		3 "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_r_chest.message" 
+		"mom2:skinCluster5.paintTrans" ""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:momBody.dropoff" "momRN1.placeHolderList[2677]" 
 		""
 		5 4 "momRN1" "|mom2:MomRig|mom2:MomMesh|mom2:momBody.smoothness" "momRN1.placeHolderList[2678]" 
@@ -25263,7 +33782,10 @@ createNode reference -n "momRN1";
 		5 0 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_l_hip.message" 
 		"mom2:skinCluster1.paintTrans" "momRN1.placeHolderList[3247]" "momRN1.placeHolderList[3248]" 
 		""
-		5 4 "momRN1" "mom2:lambert2SG.dagSetMembers" "momRN1.placeHolderList[3249]" 
+		5 0 "momRN1" "|mom2:MomRig|mom2:MasterCntrl|mom2:mom_skeleton:mom_COG|mom2:mom_skeleton:mom_spine0|mom2:mom_skeleton:mom_spine1|mom2:mom_skeleton:mom_spine2|mom2:mom_skeleton:mom_spine3|mom2:mom_skeleton:mom_spine4|mom2:mom_skeleton:mom_l_chest.message" 
+		"mom2:skinCluster5.paintTrans" "momRN1.placeHolderList[3249]" "momRN1.placeHolderList[3250]" 
+		""
+		5 4 "momRN1" "mom2:lambert2SG.dagSetMembers" "momRN1.placeHolderList[3251]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -28313,27 +36835,27 @@ createNode animCurveTL -n "mom_l_eye_ptr_translateZ";
 createNode animCurveTU -n "mom_l_eye_ptr_Blink";
 	rename -uid "CE00FC10-493B-5363-7AD8-FFB51F4B5E32";
 	setAttr ".tan" 18;
-	setAttr -s 20 ".ktv[0:19]"  1 3.9320585415119176 86 2.1551683240701958
-		 88 7 91 2 103 1 113 2 115 7.8 117 3 147 4 154 3.9320585415119176 164 10 173 10 178 2.9769581358651465
+	setAttr -s 18 ".ktv[0:17]"  1 3.9320585415119176 86 2.1551683240701958
+		 88 7 91 2 113 2 117 3 147 4 154 3.9320585415119176 164 10 173 10 178 2.9769581358651465
 		 194 4.2769581358651463 197 6.1307369890624326 201 4.0312575065220146 231 3.711270824072276
-		 255 7.373419999874498 262 7.373419999874498 280 5.5;
-	setAttr -s 20 ".kit[0:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 20 ".kot[0:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 20 ".ktl[9:19]" no yes yes yes yes yes yes yes yes yes yes;
-	setAttr -s 20 ".kix[0:19]"  6.875 3.541666666666667 0.083333333333333037 
-		0.125 0.50000000000000044 0.41666666666666607 0.083333333333333925 0.083333333333333037 
-		1.25 0.29166666666666696 0.4166666567325592 0.375 0.2083333283662796 0.66666668653488159 
-		0.125 0.1666666716337204 1.25 1 0.2916666567325592 0.75;
-	setAttr -s 20 ".kiy[0:19]"  0 0 0 -0.74999999999999933 0 3 0 0 0 0 
-		0 0 0 2.6558136940002441 0 -0.12799467146396637 0 0 0 0;
-	setAttr -s 20 ".kox[0:19]"  5.5 0.083333333333333037 0.125 0.50000000000000044 
-		0.41666666666666607 0.083333333333333925 0.083333333333333037 1.25 0.29166666666666696 
-		0.41666666666666607 0.375 0.2083333283662796 0.66666668653488159 0.125 0.1666666716337204 
-		1.25 1 0.2916666567325592 0.75 0.75;
-	setAttr -s 20 ".koy[0:19]"  0 0 0 -3 0 0.60000000000000508 0 0 0 0 
-		0 0 0 0.49796506762504578 0 -0.95996004343032837 0 0 0 0;
+		 261.99999982993199 7.373419999874498 262 7.373419999874498 280 5.5;
+	setAttr -s 18 ".kit[0:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 18 ".kot[0:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18;
+	setAttr -s 18 ".ktl[7:17]" no yes yes yes yes yes yes yes yes yes yes;
+	setAttr -s 18 ".kix[0:17]"  6.875 3.541666666666667 0.083333333333333037 
+		0.125 0.91666666666666652 0.16666666666666696 1.25 0.29166666666666696 0.4166666567325592 
+		0.375 0.2083333283662796 0.66666668653488159 0.125 0.1666666716337204 1.25 1.2916666595804998 
+		7.0861663203913849e-09 0.75;
+	setAttr -s 18 ".kiy[0:17]"  0 0 0 0 0 0.23529411764705918 0 0 0 0 0 
+		2.6558136940002441 0 -0.12799467146396637 0 0 0 0;
+	setAttr -s 18 ".kox[0:17]"  5.5 0.083333333333333037 0.125 0.91666666666666652 
+		0.16666666666666696 1.25 0.29166666666666696 0.41666666666666607 0.375 0.2083333283662796 
+		0.66666668653488159 0.125 0.1666666716337204 1.25 1.2916666595804998 7.0861663203913849e-09 
+		0.75 0.75;
+	setAttr -s 18 ".koy[0:17]"  0 0 0 0 0 1.7647058823529407 0 0 0 0 0 
+		0.49796506762504578 0 -0.95996004343032837 0 0 0 0;
 createNode animCurveTU -n "mom_r_eye_ptr_visibility";
 	rename -uid "175D54A4-4D17-B746-3AA2-7F8F594BFAF2";
 	setAttr ".tan" 5;
@@ -28399,27 +36921,26 @@ createNode animCurveTL -n "mom_r_eye_ptr_translateZ";
 createNode animCurveTU -n "mom_r_eye_ptr_Blink";
 	rename -uid "BAC5FF1B-499C-1B40-6D4D-46A502C3D2D4";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  1 3.9320585415119176 86 2.1551683240701958
-		 88 7 91 2 103 1 113 2 115 7.8 117 3 147 4 154 3.9320585415119176 164 10 173 10 178 2.9769581358651465
+	setAttr -s 17 ".ktv[0:16]"  1 3.9320585415119176 86 2.1551683240701958
+		 88 7 91 2 113 2 117 3 147 4 154 3.9320585415119176 164 10 173 10 178 2.9769581358651465
 		 194 4.2769581358651463 197 6.1307369890624326 201 4.0312575065220146 231 3.711270824072276
 		 262 7.373419999874498 280 5.5;
-	setAttr -s 19 ".kit[0:18]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 19 ".kot[0:18]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18 18 18;
-	setAttr -s 19 ".ktl[9:18]" no yes yes yes yes yes yes yes yes yes;
-	setAttr -s 19 ".kix[0:18]"  6.875 3.541666666666667 0.083333333333333037 
-		0.125 0.50000000000000044 0.41666666666666607 0.083333333333333925 0.083333333333333037 
-		1.25 0.29166666666666696 0.4166666567325592 0.375 0.2083333283662796 0.66666668653488159 
-		0.125 0.16666698455810547 1.25 1.2916669845581055 0.75;
-	setAttr -s 19 ".kiy[0:18]"  0 0 0 -0.74999999999999933 0 3 0 0 0 0 
-		0 0 0 2.6558136940002441 0 -0.12799490988254547 0 0 0;
-	setAttr -s 19 ".kox[0:18]"  5.5 0.083333333333333037 0.125 0.50000000000000044 
-		0.41666666666666607 0.083333333333333925 0.083333333333333037 1.25 0.29166666666666696 
-		0.41666666666666607 0.375 0.2083333283662796 0.66666668653488159 0.125 0.1666666716337204 
-		1.25 1.2916669845581055 0.75 0.75;
-	setAttr -s 19 ".koy[0:18]"  0 0 0 -3 0 0.60000000000000508 0 0 0 0 
-		0 0 0 0.49796506762504578 0 -0.95996004343032837 0 0 0;
+	setAttr -s 17 ".kit[0:16]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18;
+	setAttr -s 17 ".kot[0:16]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18;
+	setAttr -s 17 ".ktl[7:16]" no yes yes yes yes yes yes yes yes yes;
+	setAttr -s 17 ".kix[0:16]"  6.875 3.541666666666667 0.083333333333333037 
+		0.125 0.91666666666666652 0.16666666666666696 1.25 0.29166666666666696 0.4166666567325592 
+		0.375 0.2083333283662796 0.66666668653488159 0.125 0.16666698455810547 1.25 1.2916669845581055 
+		0.75;
+	setAttr -s 17 ".kiy[0:16]"  0 0 0 0 0 0.23529411764705918 0 0 0 0 0 
+		2.6558136940002441 0 -0.12799490988254547 0 0 0;
+	setAttr -s 17 ".kox[0:16]"  5.5 0.083333333333333037 0.125 0.91666666666666652 
+		0.16666666666666696 1.25 0.29166666666666696 0.41666666666666607 0.375 0.2083333283662796 
+		0.66666668653488159 0.125 0.1666666716337204 1.25 1.2916669845581055 0.75 0.75;
+	setAttr -s 17 ".koy[0:16]"  0 0 0 0 0 1.7647058823529407 0 0 0 0 0 
+		0.49796506762504578 0 -0.95996004343032837 0 0 0;
 createNode animCurveTU -n "FaceCntrls_Offset_visibility";
 	rename -uid "BA510488-433F-5680-DDEB-8DB714B76A11";
 	setAttr ".tan" 9;
@@ -29898,33 +38419,50 @@ createNode animCurveTA -n "MiddleCntrl_R_02_rotateZ";
 		3 3;
 createNode animCurveTU -n "IndexCntrl_R_03_visibility";
 	rename -uid "FBCEE0DA-4211-B06C-3DA3-53BC76D541C8";
-	setAttr ".tan" 9;
-	setAttr -s 12 ".ktv[0:11]"  0 1 10 1 14 1 18 1 27 1 34 1 41 1 43 1 65 1
-		 205 1 209 1 216 1;
-	setAttr -s 12 ".kot[0:11]"  5 5 5 5 5 5 5 5 
-		5 5 5 5;
+	setAttr ".tan" 5;
+	setAttr -s 13 ".ktv[0:12]"  0 1 10 1 14 1 18 1 27 1 34 1 41 1 43 1 65 1
+		 137 1 206 1 209 1 216 1;
+	setAttr -s 13 ".kit[0:12]"  9 9 9 9 9 9 9 9 
+		9 9 1 9 9;
+	setAttr -s 13 ".kix[10:12]"  2.9999999999999996 0.125 0.29166666666666607;
+	setAttr -s 13 ".kiy[10:12]"  0 0 0;
 createNode animCurveTA -n "IndexCntrl_R_03_rotateX";
 	rename -uid "EC46544F-4D2D-5D2A-46B9-61966AAB0EFA";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  0 0 10 6.2164162235857887 14 0 18 0 27 3.3669119312280671
-		 34 8.1562874976586641e-16 41 0 43 0 65 0 205 0 209 0 216 0;
-	setAttr -s 12 ".kit[9:11]"  3 3 3;
-	setAttr -s 12 ".kot[9:11]"  3 3 3;
+	setAttr -s 13 ".ktv[0:12]"  0 0 10 6.2164162235857887 14 0 18 0 27 3.3669119312280671
+		 34 8.1562874976586641e-16 41 0 43 0 65 0 137 0.72425308020209234 206 0.72425308020209234
+		 209 0 216 0;
+	setAttr -s 13 ".kit[10:12]"  1 3 3;
+	setAttr -s 13 ".kot[10:12]"  1 3 3;
+	setAttr -s 13 ".kix[10:12]"  2.9999999999999996 0.125 0.29166666666666607;
+	setAttr -s 13 ".kiy[10:12]"  0 0 0;
+	setAttr -s 13 ".kox[10:12]"  2.833333333333333 0.29166666666666607 0.29166666666666607;
+	setAttr -s 13 ".koy[10:12]"  0 0 0;
 createNode animCurveTA -n "IndexCntrl_R_03_rotateY";
 	rename -uid "EAD8C53A-414A-833A-1C87-0E83A4C2F9DF";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  0 0 10 0.12371187304491317 14 0 18 0 27 -6.856751117693185
-		 34 -12.869942119793206 41 0 43 0 65 0 205 0 209 0 216 0;
-	setAttr -s 12 ".kit[9:11]"  3 3 3;
-	setAttr -s 12 ".kot[9:11]"  3 3 3;
+	setAttr -s 13 ".ktv[0:12]"  0 0 10 0.12371187304491317 14 0 18 0 27 -6.856751117693185
+		 34 -12.869942119793206 41 0 43 0 65 0 137 -13.381521188286404 206 -13.381521188286404
+		 209 0 216 0;
+	setAttr -s 13 ".kit[10:12]"  1 3 3;
+	setAttr -s 13 ".kot[10:12]"  1 3 3;
+	setAttr -s 13 ".kix[10:12]"  2.9999999999999996 0.125 0.29166666666666607;
+	setAttr -s 13 ".kiy[10:12]"  0 0 0;
+	setAttr -s 13 ".kox[10:12]"  2.833333333333333 0.29166666666666607 0.29166666666666607;
+	setAttr -s 13 ".koy[10:12]"  0 0 0;
 createNode animCurveTA -n "IndexCntrl_R_03_rotateZ";
 	rename -uid "E450AA98-4304-D446-3A5E-55BCFE2C6B96";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  0 0 10 -6.4777225441651236 14 13.654391270341536
+	setAttr -s 13 ".ktv[0:12]"  0 0 10 -6.4777225441651236 14 13.654391270341536
 		 18 7.1255773837767569 27 -50.152197799579795 34 -37.741420658348773 41 -18.556171677591674
-		 43 -19.737977615164382 65 -18.744803849107356 205 0 209 0 216 0;
-	setAttr -s 12 ".kit[9:11]"  3 3 3;
-	setAttr -s 12 ".kot[9:11]"  3 3 3;
+		 43 -19.737977615164382 65 -18.744803849107356 137 -51.82368582637762 206 -51.82368582637762
+		 209 0 216 0;
+	setAttr -s 13 ".kit[10:12]"  1 3 3;
+	setAttr -s 13 ".kot[10:12]"  1 3 3;
+	setAttr -s 13 ".kix[10:12]"  2.9999999999999996 0.125 0.29166666666666607;
+	setAttr -s 13 ".kiy[10:12]"  0 0 0;
+	setAttr -s 13 ".kox[10:12]"  2.833333333333333 0.29166666666666607 0.29166666666666607;
+	setAttr -s 13 ".koy[10:12]"  0 0 0;
 createNode animCurveTU -n "IndexCntrl_R_02_visibility";
 	rename -uid "5CB1AB99-4AA9-F70A-AFCA-D4B4CC271A55";
 	setAttr ".tan" 9;
@@ -30314,7 +38852,7 @@ createNode place2dTexture -n "mom_scene:mom3:place2dTexture7";
 	rename -uid "683BDA68-4E4D-0E53-863C-E7A0A62B015E";
 createNode file -n "mom_scene:mom3:file6";
 	rename -uid "828F3D91-4DD8-D193-6C2F-BC88A362DEF1";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom3:place2dTexture8";
 	rename -uid "AB858E04-41B7-431D-0F02-948A5A5A82B9";
@@ -30558,7 +39096,7 @@ createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture7";
 	rename -uid "B03F9E7C-41A1-FA03-8D0E-ECB0078B06B5";
 createNode file -n "mom_scene:mom:mom_skeleton:file6";
 	rename -uid "0B16A165-4953-38F0-22F7-1F9F08FEDBBF";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_skeleton:place2dTexture8";
 	rename -uid "63D10159-4CA2-4141-F53F-15B1E597F32B";
@@ -30771,7 +39309,7 @@ createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:p
 	rename -uid "73080A6C-4D0E-454E-26DB-D583ED69D5B7";
 createNode file -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:file6";
 	rename -uid "8BEBD05E-4262-B46E-B301-9EBD9E1C515D";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_blendshapes_to_import:mom2:mom:place2dTexture8";
 	rename -uid "B03C26F7-46E3-4E81-8F6C-AE9CAEDEE2E7";
@@ -30901,7 +39439,7 @@ createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture7";
 	rename -uid "AF5B632F-4A5B-4183-7F32-5291F727CEFE";
 createNode file -n "mom_scene:mom:mom:file6";
 	rename -uid "63169CAD-4B02-6CEB-1B00-278B762FEDBF";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom:place2dTexture8";
 	rename -uid "0AFFB111-489B-36B6-01FF-A48916FDB96A";
@@ -31034,7 +39572,7 @@ createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture7";
 	rename -uid "44D8D512-42B6-F155-642E-6B89D816E3FE";
 createNode file -n "mom_scene:mom:mom_mesh:file6";
 	rename -uid "98B1761F-4DB1-089F-9292-3C924C1D0641";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Mom/mom-texture.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Mom/mom-texture.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:mom:mom_mesh:place2dTexture8";
 	rename -uid "C2D265E1-4772-04E1-E78E-C6AD31E5EC91";
@@ -31128,7 +39666,7 @@ createNode renderSetup -n "mom_scene:mom:renderSetup";
 	rename -uid "F14DBD1C-4592-5B01-A218-0FB5ADCF911F";
 createNode file -n "mom_scene:table:file1";
 	rename -uid "94F3A250-4A77-9ADE-6161-D8997B1FFFBC";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/table/wood-table.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:table:place2dTexture1";
 	rename -uid "56ED5B86-476F-0F17-4B2B-8FBBC489C093";
@@ -31159,7 +39697,7 @@ createNode rampShader -n "mom_scene:table:tableBrightnessShader";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:table:file2";
 	rename -uid "B87DE795-466C-1E95-CF62-81AEBB08E983";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/table/wood-table-dark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/table/wood-table-dark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:table:place2dTexture2";
 	rename -uid "95628B38-46D4-CF38-CF66-19A0F6D378D8";
@@ -31207,13 +39745,13 @@ createNode partition -n "mom_scene:bible:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "mom_scene:bible:file1";
 	rename -uid "CE178130-4E89-00B7-BF7D-628938E0CA6E";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible:place2dTexture1";
 	rename -uid "0742DE28-4B64-AF86-84D1-7797D983651C";
 createNode file -n "mom_scene:bible:file2";
 	rename -uid "D1FD3A84-4934-BF03-59DC-2A9C2CF95878";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible:place2dTexture2";
 	rename -uid "911580C0-4E12-AF96-FCA7-50A7E51E2A50";
@@ -31358,7 +39896,7 @@ createNode partition -n "mom_scene:bible1:mtorPartition";
 	setAttr ".sr" -type "string" "";
 createNode file -n "mom_scene:bible1:file1";
 	rename -uid "56EC779B-4A8D-5DCD-B7BB-508AA50F7B61";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bible.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bible.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible1:place2dTexture1";
 	rename -uid "7677CC7B-4891-BDEB-159D-9EA04C79610F";
@@ -31389,7 +39927,7 @@ createNode rampShader -n "mom_scene:bible1:BibleBrightnessRamp";
 	setAttr ".env[0].envi" 1;
 createNode file -n "mom_scene:bible1:file2";
 	rename -uid "94B7419C-4573-2335-360E-479B4CAEB0E2";
-	setAttr ".ftn" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sourceimages/Bible/bibleDark.png";
+	setAttr ".ftn" -type "string" "/Users/veronicachen/Desktop/Only-Love//sourceimages/Bible/bibleDark.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "mom_scene:bible1:place2dTexture2";
 	rename -uid "5372A348-4BAE-D084-1D1B-8DB56CBF4718";
@@ -31496,7 +40034,7 @@ createNode reference -n "mom_scene:momRN";
 	setAttr -s 3 ".fn";
 	setAttr ".fn[0]" -type "string" "/Users/Amelia/Desktop/Only-Love//scenes/char/mom/mom.ma{1}";
 	setAttr ".fn[1]" -type "string" "C:/Users/mikha/Desktop/Only-Love//scenes/char/mom/mom_shirt_nclothrig.ma";
-	setAttr ".fn[2]" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//scenes/char/mom/mom.ma";
+	setAttr ".fn[2]" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/char/mom/mom.ma";
 	setAttr -s 122 ".phl";
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[12]" 0;
@@ -32745,7 +41283,7 @@ createNode audio -n "mom_scene:mom_scene_audio";
 	rename -uid "F514776A-4771-BA3F-DFCB-F2BFE2CB1A63";
 	setAttr ".ef" 613.192;
 	setAttr ".se" 613.192;
-	setAttr ".f" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//sound/mom_scene_audio.wav";
+	setAttr ".f" -type "string" "/Users/veronicachen/Desktop/Only-Love//sound/mom_scene_audio.wav";
 createNode animCurveTU -n "mom_scene:wine_bottle_blendParent1";
 	rename -uid "B601C9F3-4F75-125F-D37D-49833B5F9ED9";
 	setAttr ".tan" 18;
@@ -32813,7 +41351,7 @@ createNode oceanShader -n "mom_scene:oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" -0.091931842267513275;
+	setAttr ".d" -0.053414873778820038;
 createNode reference -n "mom_scene:sharedReferenceNode";
 	rename -uid "A3BD9126-4746-2ED1-43E2-FE8A628D59A2";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -33148,7 +41686,7 @@ createNode animCurveTA -n "Neck_Cntrl_rotateX";
 createNode cacheFile -n "mom2_nClothShape1Cache1";
 	rename -uid "8887E77D-7443-5F78-EF97-8A9FA6B412F6";
 	setAttr ".cn" -type "string" "mom2_nClothShape1";
-	setAttr ".cp" -type "string" "/Users/oliverjek/Desktop/CNM190/Only-Love//scenes/layout/animation/";
+	setAttr ".cp" -type "string" "/Users/veronicachen/Desktop/Only-Love//scenes/layout/animation/";
 	setAttr ".ch[0]" -type "string" "mom2:nClothShape1";
 	setAttr ".os" -20;
 	setAttr ".oe" 81;
@@ -34123,56 +42661,50 @@ createNode animCurveTA -n "bot_mid_ctrl_rotateZ";
 createNode animCurveTL -n "bot_mid_ctrl_translateX1";
 	rename -uid "ADEEFE87-A84E-489D-AF6D-DD9F9A65FF29";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  0 -1.1102230246251565e-16 24 0.022404668842941743
-		 42 0.3079872995609812 66 -0.066621971495148424 99 0.30403162490727498 109 0.28398809637497963
-		 121 0.027158054093901908 134 0.19055924263872018 158 0.23640632150045376 162 0.28443911012965678
-		 165 0.34416944793840953 177 0.3355020172186195 208 0.32226971690862666 231 -0.12892982935109018
-		 242 -0.039773355312993211;
+	setAttr -s 13 ".ktv[0:12]"  0 -1.1102230246251565e-16 35 0.29307914029769822
+		 54 0.32885205171794046 97 0.21825912949459642 113 0.031782065029906881 130 0.12637602745684914
+		 139 0.20966847431089247 165 0.30202786666027215 182 0.29124811726244271 201 0.11581917482814985
+		 223 0.17302124846849548 228 0.23072399718369449 238 0.15438493253175123;
 createNode animCurveTL -n "bot_mid_ctrl_translateY1";
 	rename -uid "7E550956-434E-76AE-2CA7-2884A517728F";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  0 -0.26601002695381082 24 -0.29849927545768645
-		 42 -0.23869316062650323 66 -0.43047748416868487 99 -0.46856694045941616 109 -0.4413951299218829
-		 121 -0.45832195696278988 134 -0.28500780909928347 158 -0.40026244082512175 162 -0.42441595409118438
-		 165 -0.444050845339655 177 -0.48840494908064225 208 -0.29077504850683977 231 -0.22518843070825956
-		 242 -0.22585067540583115;
+	setAttr -s 12 ".ktv[0:11]"  0 -0.26601002695381082 35 0.061073700468345926
+		 54 -0.27038503509753686 97 -0.23216488712626387 113 -0.25424264748748837 130 -0.23962275891555312
+		 139 -0.23216488712626387 165 -0.23216488712626387 201 0.012661276019875458 223 -0.082020513872501408
+		 228 -0.14123518211874253 238 0.11071894976576199;
 createNode animCurveTL -n "bot_mid_ctrl_translateZ1";
 	rename -uid "2ADA0A12-D147-F22C-3AF4-D787BE894C3F";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  0 0.8798968605230163 24 0.84075193574904017
-		 42 0.76641498844117439 66 0.70467292440932672 99 0.84004417366552842 109 0.73429158655561189
-		 121 0.73766949830785844 134 0.9934019756098933 158 0.92949843594446835 162 0.88550493340583203
-		 165 0.83864286247627473 177 0.71140568290882666 208 0.81319509002927548 231 0.77217811699253269
-		 242 0.80135008899770699;
+	setAttr -s 13 ".ktv[0:12]"  0 0.8798968605230163 35 0.72425947834228921
+		 54 0.49685525333569575 97 0.6034879291460139 113 0.58243590851018201 130 0.54808005213033806
+		 139 0.5247433572869481 165 0.37451820407540021 182 0.4161110201658656 201 0.64498646445109709
+		 223 0.3122659961263522 228 0.26819655411003396 238 0.43534866369733161;
 createNode animCurveTU -n "bot_mid_ctrl_visibility1";
 	rename -uid "117BAA9B-4A49-AF27-4408-7FB3DE0B04C3";
 	setAttr ".tan" 9;
-	setAttr -s 15 ".ktv[0:14]"  0 1 24 1 42 1 66 1 99 1 109 1 121 1 134 1
-		 158 1 162 1 165 1 177 1 208 1 231 1 242 1;
-	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5;
+	setAttr -s 13 ".ktv[0:12]"  0 1 35 1 54 1 97 1 113 1 130 1 139 1 165 1
+		 182 1 201 1 223 1 228 1 238 1;
+	setAttr -s 13 ".kot[0:12]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5;
 createNode animCurveTA -n "bot_mid_ctrl_rotateX1";
 	rename -uid "843F3171-2543-B048-AE53-81867DF04F43";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  0 34.436429614842986 24 32.373660166055558
-		 42 24.886571055641962 66 32.114201977325521 99 36.280172228900355 109 36.088334841719366
-		 121 35.386388310224795 134 37.666284886555623 158 35.058284964443594 162 35.045162784333208
-		 165 35.237299267566947 177 36.892628969273034 208 31.624751867647333 231 28.833139323061136
-		 242 34.684232041764801;
+	setAttr -s 13 ".ktv[0:12]"  0 34.436429614842986 35 34.436429614842986
+		 54 11.410288463457425 97 35.286665987740918 113 35.066282594056617 130 34.963747419520402
+		 139 34.786286561462703 165 31.911351066734955 182 32.51788847341448 201 34.535438270198696
+		 223 34.535438270198696 228 34.509259156028044 238 34.535438270198696;
 createNode animCurveTA -n "bot_mid_ctrl_rotateY1";
 	rename -uid "736B00AA-D042-9DAB-17F6-8ABF7D3A0703";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  0 0 24 2.6752084315064204 42 12.385224219937133
-		 66 -8.4353249120700085 99 2.7930493944006791 109 -1.7818485397755699 121 -7.2649191292824451
-		 134 5.1242546400905891 158 3.6572156587373081 162 5.8596884246244167 165 6.5846289106507596
-		 177 9.056767075559554 208 20.540835069593395 231 -21.52786728027959 242 -4.9853650759893773;
+	setAttr -s 13 ".ktv[0:12]"  0 0 35 0 54 0 97 11.777367892004591 113 -9.0595052840417409
+		 130 1.9534735970116204 139 6.1625863181439939 165 0.40510722568478119 182 -3.6731391767789421
+		 201 -4.0623563872427919 223 -4.0623563872427919 228 3.4853752449896875 238 -4.0623563872427919;
 createNode animCurveTA -n "bot_mid_ctrl_rotateZ1";
 	rename -uid "68A5ECEC-B240-A1F4-6115-50826E00C9F8";
 	setAttr ".tan" 18;
-	setAttr -s 15 ".ktv[0:14]"  0 0 24 1.2273465202190812 42 5.6821598158290811
-		 66 -1.7041775014188825 99 7.3435799829477792 109 4.3531801744208964 121 0.30227845472955078
-		 134 7.6926381536227098 158 -1.0179314739456431 162 -5.3075539542760612 165 -6.2966476791008787
-		 177 -8.0171806507434979 208 13.508392743682744 231 -7.0963344763177219 242 1.3805793268343536;
+	setAttr -s 13 ".ktv[0:12]"  0 0 35 0 54 0 97 8.219278039489323 113 -6.3122060021749276
+		 130 1.4077950952422187 139 4.3583460022449918 165 1.4229998347068278 182 -1.4238483642900615
+		 201 -2.7911295399028071 223 -2.7911295399028071 228 2.3933907469352032 238 -2.7911295399028071;
 createNode animCurveTU -n "baby_master_baby_blink_new";
 	rename -uid "01C18401-0E44-7F33-2CEC-1B84948B19E0";
 	setAttr ".tan" 18;
@@ -34337,7 +42869,7 @@ createNode animCurveTA -n "BabyGrab_One_rotateX";
 	rename -uid "78C26660-4BEC-2D27-41F3-FE9B03F2EF00";
 	setAttr ".tan" 18;
 	setAttr -s 19 ".ktv[0:18]"  13 34.034007915111935 25 69.933127010257053
-		 27 72.207198765035741 29 73.947957608448277 30 77.019329489644875 36 128.52122297905927
+		 27 72.207198765035741 29 73.947957608448291 30 77.019329489644875 36 128.52122297905927
 		 38 136.16895666778075 40 126.26608232306285 45 89.309773572976766 66 93.891117820224821
 		 89 109.17356120681066 97 131.72844270110798 110 131.33197765562917 127 126.60008708485832
 		 151 103.3343092606286 159 103.38895785239967 190 94.301856632371752 216 114.3425513949994
@@ -34571,77 +43103,91 @@ createNode animCurveTU -n "mid_rt_ctrl_visibility";
 createNode animCurveTL -n "mid_lf_ctrl_translateX";
 	rename -uid "1485FDF0-4A4C-9D6F-970E-37981BED657A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  0 0.42411007055972549 211 0.6032873139129209
-		 220 0.42411007055972549 234 0.41101648686512304;
+	setAttr -s 5 ".ktv[0:4]"  0 0.42411007055972549 211 0.6032873139129209
+		 220 0.42411007055972549 234 0.41101648686512304 243 0.49428230530103551;
 createNode animCurveTL -n "mid_lf_ctrl_translateY";
 	rename -uid "652E0163-484C-812E-8B43-31B1823DB6DD";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  0 0.18772480426573868 211 0.20348286516744532
-		 220 0.18772480426573868 234 0.20974402864477704;
+	setAttr -s 5 ".ktv[0:4]"  0 0.18772480426573868 211 0.20348286516744532
+		 220 0.18772480426573868 234 0.20974402864477704 243 0.35062600654389181;
 createNode animCurveTL -n "mid_lf_ctrl_translateZ";
 	rename -uid "71EA3D4D-C347-FD4A-FA5C-61B572BD0A4E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  0 -0.16633666856832419 211 -0.11507479216919483
-		 220 -0.16633666856832419 234 -0.15720142723104769;
+	setAttr -s 5 ".ktv[0:4]"  0 -0.16633666856832419 211 -0.11507479216919483
+		 220 -0.16633666856832419 234 -0.15720142723104769 243 -0.081540945151097791;
 createNode animCurveTU -n "mid_lf_ctrl_visibility";
 	rename -uid "8C8B24C3-F54B-B07B-D398-7F996CFE49EF";
 	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 1 211 1 220 1 234 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 5 ".ktv[0:4]"  0 1 211 1 220 1 234 1 243 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTL -n "bot_lf_ctrl_translateX";
 	rename -uid "34A3FC69-3E41-17D0-EDBA-8C9D65ACA0F2";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  0 0.89569693892587898 166 0.8993998334031823
-		 193 0.93667209923904948 230 0.97706273790701526;
+	setAttr -s 14 ".ktv[0:13]"  0 0.89569693892587898 54 0.73404790314128976
+		 75 0.65789530647519012 87 0.64633574129761728 95 0.59910090753329359 102 0.54430338046538229
+		 112 0.64026672647711114 134 0.78706933383243194 178 0.61504273816806643 200 0.82779988009747119
+		 228 0.76577180945231627 237 0.82694263811241631 243 0.58417615689325697 255 0.77776149733598021;
 createNode animCurveTL -n "bot_lf_ctrl_translateY";
 	rename -uid "9CAD018D-984D-9760-7FAB-EB955F7CD552";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  0 0.047871890798663989 166 0.14468559699713698
-		 193 0.11848718084300133 230 -0.10076270382170587;
+	setAttr -s 14 ".ktv[0:13]"  0 0.047871890798663989 54 -0.1386852406895554
+		 75 -0.060202720586710501 87 -0.045168420258393016 95 -0.036321170922789227 102 -0.038483197108122993
+		 112 -0.018888245143421398 134 0.085085887072202659 178 -0.043116743705322834 200 -0.032038755674468185
+		 228 -0.14275527969318291 237 -0.43995774737432425 243 -0.58562248736439815 255 -0.31698328579259399;
 createNode animCurveTL -n "bot_lf_ctrl_translateZ";
 	rename -uid "AB083E14-8542-1F89-7E72-B29BBE19B926";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  0 -0.14412616313219051 166 -0.17979502610390222
-		 193 -0.28494452572025497 230 -0.33000120267078692;
+	setAttr -s 14 ".ktv[0:13]"  0 -0.14412616313219051 54 -0.023232190635866012
+		 75 -0.090103928817165585 87 -0.085258556144867159 95 -0.097757750941923946 102 -0.13152707495187849
+		 112 -0.23990513359982177 134 -0.42757199843539928 178 0.01483550947613806 200 -0.46997214958700023
+		 228 0.090750006713176595 237 -0.10253376178699393 243 -0.25027682917997551 255 -0.11615199727296296;
 createNode animCurveTU -n "bot_lf_ctrl_visibility";
 	rename -uid "8D7C2566-194B-CB37-E0CC-69A8FD525436";
 	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 1 166 1 193 1 230 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 14 ".ktv[0:13]"  0 1 54 1 75 1 87 1 95 1 102 1 112 1 134 1
+		 178 1 200 1 228 1 237 1 243 1 255 1;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5;
 createNode animCurveTL -n "top_lf_ctrl_translateX";
 	rename -uid "80B101F2-A047-E78D-EDAA-9EA2236FF1BE";
 	setAttr ".tan" 18;
-	setAttr ".ktv[0]"  0 0.16215860846267569;
+	setAttr -s 4 ".ktv[0:3]"  0 0.16215860846267569 75 0.15952891338328648
+		 234 0.16215860846267569 291 0.14670878630434159;
 createNode animCurveTL -n "top_lf_ctrl_translateY";
 	rename -uid "651E5A85-4E44-1DBA-332C-C3AAF3FF2751";
 	setAttr ".tan" 18;
-	setAttr ".ktv[0]"  0 -0.14183484678086178;
+	setAttr -s 4 ".ktv[0:3]"  0 -0.14183484678086178 75 -0.091101537138402217
+		 234 -0.14183484678086178 291 -0.13425273795570786;
 createNode animCurveTL -n "top_lf_ctrl_translateZ";
 	rename -uid "BBA141E9-DF4B-504F-B8DD-6F85595D7A83";
 	setAttr ".tan" 18;
-	setAttr ".ktv[0]"  0 0.12706426956547756;
+	setAttr -s 4 ".ktv[0:3]"  0 0.12706426956547756 75 0.10235928522667606
+		 234 0.12706426956547756 291 0.086041960908868176;
 createNode animCurveTU -n "top_lf_ctrl_visibility";
 	rename -uid "EFEBA913-A64C-6C7A-6C1E-42AE17AEB55C";
 	setAttr ".tan" 9;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 1 75 1 234 1 291 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTU -n "bot_rt_ctrl_visibility";
 	rename -uid "DDEFD732-3843-A8EA-98DE-A9BA222D189A";
 	setAttr ".tan" 9;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  0 1 54 1 112 1 223 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "bot_rt_ctrl_translateX";
 	rename -uid "B6B238DE-1844-0CFF-4A0A-F59D1DDD179A";
 	setAttr ".tan" 18;
-	setAttr ".ktv[0]"  0 -0.62108514692409633;
+	setAttr -s 4 ".ktv[0:3]"  0 -0.62108514692409633 54 -0.26303972208432086
+		 112 -0.38898265067814686 223 -0.31504104105486341;
 createNode animCurveTL -n "bot_rt_ctrl_translateY";
 	rename -uid "DF9D49D5-6442-1892-6FF9-87A47B2C0291";
 	setAttr ".tan" 18;
-	setAttr ".ktv[0]"  0 8.8817841970012523e-16;
+	setAttr -s 4 ".ktv[0:3]"  0 8.8817841970012523e-16 54 -0.21945990435072976
+		 112 0.016411003678855701 223 -0.11289340094957197;
 createNode animCurveTL -n "bot_rt_ctrl_translateZ";
 	rename -uid "DCACA5D8-C940-0B91-3F2A-AFA95F08971B";
 	setAttr ".tan" 18;
-	setAttr ".ktv[0]"  0 -2.2204460492503131e-16;
+	setAttr -s 4 ".ktv[0:3]"  0 -2.2204460492503131e-16 54 0.33997976182754991
+		 112 0.064133304402941516 223 0.072836164615465687;
 createNode animCurveTL -n "mom_cam_tear:mom_cam_3_8:mom_scene:new_mom_camera:persp1_translateX3";
 	rename -uid "A5FA399A-D442-F073-0750-96B9F512ABD6";
 	setAttr ".tan" 18;
@@ -34796,8 +43342,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi" 0;
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 232;
-	setAttr ".unw" 232;
+	setAttr ".o" 102;
+	setAttr ".unw" 102;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -35739,7 +44285,8 @@ connectAttr "mom:shapeEditorManager.obsv[5]" "momRN1.phl[3244]";
 connectAttr "momRN1.phl[3245]" "mom:shapeEditorManager.bspr[6]";
 connectAttr "mom:shapeEditorManager.obsv[6]" "momRN1.phl[3246]";
 connectAttr "momRN1.phl[3247]" "momRN1.phl[3248]";
-connectAttr "outputCloth1.iog" "momRN1.phl[3249]";
+connectAttr "momRN1.phl[3249]" "momRN1.phl[3250]";
+connectAttr "outputCloth1.iog" "momRN1.phl[3251]";
 connectAttr "layer1.di" "pPlane1.do";
 connectAttr "mom_cam:new_mom_camera:persp1_translateX3.o" "mom_cam:new_camera_test.tx"
 		;
@@ -35818,16 +44365,6 @@ connectAttr "mom_cam_tear:mom_cam_3_8:mom_scene:new_mom_camera:persp1_scaleZ3.o"
 		;
 connectAttr "mom_cam_tear:mom_cam_3_8:mom_scene:new_mom_camera:momBabyShape_focalLength3.o" "mom_cam_tear:FINAL_MOM_CAMERAShape.fl"
 		;
-connectAttr "BabyGrab_Two_translateX.o" "BabyGrab_Two.tx";
-connectAttr "BabyGrab_Two_translateY.o" "BabyGrab_Two.ty";
-connectAttr "BabyGrab_Two_translateZ.o" "BabyGrab_Two.tz";
-connectAttr "BabyGrab_Two_rotateX.o" "BabyGrab_Two.rx";
-connectAttr "BabyGrab_Two_rotateY.o" "BabyGrab_Two.ry";
-connectAttr "BabyGrab_Two_rotateZ.o" "BabyGrab_Two.rz";
-connectAttr "BabyGrab_Two_scaleX.o" "BabyGrab_Two.sx";
-connectAttr "BabyGrab_Two_scaleY.o" "BabyGrab_Two.sy";
-connectAttr "BabyGrab_Two_scaleZ.o" "BabyGrab_Two.sz";
-connectAttr "BabyGrab_Two_visibility.o" "BabyGrab_Two.v";
 connectAttr "BabyGrab_One_translateX.o" "BabyGrab_One.tx";
 connectAttr "BabyGrab_One_translateY.o" "BabyGrab_One.ty";
 connectAttr "BabyGrab_One_translateZ.o" "BabyGrab_One.tz";
@@ -35838,6 +44375,16 @@ connectAttr "BabyGrab_One_scaleX.o" "BabyGrab_One.sx";
 connectAttr "BabyGrab_One_scaleY.o" "BabyGrab_One.sy";
 connectAttr "BabyGrab_One_scaleZ.o" "BabyGrab_One.sz";
 connectAttr "BabyGrab_One_visibility.o" "BabyGrab_One.v";
+connectAttr "BabyGrab_Two_translateX.o" "BabyGrab_Two.tx";
+connectAttr "BabyGrab_Two_translateY.o" "BabyGrab_Two.ty";
+connectAttr "BabyGrab_Two_translateZ.o" "BabyGrab_Two.tz";
+connectAttr "BabyGrab_Two_rotateX.o" "BabyGrab_Two.rx";
+connectAttr "BabyGrab_Two_rotateY.o" "BabyGrab_Two.ry";
+connectAttr "BabyGrab_Two_rotateZ.o" "BabyGrab_Two.rz";
+connectAttr "BabyGrab_Two_scaleX.o" "BabyGrab_Two.sx";
+connectAttr "BabyGrab_Two_scaleY.o" "BabyGrab_Two.sy";
+connectAttr "BabyGrab_Two_scaleZ.o" "BabyGrab_Two.sz";
+connectAttr "BabyGrab_Two_visibility.o" "BabyGrab_Two.v";
 connectAttr "battle_grab_loc_translateX.o" "battle_grab_loc.tx";
 connectAttr "battle_grab_loc_translateY.o" "battle_grab_loc.ty";
 connectAttr "battle_grab_loc_translateZ.o" "battle_grab_loc.tz";
@@ -35848,11 +44395,6 @@ connectAttr "battle_grab_loc_scaleX.o" "battle_grab_loc.sx";
 connectAttr "battle_grab_loc_scaleY.o" "battle_grab_loc.sy";
 connectAttr "battle_grab_loc_scaleZ.o" "battle_grab_loc.sz";
 connectAttr "battle_grab_loc_visibility.o" "battle_grab_loc.v";
-connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
-connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
-connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
-connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
-		;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":PreviewImrRayTracyOff.msg" ":mentalrayItemsList.opt" -na;
@@ -35863,6 +44405,8 @@ connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 connectAttr "mom:mom2:mom:ContourContrastLevelFunction.msg" ":miDefaultOptions.coc"
 		;
 connectAttr "mom:mom2:mom:ContourContrastStore.msg" ":miDefaultOptions.cos";
+connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
+connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanBakeGlobals.msg" ":renderManRISGlobals.p" -na;
@@ -35882,6 +44426,9 @@ connectAttr ":rmanSBMakePtCloudGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBPtRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBRenderGlobals.msg" ":renderManRISGlobals.p" -na;
 connectAttr ":rmanSBMakePtexGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
+connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+		;
 connectAttr ":rmanBakeRenderGlobals.msg" ":rmanBakeGlobals.p" -na;
 connectAttr ":rmanPreviewOutputGlobals0.msg" ":rmanPreviewGlobals.d" -na;
 connectAttr ":rmanRerenderOutputGlobals0.msg" ":rmanRerenderGlobals.d" -na;
